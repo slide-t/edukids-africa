@@ -7,6 +7,9 @@
   --card-bg: #fff;
   --text-dark: #333;
 }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -257,6 +260,9 @@ section h2 {
 .programs .card img {
   width: 100%;
   border-radius: 15px;
+}
+section {
+  scroll-margin-top: 70px; /* adjust based on your navbar height */
 }
 
 /* Testimonials */
