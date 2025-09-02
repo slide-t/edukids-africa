@@ -178,7 +178,37 @@
       color: #ff9f43;
     }
 
-    /* Responsive */
+/* Mobile Responsive Fix */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #2c1a47; /* keep your scheme */
+    position: absolute;
+    top: 60px;
+    right: 10px; /* a little spacing from edge */
+    width: 200px;
+    padding: 15px;
+    border-radius: 10px;
+    z-index: 999; /* ensures it stays above content */
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 15px; /* push to the right edge */
+    top: 15px;   /* aligns vertically in header */
+    cursor: pointer;
+    font-size: 24px;
+    color: white; /* visible against dark header */
+  }
+}
+    
+    /* Responsive *
     @media (max-width: 768px) {
       nav {
         display: none;
@@ -199,7 +229,7 @@
       .menu-toggle {
         display: block;
       }
-    }
+    }*/
   </style>
 </head>
 <body>
