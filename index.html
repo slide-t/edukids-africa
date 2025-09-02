@@ -145,7 +145,24 @@
     <p>&copy; 2025 EduKids Africa. All Rights Reserved.</p>
     <p>Follow us on Facebook | Twitter | Instagram</p>
   </footer>
+<script>
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('nav');
 
+  // Toggle nav when menu is clicked
+  menu.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
+
+  // Close nav when any link inside nav is clicked
+  nav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
+    });
+  });
+</script>
+  
+<!--
   <script>
     const menu = document.getElementById('menu');
     const nav = document.getElementById('nav');
@@ -153,6 +170,7 @@
       nav.classList.toggle('active');
     });
   </script>
+  -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const cards = document.querySelectorAll(".card");
