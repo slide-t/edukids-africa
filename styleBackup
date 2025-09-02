@@ -1,0 +1,316 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+:root {
+  --purple: #2D1B69;
+  --accent: #6C63FF;
+  --pink: #FF6B6B;
+  --card-bg: #fff;
+  --text-dark: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: var(--purple);
+  color: var(--card-bg);
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  background: var(--purple);
+  z-index: 1000;
+}
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+.menu {
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: none;
+}
+nav {
+  display: flex;
+  gap: 1rem;
+}
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+}
+nav a:hover {
+  border: 1px solid white;
+  box-shadow: 0 0 10px white;
+}
+
+/* Card Base */
+.card {
+  background: var(--card-bg);
+  color: var(--text-dark);
+  border-radius: 25px;
+  margin: 1.5rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Hero */
+.hero {
+  padding: 2rem;
+}
+.hero-container {
+  display: flex;
+  flex-direction: column; /* mobile default */
+  gap: 2rem;
+}
+
+/* Caption with fade-in + shining gradient */
+.hero-caption h1 {
+  font-size: 2.5rem;
+  font-weight: 900;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    var(--pink),
+    var(--accent),
+    #fff,
+    var(--pink)
+  );
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite, fadeIn 2s ease-in-out;
+}
+
+/* Hero Card */
+.card.hero {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  max-width: 500px;
+  text-align: center;
+}
+.card.hero h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--purple);
+  margin-bottom: 1rem;
+}
+.card.hero p {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  text-decoration: none;
+  margin-right: 0.5rem;
+  transition: background 0.3s ease;
+}
+.btn:hover {
+  background: #5848d6;
+}
+.btn-alt {
+  background: var(--pink);
+}
+.btn-alt:hover {
+  background: #e25555;
+}
+.hero-footer {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-style: italic;
+  color: #555;
+}
+
+/* Desktop hero flex layout */
+@media (min-width: 900px) {
+  .hero-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hero-caption h1 {
+    font-size: 4rem;
+    text-align: left;
+    max-width: 450px;
+  }
+  .card.hero {
+    text-align: left;
+  }
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Shining gradient animation */
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Profiles */
+.profile {
+  text-align: center;
+}
+.profile img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 6px solid #f5f5f5;
+  margin-bottom: 1rem;
+}
+.profile h3 {
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+.stats {
+  background: var(--purple);
+  color: #fff;
+  border-radius: 15px;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Section headings */
+section h2 {
+  text-align: center;
+  margin: 2rem 0 1rem;
+  font-size: 1.5rem;
+}
+
+/* Programs */
+.programs .cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  padding: 0 1.5rem 2rem;
+}
+.programs .card h3 {
+  margin: 1rem 0 0.5rem;
+  font-size: 1.1rem;
+  color: var(--purple);
+}
+.programs .card img {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Testimonials */
+.testimonials .cards {
+  display: grid;
+  gap: 1rem;
+  padding: 0 1.5rem 2rem;
+}
+.testimonials .card {
+  text-align: center;
+}
+.testimonials img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+.testimonials p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Impact */
+.impact {
+  text-align: center;
+  padding: 2rem 1.5rem;
+}
+.impact-numbers {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+.impact-number {
+  background: var(--accent);
+  color: #fff;
+  border-radius: 20px;
+  padding: 1.5rem;
+  min-width: 120px;
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
+  background: #1A1140;
+  color: #aaa;
+  padding: 2rem 1rem;
+  text-align: center;
+}
+footer p {
+  margin: 0.3rem 0;
+}
+
+/* Desktop Layout */
+@media(min-width:900px) {
+  .container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .card {
+    flex: 1;
+    max-width: 320px;
+  }
+  .programs .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .testimonials .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Mobile Nav */
+@media(max-width:768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: var(--purple);
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  nav.active {
+    display: flex;
+  }
+  .menu {
+    display: block;
+  }
+}
