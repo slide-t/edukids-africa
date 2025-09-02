@@ -321,7 +321,7 @@ footer p {
   }
 
   nav a:hover {
-    background: #a56ad8;       /* lighter purple on hover */
+    background: var(--purple);       /* lighter purple on hover */
     transform: scale(1.02);    /* keep the subtle animation */
   }
 
