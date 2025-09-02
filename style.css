@@ -68,7 +68,58 @@
       box-shadow: 0 12px 25px rgba(0,0,0,0.2);
     }
 
-    /* Hero */
+/* Hero Layout */
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 2rem 1rem;
+}
+
+/* Caption */
+.hero-caption h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #fff;
+  text-align: center;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.6);
+}
+
+/* Card */
+.card.hero {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  max-width: 500px;
+  text-align: center;
+}
+
+/* Desktop adjustment */
+@media (min-width: 900px) {
+  .hero-section {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    padding: 4rem;
+  }
+
+  .hero-caption h1 {
+    font-size: 3rem;
+    text-align: left;
+    max-width: 400px;
+  }
+
+  .card.hero {
+    text-align: left;
+  }
+}
+
+
+
+    /* Hero *
     .hero h2 {
       font-size: 1.8rem;
       font-weight: 700;
@@ -104,7 +155,7 @@
       font-size: 0.8rem;
       font-style: italic;
       color: #555;
-    }
+    }*/
 
     /* Profiles */
     .profile {
