@@ -223,13 +223,183 @@
 </head>
 <body>
 
-  <!-- Header -->
+<!-- HEADER -->
+<header>
+  <div class="logo">Edukids Africa<span style="color:#ff6b6b;">.</span></div>
+  <nav id="nav">
+    <button id="closeMenu" class="close-btn">CLOSE</button>
+    <a href="#home">Home</a>
+    <a href="#students">Students</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <div class="menu-toggle" id="menu">☰</div>
+</header>
+
+<!-- Overlay -->
+<div id="overlay"></div>
+
+<!-- STYLES -->
+<style>
+/* Base Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  background: #2c1a47;
+  color: #fff;
+  position: relative;
+  z-index: 1100;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px; /* reduced space */
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255,255,255,0.15);
+  box-shadow: 0 0 10px rgba(255,255,255,0.6);
+}
+
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+/* Close button (mobile only) */
+.close-btn {
+  display: none;
+  background: rgba(255,255,255,0.15);
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: auto;
+  cursor: pointer;
+  margin-bottom: 20px;
+  padding: 8px 20px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px); /* bubble-water effect */
+  transition: all 0.3s;
+}
+
+.close-btn:hover {
+  background: rgba(255,255,255,0.25);
+  box-shadow: 0 0 12px rgba(255,255,255,0.6);
+}
+
+/* Overlay */
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.6);
+  z-index: 900;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+#overlay.active {
+  display: block;
+  opacity: 1;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+  nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #2c1a47;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    height: 100vh;
+    padding: 30px 20px;
+    z-index: 1000;
+    transition: right 0.4s ease-in-out;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    display: block;
+    width: 90%;
+    text-align: center;
+    margin: 8px 0; /* reduced spacing */
+    font-size: 18px;
+    padding: 8px 0; /* slimmer links */
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .close-btn {
+    display: block;
+    margin-bottom: 25px;
+  }
+}
+</style>
+
+<!-- SCRIPT -->
+<script>
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('nav');
+  const closeBtn = document.getElementById('closeMenu');
+  const overlay = document.getElementById('overlay');
+
+  function openMenu() {
+    nav.classList.add('active');
+    overlay.classList.add('active');
+  }
+
+  function closeMenuFn() {
+    nav.classList.remove('active');
+    overlay.classList.remove('active');
+  }
+
+  menu.addEventListener('click', openMenu);
+  closeBtn.addEventListener('click', closeMenuFn);
+  overlay.addEventListener('click', closeMenuFn);
+
+  document.querySelectorAll('#nav a').forEach(link => {
+    link.addEventListener('click', closeMenuFn);
+  });
+</script>
+  
+  <!-- Header --
   <header>
     <div class="logo">
       Edukids Africa<span style="color:#ff6b6b;">.</span>
     </div>
 
-    <!-- Navigation -->
+    <!-- Navigation --
     <nav id="nav">
       <button class="close-btn" id="closeNav">✕ Close</button>
       <a href="#home">Home</a>
@@ -238,12 +408,12 @@
       <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Mobile Toggle -->
+    <!-- Mobile Toggle --
     <div class="menu-toggle" id="menu">
       <i class="fas fa-bars"></i>
     </div>
   </header>
-
+-->
   <!-- Decorative doodle graphics -->
   <img src="https://i.ibb.co/gTL8jHc/doodle1.png" class="doodle doodle1" alt="doodle">
   <img src="https://i.ibb.co/ysGZh8c/doodle2.png" class="doodle doodle2" alt="doodle">
