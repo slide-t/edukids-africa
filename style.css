@@ -294,8 +294,22 @@ footer p {
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-/* Mobile Nav */
+/* Mobile menu container */
+@media (max-width: 768px) {
+  .menu {
+    position: absolute;
+    top: 60px; /* adjust depending on nav height */
+    left: 0;
+    width: 100%;
+    background: #a56ad8; /* lighter shade of your main purple */
+    padding: 15px 0;
+    text-align: center;
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+}
+/* Mobile Nav 
 @media(max-width:768px) {
   nav {
     display: none;
@@ -313,4 +327,4 @@ footer p {
   .menu {
     display: block;
   }
-}
+}*/
