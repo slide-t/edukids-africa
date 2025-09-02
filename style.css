@@ -305,7 +305,7 @@ footer p {
     top: 60px;
     right: 10px;
     padding: 1rem;
-    border-radius: 10px;
+    /*border-radius: 10px;*/
   }
   nav.active {
     display: flex;
