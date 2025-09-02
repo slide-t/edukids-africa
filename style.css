@@ -309,7 +309,7 @@ footer p {
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
   }
 }
-/* Mobile Nav 
+/* Mobile Nav */
 @media(max-width:768px) {
   nav {
     display: none;
@@ -327,4 +327,4 @@ footer p {
   .menu {
     display: block;
   }
-}*/
+}
