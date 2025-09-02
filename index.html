@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKids Africa</title>
+  <style>
+    :root {
+      --yellow: #FFD93D;
+      --blue: #6EC1E4;
+      --pink: #FF6B6B;
+      --text: #333;
+      --bg: #fff;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+    header {
+      background: var(--yellow);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header h1 {
+      font-size: 1.5rem;
+      color: var(--text);
+    }
+    nav a {
+      margin: 0 1rem;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: center;
+      padding: 3rem 2rem;
+      background: var(--blue);
+      color: #fff;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 400px;
+    }
+    .hero h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      margin-bottom: 1.5rem;
+    }
+    .btn {
+      display: inline-block;
+      padding: 0.8rem 1.5rem;
+      border-radius: 25px;
+      font-weight: 600;
+      background: var(--pink);
+      color: #fff;
+      text-decoration: none;
+    }
+    .programs {
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .programs h2 {
+      margin-bottom: 2rem;
+      font-size: 1.8rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+    .card {
+      background: #fff;
+      border-radius: 15px;
+      padding: 1.5rem;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.2s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card img {
+      width: 100%;
+      max-height: 180px;
+      object-fit: cover;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+    }
+    .impact {
+      background: var(--pink);
+      color: #fff;
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .impact h2 {
+      margin-bottom: 1.5rem;
+    }
+    .impact-numbers {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+    .impact-number {
+      font-size: 2rem;
+      font-weight: bold;
+    }
+    footer {
+      background: var(--yellow);
+      padding: 2rem;
+      text-align: center;
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>EduKids Africa</h1>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Programs</a>
+    <a href="#">Quizzes</a>
+    <a href="#">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Learning Made Fun for Kids in Africa</h2>
+    <p>Interactive lessons, fun quizzes, and resources designed to help every child grow smarter and brighter.</p>
+    <a href="#" class="btn">Get Started</a>
+  </div>
+  <img src="https://elements.envato.com/edukids-children-website-template-SAMPLE.png" alt="Kids learning illustration">
+</section>
+
+<section class="programs">
+  <h2>Our Programs</h2>
+  <div class="cards">
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200.png?text=Coding+for+Kids" alt="Coding">
+      <h3>Coding for Kids</h3>
+      <p>Fun, interactive coding lessons without computers to build problem-solving skills.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200.png?text=Quizzes" alt="Quizzes">
+      <h3>Interactive Quizzes</h3>
+      <p>Exciting quizzes to help kids learn and test their knowledge in a playful way.</p>
+    </div>
+    <div class="card">
+      <img src="https://via.placeholder.com/400x200.png?text=Worksheets" alt="Worksheets">
+      <h3>Download Worksheets</h3>
+      <p>Printable resources for teachers and parents to support classroom and home learning.</p>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <h2>Our Impact</h2>
+  <div class="impact-numbers">
+    <div>
+      <div class="impact-number">5,000+</div>
+      <p>Kids Reached</p>
+    </div>
+    <div>
+      <div class="impact-number">120+</div>
+      <p>Schools Supported</p>
+    </div>
+    <div>
+      <div class="impact-number">15</div>
+      <p>Countries in Africa</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>&copy; 2025 EduKids Africa. All Rights Reserved.</p>
+  <p>Follow us on Social Media</p>
+</footer>
+
+</body>
+</html>
