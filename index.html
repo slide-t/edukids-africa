@@ -207,43 +207,32 @@
     color: white; /* visible against dark header */
   }
 }
-    
-    /* Responsive *
-    @media (max-width: 768px) {
-      nav {
-        display: none;
-        flex-direction: column;
-        background: #2c1a47;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        width: 200px;
-        padding: 15px;
-        border-radius: 10px;
-      }
 
-      nav.active {
-        display: flex;
-      }
-
-      .menu-toggle {
-        display: block;
-      }
-    }*/
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="logo">Edukids Africa<span style="color:#ff6b6b;">.</span></div>
-    <nav id="nav">
-      <a href="#home">Home</a>
-      <a href="#students">Students</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <div class="menu-toggle" id="menu"><i class="fas fa-bars"></i></div>
-  </header>
+  <!-- Header -->
+<header>
+  <div class="logo">
+    Edukids Africa<span style="color:#ff6b6b;">.</span>
+  </div>
+
+  <!-- Navigation -->
+  <nav id="nav">
+    <a href="#home">Home</a>
+    <a href="#students">Students</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- Mobile Toggle -->
+  <div class="menu-toggle" id="menu">
+    <i class="fas fa-bars"></i>
+  </div>
+</header>
+
+
 
   <!-- Decorative doodle graphics -->
   <img src="https://i.ibb.co/gTL8jHc/doodle1.png" class="doodle doodle1" alt="doodle">
@@ -275,21 +264,22 @@
       <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
     </div>
   </section>
+  <!-- Script -->
+<script>
+  const menu = document.getElementById('menu');
+  const nav = document.getElementById('nav');
 
-  <script>
-    const menu = document.getElementById("menu");
-    const nav = document.getElementById("nav");
+  // Toggle on menu icon click
+  menu.addEventListener('click', () => {
+    nav.classList.toggle('active');
+  });
 
-    menu.addEventListener("click", () => {
-      nav.classList.toggle("active");
+  // Close nav on link click
+  document.querySelectorAll('#nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      nav.classList.remove('active');
     });
-
-    // Close nav when link is clicked
-    nav.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        nav.classList.remove("active");
-      });
-    });
-  </script>
+  });
+</script>
 </body>
 </html>
