@@ -268,7 +268,7 @@ header {
   cursor: pointer;
   margin: 5px;
   transition: 0.3s;
-  background: #6c5ce7;
+  background:6c5ce7;
   color: #fff;
   text-decoration: none;
 }
@@ -276,7 +276,7 @@ header {
 .hero .buttons a.get-started:hover {
   background: #5a4bd4;
 }  
-/* card */
+/* Cards container */
 .cards {
   display: flex;
   gap: 20px;
@@ -285,118 +285,88 @@ header {
   padding: 40px 20px;
 }
 
+/* Each card */
 .card {
   background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  width: 350px;
+  border-radius: 20px;
+  padding: 30px 20px;
+  width: 320px;
   text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
   transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .card:hover {
   transform: translateY(-10px);
 }
 
-/* circular container with orange background */
-.img-container {
-  background: orange;
-  border-radius: 50%;
-  width: 140px;   /* circle size */
-  height: 140px;
-  margin: 0 auto 15px;
+/* Image wrapper (holds circle + image) */
+.img-wrapper {
   position: relative;
-  overflow: hidden; /* keeps circular shape */
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 15px;
+}
+
+/* Circle background behind image */
+.circle-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Different background colors */
+.circle-bg.orange {
+  background: #ff6b35;
+}
+.circle-bg.yellow {
+  background: #ffbe0b;
+}
+
+/* Student image — bigger than circle */
+.img-wrapper img {
+  position: absolute;
+  bottom: -10px; /* pushes image slightly outside */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;   /* bigger than circle */
+  height: auto;
+  z-index: 1;
+}
+
+/* Name */
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Stats box */
+.stats {
+  margin-top: 12px;
+  background: #2c1a47;
+  border-radius: 15px;
+  padding: 12px;
+  color: #fff;
+  font-size: 0.9rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* make image slightly bigger than container */
-.img-container img {
-  width: 260px;   /* bigger than container */
-  height: auto;
-  border-radius: 50%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+.stats i {
+  margin-right: 8px;
+  color: #ff9f43;
 }
-
-/* glowing hover effect */
-.card:hover .img-container {
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.8),
-              0 0 40px rgba(255, 165, 0, 0.5);
-  transform: scale(1.08);
-}
-
     
-
-    /* card *
-.cards {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  flex-wrap: wrap;
-  padding: 40px 20px;
-}
-
-.card {
-  background: #fff;
-  border-radius: 15px;
-  padding: 20px;
-  width: 350px;
-  text-align: center;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-  transition: transform 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-10px);
-}
-
-.img-container {
-  background: orange;
-  border-radius: 50%;
-  padding: 20px;
-  display: inline-block;
-  margin-bottom: 15px;
-}
-
-.img-container img {
-  width: 100px;
-  height:200px;
-  border-radius: 50%;
-  display: block;
-}*/
-   /* Glow on hover */
-.card:hover .img-container {
-  box-shadow: 0 0 20px rgba(255, 165, 0, 0.8), 
-              0 0 40px rgba(255, 165, 0, 0.5);
-  transform: scale(1.05);
-}
-    .card h3 {
-      margin: 10px 0;
-      font-size: 1.2rem;
-      font-weight: 600;
-    }
-
-    .stats {
-      margin-top: 20px;
-      background: #2c1a47;
-      border-radius: 20px;
-      padding: 15px;
-      color: #fff;
-      font-size: 0.9rem;
-    }
-
-    .stats i {
-      margin-right: 8px;
-      color: #ff9f43;
-    }
-
     /* Mobile Responsive */
     @media (max-width: 768px) {
       nav {
@@ -475,10 +445,12 @@ header {
   <button class="play-btn"><i class="fas fa-video"></i></button>
 </div>
   </section>
-<!-- Cards Section -->
+
+  <!-- Cards Section -->
 <section class="cards" id="students">
   <div class="card">
-    <div class="img-container">
+    <div class="img-wrapper">
+      <div class="circle-bg orange"></div>
       <img src="https://raw.githubusercontent.com/slide-t/edukids-africa/main/Images/girl2.png" alt="Sophia">
     </div>
     <h3>Sophia Elizabeth</h3>
@@ -487,7 +459,8 @@ header {
   </div>
 
   <div class="card">
-    <div class="img-container">
+    <div class="img-wrapper">
+      <div class="circle-bg yellow"></div>
       <img src="https://i.ibb.co/nkKKcdq/boy.jpg" alt="Jayden">
     </div>
     <h3>Jayden Gabriel</h3>
@@ -495,26 +468,6 @@ header {
     <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
   </div>
 </section>
-
-
-  
-  <!-- Cards Section --
-  <section class="cards" id="students">
-    <div class="card">
-      <img src="https://raw.githubusercontent.com/slide-t/edukids-africa/main/Images/girl2.png" alt="Sophia">
-      <h3>Sophia Elizabeth</h3>
-      <div class="stats"><i class="fas fa-user-graduate"></i> 7.5k+ Active Students</div>
-      <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
-    </div>
-
-    <div class="card">
-      <img src="https://i.ibb.co/nkKKcdq/boy.jpg" alt="Jayden">
-      <h3>Jayden Gabriel</h3>
-      <div class="stats"><i class="fas fa-user-graduate"></i> 7.5k+ Active Students</div>
-      <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
-    </div>
-  </section>
-  
   <!-- Footer -->
   <div id="footer"></div>
   <!-- Scripts -->
