@@ -241,7 +241,23 @@ header {
     padding: 18px 40px;
   }
 }
-    
+  .hero .buttons a.get-started {
+  display: inline-block;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+  background: #6c5ce7;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero .buttons a.get-started:hover {
+  background: #5a4bd4;
+}  
     /* Hero *
     .hero {
       padding: 120px 20px 60px;
@@ -410,10 +426,19 @@ header {
   <section class="hero" id="home">
     <h1>Better Future <br>For Your Kids</h1>
     <p>We just don’t give our students only lecture but real life experiment, workshops and field experience throughout the journey!</p>
+   <div class="buttons">
+  <a href="registration.html" class="get-started">
+    <i class="fas fa-play-circle"></i> Get Started
+  </a>
+  <button class="play-btn"><i class="fas fa-video"></i></button>
+</div>
+    
+    <!--
     <div class="buttons">
       <button class="get-started"><i class="fas fa-play-circle"></i> Get Started</button>
       <button class="play-btn"><i class="fas fa-video"></i></button>
     </div>
+    -->
   </section>
 
   <!-- Cards Section -->
