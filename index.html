@@ -25,20 +25,23 @@
     }
 
     /* Header */
-    header {
+
+header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 30px;
-  position: sticky;
+  position: fixed;          /* fixed to viewport */
   top: 0;
+  left: 0;
   width: 100%;
-  background: rgba(44, 26, 71, 0.85); /* your #2c1a47 with opacity */
-  backdrop-filter: blur(6px); /* smooth glassy effect */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+  background: rgba(44, 26, 71, 0.85); /* #2c1a47 with opacity */
+  backdrop-filter: blur(6px);         /* subtle glass effect */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
   z-index: 1000;
   transition: background 0.3s ease;
 }
+    
   /*  header {
       position: sticky;
       top: 0;
