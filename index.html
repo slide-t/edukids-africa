@@ -276,7 +276,67 @@ header {
 .hero .buttons a.get-started:hover {
   background: #5a4bd4;
 }  
-   /* Cards */
+
+    /* card */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  padding: 20px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.img-container {
+  background: orange;
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+.img-container img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+    .img-container {
+  background: orange;
+  border-radius: 50%;
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 15px;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.img-container img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Glow on hover */
+.card:hover .img-container {
+  box-shadow: 0 0 20px rgba(255, 165, 0, 0.8), 
+              0 0 40px rgba(255, 165, 0, 0.5);
+  transform: scale(1.05);
+}
+   /* Cards *
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -304,7 +364,7 @@ header {
       margin-bottom: 15px;
       border: 5px solid #fff;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    }
+    }*/
 
     .card h3 {
       margin: 10px 0;
@@ -404,8 +464,30 @@ header {
   <button class="play-btn"><i class="fas fa-video"></i></button>
 </div>
   </section>
+<!-- Cards Section -->
+<section class="cards" id="students">
+  <div class="card">
+    <div class="img-container">
+      <img src="https://raw.githubusercontent.com/slide-t/edukids-africa/main/Images/girl2.png" alt="Sophia">
+    </div>
+    <h3>Sophia Elizabeth</h3>
+    <div class="stats"><i class="fas fa-user-graduate"></i> 7.5k+ Active Students</div>
+    <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
+  </div>
 
-  <!-- Cards Section -->
+  <div class="card">
+    <div class="img-container">
+      <img src="https://i.ibb.co/nkKKcdq/boy.jpg" alt="Jayden">
+    </div>
+    <h3>Jayden Gabriel</h3>
+    <div class="stats"><i class="fas fa-user-graduate"></i> 7.5k+ Active Students</div>
+    <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
+  </div>
+</section>
+
+
+  
+  <!-- Cards Section --
   <section class="cards" id="students">
     <div class="card">
       <img src="https://raw.githubusercontent.com/slide-t/edukids-africa/main/Images/girl2.png" alt="Sophia">
