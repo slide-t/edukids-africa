@@ -619,5 +619,20 @@ nav a:hover {
       });
     });
   </script>
+  <div id="footer"></div>
+  <script>
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
+    });
+  </script>
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => {
+    console.log("Service Worker Registered");
+  });
+}
+</script>
 </body>
 </html>
