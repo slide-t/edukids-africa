@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKids Africa - Student Registration</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #2c1a47;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    .form-container {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+      width: 100%;
+      max-width: 450px;
+      backdrop-filter: blur(8px);
+    }
+
+    h2 {
+      text-align: center;
+      color: #ff6b6b;
+      margin-bottom: 20px;
+    }
+
+    .form-group {
+      margin-bottom: 15px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 6px;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: none;
+      outline: none;
+      font-size: 14px;
+    }
+
+    input[type="file"] {
+      background: #fff;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      background: #6c5ce7;
+      border: none;
+      border-radius: 25px;
+      font-size: 16px;
+      font-weight: 600;
+      color: #fff;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #5a4bd4;
+    }
+
+    .note {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 12px;
+      color: #ccc;
+    }
+  </style>
+</head>
+<body>
+<form id="regForm" enctype="multipart/form-data">
+  <label>Full Name:</label>
+  <input type="text" name="fullname" required>
+
+  <label>Date of Birth:</label>
+  <input type="date" name="dob" id="dob" required>
+
+  <label>Age:</label>
+  <input type="number" name="age" id="age" readonly>
+
+  <label>Class:</label>
+  <input type="text" name="class" required>
+
+  <label>Email Option:</label>
+  <select name="emailType" id="emailType" required>
+    <option value="">-- Select --</option>
+    <option value="self">Student Email</option>
+    <option value="parent">Parent Email</option>
+  </select>
+
+  <div id="emailField" style="display:none; margin-top:10px;">
+    <label>Email Address:</label>
+    <input type="email" name="email" id="emailInput" placeholder="Enter email address">
+  </div>
+
+  <label>Profile Photo:</label>
+  <input type="file" name="photo" accept="image/*">
+
+  <button type="submit">Register</button>
+</form>
+
+<script>
+  // Auto-calculate age from DOB
+  const dobInput = document.getElementById("dob");
+  const ageInput = document.getElementById("age");
+
+  dobInput.addEventListener("change", () => {
+    const dob = new Date(dobInput.value);
+    const today = new Date();
+    let age = today.getFullYear() - dob.getFullYear();
+    const monthDiff = today.getMonth() - dob.getMonth();
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dob.getDate())) {
+      age--;
+    }
+    ageInput.value = age;
+  });
+
+  // Toggle email field
+  const emailTypeSelect = document.getElementById("emailType");
+  const emailField = document.getElementById("emailField");
+  const emailInput = document.getElementById("emailInput");
+
+  emailTypeSelect.addEventListener("change", () => {
+    if (emailTypeSelect.value) {
+      emailField.style.display = "block";
+      emailInput.required = true; // only required if selected
+    } else {
+      emailField.style.display = "none";
+      emailInput.required = false;
+    }
+  });
+
+  // Submit form
+  const form = document.getElementById("regForm");
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const formData = new FormData(form);
+
+    const res = await fetch("http://localhost:5000/register", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await res.json();
+    alert(data.message);
+  });
+</script>
+  
+  
+  <!-- <div class="form-container">
+    <h2>Student Registration</h2>
+    <form id="regForm">
+      <div class="form-group">
+        <label for="fullname">Full Name</label>
+        <input type="text" id="fullname" name="fullname" required>
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="class">Class</label>
+        <select id="class" name="class" required>
+          <option value="">-- Select Class --</option>
+          <option>Primary 1</option>
+          <option>Primary 2</option>
+          <option>Primary 3</option>
+          <option>Primary 4</option>
+          <option>Primary 5</option>
+          <option>Primary 6</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="photo">Upload Photo</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </div>
+
+      <button type="submit">Register</button>
+      <p class="note">Your details are safe with EduKids Africa.</p>
+    </form>
+  </div>
+-->
+</body>
+</html>
