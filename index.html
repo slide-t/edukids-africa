@@ -759,7 +759,7 @@ nav a:hover {
       <div class="stats"><i class="fas fa-bolt"></i> 50+ Available Fields</div>
     </div>
   </section>
-
+<div id="footer"></div>
   <!-- Script -->
   <script>
     const menu = document.getElementById('menu');
@@ -781,6 +781,20 @@ nav a:hover {
       link.addEventListener('click', () => {
         nav.classList.remove('active');
       });
+    });
+  </script>
+  <script>
+if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("/sw.js").then(() => {
+    console.log("Service Worker Registered");
+  });
+}
+  </script>
+  <script>
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer").innerHTML = data;
     });
   </script>
 </body>
