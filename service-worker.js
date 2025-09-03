@@ -5,7 +5,8 @@ const urlsToCache = [
   "/index.html",
   "/styles.css",
   "/script.js",
-  "/logo.png"
+  "/logo.png",
+  "/footer.html"
 ];
 
 // Install & Cache
