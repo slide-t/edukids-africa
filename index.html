@@ -241,8 +241,38 @@
 
 <!-- STYLES -->
 <style>
-/* Base Header */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: #2c1a47; /* keep your scheme */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* shadow under navbar */
+}
+
+nav {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 6px 12px; /* reduced space */
+  border-radius: 25px;
+  transition: all 0.3s;
+}
+
+nav a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+}
+  
+/* Base Header */
+/*header {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -252,12 +282,12 @@ header {
   position: relative;
   z-index: 1100;
 }
-
+*/
 .logo {
   font-size: 22px;
   font-weight: bold;
 }
-
+/*
 nav {
   display: flex;
   gap: 20px;
@@ -275,7 +305,7 @@ nav a:hover {
   background: rgba(255,255,255,0.15);
   box-shadow: 0 0 10px rgba(255,255,255,0.6);
 }
-
+*/
 .menu-toggle {
   display: none;
   font-size: 28px;
