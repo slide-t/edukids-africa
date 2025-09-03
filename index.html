@@ -405,6 +405,55 @@ header {
         display: block;
       }
     }
+
+  /* Signup Button Wrapper */
+.signup-wrapper {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* Signup Button */
+.signup-btn {
+  width: 80%;                /* spans most of the page */
+  max-width: 400px;           /* keep it balanced */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 30px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 0 15px rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.signup-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3), inset 0 0 20px rgba(255,255,255,0.4);
+}
+
+/* Water bubble animated shine */
+.signup-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 20%, transparent 70%);
+  animation: bubble 6s infinite linear;
+  transform: rotate(25deg);
+}
+
+@keyframes bubble {
+  0% { transform: translateX(-100%) translateY(0) rotate(25deg); }
+  50% { transform: translateX(0) translateY(-20%) rotate(25deg); }
+  100% { transform: translateX(100%) translateY(0) rotate(25deg); }
+}
   </style>
 </head>
 <body>
@@ -445,7 +494,9 @@ header {
   <button class="play-btn"><i class="fas fa-video"></i></button>
 </div>
   </section>
-
+<div class="signup-wrapper">
+  <button class="signup-btn">Signup Here</button>
+</div>
   <!-- Cards Section -->
 <section class="cards" id="students">
   <div class="card">
