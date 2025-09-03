@@ -1,0 +1,129 @@
+<footer>
+  <div class="footer-container">
+    <!-- Left -->
+    <div class="footer-logo">
+      <h2>Edukids Africa<span>.</span></h2>
+      <p>Nurturing Young African Minds with Tech, Learning, and Creativity.</p>
+    </div>
+
+    <!-- Center -->
+    <div class="footer-links">
+      <h3>Quick Links</h3>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#students">Students</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Right -->
+    <div class="footer-contact">
+      <h3>Contact Us</h3>
+      <p>Email: <a href="mailto:info@edukidsafrica.org">info@edukidsafrica.org</a></p>
+      <p>Phone: +234 800 123 4567</p>
+      <div class="socials">
+        <a href="#"><img src="icons/facebook.svg" alt="Facebook"></a>
+        <a href="#"><img src="icons/twitter.svg" alt="Twitter"></a>
+        <a href="#"><img src="icons/instagram.svg" alt="Instagram"></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>© <span id="year"></span> Edukids Africa. All Rights Reserved.</p>
+  </div>
+</footer>
+
+<script>
+  // Auto year
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+<style>
+footer {
+  background: #2C1A47;
+  color: #fff;
+  padding: 50px 20px 20px;
+  font-family: "Poppins", sans-serif;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-logo h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.footer-logo h2 span {
+  color: #ff6b6b;
+}
+.footer-logo p {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.footer-links h3,
+.footer-contact h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #ff6b6b;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.footer-links ul li {
+  margin-bottom: 8px;
+}
+.footer-links ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.3s;
+}
+.footer-links ul li a:hover {
+  color: #ff6b6b;
+}
+
+.footer-contact p {
+  margin: 6px 0;
+  font-size: 14px;
+}
+.footer-contact a {
+  color: #ff6b6b;
+  text-decoration: none;
+}
+
+.socials {
+  margin-top: 10px;
+}
+.socials a {
+  display: inline-block;
+  margin-right: 10px;
+}
+.socials img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+.socials img:hover {
+  filter: invert(56%) sepia(88%) saturate(3685%) hue-rotate(340deg) brightness(101%) contrast(101%);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  font-size: 14px;
+  margin-top: 20px;
+}
+  </style>
