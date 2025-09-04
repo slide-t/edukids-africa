@@ -2,28 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Quiz Board</title>
+  <title>EduKids Quiz Board</title>
+  <link rel="stylesheet" href="quiz.css">
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
       font-family: 'Segoe UI', sans-serif;
       background: #eaf6ff;
-      min-height: 100vh;
+      margin: 0;
+      padding: 0;
       display: flex;
       justify-content: center;
       align-items: flex-start;
-      padding: 20px;
+      min-height: 100vh;
     }
 
     .quiz-board {
-      max-width: 1000px;
-      width: 95%;
-      margin: 20px auto;
+      width: 100%;
+      max-width: 1100px;
       background: #fff;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
       padding: 25px;
-      animation: fadeIn 0.6s ease-in-out;
+      margin: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
     }
 
     .quiz-header {
@@ -34,16 +34,33 @@
     }
 
     .quiz-header h2 {
-      font-size: 1.6rem;
-      color: #2b6777;
+      color: #004080;
+      font-size: 1.8rem;
     }
 
     .stats {
+      display: flex;
+      gap: 20px;
       font-size: 1rem;
-      color: #555;
+      font-weight: bold;
     }
 
-    .question {
+    .progress-container {
+      background: #eee;
+      border-radius: 10px;
+      height: 15px;
+      margin: 15px 0;
+      overflow: hidden;
+    }
+
+    .progress-bar {
+      background: #4cafef;
+      height: 100%;
+      width: 0%;
+      transition: width 0.4s ease;
+    }
+
+    .question-text {
       font-size: 1.4rem;
       font-weight: bold;
       margin-bottom: 20px;
@@ -53,184 +70,93 @@
     .options {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 12px;
     }
 
     .options button {
-      padding: 15px;
-      border-radius: 12px;
+      padding: 14px;
       border: none;
-      background: #e0f7fa;
+      border-radius: 10px;
+      background: #dff3ff;
       font-size: 1.1rem;
       text-align: left;
-      transition: 0.3s;
       cursor: pointer;
+      transition: all 0.3s ease;
     }
 
-    .options button:hover {
-      background: #4dd0e1;
-      color: #fff;
-    }
+    .options button:hover { background: #bde7ff; }
+    .correct { background: #4CAF50 !important; color: #fff; }
+    .wrong { background: #e74c3c !important; color: #fff; }
 
     /* Modal */
     .modal {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
-      display: flex;
+      display: none;
       justify-content: center;
       align-items: center;
       background: rgba(0,0,0,0.6);
+      z-index: 1000;
     }
 
-    .modal.hidden { display: none; }
+    .modal.show { display: flex; }
 
     .modal-content {
-      background: white;
+      background: #fff;
       padding: 30px;
       border-radius: 12px;
       text-align: center;
       max-width: 500px;
       width: 90%;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .modal-content button {
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #004080;
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  
-<div id="quiz-board" class="quiz-board">
-  <header class="quiz-header">
-    <h2 id="quiz-title">English Studies Quiz</h2>
-    <div class="stats">
-      <span id="score">Score: 0</span>
-      <span id="timer">Time: 30s</span>
+  <div class="quiz-board">
+    <header class="quiz-header">
+      <h2 id="quiz-title">Loading...</h2>
+      <div class="stats">
+        <span id="score">Score: 0</span>
+        <span id="timer">Time: 10:00</span>
+      </div>
+    </header>
+
+    <div class="progress-container">
+      <div class="progress-bar" id="progress-bar"></div>
     </div>
-  </header>
 
-  <main class="quiz-body">
-    <div id="question" class="question">Loading...</div>
-    <div id="options" class="options"></div>
-  </main>
-</div>
-
-<!-- Level modal -->
-<div id="level-modal" class="modal hidden">
-  <div class="modal-content">
-    <h3 id="level-message">🎉 Congratulations!</h3>
-    <p id="level-requirement"></p>
-    <button id="next-level-btn">Proceed to Next Level 🚀</button>
-    <button id="exit-btn">Exit</button>
+    <main>
+      <div id="question" class="question-text">Loading question...</div>
+      <div id="options" class="options"></div>
+    </main>
   </div>
-</div>
 
-<!-- Sounds -->
-<audio id="sound-correct" src="sounds/correct.mp3"></audio>
-<audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
-<audio id="sound-flip" src="sounds/flip.mp3"></audio>
+  <!-- Level Modal -->
+  <div id="level-modal" class="modal">
+    <div class="modal-content">
+      <h3 id="level-message">🎉 Congratulations!</h3>
+      <p id="level-requirement"></p>
+      <button id="next-level-btn">Proceed</button>
+      <button id="retry-btn">Retry</button>
+    </div>
+  </div>
 
-<script>
-let currentLevel = 1;
-let currentQuestionIndex = 0;
-let score = 0;
-let questions = [];
+  <!-- Sounds -->
+  <audio id="sound-correct" src="sounds/correct.mp3"></audio>
+  <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+  <audio id="sound-flip" src="sounds/flip.mp3"></audio>
 
-const levelConfig = {
-  1: { total: 50, pass: 45 },
-  2: { total: 60, pass: 55 },
-  3: { total: 80, pass: 75 }
-};
-
-function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }
-
-function getSubjectFromURL(){
-  const params = new URLSearchParams(window.location.search);
-  return params.get("subject") || "English";
-}
-
-async function loadQuestions(subject, level){
-  const res = await fetch("questions.json");
-  const data = await res.json();
-  if(data[subject] && data[subject][`level${level}`]){
-    questions = shuffle([...data[subject][`level${level}`]]);
-    currentQuestionIndex = 0;
-    score = 0;
-    document.getElementById("quiz-title").innerText = `${subject} Quiz - Level ${level}`;
-    showQuestion();
-  }else{
-    document.getElementById("quiz-board").innerHTML=`<h2>No questions found for ${subject} - Level ${level}</h2>`;
-  }
-}
-
-function showQuestion(){
-  if(currentQuestionIndex >= questions.length){
-    checkLevelPass();
-    return;
-  }
-  const q = questions[currentQuestionIndex];
-  document.getElementById("question").innerText = q.question;
-  const optionsDiv = document.getElementById("options");
-  optionsDiv.innerHTML = "";
-  shuffle([...q.options]).forEach(opt=>{
-    const btn = document.createElement("button");
-    btn.innerText = opt;
-    btn.onclick = ()=>checkAnswer(opt, q.answer);
-    optionsDiv.appendChild(btn);
-  });
-  document.getElementById("sound-flip").play();
-}
-
-function checkAnswer(selected, correct){
-  if(selected === correct){
-    score++;
-    document.getElementById("score").innerText = `Score: ${score}`;
-    document.getElementById("sound-correct").play();
-  }else{
-    document.getElementById("sound-wrong").play();
-  }
-  currentQuestionIndex++;
-  setTimeout(showQuestion, 700);
-}
-
-function checkLevelPass(){
-  const passScore = levelConfig[currentLevel].pass;
-  document.getElementById("level-modal").classList.remove("hidden");
-
-  if(score >= passScore){
-    document.getElementById("level-message").innerText = `🎉 You passed Level ${currentLevel}!`;
-    if(currentLevel < 3){
-      document.getElementById("level-requirement").innerText = `Do you want to proceed to Level ${currentLevel+1}?`;
-      document.getElementById("next-level-btn").onclick = ()=>{
-        currentLevel++;
-        toggleModal(false);
-        loadQuestions(getSubjectFromURL(), currentLevel);
-      };
-    }else{
-      document.getElementById("level-requirement").innerText = "👑 Congratulations! You completed all levels!";
-      document.getElementById("next-level-btn").style.display = "none";
-    }
-  }else{
-    document.getElementById("level-message").innerText = "😢 You did not meet the required score.";
-    document.getElementById("level-requirement").innerText = "Try again to unlock the next level.";
-    document.getElementById("next-level-btn").innerText = "Retry Level";
-    document.getElementById("next-level-btn").onclick = ()=>{
-      toggleModal(false);
-      loadQuestions(getSubjectFromURL(), currentLevel);
-    };
-  }
-
-  document.getElementById("exit-btn").onclick = ()=>{ window.location.href="subjects.html"; };
-}
-
-function toggleModal(show){
-  document.getElementById("level-modal").classList.toggle("hidden", !show);
-}
-
-// Start Quiz
-const subject = getSubjectFromURL();
-loadQuestions(subject, currentLevel);
-</script>
+  <script src="quiz.js"></script>
 </body>
 </html>
