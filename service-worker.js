@@ -7,6 +7,8 @@ const urlsToCache = [
   "/script.js",
   "/logo.png",
   "/footer.html",
+  "/subjects.html",
+  "/quiz.html",
   "/reg.html",
   "student.html"
 ];
