@@ -121,7 +121,26 @@ button.loading::after {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6c5ce7; /* your purple */
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2000;
+}
 
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+}
     
     </style>
   <!--<style>
@@ -304,9 +323,10 @@ button.loading::after {
     alert(data.message);
   });
 </script>
-  <script>
+<script>
 const form = document.getElementById("registrationForm");
 const submitBtn = form.querySelector("button");
+const toast = document.getElementById("toast");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -325,23 +345,27 @@ form.addEventListener("submit", async (e) => {
 
     if (!res.ok) throw new Error("Failed to submit");
 
-    const data = await res.json();
-    alert("✅ Registration successful!");
+    await res.json();
 
-    // Reset form
-    form.reset();
+    // ✅ Show toast
+    toast.classList.add("show");
+
+    // ✅ Redirect after 2.5s
+    setTimeout(() => {
+      window.location.href = "index.html";
+    }, 2500);
+
   } catch (err) {
     console.error(err);
     alert("❌ Something went wrong. Please try again.");
-  } finally {
-    // Remove spinner
     submitBtn.classList.remove("loading");
     submitBtn.disabled = false;
     submitBtn.innerText = "Submit";
   }
 });
 </script>
-  
+
+  <div id="toast" class="toast">✅ Registration successful! Redirecting...</div>
   <!-- <div class="form-container">
     <h2>Student Registration</h2>
     <form id="regForm">
