@@ -64,9 +64,56 @@
       font-size: 12px;
       color: #888;
     }
+/* Search Bar */
+.search-bar {
+  position: fixed;
+  top: 15px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  z-index: 1000;
+  transition: all 0.4s ease;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 15px;
+  border: 2px solid #00aaff;
+  border-radius: 25px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.4s ease;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.3);
+}
+
+.search-bar input:focus {
+  width: 400px; /* expands when clicked */
+  box-shadow: 0 6px 18px rgba(0, 170, 255, 0.5);
+}
+    
   </style>
 </head>
 <body>
+  <!-- Search Bar -->
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="🔍 Search students...">
+</div>
+
+<!-- Students List -->
+<div class="students-list" id="studentsList">
+  <!-- Example Student Card -->
+  <div class="student-card">
+    <h3>Sophia Elizabeth</h3>
+    <p>Age: 12 | Class: Basic 6</p>
+    <p>Country: Nigeria</p>
+  </div>
+  <div class="student-card">
+    <h3>Jayden Gabriel</h3>
+    <p>Age: 10 | Class: Primary 5</p>
+    <p>Country: Kenya</p>
+  </div>
+</div>
   <h1><i class="fas fa-users"></i> Registered Students</h1>
   <div class="students-container" id="studentsContainer"></div>
 
@@ -104,5 +151,49 @@
 
     loadStudents();
   </script>
+  <script>
+  const searchInput = document.getElementById("searchInput");
+  const studentsList = document.getElementById("studentsList");
+  let allStudents = [];
+
+  // Fetch students from Node.js server
+  async function loadStudents() {
+    const res = await fetch("http://localhost:5000/students");
+    allStudents = await res.json();
+    displayStudents(allStudents);
+  }
+
+  // Display student cards
+  function displayStudents(students) {
+    studentsList.innerHTML = "";
+    students.forEach(s => {
+      const card = document.createElement("div");
+      card.className = "student-card";
+      card.innerHTML = `
+        <h3>${s.fullname}</h3>
+        <p>Age: ${s.age} | Class: ${s.studentClass}</p>
+        <p>Origin: ${s.countryOrigin} | Residence: ${s.countryResidence}</p>
+        ${s.photo ? `<img src="/uploads/${s.photo}" alt="${s.fullname}" style="width:100px;height:100px;border-radius:50%;margin-top:10px;">` : ""}
+      `;
+      studentsList.appendChild(card);
+    });
+  }
+
+  // Search filter
+  searchInput.addEventListener("input", function () {
+    const filter = searchInput.value.toLowerCase();
+    const filtered = allStudents.filter(s =>
+      s.fullname.toLowerCase().includes(filter) ||
+      s.studentClass.toLowerCase().includes(filter) ||
+      s.countryOrigin.toLowerCase().includes(filter) ||
+      s.countryResidence.toLowerCase().includes(filter)
+    );
+    displayStudents(filtered);
+  });
+
+  // Initial load
+  loadStudents();
+  </script>
 </body>
+  
 </html>
