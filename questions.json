@@ -15,7 +15,30 @@
   },
   "English": {
     "level1": [
-      { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "correct": "children" }
+      { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "correct": "children" },
+      { "question": "Choose the correct article: ___ apple a day keeps the doctor away.", "options": ["A", "An", "The", "No article"], "correct": "An" }
+    ],
+    "level2": [
+      { "question": "Identify the noun: The cat is sleeping on the mat.", "options": ["cat", "is", "sleeping", "on"], "correct": "cat" },
+      { "question": "Which is a synonym of 'happy'?", "options": ["sad", "angry", "joyful", "hungry"], "correct": "joyful" }
+    ],
+    "level3": [
+      { "question": "Choose the correct tense: She ___ to school yesterday.", "options": ["go", "goes", "went", "going"], "correct": "went" },
+      { "question": "Identify the adjective: The tall boy runs fast.", "options": ["boy", "runs", "tall", "fast"], "correct": "tall" }
+    ]
+  },
+  "Science": {
+    "level1": [
+      { "question": "Which part of the plant makes food?", "options": ["Root", "Stem", "Leaf", "Flower"], "correct": "Leaf" },
+      { "question": "What do humans need to breathe?", "options": ["Water", "Oxygen", "Carbon dioxide", "Nitrogen"], "correct": "Oxygen" }
+    ],
+    "level2": [
+      { "question": "What is H₂O commonly known as?", "options": ["Oxygen", "Hydrogen", "Water", "Salt"], "correct": "Water" },
+      { "question": "What planet is known as the Red Planet?", "options": ["Mars", "Earth", "Venus", "Jupiter"], "correct": "Mars" }
+    ],
+    "level3": [
+      { "question": "What gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "correct": "Oxygen" },
+      { "question": "Which organ in the human body pumps blood?", "options": ["Brain", "Lungs", "Heart", "Kidney"], "correct": "Heart" }
     ]
   }
 }
