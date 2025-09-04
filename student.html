@@ -3,35 +3,62 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registered Students - EduKids Africa</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <title>Students - EduKids Africa</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f6fa;
       margin: 0;
-      padding: 20px;
-    }
-
-    h1 {
+      font-family: 'Poppins', sans-serif;
+      background: #2c1a47;
+      color: #fff;
       text-align: center;
-      margin-bottom: 30px;
-      color: #2c1a47;
     }
 
-    .students-container {
+    /* 🔍 Floating Search Bar */
+    .search-bar {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #fff;
+      border-radius: 30px;
+      padding: 10px 20px;
+      width: 250px;
+      max-width: 80%;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+      z-index: 1000;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 1rem;
+    }
+
+    .search-bar:focus-within {
+      width: 400px;
+      background: #fdfdfd;
+      box-shadow: 0 0 15px rgba(255,255,255,0.7);
+    }
+
+    /* Student List */
+    .student-list {
+      margin-top: 100px;
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 20px;
+      padding: 20px;
     }
 
     .student-card {
       background: #fff;
-      border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      color: #333;
+      border-radius: 20px;
       padding: 20px;
-      text-align: center;
-      transition: transform 0.3s ease;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s;
     }
 
     .student-card:hover {
@@ -41,159 +68,109 @@
     .student-card img {
       width: 100px;
       height: 100px;
-      border-radius: 50%;
       object-fit: cover;
-      margin-bottom: 15px;
-      background: orange;
-      padding: 5px;
-      box-shadow: 0 0 10px rgba(255,165,0,0.6);
+      border-radius: 50%;
+      border: 4px solid orange;
+      margin-bottom: 10px;
     }
 
-    .student-card h3 {
-      margin: 10px 0 5px;
-      color: #2c1a47;
+    /* Pagination */
+    .pagination {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
     }
 
-    .student-card p {
-      margin: 4px 0;
-      font-size: 14px;
-      color: #555;
+    .pagination button {
+      background: #6c5ce7;
+      color: #fff;
+      border: none;
+      padding: 10px 18px;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s;
     }
 
-    .student-card .date {
-      font-size: 12px;
-      color: #888;
+    .pagination button:hover {
+      background: #5a4bd4;
     }
-/* Search Bar */
-.search-bar {
-  position: fixed;
-  top: 15px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 280px;
-  z-index: 1000;
-  transition: all 0.4s ease;
-}
 
-.search-bar input {
-  width: 100%;
-  padding: 10px 15px;
-  border: 2px solid #00aaff;
-  border-radius: 25px;
-  outline: none;
-  font-size: 1rem;
-  transition: all 0.4s ease;
-  background: #fff;
-  box-shadow: 0 4px 12px rgba(0, 170, 255, 0.3);
-}
-
-.search-bar input:focus {
-  width: 400px; /* expands when clicked */
-  box-shadow: 0 6px 18px rgba(0, 170, 255, 0.5);
-}
-    
+    .pagination button:disabled {
+      background: #999;
+      cursor: not-allowed;
+    }
   </style>
 </head>
 <body>
-  <!-- Search Bar -->
-<div class="search-bar">
-  <input type="text" id="searchInput" placeholder="🔍 Search students...">
-</div>
 
-<!-- Students List -->
-<div class="students-list" id="studentsList">
-  <!-- Example Student Card -->
-  <div class="student-card">
-    <h3>Sophia Elizabeth</h3>
-    <p>Age: 12 | Class: Basic 6</p>
-    <p>Country: Nigeria</p>
+  <!-- 🔍 Floating Search Bar -->
+  <div class="search-bar">
+    <input type="text" id="searchInput" placeholder="Search students...">
   </div>
-  <div class="student-card">
-    <h3>Jayden Gabriel</h3>
-    <p>Age: 10 | Class: Primary 5</p>
-    <p>Country: Kenya</p>
+
+  <!-- 📄 Student Cards -->
+  <div class="student-list" id="studentList"></div>
+
+  <!-- ⏮️ Pagination -->
+  <div class="pagination">
+    <button id="prevBtn">Prev</button>
+    <button id="nextBtn">Next</button>
   </div>
-</div>
-  <h1><i class="fas fa-users"></i> Registered Students</h1>
-  <div class="students-container" id="studentsContainer"></div>
 
   <script>
-    async function loadStudents() {
-      try {
-        const res = await fetch("http://localhost:5000/students.json"); // Node.js serves this
-        const students = await res.json();
+    const studentList = document.getElementById("studentList");
+    const searchInput = document.getElementById("searchInput");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
 
-        const container = document.getElementById("studentsContainer");
-        container.innerHTML = "";
+    let currentPage = 1;
+    let currentSearch = "";
 
-        students.reverse().forEach(student => {
-          const card = document.createElement("div");
-          card.className = "student-card";
+    async function fetchStudents(page = 1, search = "") {
+      const res = await fetch(`http://localhost:5000/students?page=${page}&limit=6&search=${search}`);
+      const data = await res.json();
 
-          card.innerHTML = `
-            <img src="uploads/${student.photo || 'default.png'}" alt="${student.fullname}">
-            <h3>${student.fullname}</h3>
-            <p><strong>Class:</strong> ${student.studentClass}</p>
-            <p><strong>Age:</strong> ${student.age}</p>
-            <p><strong>Email:</strong> ${student.email || 'N/A'}</p>
-            <p><strong>Origin:</strong> ${student.countryOrigin || 'N/A'}</p>
-            <p><strong>Residence:</strong> ${student.countryResidence || 'N/A'}</p>
-            <p class="date">📅 Registered: ${new Date(student.dateRegistered).toLocaleDateString()}</p>
-          `;
-          container.appendChild(card);
-        });
+      // Display students
+      studentList.innerHTML = data.students.map(student => `
+        <div class="student-card">
+          <img src="http://localhost:5000/uploads/${student.photo || 'default.png'}" alt="${student.fullname}">
+          <h3>${student.fullname}</h3>
+          <p><b>Age:</b> ${student.age}</p>
+          <p><b>Class:</b> ${student.studentClass}</p>
+          <p><b>Country:</b> ${student.countryResidence || 'N/A'}</p>
+        </div>
+      `).join("");
 
-      } catch (err) {
-        console.error(err);
-        document.getElementById("studentsContainer").innerHTML = "<p>Failed to load students.</p>";
-      }
+      // Pagination buttons
+      prevBtn.disabled = page === 1;
+      nextBtn.disabled = (page * data.limit) >= data.total;
     }
 
-    loadStudents();
-  </script>
-  <script>
-  const searchInput = document.getElementById("searchInput");
-  const studentsList = document.getElementById("studentsList");
-  let allStudents = [];
-
-  // Fetch students from Node.js server
-  async function loadStudents() {
-    const res = await fetch("http://localhost:5000/students");
-    allStudents = await res.json();
-    displayStudents(allStudents);
-  }
-
-  // Display student cards
-  function displayStudents(students) {
-    studentsList.innerHTML = "";
-    students.forEach(s => {
-      const card = document.createElement("div");
-      card.className = "student-card";
-      card.innerHTML = `
-        <h3>${s.fullname}</h3>
-        <p>Age: ${s.age} | Class: ${s.studentClass}</p>
-        <p>Origin: ${s.countryOrigin} | Residence: ${s.countryResidence}</p>
-        ${s.photo ? `<img src="/uploads/${s.photo}" alt="${s.fullname}" style="width:100px;height:100px;border-radius:50%;margin-top:10px;">` : ""}
-      `;
-      studentsList.appendChild(card);
+    // 🔍 Search event
+    searchInput.addEventListener("input", () => {
+      currentSearch = searchInput.value;
+      currentPage = 1;
+      fetchStudents(currentPage, currentSearch);
     });
-  }
 
-  // Search filter
-  searchInput.addEventListener("input", function () {
-    const filter = searchInput.value.toLowerCase();
-    const filtered = allStudents.filter(s =>
-      s.fullname.toLowerCase().includes(filter) ||
-      s.studentClass.toLowerCase().includes(filter) ||
-      s.countryOrigin.toLowerCase().includes(filter) ||
-      s.countryResidence.toLowerCase().includes(filter)
-    );
-    displayStudents(filtered);
-  });
+    // Pagination events
+    prevBtn.addEventListener("click", () => {
+      if (currentPage > 1) {
+        currentPage--;
+        fetchStudents(currentPage, currentSearch);
+      }
+    });
 
-  // Initial load
-  loadStudents();
+    nextBtn.addEventListener("click", () => {
+      currentPage++;
+      fetchStudents(currentPage, currentSearch);
+    });
+
+    // Initial load
+    fetchStudents();
   </script>
+
 </body>
-  
 </html>
