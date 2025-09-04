@@ -194,5 +194,43 @@
     // Initial render
     renderSubjects();
   </script>
+
+
+<!-- Footer -->
+  <div id="footer"></div>
+
+<script>
+// Load footer
+    async function loadFooter() {
+      const footerEl = document.getElementById("footer");
+      let footerHTML = "";
+      try {
+        let response = await fetch("footer.html");
+        if (!response.ok) throw new Error("Not found locally");
+        footerHTML = await response.text();
+      } catch (e1) {
+        try {
+          let response = await fetch("/footer.html");
+          if (!response.ok) throw new Error("Not found in root");
+          footerHTML = await response.text();
+        } catch (e2) {
+          console.error("Footer could not be loaded:", e2);
+          footerHTML = "<p style='text-align:center;color:#fff;'>Footer not available</p>";
+        }
+      }
+      footerEl.innerHTML = footerHTML;
+    }
+    loadFooter();
+
+    // Register service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").then(() => {
+        console.log("Service Worker Registered");
+      });
+    }
+
+</script>
+
+  
 </body>
 </html>
