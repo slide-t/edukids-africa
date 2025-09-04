@@ -1,244 +1,236 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Quiz Board</title>
   <style>
-    * { box-sizing: border-box; margin:0; padding:0; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
     body {
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      background: #f0f9ff;
+      font-family: 'Segoe UI', sans-serif;
+      background: #eaf6ff;
+      min-height: 100vh;
       display: flex;
       justify-content: center;
-      align-items: center;
-      min-height: 100vh;
+      align-items: flex-start;
       padding: 20px;
     }
 
-    .quiz-container {
+    .quiz-board {
+      max-width: 1000px;
+      width: 95%;
+      margin: 20px auto;
       background: #fff;
-      border-radius: 16px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+      border-radius: 20px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
       padding: 25px;
-      width: 100%;
-      max-width: 600px;
-      text-align: center;
-      animation: fadeIn 0.6s ease;
+      animation: fadeIn 0.6s ease-in-out;
     }
 
-    h1 {
-      font-size: 28px;
-      color: #004080;
-      margin-bottom: 15px;
-    }
-
-    .info-bar {
+    .quiz-header {
       display: flex;
       justify-content: space-between;
-      font-size: 16px;
+      align-items: center;
       margin-bottom: 15px;
-      color: #333;
     }
 
-    .question-box {
-      font-size: 20px;
+    .quiz-header h2 {
+      font-size: 1.6rem;
+      color: #2b6777;
+    }
+
+    .stats {
+      font-size: 1rem;
+      color: #555;
+    }
+
+    .question {
+      font-size: 1.4rem;
       font-weight: bold;
-      margin: 20px 0;
-      min-height: 60px;
+      margin-bottom: 20px;
+      color: #333;
     }
 
     .options {
       display: flex;
       flex-direction: column;
-      gap: 12px;
+      gap: 15px;
     }
 
     .options button {
       padding: 15px;
-      border: none;
       border-radius: 12px;
+      border: none;
       background: #e0f7fa;
-      cursor: pointer;
-      font-size: 16px;
-      font-weight: bold;
+      font-size: 1.1rem;
       text-align: left;
-      transition: transform 0.3s, background 0.3s;
-      word-wrap: break-word;
+      transition: 0.3s;
+      cursor: pointer;
     }
 
-    .options button:hover { background: #b2ebf2; }
-
-    .correct {
-      background: #4CAF50 !important;
+    .options button:hover {
+      background: #4dd0e1;
       color: #fff;
-      animation: beat 0.4s ease 2;
     }
 
-    .wrong {
-      background: #e74c3c !important;
-      color: #fff;
-      animation: shake 0.4s ease;
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: rgba(0,0,0,0.6);
     }
 
-    @keyframes beat {
-      0%, 100% { transform: scale(1); }
-      50% { transform: scale(1.1); }
-    }
+    .modal.hidden { display: none; }
 
-    @keyframes shake {
-      0%, 100% { transform: translateX(0); }
-      25% { transform: translateX(-8px); }
-      75% { transform: translateX(8px); }
+    .modal-content {
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
     }
 
     @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(-20px); }
+      from { opacity: 0; transform: translateY(20px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes flipOut {
-      from { transform: rotateY(0); opacity: 1; }
-      to { transform: rotateY(90deg); opacity: 0; }
-    }
-
-    @keyframes flipIn {
-      from { transform: rotateY(90deg); opacity: 0; }
-      to { transform: rotateY(0); opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h1 id="subjectTitle">Fun Quiz 🎉</h1>
-    <div class="info-bar">
-      <span>Score: <span id="score">0</span></span>
-      <span>Time: <span id="time">10</span>s</span>
+  
+<div id="quiz-board" class="quiz-board">
+  <header class="quiz-header">
+    <h2 id="quiz-title">English Studies Quiz</h2>
+    <div class="stats">
+      <span id="score">Score: 0</span>
+      <span id="timer">Time: 30s</span>
     </div>
-    <div id="questionBox" class="question-box">Loading...</div>
-    <div class="options">
-      <button onclick="checkAnswer(this)">A</button>
-      <button onclick="checkAnswer(this)">B</button>
-      <button onclick="checkAnswer(this)">C</button>
-      <button onclick="checkAnswer(this)">D</button>
-    </div>
+  </header>
+
+  <main class="quiz-body">
+    <div id="question" class="question">Loading...</div>
+    <div id="options" class="options"></div>
+  </main>
+</div>
+
+<!-- Level modal -->
+<div id="level-modal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="level-message">🎉 Congratulations!</h3>
+    <p id="level-requirement"></p>
+    <button id="next-level-btn">Proceed to Next Level 🚀</button>
+    <button id="exit-btn">Exit</button>
   </div>
+</div>
 
-  <!-- 🎶 Sounds -->
-  <audio id="sound-correct" src="https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg"></audio>
-  <audio id="sound-wrong" src="https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg"></audio>
-  <audio id="sound-flip" src="https://actions.google.com/sounds/v1/cartoon/pop.ogg"></audio>
+<!-- Sounds -->
+<audio id="sound-correct" src="sounds/correct.mp3"></audio>
+<audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+<audio id="sound-flip" src="sounds/flip.mp3"></audio>
 
-  <script>
-    // Questions database grouped by subject
-    const quizData = {
-      Mathematics: [
-        { question: "5 + 3 = ?", options: ["6", "8", "10", "7"], correct: "8" },
-        { question: "10 ÷ 2 = ?", options: ["2", "3", "5", "4"], correct: "5" }
-      ],
-      English: [
-        { question: "Which is a noun?", options: ["Run", "Happy", "Dog", "Quickly"], correct: "Dog" },
-        { question: "Opposite of 'fast'?", options: ["Quick", "Slow", "Speed", "Run"], correct: "Slow" }
-      ],
-      Science: [
-        { question: "Plants make food using?", options: ["Photosynthesis", "Respiration", "Digestion", "Fermentation"], correct: "Photosynthesis" },
-        { question: "Water boils at?", options: ["90°C", "100°C", "80°C", "70°C"], correct: "100°C" }
-      ]
+<script>
+let currentLevel = 1;
+let currentQuestionIndex = 0;
+let score = 0;
+let questions = [];
+
+const levelConfig = {
+  1: { total: 50, pass: 45 },
+  2: { total: 60, pass: 55 },
+  3: { total: 80, pass: 75 }
+};
+
+function shuffle(arr){ return arr.sort(()=>Math.random()-0.5); }
+
+function getSubjectFromURL(){
+  const params = new URLSearchParams(window.location.search);
+  return params.get("subject") || "English";
+}
+
+async function loadQuestions(subject, level){
+  const res = await fetch("questions.json");
+  const data = await res.json();
+  if(data[subject] && data[subject][`level${level}`]){
+    questions = shuffle([...data[subject][`level${level}`]]);
+    currentQuestionIndex = 0;
+    score = 0;
+    document.getElementById("quiz-title").innerText = `${subject} Quiz - Level ${level}`;
+    showQuestion();
+  }else{
+    document.getElementById("quiz-board").innerHTML=`<h2>No questions found for ${subject} - Level ${level}</h2>`;
+  }
+}
+
+function showQuestion(){
+  if(currentQuestionIndex >= questions.length){
+    checkLevelPass();
+    return;
+  }
+  const q = questions[currentQuestionIndex];
+  document.getElementById("question").innerText = q.question;
+  const optionsDiv = document.getElementById("options");
+  optionsDiv.innerHTML = "";
+  shuffle([...q.options]).forEach(opt=>{
+    const btn = document.createElement("button");
+    btn.innerText = opt;
+    btn.onclick = ()=>checkAnswer(opt, q.answer);
+    optionsDiv.appendChild(btn);
+  });
+  document.getElementById("sound-flip").play();
+}
+
+function checkAnswer(selected, correct){
+  if(selected === correct){
+    score++;
+    document.getElementById("score").innerText = `Score: ${score}`;
+    document.getElementById("sound-correct").play();
+  }else{
+    document.getElementById("sound-wrong").play();
+  }
+  currentQuestionIndex++;
+  setTimeout(showQuestion, 700);
+}
+
+function checkLevelPass(){
+  const passScore = levelConfig[currentLevel].pass;
+  document.getElementById("level-modal").classList.remove("hidden");
+
+  if(score >= passScore){
+    document.getElementById("level-message").innerText = `🎉 You passed Level ${currentLevel}!`;
+    if(currentLevel < 3){
+      document.getElementById("level-requirement").innerText = `Do you want to proceed to Level ${currentLevel+1}?`;
+      document.getElementById("next-level-btn").onclick = ()=>{
+        currentLevel++;
+        toggleModal(false);
+        loadQuestions(getSubjectFromURL(), currentLevel);
+      };
+    }else{
+      document.getElementById("level-requirement").innerText = "👑 Congratulations! You completed all levels!";
+      document.getElementById("next-level-btn").style.display = "none";
+    }
+  }else{
+    document.getElementById("level-message").innerText = "😢 You did not meet the required score.";
+    document.getElementById("level-requirement").innerText = "Try again to unlock the next level.";
+    document.getElementById("next-level-btn").innerText = "Retry Level";
+    document.getElementById("next-level-btn").onclick = ()=>{
+      toggleModal(false);
+      loadQuestions(getSubjectFromURL(), currentLevel);
     };
+  }
 
-    // Helpers
-    function shuffle(arr) { return arr.sort(() => Math.random() - 0.5); }
-    function getSubjectFromURL() {
-      const params = new URLSearchParams(window.location.search);
-      return params.get("subject") || "Mathematics";
-    }
+  document.getElementById("exit-btn").onclick = ()=>{ window.location.href="subjects.html"; };
+}
 
-    // Game variables
-    let current = 0, score = 0, timer, questions = [];
+function toggleModal(show){
+  document.getElementById("level-modal").classList.toggle("hidden", !show);
+}
 
-    function startGame(subject) {
-      document.getElementById("subjectTitle").innerText = subject + " Quiz 🎉";
-      questions = shuffle([...quizData[subject]]);
-      current = 0; score = 0;
-      renderQuestion();
-    }
-
-    function startTimer() {
-      let timeLeft = 10;
-      document.getElementById("time").innerText = timeLeft;
-      timer = setInterval(() => {
-        timeLeft--;
-        document.getElementById("time").innerText = timeLeft;
-        if (timeLeft <= 0) { clearInterval(timer); nextQuestion(); }
-      }, 1000);
-    }
-
-    function renderQuestion() {
-      const q = questions[current];
-      const box = document.getElementById("questionBox");
-      box.style.animation = "flipIn 0.4s ease";
-      box.innerText = q.question;
-
-      const btns = document.querySelectorAll(".options button");
-      const shuffled = shuffle([...q.options]);
-      btns.forEach((btn, i) => {
-        btn.innerText = shuffled[i];
-        btn.className = "";
-        btn.disabled = false;
-      });
-
-      clearInterval(timer);
-      startTimer();
-      document.getElementById("sound-flip").play();
-    }
-
-    function checkAnswer(btn) {
-      clearInterval(timer);
-      const correct = questions[current].correct;
-      const btns = document.querySelectorAll(".options button");
-
-      btns.forEach(b => {
-        b.disabled = true;
-        if (b.innerText === correct) {
-          b.classList.add("correct");
-        } else if (b === btn) {
-          b.classList.add("wrong");
-        }
-      });
-
-      if (btn.innerText === correct) {
-        score++;
-        document.getElementById("score").innerText = score;
-        document.getElementById("sound-correct").play();
-      } else {
-        document.getElementById("sound-wrong").play();
-      }
-
-      setTimeout(nextQuestion, 1000);
-    }
-
-    function nextQuestion() {
-      const box = document.getElementById("questionBox");
-      box.style.animation = "flipOut 0.4s ease";
-
-      setTimeout(() => {
-        current++;
-        if (current < questions.length) {
-          renderQuestion();
-        } else {
-          showResult();
-        }
-      }, 400);
-    }
-
-    function showResult() {
-      document.querySelector(".quiz-container").innerHTML =
-        `<h1>Game Over 🎉</h1>
-        <p>Your Score: ${score} / ${questions.length}</p>
-        <a href="subjects.html"><button>Back to Subjects</button></a>`;
-    }
-
-    // Start game with subject from URL
-    startGame(getSubjectFromURL());
-  </script>
+// Start Quiz
+const subject = getSubjectFromURL();
+loadQuestions(subject, currentLevel);
+</script>
 </body>
 </html>
