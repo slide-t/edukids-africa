@@ -1,101 +1,151 @@
-let current = 0, score = 0, questions = [], timer;
-let level = parseInt(new URLSearchParams(window.location.search).get("level")) || 1;
-const subject = new URLSearchParams(window.location.search).get("subject") || "Mathematics";
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let timer;
+let timeLeft = 15;
 
-const requirements = {
-  1: { count: 50, pass: 45 },
-  2: { count: 60, pass: 55 },
-  3: { count: 80, pass: 75 }
+let level = 1;
+let levelConfigs = {
+  1: { total: 50, pass: 45 },
+  2: { total: 60, pass: 55 },
+  3: { total: 80, pass: 75 }
 };
 
+// DOM Elements
+const questionText = document.getElementById("question-text");
+const optionsContainer = document.getElementById("options-container");
+const progressBar = document.getElementById("progress-bar");
+const progressText = document.getElementById("progress-text");
+const feedback = document.getElementById("feedback");
+const timerDisplay = document.getElementById("timer");
+
+const flipSound = document.getElementById("flip-sound");
+const correctSound = document.getElementById("correct-sound");
+const wrongSound = document.getElementById("wrong-sound");
+
+// Fetch questions.json
 async function loadQuestions() {
   const res = await fetch("questions.json");
   const data = await res.json();
-  if (data[subject] && data[subject][`level${level}`]) {
-    questions = shuffle([...data[subject][`level${level}`]]);
-    questions = questions.slice(0, requirements[level].count);
-    document.getElementById("quiz-title").innerText = `${subject} - Level ${level}`;
-    renderQuestion();
-  } else {
-    document.querySelector(".quiz-board").innerHTML = `<h2>No questions available for ${subject} - Level ${level}</h2>`;
+  questions = shuffleArray(data[`level${level}`]);
+  startQuiz();
+}
+
+// Start quiz
+function startQuiz() {
+  currentQuestionIndex = 0;
+  score = 0;
+  feedback.innerHTML = "";
+  showQuestion();
+}
+
+// Show a question
+function showQuestion() {
+  if (currentQuestionIndex >= levelConfigs[level].total) {
+    return endQuiz();
   }
-}
 
-function shuffle(arr) {
-  return arr.sort(() => Math.random() - 0.5);
-}
+  const q = questions[currentQuestionIndex];
+  questionText.textContent = q.question;
+  optionsContainer.innerHTML = "";
 
-function renderQuestion() {
-  if (current >= questions.length) return showResult();
-
-  const q = questions[current];
-  document.getElementById("question").innerText = q.question;
-
-  const optionsBox = document.getElementById("options");
-  optionsBox.innerHTML = "";
-
-  shuffle(q.options).forEach(opt => {
+  q.options.forEach((opt, i) => {
     const btn = document.createElement("button");
-    btn.innerText = opt;
-    btn.onclick = () => checkAnswer(btn, q.correct);
-    optionsBox.appendChild(btn);
+    btn.textContent = opt;
+    btn.className = "option-btn";
+    btn.onclick = () => selectAnswer(opt, q.answer);
+    optionsContainer.appendChild(btn);
   });
 
   updateProgress();
-  document.getElementById("sound-flip").play();
+  startTimer();
+  playSound(flipSound);
 }
 
-function checkAnswer(btn, correct) {
-  const buttons = document.querySelectorAll("#options button");
-  buttons.forEach(b => b.disabled = true);
+// Handle answer
+function selectAnswer(selected, correct) {
+  clearInterval(timer);
 
-  if (btn.innerText === correct) {
-    btn.classList.add("correct");
+  if (selected === correct) {
     score++;
-    document.getElementById("score").innerText = `Score: ${score}`;
-    document.getElementById("sound-correct").play();
+    feedback.textContent = "✅ Correct!";
+    playSound(correctSound);
   } else {
-    btn.classList.add("wrong");
-    document.getElementById("sound-wrong").play();
+    feedback.textContent = "❌ Wrong!";
+    playSound(wrongSound);
   }
 
   setTimeout(() => {
-    current++;
-    renderQuestion();
+    feedback.textContent = "";
+    currentQuestionIndex++;
+    showQuestion();
   }, 1000);
 }
 
-function updateProgress() {
-  const percent = ((current + 1) / questions.length) * 100;
-  document.getElementById("progress-bar").style.width = percent + "%";
-}
+// End quiz
+function endQuiz() {
+  clearInterval(timer);
 
-function showResult() {
-  const modal = document.getElementById("level-modal");
-  const message = document.getElementById("level-message");
-  const requirement = document.getElementById("level-requirement");
+  const config = levelConfigs[level];
+  let message = `You scored ${score} out of ${config.total}.`;
 
-  if (score >= requirements[level].pass) {
+  if (score >= config.pass) {
     if (level < 3) {
-      message.innerText = `🎉 Great! You passed Level ${level}`;
-      requirement.innerText = `Your Score: ${score}/${questions.length}. Ready for Level ${level + 1}?`;
-      document.getElementById("next-level-btn").onclick = () => {
-        window.location.href = `quiz.html?subject=${subject}&level=${level + 1}`;
-      };
+      message += ` 🎉 Congratulations! You passed Level ${level}. Proceed to Level ${level + 1}?`;
+      if (confirm(message)) {
+        level++;
+        loadQuestions();
+        return;
+      }
     } else {
-      message.innerText = `👑 Congratulations! You completed all levels!`;
-      requirement.innerText = `Final Score: ${score}/${questions.length}`;
-      document.getElementById("next-level-btn").style.display = "none";
+      message += " 👑 You won the Crown! Excellent job!";
     }
   } else {
-    message.innerText = `😢 You didn’t pass Level ${level}`;
-    requirement.innerText = `Score: ${score}/${questions.length}. You need ${requirements[level].pass} to pass.`;
-    document.getElementById("next-level-btn").style.display = "none";
+    message += " ❌ You did not pass. Try again.";
   }
 
-  document.getElementById("retry-btn").onclick = () => window.location.reload();
-  modal.classList.add("show");
+  feedback.innerHTML = message;
 }
 
-// Init
+// Timer per question
+function startTimer() {
+  clearInterval(timer);
+  timeLeft = 15;
+  timerDisplay.textContent = `${timeLeft}s`;
+
+  timer = setInterval(() => {
+    timeLeft--;
+    timerDisplay.textContent = `${timeLeft}s`;
+
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      feedback.textContent = "⏰ Time's up!";
+      playSound(wrongSound);
+      setTimeout(() => {
+        feedback.textContent = "";
+        currentQuestionIndex++;
+        showQuestion();
+      }, 1000);
+    }
+  }, 1000);
+}
+
+// Progress update
+function updateProgress() {
+  const total = levelConfigs[level].total;
+  progressText.textContent = `Question ${currentQuestionIndex + 1} of ${total}`;
+  progressBar.style.width = `${((currentQuestionIndex + 1) / total) * 100}%`;
+}
+
+// Helpers
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+function playSound(sound) {
+  sound.currentTime = 0;
+  sound.play();
+}
+
+// Start
 loadQuestions();
