@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registered Students - EduKids Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #2c1a47;
+    }
+
+    .students-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .student-card {
+      background: #fff;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .student-card:hover {
+      transform: translateY(-8px);
+    }
+
+    .student-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+      background: orange;
+      padding: 5px;
+      box-shadow: 0 0 10px rgba(255,165,0,0.6);
+    }
+
+    .student-card h3 {
+      margin: 10px 0 5px;
+      color: #2c1a47;
+    }
+
+    .student-card p {
+      margin: 4px 0;
+      font-size: 14px;
+      color: #555;
+    }
+
+    .student-card .date {
+      font-size: 12px;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <h1><i class="fas fa-users"></i> Registered Students</h1>
+  <div class="students-container" id="studentsContainer"></div>
+
+  <script>
+    async function loadStudents() {
+      try {
+        const res = await fetch("http://localhost:5000/students.json"); // Node.js serves this
+        const students = await res.json();
+
+        const container = document.getElementById("studentsContainer");
+        container.innerHTML = "";
+
+        students.reverse().forEach(student => {
+          const card = document.createElement("div");
+          card.className = "student-card";
+
+          card.innerHTML = `
+            <img src="uploads/${student.photo || 'default.png'}" alt="${student.fullname}">
+            <h3>${student.fullname}</h3>
+            <p><strong>Class:</strong> ${student.studentClass}</p>
+            <p><strong>Age:</strong> ${student.age}</p>
+            <p><strong>Email:</strong> ${student.email || 'N/A'}</p>
+            <p><strong>Origin:</strong> ${student.countryOrigin || 'N/A'}</p>
+            <p><strong>Residence:</strong> ${student.countryResidence || 'N/A'}</p>
+            <p class="date">📅 Registered: ${new Date(student.dateRegistered).toLocaleDateString()}</p>
+          `;
+          container.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error(err);
+        document.getElementById("studentsContainer").innerHTML = "<p>Failed to load students.</p>";
+      }
+    }
+
+    loadStudents();
+  </script>
+</body>
+</html>
