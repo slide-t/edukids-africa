@@ -5,7 +5,126 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduKids Africa - Student Registration</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  
   <style>
+
+    body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #2c1a47;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.form-container {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(8px);
+  animation: fadeIn 1s ease-in-out;
+}
+
+h2 {
+  text-align: center;
+  color: #ff6b6b; /* brand red accent */
+  margin-bottom: 20px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 2px solid transparent;
+  outline: none;
+  font-size: 14px;
+  background: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+input:focus, select:focus {
+  border-color: #ff8c42; /* orange accent */
+  box-shadow: 0 0 8px #ff8c42;
+}
+
+input[type="file"] {
+  background: #fff;
+  border: none;
+}
+
+button {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(135deg, #6c5ce7, #5a4bd4);
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #ff8c42, #ff6b6b); /* hover orange-red */
+  box-shadow: 0 4px 15px rgba(255, 108, 0, 0.5);
+}
+
+.note {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 12px;
+  color: #ccc;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+button.loading {
+  position: relative;
+  color: transparent; /* hide text */
+}
+
+button.loading::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  margin: -9px 0 0 -9px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top: 3px solid #ff8c42; /* orange accent */
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+    
+    </style>
+  <!--<style>
     body {
       margin: 0;
       font-family: 'Poppins', sans-serif;
@@ -80,7 +199,7 @@
       font-size: 12px;
       color: #ccc;
     }
-  </style>
+  </style>-->
 </head>
 <body>
 <form id="regForm" enctype="multipart/form-data">
@@ -185,7 +304,25 @@
     alert(data.message);
   });
 </script>
-  
+  <script>
+const form = document.querySelector("form");
+const submitBtn = form.querySelector("button");
+
+form.addEventListener("submit", e => {
+  e.preventDefault(); // prevent real submit for demo
+  submitBtn.classList.add("loading");
+  submitBtn.disabled = true;
+  submitBtn.innerText = "Submitting…";
+
+  // Simulate server response
+  setTimeout(() => {
+    submitBtn.classList.remove("loading");
+    submitBtn.disabled = false;
+    submitBtn.innerText = "Submit";
+    alert("Form submitted successfully!");
+  }, 2000);
+});
+</script>
   
   <!-- <div class="form-container">
     <h2>Student Registration</h2>
