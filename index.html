@@ -939,6 +939,37 @@ header {
       subjectsModal.style.display = "none";
     }
   });
+
+// Cambridge subject function 
+  const cambridgeBtn = document.getElementById("cambridgeBtn");
+
+  const cambridgeSubjects = [
+    "English (First Language)",
+    "English Literature",
+    "Mathematics",
+    "Additional Mathematics",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Computer Science",
+    "Geography",
+    "History",
+    "Economics",
+    "Business Studies",
+    "Accounting",
+    "Sociology",
+    "French / Spanish / German / Arabic / Mandarin",
+    "Global Perspectives",
+    "Art & Design",
+    "Drama",
+    "Music",
+    "Physical Education"
+  ];
+
+  cambridgeBtn.addEventListener("click", () => 
+    showSubjects("Cambridge Subjects", cambridgeSubjects)
+  );
+  
 </script>
 
   
