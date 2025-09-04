@@ -115,6 +115,112 @@ app.get("/export/csv", (req, res) => {
   return res.send(csv);
 });
 
+const express = require("express");
+const multer = require("multer");
+const fs = require("fs");
+const cors = require("cors");
+const { Parser } = require("json2csv");
+const XLSX = require("xlsx");
+
+const app = express();
+const PORT = 5000;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Multer setup for photo uploads
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, "uploads/"),
+  filename: (req, file, cb) => cb(null, Date.now() + "-" + file.originalname)
+});
+const upload = multer({ storage });
+
+// Path for saving registered students
+const dataFile = "./students.json";
+
+// Serve uploaded photos
+app.use("/uploads", express.static("uploads"));
+
+// Helper: Save to JSON
+function saveStudent(student) {
+  let students = [];
+  if (fs.existsSync(dataFile)) {
+    students = JSON.parse(fs.readFileSync(dataFile));
+  }
+  students.push(student);
+  fs.writeFileSync(dataFile, JSON.stringify(students, null, 2));
+}
+
+// Registration endpoint
+app.post("/register", upload.single("photo"), (req, res) => {
+  const { fullname, dob, age, class: studentClass, emailType, email, countryOrigin, countryResidence } = req.body;
+
+  const studentData = {
+    fullname,
+    dob,
+    age,
+    studentClass,
+    email,
+    countryOrigin,
+    countryResidence,
+    photo: req.file ? req.file.filename : null,
+    dateRegistered: new Date()
+  };
+
+  saveStudent(studentData);
+  res.json({ success: true, message: "Student registered successfully", student: studentData });
+});
+
+// 📌 Export as CSV
+app.get("/export/csv", (req, res) => {
+  if (!fs.existsSync(dataFile)) {
+    return res.status(404).send("No student data available");
+  }
+
+  const students = JSON.parse(fs.readFileSync(dataFile));
+  const fields = [
+    "fullname",
+    "dob",
+    "age",
+    "studentClass",
+    "email",
+    "countryOrigin",
+    "countryResidence",
+    "photo",
+    "dateRegistered"
+  ];
+
+  const json2csv = new Parser({ fields });
+  const csv = json2csv.parse(students);
+
+  res.header("Content-Type", "text/csv");
+  res.attachment("students.csv");
+  return res.send(csv);
+});
+
+// 📌 Export as Excel
+app.get("/export/excel", (req, res) => {
+  if (!fs.existsSync(dataFile)) {
+    return res.status(404).send("No student data available");
+  }
+
+  const students = JSON.parse(fs.readFileSync(dataFile));
+
+  const worksheet = XLSX.utils.json_to_sheet(students);
+  const workbook = XLSX.utils.book_new();
+  XLSX.utils.book_append_sheet(workbook, worksheet, "Students");
+
+  const buffer = XLSX.write(workbook, { type: "buffer", bookType: "xlsx" });
+
+  res.header("Content-Disposition", "attachment; filename=students.xlsx");
+  res.header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
+  res.send(buffer);
+});
+
+// ✅ Start server last
+app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
+
 app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
 
 
