@@ -1,41 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta
-    name="viewport"
-    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
-  />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>EduKids Quiz</title>
-  <link rel="stylesheet" href="quiz.css" />
+  <style>
+    body {
+      font-family: "Comic Sans MS", sans-serif;
+      background: linear-gradient(135deg, #a8edea, #fed6e3);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+    }
+    .quiz-board {
+      background: #fff;
+      width: 95%;
+      max-width: 900px;
+      margin: 20px auto;
+      border-radius: 20px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+      padding: 20px;
+      animation: fadeIn 0.5s ease-in-out;
+    }
+    .quiz-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 15px;
+    }
+    .quiz-header h2 {
+      font-size: 1.6rem;
+      color: #333;
+    }
+    .stats { font-size: 1rem; color: #444; }
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #eee;
+      border-radius: 5px;
+      margin: 10px 0;
+      overflow: hidden;
+    }
+    .progress {
+      height: 100%;
+      width: 0%;
+      background: #4facfe;
+      transition: width 0.3s ease;
+    }
+    .question {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      color: #222;
+      min-height: 80px;
+    }
+    .options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .options button {
+      padding: 14px;
+      font-size: 1.1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #f1f9ff;
+      transition: 0.2s;
+      text-align: left;
+    }
+    .options button:hover { background: #cdefff; transform: scale(1.02); }
+    .correct { background: #4CAF50 !important; color: #fff; }
+    .wrong { background: #e74c3c !important; color: #fff; }
+    .modal {
+      position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.6);
+      display: flex; justify-content: center; align-items: center;
+    }
+    .modal.hidden { display: none; }
+    .modal-content {
+      background: #fff;
+      padding: 25px;
+      border-radius: 15px;
+      text-align: center;
+      max-width: 500px;
+      width: 90%;
+    }
+    .modal-content button {
+      margin-top: 15px;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      background: #4facfe;
+      color: #fff;
+      cursor: pointer;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform:translateY(15px);}
+      to {opacity:1; transform:translateY(0);}
+    }
+  </style>
 </head>
 <body>
-  <div id="quiz-container">
-    <h2 id="quiz-title">EduKids Quiz Board</h2>
 
-    <div id="progress">
-      <div id="progress-bar"></div>
-      <span id="progress-text">Question 1 of 50</span>
+<div class="quiz-board">
+  <header class="quiz-header">
+    <h2 id="quiz-title">Loading Quiz...</h2>
+    <div class="stats">
+      <span id="score">Score: 0</span> | 
+      <span id="timer">⏰ 15s</span>
     </div>
+  </header>
 
-    <div id="timer">15s</div>
+  <div class="progress-bar"><div id="progress" class="progress"></div></div>
 
-    <div id="question-container">
-      <h3 id="question-text"></h3>
-      <div id="options-container"></div>
-    </div>
+  <main>
+    <div id="question" class="question">Loading...</div>
+    <div id="options" class="options"></div>
+  </main>
+</div>
 
-    <div id="feedback"></div>
+<!-- Level modal -->
+<div id="level-modal" class="modal hidden">
+  <div class="modal-content">
+    <h3 id="level-message">🎉 Congratulations!</h3>
+    <p id="level-requirement"></p>
+    <button id="next-level-btn">Proceed 🚀</button>
+    <button id="exit-btn">Exit</button>
   </div>
+</div>
 
-  <!-- Sounds -->
-  <audio id="flip-sound" src="sounds/flip.mp3"></audio>
-  <audio id="correct-sound" src="sounds/correct.mp3"></audio>
-  <audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
+<!-- Sounds -->
+<audio id="sound-correct" src="sounds/correct.mp3"></audio>
+<audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
+<audio id="sound-flip" src="sounds/flip.mp3"></audio>
 
-  <script src="quiz.js"></script>
-
-
+<script src="quiz.js"></script>
 
 <!-- Footer -->
   <div id="footer"></div>
@@ -71,6 +174,5 @@
     }
 
 </script>
-  
 </body>
 </html>
