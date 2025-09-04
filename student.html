@@ -101,19 +101,41 @@
       background: #999;
       cursor: not-allowed;
     }
-button {
-  background: #ff6b6b;
-  color: #fff;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 25px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
+.export-buttons {
+  position: fixed;
+  top: 80px;         /* distance from top (below navbar) */
+  right: 20px;       /* distance from right side */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 1000;     /* always on top */
 }
 
-button:hover {
-  background: #e65a5a;
+.btn.export {
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #fff;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+  width: 160px;
+  text-align: center;
+}
+
+.btn.export.csv {
+  background: linear-gradient(135deg, #ff6b6b, #ff9e80);
+}
+
+.btn.export.excel {
+  background: linear-gradient(135deg, #4caf50, #81c784);
+}
+
+.btn.export:hover {
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.25);
 }
 
       
@@ -134,10 +156,9 @@ button:hover {
     <button id="prevBtn">Prev</button>
     <button id="nextBtn">Next</button>
   </div>
-<div style="margin: 20px;">
-  <button onclick="window.location.href='http://localhost:5000/export/csv'">
-    📥 Download Students (CSV)
-  </button>
+<div class="export-buttons">
+  <button onclick="window.location.href='/export/csv'" class="btn export csv">⬇️ Download CSV</button>
+  <button onclick="window.location.href='/export/excel'" class="btn export excel">📊 Download Excel</button>
 </div>
   <script>
     const studentList = document.getElementById("studentList");
