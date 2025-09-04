@@ -1,163 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
-  <title>EduKids Quiz Board</title>
-  <link rel="stylesheet" href="quiz.css">
-  <style>
-    body {
-      font-family: 'Segoe UI', sans-serif;
-      background: #eaf6ff;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      align-items: flex-start;
-      min-height: 100vh;
-    }
-
-    .quiz-board {
-      width: 100%;
-      max-width: 1100px;
-      background: #fff;
-      border-radius: 15px;
-      padding: 25px;
-      margin: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
-    }
-
-    .quiz-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 15px;
-    }
-
-    .quiz-header h2 {
-      color: #004080;
-      font-size: 1.8rem;
-    }
-
-    .stats {
-      display: flex;
-      gap: 20px;
-      font-size: 1rem;
-      font-weight: bold;
-    }
-
-    .progress-container {
-      background: #eee;
-      border-radius: 10px;
-      height: 15px;
-      margin: 15px 0;
-      overflow: hidden;
-    }
-
-    .progress-bar {
-      background: #4cafef;
-      height: 100%;
-      width: 0%;
-      transition: width 0.4s ease;
-    }
-
-    .question-text {
-      font-size: 1.4rem;
-      font-weight: bold;
-      margin-bottom: 20px;
-      color: #333;
-    }
-
-    .options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .options button {
-      padding: 14px;
-      border: none;
-      border-radius: 10px;
-      background: #dff3ff;
-      font-size: 1.1rem;
-      text-align: left;
-      cursor: pointer;
-      transition: all 0.3s ease;
-    }
-
-    .options button:hover { background: #bde7ff; }
-    .correct { background: #4CAF50 !important; color: #fff; }
-    .wrong { background: #e74c3c !important; color: #fff; }
-
-    /* Modal */
-    .modal {
-      position: fixed;
-      top: 0; left: 0; right: 0; bottom: 0;
-      display: none;
-      justify-content: center;
-      align-items: center;
-      background: rgba(0,0,0,0.6);
-      z-index: 1000;
-    }
-
-    .modal.show { display: flex; }
-
-    .modal-content {
-      background: #fff;
-      padding: 30px;
-      border-radius: 12px;
-      text-align: center;
-      max-width: 500px;
-      width: 90%;
-      box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-    }
-
-    .modal-content button {
-      margin-top: 15px;
-      padding: 10px 20px;
-      background: #004080;
-      color: #fff;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover"
+  />
+  <title>EduKids Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
 </head>
 <body>
-  <div class="quiz-board">
-    <header class="quiz-header">
-      <h2 id="quiz-title">Loading...</h2>
-      <div class="stats">
-        <span id="score">Score: 0</span>
-        <span id="timer">Time: 10:00</span>
-      </div>
-    </header>
+  <div id="quiz-container">
+    <h2 id="quiz-title">EduKids Quiz Board</h2>
 
-    <div class="progress-container">
-      <div class="progress-bar" id="progress-bar"></div>
+    <div id="progress">
+      <div id="progress-bar"></div>
+      <span id="progress-text">Question 1 of 50</span>
     </div>
 
-    <main>
-      <div id="question" class="question-text">Loading question...</div>
-      <div id="options" class="options"></div>
-    </main>
-  </div>
+    <div id="timer">15s</div>
 
-  <!-- Level Modal -->
-  <div id="level-modal" class="modal">
-    <div class="modal-content">
-      <h3 id="level-message">🎉 Congratulations!</h3>
-      <p id="level-requirement"></p>
-      <button id="next-level-btn">Proceed</button>
-      <button id="retry-btn">Retry</button>
+    <div id="question-container">
+      <h3 id="question-text"></h3>
+      <div id="options-container"></div>
     </div>
+
+    <div id="feedback"></div>
   </div>
 
   <!-- Sounds -->
-  <audio id="sound-correct" src="sounds/correct.mp3"></audio>
-  <audio id="sound-wrong" src="sounds/wrong.mp3"></audio>
-  <audio id="sound-flip" src="sounds/flip.mp3"></audio>
+  <audio id="flip-sound" src="sounds/flip.mp3"></audio>
+  <audio id="correct-sound" src="sounds/correct.mp3"></audio>
+  <audio id="wrong-sound" src="sounds/wrong.mp3"></audio>
 
   <script src="quiz.js"></script>
 </body>
