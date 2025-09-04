@@ -856,6 +856,76 @@ header {
     <button id="okBtn" class="btn-primary">OK</button>
   </div>
 </div>
+<script>
+  const openSubjectsBtn = document.getElementById("openSubjectsBtn");
+  const chooseModal = document.getElementById("chooseModal");
+  const subjectsModal = document.getElementById("subjectsModal");
+  const subjectList = document.getElementById("subjectList");
+  const subjectTitle = document.getElementById("subjectTitle");
+  const primaryBtn = document.getElementById("primaryBtn");
+  const secondaryBtn = document.getElementById("secondaryBtn");
+  const okBtn = document.getElementById("okBtn");
+  const closeButtons = document.querySelectorAll(".close-modal");
+
+  const primarySubjects = [
+    "English Studies","Mathematics","Basic Science & Technology",
+    "Physical & Health Education","ICT","National Value Education",
+    "Religious Studies","Cultural & Creative Arts","History","Yoruba · Igbo · Hausa · Arabic"
+  ];
+
+  const secondarySubjects = [
+    "English Language","Mathematics","Biology","Chemistry","Physics","Government","Civic Education",
+    "Agricultural Science","Literature in English","Data Processing","Financial Accounting","Commerce",
+    "Economics","French","Further Mathematics","Geography","Information Technology","CRS & IRS","Yoruba · Igbo · Hausa · Arabic"
+  ];
+
+  // Open small modal
+  openSubjectsBtn.addEventListener("click", () => {
+    chooseModal.style.display = "flex";
+  });
+
+  // Handle category selection
+  function showSubjects(title, subjects) {
+    subjectTitle.textContent = title;
+    subjectList.innerHTML = subjects.map(s => `<li>${s}</li>`).join("");
+    chooseModal.style.display = "none";
+    subjectsModal.style.display = "flex";
+  }
+
+  primaryBtn.addEventListener("click", () => showSubjects("Primary School Subjects", primarySubjects));
+  secondaryBtn.addEventListener("click", () => showSubjects("Secondary School Subjects", secondarySubjects));
+
+  // Close big modal with OK
+  okBtn.addEventListener("click", () => {
+    subjectsModal.style.display = "none";
+    chooseModal.style.display = "flex";
+  });
+
+  // Close buttons
+  closeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      subjectsModal.style.display = "none";
+      chooseModal.style.display = "none";
+    });
+  });
+
+  // Click outside
+  window.addEventListener("click", e => {
+    if (e.target === chooseModal || e.target === subjectsModal) {
+      chooseModal.style.display = "none";
+      subjectsModal.style.display = "none";
+    }
+  });
+
+  // ESC key
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      chooseModal.style.display = "none";
+      subjectsModal.style.display = "none";
+    }
+  });
+</script>
+
   
 </body>
 </html>
