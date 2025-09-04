@@ -1,73 +1,21 @@
 {
   "Mathematics": {
     "level1": [
-      { "question": "What is 2 + 3?", "options": ["4", "5", "6", "7"], "correct": "5" },
-      { "question": "Which number comes before 10?", "options": ["11", "9", "8", "12"], "correct": "9" },
-      { "question": "Count: 7 − 2 = ?", "options": ["4", "5", "6", "3"], "correct": "5" },
-      { "question": "Which is the smallest? (2, 5, 1, 4)", "options": ["2", "5", "1", "4"], "correct": "1" },
-      { "question": "How many sides does a triangle have?", "options": ["2", "3", "4", "5"], "correct": "3" }
+      { "question": "What is 2 + 2?", "options": ["3", "4", "5", "6"], "correct": "4" },
+      { "question": "What is 5 × 6?", "options": ["30", "20", "25", "35"], "correct": "30" }
     ],
     "level2": [
-      { "question": "What is 25 − 12?", "options": ["11", "13", "14", "12"], "correct": "13" },
-      { "question": "7 × 4 = ?", "options": ["21", "24", "28", "27"], "correct": "28" },
-      { "question": "Which fraction is half?", "options": ["1/2", "2/3", "3/4", "1/4"], "correct": "1/2" },
-      { "question": "Find the missing number: 15, 20, __, 30", "options": ["24", "25", "26", "28"], "correct": "25" },
-      { "question": "A rectangle has how many sides?", "options": ["2", "3", "4", "5"], "correct": "4" }
+      { "question": "What is the square root of 81?", "options": ["7", "8", "9", "10"], "correct": "9" },
+      { "question": "Simplify: 12 ÷ 3 × 2", "options": ["4", "6", "8", "10"], "correct": "8" }
     ],
     "level3": [
-      { "question": "Simplify: 144 ÷ 12", "options": ["10", "11", "12", "13"], "correct": "12" },
-      { "question": "Find the LCM of 4 and 6", "options": ["12", "18", "8", "10"], "correct": "12" },
-      { "question": "Solve: 3x = 21, x = ?", "options": ["6", "7", "8", "9"], "correct": "7" },
-      { "question": "The perimeter of a square is 20 cm. Each side = ?", "options": ["4", "5", "6", "8"], "correct": "5" },
-      { "question": "Convert 1/4 to percentage", "options": ["20%", "25%", "40%", "50%"], "correct": "25%" }
+      { "question": "Solve for x: 2x + 3 = 11", "options": ["3", "4", "5", "6"], "correct": "4" },
+      { "question": "What is the derivative of x²?", "options": ["x", "2x", "x²", "2"], "correct": "2x" }
     ]
   },
-
   "English": {
     "level1": [
-      { "question": "Plural of 'man' is?", "options": ["mans", "mens", "men", "manses"], "correct": "men" },
-      { "question": "Choose the vowel: (b, c, a, d)", "options": ["b", "c", "a", "d"], "correct": "a" },
-      { "question": "Opposite of 'big' is?", "options": ["tall", "huge", "small", "wide"], "correct": "small" },
-      { "question": "Which one is a noun? (run, school, jump, play)", "options": ["run", "school", "jump", "play"], "correct": "school" },
-      { "question": "She ___ going to school. (is, are, am, be)", "options": ["is", "are", "am", "be"], "correct": "is" }
-    ],
-    "level2": [
-      { "question": "Past tense of 'eat' is?", "options": ["ate", "eaten", "eat", "eats"], "correct": "ate" },
-      { "question": "Choose the pronoun: ___ is my friend. (John, He, Boy, Man)", "options": ["John", "He", "Boy", "Man"], "correct": "He" },
-      { "question": "Which word is an adjective? (happy, dance, sing, run)", "options": ["happy", "dance", "sing", "run"], "correct": "happy" },
-      { "question": "Opposite of 'early' is?", "options": ["late", "fast", "soon", "quick"], "correct": "late" },
-      { "question": "Complete: The boys ___ playing football. (is, are, was, am)", "options": ["is", "are", "was", "am"], "correct": "are" }
-    ],
-    "level3": [
-      { "question": "Synonym of 'intelligent' is?", "options": ["dull", "clever", "lazy", "slow"], "correct": "clever" },
-      { "question": "Which is a conjunction? (and, school, run, book)", "options": ["and", "school", "run", "book"], "correct": "and" },
-      { "question": "Past tense of 'write' is?", "options": ["wrote", "written", "writes", "writing"], "correct": "wrote" },
-      { "question": "Fill in: He has been working ___ morning. (since, for, in, on)", "options": ["since", "for", "in", "on"], "correct": "since" },
-      { "question": "Choose the correct order: adjective + noun. (red ball, ball red)", "options": ["red ball", "ball red"], "correct": "red ball" }
-    ]
-  },
-
-  "Basic Science": {
-    "level1": [
-      { "question": "The sun shines in the ___.", "options": ["day", "night", "room", "sky"], "correct": "day" },
-      { "question": "Living things can ___. (walk, jump, move, all of the above)", "options": ["walk", "jump", "move", "all of the above"], "correct": "all of the above" },
-      { "question": "Which one gives us air? (tree, chair, stone, bag)", "options": ["tree", "chair", "stone", "bag"], "correct": "tree" },
-      { "question": "We use our eyes to ___.", "options": ["smell", "see", "walk", "hear"], "correct": "see" },
-      { "question": "The opposite of hot is ___.", "options": ["warm", "cold", "cool", "boil"], "correct": "cold" }
-    ],
-    "level2": [
-      { "question": "Water turns into ice when it ___.", "options": ["boils", "melts", "freezes", "evaporates"], "correct": "freezes" },
-      { "question": "We breathe in ___.", "options": ["carbon dioxide", "oxygen", "water", "dust"], "correct": "oxygen" },
-      { "question": "The organ that pumps blood is?", "options": ["liver", "heart", "lungs", "stomach"], "correct": "heart" },
-      { "question": "A young cat is called?", "options": ["calf", "kitten", "cub", "puppy"], "correct": "kitten" },
-      { "question": "The part of plant in the soil is?", "options": ["stem", "root", "leaf", "flower"], "correct": "root" }
-    ],
-    "level3": [
-      { "question": "Which planet is called the Red Planet?", "options": ["Earth", "Mars", "Venus", "Jupiter"], "correct": "Mars" },
-      { "question": "The hardest natural substance is?", "options": ["gold", "iron", "diamond", "rock"], "correct": "diamond" },
-      { "question": "Energy from the sun is called?", "options": ["nuclear", "solar", "heat", "light"], "correct": "solar" },
-      { "question": "Humans have how many senses?", "options": ["3", "5", "7", "6"], "correct": "5" },
-      { "question": "Water boils at __°C.", "options": ["90", "100", "110", "120"], "correct": "100" }
+      { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "correct": "children" }
     ]
   }
 }
