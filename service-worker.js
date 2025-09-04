@@ -9,6 +9,8 @@ const urlsToCache = [
   "/footer.html",
   "/subjects.html",
   "/quiz.html",
+  "/quiz.js",
+  "/questions.json",
   "/reg.html",
   "student.html"
 ];
