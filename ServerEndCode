@@ -85,4 +85,37 @@ app.get("/students", (req, res) => {
   });
 });
 
+const { Parser } = require("json2csv");
+
+// Download students as CSV
+app.get("/export/csv", (req, res) => {
+  if (!fs.existsSync(dataFile)) {
+    return res.status(404).send("No student data available");
+  }
+
+  const students = JSON.parse(fs.readFileSync(dataFile));
+
+  const fields = [
+    "fullname",
+    "dob",
+    "age",
+    "studentClass",
+    "email",
+    "countryOrigin",
+    "countryResidence",
+    "photo",
+    "dateRegistered"
+  ];
+
+  const json2csv = new Parser({ fields });
+  const csv = json2csv.parse(students);
+
+  res.header("Content-Type", "text/csv");
+  res.attachment("students.csv");
+  return res.send(csv);
+});
+
 app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
+
+
+
