@@ -305,8 +305,8 @@ header {
 /* Image wrapper (holds circle + image) */
 .img-wrapper {
   position: relative;
-  width: 160px;
-  height: 160px;
+  width: 180px;
+  height: 180px;
   margin: 0 auto 15px;
 }
 
@@ -743,18 +743,38 @@ header {
 
 /* Buttons */
 .btn-primary, .btn-secondary {
-  background: #6c5ce7;
+
+width: 80%;                /* spans most of the page */
+  max-width: 400px;           /* keep it balanced */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 0 15px rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    
+/*  background: #6c5ce7;
   color: #fff;
   border: none;
   border-radius: 6px;
   margin: 8px;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   transition: 0.3s;
-  width: 80%;                /* spans most of the page */
-  max-width: 400px;           /* keep it balanced */
+  width: 80%;   /* spans most of the page *
+  max-width: 400px;           /* keep it balanced *
   padding: 15px 20px;
   font-size: 1.1rem;
-  font-weight: 600;    
+  font-weight: 600;   */ 
 }
 .btn-primary:hover, .btn-secondary:hover {
   background: #5a4bd4;
@@ -837,20 +857,6 @@ header {
       });
     }
   </script>
-  
-<!-- Small Modal: Choose Category --
-<div id="chooseModal" class="modal-overlay">
-  <div class="modal small">
-    <h2>Select Category</h2>
-    <p>Please choose a subject category:</p>
-    <div class="modal-actions">
-      <button class="btn-primary" id="primaryBtn">Primary School</button>
-      <button class="btn-primary" id="secondaryBtn">Secondary School</button>
-    </div>
-    <button class="close-modal">&times;</button>
-  </div>
-</div>
-
 <!-- Small Modal: Choose Category -->
 <div id="chooseModal" class="modal-overlay">
   <div class="modal small">
