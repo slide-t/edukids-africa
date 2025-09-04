@@ -1,4 +1,4 @@
-A<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -500,6 +500,9 @@ header {
   <button class="signup-btn" onclick="window.location.href='reg.html'">Signup Here</button>
 
 </div>
+  <button id="openSubjectsBtn" class="btn-secondary">
+  Browse Subjects Offered
+  </button>
   <!-- Cards Section -->
 <section class="cards" id="students">
   <div class="card">
@@ -698,6 +701,68 @@ header {
     }
     .dots { display: none; }
   }
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Shared modal */
+.modal {
+  background: #2c1a47;
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+/* Sizes */
+.modal.small { width: 320px; }
+.modal.big { width: 500px; max-height: 80vh; overflow-y: auto; }
+
+/* Close buttons */
+.close-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 22px;
+  color: #ff6b6b;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.close-modal.top { top: 10px; right: 15px; }
+
+/* Buttons */
+.btn-primary, .btn-secondary {
+  background: #6c5ce7;
+  color: #fff;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  margin: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+.btn-primary:hover, .btn-secondary:hover {
+  background: #5a4bd4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+    
 </style>
 
 <script>
@@ -769,5 +834,28 @@ header {
       });
     }
   </script>
+<!-- Small Modal: Choose Category -->
+<div id="chooseModal" class="modal-overlay">
+  <div class="modal small">
+    <h2>Select Category</h2>
+    <p>Please choose a subject category:</p>
+    <div class="modal-actions">
+      <button class="btn-primary" id="primaryBtn">Primary School</button>
+      <button class="btn-primary" id="secondaryBtn">Secondary School</button>
+    </div>
+    <button class="close-modal">&times;</button>
+  </div>
+</div>
+
+<!-- Big Modal: Subject List -->
+<div id="subjectsModal" class="modal-overlay">
+  <div class="modal big">
+    <button class="close-modal top">&times;</button>
+    <h2 id="subjectTitle">Subjects</h2>
+    <ul id="subjectList"></ul>
+    <button id="okBtn" class="btn-primary">OK</button>
+  </div>
+</div>
+  
 </body>
 </html>
