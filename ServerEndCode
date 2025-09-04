@@ -217,10 +217,24 @@ app.get("/export/excel", (req, res) => {
   res.header("Content-Type", "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet");
   res.send(buffer);
 });
+// Middleware to protect admin.html
+app.use((req, res, next) => {
+  if (req.path === "/admin.html") {
+    const auth = req.headers["authorization"];
+
+    // Check for the required token
+    if (auth === "Bearer eduKidsOnlyme9ja") {
+      return next(); // Allow access
+    }
+
+    // Block unauthorized access
+    return res.status(403).send("🚫 Forbidden: You are not authorized to view this page.");
+  }
+  next();
+});
+
 
 // ✅ Start server last
-app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
-
 app.listen(PORT, () => console.log(`✅ Server running at http://localhost:${PORT}`));
 
 
