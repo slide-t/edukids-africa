@@ -1,0 +1,27 @@
+{
+  "English": {
+    "level1": [
+      { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childer"], "answer": "children" },
+      { "question": "Which is a noun?", "options": ["Run", "Book", "Quickly", "Blue"], "answer": "Book" }
+    ],
+    "level2": [
+      { "question": "Which of these is a synonym for 'happy'?", "options": ["Sad", "Joyful", "Angry", "Cry"], "answer": "Joyful" },
+      { "question": "Which word is a verb?", "options": ["Jump", "Table", "Blue", "Chair"], "answer": "Jump" }
+    ],
+    "level3": [
+      { "question": "What is the opposite of 'ancient'?", "options": ["Old", "Past", "Modern", "Stone"], "answer": "Modern" },
+      { "question": "Which is a pronoun?", "options": ["She", "Run", "Fast", "House"], "answer": "She" }
+    ]
+  },
+  "Mathematics": {
+    "level1": [
+      { "question": "2 + 2 = ?", "options": ["3", "4", "5", "6"], "answer": "4" }
+    ],
+    "level2": [
+      { "question": "Solve: 12 ÷ 4", "options": ["2", "3", "4", "6"], "answer": "3" }
+    ],
+    "level3": [
+      { "question": "Find the square of 9", "options": ["18", "81", "27", "99"], "answer": "81" }
+    ]
+  }
+}
