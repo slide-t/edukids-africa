@@ -501,9 +501,11 @@ header {
   <button class="signup-btn" onclick="window.location.href='reg.html'">Signup Here</button>
 
 </div>
+  <div class="button-container">
   <button id="openSubjectsBtn" class="btn-secondary">
-  Browse Subjects Offered
+    Browse Subjects Offered
   </button>
+</div>
   <!-- Cards Section -->
 <section class="cards" id="students">
   <div class="card">
@@ -741,31 +743,13 @@ header {
   cursor: pointer;
 }
 .close-modal.top { top: 10px; right: 15px; }
-
+.button-container {
+  display: flex;
+  justify-content: center;
+}
 /* Buttons */
-.btn-primary, .btn-secondary {
-
-width: 80%;                /* spans most of the page */
-  max-width: 400px;           /* keep it balanced */
-  padding: 15px 20px;
-  margin-top:0;
-  border: none;
-  border-radius: 6px;
-  align-items: center;
-  justify-comtent: center;
-  font-size: 1.1rem;
-  font-weight: 600;
-  cursor: pointer;
-  color: #fff;
-  background: linear-gradient(135deg, #4facfe, #00f2fe);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 0 15px rgba(255,255,255,0.3);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-
-
-    
-/*  background: #6c5ce7;
+.btn-primary, .btn-secondary {    
+ background: #6c5ce7;
   color: #fff;
   border: none;
   border-radius: 6px;
@@ -774,8 +758,8 @@ width: 80%;                /* spans most of the page */
   justify-content: center;
   cursor: pointer;
   transition: 0.3s;
-  width: 80%;   /* spans most of the page *
-  max-width: 400px;           /* keep it balanced *
+  width: 80%;   /* spans most of the page */
+  max-width: 400px;           /* keep it balanced */
   padding: 15px 20px;
   font-size: 1.1rem;
   font-weight: 600;   */ 
