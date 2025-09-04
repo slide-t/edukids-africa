@@ -101,6 +101,22 @@
       background: #999;
       cursor: not-allowed;
     }
+button {
+  background: #ff6b6b;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  background: #e65a5a;
+}
+
+      
   </style>
 </head>
 <body>
@@ -118,7 +134,11 @@
     <button id="prevBtn">Prev</button>
     <button id="nextBtn">Next</button>
   </div>
-
+<div style="margin: 20px;">
+  <button onclick="window.location.href='http://localhost:5000/export/csv'">
+    📥 Download Students (CSV)
+  </button>
+</div>
   <script>
     const studentList = document.getElementById("studentList");
     const searchInput = document.getElementById("searchInput");
