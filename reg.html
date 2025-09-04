@@ -305,22 +305,40 @@ button.loading::after {
   });
 </script>
   <script>
-const form = document.querySelector("form");
+const form = document.getElementById("registrationForm");
 const submitBtn = form.querySelector("button");
 
-form.addEventListener("submit", e => {
-  e.preventDefault(); // prevent real submit for demo
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  // Show spinner
   submitBtn.classList.add("loading");
   submitBtn.disabled = true;
   submitBtn.innerText = "Submitting…";
 
-  // Simulate server response
-  setTimeout(() => {
+  try {
+    const formData = new FormData(form);
+    const res = await fetch("/register", {
+      method: "POST",
+      body: formData
+    });
+
+    if (!res.ok) throw new Error("Failed to submit");
+
+    const data = await res.json();
+    alert("✅ Registration successful!");
+
+    // Reset form
+    form.reset();
+  } catch (err) {
+    console.error(err);
+    alert("❌ Something went wrong. Please try again.");
+  } finally {
+    // Remove spinner
     submitBtn.classList.remove("loading");
     submitBtn.disabled = false;
     submitBtn.innerText = "Submit";
-    alert("Form submitted successfully!");
-  }, 2000);
+  }
 });
 </script>
   
