@@ -142,6 +142,39 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
+    .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-links a:hover {
+  background: #ffcc00;
+  color: #222;
+}
+
+.footer-links a.active {
+  color: #fff;
+  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+  background: #009999;
+}
+
+.footer-note {
+  color: #ccc;
+  font-size: 0.9rem;
+}
   </style>
 </head>
 <body>
@@ -174,6 +207,14 @@
         © <span id="year"></span> EduKids Africa. All rights reserved.
       </p>
     </div>
+    
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  
   </footer>
 
   <script src="quiz.js"></script>
