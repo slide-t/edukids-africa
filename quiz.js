@@ -1,69 +1,110 @@
-// === EduKids Quiz ===
-
-// time per question (seconds)
-const QUESTION_TIME = 15;
-
-// questions per level + pass marks
+// ==== CONFIG ====
 const PASS_MARKS = {
-  1: { questions: 50, pass: 45 },
-  2: { questions: 60, pass: 55 },
-  3: { questions: 80, pass: 75 }
+  1: { pass: 45 },
+  2: { pass: 55 },
+  3: { pass: 75 }
 };
 
-// state
-let questionsByLevel = {};
+// your questions grouped by level
+const questionsByLevel = {
+  level1: [
+    { question: "What is 2 + 2?", options: ["3","4","5"], correct: "4" },
+    { question: "What is 5 x 3?", options: ["8","15","10"], correct: "15" }
+    // ... add up to 50 questions
+  ],
+  level2: [
+    { question: "What is 12 ÷ 3?", options: ["3","4","6"], correct: "4" }
+    // ... add up to 60 questions
+  ],
+  level3: [
+    { question: "What is 25 + 30?", options: ["45","55","65"], correct: "55" }
+    // ... add up to 80 questions
+  ]
+};
+
+// ==== STATE ====
 let currentLevel = 1;
 let currentIndex = 0;
 let score = 0;
-let timerInterval = null;
 
-const urlParams = new URLSearchParams(window.location.search);
-const subjectParam = urlParams.get("subject");
-
-// DOM
+// ==== DOM ELEMENTS ====
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
+const levelStatus = document.getElementById("level-status");
 const progressText = document.getElementById("progress-text");
 const progressFill = document.getElementById("progress-fill");
-const timerEl = document.getElementById("timer");
-const levelStatus = document.getElementById("level-status");
-const quizBoard = document.getElementById("quiz-board");
 
-// sounds
-const correctSound = new Audio("sounds/correct.mp3");
-const wrongSound = new Audio("sounds/wrong.mp3");
+// ==== WELCOME MODAL ====
+document.addEventListener("DOMContentLoaded", () => {
+  const modalHTML = `
+  <div id="welcomeModal" class="welcome-modal">
+    <div class="welcome-content">
+      <button class="close-modal">&times;</button>
+      <h2>Welcome to the Quiz!</h2>
+      <p>Level 1: 50 questions (Pass: 45)</p>
+      <p>Level 2: 60 questions (Pass: 55)</p>
+      <p>Level 3: 80 questions (Pass: 75)</p>
+      <p style="font-size:12px;color:#fff;">
+        ⚠ Please avoid copyright violations and cyber crimes.
+      </p>
+      <button id="startQuizBtn" class="start-btn">I am ready</button>
+    </div>
+  </div>
+  `;
+  document.body.insertAdjacentHTML("beforeend", modalHTML);
 
-// start quiz
-function startQuiz() {
-  currentLevel = 1;
-  currentIndex = 0;
-  score = 0;
-  loadQuestion();
-}
+  // inject styles
+  const style = document.createElement("style");
+  style.textContent = `
+  .welcome-modal {
+    position: fixed; top:0; left:0; width:100%; height:100%;
+    background-color: rgba(128,0,128,0.6);
+    display:flex; justify-content:center; align-items:center; z-index:9999;
+  }
+  .welcome-content {
+    background-color: purple; color:white;
+    padding:20px; border-radius:10px; max-width:400px; width:90%;
+    text-align:center; position:relative;
+  }
+  .close-modal {
+    position:absolute; top:10px; right:10px;
+    background:none; border:none; font-size:24px; color:white; cursor:pointer;
+  }
+  .start-btn {
+    background-color:white; color:purple; border:none;
+    width:100%; padding:12px; font-size:16px; border-radius:5px;
+    cursor:pointer; margin-top:15px;
+  }
+  `;
+  document.head.appendChild(style);
 
-// load question (main engine)
+  const modal = document.getElementById("welcomeModal");
+  document.querySelector(".close-modal").onclick = () => modal.remove();
+  document.getElementById("startQuizBtn").onclick = () => modal.remove();
 
+  loadQuestions();
+});
+
+// ==== QUIZ LOGIC ====
 function loadQuestions() {
   const levelKey = `level${currentLevel}`;
   const questions = questionsByLevel[levelKey];
 
-  // if no questions left in this level
   if (!Array.isArray(questions) || currentIndex >= questions.length) {
-    // check pass mark
+    // level ended
     if (score >= PASS_MARKS[currentLevel].pass && currentLevel < 3) {
-      // passed current level –> automatically go to next
+      // passed – go to next level automatically
       currentLevel++;
       currentIndex = 0;
       score = 0;
-      loadQuestions(); // auto-load next level questions
+      alert(`🎉 Congratulations! Welcome to Level ${currentLevel}`);
+      loadQuestions();
     } else {
-      // didn’t pass or finished last level
       endQuiz();
     }
     return;
   }
 
-  // show current question
   const q = questions[currentIndex];
   questionEl.textContent = q.question;
   levelStatus.textContent = `Level ${currentLevel}`;
@@ -78,186 +119,47 @@ function loadQuestions() {
     btn.onclick = () => checkAnswer(opt, q.correct);
     optionsEl.appendChild(btn);
   });
-
-  startTimer();
-}
-/*
-function loadQuestion() {
-  clearInterval(timerInterval);
-
-  const levelKey = `level${currentLevel}`;
-  const questions = questionsByLevel[levelKey];
-
-  // finished all in this level
-  if (!Array.isArray(questions) || currentIndex >= questions.length) {
-    const pass = PASS_MARKS[currentLevel].pass;
-    if (score >= pass && currentLevel < 3) {
-      // passed level
-      showLevelModal(currentLevel, score);
-    } else {
-      endQuiz();
-    }
-    return;
-  }
-
-  const q = questions[currentIndex];
-  questionEl.textContent = q.question;
-  levelStatus.textContent = `Level ${currentLevel}`;
-  progressText.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
-  progressFill.style.width = ((currentIndex + 1) / questions.length) * 100 + "%";
-
-  // options
-  optionsEl.innerHTML = "";
-  q.options.forEach(opt => {
-    const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.textContent = opt;
-    btn.onclick = () => checkAnswer(opt, q.correct);
-    optionsEl.appendChild(btn);
-  });
-
-  startTimer();
-}*/
-
-// timer
-function startTimer() {
-  let timeLeft = QUESTION_TIME;
-  timerEl.textContent = timeLeft;
-  clearInterval(timerInterval);
-  timerInterval = setInterval(() => {
-    timeLeft--;
-    timerEl.textContent = timeLeft;
-    if (timeLeft <= 0) {
-      clearInterval(timerInterval);
-      nextQuestion();
-    }
-  }, 1000);
 }
 
-// check answer
 function checkAnswer(selected, correct) {
-  clearInterval(timerInterval);
-
-  const buttons = optionsEl.querySelectorAll("button");
-  buttons.forEach(btn => {
-    btn.disabled = true;
-    if (btn.textContent === correct) btn.classList.add("correct");
-    if (btn.textContent === selected && selected !== correct) btn.classList.add("wrong");
-  });
-
   if (selected === correct) {
     score++;
-    correctSound.play();
     showEmoji("🎉");
-  } else {
-    wrongSound.play();
-    showEmoji("😢");
   }
-
-  setTimeout(nextQuestion, 1500);
-}
-
-// next question
-function nextQuestion() {
   currentIndex++;
-  loadQuestion();
+  loadQuestions();
 }
 
-// bouncing emoji
+function endQuiz() {
+  // your end screen or redirect here
+  alert(`Quiz Finished! Your score: ${score}`);
+  // for example:
+  window.location.href = "subjects.html";
+}
+
+// ==== BOUNCE EMOJI ====
 function showEmoji(emoji) {
   const e = document.createElement("div");
   e.textContent = emoji;
   e.className = "bounce-emoji";
+  e.style.position = "fixed";
   e.style.top = "50%";
   e.style.left = "50%";
   e.style.transform = "translate(-50%,-50%)";
+  e.style.fontSize = "3rem";
   e.style.animation = "bounce 1s ease forwards";
   document.body.appendChild(e);
   setTimeout(() => e.remove(), 1000);
 }
 
-// level passed modal
-function showLevelModal(level, scoreVal) {
-  document.getElementById("levelModalTitle").textContent = `🎉 You passed Level ${level}`;
-  document.getElementById("levelModalText").textContent =
-    `Your score: ${scoreVal}. Click Continue for Level ${level + 1}.`;
-  document.getElementById("levelModal").style.display = "flex";
-}
-
-// quiz end
-function endQuiz() {
-  quizBoard.innerHTML = `
-    <h2>Level ${currentLevel} Completed</h2>
-    <p>You scored <strong>${score}</strong> out of ${
-    questionsByLevel[`level${currentLevel}`].length
-  }</p>
-    <div class="end-buttons">
-      <button class="btn" onclick="retryLevel()">Try Again</button>
-      <a href="subjects.html" class="btn">Back to Subjects</a>
-    </div>
-  `;
-}
-
-// retry same level
-function retryLevel() {
-  currentIndex = 0;
-  score = 0;
-  loadQuestion();
-}
-
-// attach events when DOM ready
-window.addEventListener("DOMContentLoaded", () => {
-  // load JSON first
-  fetch("questions.json")
-    .then(res => res.json())
-    .then(data => {
-      if (!data[subjectParam]) {
-        questionEl.textContent = `No questions for ${subjectParam}`;
-        return;
-      }
-      questionsByLevel = data[subjectParam];
-    });
-
-  // welcome modal
-  document.getElementById("welcomeModal").style.display = "flex";
-  document.getElementById("closeWelcome").addEventListener("click", () => {
-    document.getElementById("welcomeModal").style.display = "none";
-  });
-  document.getElementById("startQuizBtn").addEventListener("click", () => {
-    document.getElementById("welcomeModal").style.display = "none";
-    startQuiz();
-  });
-
-  // next level button inside modal
-  document.getElementById("nextLevelBtn").addEventListener("click", () => {
-    document.getElementById("levelModal").style.display = "none";
-    currentLevel++;
-    currentIndex = 0;
-    score = 0;
-    loadQuestion();
-  });
-});
-
-// style for bounce
-const style = document.createElement("style");
-style.textContent = `
-.option-btn {
-  display:block;
-  width:100%;
-  margin:6px 0;
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-  cursor:pointer;
-  background:#f9f9f9;
-}
-.option-btn.correct { background:#c8f7c5; border-color:#2ecc71; }
-.option-btn.wrong { background:#f7c5c5; border-color:#e74c3c; }
-.bounce-emoji { pointer-events:none; position:absolute; font-size:3rem; }
+// inject bounce animation
+const bounceStyle = document.createElement("style");
+bounceStyle.textContent = `
 @keyframes bounce {
-  0% { transform:translate(-50%,-50%) scale(0.5); opacity:0; }
-  50% { transform:translate(-50%,-60%) scale(1.2); opacity:1; }
-  100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
+  0% {transform:translate(-50%,-50%) scale(0.5);opacity:0;}
+  50% {transform:translate(-50%,-60%) scale(1.2);opacity:1;}
+  100% {transform:translate(-50%,-50%) scale(1);opacity:0;}
 }
+.bounce-emoji {pointer-events:none;}
 `;
-document.head.appendChild(style);
+document.head.appendChild(bounceStyle);
