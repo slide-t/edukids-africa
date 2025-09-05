@@ -83,11 +83,16 @@ function loadQuestion() {
 
   const levelKey = `level${currentLevel}`;
   const questions = questionsByLevel[levelKey];
-  if (!questions || currentIndex >= questions.length) {
-    // check pass mark
+  if (!Array.isArray(questions) || currentIndex >= questions.length) {
+  // check pass mark
     handleLevelCompletion();
     return;
   }
+ /* if (!questions || currentIndex >= questions.length) {
+    // check pass mark
+    handleLevelCompletion();
+    return;
+  }*/
 
   const q = questions[currentIndex];
   questionEl.textContent = q.question;
