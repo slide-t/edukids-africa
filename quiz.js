@@ -1,294 +1,130 @@
-let questions = {};
-let currentSubject = "Mathematics"; // default
-let currentLevel = "level1";
+// === EduKids Quiz ===
+
+// how long per question (seconds)
+const QUESTION_TIME = 15;
+
+let allQuestions = [];        // loaded from JSON
+let currentLevel = 1;
 let currentIndex = 0;
 let score = 0;
-let timer;
-let timePerQuestion = 15; // seconds
+let timerInterval = null;
 
-// Load sound effects
-const clickSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-cool-interface-click-tone-2568.mp3");
-const flipSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-page-turn-single-1103.mp3");
+// DOM elements
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const progressText = document.getElementById("progress-text");
+const progressFill = document.getElementById("progress-fill");
+const timerEl = document.getElementById("timer");
+const levelStatus = document.getElementById("level-status");
+const quizBoard = document.getElementById("quiz-board");
 
-// Load questions.json once
+// 1. Load JSON
 fetch("questions.json")
   .then(res => res.json())
   .then(data => {
-    questions = data;
-    // don’t start automatically; let user choose subject
+    allQuestions = data;   // should be an array of {level:1,question,options,answer}
+    startLevel(1);
   })
   .catch(err => {
-    console.error("Failed to load questions.json:", err);
-    document.getElementById("question").innerText = "Error loading questions!";
+    console.error("Could not load questions.json", err);
+    questionEl.textContent = "Error loading questions.";
   });
 
-function selectSubject() {
-  currentSubject = document.getElementById("subjectSelect").value;
-  currentLevel = "level1";  // always start from level1
-  startQuiz();
-}
-
-function startQuiz() {
-  clearInterval(timer); // stop any old timer
+// 2. Start a level
+function startLevel(level) {
+  currentLevel = level;
   currentIndex = 0;
-  score = 0;
+  levelStatus.textContent = `Level ${level}`;
+  // filter questions for this level
+  questionsThisLevel = allQuestions.filter(q => q.level === level);
+  if (questionsThisLevel.length === 0) {
+    // no questions for this level, show summary
+    endQuiz();
+    return;
+  }
+  currentQuestions = questionsThisLevel;
   loadQuestion();
 }
 
+// 3. Load a question
 function loadQuestion() {
-  const levelQuestions = questions[currentSubject][currentLevel];
-  if (currentIndex >= levelQuestions.length) {
-    endLevel();
+  clearInterval(timerInterval);
+  if (currentIndex >= currentQuestions.length) {
+    // finished this level
+    if (currentLevel < 3) {
+      startLevel(currentLevel + 1);
+    } else {
+      endQuiz();
+    }
     return;
   }
 
-  const q = levelQuestions[currentIndex];
-  // Fade-out then update question text
-  const questionEl = document.getElementById("question");
-  questionEl.classList.remove("fade");
-  void questionEl.offsetWidth; // trigger reflow
-  questionEl.classList.add("fade");
-  questionEl.innerText = q.question;
+  const q = currentQuestions[currentIndex];
 
-  // Shuffle options
-  const optionsContainer = document.getElementById("options");
-  optionsContainer.innerHTML = "";
-  shuffleArray(q.options).forEach(opt => {
+  questionEl.textContent = q.question;
+
+  // options
+  optionsEl.innerHTML = "";
+  q.options.forEach((opt, idx) => {
     const btn = document.createElement("button");
     btn.className = "option-btn";
-    btn.innerText = opt;
-
-    btn.onclick = () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
-      handleAnswer(btn, opt, q.correct);
-    };
-
-    optionsContainer.appendChild(btn);
+    btn.textContent = opt;
+    btn.addEventListener("click", () => checkAnswer(opt, q.answer));
+    optionsEl.appendChild(btn);
   });
 
-  // Progress
-  document.getElementById("progress-text").innerText =
-    `Question ${currentIndex + 1} of ${levelQuestions.length}`;
-  document.getElementById("progress-fill").style.width =
-    `${((currentIndex + 1) / levelQuestions.length) * 100}%`;
+  // progress bar + text
+  progressText.textContent = `Question ${currentIndex + 1} of ${currentQuestions.length}`;
+  progressFill.style.width = `${((currentIndex) / currentQuestions.length) * 100}%`;
 
-  // Timer
-  resetTimer();
+  // timer
+  startTimer(QUESTION_TIME);
 }
 
-function handleAnswer(button, selected, correct) {
-  const allButtons = document.querySelectorAll(".option-btn");
-  allButtons.forEach(btn => btn.disabled = true);
-
-  if (selected === correct) {
-    score++;
-    button.style.backgroundColor = "#4CAF50";
-  } else {
-    button.style.backgroundColor = "#f44336";
-    allButtons.forEach(btn => {
-      if (btn.innerText === correct) {
-        btn.style.backgroundColor = "#4CAF50";
-      }
-    });
-  }
-
-  currentIndex++;
-  setTimeout(() => {
-    flipSound.currentTime = 0;
-    flipSound.play();
-    loadQuestion();
-  }, 1000);
-}
-
-function endLevel() {
-  clearInterval(timer);
-  alert(`Level complete! Score: ${score}`);
-
-  // Adjust thresholds to your question counts
-  if (currentLevel === "level1" && score >= 7) { // pass mark ~70%
-    if (confirm("🎉 Congratulations! Proceed to Level 2?")) {
-      currentLevel = "level2";
-      startQuiz();
-    }
-  } else if (currentLevel === "level2" && score >= 7) {
-    if (confirm("👏 Great job! Proceed to Level 3?")) {
-      currentLevel = "level3";
-      startQuiz();
-    }
-  } else if (currentLevel === "level3" && score >= 7) {
-    alert("🏆 You earned the crown! Well done!");
-  } else {
-    alert("Try again!");
-    startQuiz();
-  }
-}
-
-// Timer
-function resetTimer() {
-  clearInterval(timer);
-  let timeLeft = timePerQuestion;
-  document.getElementById("timer").innerText = formatTime(timeLeft);
-
-  timer = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timer").innerText = formatTime(timeLeft);
-    if (timeLeft <= 0) {
-      clearInterval(timer);
+// 4. Timer countdown
+function startTimer(time) {
+  let remaining = time;
+  timerEl.textContent = formatTime(remaining);
+  timerInterval = setInterval(() => {
+    remaining--;
+    timerEl.textContent = formatTime(remaining);
+    if (remaining <= 0) {
+      clearInterval(timerInterval);
+      // auto next question
       currentIndex++;
       loadQuestion();
     }
   }, 1000);
 }
 
-function formatTime(seconds) {
-  return seconds < 10 ? `00:0${seconds}` : `00:${seconds}`;
+function formatTime(s) {
+  return s < 10 ? `00:0${s}` : `00:${s}`;
 }
 
-function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
-}
-
-
-/*
-let questions = {};
-let currentSubject = "Mathematics"; // can be set dynamically
-let currentLevel = "level1";
-let currentIndex = 0;
-let score = 0;
-let timer;
-let timePerQuestion = 15; // seconds
-
-// Load sound effects (online free sounds)
-const clickSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-cool-interface-click-tone-2568.mp3");
-const flipSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-page-turn-single-1103.mp3");
-
-// Load questions.json
-fetch("questions.json")
-  .then(res => res.json())
-  .then(data => {
-    questions = data;
-    startQuiz();
-  })
-  .catch(err => {
-    console.error("Failed to load questions.json:", err);
-    document.getElementById("question").innerText = "Error loading questions!";
-  });
-
-function startQuiz() {
-  currentIndex = 0;
-  score = 0;
-  loadQuestion();
-}
-
-function loadQuestion() {
-  const levelQuestions = questions[currentSubject][currentLevel];
-  if (currentIndex >= levelQuestions.length) {
-    endLevel();
-    return;
-  }
-
-  const q = levelQuestions[currentIndex];
-  document.getElementById("question").innerText = q.question;
-
-  // Shuffle options
-  const optionsContainer = document.getElementById("options");
-  optionsContainer.innerHTML = "";
-  shuffleArray(q.options).forEach(opt => {
-    const btn = document.createElement("button");
-    btn.className = "option-btn";
-    btn.innerText = opt;
-
-    btn.onclick = () => {
-      clickSound.currentTime = 0;
-      clickSound.play();
-      handleAnswer(btn, opt, q.correct);
-    };
-
-    optionsContainer.appendChild(btn);
-  });
-
-  // Progress
-  document.getElementById("progress-text").innerText =
-    `Question ${currentIndex + 1} of ${levelQuestions.length}`;
-  document.getElementById("progress-fill").style.width =
-    `${((currentIndex + 1) / levelQuestions.length) * 100}%`;
-
-  // Timer
-  resetTimer();
-}
-
-function handleAnswer(button, selected, correct) {
-  const allButtons = document.querySelectorAll(".option-btn");
-
-  allButtons.forEach(btn => btn.disabled = true); // disable multiple clicks
-
-  if (selected === correct) {
-    score++;
-    button.style.backgroundColor = "#4CAF50"; // green for correct
-  } else {
-    button.style.backgroundColor = "#f44336"; // red for wrong
-    // highlight correct one
-    allButtons.forEach(btn => {
-      if (btn.innerText === correct) {
-        btn.style.backgroundColor = "#4CAF50";
-      }
-    });
-  }
-
+// 5. Check answer
+function checkAnswer(selected, correct) {
+  clearInterval(timerInterval);
+  if (selected === correct) score++;
   currentIndex++;
-
-  // play flip sound then move on
-  setTimeout(() => {
-    flipSound.currentTime = 0;
-    flipSound.play();
-    loadQuestion();
-  }, 1000);
+  // animate progress
+  progressFill.style.width = `${((currentIndex) / currentQuestions.length) * 100}%`;
+  setTimeout(loadQuestion, 400);
 }
 
-function endLevel() {
-  alert(`Level complete! Score: ${score}`);
-  if (currentLevel === "level1" && score >= 45) {
-    if (confirm("🎉 Congratulations! Proceed to Level 2?")) {
-      currentLevel = "level2";
-      startQuiz();
-    }
-  } else if (currentLevel === "level2" && score >= 55) {
-    if (confirm("👏 Great job! Proceed to Level 3?")) {
-      currentLevel = "level3";
-      startQuiz();
-    }
-  } else if (currentLevel === "level3" && score >= 75) {
-    alert("🏆 You earned the crown! Well done!");
-  } else {
-    alert("Try again!");
-    startQuiz();
-  }
-}
-
-// Timer functions
-function resetTimer() {
-  clearInterval(timer);
-  let timeLeft = timePerQuestion;
-  document.getElementById("timer").innerText = formatTime(timeLeft);
-
-  timer = setInterval(() => {
-    timeLeft--;
-    document.getElementById("timer").innerText = formatTime(timeLeft);
-
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      currentIndex++;
-      loadQuestion();
-    }
-  }, 1000);
-}
-
-function formatTime(seconds) {
-  return seconds < 10 ? `00:0${seconds}` : `00:${seconds}`;
-}
-
-// Utility: shuffle array
-function shuffleArray(array) {
-  return [...array].sort(() => Math.random() - 0.5);
+// 6. End quiz summary
+function endQuiz() {
+  clearInterval(timerInterval);
+  const totalQuestions = allQuestions.length;
+  quizBoard.innerHTML = `
+    <h2>🎉 Quiz Completed!</h2>
+    <p>You answered <strong>${score}</strong> out of <strong>${totalQuestions}</strong> correctly.</p>
+    <button id="restart-btn" class="option-btn" style="margin-top:20px;">Restart Quiz</button>
+  `;
+  document.getElementById("restart-btn").addEventListener("click", () => {
+    score = 0;
+    startLevel(1);
+  });
+  progressFill.style.width = "100%";
+  progressText.textContent = "Completed!";
+  levelStatus.textContent = "Well done!";
 }
