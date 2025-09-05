@@ -178,10 +178,26 @@
       });
     }
 
+    // Search filter with auto-expand subjects list
+const searchInput = document.getElementById("searchInput");
+const subjectsContainer = document.getElementById("subjectsContainer");
+
+searchInput.addEventListener("input", (e) => {
+  const value = e.target.value.trim();
+  renderSubjects(value);
+
+  // Auto flip down / expand when typing
+  if (value !== "") {
+    subjectsContainer.classList.add("expanded");
+  } else {
+    subjectsContainer.classList.remove("expanded");
+  }
+});
+
     // Search filter
-    document.getElementById("searchInput").addEventListener("input", (e) => {
+   /* document.getElementById("searchInput").addEventListener("input", (e) => {
       renderSubjects(e.target.value);
-    });
+    });*/
 
     // Initial render
     renderSubjects();
