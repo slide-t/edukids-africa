@@ -151,14 +151,31 @@ function showLevelModal(level,score){
     `Your score: ${score}. Click Continue for Level ${level+1}.`;
   document.getElementById("levelModal").style.display="flex";
 }
+function endQuiz() {
+  quizBoard.innerHTML = `
+    <h2>Level ${currentLevel} Completed</h2>
+    <p>You scored <strong>${score}</strong> out of ${questionsByLevel[`level${currentLevel}`].length}</p>
+    <div class="end-buttons">
+      <button class="btn" onclick="retryLevel()">Try Again</button>
+      <a href="subjects.html" class="btn">Back to Subjects</a>
+    </div>
+  `;
+}
 
+function retryLevel() {
+  currentIndex = 0;
+  score = 0;
+  loadQuestion();
+}
+
+/*
 function endQuiz(){
   quizBoard.innerHTML=`
     <h2>Quiz Completed!</h2>
     <p>You scored <strong>${score}</strong> in Level ${currentLevel} of ${subjectParam}</p>
     <a href="subjects.html" class="start-btn">Back to Subjects</a>
   `;
-}
+}*/
 
 // attach events after DOM ready
 window.addEventListener('DOMContentLoaded',()=>{
