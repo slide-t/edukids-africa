@@ -1,4 +1,6 @@
-// quiz.js — EduKids Quiz with level-size & pass-mark rules
+
+
+/*// quiz.js — EduKids Quiz with level-size & pass-mark rules
 // time per question (seconds)
 const QUESTION_TIME = 15;
 
@@ -58,7 +60,7 @@ if (!emojiDiv) {
     40% { transform: translateY(-18px) scale(1.15); opacity: 1; }
     100% { transform: translateY(0) scale(1); opacity: 0; }
   }
-  /* level summary modal */
+  /* level summary modal *
   .level-modal-overlay {
     position: fixed; inset: 0; display:flex; align-items:center; justify-content:center;
     background: rgba(44,26,71,0.7); z-index: 9999;
@@ -415,6 +417,7 @@ function playSound(type) {
 function shuffleArray(arr) {
   return arr.slice().sort(() => Math.random() - 0.5);
 }
+*/
 
 
 
@@ -424,7 +427,6 @@ function shuffleArray(arr) {
 
 
 
-/*
 // === EduKids Quiz ===
 
 // time per question (seconds)
