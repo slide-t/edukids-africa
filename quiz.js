@@ -1,4 +1,4 @@
-<script>
+
 const QUESTION_TIME = 15;
 const PASS_MARKS = {
   1:{questions:50,pass:45},
@@ -146,4 +146,4 @@ window.addEventListener('DOMContentLoaded',()=>{
     loadQuestions();
   });
 });
-</script>
+
