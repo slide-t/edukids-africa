@@ -1,4 +1,4 @@
-<script>
+
 // === EduKids Quiz ===
 
 // time per question (seconds)
@@ -252,4 +252,4 @@ style.textContent = `
 }
 `;
 document.head.appendChild(style);
-</script>
+
