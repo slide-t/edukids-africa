@@ -26,7 +26,35 @@ const optionsContainer = document.getElementById("optionsContainer");
 const scoreDisplay = document.getElementById("scoreDisplay");
 const levelDisplay = document.getElementById("levelDisplay");
 
-// Load questions (replace with Lagos state curriculum JSON later)
+// Load questions from questions.json
+async function loadQuestions(level) {
+  try {
+    const res = await fetch("questions.json");
+    const data = await res.json();
+
+    // Choose subject (default: Mathematics for now)
+    const subject = "Mathematics";
+
+    const levelKey = `level${level.level}`;
+    const questions = data[subject][levelKey];
+
+    if (!questions || questions.length === 0) {
+      throw new Error(`No questions found for ${subject} - ${levelKey}`);
+    }
+
+    // Map JSON to your expected format (convert correct to index)
+    return questions.map(q => ({
+      question: q.question,
+      options: q.options,
+      correct: q.options.indexOf(q.correct)
+    }));
+  } catch (err) {
+    console.error("Error loading questions:", err);
+    return [];
+  }
+}
+
+/*// Load questions (replace with Lagos state curriculum JSON later)
 function loadQuestions(level) {
   // Temporary demo questions (replace with full set)
   return Array.from({ length: level.total }, (_, i) => ({
@@ -34,7 +62,7 @@ function loadQuestions(level) {
     options: ["Option A", "Option B", "Option C", "Option D"],
     correct: Math.floor(Math.random() * 4)
   }));
-}
+}*/
 
 // Render current question
 function renderQuestion() {
