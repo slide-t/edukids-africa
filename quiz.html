@@ -63,7 +63,7 @@
       margin-top: 10px;
     }
 
-    #quiz-board {
+    #quiz-board, #summary-screen {
       background: #fff;
       padding: 20px;
       border-radius: 12px;
@@ -87,7 +87,7 @@
     .option-btn {
       width: 100%;
       padding: 15px;
-      font-size: 2rem;
+      font-size: 1.2rem;
       font-weight: 600;
       border: none;
       border-radius: 8px;
@@ -109,10 +109,36 @@
       font-weight: 600;
       color: #444;
     }
+
     #level-status {
-       font-size:24px;
-      color:#fff;
-      }
+      font-size: 24px;
+      color: #4facfe;
+    }
+
+    /* Summary screen hidden by default */
+    #summary-screen {
+      display: none;
+    }
+
+    #summary-screen h2 {
+      color: #4facfe;
+      margin-bottom: 10px;
+    }
+
+    #summary-screen p {
+      font-size: 1.2rem;
+    }
+
+    #summary-screen button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1rem;
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
 
     /* Footer */
     footer {
@@ -142,39 +168,40 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
+
     .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
 
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  padding: 0.3rem 0.6rem;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-}
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 0.3rem 0.6rem;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
 
-.footer-links a:hover {
-  background: #ffcc00;
-  color: #222;
-}
+    .footer-links a:hover {
+      background: #ffcc00;
+      color: #222;
+    }
 
-.footer-links a.active {
-  color: #fff;
-  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
-  background: #009999;
-}
+    .footer-links a.active {
+      color: #fff;
+      box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+      background: #009999;
+    }
 
-.footer-note {
-  color: #ccc;
-  font-size: 0.9rem;
-}
+    .footer-note {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
   </style>
 </head>
 <body>
@@ -188,10 +215,18 @@
       <div class="timer">⏳ <span id="timer">00:15</span></div>
     </header>
 
+    <!-- Quiz Board -->
     <main id="quiz-board">
       <div id="question">Loading question...</div>
       <div id="options"></div>
     </main>
+
+    <!-- Summary Screen -->
+    <div id="summary-screen">
+      <h2>Level Complete!</h2>
+      <p id="summary-text"></p>
+      <button id="next-level-btn">Next Level</button>
+    </div>
 
     <footer class="quiz-footer">
       <p id="level-status">Level 1</p>
@@ -208,12 +243,12 @@
       </p>
     </div>
     
-  <nav class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="subjects.html">Subjects</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-  </nav>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
   
   </footer>
 
