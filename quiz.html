@@ -227,14 +227,81 @@
   60% {
     transform: translateY(-10px);
   }
-}.welcome-modal {
+}
+/* modal */
+.modal {
+  display:none;
+  position:fixed;
+  top:0; left:0;
+  width:100%; height:100%;
+  background:rgba(80,0,120,0.6);
+  justify-content:center;
+  align-items:center;
+  z-index:9999;
+}
+.modal-content {
+  background:#6a0dad;
+  color:#fff;
+  padding:20px;
+  max-width:400px;
+  width:90%;
+  border-radius:10px;
+  text-align:center;
+  position:relative;
+}
+.close-modal {
+  position:absolute;
+  top:10px; right:10px;
+  background:transparent;
+  border:none;
+  color:#fff;
+  font-size:20px;
+  cursor:pointer;
+}
+.start-btn {
+  width:100%;
+  background:#fff;
+  color:#6a0dad;
+  border:none;
+  padding:10px;
+  margin-top:15px;
+  font-weight:bold;
+  cursor:pointer;
+  border-radius:6px;
+}
+.warn { font-size:0.9em; margin-top:10px; }
+
+/* quiz buttons & emoji */
+.option-btn {
+  display:block;
+  width:100%;
+  margin:6px 0;
+  padding:10px;
+  border-radius:6px;
+  border:1px solid #ccc;
+  cursor:pointer;
+  background:#f9f9f9;
+}
+.option-btn.correct { background:#c8f7c5; border-color:#2ecc71; }
+.option-btn.wrong { background:#f7c5c5; border-color:#e74c3c; }
+.bounce-emoji { pointer-events:none; position:absolute; font-size:3rem; }
+
+.progress {background:#eee;height:8px;border-radius:4px;overflow:hidden;}
+#progress-fill {background:#6a0dad;height:100%;width:0;}
+@keyframes bounce {
+  0% { transform:translate(-50%,-50%) scale(0.5); opacity:0; }
+  50% { transform:translate(-50%,-60%) scale(1.2); opacity:1; }
+  100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
+}
+    
+    /*.welcome-modal {
   display: flex;
   justify-content: center;
   align-items: center;
   position: fixed;
   z-index: 1000;
   top: 0; left: 0; width: 100%; height: 100%;
-  background: rgba(128,0,128,0.6); /* transparent purple */
+  background: rgba(128,0,128,0.6); /* transparent purple 
   backdrop-filter: blur(3px);
 }
 .welcome-content {
@@ -278,7 +345,7 @@
 @keyframes fadeIn {
   from {opacity: 0; transform: scale(0.9);}
   to {opacity: 1; transform: scale(1);}
-}
+}*/
     
   </style>
 </head>
@@ -334,17 +401,42 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <!-- Welcome Modal -->
-<div id="welcomeModal" class="welcome-modal">
-  <div class="welcome-content">
-    <button id="closeModal" class="close-btn">&times;</button>
-    <h2>Welcome to the Quiz!</h2>
-    <div id="level-info"></div>
-    <p style="margin-top:10px;font-size:0.9rem;">
-      ⚠️ Please avoid copyright infringement or any form of cyber crime while using EduKids Africa.
+  <!-- Welcome modal -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-content">
+    <button id="closeWelcome" class="close-modal">×</button>
+    <h2>Welcome to EduKids Quiz</h2>
+    <p>
+      • Level 1: 50 questions (pass 45)<br>
+      • Level 2: 60 questions (pass 55)<br>
+      • Level 3: 80 questions (pass 75)
     </p>
-    <button id="readyBtn" class="ready-btn">I am ready</button>
+    <p class="warn">
+      Please avoid copyright violations or cyber-crimes while using this quiz.
+    </p>
+    <button id="startQuizBtn" class="start-btn">I am ready</button>
   </div>
 </div>
+
+<!-- Level modal -->
+<div id="levelModal" class="modal">
+  <div class="modal-content">
+    <h2 id="levelModalTitle"></h2>
+    <p id="levelModalText"></p>
+    <button id="nextLevelBtn" class="start-btn">Continue</button>
+  </div>
+</div>
+
+<!-- Quiz board -->
+<div id="quiz-board">
+  <div id="level-status"></div>
+  <div id="progress-text"></div>
+  <div class="progress"><div id="progress-fill"></div></div>
+  <div id="timer"></div>
+  <h3 id="question"></h3>
+  <div id="options"></div>
+</div>
+
+  
 </body>
 </html>
