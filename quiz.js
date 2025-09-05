@@ -18,11 +18,18 @@ const timerEl = document.getElementById("timer");
 const levelStatus = document.getElementById("level-status");
 const quizBoard = document.getElementById("quiz-board");
 
+// a div for emoji animation
+const emojiDiv = document.createElement("div");
+emojiDiv.id = "emoji-feedback";
+emojiDiv.style.fontSize = "3rem";
+emojiDiv.style.textAlign = "center";
+emojiDiv.style.height = "3.5rem";
+quizBoard.insertBefore(emojiDiv, questionEl);
+
 // === 1. Load JSON and flatten it ===
 fetch("questions.json")
   .then(res => res.json())
   .then(data => {
-    // Only Mathematics for now – flatten levels
     const math = data.Mathematics;
     allQuestions = [
       ...math.level1.map(q => ({
@@ -55,11 +62,10 @@ fetch("questions.json")
 function startLevel(level) {
   currentLevel = level;
   currentIndex = 0;
+  score = score; // keep running score
   levelStatus.textContent = `Level ${level}`;
-  // filter questions for this level
   questionsThisLevel = allQuestions.filter(q => q.level === level);
   if (questionsThisLevel.length === 0) {
-    // no questions for this level, show summary
     endQuiz();
     return;
   }
@@ -70,6 +76,10 @@ function startLevel(level) {
 // === 3. Load a question ===
 function loadQuestion() {
   clearInterval(timerInterval);
+
+  // clear emoji
+  emojiDiv.textContent = "";
+
   if (currentIndex >= currentQuestions.length) {
     // finished this level
     if (currentLevel < 3) {
@@ -111,7 +121,6 @@ function startTimer(time) {
     timerEl.textContent = formatTime(remaining);
     if (remaining <= 0) {
       clearInterval(timerInterval);
-      // auto next question
       currentIndex++;
       loadQuestion();
     }
@@ -122,11 +131,11 @@ function formatTime(s) {
   return s < 10 ? `00:0${s}` : `00:${s}`;
 }
 
-// === 5. Check answer (with sounds + flash) ===
+// === 5. Check answer (with sounds + flash + emoji) ===
 function checkAnswer(button, selected, correct) {
   clearInterval(timerInterval);
 
-  // disable all buttons so child cannot click again
+  // disable all buttons
   const allBtns = document.querySelectorAll(".option-btn");
   allBtns.forEach(b => b.disabled = true);
 
@@ -134,25 +143,27 @@ function checkAnswer(button, selected, correct) {
     score++;
     playSound("correct");
     button.classList.add("correct"); // flash green
+    emojiDiv.textContent = "✅"; // happy emoji
   } else {
     playSound("wrong");
-    button.classList.add("wrong"); // flash red
-    // also highlight the correct one
+    button.classList.add("wrong"); // flash red only the one they clicked
+    emojiDiv.textContent = "❌"; // sad emoji
+    // also show the correct one in green to guide them
     allBtns.forEach(b => {
       if (b.textContent === correct) b.classList.add("correct");
     });
   }
 
   currentIndex++;
-  // animate progress
   progressFill.style.width = `${((currentIndex) / currentQuestions.length) * 100}%`;
 
-  setTimeout(loadQuestion, 1000); // wait to show color before next Q
+  setTimeout(loadQuestion, 1200);
 }
 
 // === 6. End quiz summary ===
 function endQuiz() {
   clearInterval(timerInterval);
+  emojiDiv.textContent = "";
   const totalQuestions = allQuestions.length;
   quizBoard.innerHTML = `
     <h2>🎉 Quiz Completed!</h2>
