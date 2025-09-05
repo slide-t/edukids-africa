@@ -154,14 +154,64 @@ function showEmoji(emoji) {
   document.body.appendChild(e);
   setTimeout(() => e.remove(), 1000);
 }
+function endQuiz() {
+  const pass = PASS_MARKS[currentLevel].pass;
+  const total = PASS_MARKS[currentLevel].total;
 
+  // Build message
+  let html = `<h2>Level ${currentLevel} Completed!</h2>
+  <p>You scored <strong>${score}</strong> out of <strong>${total}</strong> in ${subjectParam}</p>`;
+
+  // Buttons
+  if (score >= pass && currentLevel < 3) {
+    // passed and can go to next level
+    html += `<button id="next-level-btn" class="option-btn" style="background:#4caf50;color:#fff;">Proceed to Level ${currentLevel + 1}</button>`;
+  } else if (score < pass) {
+    // failed – retry
+    html += `<button id="retry-btn" class="option-btn" style="background:#f44336;color:#fff;">Retry Level ${currentLevel}</button>`;
+  } else if (score >= pass && currentLevel === 3) {
+    // finished last level
+    html += `<p>🎉 Congratulations! You have completed all levels of ${subjectParam}.</p>`;
+  }
+
+  // always show back to subjects
+  html += `<a href="subjects.html" class="option-btn" style="display:block;margin-top:10px;background:#673ab7;color:#fff;text-align:center;">Back to Subjects</a>`;
+
+  quizBoard.innerHTML = html;
+
+  // attach events
+  const nextBtn = document.getElementById("next-level-btn");
+  if (nextBtn) {
+    nextBtn.addEventListener("click", () => {
+      currentLevel++;
+      currentIndex = 0;
+      score = 0;
+      loadQuestion();
+    });
+  }
+
+  const retryBtn = document.getElementById("retry-btn");
+  if (retryBtn) {
+    retryBtn.addEventListener("click", () => {
+      currentIndex = 0;
+      score = 0;
+      loadQuestion();
+    });
+  }
+
+  progressFill.style.width = "100%";
+  progressText.textContent = "Completed!";
+  levelStatus.textContent = `Level ${currentLevel}`;
+}
+
+/*
 function endQuiz() {
   quizBoard.innerHTML = `
     <h2>Quiz Completed!</h2>
     <p>You scored <strong>${score}</strong> in Level ${currentLevel} of ${subjectParam}</p>
     <a href="subjects.html" class="btn">Back to Subjects</a>
   `;
-}
+}*/
 
 // bounce animation
 const style = document.createElement("style");
