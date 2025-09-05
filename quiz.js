@@ -10,30 +10,6 @@ const PASS_MARKS = {
   3: { total: 80, pass: 75 },
 };
 
-/*// Show welcome on load
-window.addEventListener('load', () => {
-  document.getElementById('welcomeModal').style.display = 'flex';
-});
-
-function closeWelcomeModal() {
-  document.getElementById('welcomeModal').style.display = 'none';
-}
-function startQuiz() {
-  closeWelcomeModal();
-  loadQuestions();
-}
-
-function showLevelModal(level, score) {
-  document.getElementById('levelModalTitle').textContent = `🎉 You passed Level ${level}`;
-  document.getElementById('levelModalText').textContent =
-    `Your score: ${score}. Moving to Level ${level + 1}...`;
-  document.getElementById('levelModal').style.display = 'flex';
-}
-function nextLevel() {
-  document.getElementById('levelModal').style.display = 'none';
-  loadQuestions();
-}
-*/
 // state
 let questionsByLevel = {};
 let currentLevel = 1;
