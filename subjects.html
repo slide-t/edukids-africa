@@ -92,11 +92,21 @@
 .subject-item:hover {
   color: #0077b6;
 }
+#subjectsContainer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, transform 0.4s ease;
+  transform-origin: top;
+}
 
+#subjectsContainer.expanded {
+  max-height: 1000px; /* large enough for all subjects */
+  transform: rotateX(0deg);
+}
   </style>
 </head>
 <body>
-  <div class="subject-container">
+  <div class="subject-container" id="subject-container" >
     <h1>Subjects Offered</h1>
 
     <!-- Search Bar -->
