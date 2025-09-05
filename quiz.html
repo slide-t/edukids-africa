@@ -266,13 +266,13 @@
 .full-btn:hover {
   background: #eee;
 }
-/*.modal {
-  display: none; /* hidden by default *
+.modal {
+  display: none; /* hidden by default */
   position: fixed;
   z-index: 1000;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6); /* transparent background *
+  background: rgba(0,0,0,0.6); /* transparent background */
 }
 
 .modal-content .warning {
@@ -304,7 +304,7 @@
 }
 
     
-/* modal *
+/* modal */
 .modal {
   display:none;
   position:fixed;
@@ -346,7 +346,7 @@
   border-radius:6px;
 }
 .warn { font-size:0.9em; margin-top:10px; }
-*/
+
 /* quiz buttons & emoji */
 .option-btn {
   display:block;
@@ -412,36 +412,7 @@
   opacity:0.9;
 }
     
-  </style>
-<style>
-.modal {
-  display:none;
-  position:fixed;
-  top:0;left:0;right:0;bottom:0;
-  background:rgba(0,0,0,.6);
-  align-items:center;
-  justify-content:center;
-  z-index:1000;
-}
-.modal-content {
-  background:#fff;
-  padding:20px;
-  max-width:400px;
-  text-align:center;
-  border-radius:8px;
-}
-.option-btn {
-  display:block;
-  width:100%;
-  margin:8px 0;
-  padding:10px;
-  border-radius:6px;
-  border:1px solid #ccc;
-  cursor:pointer;
-  background:#f9f9f9;
-}
-</style>
-  
+  </style>  
 </head>
 <body>
 <div class="progress-wrapper">
@@ -450,17 +421,6 @@
     <div id="progress-fill"></div>
   </div>
 </div> 
-<!-- WELCOME MODAL -->
-<div id="welcomeModal" class="modal">
-  <div class="modal-content">
-    <h2>Welcome to EduKids Quiz</h2>
-    <p>Get ready to test your knowledge!</p>
-    <button id="startQuizBtn" class="option-btn">I am ready</button>
-    <button id="closeWelcomeBtn" class="option-btn" style="background:#f44336;color:#fff;">Close</button>
-  </div>
-</div>
-
-<!-- QUIZ BOARD -->
 <div id="quiz-board">
   <div id="level-status"></div>
   <div id="progress-text"></div>
@@ -481,8 +441,6 @@
   </div>
 </div>
 
-  
-  <!--
   <div class="quiz-container">
     <header class="quiz-header">
       <h1>EduKids Africa Quiz</h1>
@@ -534,105 +492,6 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-<!-- Welcome Modal --
-<div id="welcomeModal" class="modal">
-  <div class="modal-content purple">
-    <span class="close" id="closeWelcome">&times;</span>
-    <h2>Welcome to the Quiz</h2>
-    <p>
-      This quiz has 3 levels:<br>
-      Level 1 – 50 questions, pass mark 45<br>
-      Level 2 – 60 questions, pass mark 55<br>
-      Level 3 – 80 questions, pass mark 75
-    </p>
-    <p class="warning">
-      Please avoid copyright violations and other cyber crimes.
-    </p>
-    <button id="readyBtn" class="full-btn">I am ready</button>
-  </div>
-</div>
 
-<!-- Level Passed Modal --
-<div id="levelPassedModal" class="modal">
-  <div class="modal-content purple">
-    <h2>Congratulations!</h2>
-    <p id="levelPassedMsg"></p>
-    <button id="nextLevelBtn" class="full-btn">Go to Next Level</button>
-  </div>
-</div>
-
-<!-- End Quiz Modal --
-<div id="endQuizModal" class="modal">
-  <div class="modal-content purple">
-    <h2>Quiz Finished</h2>
-    <p id="endQuizMsg"></p>
-    <button id="tryAgainBtn" class="full-btn">Try Again</button>
-    <button id="backSubjectsBtn" class="full-btn">Back to Subjects</button>
-  </div>
-</div>
-<!-- Welcome Modal --
-<div id="welcomeModal" class="modal">
-  <div class="modal-content purple">
-    <span class="close" id="closeWelcome">&times;</span>
-    <h2>Welcome to the Quiz</h2>
-    <p>
-      This quiz has 3 levels:<br>
-      Level 1 – 50 questions, pass mark 45<br>
-      Level 2 – 60 questions, pass mark 55<br>
-      Level 3 – 80 questions, pass mark 75
-    </p>
-    <p class="warning">
-      Please avoid copyright violations and other cyber crimes.
-    </p>
-    <button id="readyBtn" class="full-btn">I am ready</button>
-  </div>
-</div>
-
-<!-- Level Passed Modal --
-<div id="levelPassedModal" class="modal">
-  <div class="modal-content purple">
-    <h2>Congratulations!</h2>
-    <p id="levelPassedMsg"></p>
-    <button id="nextLevelBtn" class="full-btn">Go to Next Level</button>
-  </div>
-</div>
-
-<!-- End Quiz Modal --
-<div id="endQuizModal" class="modal">
-  <div class="modal-content purple">
-    <h2>Quiz Finished</h2>
-    <p id="endQuizMsg"></p>
-    <button id="tryAgainBtn" class="full-btn">Try Again</button>
-    <button id="backSubjectsBtn" class="full-btn">Back to Subjects</button>
-  </div>
-</div>
-  <script>
-// Ensure DOM loaded before attaching
-document.addEventListener('DOMContentLoaded', () => {
-  const welcomeModal = document.getElementById('welcomeModal');
-  const readyBtn = document.getElementById('readyBtn');
-  const closeWelcome = document.getElementById('closeWelcome');
-
-  // Show welcome modal on page load
-  if (welcomeModal) welcomeModal.style.display = 'block';
-
-  // Hide modal on "I am ready"
-  if (readyBtn) {
-    readyBtn.addEventListener('click', () => {
-      welcomeModal.style.display = 'none';
-      // optionally start quiz or call loadQuestion()
-    });
-  }
-
-  // Hide modal on X close
-  if (closeWelcome) {
-    closeWelcome.addEventListener('click', () => {
-      welcomeModal.style.display = 'none';
-    });
-  }
-});
-    
-  </script>
-  -->
 </body>
 </html>
