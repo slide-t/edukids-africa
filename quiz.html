@@ -227,6 +227,57 @@
   60% {
     transform: translateY(-10px);
   }
+}.welcome-modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  z-index: 1000;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: rgba(128,0,128,0.6); /* transparent purple */
+  backdrop-filter: blur(3px);
+}
+.welcome-content {
+  background: #673ab7;
+  color: #fff;
+  padding: 20px;
+  max-width: 500px;
+  width: 90%;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.5s ease-in;
+}
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.ready-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background: #ffcc00;
+  color: #222;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s;
+}
+.ready-btn:hover {
+  background: #ffd633;
+}
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
 }
     
   </style>
@@ -283,5 +334,17 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
+  <!-- Welcome Modal -->
+<div id="welcomeModal" class="welcome-modal">
+  <div class="welcome-content">
+    <button id="closeModal" class="close-btn">&times;</button>
+    <h2>Welcome to the Quiz!</h2>
+    <div id="level-info"></div>
+    <p style="margin-top:10px;font-size:0.9rem;">
+      ⚠️ Please avoid copyright infringement or any form of cyber crime while using EduKids Africa.
+    </p>
+    <button id="readyBtn" class="ready-btn">I am ready</button>
+  </div>
+</div>
 </body>
 </html>
