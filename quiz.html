@@ -4,7 +4,141 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduKids Quiz</title>
-  <link rel="stylesheet" href="quiz.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", sans-serif;
+      background: #f4f9ff;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .quiz-container {
+      flex: 1;
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .quiz-header {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .quiz-header h1 {
+      font-size: 1.8rem;
+      color: #4facfe;
+      margin-bottom: 10px;
+    }
+
+    .progress {
+      margin: 10px 0;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 10px;
+      background: #ddd;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-top: 5px;
+    }
+
+    #progress-fill {
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, #4facfe, #00f2fe);
+      transition: width 0.4s ease;
+    }
+
+    .timer {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+
+    #quiz-board {
+      background: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    #question {
+      font-size: 1.3rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+      color: #222;
+    }
+
+    #options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .option-btn {
+      width: 100%;
+      padding: 15px;
+      font-size: 1rem;
+      font-weight: 500;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background: #eef6ff;
+      color: #333;
+      transition: all 0.3s ease;
+    }
+
+    .option-btn:hover {
+      background: linear-gradient(135deg, #4facfe, #00f2fe);
+      color: #fff;
+      transform: scale(1.03);
+    }
+
+    .quiz-footer {
+      text-align: center;
+      margin-top: 20px;
+      font-weight: 600;
+      color: #444;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c1a47;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .typing-logo {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff6b6b;
+      width: 0;
+      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 220px; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+  </style>
 </head>
 <body>
   <div class="quiz-container">
@@ -27,28 +161,20 @@
     </footer>
   </div>
 
-  <!-- Shared footer -->
-  <footer style="background:#2c1a47; color:#fff; padding:40px 20px; text-align:center; box-shadow:0 -2px 6px rgba(0,0,0,0.4);">
-    <div style="max-width:1200px; margin:0 auto;">
-      <div class="brand">
-        <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
-        <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
-      </div>
-
-      <nav style="margin-bottom:20px;">
-        <a href="index.html" style="margin:0 15px; color:#fff;">Home</a>
-        <a href="students.html" style="margin:0 15px; color:#fff;">Students</a>
-        <a href="about.html" style="margin:0 15px; color:#fff;">About</a>
-        <a href="contact.html" style="margin:0 15px; color:#fff;">Contact</a>
-      </nav>
-
+  <!-- Shared site footer -->
+  <footer>
+    <div>
+      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
       <p style="font-size:0.9rem; color:#aaa;">
         © <span id="year"></span> EduKids Africa. All rights reserved.
       </p>
     </div>
-    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   </footer>
 
   <script src="quiz.js"></script>
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
