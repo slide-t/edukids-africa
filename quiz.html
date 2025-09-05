@@ -544,6 +544,32 @@
     <button id="backSubjectsBtn" class="full-btn">Back to Subjects</button>
   </div>
 </div>
-  
+  <script>
+// Ensure DOM loaded before attaching
+document.addEventListener('DOMContentLoaded', () => {
+  const welcomeModal = document.getElementById('welcomeModal');
+  const readyBtn = document.getElementById('readyBtn');
+  const closeWelcome = document.getElementById('closeWelcome');
+
+  // Show welcome modal on page load
+  if (welcomeModal) welcomeModal.style.display = 'block';
+
+  // Hide modal on "I am ready"
+  if (readyBtn) {
+    readyBtn.addEventListener('click', () => {
+      welcomeModal.style.display = 'none';
+      // optionally start quiz or call loadQuestion()
+    });
+  }
+
+  // Hide modal on X close
+  if (closeWelcome) {
+    closeWelcome.addEventListener('click', () => {
+      welcomeModal.style.display = 'none';
+    });
+  }
+});
+    
+  </script>
 </body>
 </html>
