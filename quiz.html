@@ -228,7 +228,55 @@
     transform: translateY(-10px);
   }
 }
-/* modal */
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* transparent background */
+}
+.modal-content {
+  background: #6c2eb9; /* purple scheme */
+  color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 500px;
+  text-align: center;
+  position: relative;
+}
+.modal-content .warning {
+  font-size: 0.9em;
+  margin-top: 10px;
+}
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+.full-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background: #fff;
+  color: #6c2eb9;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.full-btn:hover {
+  background: #eee;
+}
+
+    
+/* modal *
 .modal {
   display:none;
   position:fixed;
@@ -270,7 +318,7 @@
   border-radius:6px;
 }
 .warn { font-size:0.9em; margin-top:10px; }
-
+*/
 /* quiz buttons & emoji */
 .option-btn {
   display:block;
@@ -396,42 +444,78 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
   </script>
-  <!-- Welcome modal -->
+<!-- Welcome Modal -->
 <div id="welcomeModal" class="modal">
-  <div class="modal-content">
-    <button id="closeWelcome" class="close-modal">×</button>
-    <h2>Welcome to EduKids Quiz</h2>
+  <div class="modal-content purple">
+    <span class="close" id="closeWelcome">&times;</span>
+    <h2>Welcome to the Quiz</h2>
     <p>
-      • Level 1: 50 questions (pass 45)<br>
-      • Level 2: 60 questions (pass 55)<br>
-      • Level 3: 80 questions (pass 75)
+      This quiz has 3 levels:<br>
+      Level 1 – 50 questions, pass mark 45<br>
+      Level 2 – 60 questions, pass mark 55<br>
+      Level 3 – 80 questions, pass mark 75
     </p>
-    <p class="warn">
-      Please avoid copyright violations or cyber-crimes while using this quiz.
+    <p class="warning">
+      Please avoid copyright violations and other cyber crimes.
     </p>
-    <button id="startQuizBtn" class="start-btn">I am ready</button>
+    <button id="readyBtn" class="full-btn">I am ready</button>
   </div>
 </div>
 
-<!-- Level modal -->
-<div id="levelModal" class="modal">
-  <div class="modal-content">
-    <h2 id="levelModalTitle"></h2>
-    <p id="levelModalText"></p>
-    <button id="nextLevelBtn" class="start-btn">Continue</button>
+<!-- Level Passed Modal -->
+<div id="levelPassedModal" class="modal">
+  <div class="modal-content purple">
+    <h2>Congratulations!</h2>
+    <p id="levelPassedMsg"></p>
+    <button id="nextLevelBtn" class="full-btn">Go to Next Level</button>
   </div>
 </div>
 
-<!-- Quiz board -->
-<div id="quiz-board">
-  <div id="level-status"></div>
-  <div id="progress-text"></div>
-  <div class="progress"><div id="progress-fill"></div></div>
-  <div id="timer"></div>
-  <h3 id="question"></h3>
-  <div id="options"></div>
+<!-- End Quiz Modal -->
+<div id="endQuizModal" class="modal">
+  <div class="modal-content purple">
+    <h2>Quiz Finished</h2>
+    <p id="endQuizMsg"></p>
+    <button id="tryAgainBtn" class="full-btn">Try Again</button>
+    <button id="backSubjectsBtn" class="full-btn">Back to Subjects</button>
+  </div>
+</div>
+<!-- Welcome Modal -->
+<div id="welcomeModal" class="modal">
+  <div class="modal-content purple">
+    <span class="close" id="closeWelcome">&times;</span>
+    <h2>Welcome to the Quiz</h2>
+    <p>
+      This quiz has 3 levels:<br>
+      Level 1 – 50 questions, pass mark 45<br>
+      Level 2 – 60 questions, pass mark 55<br>
+      Level 3 – 80 questions, pass mark 75
+    </p>
+    <p class="warning">
+      Please avoid copyright violations and other cyber crimes.
+    </p>
+    <button id="readyBtn" class="full-btn">I am ready</button>
+  </div>
 </div>
 
+<!-- Level Passed Modal -->
+<div id="levelPassedModal" class="modal">
+  <div class="modal-content purple">
+    <h2>Congratulations!</h2>
+    <p id="levelPassedMsg"></p>
+    <button id="nextLevelBtn" class="full-btn">Go to Next Level</button>
+  </div>
+</div>
+
+<!-- End Quiz Modal -->
+<div id="endQuizModal" class="modal">
+  <div class="modal-content purple">
+    <h2>Quiz Finished</h2>
+    <p id="endQuizMsg"></p>
+    <button id="tryAgainBtn" class="full-btn">Try Again</button>
+    <button id="backSubjectsBtn" class="full-btn">Back to Subjects</button>
+  </div>
+</div>
   
 </body>
 </html>
