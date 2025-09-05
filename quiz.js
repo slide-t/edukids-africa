@@ -10,7 +10,7 @@ const PASS_MARKS = {
   3: { total: 80, pass: 75 },
 };
 
-// Show welcome on load
+/*// Show welcome on load
 window.addEventListener('load', () => {
   document.getElementById('welcomeModal').style.display = 'flex';
 });
@@ -33,7 +33,7 @@ function nextLevel() {
   document.getElementById('levelModal').style.display = 'none';
   loadQuestions();
 }
-
+*/
 // state
 let questionsByLevel = {};
 let currentLevel = 1;
