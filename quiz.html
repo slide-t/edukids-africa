@@ -7,56 +7,64 @@
   <style>
     body {
       font-family: "Poppins", sans-serif;
-      background: #f0f8ff;
+      background: #2c1a47;
       margin: 0;
       padding: 0;
-      color: #333;
+      color: #fff;
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      overflow-x: hidden;
     }
 
     header {
-      background: #673ab7;
+      background: #4b2a85;
       color: #fff;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: bold;
+      animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+      to { text-shadow: 0 0 15px #ff6b6b, 0 0 25px #ffcc00; }
     }
 
     #quiz-container {
-      background: #fff;
-      max-width: 700px;
-      width: 100%;
+      background: #3c246d;
+      max-width: 800px;
+      width: 95%;
       flex: 1;
       padding: 30px;
       border-radius: 20px;
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-      margin: 20px auto;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+      margin: 30px auto;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      min-height: 600px;
+      min-height: 650px;
+      box-sizing: border-box;
     }
 
     #level-status {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       font-weight: bold;
       text-align: center;
       margin-bottom: 15px;
-      color: #673ab7;
+      color: #ffcc00;
     }
 
     #progress-bar {
-      background: #ddd;
+      background: #5c3c94;
       border-radius: 8px;
       overflow: hidden;
       height: 20px;
       margin-bottom: 20px;
     }
     #progress-fill {
-      background: #4caf50;
+      background: #00e6e6;
       width: 0%;
       height: 100%;
       transition: width 0.3s ease;
@@ -65,55 +73,51 @@
     #progress-text {
       text-align: center;
       margin-bottom: 20px;
-      font-size: 1.1rem;
-      color: #555;
+      font-size: 1.2rem;
+      color: #ddd;
     }
 
     #timer {
       text-align: right;
       font-weight: bold;
       margin-bottom: 20px;
-      font-size: 1.2rem;
-      color: #e91e63;
+      font-size: 1.3rem;
+      color: #ff6b6b;
     }
 
     #question {
-      font-size: 1.4rem;
+      font-size: 1.5rem;
       margin-bottom: 20px;
       font-weight: 600;
+      color: #fff;
     }
 
     .option-btn {
       display: block;
       width: 100%;
       margin: 10px 0;
-      padding: 14px;
+      padding: 16px;
       border-radius: 12px;
-      border: 1px solid #ccc;
+      border: none;
       cursor: pointer;
-      background: #f9f9f9;
+      background: #5c3c94;
       font-size: 1.2rem;
       font-weight: 500;
       transition: all 0.3s ease;
+      color: #fff;
     }
     .option-btn:hover:not(:disabled) {
-      background: #e0f7fa;
+      background: #7a52b0;
+      box-shadow: 0 0 10px #00e6e6;
       transform: scale(1.03);
     }
     .option-btn:disabled {
       cursor: not-allowed;
-      opacity: 0.8;
+      opacity: 0.7;
     }
 
-    .option-btn.correct { background:#c8f7c5 !important; border-color:#2ecc71 !important; color:#2c662d; }
-    .option-btn.wrong { background:#f7c5c5 !important; border-color:#e74c3c !important; color:#721c24; }
-
-    .bounce-emoji { pointer-events:none; }
-    @keyframes bounce {
-      0% { transform:translate(-50%,-50%) scale(0.5); opacity:0; }
-      50% { transform:translate(-50%,-60%) scale(1.2); opacity:1; }
-      100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
-    }
+    .option-btn.correct { background:#28a745 !important; }
+    .option-btn.wrong { background:#e74c3c !important; }
 
     #quiz-board {
       margin-top: 20px;
@@ -121,12 +125,21 @@
       text-align: center;
     }
 
+    /* Emoji bounce */
+    .bounce-emoji { pointer-events:none; }
+    @keyframes bounce {
+      0% { transform:translate(-50%,-50%) scale(0.5); opacity:0; }
+      50% { transform:translate(-50%,-60%) scale(1.2); opacity:1; }
+      100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
+    }
+
     /* Footer */
     footer {
-      background: #2c1a47;
+      background: #1a0f2e;
       color: #fff;
-      padding: 20px;
+      padding: 25px;
       text-align: center;
+      margin-top: auto;
     }
 
     .typing-logo {
@@ -161,7 +174,6 @@
       color: #fff;
       text-decoration: none;
       font-weight: 600;
-      position: relative;
       padding: 0.4rem 0.8rem;
       transition: all 0.3s ease;
       border-radius: 8px;
@@ -171,25 +183,222 @@
     .footer-links a:hover {
       background: #ffcc00;
       color: #222;
+      box-shadow: 0 0 8px #ffcc00, 0 0 12px #ffcc00;
     }
 
-    .footer-links a.active {
+    /* Modal */
+    .modal {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+    .modal-content {
+      background: #3c246d;
+      padding: 30px;
+      border-radius: 15px;
+      max-width: 500px;
+      width: 90%;
+      text-align: center;
+      position: relative;
       color: #fff;
-      box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
-      background: #009999;
     }
-
-    .footer-note {
-      color: #ccc;
-      font-size: 0.9rem;
+    .modal h2 {
+      margin-top: 0;
+      color: #ffcc00;
+    }
+    .modal p {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      background: none;
+      border: none;
+      color: #fff;
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .ready-btn {
+      margin-top: 20px;
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      border: none;
+      border-radius: 10px;
+      background: #ffcc00;
+      color: #222;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    .ready-btn:hover {
+      background: #e6b800;
+      box-shadow: 0 0 10px #ffcc00;
     }
   </style>
 </head>
 <body>
-  <header>
-    EduKids Africa Quiz
-  </header>
+  
+<!-- Quiz Board Overlay (disabled before start) -->
+<div id="quiz-overlay"></div>
 
+<!-- Header -->
+<header class="site-header">
+  <h1 class="site-title">EduKids Africa<span style="color:#ffcc00;"> Quiz</span></h1>
+  <button class="help-btn" onclick="openModal()">Help</button>
+</header>
+
+<!-- Quiz Board -->
+<main id="quiz-board">
+  <div id="level-status"></div>
+  <div id="question"></div>
+  <div id="options"></div>
+  <div class="progress-container">
+    <span id="progress-text"></span>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+  </div>
+  <div id="timer"></div>
+</main>
+
+<!-- Modal Instructions -->
+<div id="instructionsModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>📘 How the Quiz Works</h2>
+    <p>Welcome to <strong>EduKids Africa Quiz</strong>! Test your knowledge step by step.</p>
+    <ul>
+      <li><b>Level 1:</b> 50 questions. You must score at least <b>45</b> to proceed.</li>
+      <li><b>Level 2:</b> 60 questions. You must score at least <b>55</b> to proceed.</li>
+      <li><b>Level 3:</b> 80 questions. You must score at least <b>75</b> to win the 👑 Crown!</li>
+    </ul>
+    <p>⏳ Each question gives you <b>15 seconds</b>.</p>
+    <p>✅ Correct answers will be highlighted in green. ❌ Wrong answers will show in red.</p>
+    <p>Click "I’m Ready" to begin your adventure!</p>
+    <button class="ready-btn" onclick="startQuizNow()">I’m Ready</button>
+  </div>
+</div>
+
+<style>
+/* Overlay that dims quiz board */
+#quiz-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  z-index: 1500;
+  display: block; /* visible by default */
+}
+
+/* Disable quiz board when overlay is active */
+#quiz-board.disabled {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #2c1a47;
+  color: #fff;
+  padding: 1rem 2rem;
+}
+
+.site-title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 5px #ffcc00, 0 0 10px #ffcc00; }
+  to { text-shadow: 0 0 15px #ff6b6b, 0 0 25px #ff6b6b; }
+}
+
+.help-btn {
+  background: #ffcc00;
+  color: #222;
+  border: none;
+  padding: 0.6rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.help-btn:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Modal same as before */
+.modal { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); z-index: 2000; }
+.modal-content { background: #fff; margin: 8% auto; padding: 2rem; border-radius: 12px; width: 90%; max-width: 600px; }
+.close { float: right; font-size: 1.8rem; cursor: pointer; }
+.ready-btn { background: #2c1a47; color: #fff; padding: 0.7rem 1.2rem; border: none; border-radius: 8px; cursor: pointer; }
+.ready-btn:hover { background: #ff6b6b; }
+</style>
+<script>
+let quizReady = false; // locked until I'm Ready clicked
+
+function openModal() {
+  document.getElementById("instructionsModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("instructionsModal").style.display = "none";
+}
+function startQuizNow() {
+  closeModal();
+  document.getElementById("quiz-overlay").style.display = "none"; // remove dim
+  document.getElementById("quiz-board").classList.remove("disabled");
+  quizReady = true; // unlock
+}
+
+// Auto open modal + dim board
+window.onload = function() {
+  openModal();
+  document.getElementById("quiz-board").classList.add("disabled");
+  quizReady = false; // locked
+};
+
+// Prevent keyboard input until quizReady = true
+window.addEventListener("keydown", function(e) {
+  if (!quizReady) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
+</script>
+
+
+  <!--
+<script>
+function openModal() {
+  document.getElementById("instructionsModal").style.display = "block";
+}
+function closeModal() {
+  document.getElementById("instructionsModal").style.display = "none";
+}
+function startQuizNow() {
+  closeModal();
+  document.getElementById("quiz-overlay").style.display = "none"; // remove dim
+  document.getElementById("quiz-board").classList.remove("disabled");
+}
+// Auto open modal + dim board
+window.onload = function() {
+  openModal();
+  document.getElementById("quiz-board").classList.add("disabled");
+};
+</script>
+  
+  <!--
   <div id="quiz-container">
     <div id="level-status">Level 1</div>
     <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -198,9 +407,22 @@
     <div id="question">Loading...</div>
     <div id="options"></div>
     <div id="quiz-board"></div>
+  </div>-->
+
+  <!-- Modal Instructions --
+  <div class="modal" id="instructionModal">
+    <div class="modal-content">
+      <button class="close-btn" onclick="closeModal()">&times;</button>
+      <h2>How the Quiz Works 🎯</h2>
+      <p>👉 Level 1: 50 Questions, Pass mark = 45</p>
+      <p>👉 Level 2: 60 Questions, Pass mark = 55</p>
+      <p>👉 Level 3: 80 Questions, Pass mark = 75</p>
+      <p>🏆 Pass all levels to win the Crown!</p>
+      <button class="ready-btn" onclick="closeModal()">I'm Ready 🚀</button>
+    </div>
   </div>
 
-  <!-- Shared site footer -->
+  <!-- Footer -->
   <footer>
     <div>
       <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
@@ -219,6 +441,9 @@
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
+    function closeModal() {
+      document.getElementById("instructionModal").style.display = "none";
+    }
   </script>
   <script src="quiz.js"></script>
 </body>
