@@ -1,6 +1,6 @@
 
 
-/*// quiz.js — EduKids Quiz with level-size & pass-mark rules
+// quiz.js — EduKids Quiz with level-size & pass-mark rules
 // time per question (seconds)
 const QUESTION_TIME = 15;
 
@@ -417,7 +417,6 @@ function playSound(type) {
 function shuffleArray(arr) {
   return arr.slice().sort(() => Math.random() - 0.5);
 }
-*/
 
 
 
@@ -426,7 +425,7 @@ function shuffleArray(arr) {
 
 
 
-
+/*
 // === EduKids Quiz ===
 
 // time per question (seconds)
