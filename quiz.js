@@ -42,6 +42,46 @@ function startQuiz() {
 }
 
 // load question (main engine)
+
+function loadQuestions() {
+  const levelKey = `level${currentLevel}`;
+  const questions = questionsByLevel[levelKey];
+
+  // if no questions left in this level
+  if (!Array.isArray(questions) || currentIndex >= questions.length) {
+    // check pass mark
+    if (score >= PASS_MARKS[currentLevel].pass && currentLevel < 3) {
+      // passed current level –> automatically go to next
+      currentLevel++;
+      currentIndex = 0;
+      score = 0;
+      loadQuestions(); // auto-load next level questions
+    } else {
+      // didn’t pass or finished last level
+      endQuiz();
+    }
+    return;
+  }
+
+  // show current question
+  const q = questions[currentIndex];
+  questionEl.textContent = q.question;
+  levelStatus.textContent = `Level ${currentLevel}`;
+  progressText.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
+  progressFill.style.width = ((currentIndex + 1) / questions.length) * 100 + "%";
+
+  optionsEl.innerHTML = "";
+  q.options.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "option-btn";
+    btn.textContent = opt;
+    btn.onclick = () => checkAnswer(opt, q.correct);
+    optionsEl.appendChild(btn);
+  });
+
+  startTimer();
+}
+/*
 function loadQuestion() {
   clearInterval(timerInterval);
 
@@ -77,7 +117,7 @@ function loadQuestion() {
   });
 
   startTimer();
-}
+}*/
 
 // timer
 function startTimer() {
