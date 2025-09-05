@@ -16,6 +16,12 @@
   "English": {
     "level1": [
       { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "correct": "children" }
+    ],
+    "level2": [
+      { "question": "Which is a noun?", "options": ["Run", "Happy", "Book", "Quickly"], "correct": "Book" }
+    ],
+    "level3": [
+      { "question": "Choose the correct sentence:", "options": ["He go to school", "He goes to school", "He going school"], "correct": "He goes to school" }
     ]
   }
 }
