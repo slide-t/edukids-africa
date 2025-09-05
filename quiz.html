@@ -1,111 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduKids Africa - Quiz</title>
-  <link rel="stylesheet" href="quiz.css">
-  <script defer src="quiz.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduKids Quiz</title>
+  <link rel="stylesheet" href="quiz.css" />
 </head>
 <body>
   <div class="quiz-container">
-    <header>
+    <header class="quiz-header">
       <h1>EduKids Africa Quiz</h1>
-      <div id="progress-tracker">
-        <span id="level-display">Level 1</span> |
-        <span id="score-display">Score: 0</span> |
-        <span id="timer-display">00:15</span>
+      <div class="progress">
+        <span id="progress-text">Question 1</span>
+        <div class="progress-bar"><div id="progress-fill"></div></div>
       </div>
+      <div class="timer">⏳ <span id="timer">00:15</span></div>
     </header>
 
-    <main>
-      <div id="quiz-board">
-        <p id="question-text">Loading...</p>
-        <div id="options-container"></div>
-      </div>
+    <main id="quiz-board">
+      <div id="question">Loading question...</div>
+      <div id="options"></div>
     </main>
+
+    <footer class="quiz-footer">
+      <p id="level-status">Level 1</p>
+    </footer>
   </div>
 
-  <!-- Footer -->
-  <footer style="background:#1a2a47; color:#fff; padding:40px 20px; text-align:center; box-shadow:0 -2px 6px rgba(0,0,0,0.4); margin-top:40px;">
+  <!-- Shared footer -->
+  <footer style="background:#2c1a47; color:#fff; padding:40px 20px; text-align:center; box-shadow:0 -2px 6px rgba(0,0,0,0.4);">
     <div style="max-width:1200px; margin:0 auto;">
-      <!-- Logo / Brand -->
       <div class="brand">
-        <h2 class="typing-logo">
-          EduKids Quiz<span style="color:#fff;">.</span>
-        </h2>
-        <p class="brand-caption">Play • Learn • Win!</p>
+        <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+        <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
       </div>
 
-      <!-- Footer Links -->
       <nav style="margin-bottom:20px;">
-        <a href="index.html" style="margin:0 15px; color:#fff; text-decoration:none; padding:8px 15px; border-radius:25px; transition:all .3s ease;">
-          Home
-        </a>
-        <a href="subjects.html" style="margin:0 15px; color:#fff; text-decoration:none; padding:8px 15px; border-radius:25px; transition:all .3s ease;">
-          Subjects
-        </a>
-        <a href="students.html" style="margin:0 15px; color:#fff; text-decoration:none; padding:8px 15px; border-radius:25px; transition:all .3s ease;">
-          Students
-        </a>
+        <a href="index.html" style="margin:0 15px; color:#fff;">Home</a>
+        <a href="students.html" style="margin:0 15px; color:#fff;">Students</a>
+        <a href="about.html" style="margin:0 15px; color:#fff;">About</a>
+        <a href="contact.html" style="margin:0 15px; color:#fff;">Contact</a>
       </nav>
 
-      <!-- Social Icons -->
-      <div style="margin-bottom:20px;">
-        <a href="#" style="margin:0 10px; color:#ffd93d; font-size:1.4rem; transition:all .3s ease;">
-          <i class="fab fa-facebook"></i>
-        </a>
-        <a href="#" style="margin:0 10px; color:#ffd93d; font-size:1.4rem; transition:all .3s ease;">
-          <i class="fab fa-twitter"></i>
-        </a>
-        <a href="#" style="margin:0 10px; color:#ffd93d; font-size:1.4rem; transition:all .3s ease;">
-          <i class="fab fa-instagram"></i>
-        </a>
-      </div>
-
-      <!-- Copyright -->
       <p style="font-size:0.9rem; color:#aaa;">
         © <span id="year"></span> EduKids Africa. All rights reserved.
       </p>
     </div>
-
-    <script>
-      // Auto-update year
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
+    <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
   </footer>
 
-  <style>
-    /* Typing Logo Effect */
-    .typing-logo {
-      margin-bottom: 10px;
-      font-size: 1.8rem;
-      font-weight: 700;
-      color: #ffd93d;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #ffd93d;
-      width: 0;
-      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 220px; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-
-    .brand-caption {
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #ddd;
-      margin-top: -5px;
-      letter-spacing: 0.5px;
-    }
-  </style>
+  <script src="quiz.js"></script>
 </body>
 </html>
