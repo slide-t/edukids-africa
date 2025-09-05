@@ -37,7 +37,7 @@
       { "question": "If 5 = y, then y × 10 = ___", "options": ["50", "25", "100", "15"], "correct": "50" }
     ]
   },
-  "English": {
+  "English Language": {
     "level1": [
       { "question": "• The dog is ___. (big, bigger, biggest)", "options": ["big", "bigger", "biggest"], "correct": "big" },
       { "question": "Plural of 'cat' is?", "options": ["cats", "cates", "cat"], "correct": "cats" },
