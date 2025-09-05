@@ -228,15 +228,8 @@
     transform: translateY(-10px);
   }
 }
-.modal {
-  display: none; /* hidden by default */
-  position: fixed;
-  z-index: 1000;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6); /* transparent background */
-}
-.modal-content {
+
+    .modal-content {
   background: #6c2eb9; /* purple scheme */
   color: #fff;
   margin: 10% auto;
@@ -247,6 +240,41 @@
   text-align: center;
   position: relative;
 }
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.full-btn {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0 0 0; /* small margin at top, no margin at bottom */
+  background: #fff;
+  color: #6c2eb9;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.full-btn:hover {
+  background: #eee;
+}
+.modal {
+  display: none; /* hidden by default */
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6); /* transparent background */
+}
+
 .modal-content .warning {
   font-size: 0.9em;
   margin-top: 10px;
