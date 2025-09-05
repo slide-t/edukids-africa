@@ -81,7 +81,8 @@
     .subject-item:last-child {
       border-bottom: none;
     }
-  .subject-item {
+  
+    /*.subject-item {
   display: block;
   padding: 8px 0;
   border-bottom: 1px dashed #ccc;
@@ -91,6 +92,24 @@
 }
 .subject-item:hover {
   color: #0077b6;
+}*/
+
+    .subject-item {
+  display: block;
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+  background: #f9f9f9;
+  color: #001219;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.subject-item:hover {
+  background: #ffcc00;
+  color: #222;
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
     /*
 #subjectsContainer {
