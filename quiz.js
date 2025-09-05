@@ -6,9 +6,9 @@ let score = 0;
 let timer;
 let timePerQuestion = 15; // seconds
 
-// Load sound effects
-const clickSound = new Audio("sounds/click.mp3");
-const flipSound = new Audio("sounds/flip.mp3");
+// Load sound effects (online free sounds)
+const clickSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-cool-interface-click-tone-2568.mp3");
+const flipSound = new Audio("https://assets.mixkit.co/sfx/preview/mixkit-page-turn-single-1103.mp3");
 
 // Load questions.json
 fetch("questions.json")
@@ -49,7 +49,7 @@ function loadQuestion() {
     btn.onclick = () => {
       clickSound.currentTime = 0;
       clickSound.play();
-      checkAnswer(opt, q.correct);
+      handleAnswer(btn, opt, q.correct);
     };
 
     optionsContainer.appendChild(btn);
@@ -65,18 +65,32 @@ function loadQuestion() {
   resetTimer();
 }
 
-function checkAnswer(selected, correct) {
+function handleAnswer(button, selected, correct) {
+  const allButtons = document.querySelectorAll(".option-btn");
+
+  allButtons.forEach(btn => btn.disabled = true); // disable multiple clicks
+
   if (selected === correct) {
     score++;
+    button.style.backgroundColor = "#4CAF50"; // green for correct
+  } else {
+    button.style.backgroundColor = "#f44336"; // red for wrong
+    // highlight correct one
+    allButtons.forEach(btn => {
+      if (btn.innerText === correct) {
+        btn.style.backgroundColor = "#4CAF50";
+      }
+    });
   }
+
   currentIndex++;
 
-  // play flip sound before loading next
+  // play flip sound then move on
   setTimeout(() => {
     flipSound.currentTime = 0;
     flipSound.play();
     loadQuestion();
-  }, 600);
+  }, 1000);
 }
 
 function endLevel() {
