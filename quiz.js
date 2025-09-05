@@ -3,6 +3,43 @@
 // how long per question (seconds)
 const QUESTION_TIME = 15;
 
+let allQuestions = [];        // loaded from JSON
+let currentLevel = 1;
+let currentIndex = 0;
+let score = 0;
+let timerInterval = null;
+
+// get subject from URL
+const urlParams = new URLSearchParams(window.location.search);
+const subjectParam = urlParams.get("subject");
+
+// DOM elements
+const questionEl = document.getElementById("question");
+const optionsEl = document.getElementById("options");
+const progressText = document.getElementById("progress-text");
+const progressFill = document.getElementById("progress-fill");
+const timerEl = document.getElementById("timer");
+const levelStatus = document.getElementById("level-status");
+const quizBoard = document.getElementById("quiz-board");
+
+// 1. Load JSON
+fetch("questions.json")
+  .then(res => res.json())
+  .then(data => {
+    // filter by subject
+    allQuestions = data.filter(q => q.subject === subjectParam);
+    startLevel(1);
+  })
+  .catch(err => {
+    console.error("Could not load questions.json", err);
+    questionEl.textContent = "Error loading questions.";
+  });
+
+// … keep the rest of your quiz.js (startLevel, loadQuestion, startTimer, checkAnswer, endQuiz) unchanged …
+
+// how long per question (seconds)
+/*const QUESTION_TIME = 15;
+
 let allQuestions = [];        // loaded from JSON (flattened)
 let currentLevel = 1;
 let currentIndex = 0;
@@ -56,7 +93,7 @@ fetch("questions.json")
   .catch(err => {
     console.error("Could not load questions.json", err);
     questionEl.textContent = "Error loading questions.";
-  });
+  });*/
 
 // === 2. Start a level ===
 function startLevel(level) {
