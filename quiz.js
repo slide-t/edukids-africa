@@ -31,7 +31,46 @@ function startQuiz(){
   loadQuestions();
 }
 
-function loadQuestions(){
+function loadQuestion() {
+  clearInterval(timerInterval);
+
+  const levelKey = `level${currentLevel}`;
+  const questions = questionsByLevel[levelKey];
+
+  // check if finished
+  if (!Array.isArray(questions) || currentIndex >= questions.length) {
+    // check pass mark
+    const pass = PASS_MARKS[currentLevel].pass;
+    if (score >= pass && currentLevel < 3) {
+      currentLevel++;
+      currentIndex = 0;
+      score = 0;
+      loadQuestion();
+    } else {
+      endQuiz();
+    }
+    return;
+  }
+
+  const q = questions[currentIndex];
+  questionEl.textContent = q.question;
+  levelStatus.textContent = `Level ${currentLevel}`;
+  progressText.textContent = `Question ${currentIndex + 1} of ${questions.length}`;
+  progressFill.style.width = ((currentIndex + 1) / questions.length) * 100 + "%";
+
+  optionsEl.innerHTML = "";
+  q.options.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "option-btn";
+    btn.textContent = opt;
+    btn.onclick = () => checkAnswer(opt, q.correct);
+    optionsEl.appendChild(btn);
+  });
+
+  startTimer();
+}
+
+/*function loadQuestions(){
   const levelKey=`level${currentLevel}`;
   const questions=questionsByLevel[levelKey];
   if(!Array.isArray(questions)||currentIndex>=questions.length){
@@ -61,7 +100,7 @@ function loadQuestions(){
   });
 
   startTimer();
-}
+}*/
 
 function startTimer(){
   let timeLeft=QUESTION_TIME;
