@@ -10,6 +10,30 @@ const PASS_MARKS = {
   3: { total: 80, pass: 75 },
 };
 
+// Show welcome on load
+window.addEventListener('load', () => {
+  document.getElementById('welcomeModal').style.display = 'flex';
+});
+
+function closeWelcomeModal() {
+  document.getElementById('welcomeModal').style.display = 'none';
+}
+function startQuiz() {
+  closeWelcomeModal();
+  loadQuestions();
+}
+
+function showLevelModal(level, score) {
+  document.getElementById('levelModalTitle').textContent = `🎉 You passed Level ${level}`;
+  document.getElementById('levelModalText').textContent =
+    `Your score: ${score}. Moving to Level ${level + 1}...`;
+  document.getElementById('levelModal').style.display = 'flex';
+}
+function nextLevel() {
+  document.getElementById('levelModal').style.display = 'none';
+  loadQuestions();
+}
+
 // state
 let questionsByLevel = {};
 let currentLevel = 1;
@@ -64,20 +88,19 @@ function loadQuestion() {
   const levelKey = `level${currentLevel}`;
   const questions = questionsByLevel[levelKey];
 
-  // if no questions or finished
-  if (!Array.isArray(questions) || currentIndex >= questions.length) {
-    // check pass mark
-    const pass = PASS_MARKS[currentLevel].pass;
-    if (score >= pass && currentLevel < 3) {
-      currentLevel++;
-      currentIndex = 0;
-      score = 0;
-      loadQuestion();
-    } else {
-      endQuiz();
-    }
-    return;
+if (!Array.isArray(questions) || currentIndex >= questions.length) {
+  const pass = PASS_MARKS[currentLevel].pass;
+  if (score >= pass && currentLevel < 3) {
+    // passed this level
+    currentLevel++;
+    currentIndex = 0;
+    score = 0;
+    showLevelModal(currentLevel - 1, pass); // show modal for previous level
+  } else {
+    endQuiz();
   }
+  return;
+}
 
   const q = questions[currentIndex];
   questionEl.textContent = q.question;
