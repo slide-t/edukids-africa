@@ -1,4 +1,156 @@
 let questions = {};
+let current = 0, score = 0, timer, timeLeft = 15;
+let subject = "Mathematics"; // default
+let level = "level1";
+
+// Preload sounds
+const sounds = {
+  flip: new Audio("sounds/flip.mp3"),
+  click: new Audio("sounds/click.mp3"),
+  correct: new Audio("sounds/correct.mp3"),
+  wrong: new Audio("sounds/wrong.mp3")
+};
+
+function shuffle(arr) {
+  return arr.sort(() => Math.random() - 0.5);
+}
+
+function getParams() {
+  const params = new URLSearchParams(window.location.search);
+  subject = params.get("subject") || "Mathematics";
+  level = params.get("level") || "level1";
+}
+
+// Load questions.json directly from GitHub repo
+async function loadQuestions() {
+  try {
+    const res = await fetch("questions.json");
+    const data = await res.json();
+    if (data[subject] && data[subject][level]) {
+      questions = shuffle([...data[subject][level]]);
+      renderQuestion();
+    } else {
+      document.getElementById("quiz-board").innerHTML =
+        `<h2>No questions available for ${subject} - ${level}</h2>`;
+    }
+  } catch (err) {
+    console.error("Error loading questions:", err);
+  }
+}
+
+function startTimer() {
+  clearInterval(timer);
+  timeLeft = 15;
+  updateTimer();
+  timer = setInterval(() => {
+    timeLeft--;
+    updateTimer();
+    if (timeLeft <= 0) {
+      clearInterval(timer);
+      nextQuestion();
+    }
+  }, 1000);
+}
+
+function updateTimer() {
+  const timerEl = document.getElementById("timer");
+  let mins = String(Math.floor(timeLeft / 60)).padStart(2, "0");
+  let secs = String(timeLeft % 60).padStart(2, "0");
+  timerEl.textContent = `${mins}:${secs}`;
+}
+
+function renderQuestion() {
+  const q = questions[current];
+  if (!q) return showResult();
+
+  document.getElementById("question").textContent = q.question;
+
+  const optionsBox = document.getElementById("options");
+  optionsBox.innerHTML = "";
+  let shuffled = shuffle([...q.options]);
+
+  shuffled.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.className = "option-btn";
+    btn.textContent = opt;
+    btn.onclick = () => checkAnswer(btn, q.correct);
+    btn.addEventListener("mousedown", () => sounds.click.play());
+    optionsBox.appendChild(btn);
+  });
+
+  // Progress
+  document.getElementById("progress-text").textContent =
+    `Question ${current + 1} of ${questions.length}`;
+  document.getElementById("progress-fill").style.width =
+    `${((current + 1) / questions.length) * 100}%`;
+
+  // Level indicator
+  document.getElementById("level-status").textContent = level.toUpperCase();
+
+  sounds.flip.play();
+  startTimer();
+}
+
+function checkAnswer(btn, correct) {
+  clearInterval(timer);
+  const allBtns = document.querySelectorAll(".option-btn");
+
+  allBtns.forEach(b => {
+    b.disabled = true;
+    if (b.textContent === correct) {
+      b.style.background = "#4CAF50";
+      b.style.color = "#fff";
+    }
+    if (b === btn && b.textContent !== correct) {
+      b.style.background = "#e74c3c";
+      b.style.color = "#fff";
+    }
+  });
+
+  if (btn.textContent === correct) {
+    score++;
+    sounds.correct.play();
+  } else {
+    sounds.wrong.play();
+  }
+
+  setTimeout(nextQuestion, 1000);
+}
+
+function nextQuestion() {
+  current++;
+  if (current < questions.length) {
+    renderQuestion();
+  } else {
+    showResult();
+  }
+}
+
+function showResult() {
+  const board = document.getElementById("quiz-board");
+  board.innerHTML = `
+    <h2>🎉 Quiz Finished!</h2>
+    <p>Your Score: ${score} / ${questions.length}</p>
+    <button onclick="location.reload()">Retry</button>
+  `;
+}
+
+// Start
+getParams();
+loadQuestions();
+
+
+
+
+
+
+
+
+
+
+
+/*
+let questions = {};
 let currentSubject = "Mathematics"; // later you can pass this dynamically
 let currentLevel = "level1";
 let currentIndex = 0;
