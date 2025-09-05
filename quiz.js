@@ -226,16 +226,6 @@ function endQuiz() {
   progressText.textContent = "Completed!";
   levelStatus.textContent = `Level ${currentLevel}`;
 }
-
-/*
-function endQuiz() {
-  quizBoard.innerHTML = `
-    <h2>Quiz Completed!</h2>
-    <p>You scored <strong>${score}</strong> in Level ${currentLevel} of ${subjectParam}</p>
-    <a href="subjects.html" class="btn">Back to Subjects</a>
-  `;
-}*/
-
 // bounce animation
 const style = document.createElement("style");
 style.textContent = `
