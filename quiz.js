@@ -41,6 +41,23 @@ closeBtn.onclick = () => modal.style.display = "none";
 fetch("questions.json")
   .then(res => res.json())
   .then(data => {
+    // match subject exactly
+    const subjectData = data[subjectParam];
+    if (!subjectData) {
+      questionEl.textContent = `No questions found for ${subjectParam}`;
+      return;
+    }
+    questionsByLevel = subjectData;
+    startLevel(1); // always start from level 1
+  })
+  .catch(err => {
+    console.error(err);
+    questionEl.textContent = "Error loading questions.";
+  });
+
+/*fetch("questions.json")
+  .then(res => res.json())
+  .then(data => {
     if (!data[subjectParam]) {
       questionEl.textContent = `No questions for ${subjectParam}`;
       return;
@@ -52,7 +69,7 @@ fetch("questions.json")
   .catch(err => {
     console.error("Could not load questions.json", err);
     questionEl.textContent = "Error loading questions.";
-  });
+  });*/
 
 function startLevel(level) {
   currentLevel = level;
