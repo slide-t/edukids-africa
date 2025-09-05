@@ -12,25 +12,39 @@
       padding: 0;
       color: #333;
       display: flex;
-      justify-content: center;
-      align-items: center;
+      flex-direction: column;
       min-height: 100vh;
+    }
+
+    header {
+      background: #673ab7;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
     }
 
     #quiz-container {
       background: #fff;
-      max-width: 600px;
+      max-width: 700px;
       width: 100%;
-      padding: 20px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+      flex: 1;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      margin: 20px auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 600px;
     }
 
     #level-status {
-      font-size: 1.2rem;
+      font-size: 1.6rem;
       font-weight: bold;
       text-align: center;
-      margin-bottom: 10px;
+      margin-bottom: 15px;
       color: #673ab7;
     }
 
@@ -38,8 +52,8 @@
       background: #ddd;
       border-radius: 8px;
       overflow: hidden;
-      height: 16px;
-      margin-bottom: 15px;
+      height: 20px;
+      margin-bottom: 20px;
     }
     #progress-fill {
       background: #4caf50;
@@ -50,39 +64,41 @@
 
     #progress-text {
       text-align: center;
-      margin-bottom: 15px;
-      font-size: 0.9rem;
+      margin-bottom: 20px;
+      font-size: 1.1rem;
       color: #555;
     }
 
     #timer {
       text-align: right;
       font-weight: bold;
-      margin-bottom: 15px;
+      margin-bottom: 20px;
+      font-size: 1.2rem;
       color: #e91e63;
     }
 
     #question {
-      font-size: 1.2rem;
-      margin-bottom: 15px;
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+      font-weight: 600;
     }
 
     .option-btn {
       display: block;
       width: 100%;
-      margin: 6px 0;
-      padding: 12px;
-      border-radius: 10px;
+      margin: 10px 0;
+      padding: 14px;
+      border-radius: 12px;
       border: 1px solid #ccc;
       cursor: pointer;
       background: #f9f9f9;
-      font-size: 1rem;
+      font-size: 1.2rem;
       font-weight: 500;
       transition: all 0.3s ease;
     }
     .option-btn:hover:not(:disabled) {
       background: #e0f7fa;
-      transform: scale(1.02);
+      transform: scale(1.03);
     }
     .option-btn:disabled {
       cursor: not-allowed;
@@ -100,11 +116,80 @@
     }
 
     #quiz-board {
-      margin-top: 15px;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      text-align: center;
+    }
+
+    /* Footer */
+    footer {
+      background: #2c1a47;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .typing-logo {
+      margin-bottom: 10px;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff6b6b;
+      width: 0;
+      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 220px; }
+    }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin: 15px 0;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 0.4rem 0.8rem;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+      font-size: 1.1rem;
+    }
+
+    .footer-links a:hover {
+      background: #ffcc00;
+      color: #222;
+    }
+
+    .footer-links a.active {
+      color: #fff;
+      box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+      background: #009999;
+    }
+
+    .footer-note {
+      color: #ccc;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
+  <header>
+    EduKids Africa Quiz
+  </header>
+
   <div id="quiz-container">
     <div id="level-status">Level 1</div>
     <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -115,6 +200,26 @@
     <div id="quiz-board"></div>
   </div>
 
+  <!-- Shared site footer -->
+  <footer>
+    <div>
+      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
+      <p style="font-size:0.9rem; color:#aaa;">
+        © <span id="year"></span> EduKids Africa. All rights reserved.
+      </p>
+    </div>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
   <script src="quiz.js"></script>
 </body>
 </html>
