@@ -2,179 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>EduKids Quiz</title>
   <style>
     body {
-      margin: 0;
       font-family: "Poppins", sans-serif;
-      background: #f4f9ff;
+      background: #f0f8ff;
+      margin: 0;
+      padding: 0;
       color: #333;
       display: flex;
-      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       min-height: 100vh;
     }
 
-    .quiz-container {
-      flex: 1;
+    #quiz-container {
+      background: #fff;
+      max-width: 600px;
       width: 100%;
-      max-width: 900px;
-      margin: 0 auto;
       padding: 20px;
-      box-sizing: border-box;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.1);
     }
 
-    .quiz-header {
+    #level-status {
+      font-size: 1.2rem;
+      font-weight: bold;
       text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .quiz-header h1 {
-      font-size: 1.8rem;
-      color: #4facfe;
       margin-bottom: 10px;
+      color: #673ab7;
     }
 
-    .progress {
-      margin: 10px 0;
+    #progress-bar {
+      background: #ddd;
+      border-radius: 8px;
+      overflow: hidden;
+      height: 16px;
+      margin-bottom: 15px;
+    }
+    #progress-fill {
+      background: #4caf50;
+      width: 0%;
+      height: 100%;
+      transition: width 0.3s ease;
+    }
+
+    #progress-text {
+      text-align: center;
+      margin-bottom: 15px;
       font-size: 0.9rem;
       color: #555;
     }
 
-    .progress-bar {
-      width: 100%;
-      height: 10px;
-      background: #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      margin-top: 5px;
-    }
-
-    #progress-fill {
-      height: 100%;
-      width: 0;
-      background: linear-gradient(90deg, #4facfe, #00f2fe);
-      transition: width 0.4s ease;
-    }
-
-    .timer {
-      font-size: 1.1rem;
-      font-weight: 600;
-      margin-top: 10px;
-    }
-
-    #quiz-board {
-      background: #fff;
-      padding: 20px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
+    #timer {
+      text-align: right;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #e91e63;
     }
 
     #question {
-      font-size: 1.3rem;
-      margin-bottom: 20px;
-      font-weight: 600;
-      color: #222;
-    }
-
-    #options {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
+      font-size: 1.2rem;
+      margin-bottom: 15px;
     }
 
     .option-btn {
+      display: block;
       width: 100%;
-      padding: 15px;
+      margin: 6px 0;
+      padding: 12px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      cursor: pointer;
+      background: #f9f9f9;
       font-size: 1rem;
       font-weight: 500;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      background: #eef6ff;
-      color: #333;
       transition: all 0.3s ease;
     }
-
-    .option-btn:hover {
-      background: linear-gradient(135deg, #4facfe, #00f2fe);
-      color: #fff;
-      transform: scale(1.03);
+    .option-btn:hover:not(:disabled) {
+      background: #e0f7fa;
+      transform: scale(1.02);
+    }
+    .option-btn:disabled {
+      cursor: not-allowed;
+      opacity: 0.8;
     }
 
-    .quiz-footer {
-      text-align: center;
-      margin-top: 20px;
-      font-weight: 600;
-      color: #444;
+    .option-btn.correct { background:#c8f7c5 !important; border-color:#2ecc71 !important; color:#2c662d; }
+    .option-btn.wrong { background:#f7c5c5 !important; border-color:#e74c3c !important; color:#721c24; }
+
+    .bounce-emoji { pointer-events:none; }
+    @keyframes bounce {
+      0% { transform:translate(-50%,-50%) scale(0.5); opacity:0; }
+      50% { transform:translate(-50%,-60%) scale(1.2); opacity:1; }
+      100% { transform:translate(-50%,-50%) scale(1); opacity:0; }
     }
 
-    /* Footer */
-    footer {
-      background: #2c1a47;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-
-    .typing-logo {
-      margin-bottom: 10px;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #ff6b6b;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #ff6b6b;
-      width: 0;
-      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 220px; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
+    #quiz-board {
+      margin-top: 15px;
     }
   </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <header class="quiz-header">
-      <h1>EduKids Africa Quiz</h1>
-      <div class="progress">
-        <span id="progress-text">Question 1</span>
-        <div class="progress-bar"><div id="progress-fill"></div></div>
-      </div>
-      <div class="timer">⏳ <span id="timer">00:15</span></div>
-    </header>
-
-    <main id="quiz-board">
-      <div id="question">Loading question...</div>
-      <div id="options"></div>
-    </main>
-
-    <footer class="quiz-footer">
-      <p id="level-status">Level 1</p>
-    </footer>
+  <div id="quiz-container">
+    <div id="level-status">Level 1</div>
+    <div id="progress-bar"><div id="progress-fill"></div></div>
+    <div id="progress-text">Question 0 of 0</div>
+    <div id="timer">15</div>
+    <div id="question">Loading...</div>
+    <div id="options"></div>
+    <div id="quiz-board"></div>
   </div>
 
-  <!-- Shared site footer -->
-  <footer>
-    <div>
-      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
-      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
-      <p style="font-size:0.9rem; color:#aaa;">
-        © <span id="year"></span> EduKids Africa. All rights reserved.
-      </p>
-    </div>
-  </footer>
-
   <script src="quiz.js"></script>
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 </body>
 </html>
