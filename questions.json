@@ -584,7 +584,31 @@
 { "question": "Which planets are gas giants?", "options": ["Jupiter and Saturn", "Earth and Mars", "Mercury and Venus", "Neptune and Pluto"], "answer": "Jupiter and Saturn" },
 { "question": "Which organ helps in pumping blood throughout the body?", "options": ["Heart", "Lungs", "Kidneys", "Liver"], "answer": "Heart" },
 { "question": "Which gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" }
-
+ ]
+},
+  "Basic Technology": {
+    "Level 1": [
+      { "question": "Which tool is used for cutting paper?", "options": ["Scissors", "Hammer", "Spoon", "Ruler"], "answer": "Scissors" },
+      { "question": "Which material can be bent easily?", "options": ["Plastic", "Glass", "Brick", "Stone"], "answer": "Plastic" },
+      { "question": "What do we use to write on a chalkboard?", "options": ["Chalk", "Pen", "Marker", "Brush"], "answer": "Chalk" },
+      { "question": "Which tool is used to hammer nails?", "options": ["Hammer", "Screwdriver", "Saw", "Pliers"], "answer": "Hammer" },
+      { "question": "Which is a source of energy for cooking?", "options": ["Firewood", "Water", "Air", "Paper"], "answer": "Firewood" },
+      { "question": "Which material is soft and can be cut with a knife?", "options": ["Clay", "Metal", "Glass", "Stone"], "answer": "Clay" },
+      { "question": "Which tool is used to measure length?", "options": ["Ruler", "Saw", "Hammer", "Scissors"], "answer": "Ruler" },
+      { "question": "What is the use of a bucket?", "options": ["To carry water", "To sweep floor", "To write", "To cut wood"], "answer": "To carry water" },
+      { "question": "Which material is transparent?", "options": ["Glass", "Wood", "Paper", "Metal"], "answer": "Glass" },
+      { "question": "What is used to join wood together?", "options": ["Nails", "Water", "Cloth", "Chalk"], "answer": "Nails" },
+      { "question": "Which is a hand tool?", "options": ["Saw", "Motor", "Fan", "Oven"], "answer": "Saw" },
+      { "question": "What is used to clean the floor?", "options": ["Broom", "Ruler", "Hammer", "Scissors"], "answer": "Broom" },
+      { "question": "Which material is hard and cannot be bent?", "options": ["Brick", "Rubber", "Paper", "Clay"], "answer": "Brick" },
+      { "question": "Which tool is used to screw or unscrew screws?", "options": ["Screwdriver", "Hammer", "Scissors", "Ruler"], "answer": "Screwdriver" },
+      { "question": "Which material is shiny and used to make plates?", "options": ["Metal", "Paper", "Plastic", "Clay"], "answer": "Metal" },
+      { "question": "Which tool is used for cutting wood?", "options": ["Saw", "Spoon", "Brush", "Chalk"], "answer": "Saw" },
+      { "question": "Which material floats on water?", "options": ["Wood", "Stone", "Metal", "Glass"], "answer": "Wood" },
+      { "question": "Which tool do we use to write on paper?", "options": ["Pencil", "Chalk", "Brush", "Hammer"], "answer": "Pencil" },
+      { "question": "Which is used to carry heavy objects?", "options": ["Wheelbarrow", "Ruler", "Scissors", "Spoon"], "answer": "Wheelbarrow" },
+      { "question": "Which material is soft and can be shaped easily?", "options": ["Clay", "Metal", "Stone", "Brick"], "answer": "Clay" }
     ]
   }
-}    
+}
+
