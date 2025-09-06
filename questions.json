@@ -442,7 +442,17 @@
 { "question": "Which body part do we use to hear?", "options": ["Hand", "Leg", "Ear", "Mouth"], "answer": "Ear" },
 { "question": "Which of these is NOT a fruit?", "options": ["Apple", "Carrot", "Mango", "Banana"], "answer": "Carrot" },
 { "question": "Which is used to see in the dark?", "options": ["Flashlight", "Sunglasses", "Mirror", "Fan"], "answer": "Flashlight" },
-{ "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" }
+{ "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" },
+      
+{ "question": "What do bees make?", "options": ["Milk", "Honey", "Bread", "Water"], "answer": "Honey" },
+{ "question": "Which of these is a source of heat?", "options": ["Sun", "Water", "Wind", "Stone"], "answer": "Sun" },
+{ "question": "Which is a pet animal?", "options": ["Lion", "Dog", "Elephant", "Tiger"], "answer": "Dog" },
+{ "question": "What do we breathe in?", "options": ["Oxygen", "Water", "Food", "Sunlight"], "answer": "Oxygen" },
+{ "question": "Which of these is a natural object?", "options": ["Rock", "Chair", "Book", "Pen"], "answer": "Rock" },
+{ "question": "Which of these can fly?", "options": ["Duck", "Elephant", "Lion", "Dog"], "answer": "Duck" },
+{ "question": "Which body part do we use to taste?", "options": ["Nose", "Tongue", "Ear", "Eye"], "answer": "Tongue" },
+{ "question": "What do we need to drink to stay healthy?", "options": ["Water", "Oil", "Milkshake", "Honey"], "answer": "Water" },
+{ "question": "Which grows from a seed?", "options": ["Plant", "Stone", "Car", "Chair"], "answer": "Plant" }
 
       
     ]
