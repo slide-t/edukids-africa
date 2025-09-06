@@ -524,9 +524,6 @@
 { "question": "Which process changes liquid water to gas?", "options": ["Evaporation", "Condensation", "Freezing", "Melting"], "answer": "Evaporation" },
 { "question": "Which planet is the largest in the solar system?", "options": ["Jupiter", "Earth", "Mars", "Venus"], "answer": "Jupiter" },
 { "question": "Which system in the human body fights diseases?", "options": ["Immune system", "Digestive system", "Circulatory system"], "answer": "Immune system" }
-
-
-]
-      
- }
+   ]
+  }
 }    
