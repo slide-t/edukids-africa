@@ -607,7 +607,26 @@
       { "question": "Which material floats on water?", "options": ["Wood", "Stone", "Metal", "Glass"], "answer": "Wood" },
       { "question": "Which tool do we use to write on paper?", "options": ["Pencil", "Chalk", "Brush", "Hammer"], "answer": "Pencil" },
       { "question": "Which is used to carry heavy objects?", "options": ["Wheelbarrow", "Ruler", "Scissors", "Spoon"], "answer": "Wheelbarrow" },
-      { "question": "Which material is soft and can be shaped easily?", "options": ["Clay", "Metal", "Stone", "Brick"], "answer": "Clay" }
+      { "question": "Which material is soft and can be shaped easily?", "options": ["Clay", "Metal", "Stone", "Brick"], "answer": "Clay" },
+      
+      { "question": "Which tool is used to paint walls?", "options": ["Brush", "Hammer", "Saw", "Ruler"], "answer": "Brush" },
+      { "question": "Which material is used for making bottles?", "options": ["Plastic", "Metal", "Clay", "Wood"], "answer": "Plastic" },
+      { "question": "Which tool is used to dig holes?", "options": ["Spade", "Ruler", "Scissors", "Brush"], "answer": "Spade" },
+      { "question": "What do we use to carry water from the well?", "options": ["Bucket", "Spoon", "Plate", "Fan"], "answer": "Bucket" },
+      { "question": "Which material is used for making shoes?", "options": ["Leather", "Glass", "Metal", "Paper"], "answer": "Leather" },
+      { "question": "Which tool is used to cut cloth?", "options": ["Scissors", "Hammer", "Saw", "Pencil"], "answer": "Scissors" },
+      { "question": "Which material can be recycled?", "options": ["Paper", "Stone", "Clay", "Wood"], "answer": "Paper" },
+      { "question": "What is used to tie things together?", "options": ["String", "Water", "Chalk", "Clay"], "answer": "String" },
+      { "question": "Which is a machine used to wash clothes?", "options": ["Washing machine", "Fan", "Oven", "Hammer"], "answer": "Washing machine" },
+      { "question": "Which material is used for making chairs?", "options": ["Wood", "Water", "Glass", "Clay"], "answer": "Wood" },
+      { "question": "Which tool is used to measure weight?", "options": ["Scale", "Ruler", "Hammer", "Saw"], "answer": "Scale" },
+      { "question": "Which material is soft and used for making pillows?", "options": ["Cotton", "Stone", "Metal", "Brick"], "answer": "Cotton" },
+      { "question": "Which tool is used to tighten nuts and bolts?", "options": ["Spanner", "Scissors", "Brush", "Pencil"], "answer": "Spanner" },
+      { "question": "Which material is used for making windows?", "options": ["Glass", "Clay", "Paper", "Metal"], "answer": "Glass" },
+      { "question": "Which tool is used to mix cement?", "options": ["Trowel", "Ruler", "Scissors", "Brush"], "answer": "Trowel" },
+      { "question": "Which material is used for making bags?", "options": ["Leather", "Stone", "Glass", "Clay"], "answer": "Leather" },
+      { "question": "Which tool is used to cut metal sheets?", "options": ["Hacksaw", "Scissors", "Brush", "Ruler
+
     ]
   }
 }
