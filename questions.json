@@ -362,7 +362,29 @@
     { "question": "Pick the correct pronoun: This bag is ____.", "options": ["her", "hers", "she", "he"], "answer": "hers" },
     { "question": "Choose the correct spelling.", "options": ["Acheive", "Achieve", "Acheeve", "Acheivee"], "answer": "Achieve" },
     { "question": "Which is the past tense of 'eat'?", "options": ["Eated", "Ate", "Eaten", "Eating"], "answer": "Ate" },
-    { "question": "Pick the synonym of 'angry'.", "options": ["Happy", "Glad", "Furious", "Joyful"], "answer": "Furious" }
+    { "question": "Pick the synonym of 'angry'.", "options": ["Happy", "Glad", "Furious", "Joyful"], "answer": "Furious" },
+
+    { "question": "Which is a question sentence?", "options": ["He is my friend.", "Is he your friend?", "He was my friend.", "They are friends."], "answer": "Is he your friend?" },
+    { "question": "Choose the correct conjunction: I like tea ____ coffee.", "options": ["but", "and", "or", "nor"], "answer": "and" },
+    { "question": "What is the opposite of 'buy'?", "options": ["Sell", "Give", "Take", "Pay"], "answer": "Sell" },
+    { "question": "Pick the correct verb: The boys ____ playing football.", "options": ["is", "are", "was", "be"], "answer": "are" },
+    { "question": "Which is an adjective?", "options": ["Run", "Jump", "Tall", "Sing"], "answer": "Tall" },
+    { "question": "Choose the correct spelling.", "options": ["Enviroment", "Environment", "Environmant", "Envirnment"], "answer": "Environment" },
+    { "question": "Which is the opposite of 'strong'?", "options": ["Weak", "Powerful", "Bold", "Brave"], "answer": "Weak" },
+    { "question": "Pick the correct preposition: The book is ____ the table.", "options": ["in", "on", "at", "into"], "answer": "on" },
+    { "question": "Which word is a noun?", "options": ["Quickly", "Run", "Teacher", "Sing"], "answer": "Teacher" },
+    { "question": "Choose the correct sentence.", "options": ["They goes to school.", "They go to school.", "They going to school.", "They gone to school."], "answer": "They go to school." },
+    { "question": "What is the plural of 'child'?", "options": ["Childs", "Children", "Childes", "Childrens"], "answer": "Children" },
+    { "question": "Pick the synonym of 'fast'.", "options": ["Slow", "Quick", "Late", "Lazy"], "answer": "Quick" },
+    { "question": "Which is the opposite of 'hot'?", "options": ["Cold", "Warm", "Cool", "Boil"], "answer": "Cold" },
+    { "question": "Choose the correct tense: She ____ to school yesterday.", "options": ["go", "goes", "went", "going"], "answer": "went" },
+    { "question": "Which is an interjection?", "options": ["Run", "Wow!", "House", "Because"], "answer": "Wow!" },
+    { "question": "Pick the correct pronoun: This pen belongs to ____.", "options": ["I", "me", "my", "mine"], "answer": "me" },
+    { "question": "Choose the correct spelling.", "options": ["Febuary", "February", "Februery", "Febrary"], "answer": "February" },
+    { "question": "Which is the opposite of 'early'?", "options": ["Late", "Fast", "Quick", "Slow"], "answer": "Late" },
+    { "question": "What is the past tense of 'write'?", "options": ["Writed", "Written", "Wrote", "Writing"], "answer": "Wrote" },
+    { "question": "Pick the synonym of 'honest'.", "options": ["Truthful", "Liar", "False", "Unfair"], "answer": "Truthful" }
+    
     
     ]
       
