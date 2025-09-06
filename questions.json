@@ -409,8 +409,30 @@
       { "question": "What do we drink when we are thirsty?", "options": ["Water", "Sand", "Stone", "Soap"], "answer": "Water" },
       { "question": "Which part of the plant holds it upright?", "options": ["Stem", "Leaf", "Root", "Flower"], "answer": "Stem" },
       { "question": "Which animal has wings?", "options": ["Bird", "Cat", "Elephant", "Cow"], "answer": "Bird" },
-      { "question": "Which planet do we live on?", "options": ["Earth", "Sun", "Moon", "Mars"], "answer": "Earth" }
+      { "question": "Which planet do we live on?", "options": ["Earth", "Sun", "Moon", "Mars"], "answer": "Earth" },
+
+      { "question": "Which is a source of light?", "options": ["Sun", "Moon", "Rock", "Water"], "answer": "Sun" },
+      { "question": "Which animal hops and has a pouch?", "options": ["Kangaroo", "Lion", "Dog", "Cat"], "answer": "Kangaroo" },
+      { "question": "What do we wear on our feet?", "options": ["Shoes", "Hats", "Gloves", "Socks only"], "answer": "Shoes" },
+      { "question": "Which sense tells us about taste?", "options": ["Tongue", "Eye", "Ear", "Nose"], "answer": "Tongue" },
+      { "question": "What protects our head?", "options": ["Helmet", "Shoes", "Gloves", "Shirt"], "answer": "Helmet" },
+      { "question": "Which food grows underground?", "options": ["Carrot", "Apple", "Banana", "Orange"], "answer": "Carrot" },
+      { "question": "Which is a source of heat?", "options": ["Fire", "Water", "Air", "Stone"], "answer": "Fire" },
+      { "question": "Which animal has stripes?", "options": ["Zebra", "Lion", "Dog", "Elephant"], "answer": "Zebra" },
+      { "question": "Which part of the body helps us write?", "options": ["Hand", "Leg", "Foot", "Ear"], "answer": "Hand" },
+      { "question": "Which food comes from animals?", "options": ["Milk", "Rice", "Beans", "Vegetables"], "answer": "Milk" },
+      { "question": "What keeps us dry in the rain?", "options": ["Umbrella", "Hat", "Shoes", "Gloves"], "answer": "Umbrella" },
+      { "question": "Which animal is known for its trunk?", "options": ["Elephant", "Dog", "Cat", "Lion"], "answer": "Elephant" },
+      { "question": "Which part of the plant is colorful?", "options": ["Flower", "Root", "Leaf", "Stem"], "answer": "Flower" },
+      { "question": "What do we use to see at night?", "options": ["Lamp", "Sun", "Moon", "Fire"], "answer": "Lamp" },
+      { "question": "Which animal makes a 'quack' sound?", "options": ["Duck", "Cat", "Dog", "Sheep"], "answer": "Duck" },
+      { "question": "Which body part helps us walk?", "options": ["Leg", "Hand", "Ear", "Eye"], "answer": "Leg" },
+      { "question": "Which food is sweet?", "options": ["Sugar", "Salt", "Pepper", "Onion"], "answer": "Sugar" },
+      { "question": "Which animal has a long neck?", "options": ["Giraffe", "Lion", "Elephant", "Dog"], "answer": "Giraffe" },
+      { "question": "What do we need to keep clean?", "options": ["Hands", "Shoes", "Clothes", "Toys"], "answer": "Hands" },
+      { "question": "Which planet is nearest to the Sun?", "options": ["Mercury", "Earth", "Mars", "Venus"], "answer": "Mercury" }
     ]
   }
 }
 
+      
