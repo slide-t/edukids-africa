@@ -608,7 +608,6 @@
       { "question": "Which tool do we use to write on paper?", "options": ["Pencil", "Chalk", "Brush", "Hammer"], "answer": "Pencil" },
       { "question": "Which is used to carry heavy objects?", "options": ["Wheelbarrow", "Ruler", "Scissors", "Spoon"], "answer": "Wheelbarrow" },
       { "question": "Which material is soft and can be shaped easily?", "options": ["Clay", "Metal", "Stone", "Brick"], "answer": "Clay" },
-      
       { "question": "Which tool is used to paint walls?", "options": ["Brush", "Hammer", "Saw", "Ruler"], "answer": "Brush" },
       { "question": "Which material is used for making bottles?", "options": ["Plastic", "Metal", "Clay", "Wood"], "answer": "Plastic" },
       { "question": "Which tool is used to dig holes?", "options": ["Spade", "Ruler", "Scissors", "Brush"], "answer": "Spade" },
