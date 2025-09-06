@@ -385,9 +385,32 @@
     { "question": "What is the past tense of 'write'?", "options": ["Writed", "Written", "Wrote", "Writing"], "answer": "Wrote" },
     { "question": "Pick the synonym of 'honest'.", "options": ["Truthful", "Liar", "False", "Unfair"], "answer": "Truthful" }
     
-    
+    ] 
+   },
+  
+  "Basic Science": {
+    "Level 1": [
+      { "question": "What do plants need to grow?", "options": ["Water", "Chocolate", "Shoes", "Cars"], "answer": "Water" },
+      { "question": "Which part of the plant makes food?", "options": ["Leaf", "Root", "Stem", "Flower"], "answer": "Leaf" },
+      { "question": "Which animal gives us milk?", "options": ["Cow", "Dog", "Cat", "Sheep"], "answer": "Cow" },
+      { "question": "What do we breathe in?", "options": ["Oxygen", "Water", "Food", "Sunlight"], "answer": "Oxygen" },
+      { "question": "Which part of the body helps us see?", "options": ["Eye", "Ear", "Nose", "Hand"], "answer": "Eye" },
+      { "question": "What keeps us warm?", "options": ["Clothes", "Sand", "Water", "Stone"], "answer": "Clothes" },
+      { "question": "Which part of the body helps us hear?", "options": ["Ear", "Eye", "Nose", "Mouth"], "answer": "Ear" },
+      { "question": "Which animal can fly?", "options": ["Bird", "Dog", "Cat", "Snake"], "answer": "Bird" },
+      { "question": "Which gas do we need to live?", "options": ["Oxygen", "Carbon", "Nitrogen", "Helium"], "answer": "Oxygen" },
+      { "question": "Which is a source of water?", "options": ["River", "Tree", "Rock", "Sun"], "answer": "River" },
+      { "question": "Which part of the plant takes water from the soil?", "options": ["Root", "Leaf", "Flower", "Stem"], "answer": "Root" },
+      { "question": "What do bees make?", "options": ["Honey", "Milk", "Bread", "Juice"], "answer": "Honey" },
+      { "question": "Which body part helps us smell?", "options": ["Nose", "Eye", "Hand", "Ear"], "answer": "Nose" },
+      { "question": "Which animal lives in water?", "options": ["Fish", "Lion", "Dog", "Cow"], "answer": "Fish" },
+      { "question": "Which food comes from plants?", "options": ["Rice", "Milk", "Egg", "Meat"], "answer": "Rice" },
+      { "question": "Which animal has a shell?", "options": ["Turtle", "Dog", "Cat", "Cow"], "answer": "Turtle" },
+      { "question": "What do we drink when we are thirsty?", "options": ["Water", "Sand", "Stone", "Soap"], "answer": "Water" },
+      { "question": "Which part of the plant holds it upright?", "options": ["Stem", "Leaf", "Root", "Flower"], "answer": "Stem" },
+      { "question": "Which animal has wings?", "options": ["Bird", "Cat", "Elephant", "Cow"], "answer": "Bird" },
+      { "question": "Which planet do we live on?", "options": ["Earth", "Sun", "Moon", "Mars"], "answer": "Earth" }
     ]
-      
-   }
- } 
+  }
+}
 
