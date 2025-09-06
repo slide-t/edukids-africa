@@ -624,7 +624,7 @@
       { "question": "Which material is used for making windows?", "options": ["Glass", "Clay", "Paper", "Metal"], "answer": "Glass" },
       { "question": "Which tool is used to mix cement?", "options": ["Trowel", "Ruler", "Scissors", "Brush"], "answer": "Trowel" },
       { "question": "Which material is used for making bags?", "options": ["Leather", "Stone", "Glass", "Clay"], "answer": "Leather" },
-      { "question": "Which tool is used to cut metal sheets?", "options": ["Hacksaw", "Scissors", "Brush", "Ruler
+      { "question": "Which tool is used to cut metal sheets?", "options": ["Hacksaw", "Scissors", "Brush", "Ruler"], "answer": "Hacksaw" }
 
     ]
   }
