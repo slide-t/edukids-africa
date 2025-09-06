@@ -506,7 +506,27 @@
 { "question": "Which planet has rings around it?", "options": ["Saturn", "Mars", "Earth", "Venus"], "answer": "Saturn" },
 { "question": "Which part of the body helps us taste?", "options": ["Nose", "Tongue", "Ear", "Eye"], "answer": "Tongue" },
 { "question": "Which of these is renewable energy?", "options": ["Solar", "Coal", "Oil", "Gas"], "answer": "Solar" }
+  ],
+    "level3": [
+{ "question": "What is the chemical symbol for water?", "options": ["H2O", "O2", "CO2", "NaCl"], "answer": "H2O" },
+{ "question": "Which planet is known as the Red Planet?", "options": ["Mars", "Jupiter", "Venus", "Saturn"], "answer": "Mars" },
+{ "question": "Which part of the human body pumps blood?", "options": ["Heart", "Lungs", "Kidneys", "Liver"], "answer": "Heart" },
+{ "question": "Which gas is essential for photosynthesis?", "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"], "answer": "Carbon dioxide" },
+{ "question": "Which of these is a mammal?", "options": ["Whale", "Shark", "Crocodile", "Frog"], "answer": "Whale" },
+{ "question": "Which force pulls objects toward the Earth?", "options": ["Gravity", "Magnetism", "Friction", "Electricity"], "answer": "Gravity" },
+{ "question": "Which organ removes waste from blood?", "options": ["Kidneys", "Lungs", "Heart", "Stomach"], "answer": "Kidneys" },
+{ "question": "Which layer of the Earth is liquid?", "options": ["Outer core", "Crust", "Mantle", "Inner core"], "answer": "Outer core" },
+{ "question": "Which vitamin do we get from sunlight?", "options": ["Vitamin D", "Vitamin C", "Vitamin A", "Vitamin B12"], "answer": "Vitamin D" },
+{ "question": "Which part of the plant makes seeds?", "options": ["Flower", "Leaf", "Stem", "Root"], "answer": "Flower" },
+{ "question": "Which organ helps humans breathe?", "options": ["Lungs", "Heart", "Stomach", "Liver"], "answer": "Lungs" },
+{ "question": "Which is a conductor of electricity?", "options": ["Copper", "Wood", "Plastic", "Rubber"], "answer": "Copper" },
+{ "question": "Which of these is an amphibian?", "options": ["Frog", "Snake", "Lizard", "Dog"], "answer": "Frog" },
+{ "question": "Which process changes liquid water to gas?", "options": ["Evaporation", "Condensation", "Freezing", "Melting"], "answer": "Evaporation" },
+{ "question": "Which planet is the largest in the solar system?", "options": ["Jupiter", "Earth", "Mars", "Venus"], "answer": "Jupiter" },
+{ "question": "Which system in the human body fights diseases?", "options": ["Immune system", "Digestive system", "Circulatory system", "Respiratory system
 
-  ]
+
+]
+      
  }
 }    
