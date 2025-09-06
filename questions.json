@@ -255,7 +255,7 @@
         { "question": "Which word is a noun?", "options": ["Teacher", "Write", "Jump", "Run"], "answer": "Teacher" },
         { "question": "Pick the opposite of 'young'.", "options": ["Old", "New", "Fresh", "Small"], "answer": "Old" }
  ],
-        "English Language": {
+      
       "Level 2": [
         { "question": "Choose the correct past tense: She ___ a letter yesterday.", "options": ["write", "wrote", "written", "writing"], "answer": "wrote" },
         { "question": "Pick the adjective: The tall boy ran quickly.", "options": ["tall", "boy", "ran", "quickly"], "answer": "tall" },
@@ -320,7 +320,7 @@
         { "question": "Pick the opposite of 'begin'.", "options": ["Start", "End", "Open", "Move"], "answer": "End" }
  
       ],
-          "English Language": {
+        
         "Level 3": [
       { "question": "Choose the correct spelling.", "options": ["Enviroment", "Environment", "Environmment", "Environmant"], "answer": "Environment" },
       { "question": "Which of these is a collective noun?", "options": ["Dog", "Army", "Run", "Chair"], "answer": "Army" },
