@@ -442,8 +442,7 @@
 { "question": "Which is used to see in the dark?", "options": ["Flashlight", "Sunglasses", "Mirror", "Fan"], "answer": "Flashlight" },
 { "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" }
 
-    ]
-  },
+    ],  
     "Level 2": [
       { "question": "Which gas do we breathe in to live?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
       { "question": "Which planet is called the Red Planet?", "options": ["Mars", "Earth", "Venus", "Jupiter"], "answer": "Mars" },
