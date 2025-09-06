@@ -40,10 +40,18 @@
       { "question": "What is half of 20?", "options": ["5", "10", "15", "20"], "correct": 1 },
       { "question": "How many months in a year?", "options": ["10", "11", "12", "13"], "correct": 2 },
       { "question": "What is 7 + 9?", "options": ["15", "16", "17", "18"], "correct": 1 },
-      { "question": "Which is the odd number: 8, 10, 12, 15?", "options": ["8", "10", "12", "15"], "correct": 3 }
-    
-      
-    
+      { "question": "Which is the odd number: 8, 10, 12, 15?", "options": ["8", "10", "12", "15"], "correct": 3 },
+      { "question": "What is 11 + 6?", "options": ["15", "16", "17", "18"], "correct": 2 },
+      { "question": "How many sides does a triangle have?", "options": ["2", "3", "4", "5"], "correct": 1 },
+      { "question": "What is 20 − 8?", "options": ["10", "11", "12", "13"], "correct": 2 },
+      { "question": "How many weeks are in one year?", "options": ["50", "51", "52", "53"], "correct": 2 },
+      { "question": "What comes before 100?", "options": ["98", "99", "101", "97"], "correct": 1 },
+      { "question": "What is double of 9?", "options": ["16", "17", "18", "19"], "correct": 2 },
+      { "question": "How many legs does a spider have?", "options": ["6", "7", "8", "9"], "correct": 2 },
+      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": 1 },
+      { "question": "What is 50 − 25?", "options": ["20", "25", "30", "35"], "correct": 1 },
+      { "question": "Which is the largest number: 44, 48, 42, 40?", "options": ["44", "48", "42", "40"], "correct": 1 }
+        
     ],
     "level2": [
       { "question": "What is 15 ÷ 3?", "options": ["4", "5", "6", "7"], "correct": 1 },
