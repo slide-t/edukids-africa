@@ -278,7 +278,7 @@
         { "question": "Which of these is a proper noun?", "options": ["city", "Lagos", "river", "school"], "answer": "Lagos" },
         { "question": "Pick the opposite of 'beautiful'.", "options": ["Ugly", "Pretty", "Lovely", "Nice"], "answer": "Ugly" },
 
-                { "question": "Choose the correct tense: They ___ football now.", "options": ["play", "playing", "are playing", "plays"], "answer": "are playing" },
+        { "question": "Choose the correct tense: They ___ football now.", "options": ["play", "playing", "are playing", "plays"], "answer": "are playing" },
         { "question": "Which is the plural of 'tooth'?", "options": ["tooths", "teeth", "toothes", "tooth"], "answer": "teeth" },
         { "question": "Pick the adverb: The baby cried loudly.", "options": ["baby", "cried", "loudly", "cry"], "answer": "loudly" },
         { "question": "Fill in the blank: She ___ a new dress yesterday.", "options": ["buy", "buys", "bought", "buying"], "answer": "bought" },
@@ -467,6 +467,6 @@
     ]
   }
 }
- }  
+  
 
       
