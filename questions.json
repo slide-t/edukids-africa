@@ -430,7 +430,18 @@
       { "question": "Which food is sweet?", "options": ["Sugar", "Salt", "Pepper", "Onion"], "answer": "Sugar" },
       { "question": "Which animal has a long neck?", "options": ["Giraffe", "Lion", "Elephant", "Dog"], "answer": "Giraffe" },
       { "question": "What do we need to keep clean?", "options": ["Hands", "Shoes", "Clothes", "Toys"], "answer": "Hands" },
-      { "question": "Which planet is nearest to the Sun?", "options": ["Mercury", "Earth", "Mars", "Venus"], "answer": "Mercury" }
+      { "question": "Which planet is nearest to the Sun?", "options": ["Mercury", "Earth", "Mars", "Venus"], "answer": "Mercury" },
+      { "question": "Which sense do we use to smell?", "options": ["Eyes", "Ears", "Nose", "Hands"], "answer": "Nose" },
+{ "question": "Which of these is a source of water?", "options": ["Sun", "River", "Sand", "Fire"], "answer": "River" },
+{ "question": "What do plants need to grow?", "options": ["Air", "Water", "Sunlight", "All of these"], "answer": "All of these" },
+{ "question": "Which animal lays eggs?", "options": ["Dog", "Cat", "Hen", "Sheep"], "answer": "Hen" },
+{ "question": "What do we call the baby of a cow?", "options": ["Calf", "Cub", "Puppy", "Foal"], "answer": "Calf" },
+{ "question": "Which is the tallest in the sky?", "options": ["Sun", "Moon", "Star", "Cloud"], "answer": "Sun" },
+{ "question": "Which body part do we use to hear?", "options": ["Hand", "Leg", "Ear", "Mouth"], "answer": "Ear" },
+{ "question": "Which of these is NOT a fruit?", "options": ["Apple", "Carrot", "Mango", "Banana"], "answer": "Carrot" },
+{ "question": "Which is used to see in the dark?", "options": ["Flashlight", "Sunglasses", "Mirror", "Fan"], "answer": "Flashlight" },
+{ "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" }
+
     ]
   },
     "Level 2": [
