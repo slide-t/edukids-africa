@@ -58,15 +58,12 @@ async function loadSubjectData() {
   try {
     const res = await fetch("questions.json");
     const data = await res.json();
-    // Support nested structure: e.g. data["Primary School"]["Mathematics"] or top-level data["Mathematics"]
-    // Try either (category param may exist)
     const category = new URLSearchParams(window.location.search).get("category");
     if (category && data[category] && data[category][subject]) {
       subjectData = data[category][subject];
     } else if (data[subject]) {
       subjectData = data[subject];
     } else {
-      // maybe the JSON uses top-level categories (like "Primary School") - find subject anywhere
       let found = null;
       for (const k of Object.keys(data)) {
         if (typeof data[k] === "object" && data[k][subject]) {
@@ -82,7 +79,6 @@ async function loadSubjectData() {
       return false;
     }
 
-    // Collect Level keys & sort (Level 1, Level 2, ...)
     availableLevels = Object.keys(subjectData)
       .filter(k => /^Level\s*\d+/i.test(k))
       .sort((a,b) => {
@@ -91,13 +87,9 @@ async function loadSubjectData() {
         return na - nb;
       });
 
-    // load progress from localStorage to set starting level
     const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
-    // find first level not passed
     let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
     if (firstNotPassed === -1) {
-      // all passed -> either show completion screen or start at last level completed + 1 (but none)
-      // We'll default to the last level index + 1 (which means all completed)
       currentLevelIndex = availableLevels.length; // special marker -> completed
     } else {
       currentLevelIndex = firstNotPassed;
@@ -110,68 +102,40 @@ async function loadSubjectData() {
   }
 }
 
+/* Load and prepare the questions for the current level */
 function prepareLevelQuestions() {
   if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
     questions = [];
     return;
   }
-  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
+  const levelKey = availableLevels[currentLevelIndex];
   let raw = subjectData[levelKey] || [];
 
-  // ✅ 1. Filter out bad questions
-  raw = raw.filter(q => q && q.question && (q.answer || q.correct));
+  // ✅ 1. filter out any malformed question objects
+  raw = raw.filter(q => q && q.question && (q.answer || q.correct || q.correctAnswer));
 
-  // ✅ 2. Deep clone, normalize keys
+  // ✅ 2. deep clone + normalize keys
   questions = raw.map(q => ({
     question: q.question,
     options: Array.isArray(q.options) ? [...q.options] : [],
     answer: q.answer || q.correct || q.correctAnswer || ""
   }));
 
-  // ✅ 3. Ensure the answer is always in options
+  // ✅ 3. ensure the answer is always in options & shuffle options
   questions.forEach(q => {
     if (!q.options.includes(q.answer)) q.options.push(q.answer);
     q.options = shuffle(q.options);
   });
 
-  // ✅ 4. Shuffle questions
+  // ✅ 4. shuffle questions
   questions = shuffle(questions);
 
-  // ✅ 5. (Optional) enforce fixed number of questions per level:
-  const MAX_QUESTIONS = 50; // or 60 / 80 depending on level
-  if (questions.length > MAX_QUESTIONS) {
-    questions = questions.slice(0, MAX_QUESTIONS);
-  }
-  // If you want to randomly pick 50 from 80, just shuffle first (already done)
-}
-
-
-/* Load and prepare the questions for the current level *
-function prepareLevelQuestions() {
-  if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
-    questions = [];
-    return;
-  }
-  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
-  const raw = subjectData[levelKey] || [];
-  // deep clone to avoid mutating original data
-  questions = raw.map(q => {
-    // allow either "answer" or "correct" keys in JSON (backwards compatibility)
-    return {
-      question: q.question,
-      options: Array.isArray(q.options) ? [...q.options] : [],
-      answer: q.answer || q.correct || q.correctAnswer || ""
-    };
-  });*/
-
-  // Shuffle questions and options
-  questions = shuffle(questions);
-  questions = questions.map(q => {
-    // ensure answer is present in options (if not, add it)
-    if (!q.options.includes(q.answer)) q.options.push(q.answer);
-    q.options = shuffle([...q.options]);
-    return q;
-  });
+  // ✅ 5. (optional) enforce fixed number of questions per level
+  // change this number per level if needed, or comment it out to always use all
+  // const MAX_QUESTIONS = 50;
+  // if (questions.length > MAX_QUESTIONS) {
+  //   questions = questions.slice(0, MAX_QUESTIONS);
+  // }
 }
 
 /* Render a question & its shuffled options */
@@ -202,7 +166,6 @@ function onSelectOption(selectedText, btnEl) {
   const q = questions[currentQuestionIndex];
   const correct = q.answer;
 
-  // mark chosen / correct
   if (selectedText === correct) {
     score++;
     if (btnEl) btnEl.classList.add("bg-green-500", "text-white");
@@ -210,16 +173,13 @@ function onSelectOption(selectedText, btnEl) {
   } else {
     if (btnEl) btnEl.classList.add("bg-red-500", "text-white");
     wrongSound.play();
-    // highlight correct
     const children = [...optionsContainer.children];
     const correctBtn = children.find(child => child.textContent === correct);
     if (correctBtn) correctBtn.classList.add("bg-green-500", "text-white");
   }
 
-  // disable all options
   [...optionsContainer.children].forEach(c => c.disabled = true);
 
-  // move next
   setTimeout(() => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -260,7 +220,6 @@ function showEndModal(passed, totalCorrect, totalQuestions) {
     retryBtn.classList.remove("hidden");
     nextBtn.classList.add("hidden");
   }
-  // show modal (Tailwind classes)
   endModal.classList.remove("hidden");
   endModal.classList.add("flex");
 }
@@ -281,9 +240,7 @@ function saveLevelPassed(levelKey) {
 
 /* Determine and start the current level */
 function startLevel() {
-  // if all levels already passed
   if (currentLevelIndex >= availableLevels.length) {
-    // show final completion message
     if (!endModal) {
       alert(`🎓 You have completed all levels for ${subject}!`);
       return;
@@ -297,14 +254,11 @@ function startLevel() {
     return;
   }
 
-  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
+  const levelKey = availableLevels[currentLevelIndex];
   if (levelDisplay) levelDisplay.textContent = levelKey;
-  // prepare questions for current level
   prepareLevelQuestions();
-  // reset counters
   currentQuestionIndex = 0;
   score = 0;
-  // render first question
   renderQuestion();
 }
 
@@ -316,8 +270,6 @@ function endLevel() {
   const levelKey = availableLevels[currentLevelIndex];
   if (passed) {
     saveLevelPassed(levelKey);
-
-    // ✅ Auto-start next level if available
     currentLevelIndex++;
     if (currentLevelIndex < availableLevels.length) {
       levelUpSound.play();
@@ -329,7 +281,6 @@ function endLevel() {
   } else {
     gameOverSound.play();
     alert(`❌ You scored ${score}/${totalQuestions} (${Math.round(percent)}%). Required: ${PASS_PERCENT}%.`);
-    // Restart same level
     prepareLevelQuestions();
     currentQuestionIndex = 0;
     score = 0;
@@ -337,12 +288,10 @@ function endLevel() {
   }
 }
 
-
 /* Button handlers for end modal */
 if (retryBtn) {
   retryBtn.addEventListener("click", () => {
     hideEndModal();
-    // restart the same level with fresh shuffle
     prepareLevelQuestions();
     currentQuestionIndex = 0;
     score = 0;
@@ -353,7 +302,6 @@ if (retryBtn) {
 if (nextBtn) {
   nextBtn.addEventListener("click", () => {
     hideEndModal();
-    // move to next level
     currentLevelIndex++;
     startLevel();
   });
@@ -373,17 +321,13 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const ok = await loadSubjectData();
   if (!ok) {
-    // show friendly error on page
     if (questionText) questionText.textContent = `No quiz data found for "${subject}".`;
     return;
   }
 
-  // If user already completed none -> show instruction modal if present, else start immediately.
   if (modal) {
-    // leave modal visible until user clicks Start (existing behavior)
+    // leave modal visible until user clicks Start
   } else {
-    // no instruction modal found - start automatically
     startLevel();
   }
 });
-
