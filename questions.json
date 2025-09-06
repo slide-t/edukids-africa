@@ -223,7 +223,39 @@
         { "question": "What is the plural of 'child'?", "options": ["childs", "childes", "children", "childen"], "answer": "children" },
         { "question": "Which of these is a proper noun?", "options": ["river", "city", "Lagos", "school"], "answer": "Lagos" },
         { "question": "Fill in the blank: 'I ___ my homework yesterday.'", "options": ["do", "did", "done", "does"], "answer": "did" },
-        { "question": "Which one is a compound word?", "options": ["sunshine", "run", "happy", "chair"], "answer": "sunshine" }
+        { "question": "Which one is a compound word?", "options": ["sunshine", "run", "happy", "chair"], "answer": "sunshine" },
+                { "question": "Which word is a verb?", "options": ["Run", "Dog", "Happy", "Chair"], "answer": "Run" },
+        { "question": "Choose the plural of 'box'.", "options": ["Boxs", "Boxes", "Boxen", "Box"], "answer": "Boxes" },
+        { "question": "Which one is a question word?", "options": ["Who", "Book", "House", "Table"], "answer": "Who" },
+        { "question": "Pick the opposite of 'hot'.", "options": ["Warm", "Cold", "Boiling", "Cool"], "answer": "Cold" },
+        { "question": "Which word is a noun?", "options": ["Sing", "Jump", "School", "Quickly"], "answer": "School" },
+        { "question": "Choose the correct sentence.", "options": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."], "answer": "She goes to school." },
+        { "question": "What is the past tense of 'eat'?", "options": ["Eats", "Eated", "Ate", "Eating"], "answer": "Ate" },
+        { "question": "Which is a pronoun?", "options": ["Book", "He", "Sing", "Green"], "answer": "He" },
+        { "question": "Choose the correct article: ___ apple", "options": ["A", "An", "The", "Some"], "answer": "An" },
+        { "question": "Pick the opposite of 'happy'.", "options": ["Glad", "Sad", "Excited", "Pleased"], "answer": "Sad" },
+        { "question": "Which word shows action?", "options": ["Dance", "Table", "Stone", "Water"], "answer": "Dance" },
+        { "question": "Choose the plural of 'child'.", "options": ["Childs", "Childes", "Children", "Child"], "answer": "Children" },
+        { "question": "Which sentence is correct?", "options": ["They is playing.", "They are playing.", "They am playing.", "They be playing."], "answer": "They are playing." },
+        { "question": "Pick the opposite of 'big'.", "options": ["Huge", "Small", "Large", "Tall"], "answer": "Small" },
+        { "question": "Which is a question word?", "options": ["Where", "Book", "Man", "Desk"], "answer": "Where" },
+        { "question": "Choose the correct preposition: The cat is ___ the box.", "options": ["On", "In", "At", "With"], "answer": "In" },
+        { "question": "Which word is a noun?", "options": ["Jump", "Car", "Run", "Sing"], "answer": "Car" },
+        { "question": "Pick the opposite of 'fast'.", "options": ["Quick", "Slow", "Speedy", "Rapid"], "answer": "Slow" },
+        { "question": "Choose the correct sentence.", "options": ["I has a pen.", "I have a pen.", "I having a pen.", "I haves a pen."], "answer": "I have a pen." },
+        { "question": "Which one is a pronoun?", "options": ["She", "Book", "Chair", "Run"], "answer": "She" },
+                { "question": "Pick the opposite of 'day'.", "options": ["Night", "Morning", "Evening", "Sun"], "answer": "Night" },
+        { "question": "Which word is a verb?", "options": ["Sing", "Book", "Chair", "Pen"], "answer": "Sing" },
+        { "question": "Choose the plural of 'leaf'.", "options": ["Leafs", "Leaves", "Leafes", "Leaf"], "answer": "Leaves" },
+        { "question": "Which one is an adjective?", "options": ["Tall", "Jump", "Run", "Sing"], "answer": "Tall" },
+        { "question": "Choose the correct sentence.", "options": ["He am my brother.", "He is my brother.", "He are my brother.", "He be my brother."], "answer": "He is my brother." },
+        { "question": "Pick the opposite of 'short'.", "options": ["Long", "Small", "Thin", "Little"], "answer": "Long" },
+        { "question": "Which is a question word?", "options": ["When", "Chair", "Book", "Man"], "answer": "When" },
+        { "question": "Choose the correct preposition: The book is ___ the table.", "options": ["In", "On", "At", "With"], "answer": "On" },
+        { "question": "Which word is a noun?", "options": ["Teacher", "Write", "Jump", "Run"], "answer": "Teacher" },
+        { "question": "Pick the opposite of 'young'.", "options": ["Old", "New", "Fresh", "Small"], "answer": "Old" }
+
+
       ]
     }
 }
