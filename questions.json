@@ -20,7 +20,29 @@
       { "question": "Count in fives: 5, 10, 15, ___", "options": ["18", "20", "25", "30"], "correct": 1 },
       { "question": "Which shape has 4 equal sides?", "options": ["Rectangle", "Triangle", "Square", "Circle"], "correct": 2 },
       { "question": "How many ones are in 13?", "options": ["1", "3", "10", "13"], "correct": 1 },
-      { "question": "What is 7 + 2?", "options": ["8", "9", "10", "11"], "correct": 1 }
+      { "question": "What is 7 + 2?", "options": ["8", "9", "10", "11"], "correct": 1 },
+      { "question": "What is 6 + 8?", "options": ["12", "13", "14", "15"], "correct": 2 },
+      { "question": "Which number comes before 50?", "options": ["49", "50", "51", "52"], "correct": 0 },
+      { "question": "Subtract: 12 − 4", "options": ["6", "7", "8", "9"], "correct": 2 },
+      { "question": "How many corners does a triangle have?", "options": ["2", "3", "4", "5"], "correct": 1 },
+      { "question": "Which is greater: 25 or 32?", "options": ["25", "32", "Both equal", "None"], "correct": 1 },
+      { "question": "What is 2 more than 18?", "options": ["18", "19", "20", "21"], "correct": 2 },
+      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": 1 },
+      { "question": "What is 11 − 3?", "options": ["6", "7", "8", "9"], "correct": 2 },
+      { "question": "How many sides does a circle have?", "options": ["0", "1", "2", "4"], "correct": 0 },
+      { "question": "Which is the largest: 14, 19, 11, 16?", "options": ["14", "19", "11", "16"], "correct": 1 },
+      { "question": "What is 9 + 5?", "options": ["13", "14", "15", "16"], "correct": 1 },
+      { "question": "Which number is smallest: 20, 15, 18, 12?", "options": ["20", "15", "18", "12"], "correct": 3 },
+      { "question": "Subtract: 14 − 6", "options": ["6", "7", "8", "9"], "correct": 1 },
+      { "question": "How many hours make one day?", "options": ["10", "12", "24", "60"], "correct": 2 },
+      { "question": "What comes after 39?", "options": ["38", "39", "40", "41"], "correct": 2 },
+      { "question": "Count in fives: 5, 10, 15, 20, ___", "options": ["22", "25", "30", "35"], "correct": 1 },
+      { "question": "What is half of 20?", "options": ["5", "10", "15", "20"], "correct": 1 },
+      { "question": "How many months in a year?", "options": ["10", "11", "12", "13"], "correct": 2 },
+      { "question": "What is 7 + 9?", "options": ["15", "16", "17", "18"], "correct": 1 },
+      { "question": "Which is the odd number: 8, 10, 12, 15?", "options": ["8", "10", "12", "15"], "correct": 3 }
+    
+      
     
     ],
     "level2": [
