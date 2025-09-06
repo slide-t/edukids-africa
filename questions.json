@@ -523,7 +523,29 @@
 { "question": "Which of these is an amphibian?", "options": ["Frog", "Snake", "Lizard", "Dog"], "answer": "Frog" },
 { "question": "Which process changes liquid water to gas?", "options": ["Evaporation", "Condensation", "Freezing", "Melting"], "answer": "Evaporation" },
 { "question": "Which planet is the largest in the solar system?", "options": ["Jupiter", "Earth", "Mars", "Venus"], "answer": "Jupiter" },
-{ "question": "Which system in the human body fights diseases?", "options": ["Immune system", "Digestive system", "Circulatory system"], "answer": "Immune system" }
+{ "question": "Which system in the human body fights diseases?", "options": ["Immune system", "Digestive system", "Circulatory system"], "answer": "Immune system" },
+{ "question": "Which organ stores bile?", "options": ["Gallbladder", "Liver", "Stomach", "Pancreas"], "answer": "Gallbladder" },
+{ "question": "Which layer of the Earth is solid and dense?", "options": ["Inner core", "Mantle", "Crust", "Outer core"], "answer": "Inner core" },
+{ "question": "Which part of the plant absorbs water?", "options": ["Root", "Stem", "Leaf", "Flower"], "answer": "Root" },
+{ "question": "Which planet is closest to the Sun?", "options": ["Mercury", "Venus", "Earth", "Mars"], "answer": "Mercury" },
+{ "question": "Which type of blood cells fight infection?", "options": ["White blood cells", "Red blood cells", "Platelets", "Plasma"], "answer": "White blood cells" },
+{ "question": "Which process turns a caterpillar into a butterfly?", "options": ["Metamorphosis", "Photosynthesis", "Pollination", "Evaporation"], "answer": "Metamorphosis" },
+{ "question": "Which gas is produced by plants during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+{ "question": "Which system in the human body transports nutrients and oxygen?", "options": ["Circulatory system", "Digestive system", "Nervous system", "Respiratory system"], "answer": "Circulatory system" },
+{ "question": "Which organ pumps blood through the body?", "options": ["Heart", "Lungs", "Liver", "Kidneys"], "answer": "Heart" },
+{ "question": "Which part of the cell contains genetic material?", "options": ["Nucleus", "Cytoplasm", "Cell membrane", "Mitochondria"], "answer": "Nucleus" },
+{ "question": "Which layer of the atmosphere do we live in?", "options": ["Troposphere", "Stratosphere", "Mesosphere", "Thermosphere"], "answer": "Troposphere" },
+{ "question": "Which planet has rings around it?", "options": ["Saturn", "Mars", "Venus", "Mercury"], "answer": "Saturn" },
+{ "question": "Which organ helps in digestion of food?", "options": ["Stomach", "Lungs", "Heart", "Kidneys"], "answer": "Stomach" },
+{ "question": "Which gas is needed for breathing?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+{ "question": "Which mineral helps in building strong bones?", "options": ["Calcium", "Iron", "Sodium", "Potassium"], "answer": "Calcium" },
+{ "question": "Which organ removes waste in humans?", "options": ["Kidneys", "Lungs", "Liver", "Skin"], "answer": "Kidneys" },
+{ "question": "Which type of energy comes from the Sun?", "options": ["Solar energy", "Wind energy", "Hydro energy", "Geothermal energy"], "answer": "Solar energy" },
+{ "question": "Which part of the flower becomes the fruit?", "options": ["Ovary", "Petal", "Stem", "Leaf"], "answer": "Ovary" },
+{ "question": "Which system controls the body’s activities?", "options": ["Nervous system", "Digestive system", "Circulatory system", "Respiratory system"], "answer": "Nervous system" },
+{ "question": "Which natural phenomenon causes earthquakes?", "options": ["Tectonic plate movement", "Volcanic eruption", "Wind", "Rain"], "answer": "Tectonic plate movement" }
+
+      
    ]
   }
 }    
