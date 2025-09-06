@@ -10,7 +10,18 @@
       { "question": "Circle the even number: 4, 7, 9, 11", "options": ["4", "7", "9", "11"], "correct": 0 },
       { "question": "How many fingers on one hand?", "options": ["4", "5", "6", "7"], "correct": 1 },
       { "question": "What is 5 + 3?", "options": ["7", "8", "9", "10"], "correct": 1 },
-      { "question": "Which shape has 3 sides?", "options": ["Circle", "Triangle", "Square", "Oval"], "correct": 1 }
+      { "question": "Which shape has 3 sides?", "options": ["Circle", "Triangle", "Square", "Oval"], "correct": 1 },
+      { "question": "What is 5 + 5?", "options": ["9", "10", "11", "12"], "correct": 1 },
+      { "question": "Which number comes after 19?", "options": ["18", "19", "20", "21"], "correct": 2 },
+      { "question": "Subtract: 15 − 6", "options": ["7", "8", "9", "10"], "correct": 2 },
+      { "question": "How many sides does a rectangle have?", "options": ["3", "4", "5", "6"], "correct": 1 },
+      { "question": "Which is the smallest: 25, 30, 18, 22?", "options": ["25", "30", "18", "22"], "correct": 2 },
+      { "question": "What is 9 + 6?", "options": ["14", "15", "16", "17"], "correct": 1 },
+      { "question": "Count in fives: 5, 10, 15, ___", "options": ["18", "20", "25", "30"], "correct": 1 },
+      { "question": "Which shape has 4 equal sides?", "options": ["Rectangle", "Triangle", "Square", "Circle"], "correct": 2 },
+      { "question": "How many ones are in 13?", "options": ["1", "3", "10", "13"], "correct": 1 },
+      { "question": "What is 7 + 2?", "options": ["8", "9", "10", "11"], "correct": 1 }
+    
     ],
     "level2": [
       { "question": "What is 15 ÷ 3?", "options": ["4", "5", "6", "7"], "correct": 1 },
