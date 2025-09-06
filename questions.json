@@ -199,6 +199,31 @@
       { "question": "Find the mean of: 5, 10, 15, 20, 25.", "options": ["12", "13", "14", "15"], "answer": "15" },
       { "question": "The radius of a circle is 14 cm. Find its circumference (π=22/7).", "options": ["86 cm", "88 cm", "90 cm", "92 cm"], "answer": "88 cm" }
     ]
-  }
-}
+  },
 
+    "English Language": {
+      "Level 1": [
+        { "question": "Choose the correct spelling:", "options": ["becos", "because", "becaus", "becuz"], "answer": "because" },
+        { "question": "Which one is a noun?", "options": ["run", "beautiful", "chair", "quickly"], "answer": "chair" },
+        { "question": "Which word is the opposite of 'hot'?", "options": ["warm", "cold", "boil", "heat"], "answer": "cold" },
+        { "question": "What is the plural of 'boy'?", "options": ["boys", "boies", "boyes", "boyz"], "answer": "boys" },
+        { "question": "Which of these is a verb?", "options": ["sing", "song", "singer", "sings"], "answer": "sing" },
+        { "question": "Choose the correct article: '___ apple is on the table.'", "options": ["A", "An", "The", "No article"], "answer": "An" },
+        { "question": "Which of these words is an adjective?", "options": ["happy", "run", "cat", "jump"], "answer": "happy" },
+        { "question": "Pick the correct sentence:", "options": ["She go to school.", "She goes to school.", "She going to school.", "She gone to school."], "answer": "She goes to school." },
+        { "question": "Which is a pronoun?", "options": ["he", "boy", "John", "teacher"], "answer": "he" },
+        { "question": "What is the past tense of 'eat'?", "options": ["eated", "ate", "eaten", "eats"], "answer": "ate" },
+        { "question": "Fill in the blank: 'The dog ___ loudly.'", "options": ["barks", "bark", "barking", "barked"], "answer": "barks" },
+        { "question": "Which word is a question word?", "options": ["what", "cat", "walk", "food"], "answer": "what" },
+        { "question": "Choose the correct spelling:", "options": ["frend", "freind", "friend", "frind"], "answer": "friend" },
+        { "question": "Which of these is a pair of opposite words?", "options": ["big and small", "dog and puppy", "eat and ate", "cup and mug"], "answer": "big and small" },
+        { "question": "Which word is a preposition?", "options": ["under", "run", "happy", "book"], "answer": "under" },
+        { "question": "Choose the sentence with correct punctuation:", "options": ["what is your name", "What is your name?", "what is your name.", "What is your name"], "answer": "What is your name?" },
+        { "question": "What is the plural of 'child'?", "options": ["childs", "childes", "children", "childen"], "answer": "children" },
+        { "question": "Which of these is a proper noun?", "options": ["river", "city", "Lagos", "school"], "answer": "Lagos" },
+        { "question": "Fill in the blank: 'I ___ my homework yesterday.'", "options": ["do", "did", "done", "does"], "answer": "did" },
+        { "question": "Which one is a compound word?", "options": ["sunshine", "run", "happy", "chair"], "answer": "sunshine" }
+      ]
+    }
+
+  
