@@ -110,7 +110,43 @@ async function loadSubjectData() {
   }
 }
 
-/* Load and prepare the questions for the current level */
+function prepareLevelQuestions() {
+  if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
+    questions = [];
+    return;
+  }
+  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
+  let raw = subjectData[levelKey] || [];
+
+  // ✅ 1. Filter out bad questions
+  raw = raw.filter(q => q && q.question && (q.answer || q.correct));
+
+  // ✅ 2. Deep clone, normalize keys
+  questions = raw.map(q => ({
+    question: q.question,
+    options: Array.isArray(q.options) ? [...q.options] : [],
+    answer: q.answer || q.correct || q.correctAnswer || ""
+  }));
+
+  // ✅ 3. Ensure the answer is always in options
+  questions.forEach(q => {
+    if (!q.options.includes(q.answer)) q.options.push(q.answer);
+    q.options = shuffle(q.options);
+  });
+
+  // ✅ 4. Shuffle questions
+  questions = shuffle(questions);
+
+  // ✅ 5. (Optional) enforce fixed number of questions per level:
+  const MAX_QUESTIONS = 50; // or 60 / 80 depending on level
+  if (questions.length > MAX_QUESTIONS) {
+    questions = questions.slice(0, MAX_QUESTIONS);
+  }
+  // If you want to randomly pick 50 from 80, just shuffle first (already done)
+}
+
+
+/* Load and prepare the questions for the current level *
 function prepareLevelQuestions() {
   if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
     questions = [];
@@ -126,7 +162,7 @@ function prepareLevelQuestions() {
       options: Array.isArray(q.options) ? [...q.options] : [],
       answer: q.answer || q.correct || q.correctAnswer || ""
     };
-  });
+  });*/
 
   // Shuffle questions and options
   questions = shuffle(questions);
