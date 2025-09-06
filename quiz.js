@@ -102,8 +102,58 @@ function checkAnswer(selectedIndex, btn) {
     }
   }, 1000);
 }
+// End Level with summary modal
+function endLevel() {
+  const total = questions.length;
+  const percent = (score / total) * 100;
 
-// End Level
+  const summaryModal = document.getElementById("summaryModal");
+  const summaryTitle = document.getElementById("summaryTitle");
+  const summaryMessage = document.getElementById("summaryMessage");
+  const retryBtn = document.getElementById("retryBtn");
+  const nextLevelBtn = document.getElementById("nextLevelBtn");
+
+  // Show modal
+  summaryModal.classList.remove("hidden");
+  summaryModal.classList.add("flex");
+
+  if (percent >= 75) {
+    levelUpSound.play();
+    summaryTitle.textContent = `🎉 Level ${currentLevel} Passed!`;
+    summaryMessage.textContent = `You scored ${score}/${total} (${percent.toFixed(0)}%). Great job!`;
+    retryBtn.classList.add("hidden");
+    nextLevelBtn.classList.remove("hidden");
+
+    // Save progress
+    saveProgress(currentLevel);
+
+    // Next level action
+    nextLevelBtn.onclick = () => {
+      summaryModal.classList.add("hidden");
+      summaryModal.classList.remove("flex");
+      currentLevel++;
+      startLevel();
+    };
+
+  } else {
+    gameOverSound.play();
+    summaryTitle.textContent = `❌ Level ${currentLevel} Failed`;
+    summaryMessage.textContent = `You scored ${score}/${total} (${percent.toFixed(0)}%). You need at least 75% to pass.`;
+    retryBtn.classList.remove("hidden");
+    nextLevelBtn.classList.add("hidden");
+
+    // Retry action
+    retryBtn.onclick = () => {
+      summaryModal.classList.add("hidden");
+      summaryModal.classList.remove("flex");
+      startLevel(); // restart same level
+    };
+  }
+}
+
+
+
+/*// End Level
 function endLevel() {
   const levelObj = levels[currentLevelIndex];
   if (score >= levelObj.pass) {
@@ -120,7 +170,7 @@ function endLevel() {
     alert(`❌ Game Over! You scored ${score}/${levelObj.total}. Required: ${levelObj.pass}.`);
     resetGame();
   }
-}
+}*/
 
 // Start Level
 async function startLevel() {
