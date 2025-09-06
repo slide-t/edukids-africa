@@ -562,8 +562,27 @@
 { "question": "Which force keeps objects on the Earth?", "options": ["Gravity", "Magnetism", "Friction", "Inertia"], "answer": "Gravity" },
 { "question": "Which organelle produces energy in a cell?", "options": ["Mitochondria", "Nucleus", "Ribosome", "Golgi body"], "answer": "Mitochondria" },
 { "question": "Which simple machine is a seesaw?", "options": ["Lever", "Pulley", "Wheel & axle", "Inclined plane"], "answer": "Lever" },
-{ "question": "Which type of cloud is fluffy and white?", "options": ["Cumulus", "Stratus", "Cirrus", "Nimbus"], "answer": "Cumulus" }     
-  
+{ "question": "Which type of cloud is fluffy and white?", "options": ["Cumulus", "Stratus", "Cirrus", "Nimbus"], "answer": "Cumulus" },
+
+   { "question": "Which gas is needed for photosynthesis?", "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"], "answer": "Carbon dioxide" },
+{ "question": "Which part of the brain controls balance?", "options": ["Cerebellum", "Cerebrum", "Medulla", "Hypothalamus"], "answer": "Cerebellum" },
+{ "question": "Which layer protects the Earth from harmful UV rays?", "options": ["Ozone layer", "Crust", "Atmosphere", "Mantle"], "answer": "Ozone layer" },
+{ "question": "Which energy source comes from the sun?", "options": ["Solar energy", "Wind energy", "Geothermal energy", "Hydroelectric energy"], "answer": "Solar energy" },
+{ "question": "Which blood cells fight infection?", "options": ["White blood cells", "Red blood cells", "Platelets", "Plasma"], "answer": "White blood cells" },
+{ "question": "Which organ helps in excretion of water and salts?", "options": ["Kidneys", "Liver", "Lungs", "Stomach"], "answer": "Kidneys" },
+{ "question": "Which force opposes motion between surfaces?", "options": ["Friction", "Gravity", "Magnetism", "Electricity"], "answer": "Friction" },
+{ "question": "Which planet is closest to the Sun?", "options": ["Mercury", "Venus", "Earth", "Mars"], "answer": "Mercury" },
+{ "question": "Which process turns liquid water into vapor?", "options": ["Evaporation", "Condensation", "Precipitation", "Sublimation"], "answer": "Evaporation" },
+{ "question": "Which type of muscle is involuntary?", "options": ["Cardiac", "Skeletal", "Smooth", "Voluntary"], "answer": "Cardiac" },
+{ "question": "Which organ removes carbon dioxide from the body?", "options": ["Lungs", "Kidneys", "Liver", "Heart"], "answer": "Lungs" },
+{ "question": "Which mineral strengthens bones?", "options": ["Calcium", "Iron", "Magnesium", "Potassium"], "answer": "Calcium" },
+{ "question": "Which gas is released during respiration?", "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"], "answer": "Carbon dioxide" },
+{ "question": "Which body system controls hormones?", "options": ["Endocrine system", "Nervous system", "Digestive system", "Circulatory system"], "answer": "Endocrine system" },
+{ "question": "Which layer of soil is most fertile?", "options": ["Topsoil", "Subsoil", "Bedrock", "Parent rock"], "answer": "Topsoil" },
+{ "question": "Which energy is produced by moving water?", "options": ["Hydroelectric energy", "Wind energy", "Solar energy", "Geothermal energy"], "answer": "Hydroelectric energy" },
+{ "question": "Which organ produces digestive enzymes?", "options": ["Pancreas", "Liver", "Stomach", "Kidney"], "answer": "Pancreas" },
+{ "question": "Which planets are gas giants?", "options": ["Jupiter and Saturn", "Earth and Mars", "Mercury and Venus", "Neptune and Pluto"], "answer": "Jupiter and Saturn" },
+
     ]
   }
 }    
