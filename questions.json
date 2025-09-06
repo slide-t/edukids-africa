@@ -52,7 +52,7 @@
       { "question": "What is 50 − 25?", "options": ["20", "25", "30", "35"], "correct": "25" },
       { "question": "Which is the largest number: 44, 48, 42, 40?", "options": ["44", "48", "42", "40"], "correct": "48" }
     ],
-    "Level 2": [
+    "Level2": [
       { "question": "What is 12 × 3?", "options": ["35", "36", "40", "30"], "answer": "36" },
       { "question": "Divide 56 by 7.", "options": ["6", "7", "8", "9"], "answer": "8" },
       { "question": "What is 1/2 of 18?", "options": ["8", "9", "10", "12"], "answer": "9" },
@@ -203,7 +203,7 @@
   },
 
     "English Language": {
-      "Level 1": [
+      "Level1": [
         { "question": "Choose the correct spelling:", "options": ["becos", "because", "becaus", "becuz"], "answer": "because" },
         { "question": "Which one is a noun?", "options": ["run", "beautiful", "chair", "quickly"], "answer": "chair" },
         { "question": "Which word is the opposite of 'hot'?", "options": ["warm", "cold", "boil", "heat"], "answer": "cold" },
@@ -256,7 +256,7 @@
         { "question": "Pick the opposite of 'young'.", "options": ["Old", "New", "Fresh", "Small"], "answer": "Old" }
  ],
       
-      "Level 2": [
+      "Level2": [
         { "question": "Choose the correct past tense: She ___ a letter yesterday.", "options": ["write", "wrote", "written", "writing"], "answer": "wrote" },
         { "question": "Pick the adjective: The tall boy ran quickly.", "options": ["tall", "boy", "ran", "quickly"], "answer": "tall" },
         { "question": "Which word is a pronoun?", "options": ["They", "Run", "Sing", "Book"], "answer": "They" },
@@ -321,7 +321,7 @@
  
       ],
         
-        "Level 3": [
+        "Level3": [
       { "question": "Choose the correct spelling.", "options": ["Enviroment", "Environment", "Environmment", "Environmant"], "answer": "Environment" },
       { "question": "Which of these is a collective noun?", "options": ["Dog", "Army", "Run", "Chair"], "answer": "Army" },
       { "question": "What is the synonym of 'brave'?", "options": ["Cowardly", "Fearless", "Weak", "Afraid"], "answer": "Fearless" },
@@ -389,7 +389,7 @@
    },
   
   "Basic Science": {
-    "Level 1": [
+    "Level1": [
       { "question": "What do plants need to grow?", "options": ["Water", "Chocolate", "Shoes", "Cars"], "answer": "Water" },
       { "question": "Which part of the plant makes food?", "options": ["Leaf", "Root", "Stem", "Flower"], "answer": "Leaf" },
       { "question": "Which animal gives us milk?", "options": ["Cow", "Dog", "Cat", "Sheep"], "answer": "Cow" },
@@ -431,18 +431,9 @@
       { "question": "Which animal has a long neck?", "options": ["Giraffe", "Lion", "Elephant", "Dog"], "answer": "Giraffe" },
       { "question": "What do we need to keep clean?", "options": ["Hands", "Shoes", "Clothes", "Toys"], "answer": "Hands" },
       { "question": "Which planet is nearest to the Sun?", "options": ["Mercury", "Earth", "Mars", "Venus"], "answer": "Mercury" },
-      { "question": "Which sense do we use to smell?", "options": ["Eyes", "Ears", "Nose", "Hands"], "answer": "Nose" },
-{ "question": "Which of these is a source of water?", "options": ["Sun", "River", "Sand", "Fire"], "answer": "River" },
-{ "question": "What do plants need to grow?", "options": ["Air", "Water", "Sunlight", "All of these"], "answer": "All of these" },
-{ "question": "Which animal lays eggs?", "options": ["Dog", "Cat", "Hen", "Sheep"], "answer": "Hen" },
-{ "question": "What do we call the baby of a cow?", "options": ["Calf", "Cub", "Puppy", "Foal"], "answer": "Calf" },
-{ "question": "Which is the tallest in the sky?", "options": ["Sun", "Moon", "Star", "Cloud"], "answer": "Sun" },
-{ "question": "Which body part do we use to hear?", "options": ["Hand", "Leg", "Ear", "Mouth"], "answer": "Ear" },
-{ "question": "Which of these is NOT a fruit?", "options": ["Apple", "Carrot", "Mango", "Banana"], "answer": "Carrot" },
-{ "question": "Which is used to see in the dark?", "options": ["Flashlight", "Sunglasses", "Mirror", "Fan"], "answer": "Flashlight" },
-{ "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" }
-
+      { "question": "Which sense do we use to smell?", "options": ["Eyes", "Ears", "Nose", "Hands"], "answer": "Nose" }
+      
+      
     ]
   }
-
-      
+}    
