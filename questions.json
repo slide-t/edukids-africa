@@ -1,159 +1,115 @@
 {
   "Mathematics": {
     "level1": [
-      { "question": "What is 3 + 4?", "options": ["6", "7", "8", "9"], "correct": 1 },
-      { "question": "Count the items: 2 apples + 5 apples = ?", "options": ["6", "7", "8", "9"], "correct": 1 },
-      { "question": "Which number comes after 9?", "options": ["8", "10", "11", "9"], "correct": 1 },
-      { "question": "What is 10 − 2?", "options": ["6", "7", "8", "9"], "correct": 2 },
-      { "question": "How many sides does a square have?", "options": ["3", "4", "5", "6"], "correct": 1 },
-      { "question": "Which is the smallest: 2, 7, 5, 3?", "options": ["2", "3", "5", "7"], "correct": 0 },
-      { "question": "Circle the even number: 4, 7, 9, 11", "options": ["4", "7", "9", "11"], "correct": 0 },
-      { "question": "How many fingers on one hand?", "options": ["4", "5", "6", "7"], "correct": 1 },
-      { "question": "What is 5 + 3?", "options": ["7", "8", "9", "10"], "correct": 1 },
-      { "question": "Which shape has 3 sides?", "options": ["Circle", "Triangle", "Square", "Oval"], "correct": 1 },
-      { "question": "What is 5 + 5?", "options": ["9", "10", "11", "12"], "correct": 1 },
-      { "question": "Which number comes after 19?", "options": ["18", "19", "20", "21"], "correct": 2 },
-      { "question": "Subtract: 15 − 6", "options": ["7", "8", "9", "10"], "correct": 2 },
-      { "question": "How many sides does a rectangle have?", "options": ["3", "4", "5", "6"], "correct": 1 },
-      { "question": "Which is the smallest: 25, 30, 18, 22?", "options": ["25", "30", "18", "22"], "correct": 2 },
-      { "question": "What is 9 + 6?", "options": ["14", "15", "16", "17"], "correct": 1 },
-      { "question": "Count in fives: 5, 10, 15, ___", "options": ["18", "20", "25", "30"], "correct": 1 },
-      { "question": "Which shape has 4 equal sides?", "options": ["Rectangle", "Triangle", "Square", "Circle"], "correct": 2 },
-      { "question": "How many ones are in 13?", "options": ["1", "3", "10", "13"], "correct": 1 },
-      { "question": "What is 7 + 2?", "options": ["8", "9", "10", "11"], "correct": 1 },
-      { "question": "What is 6 + 8?", "options": ["12", "13", "14", "15"], "correct": 2 },
-      { "question": "Which number comes before 50?", "options": ["49", "50", "51", "52"], "correct": 0 },
-      { "question": "Subtract: 12 − 4", "options": ["6", "7", "8", "9"], "correct": 2 },
-      { "question": "How many corners does a triangle have?", "options": ["2", "3", "4", "5"], "correct": 1 },
-      { "question": "Which is greater: 25 or 32?", "options": ["25", "32", "Both equal", "None"], "correct": 1 },
-      { "question": "What is 2 more than 18?", "options": ["18", "19", "20", "21"], "correct": 2 },
-      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": 1 },
-      { "question": "What is 11 − 3?", "options": ["6", "7", "8", "9"], "correct": 2 },
-      { "question": "How many sides does a circle have?", "options": ["0", "1", "2", "4"], "correct": 0 },
-      { "question": "Which is the largest: 14, 19, 11, 16?", "options": ["14", "19", "11", "16"], "correct": 1 },
-      { "question": "What is 9 + 5?", "options": ["13", "14", "15", "16"], "correct": 1 },
-      { "question": "Which number is smallest: 20, 15, 18, 12?", "options": ["20", "15", "18", "12"], "correct": 3 },
-      { "question": "Subtract: 14 − 6", "options": ["6", "7", "8", "9"], "correct": 1 },
-      { "question": "How many hours make one day?", "options": ["10", "12", "24", "60"], "correct": 2 },
-      { "question": "What comes after 39?", "options": ["38", "39", "40", "41"], "correct": 2 },
-      { "question": "Count in fives: 5, 10, 15, 20, ___", "options": ["22", "25", "30", "35"], "correct": 1 },
-      { "question": "What is half of 20?", "options": ["5", "10", "15", "20"], "correct": 1 },
-      { "question": "How many months in a year?", "options": ["10", "11", "12", "13"], "correct": 2 },
-      { "question": "What is 7 + 9?", "options": ["15", "16", "17", "18"], "correct": 1 },
-      { "question": "Which is the odd number: 8, 10, 12, 15?", "options": ["8", "10", "12", "15"], "correct": 3 },
-      { "question": "What is 11 + 6?", "options": ["15", "16", "17", "18"], "correct": 2 },
-      { "question": "How many sides does a triangle have?", "options": ["2", "3", "4", "5"], "correct": 1 },
-      { "question": "What is 20 − 8?", "options": ["10", "11", "12", "13"], "correct": 2 },
-      { "question": "How many weeks are in one year?", "options": ["50", "51", "52", "53"], "correct": 2 },
-      { "question": "What comes before 100?", "options": ["98", "99", "101", "97"], "correct": 1 },
-      { "question": "What is double of 9?", "options": ["16", "17", "18", "19"], "correct": 2 },
-      { "question": "How many legs does a spider have?", "options": ["6", "7", "8", "9"], "correct": 2 },
-      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": 1 },
-      { "question": "What is 50 − 25?", "options": ["20", "25", "30", "35"], "correct": 1 },
-      { "question": "Which is the largest number: 44, 48, 42, 40?", "options": ["44", "48", "42", "40"], "correct": 1 }
-        
-    ],
-    "level2": [
-      { "question": "What is 15 ÷ 3?", "options": ["4", "5", "6", "7"], "correct": 1 },
-      { "question": "Multiply: 4 × 3 = ?", "options": ["7", "12", "10", "9"], "correct": 1 },
-      { "question": "What is 25 − 7?", "options": ["17", "18", "19", "16"], "correct": 1 },
-      { "question": "What is half of 16?", "options": ["7", "8", "9", "10"], "correct": 1 },
-      { "question": "Find the missing: 10, 15, __, 25", "options": ["18", "20", "22", "24"], "correct": 1 },
-      { "question": "Which fraction shows a half?", "options": ["1/3", "1/2", "1/4", "1/5"], "correct": 1 },
-      { "question": "What is 20 + 10?", "options": ["30", "25", "20", "15"], "correct": 0 },
-      { "question": "How many cents in ₦1?", "options": ["10", "100", "50", "20"], "correct": 1 },
-      { "question": "What is 3 × 5?", "options": ["15", "10", "12", "20"], "correct": 0 },
-      { "question": "What is 18 ÷ 2?", "options": ["8", "9", "10", "12"], "correct": 1 }
-    ],
-    "level3": [
-      { "question": "Solve: 8 × 7 = ?", "options": ["48", "54", "56", "64"], "correct": 2 },
-      { "question": "Find the product: 9 × 9", "options": ["81", "72", "99", "90"], "correct": 0 },
-      { "question": "Divide: 72 ÷ 8", "options": ["8", "9", "10", "12"], "correct": 1 },
-      { "question": "Solve for x: 3x = 27", "options": ["7", "8", "9", "10"], "correct": 2 },
-      { "question": "Perimeter of square with side 5 is ____", "options": ["10", "15", "20", "25"], "correct": 2 },
-      { "question": "What is 75% of 100?", "options": ["25", "50", "75", "90"], "correct": 2 },
-      { "question": "Convert 0.5 to fraction", "options": ["1/2", "1/4", "1/5", "1/10"], "correct": 0 },
-      { "question": "What is 14 × 6?", "options": ["74", "84", "94", "104"], "correct": 1 },
-      { "question": "Calculate: 100 ÷ 4", "options": ["20", "25", "30", "40"], "correct": 1 },
-      { "question": "If 5 = y, then y × 10 = ___", "options": ["50", "25", "100", "15"], "correct": 0 }
+      { "question": "What is 3 + 4?", "options": ["6", "7", "8", "9"], "correct": "7" },
+      { "question": "Count the items: 2 apples + 5 apples = ?", "options": ["6", "7", "8", "9"], "correct": "7" },
+      { "question": "Which number comes after 9?", "options": ["8", "10", "11", "9"], "correct": "10" },
+      { "question": "What is 10 − 2?", "options": ["6", "7", "8", "9"], "correct": "8" },
+      { "question": "How many sides does a square have?", "options": ["3", "4", "5", "6"], "correct": "4" },
+      { "question": "Which is the smallest: 2, 7, 5, 3?", "options": ["2", "3", "5", "7"], "correct": "2" },
+      { "question": "Circle the even number: 4, 7, 9, 11", "options": ["4", "7", "9", "11"], "correct": "4" },
+      { "question": "How many fingers on one hand?", "options": ["4", "5", "6", "7"], "correct": "5" },
+      { "question": "What is 5 + 3?", "options": ["7", "8", "9", "10"], "correct": "8" },
+      { "question": "Which shape has 3 sides?", "options": ["Circle", "Triangle", "Square", "Oval"], "correct": "Triangle" },
+      { "question": "What is 5 + 5?", "options": ["9", "10", "11", "12"], "correct": "10" },
+      { "question": "Which number comes after 19?", "options": ["18", "19", "20", "21"], "correct": "20" },
+      { "question": "Subtract: 15 − 6", "options": ["7", "8", "9", "10"], "correct": "9" },
+      { "question": "How many sides does a rectangle have?", "options": ["3", "4", "5", "6"], "correct": "4" },
+      { "question": "Which is the smallest: 25, 30, 18, 22?", "options": ["25", "30", "18", "22"], "correct": "18" },
+      { "question": "What is 9 + 6?", "options": ["14", "15", "16", "17"], "correct": "15" },
+      { "question": "Count in fives: 5, 10, 15, ___", "options": ["18", "20", "25", "30"], "correct": "20" },
+      { "question": "Which shape has 4 equal sides?", "options": ["Rectangle", "Triangle", "Square", "Circle"], "correct": "Square" },
+      { "question": "How many ones are in 13?", "options": ["1", "3", "10", "13"], "correct": "3" },
+      { "question": "What is 7 + 2?", "options": ["8", "9", "10", "11"], "correct": "9" },
+      { "question": "What is 6 + 8?", "options": ["12", "13", "14", "15"], "correct": "14" },
+      { "question": "Which number comes before 50?", "options": ["49", "50", "51", "52"], "correct": "49" },
+      { "question": "Subtract: 12 − 4", "options": ["6", "7", "8", "9"], "correct": "8" },
+      { "question": "How many corners does a triangle have?", "options": ["2", "3", "4", "5"], "correct": "3" },
+      { "question": "Which is greater: 25 or 32?", "options": ["25", "32", "Both equal", "None"], "correct": "32" },
+      { "question": "What is 2 more than 18?", "options": ["18", "19", "20", "21"], "correct": "20" },
+      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": "10" },
+      { "question": "What is 11 − 3?", "options": ["6", "7", "8", "9"], "correct": "8" },
+      { "question": "How many sides does a circle have?", "options": ["0", "1", "2", "4"], "correct": "0" },
+      { "question": "Which is the largest: 14, 19, 11, 16?", "options": ["14", "19", "11", "16"], "correct": "19" },
+      { "question": "What is 9 + 5?", "options": ["13", "14", "15", "16"], "correct": "14" },
+      { "question": "Which number is smallest: 20, 15, 18, 12?", "options": ["20", "15", "18", "12"], "correct": "12" },
+      { "question": "Subtract: 14 − 6", "options": ["6", "7", "8", "9"], "correct": "8" },
+      { "question": "How many hours make one day?", "options": ["10", "12", "24", "60"], "correct": "24" },
+      { "question": "What comes after 39?", "options": ["38", "39", "40", "41"], "correct": "40" },
+      { "question": "Count in fives: 5, 10, 15, 20, ___", "options": ["22", "25", "30", "35"], "correct": "25" },
+      { "question": "What is half of 20?", "options": ["5", "10", "15", "20"], "correct": "10" },
+      { "question": "How many months in a year?", "options": ["10", "11", "12", "13"], "correct": "12" },
+      { "question": "What is 7 + 9?", "options": ["15", "16", "17", "18"], "correct": "16" },
+      { "question": "Which is the odd number: 8, 10, 12, 15?", "options": ["8", "10", "12", "15"], "correct": "15" },
+      { "question": "What is 11 + 6?", "options": ["15", "16", "17", "18"], "correct": "17" },
+      { "question": "How many sides does a triangle have?", "options": ["2", "3", "4", "5"], "correct": "3" },
+      { "question": "What is 20 − 8?", "options": ["10", "11", "12", "13"], "correct": "12" },
+      { "question": "How many weeks are in one year?", "options": ["50", "51", "52", "53"], "correct": "52" },
+      { "question": "What comes before 100?", "options": ["98", "99", "101", "97"], "correct": "99" },
+      { "question": "What is double of 9?", "options": ["16", "17", "18", "19"], "correct": "18" },
+      { "question": "How many legs does a spider have?", "options": ["6", "7", "8", "9"], "correct": "8" },
+      { "question": "Count in twos: 2, 4, 6, 8, ___", "options": ["9", "10", "11", "12"], "correct": "10" },
+      { "question": "What is 50 − 25?", "options": ["20", "25", "30", "35"], "correct": "25" },
+      { "question": "Which is the largest number: 44, 48, 42, 40?", "options": ["44", "48", "42", "40"], "correct": "48" }
     ]
-  },
+  }
+}
 
-  "English Language": {
-    "level1": [
-      { "question": "• The dog is ___. (big, bigger, biggest)", "options": ["big", "bigger", "biggest"], "correct": 0 },
-      { "question": "Plural of 'cat' is?", "options": ["cats", "cates", "cat"], "correct": 0 },
-      { "question": "He ___ to school. (go, goes, gone)", "options": ["go", "goes", "gone"], "correct": 1 },
-      { "question": "Which is a noun? (run, book, happy)", "options": ["run", "book", "happy"], "correct": 1 },
-      { "question": "Choose the vowel: 'b' or 'a'?", "options": ["b", "a"], "correct": 1 },
-      { "question": "Opposite of 'fast' is?", "options": ["slow", "quick", "run"], "correct": 0 },
-      { "question": "Fill the blank: I ___ a book. (read, reads, reading)", "options": ["read", "reads", "reading"], "correct": 0 },
-      { "question": "Which is a pronoun? (he, boy, school)", "options": ["he", "boy", "school"], "correct": 0 },
-      { "question": "That is my ___. (mum, mumm, mom)", "options": ["mum", "mumm", "mom"], "correct": 0 },
-      { "question": "Choose the verb: walk/run, dog, house", "options": ["walk", "dog", "house"], "correct": 0 }
+      
     ],
-    "level2": [
-      { "question": "They ___ playing. (is, are, am)", "options": ["is", "are", "am"], "correct": 1 },
-      { "question": "Past tense of 'eat' is?", "options": ["eated", "ate", "eaten"], "correct": 1 },
-      { "question": "Pick the adjective: happy, run, dog", "options": ["happy", "run", "dog"], "correct": 0 },
-      { "question": "Opposite of 'old' is?", "options": ["young", "ancient", "aged"], "correct": 0 },
-      { "question": "She has ____ book. (a, an, the)", "options": ["a", "an", "the"], "correct": 0 },
-      { "question": "Pronoun for 'Mary and I' is?", "options": ["we", "they", "them"], "correct": 0 },
-      { "question": "What is the past of 'go'?", "options": ["goes", "went", "gone"], "correct": 1 },
-      { "question": "Which is plural? (buses, bus, buss)", "options": ["buses", "bus", "buss"], "correct": 0 },
-      { "question": "Adverb in: She runs fast.", "options": ["She", "runs", "fast"], "correct": 2 },
-      { "question": "Pick the conjunction: and, dog, table", "options": ["and", "dog", "table"], "correct": 0 }
+    "Level 2": [
+      {
+        "question": "What is 5 × 6?",
+        "options": ["30", "35", "25", "40"],
+        "answer": "30"
+      },
+      {
+        "question": "Divide 36 by 4.",
+        "options": ["8", "9", "10", "7"],
+        "answer": "9"
+      },
+      {
+        "question": "What is half of 50?",
+        "options": ["20", "25", "30", "35"],
+        "answer": "25"
+      },
+      {
+        "question": "What is 3/4 of 16?",
+        "options": ["10", "12", "14", "8"],
+        "answer": "12"
+      },
+      {
+        "question": "Which is longer: 1 meter or 100 cm?",
+        "options": ["1 meter", "100 cm", "They are equal", "None"],
+        "answer": "They are equal"
+      }
     ],
-    "level3": [
-      { "question": "He ____ dinner every day. (eat, eats, ate)", "options": ["eat", "eats", "ate"], "correct": 1 },
-      { "question": "Choose the correct order: adjective + noun (red ball / ball red)", "options": ["red ball", "ball red"], "correct": 0 },
-      { "question": "Synonym of 'big' is?", "options": ["small", "huge", "tiny"], "correct": 1 },
-      { "question": "Opposite of 'happy' is?", "options": ["sad", "angry", "excited"], "correct": 0 },
-      { "question": "Which is a question? (statement, query, Whose name is this?)", "options": ["statement", "query", "Whose name is this?"], "correct": 2 },
-      { "question": "Past participle of 'write' is?", "options": ["wrote", "written", "writing"], "correct": 1 },
-      { "question": "Choose correct preposition: cat ___ the mat (on, in, under)", "options": ["on", "in", "under"], "correct": 0 },
-      { "question": "What tense: She has eaten already?", "options": ["present perfect", "past", "future"], "correct": 0 },
-      { "question": "Pick the correct pronoun: ____ are playing (they, them, their)", "options": ["they", "them", "their"], "correct": 0 },
-      { "question": "Which is a noun? (run, quickly, happiness)", "options": ["run", "quickly", "happiness"], "correct": 2 }
-    ]
-  },
-
-  "Basic Science": {
-    "level1": [
-      { "question": "What do humans breathe in?", "options": ["water", "air", "food", "dust"], "correct": 1 },
-      { "question": "Which one is living?", "options": ["rock", "tree", "chair", "book"], "correct": 1 },
-      { "question": "The sun gives us ___", "options": ["light", "sound", "cold", "dark"], "correct": 0 },
-      { "question": "Rain comes from ____", "options": ["clouds", "sun", "trees", "soil"], "correct": 0 },
-      { "question": "Which helps us see?", "options": ["eyes", "ears", "nose", "neck"], "correct": 0 },
-      { "question": "We live on ___", "options": ["Mars", "Earth", "Moon", "Sun"], "correct": 1 },
-      { "question": "Grass is ___", "options": ["plant", "animal", "rock", "water"], "correct": 0 },
-      { "question": "We drink ___", "options": ["water", "sand", "stone", "air"], "correct": 0 },
-      { "question": "Fire is ___", "options": ["cold", "hot", "wet", "dry"], "correct": 1 },
-      { "question": "Which one is a fruit?", "options": ["carrot", "banana", "lettuce", "rice"], "correct": 1 }
-    ],
-    "level2": [
-      { "question": "Water becomes ice when it ___", "options": ["melts", "freezes", "boils", "dries"], "correct": 1 },
-      { "question": "Plants need ___ to grow", "options": ["sunlight", "stones", "dust", "noise"], "correct": 0 },
-      { "question": "Most bodies are surrounded by ___", "options": ["saltwater", "air", "vacuum", "deserts"], "correct": 1 },
-      { "question": "Birds can ___", "options": ["fly", "swim", "write", "cook"], "correct": 0 },
-      { "question": "Which one is not alive? (fish, leaf, rock, cat)", "options": ["fish", "leaf", "rock", "cat"], "correct": 2 },
-      { "question": "A baby cat is called a ___", "options": ["kitten", "puppy", "calf", "foal"], "correct": 0 },
-      { "question": "Rain falls from ___", "options": ["clouds", "trees", "ground", "sun"], "correct": 0 },
-      { "question": "A fish lives in ___", "options": ["water", "air", "soil", "sand"], "correct": 0 },
-      { "question": "Shadows are caused by ___", "options": ["light", "sound", "water", "air"], "correct": 0 },
-      { "question": "The Earth spins on its ___", "options": ["axis", "leg", "arm", "root"], "correct": 0 }
-    ],
-    "level3": [
-      { "question": "Which planet is known as the Red Planet?", "options": ["Mars", "Venus", "Jupiter", "Saturn"], "correct": 0 },
-      { "question": "The part of plant under the ground is the ___", "options": ["leaf", "root", "stem", "flower"], "correct": 1 },
-      { "question": "Birds have ___ to help them fly", "options": ["wings", "fins", "legs", "tails"], "correct": 0 },
-      { "question": "Honey is made by ___", "options": ["ants", "bees", "birds", "worms"], "correct": 1 },
-      { "question": "Our heart helps to pump ___", "options": ["blood", "water", "air", "food"], "correct": 0 },
-      { "question": "We get water from ___", "options": ["rain", "books", "chairs", "roads"], "correct": 0 },
-      { "question": "Rainbows appear after ___", "options": ["rain", "sun", "storm", "snow"], "correct": 0 },
-      { "question": "Leaves make food using ___", "options": ["sunlight", "stones", "dust", "air"], "correct": 0 },
-      { "question": "Fog is tiny drops of ___", "options": ["water", "sand", "dirt", "oil"], "correct": 0 },
-      { "question": "The biggest land animal is ___", "options": ["elephant", "lion", "cow", "giraffe"], "correct": 0 }
+    "Level 3": [
+      {
+        "question": "What is 50% of 80?",
+        "options": ["30", "40", "50", "60"],
+        "answer": "40"
+      },
+      {
+        "question": "If a rectangle is 5 m long and 4 m wide, what is the area?",
+        "options": ["9 m²", "20 m²", "10 m²", "12 m²"],
+        "answer": "20 m²"
+      },
+      {
+        "question": "Convert 250 cm into meters.",
+        "options": ["2.5 m", "25 m", "0.25 m", "250 m"],
+        "answer": "2.5 m"
+      },
+      {
+        "question": "What is 3/5 of 25?",
+        "options": ["10", "12", "15", "8"],
+        "answer": "15"
+      },
+      {
+        "question": "Express ¾ as a percentage.",
+        "options": ["50%", "75%", "25%", "100%"],
+        "answer": "75%"
+      }
     ]
   }
 }
