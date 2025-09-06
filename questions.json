@@ -432,7 +432,32 @@
       { "question": "What do we need to keep clean?", "options": ["Hands", "Shoes", "Clothes", "Toys"], "answer": "Hands" },
       { "question": "Which planet is nearest to the Sun?", "options": ["Mercury", "Earth", "Mars", "Venus"], "answer": "Mercury" }
     ]
+  },
+    "Level 2": [
+      { "question": "Which gas do we breathe in to live?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+      { "question": "Which planet is called the Red Planet?", "options": ["Mars", "Earth", "Venus", "Jupiter"], "answer": "Mars" },
+      { "question": "Which animal lays eggs?", "options": ["Chicken", "Dog", "Cow", "Sheep"], "answer": "Chicken" },
+      { "question": "Which organ pumps blood around the body?", "options": ["Heart", "Lung", "Brain", "Stomach"], "answer": "Heart" },
+      { "question": "Which material is used to make glass?", "options": ["Sand", "Wood", "Metal", "Plastic"], "answer": "Sand" },
+      { "question": "Which animal can live both on land and in water?", "options": ["Frog", "Lion", "Dog", "Elephant"], "answer": "Frog" },
+      { "question": "What do plants need to make food?", "options": ["Sunlight", "Air", "Water", "All of these"], "answer": "All of these" },
+      { "question": "Which force pulls objects to the ground?", "options": ["Gravity", "Magnetism", "Friction", "Electricity"], "answer": "Gravity" },
+      { "question": "Which part of the plant absorbs water?", "options": ["Root", "Leaf", "Stem", "Flower"], "answer": "Root" },
+      { "question": "Which is a renewable source of energy?", "options": ["Sun", "Coal", "Petrol", "Gas"], "answer": "Sun" },
+      { "question": "Which organ helps us breathe?", "options": ["Lungs", "Heart", "Kidneys", "Stomach"], "answer": "Lungs" },
+      { "question": "Which animal is known for building dams?", "options": ["Beaver", "Dog", "Cat", "Elephant"], "answer": "Beaver" },
+      { "question": "Which simple machine is a seesaw?", "options": ["Lever", "Pulley", "Wheel", "Inclined plane"], "answer": "Lever" },
+      { "question": "Which part of the body helps us hear?", "options": ["Ear", "Eye", "Nose", "Hand"], "answer": "Ear" },
+      { "question": "Which animal has a shell?", "options": ["Turtle", "Lion", "Horse", "Elephant"], "answer": "Turtle" },
+      { "question": "Which planet is known for its rings?", "options": ["Saturn", "Earth", "Mars", "Venus"], "answer": "Saturn" },
+      { "question": "Which liquid do plants need most?", "options": ["Water", "Milk", "Oil", "Juice"], "answer": "Water" },
+      { "question": "Which animal gives us wool?", "options": ["Sheep", "Cow", "Goat", "Pig"], "answer": "Sheep" },
+      { "question": "Which part of a plant makes seeds?", "options": ["Flower", "Leaf", "Root", "Stem"], "answer": "Flower" },
+      { "question": "Which is a conductor of electricity?", "options": ["Copper", "Plastic", "Wood", "Rubber"], "answer": "Copper" }
+    ]
   }
 }
+
+  
 
       
