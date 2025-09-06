@@ -1,14 +1,14 @@
 // ================================
-// QUIZ.JS - EduKids Africa
+// QUIZ.JS - EduKids Africa Quiz
 // ================================
 
-// --- Sounds ---
+// Sounds
 const correctSound = new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
 const wrongSound = new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
 const levelUpSound = new Audio("https://actions.google.com/sounds/v1/cartoon/congratulations.ogg");
 const gameOverSound = new Audio("https://actions.google.com/sounds/v1/cartoon/boing.ogg");
 
-// --- Levels setup ---
+// Levels
 const levels = [
   { level: 1, total: 50, pass: 45 },
   { level: 2, total: 60, pass: 55 },
@@ -20,42 +20,42 @@ let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 
-// --- DOM elements ---
+// DOM Elements
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("optionsContainer");
 const scoreDisplay = document.getElementById("scoreDisplay");
 const levelDisplay = document.getElementById("levelDisplay");
+const progressBar = document.getElementById("progressBar");
+const clockElement = document.getElementById("clock");
+const modal = document.getElementById("instructionModal");
+const startBtn = document.getElementById("startQuizBtn");
 
-// --- Get subject from URL ---
-const urlParams = new URLSearchParams(window.location.search);
-const subject = urlParams.get("subject") || "Mathematics";
+// Start clock ⏰
+function startClock() {
+  setInterval(() => {
+    const now = new Date();
+    clockElement.textContent = now.toLocaleTimeString();
+  }, 1000);
+}
+startClock();
 
-// --- Load questions from JSON ---
-async function loadQuestions(level) {
+// Load questions.json for current level
+async function loadQuestions(levelObj) {
   try {
-    const response = await fetch("questions.json");
-    if (!response.ok) throw new Error("Failed to load questions.json");
-
-    const data = await response.json();
-    const subjectData = data[subject];
-
-    if (!subjectData || !subjectData[`level${level.level}`]) {
-      throw new Error(`No questions found for ${subject}, Level ${level.level}`);
-    }
-
-    return subjectData[`level${level.level}`];
+    const res = await fetch("questions.json");
+    const data = await res.json();
+    // Currently hard-coded subject = "Mathematics"
+    let subject = "Mathematics";
+    return data[subject][`level${levelObj.level}`];
   } catch (err) {
-    console.error(err);
-    alert("❌ Could not load questions. Check console for details.");
+    console.error("Error loading questions:", err);
     return [];
   }
 }
 
-// --- Render current question ---
+// Render current question
 function renderQuestion() {
   const q = currentQuestions[currentQuestionIndex];
-  if (!q) return;
-
   questionText.textContent = q.question;
   optionsContainer.innerHTML = "";
 
@@ -63,7 +63,7 @@ function renderQuestion() {
     const btn = document.createElement("button");
     btn.textContent = option;
     btn.className =
-      "w-full text-left px-4 py-3 mb-2 rounded-lg bg-white border border-purple-300 hover:bg-purple-100 transition";
+      "w-full text-left px-4 py-3 rounded-lg bg-purple-100 hover:bg-purple-200 transition";
     btn.onclick = () => checkAnswer(index, btn);
     optionsContainer.appendChild(btn);
   });
@@ -71,29 +71,28 @@ function renderQuestion() {
   updateScoreBoard();
 }
 
-// --- Check answer ---
+// Check answer
 function checkAnswer(selectedIndex, btn) {
   const q = currentQuestions[currentQuestionIndex];
 
-  if (selectedIndex === q.correct) {
+  if (q.options[selectedIndex] === q.correct) {
     score++;
     btn.classList.add("bg-green-500", "text-white");
     correctSound.play();
   } else {
     btn.classList.add("bg-red-500", "text-white");
     wrongSound.play();
-
-    // highlight correct option
-    [...optionsContainer.children][q.correct].classList.add(
-      "bg-green-500",
-      "text-white"
-    );
+    // highlight correct
+    const correctBtnIndex = q.options.indexOf(q.correct);
+    if (correctBtnIndex >= 0) {
+      optionsContainer.children[correctBtnIndex].classList.add("bg-green-500", "text-white");
+    }
   }
 
-  // disable all buttons
-  [...optionsContainer.children].forEach((b) => (b.disabled = true));
+  // disable buttons
+  [...optionsContainer.children].forEach(b => b.disabled = true);
 
-  // Next question after short delay
+  // Next after 1s
   setTimeout(() => {
     currentQuestionIndex++;
     if (currentQuestionIndex < currentQuestions.length) {
@@ -104,56 +103,52 @@ function checkAnswer(selectedIndex, btn) {
   }, 1000);
 }
 
-// --- End level ---
+// End Level
 function endLevel() {
-  const level = levels[currentLevelIndex];
-  if (score >= level.pass) {
+  const levelObj = levels[currentLevelIndex];
+  if (score >= levelObj.pass) {
     levelUpSound.play();
-    alert(`🎉 Congratulations! You passed Level ${level.level} in ${subject}.`);
+    alert(`🎉 Congrats! You passed Level ${levelObj.level}.`);
     currentLevelIndex++;
     if (currentLevelIndex < levels.length) {
       startLevel();
     } else {
-      alert(`👑 You completed all levels in ${subject} and earned the crown!`);
+      alert("👑 You completed all levels and earned the crown!");
     }
   } else {
     gameOverSound.play();
-    alert(
-      `❌ Game Over! You scored ${score} out of ${level.total}. Required: ${level.pass}.`
-    );
+    alert(`❌ Game Over! You scored ${score}/${levelObj.total}. Required: ${levelObj.pass}.`);
     resetGame();
   }
 }
 
-// --- Start level ---
+// Start Level
 async function startLevel() {
-  const level = levels[currentLevelIndex];
-  currentQuestions = await loadQuestions(level);
-
-  if (currentQuestions.length === 0) {
-    alert("⚠ No questions available. Please check questions.json.");
-    return;
-  }
-
+  const levelObj = levels[currentLevelIndex];
+  currentQuestions = await loadQuestions(levelObj);
   currentQuestionIndex = 0;
   score = 0;
-  updateScoreBoard();
+  levelDisplay.textContent = `Level ${levelObj.level}`;
   renderQuestion();
-  levelDisplay.textContent = `Level ${level.level}`;
 }
 
-// --- Update scoreboard ---
+// Update scoreboard
 function updateScoreBoard() {
-  const level = levels[currentLevelIndex];
-  scoreDisplay.textContent = `Score: ${score}/${level.total}`;
+  const levelObj = levels[currentLevelIndex];
+  scoreDisplay.textContent = `Score: ${score}/${levelObj.total}`;
+  const progressPercent = ((currentQuestionIndex + 1) / levelObj.total) * 100;
+  progressBar.style.width = `${progressPercent}%`;
 }
 
-// --- Reset game ---
+// Reset Game
 function resetGame() {
   currentLevelIndex = 0;
   score = 0;
   startLevel();
 }
 
-// --- Start game ---
-startLevel();
+// Modal start
+startBtn.addEventListener("click", () => {
+  modal.style.display = "none";
+  startLevel();
+});
