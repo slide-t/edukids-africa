@@ -55,8 +55,95 @@
       </button>
     </div>
   </div>
+<!-- Shared site footer -->
+  <footer>
+    <div>
+      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
+      <p style="font-size:0.9rem; color:#aaa;">
+        © <span id="year"></span> EduKids Africa. All rights reserved.
+      </p>
+    </div>
+    
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+  
+  </footer>
+  <style>
+/* Footer */
+    footer {
+      background: #2c1a47;
+      color: #fff;
+      padding: 20px;
+      right:0;
+      left:0;
+      margin: 50px auto;
+      text-align: center;
+      
+    }
 
-  <!-- FOOTER -->
+    .typing-logo {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff6b6b;
+      width: 0;
+      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 220px; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-links a:hover {
+  background: #ffcc00;
+  color: #222;
+}
+
+.footer-links a.active {
+  color: #fff;
+  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+  background: #009999;
+}
+
+.footer-note {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+</style>
+
+  
+  <!-- FOOTER --
   <footer class="bg-purple-800 text-white text-center p-4 mt-8">
     <p>&copy; 2025 EduKids Africa. All Rights Reserved.</p>
   </footer>
