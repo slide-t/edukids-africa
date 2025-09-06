@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduKids Africa - Quiz</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-purple-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">EduKids Africa</h1>
+    <div class="flex items-center gap-6">
+      <!-- Clock -->
+      <div class="flex items-center gap-2">
+        <i class="lucide lucide-clock text-white"></i>
+        <span id="clock" class="font-mono">00:00:00</span>
+      </div>
+      <!-- Score & Level -->
+      <div class="flex items-center gap-4">
+        <span id="levelDisplay" class="font-bold">Level 1</span>
+        <span id="scoreDisplay" class="bg-white text-purple-800 px-3 py-1 rounded-lg shadow">Score: 0/0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN QUIZ CONTAINER -->
+  <main class="max-w-3xl mx-auto p-6">
+    <div class="bg-white rounded-xl shadow-lg p-6">
+      <!-- Question -->
+      <h2 id="questionText" class="text-lg font-semibold mb-4">Loading question...</h2>
+      <!-- Options -->
+      <div id="optionsContainer" class="space-y-3"></div>
+      <!-- Progress -->
+      <div class="mt-6">
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div id="progressBar" class="bg-purple-600 h-3 rounded-full" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <!-- INSTRUCTION MODAL -->
+  <div id="instructionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 max-w-md text-center shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Welcome to EduKids Africa Quiz 🎉</h2>
+      <p class="mb-4 text-gray-700">
+        Answer the questions carefully. Each correct answer gives you a point.
+        To move to the next level, you must meet the pass mark.
+      </p>
+      <button id="startQuizBtn" class="bg-purple-800 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
+        I'm Ready 🚀
+      </button>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-purple-800 text-white text-center p-4 mt-8">
+    <p>&copy; 2025 EduKids Africa. All Rights Reserved.</p>
+  </footer>
+
+  <!-- EXTERNAL SCRIPT -->
+  <script src="quiz.js"></script>
+</body>
+</html>
