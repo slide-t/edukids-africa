@@ -176,7 +176,29 @@
       { "question": "What is the sum of the angles in a quadrilateral?", "options": ["180°", "270°", "360°", "540°"], "answer": "360°" },
       { "question": "Find the square of 18.", "options": ["324", "326", "328", "330"], "answer": "324" },
       { "question": "Express 45 minutes as a fraction of an hour.", "options": ["1/2", "3/4", "2/3", "5/6"], "answer": "3/4" },
+      { "question": "The radius of a circle is 14 cm. Find its circumference (π=22/7).", "options": ["86 cm", "88 cm", "90 cm", "92 cm"], "answer": "88 cm" },
+      
+      { "question": "Solve: 15 × 4 ÷ 3", "options": ["20", "15", "10", "25"], "answer": "20" },
+      { "question": "Find the value of x: 2x + 6 = 18", "options": ["5", "6", "7", "8"], "answer": "6" },
+      { "question": "Write 3/5 as a percentage.", "options": ["50%", "55%", "60%", "65%"], "answer": "60%" },
+      { "question": "Convert 2.75 to a mixed fraction.", "options": ["2 1/2", "2 3/4", "2 2/5", "2 4/5"], "answer": "2 3/4" },
+      { "question": "Simplify: 3/8 + 5/8", "options": ["1", "7/8", "8/8", "9/8"], "answer": "1" },
+      { "question": "A bag contains 3 red balls and 2 blue balls. Probability of picking a red ball?", "options": ["1/2", "3/5", "2/5", "1/3"], "answer": "3/5" },
+      { "question": "Find the mode of: 4, 6, 4, 7, 8, 4, 9", "options": ["6", "7", "4", "9"], "answer": "4" },
+      { "question": "Simplify: 48 ÷ (6 × 2)", "options": ["2", "3", "4", "5"], "answer": "4" },
+      { "question": "A car travels 120 km in 3 hours. Find its average speed.", "options": ["30 km/h", "40 km/h", "50 km/h", "60 km/h"], "answer": "40 km/h" },
+      { "question": "Write the next two terms: 2, 4, 8, 16, ...", "options": ["20, 24", "30, 36", "32, 64", "24, 48"], "answer": "32, 64" },
+      { "question": "Express 0.125 as a fraction in simplest form.", "options": ["1/4", "1/6", "1/8", "1/10"], "answer": "1/8" },
+      { "question": "Solve: 9² - 7²", "options": ["28", "32", "36", "40"], "answer": "32" },
+      { "question": "A rectangle has length 12 cm and breadth 5 cm. Find its area.", "options": ["50 cm²", "60 cm²", "70 cm²", "80 cm²"], "answer": "60 cm²" },
+      { "question": "What is the supplement of 65°?", "options": ["105°", "110°", "115°", "120°"], "answer": "115°" },
+      { "question": "Change 2500 g to kilograms.", "options": ["2.5 kg", "25 kg", "0.25 kg", "250 kg"], "answer": "2.5 kg" },
+      { "question": "Factorize: x² + 7x + 10", "options": ["(x+5)(x+2)", "(x+4)(x+3)", "(x+6)(x+1)", "(x+7)(x+1)"], "answer": "(x+5)(x+2)" },
+      { "question": "If 2/3 of a number is 12, what is the number?", "options": ["16", "18", "20", "24"], "answer": "18" },
+      { "question": "A cube has volume 64 cm³. Find its edge.", "options": ["2 cm", "3 cm", "4 cm", "5 cm"], "answer": "4 cm" },
+      { "question": "Find the mean of: 5, 10, 15, 20, 25.", "options": ["12", "13", "14", "15"], "answer": "15" },
       { "question": "The radius of a circle is 14 cm. Find its circumference (π=22/7).", "options": ["86 cm", "88 cm", "90 cm", "92 cm"], "answer": "88 cm" }
-  ]
+    ]
   }
 }
+
