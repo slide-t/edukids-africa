@@ -272,21 +272,35 @@ function startLevel() {
   renderQuestion();
 }
 
-/* Determine result and show modal */
 function endLevel() {
   const totalQuestions = questions.length || 1;
   const percent = (score / totalQuestions) * 100;
   const passed = percent >= PASS_PERCENT;
 
-  // Save if passed
   const levelKey = availableLevels[currentLevelIndex];
   if (passed) {
     saveLevelPassed(levelKey);
-  }
 
-  // Show end modal with details
-  showEndModal(passed, score, totalQuestions);
+    // ✅ Auto-start next level if available
+    currentLevelIndex++;
+    if (currentLevelIndex < availableLevels.length) {
+      levelUpSound.play();
+      alert(`🎉 Congrats! You passed ${levelKey}. Moving to next level...`);
+      startLevel();
+    } else {
+      alert(`👑 You completed all levels for ${subject}!`);
+    }
+  } else {
+    gameOverSound.play();
+    alert(`❌ You scored ${score}/${totalQuestions} (${Math.round(percent)}%). Required: ${PASS_PERCENT}%.`);
+    // Restart same level
+    prepareLevelQuestions();
+    currentQuestionIndex = 0;
+    score = 0;
+    renderQuestion();
+  }
 }
+
 
 /* Button handlers for end modal */
 if (retryBtn) {
