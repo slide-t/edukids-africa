@@ -142,13 +142,24 @@
 
 </style>
 
-  
-  <!-- FOOTER --
-  <footer class="bg-purple-800 text-white text-center p-4 mt-8">
-    <p>&copy; 2025 EduKids Africa. All Rights Reserved.</p>
-  </footer>
-
   <!-- EXTERNAL SCRIPT -->
   <script src="quiz.js"></script>
+<!-- LEVEL SUMMARY MODAL -->
+<div id="summaryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+  <div class="bg-white rounded-xl p-6 max-w-md w-full text-center shadow-lg">
+    <h2 id="summaryTitle" class="text-xl font-bold mb-4">Level Summary</h2>
+    <p id="summaryMessage" class="mb-4 text-gray-700"></p>
+    <div class="flex justify-center gap-4">
+      <button id="retryBtn" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-500 transition hidden">
+        Retry 🔄
+      </button>
+      <button id="nextLevelBtn" class="bg-purple-800 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition hidden">
+        Next Level 🚀
+      </button>
+    </div>
+  </div>
+</div>
+
+  
 </body>
 </html>
