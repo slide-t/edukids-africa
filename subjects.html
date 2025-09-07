@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Subjects - EduKids Africa</title>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Tooltip */
+#searchTooltip {
+  @apply absolute bg-yellow-400 text-gray-900 px-3 py-1 rounded shadow-lg text-sm opacity-0 transition-opacity duration-300;
+  top: 3.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+}
+</style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Navbar -->
+<header class="bg-purple-900 text-white fixed w-full z-50 shadow-md">
+  <div class="max-w-6xl mx-auto flex justify-between items-center px-4 py-3">
+    <h1 class="text-xl font-bold">EduKids Africa</h1>
+    <nav class="hidden md:flex space-x-6">
+      <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+      <a href="subjects.html" class="hover:text-yellow-400 transition">Subjects</a>
+      <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+      <a href="blog.html" class="hover:text-yellow-400 transition">Blog</a>
+    </nav>
+    <button id="mobileToggle" class="md:hidden focus:outline-none">
+      <i class="fas fa-bars text-2xl transition-transform duration-300"></i>
+    </button>
+  </div>
+  <div id="mobileMenu" class="hidden flex-col px-4 pb-4 space-y-3 md:hidden">
+    <a href="index.html" class="block hover:text-yellow-400 transition">Home</a>
+    <a href="subjects.html" class="block hover:text-yellow-400 transition">Subjects</a>
+    <a href="contact.html" class="block hover:text-yellow-400 transition">Contact</a>
+    <a href="blog.html" class="block hover:text-yellow-400 transition">Blog</a>
+  </div>
+</header>
+
+<main class="pt-24 max-w-4xl mx-auto px-4">
+
+  <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Subjects Offered</h1>
+
+  <!-- Search Bar -->
+  <div class="relative mb-6">
+    <input type="text" id="searchInput" class="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition" placeholder="" />
+    <div id="searchTooltip">Please enter a subject</div>
+  </div>
+
+  <!-- Subject list -->
+  <div id="subject-list" class="space-y-4"></div>
+
+</main>
+
+<footer class="bg-purple-900 text-white mt-12 py-6 text-center">
+  <h2 class="text-xl font-bold mb-1">EduKids Africa</h2>
+  <p class="text-sm mb-2">Shaping Bright Futures with Love & Learning</p>
+  <p class="text-xs">© <span id="year"></span> EduKids Africa. All rights reserved.</p>
+</footer>
+
+<script>
+// Year auto-update
+document.getElementById("year").textContent = new Date().getFullYear();
+
+// Mobile menu toggle
+const mobileToggle = document.getElementById("mobileToggle");
+const mobileMenu = document.getElementById("mobileMenu");
+let menuOpen = false;
+mobileToggle.addEventListener("click", () => {
+  menuOpen = !menuOpen;
+  mobileMenu.classList.toggle("hidden");
+  const icon = mobileToggle.querySelector("i");
+  icon.classList.toggle("fa-bars");
+  icon.classList.toggle("fa-times");
+  icon.classList.toggle("rotate-90");
+});
+
+// Typing placeholder
+const placeholderText = "search by subject here...";
+let i = 0;
+function typePlaceholder() {
+  if(i <= placeholderText.length){
+    document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0,i));
+    i++;
+    setTimeout(typePlaceholder, 120);
+  }
+}
+typePlaceholder();
+
+// Tooltip
+const tooltip = document.getElementById("searchTooltip");
+
+// Subjects
+let subjects = {};
+const subjectList = document.getElementById("subject-list");
+const searchInput = document.getElementById("searchInput");
+
+// Load subjects.json
+async function loadSubjects() {
+  try {
+    const res = await fetch('subjects.json');
+    subjects = await res.json();
+    renderSubjects();
+  } catch(err) {
+    console.error("Failed to load subjects.json", err);
+    subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
+  }
+}
+
+// Render Subjects
+function renderSubjects(filter = "") {
+  subjectList.innerHTML = "";
+
+  Object.keys(subjects).forEach(category => {
+    // Group container
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "subject-group bg-white rounded-xl shadow p-4 mb-6";
+
+    // Heading
+    const heading = document.createElement("h2");
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2";
+    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+    // Subject list container
+    const listDiv = document.createElement("div");
+    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 pb-6 space-y-2";
+
+    // Add filtered subjects
+    subjects[category]
+      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(sub => {
+        const item = document.createElement("a");
+        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition";
+        item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
+        item.textContent = sub;
+        listDiv.appendChild(item);
+      });
+
+    // Toggle on heading click
+    heading.addEventListener("click", () => {
+      listDiv.classList.toggle("max-h-0");
+      listDiv.classList.toggle("max-h-96");
+      const icon = heading.querySelector("i");
+      icon.classList.toggle("rotate-180");
+    });
+
+    groupDiv.appendChild(heading);
+    groupDiv.appendChild(listDiv);
+    subjectList.appendChild(groupDiv);
+  });
+
+  // Auto-expand matching category when typing
+  if(filter) {
+    Array.from(subjectList.querySelectorAll(".subject-list")).forEach(list => {
+      if(list.children.length > 0){
+        list.classList.remove("max-h-0");
+        list.classList.add("max-h-96");
+        list.previousElementSibling.querySelector("i").classList.add("rotate-180");
+      }
+    });
+  }
+}
+
+// Search input
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.trim();
+  renderSubjects(value);
+});
+
+searchInput.addEventListener("keydown", e => {
+  if(e.key === "Enter" && e.target.value.trim() === ""){
+    tooltip.classList.remove("opacity-0");
+    tooltip.classList.add("opacity-100");
+    setTimeout(() => {
+      tooltip.classList.remove("opacity-100");
+      tooltip.classList.add("opacity-0");
+    }, 10000);
+  }
+});
+
+loadSubjects();
+</script>
+</body>
+</html>
