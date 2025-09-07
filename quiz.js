@@ -149,6 +149,22 @@ function endLevel() {
   summaryModal.classList.remove("hidden");
   summaryModal.classList.add("flex");
 }
+function updateHelpModalButtons() {
+  const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+
+  replayBtns.forEach(btn => {
+    const level = parseInt(btn.dataset.level);
+    const levelKey = availableLevels[level - 1];
+    
+    if (progress[subject] && progress[subject][levelKey]) {
+      btn.classList.remove("hidden");
+    } else {
+      btn.classList.add("hidden");
+    }
+  });
+}
+
+
 
 // =========================
 // EVENT HANDLERS
@@ -214,6 +230,7 @@ replayBtns.forEach(btn => {
     }
   });
 });
+
 
 resetLevelBtn.addEventListener("click", () => {
   score = 0;
