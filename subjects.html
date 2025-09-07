@@ -185,15 +185,16 @@ function renderSubjects(filter = "") {
     heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
     heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
 
+    /*
 // Subject list container
 const listDiv = document.createElement("div");
 listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 pb-4"; // added padding bottom
-
+*/
     
-   /* // Subject list container
+    // Subject list container
     const listDiv = document.createElement("div");
     listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
-*/
+
     // Add filtered subjects
     subjects[category]
       .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
