@@ -36,6 +36,44 @@ let score = 0;
 const PASS_PERCENT = 75;
 const progressKey = `EduKidsProgress_${subject}`; // localStorage key
 
+/* timer for each question */
+
+let timerInterval;
+let timeLeft = 15;
+const circle = document.getElementById("timerCircle");
+const timerText = document.getElementById("timerText");
+const circleLength = 220; // circumference
+
+
+function startTimer() {
+  clearInterval(timerInterval);
+  timeLeft = 15;
+  timerText.textContent = timeLeft;
+  circle.style.strokeDasharray = circleLength;
+  circle.style.strokeDashoffset = 0;
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    timerText.textContent = timeLeft;
+
+    const progress = (timeLeft / 15) * circleLength;
+    circle.style.strokeDashoffset = circleLength - progress;
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      // auto move to next question or mark wrong
+      handleTimeout();
+    }
+  }, 1000);
+}
+
+function handleTimeout() {
+  // treat as incorrect and move on
+  currentQuestionIndex++;
+  renderQuestion();
+}
+
+
 /* Utility: start clock */
 function startClock() {
   setInterval(() => {
@@ -160,6 +198,9 @@ function renderQuestion() {
   }
   updateScoreBoard();
 }
+startTimer();
+}
+
 
 /* When user selects an option */
 function onSelectOption(selectedText, btnEl) {
