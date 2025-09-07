@@ -207,63 +207,7 @@
     </div>
   </div>
 </div>
-  <!--
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-  const helpBtn = document.getElementById("eduHelpBtn");
-  const helpModal = document.getElementById("eduHelpModal");
-  const closeHelpBtn = document.getElementById("eduCloseHelpBtn");
-  const replayBtns = document.querySelectorAll(".eduHelpBtnOption");
-  const resetBtn = document.getElementById("eduResetLevelBtn");
-  const backSubjectsBtn = document.getElementById("eduBackSubjectsBtn");
 
-  // Show modal
-  helpBtn.addEventListener("click", () => {
-    helpModal.classList.remove("hidden");
-    helpModal.classList.add("flex");
-  });
-
-  // Close modal
-  closeHelpBtn.addEventListener("click", () => {
-    helpModal.classList.add("hidden");
-    helpModal.classList.remove("flex");
-  });
-
-  // Replay specific level
-  replayBtns.forEach(btn => {
-    btn.addEventListener("click", () => {
-      const level = parseInt(btn.dataset.level);
-      // Set currentLevelIndex to selected level
-      if (typeof startLevel === "function" && availableLevels && availableLevels.length >= level) {
-        currentLevelIndex = level - 1; // zero-based index
-        // Clear previous score
-        score = 0;
-        currentQuestionIndex = 0;
-        prepareLevelQuestions();
-        renderQuestion();
-        helpModal.classList.add("hidden");
-        helpModal.classList.remove("flex");
-      }
-    });
-  });
-
-  // Reset current level
-  resetBtn.addEventListener("click", () => {
-    score = 0;
-    currentQuestionIndex = 0;
-    prepareLevelQuestions();
-    renderQuestion();
-    helpModal.classList.add("hidden");
-    helpModal.classList.remove("flex");
-  });
-
-  // Go back to subjects page
-  backSubjectsBtn.addEventListener("click", () => {
-    window.location.href = "subjects.html"; // Adjust path if needed
-  });
-});
-</script>
--->
 <script>
  // ========================
 // Floating Help Button JS
