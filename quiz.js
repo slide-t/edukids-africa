@@ -1,393 +1,253 @@
-// ================================================
-// quiz.js - EduKids Africa (All Qs + Summary + Help)
-// ================================================
+// ===============================
+// EduKids Africa - quiz.js
+// ===============================
 
-/* Sounds */
-const correctSound = new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
-const wrongSound = new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
-const levelUpSound = new Audio("https://actions.google.com/sounds/v1/cartoon/congratulations.ogg");
-const gameOverSound = new Audio("https://actions.google.com/sounds/v1/cartoon/boing.ogg");
+// ====== GLOBAL STATE ======
+let currentLevelIndex = 0;
+let currentQuestionIndex = 0;
+let score = 0;
+let questions = {};
+let levelQuestions = [];
+let resultsLog = []; // <-- stores attempts for Help Modal
 
-/* Core DOM */
+const availableLevels = ["level1", "level2", "level3"];
+const progressKey = "edukids_progress";
+
+// ====== DOM ELEMENTS ======
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("optionsContainer");
+const progressBar = document.getElementById("progressBar");
 const scoreDisplay = document.getElementById("scoreDisplay");
 const levelDisplay = document.getElementById("levelDisplay");
-const progressBar = document.getElementById("progressBar");
-const clockElement = document.getElementById("clock");
 
-/* Instruction modal */
+// Instruction modal
 const instructionModal = document.getElementById("instructionModal");
-const startBtn = document.getElementById("startQuizBtn");
+const startQuizBtn = document.getElementById("startQuizBtn");
 
-/* Summary modal (end-of-level) */
+// Summary modal
 const summaryModal = document.getElementById("summaryModal");
 const summaryTitle = document.getElementById("summaryTitle");
 const summaryMessage = document.getElementById("summaryMessage");
-// IMPORTANT: there are two elements with id="retryBtn" in your HTML.
-// Scope them per modal to avoid conflicts:
-const summaryRetryBtn = summaryModal ? summaryModal.querySelector("#retryBtn") : null;
+const retryBtn = document.getElementById("retryBtn");
 const nextLevelBtn = document.getElementById("nextLevelBtn");
 
-/* End modal exists in your HTML but we WON'T use it to avoid double modals.
-   If you ever want it, you can wire it similarly with scoped selectors:
-   const endModal = document.getElementById("endModal");
-   const endRetryBtn = endModal ? endModal.querySelector("#retryBtn") : null;
-   const nextBtn = document.getElementById("nextBtn");
-*/
+// End modal
+const endModal = document.getElementById("endModal");
+const endTitle = document.getElementById("endTitle");
+const endMessage = document.getElementById("endMessage");
+const endRetryBtn = document.querySelector("#endModal #retryBtn");
+const endNextBtn = document.querySelector("#endModal #nextBtn");
 
-/* Floating help modal (already wired in HTML) */
+// Help Modal & Results
+const helpBtn = document.getElementById("eduHelpBtn");
 const helpModal = document.getElementById("eduHelpModal");
+const closeHelpBtn = document.getElementById("eduCloseHelpBtn");
+const replayBtns = document.querySelectorAll("#eduReplayLevelOptions .eduHelpBtnOption");
+const resetLevelBtn = document.getElementById("eduResetLevelBtn");
+const backSubjectsBtn = document.getElementById("eduBackSubjectsBtn");
 
-/* State */
-let subject = decodeURIComponent(new URLSearchParams(window.location.search).get("subject") || "Mathematics");
-let subjectData = {};
-let availableLevels = [];               // e.g., ["Level 1","Level 2","Level 3"]
-let currentLevelIndex = 0;              // index into availableLevels
-let questions = [];                     // questions for current level
-let currentQuestionIndex = 0;
-let score = 0;
-let attemptsLog = [];                   // [{question, selected, correct, isCorrect}]
-const PASS_PERCENT = 75;
-const progressKey = `EduKidsProgress_${subject}`;
+// Create container inside Help Modal for results summary
+let eduResultsList = document.createElement("div");
+eduResultsList.id = "eduResultsList";
+eduResultsList.className = "text-left text-sm mt-4 max-h-48 overflow-y-auto";
+helpModal.querySelector(".bg-white").appendChild(eduResultsList);
 
-/* Clock */
-function startClock() {
-  setInterval(() => {
-    const now = new Date();
-    if (clockElement) clockElement.textContent = now.toLocaleTimeString();
-  }, 1000);
+// ====== SAMPLE QUESTIONS ======
+questions = {
+  level1: [
+    { question: "What is 2 + 2?", options: ["3", "4", "5"], correctAnswer: "4" },
+    { question: "What is 5 - 3?", options: ["2", "1", "3"], correctAnswer: "2" }
+  ],
+  level2: [
+    { question: "Which planet is known as the Red Planet?", options: ["Earth", "Mars", "Venus"], correctAnswer: "Mars" },
+    { question: "How many continents are there?", options: ["5", "6", "7"], correctAnswer: "7" }
+  ],
+  level3: [
+    { question: "Who wrote Hamlet?", options: ["Shakespeare", "Chinua Achebe", "Homer"], correctAnswer: "Shakespeare" },
+    { question: "The currency of Nigeria is?", options: ["Dollar", "Naira", "Cedi"], correctAnswer: "Naira" }
+  ]
+};
+
+// ====== UTILITIES ======
+function shuffleArray(arr) {
+  return arr.sort(() => Math.random() - 0.5);
 }
 
-/* Utils */
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
+function updateClock() {
+  const now = new Date();
+  document.getElementById("clock").textContent = now.toLocaleTimeString();
+}
+setInterval(updateClock, 1000);
+
+// ====== QUIZ FLOW ======
+function startLevel(levelIndex) {
+  currentLevelIndex = levelIndex;
+  currentQuestionIndex = 0;
+  score = 0;
+  resultsLog = []; // reset results per level
+  prepareLevelQuestions();
+  renderQuestion();
+  updateScoreDisplay();
+  updateResultsSummary();
 }
 
-/* Load questions.json + levels */
-async function loadSubjectData() {
-  try {
-    const res = await fetch("questions.json");
-    const data = await res.json();
-
-    const category = new URLSearchParams(window.location.search).get("category");
-    if (category && data[category] && data[category][subject]) {
-      subjectData = data[category][subject];
-    } else if (data[subject]) {
-      subjectData = data[subject];
-    } else {
-      // fallback: scan nested categories
-      for (const k of Object.keys(data)) {
-        if (typeof data[k] === "object" && data[k][subject]) {
-          subjectData = data[k][subject];
-          break;
-        }
-      }
-    }
-
-    if (!subjectData || Object.keys(subjectData).length === 0) {
-      console.error("No question data found for subject:", subject);
-      return false;
-    }
-
-    availableLevels = Object.keys(subjectData)
-      .filter(k => /^Level\s*\d+/i.test(k))
-      .sort((a, b) => {
-        const na = parseInt(a.match(/\d+/)[0], 10);
-        const nb = parseInt(b.match(/\d+/)[0], 10);
-        return na - nb;
-      });
-
-    const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
-    const firstNotPassed = availableLevels.findIndex(l => !progress[l]);
-    currentLevelIndex = (firstNotPassed === -1) ? availableLevels.length : firstNotPassed;
-
-    return true;
-  } catch (err) {
-    console.error("Failed to load questions.json", err);
-    return false;
-  }
-}
-
-/* Prepare ALL questions for current level (no reduction) */
 function prepareLevelQuestions() {
-  if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
-    questions = [];
-    return;
-  }
   const levelKey = availableLevels[currentLevelIndex];
-  let raw = subjectData[levelKey] || [];
-
-  // filter malformed
-  raw = raw.filter(q => q && q.question && (q.answer || q.correct || q.correctAnswer));
-
-  // normalize
-  questions = raw.map(q => ({
-    question: q.question,
-    options: Array.isArray(q.options) ? [...q.options] : [],
-    answer: q.answer || q.correct || q.correctAnswer || ""
-  }));
-
-  // ensure answer present & shuffle options
-  questions.forEach(q => {
-    if (!q.options.includes(q.answer)) q.options.push(q.answer);
-    q.options = shuffle(q.options);
-  });
-
-  // shuffle questions
-  questions = shuffle(questions);
-
-  // reset attempts log for the level
-  attemptsLog = [];
+  levelQuestions = shuffleArray([...questions[levelKey]]);
 }
 
-/* Render current question */
 function renderQuestion() {
-  if (!questions.length || currentQuestionIndex >= questions.length) {
+  if (currentQuestionIndex >= levelQuestions.length) {
     endLevel();
     return;
   }
 
-  const q = questions[currentQuestionIndex];
-  if (questionText) questionText.textContent = q.question;
+  const currentQ = levelQuestions[currentQuestionIndex];
+  questionText.textContent = currentQ.question;
+  optionsContainer.innerHTML = "";
 
-  if (optionsContainer) {
-    optionsContainer.innerHTML = "";
-    q.options.forEach(opt => {
-      const btn = document.createElement("button");
-      btn.type = "button";
-      btn.className = "w-full text-left px-4 py-3 rounded-lg bg-purple-100 hover:bg-purple-200 transition";
-      btn.textContent = opt;
-      btn.onclick = () => onSelectOption(opt, btn);
-      optionsContainer.appendChild(btn);
-    });
-  }
+  currentQ.options.forEach(option => {
+    const btn = document.createElement("button");
+    btn.textContent = option;
+    btn.className =
+      "w-full bg-gray-200 hover:bg-purple-200 px-4 py-2 rounded-lg transition";
+    btn.addEventListener("click", () => handleAnswer(option));
+    optionsContainer.appendChild(btn);
+  });
 
-  updateScoreBoard();
+  updateProgress();
 }
 
-/* Selection handler */
-function onSelectOption(selectedText, btnEl) {
-  const q = questions[currentQuestionIndex];
-  const correct = q.answer;
-  const isCorrect = selectedText === correct;
+function handleAnswer(selected) {
+  const currentQ = levelQuestions[currentQuestionIndex];
+  const isCorrect = selected === currentQ.correctAnswer;
+  if (isCorrect) score++;
 
-  // Record attempt
-  attemptsLog.push({
-    question: q.question,
-    selected: selectedText,
-    correct,
+  // log result
+  resultsLog.push({
+    question: currentQ.question,
+    selected,
+    correct: currentQ.correctAnswer,
     isCorrect
   });
+  updateResultsSummary();
 
-  if (isCorrect) {
-    score++;
-    if (btnEl) btnEl.classList.add("bg-green-500", "text-white");
-    correctSound.play();
-  } else {
-    if (btnEl) btnEl.classList.add("bg-red-500", "text-white");
-    wrongSound.play();
-    const correctBtn = [...optionsContainer.children].find(c => c.textContent === correct);
-    if (correctBtn) correctBtn.classList.add("bg-green-500", "text-white");
-  }
-
-  // Disable all options
-  [...optionsContainer.children].forEach(c => c.disabled = true);
-
-  setTimeout(() => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      renderQuestion();
-    } else {
-      endLevel();
-    }
-  }, 900);
-}
-
-/* Scoreboard / progress */
-function updateScoreBoard() {
-  if (!questions || questions.length === 0) {
-    if (scoreDisplay) scoreDisplay.textContent = `Score: 0/0`;
-    if (progressBar) progressBar.style.width = `0%`;
-    return;
-  }
-  if (scoreDisplay) scoreDisplay.textContent = `Score: ${score}/${questions.length}`;
-  const pct = Math.round((currentQuestionIndex / questions.length) * 100);
-  if (progressBar) progressBar.style.width = `${pct}%`;
-}
-
-/* Level progression */
-function saveLevelPassed(levelKey) {
-  const obj = JSON.parse(localStorage.getItem(progressKey) || "{}");
-  obj[levelKey] = true;
-  localStorage.setItem(progressKey, JSON.stringify(obj));
-}
-
-/* Build / inject Results Summary into the floating help modal */
-function populateHelpResults() {
-  if (!helpModal) return;
-
-  // Root content element inside help modal (its inner white card)
-  const card = helpModal.querySelector("div.bg-white");
-  if (!card) return;
-
-  // Remove previous results section if it exists
-  let existing = card.querySelector("#eduResultsContainer");
-  if (existing) existing.remove();
-
-  // Create container
-  const container = document.createElement("div");
-  container.id = "eduResultsContainer";
-  container.className = "mt-4 text-left max-h-80 overflow-y-auto border-t pt-3";
-
-  const levelKey = availableLevels[currentLevelIndex] || "";
-  const header = document.createElement("div");
-  header.className = "mb-3";
-  header.innerHTML = `<h3 class="font-bold text-base">Results Summary ${levelKey ? `- ${levelKey}` : ""}</h3>
-                      <p class="text-sm text-gray-600">Review each question you answered this level.</p>`;
-  container.appendChild(header);
-
-  if (!attemptsLog.length) {
-    const empty = document.createElement("p");
-    empty.className = "text-sm text-gray-500";
-    empty.textContent = "No results yet. Finish the level to see your summary here.";
-    container.appendChild(empty);
-  } else {
-    attemptsLog.forEach((item, i) => {
-      const row = document.createElement("div");
-      row.className = "mb-3 p-3 rounded-lg border";
-      const correctnessClass = item.isCorrect ? "text-green-700 border-green-200 bg-green-50" : "text-red-700 border-red-200 bg-red-50";
-      row.className += ` ${correctnessClass}`;
-      row.innerHTML = `
-        <div class="text-xs opacity-70 mb-1">Q${i + 1}</div>
-        <div class="font-semibold mb-2">${item.question}</div>
-        <div class="text-sm"><span class="font-semibold">Your answer:</span> ${item.selected}</div>
-        ${item.isCorrect ? "" : `<div class="text-sm"><span class="font-semibold">Correct answer:</span> ${item.correct}</div>`}
-      `;
-      container.appendChild(row);
-    });
-  }
-
-  card.appendChild(container);
-}
-
-/* End level -> show Summary modal & populate help modal results */
-function endLevel() {
-  const totalQuestions = questions.length || 1;
-  const percent = Math.round((score / totalQuestions) * 100);
-  const passed = percent >= PASS_PERCENT;
-
-  // Summary modal content
-  if (summaryTitle) summaryTitle.textContent = "Level Summary";
-  if (summaryMessage) {
-    summaryMessage.textContent =
-      `You scored ${score}/${totalQuestions} (${percent}%). ${passed ? "Well done — Next level unlocked." : `You need ${PASS_PERCENT}% to pass.`}`;
-  }
-
-  // Buttons visibility
-  if (summaryRetryBtn) summaryRetryBtn.classList.toggle("hidden", passed);      // show Retry only if failed
-  if (nextLevelBtn) nextLevelBtn.classList.toggle("hidden", !passed);           // show Next only if passed
-
-  // Show summary modal
-  if (summaryModal) {
-    summaryModal.classList.remove("hidden");
-    summaryModal.classList.add("flex");
-  }
-
-  // Save progress if passed
-  if (passed) {
-    const levelKey = availableLevels[currentLevelIndex];
-    saveLevelPassed(levelKey);
-  }
-
-  // Prepare results inside floating help modal
-  populateHelpResults();
-}
-
-/* Hide summary modal */
-function hideSummaryModal() {
-  if (!summaryModal) return;
-  summaryModal.classList.add("hidden");
-  summaryModal.classList.remove("flex");
-}
-
-/* Start a level */
-function startLevel() {
-  // If all levels completed
-  if (currentLevelIndex >= availableLevels.length) {
-    // Reuse summary modal to show a completion message
-    if (summaryTitle) summaryTitle.textContent = "👑 Course Completed!";
-    if (summaryMessage) summaryMessage.textContent = `You have completed all available levels for ${subject}. Great job!`;
-    if (summaryRetryBtn) summaryRetryBtn.classList.add("hidden");
-    if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
-    if (summaryModal) {
-      summaryModal.classList.remove("hidden");
-      summaryModal.classList.add("flex");
-    }
-    return;
-  }
-
-  const levelKey = availableLevels[currentLevelIndex];
-  if (levelDisplay) levelDisplay.textContent = levelKey;
-
-  prepareLevelQuestions();
-  currentQuestionIndex = 0;
-  score = 0;
+  currentQuestionIndex++;
   renderQuestion();
+  updateScoreDisplay();
 }
 
-/* Retry (from summary modal) */
-if (summaryRetryBtn) {
-  summaryRetryBtn.addEventListener("click", () => {
-    hideSummaryModal();
-    prepareLevelQuestions();
-    currentQuestionIndex = 0;
-    score = 0;
-    renderQuestion();
-  });
+function updateProgress() {
+  const percent = ((currentQuestionIndex) / levelQuestions.length) * 100;
+  progressBar.style.width = `${percent}%`;
 }
 
-/* Next Level (from summary modal) */
-if (nextLevelBtn) {
-  nextLevelBtn.addEventListener("click", () => {
-    hideSummaryModal();
-    currentLevelIndex++;
-    startLevel();
-  });
+function updateScoreDisplay() {
+  scoreDisplay.textContent = `Score: ${score}/${levelQuestions.length}`;
+  levelDisplay.textContent = `Level ${currentLevelIndex + 1}`;
 }
 
-/* Instruction modal start */
-if (startBtn) {
-  startBtn.addEventListener("click", () => {
-    if (instructionModal) instructionModal.style.display = "none";
-    startLevel();
-  });
+// ====== LEVEL END ======
+function endLevel() {
+  const passMark = Math.ceil(levelQuestions.length * 0.5);
+  const passed = score >= passMark;
+
+  summaryTitle.textContent = `Level ${currentLevelIndex + 1} Complete!`;
+  summaryMessage.textContent = passed
+    ? `Great job! You scored ${score}/${levelQuestions.length}.`
+    : `You scored ${score}/${levelQuestions.length}. Try again to improve.`;
+
+  retryBtn.classList.toggle("hidden", passed);
+  nextLevelBtn.classList.toggle("hidden", !passed);
+
+  summaryModal.classList.remove("hidden");
+  summaryModal.classList.add("flex");
 }
 
-/* Init */
-document.addEventListener("DOMContentLoaded", async () => {
-  startClock();
-
-  const ok = await loadSubjectData();
-  if (!ok) {
-    if (questionText) questionText.textContent = `No quiz data found for "${subject}".`;
-    return;
-  }
-
-  // Keep instruction modal visible until "I'm Ready"
-  if (!instructionModal) startLevel();
+// ====== SUMMARY ACTIONS ======
+retryBtn.addEventListener("click", () => {
+  summaryModal.classList.add("hidden");
+  startLevel(currentLevelIndex);
 });
 
-/* Expose globals used by your inline Help script (already in quiz.html) */
-window.availableLevels = availableLevels;
-window.progressKey = progressKey;
-window.currentLevelIndex = currentLevelIndex;
-window.score = score;
-window.currentQuestionIndex = currentQuestionIndex;
-window.startLevel = startLevel;
-window.prepareLevelQuestions = prepareLevelQuestions;
-window.renderQuestion = renderQuestion;
+nextLevelBtn.addEventListener("click", () => {
+  summaryModal.classList.add("hidden");
+  if (currentLevelIndex + 1 < availableLevels.length) {
+    startLevel(currentLevelIndex + 1);
+  } else {
+    showEndScreen();
+  }
+});
+
+function showEndScreen() {
+  endTitle.textContent = "🎉 Congratulations!";
+  endMessage.textContent = "You have completed all levels!";
+  endRetryBtn.classList.remove("hidden");
+  endNextBtn.classList.add("hidden");
+
+  endModal.classList.remove("hidden");
+  endModal.classList.add("flex");
+}
+
+// ====== HELP MODAL BEHAVIOR ======
+helpBtn.addEventListener("click", () => {
+  helpModal.classList.remove("hidden");
+  helpModal.classList.add("flex");
+});
+
+closeHelpBtn.addEventListener("click", () => {
+  helpModal.classList.add("hidden");
+  helpModal.classList.remove("flex");
+});
+
+// Replay specific level
+replayBtns.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const level = parseInt(btn.dataset.level);
+    helpModal.classList.add("hidden");
+    startLevel(level - 1);
+  });
+});
+
+// Reset current level
+resetLevelBtn.addEventListener("click", () => {
+  helpModal.classList.add("hidden");
+  startLevel(currentLevelIndex);
+});
+
+// Back to subjects
+backSubjectsBtn.addEventListener("click", () => {
+  window.location.href = "subjects.html";
+});
+
+// ====== RESULTS SUMMARY (inside Help Modal) ======
+function updateResultsSummary() {
+  eduResultsList.innerHTML = "";
+
+  if (resultsLog.length === 0) {
+    eduResultsList.innerHTML = `<p class="text-gray-500">No questions answered yet...</p>`;
+    return;
+  }
+
+  resultsLog.forEach((res, i) => {
+    const p = document.createElement("p");
+    p.className = "mb-2";
+    if (res.isCorrect) {
+      p.innerHTML = `✅ <strong>Q${i + 1}:</strong> ${res.question}`;
+    } else {
+      p.innerHTML = `❌ <strong>Q${i + 1}:</strong> ${res.question} <br>
+        <span class="text-red-600">Your Answer:</span> ${res.selected} |
+        <span class="text-green-600">Correct:</span> ${res.correct}`;
+    }
+    eduResultsList.appendChild(p);
+  });
+}
+
+// ====== START ======
+startQuizBtn.addEventListener("click", () => {
+  instructionModal.classList.add("hidden");
+  startLevel(0);
+});
+
+// Footer year auto-update
+document.getElementById("year").textContent = new Date().getFullYear();
