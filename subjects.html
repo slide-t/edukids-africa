@@ -1,198 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subjects - EduKids Africa</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    *{
-      box-sizing: border-box;
-   margin: 0;
-      padding:0;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      background-color: #f4f4f4;
-      margin: 0;
-      padding: 20px;
-      color: #333;
-    }
-    .subject-container {
-      max-width: 900px;
-      margin: auto;
-      background: #fff;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .subject-container h1 {
-      text-align: center;
-      color: #001219;
-      margin-bottom: 30px;
-    }
-    .search-box {
-      display: flex;
-      justify-content: center;
-      gap: 10px;
-      margin-bottom: 20px;
-      flex-wrap: wrap;
-    }
-    .search-box input {
-      padding: 10px 15px;
-      width: 75%;
-      max-width: 600px;
-      border: 1px solid #ccc;
-      border-radius: 25px;
-      transition: all 0.4s ease;
-    }
-    .search-box input:focus {
-      width: 85%;
-      outline: none;
-      box-shadow: 0 0 8px rgba(0, 18, 25, 0.3);
-      border-color: #001219;
-    }
-    .subject-group {
-      margin-top: 20px;
-    }
-    .subject-group h2 {
-      color: #001219;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    .subject-list {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.4s ease;
-      padding-left: 15px;
-    }
-    .subject-list.show {
-      max-height: 600px;
-    }
-    .subject-item {
-      padding: 8px 0;
-      border-bottom: 1px dashed #ccc;
-      color: #333;
-    }
-    .subject-item:last-child {
-      border-bottom: none;
-    }
-  
-    .subject-item {
-  display: block;
-  padding: 10px 15px;
-  margin: 5px 0;
-  border-radius: 8px;
-  background: #f9f9f9;
-  color: #001219;
-  text-decoration: none;
-  transition: transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
-}
-
-.subject-item:hover {
-  background: #ffcc00;
-  color: #222;
-  transform: scale(1.05) translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-    #subjectsContainer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.6s ease, transform 0.4s ease;
-  transform-origin: top;
-}
-#subjectsContainer.expanded {
-  max-height: 1000px;
-  transform: rotateX(0deg);
-}
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subjects - EduKids Africa</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Roboto', sans-serif; background: #f4f4f4; padding: 20px; color: #333; }
+  .subject-container { max-width: 900px; margin: auto; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+  .subject-container h1 { text-align: center; margin-bottom: 30px; color:#001219; }
+  .search-box { display:flex; justify-content:center; gap:10px; margin-bottom:20px; flex-wrap:wrap; }
+  .search-box input { padding:10px 15px; width:75%; max-width:600px; border:1px solid #ccc; border-radius:25px; transition: all 0.4s ease; }
+  .search-box input:focus { width:85%; outline:none; box-shadow:0 0 8px rgba(0,18,25,0.3); border-color:#001219; }
+  .subject-group h2 { color:#001219; cursor:pointer; display:flex; justify-content:space-between; align-items:center; padding:10px; border-bottom:1px solid #ddd; }
+  .subject-list { max-height:0; overflow:hidden; transition:max-height 0.6s ease; padding-left:15px; }
+  .subject-list.show { max-height:600px; }
+  .subject-item { display:block; padding:10px 15px; margin:5px 0; border-radius:8px; background:#f9f9f9; color:#001219; text-decoration:none; transition:transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease; }
+  .subject-item:hover { background:#ffcc00; color:#222; transform:scale(1.05) translateY(-2px); box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+  #subjectsContainer { max-height:0; overflow:hidden; transition:max-height 0.6s ease, transform 0.4s ease; transform-origin: top; }
+  #subjectsContainer.expanded { max-height:2000px; transform:rotateX(0deg); }
+  /* Footer same as your previous code */
+</style>
 </head>
 <body>
-  <div class="subject-container" id="subject-container" >
-    <h1>Subjects Offered</h1>
+<div class="subject-container">
+  <h1>Subjects Offered</h1>
 
-    <!-- Search Bar -->
-    <div class="search-box">
-      <input type="text" id="searchInput" placeholder="" />
-    </div>
-
-    <!-- Container for Subjects -->
-    <div id="subject-list"></div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="" />
   </div>
 
+  <div id="subjectsContainer">
+    <div id="subject-list"></div>
+  </div>
+</div>
+
 <script>
+  const searchInput = document.getElementById("searchInput");
+  const subjectsContainer = document.getElementById("subjectsContainer");
+  const subjectList = document.getElementById("subject-list");
+
   // Typing placeholder animation
   const placeholderText = "search by subject here...";
-  let i = 0;
-  function typePlaceholder() {
-    if (i <= placeholderText.length) {
-      document.getElementById("searchInput")
-        .setAttribute("placeholder", placeholderText.slice(0, i));
+  let i=0;
+  function typePlaceholder(){
+    if(i<=placeholderText.length){
+      searchInput.setAttribute("placeholder", placeholderText.slice(0,i));
       i++;
-      setTimeout(typePlaceholder, 120);
+      setTimeout(typePlaceholder,120);
     }
   }
   typePlaceholder();
 
-  // Subject Data
-  const subjects = {
-    "Primary School": [
-      "English Language", "Mathematics", "Basic Science", "Basic Technology",
-      "Cultural & Creative Arts", "Social Studies", "French", "Agriculture",
-      "Home Economics", "Computer Studies"
-    ],
-    "Secondary School": [
-      "English Language", "Mathematics", "Biology", "Chemistry",
-      "Physics", "Economics", "Literature in English", "Government",
-      "Geography", "Accounting"
-    ],
-    "Cambridge Curriculum Standard": [
-      "English as a Second Language", "Mathematics", "Physics",
-      "Biology", "Chemistry", "History", "Business Studies", "ICT"
-    ],
-    "WAEC Past Questions": [
-      "English Language", "Mathematics", "Physics",
-      "Biology", "Chemistry", "History", "Business Studies", "ICT"
-    ],
-    "JAMB Past Questions": [
-      "English Language", "Mathematics", "Physics",
-      "Biology", "Chemistry", "History", "Business Studies", "ICT"
-    ]
-  };
+  // Load subjects.json dynamically
+  let subjects = {};
+  async function loadSubjects() {
+    try {
+      const res = await fetch("subjects.json");
+      subjects = await res.json();
+      renderSubjects();
+    } catch(err) {
+      console.error("Failed to load subjects.json", err);
+      subjectList.textContent = "Unable to load subjects at the moment.";
+    }
+  }
 
-  const subjectList = document.getElementById("subject-list");
-  const subjectsContainer = document.getElementById("subjectsContainer");
-
-  function renderSubjects(filter = "") {
+  // Render subjects
+  function renderSubjects(filter="") {
     subjectList.innerHTML = "";
-    Object.keys(subjects).forEach(category => {
+    Object.keys(subjects).forEach(category=>{
       const groupDiv = document.createElement("div");
-      groupDiv.className = "subject-group";
+      groupDiv.className="subject-group";
 
       const heading = document.createElement("h2");
-      heading.innerHTML = `${category} <i class="fas fa-chevron-down"></i>`;
+      heading.innerHTML=`${category} <i class="fas fa-chevron-down"></i>`;
 
       const listDiv = document.createElement("div");
-      listDiv.className = "subject-list";
+      listDiv.className="subject-list";
 
-      subjects[category]
-        .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
-        .forEach(sub => {
+      subjects[category].filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+        .forEach(sub=>{
           const item = document.createElement("a");
-          item.className = "subject-item";
-          item.textContent = sub;
-          // every subject now links properly:
-          item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
+          item.className="subject-item";
+          item.textContent=sub;
+          item.href=`quiz.html?subject=${encodeURIComponent(sub)}`;
           listDiv.appendChild(item);
         });
 
-      heading.addEventListener("click", () => {
+      // auto expand if filtered
+      if(filter!=="") listDiv.classList.add("show");
+
+      heading.addEventListener("click", ()=>{
         listDiv.classList.toggle("show");
-        const icon = heading.querySelector("i");
+        const icon=heading.querySelector("i");
         icon.classList.toggle("fa-chevron-down");
         icon.classList.toggle("fa-chevron-up");
       });
@@ -203,241 +104,16 @@
     });
   }
 
-  // Search filter with auto-expand subjects list
-  document.getElementById("searchInput").addEventListener("input", e => {
-    const value = e.target.value.trim();
+  // Search filter input
+  searchInput.addEventListener("input", e=>{
+    const value=e.target.value.trim();
     renderSubjects(value);
-    if (value !== "") {
-      subjectsContainer.classList.add("expanded");
-    } else {
-      subjectsContainer.classList.remove("expanded");
-    }
+    if(value!=="") subjectsContainer.classList.add("expanded");
+    else subjectsContainer.classList.remove("expanded");
   });
 
-  // Initial render
-  renderSubjects();
+  // Initial load
+  loadSubjects();
 </script>
-  <!--
-  <script>
-    // Typing placeholder animation
-    const placeholderText = "search by subject here...";
-    let i = 0;
-    function typePlaceholder() {
-      if (i <= placeholderText.length) {
-        document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
-        i++;
-        setTimeout(typePlaceholder, 120);
-      }
-    }
-    typePlaceholder();
-
-    // Subject Data (JSON-like object)
-    const subjects = {
-      "Primary School": [
-        "English Studies", "Mathematics", "Basic Science", "Basic Technology",
-        "Cultural & Creative Arts", "Social Studies", "French", "Agriculture",
-        "Home Economics", "Computer Studies"
-      ],
-      "Secondary School": [
-        "English Language", "Mathematics", "Biology", "Chemistry",
-        "Physics", "Economics", "Literature in English", "Government",
-        "Geography", "Accounting"
-      ],
-      "Cambridge": [
-        "English as a Second Language", "Mathematics", "Physics",
-        "Biology", "Chemistry", "History", "Business Studies", "ICT"
-      ]
-    };
-
-    const subjectList = document.getElementById("subject-list");
-
-    // Render Subjects
-    function renderSubjects(filter = "") {
-      subjectList.innerHTML = "";
-      Object.keys(subjects).forEach(category => {
-        const groupDiv = document.createElement("div");
-        groupDiv.className = "subject-group";
-
-        const heading = document.createElement("h2");
-        heading.innerHTML = `${category} <i class="fas fa-chevron-down"></i>`;
-
-        const listDiv = document.createElement("div");
-        listDiv.className = "subject-list";
-
-        subjects[category]
-  .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
-  .forEach(sub => {
-    const item = document.createElement("a");
-    item.className = "subject-item";
-    item.textContent = sub;
-    item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
-    listDiv.appendChild(item);
-  });
-        
-        
-        heading.addEventListener("click", () => {
-          listDiv.classList.toggle("show");
-          const icon = heading.querySelector("i");
-          icon.classList.toggle("fa-chevron-down");
-          icon.classList.toggle("fa-chevron-up");
-        });
-
-        groupDiv.appendChild(heading);
-        groupDiv.appendChild(listDiv);
-        subjectList.appendChild(groupDiv);
-      });
-    }
-
-    // Search filter with auto-expand subjects list
-const searchInput = document.getElementById("searchInput");
-const subjectsContainer = document.getElementById("subjectsContainer");
-
-searchInput.addEventListener("input", (e) => {
-  const value = e.target.value.trim();
-  renderSubjects(value);
-
-  // Auto flip down / expand when typing
-  if (value !== "") {
-    subjectsContainer.classList.add("expanded");
-  } else {
-    subjectsContainer.classList.remove("expanded");
-  }
-});
-
-    // Search filter
-   /* document.getElementById("searchInput").addEventListener("input", (e) => {
-      renderSubjects(e.target.value);
-    });*/
-
-    // Initial render
-    renderSubjects();
-  </script>
--->
-
-  <!-- Shared site footer -->
-  <footer>
-    <div>
-      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
-      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
-      <p style="font-size:0.9rem; color:#aaa;">
-        © <span id="year"></span> EduKids Africa. All rights reserved.
-      </p>
-    </div>
-    
-  <nav class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="subjects.html">Subjects</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-  </nav>
-  
-  </footer>
-  
-
-
-<style>
-/* Footer */
-    footer {
-      background: #2c1a47;
-      color: #fff;
-      padding: 20px;
-      right:0;
-      left:0;
-      margin: 50px auto;
-      text-align: center;
-      
-    }
-
-    .typing-logo {
-      margin-bottom: 10px;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #ff6b6b;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 3px solid #ff6b6b;
-      width: 0;
-      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
-    }
-
-    @keyframes typing {
-      from { width: 0; }
-      to { width: 220px; }
-    }
-
-    @keyframes blink {
-      50% { border-color: transparent; }
-    }
-    .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
-
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  padding: 0.3rem 0.6rem;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-}
-
-.footer-links a:hover {
-  background: #ffcc00;
-  color: #222;
-}
-
-.footer-links a.active {
-  color: #fff;
-  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
-  background: #009999;
-}
-
-.footer-note {
-  color: #ccc;
-  font-size: 0.9rem;
-}
-
-</style>
-<!-- Footer --
-  <div id="footer"></div>
-
-<script>
-// Load footer
-    async function loadFooter() {
-      const footerEl = document.getElementById("footer");
-      let footerHTML = "";
-      try {
-        let response = await fetch("footer.html");
-        if (!response.ok) throw new Error("Not found locally");
-        footerHTML = await response.text();
-      } catch (e1) {
-        try {
-          let response = await fetch("/footer.html");
-          if (!response.ok) throw new Error("Not found in root");
-          footerHTML = await response.text();
-        } catch (e2) {
-          console.error("Footer could not be loaded:", e2);
-          footerHTML = "<p style='text-align:center;color:#fff;'>Footer not available</p>";
-        }
-      }
-      footerEl.innerHTML = footerHTML;
-    }
-    loadFooter();
-
-    // Register service worker
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/sw.js").then(() => {
-        console.log("Service Worker Registered");
-      });
-    }
-
-</script>-->
-
-  
 </body>
 </html>
