@@ -251,3 +251,19 @@ startQuizBtn.addEventListener("click", () => {
 
 // Footer year auto-update
 document.getElementById("year").textContent = new Date().getFullYear();
+
+// ========================
+// Instruction Modal Logic
+// ========================
+const instructionModal = document.getElementById("instructionModal");
+const startQuizBtn = document.getElementById("startQuizBtn");
+
+if (startQuizBtn) {
+  startQuizBtn.addEventListener("click", () => {
+    instructionModal.classList.add("hidden"); // hide modal
+    instructionModal.classList.remove("flex");
+    startLevel(currentLevelIndex); // start quiz from level 1
+  });
+}
+
+        
