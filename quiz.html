@@ -62,9 +62,44 @@
 </button>
 
 <!-- Help Modal -->
+<div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 items-center justify-center z-50">
+  <div class="bg-white rounded-xl shadow-lg w-[90%] max-w-2xl p-6 text-center relative overflow-y-auto max-h-[80vh]">
+    <h2 class="text-xl font-bold mb-4">Need Help?</h2>
+
+    <div id="eduReplayLevelOptions" class="mb-2">
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="1">
+        Replay Level 1
+      </button>
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="2">
+        Replay Level 2
+      </button>
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="3">
+        Replay Level 3
+      </button>
+    </div>
+
+    <button id="eduResetLevelBtn" class="w-full bg-orange-600 text-white py-2 rounded-lg mb-2 hover:bg-orange-500 transition">
+      Reset Current Level
+    </button>
+    <button id="eduBackSubjectsBtn" class="w-full bg-gray-700 text-white py-2 rounded-lg mb-2 hover:bg-gray-600 transition">
+      Go Back to Subjects
+    </button>
+
+    <!-- RESULTS SUMMARY -->
+    <div id="eduResultsSummary" class="mt-6 text-left">
+      <h3 class="text-lg font-semibold mb-3">Your Results Summary</h3>
+      <ul id="eduResultsList" class="space-y-3 text-sm">
+        <li class="text-gray-400 italic">No questions answered yet...</li>
+      </ul>
+    </div>
+
+    <button id="eduCloseHelpBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✖</button>
+  </div>
+</div>
+
+  
+<!-- Help Modal --
   <div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 items-center justify-center z-50">
-    
-<!--<div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">-->
   <div class="bg-white rounded-xl shadow-lg w-80 p-6 text-center relative">
     <h2 class="text-xl font-bold mb-4">Need Help?</h2>
     <div id="eduReplayLevelOptions" class="mb-2">
@@ -87,7 +122,7 @@
     <button id="eduCloseHelpBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✖</button>
   </div>
 </div>
-  
+  -->
 <!-- Shared site footer -->
   <footer>
     <div>
