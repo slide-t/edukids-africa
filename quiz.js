@@ -197,7 +197,6 @@ function renderQuestion() {
     });
   }
   updateScoreBoard();
-
 startTimer();
 }
 
@@ -317,31 +316,36 @@ function endLevel() {
   const totalQuestions = questions.length || 1;
   const percent = (score / totalQuestions) * 100;
   const passed = percent >= PASS_PERCENT;
-
   const levelKey = availableLevels[currentLevelIndex];
+
+  const summaryMessage = document.getElementById("summaryMessage");
+  const retryBtn = document.getElementById("retryBtn");
+  const nextLevelBtn = document.getElementById("nextLevelBtn");
+  const helpModal = document.getElementById("eduHelpModal");
+
+  if (summaryMessage) {
+    summaryMessage.textContent = `You scored ${score}/${totalQuestions} (${Math.round(percent)}%).`;
+  }
+
   if (passed) {
     saveLevelPassed(levelKey);
 
-    // ✅ Auto-start next level if available
-    currentLevelIndex++;
-    if (currentLevelIndex < availableLevels.length) {
-      levelUpSound.play();
-      alert(`🎉 Congrats! You passed ${levelKey}. Moving to next level...`);
-      startLevel();
-    } else {
-      alert(`👑 You completed all levels for ${subject}!`);
-    }
+    if (retryBtn) retryBtn.classList.add("hidden");
+    if (nextLevelBtn) nextLevelBtn.classList.remove("hidden");
   } else {
-    gameOverSound.play();
-    alert(`❌ You scored ${score}/${totalQuestions} (${Math.round(percent)}%). Required: ${PASS_PERCENT}%.`);
-    // Restart same level
-    prepareLevelQuestions();
-    currentQuestionIndex = 0;
-    score = 0;
-    renderQuestion();
+    if (retryBtn) retryBtn.classList.remove("hidden");
+    if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
   }
-}
 
+  // ✅ Show summary inside Help Modal
+  if (helpModal) {
+    helpModal.classList.remove("hidden");
+    helpModal.classList.add("flex");
+  }
+
+  // stop timer
+  clearInterval(timerInterval);
+}
 
 /* Button handlers for end modal */
 if (retryBtn) {
@@ -371,6 +375,36 @@ if (startBtn) {
     startLevel();
   });
 }
+
+const retrySummaryBtn = document.getElementById("retryBtn");
+const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
+
+if (retrySummaryBtn) {
+  retrySummaryBtn.addEventListener("click", () => {
+    const helpModal = document.getElementById("eduHelpModal");
+    if (helpModal) {
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    }
+    prepareLevelQuestions();
+    currentQuestionIndex = 0;
+    score = 0;
+    renderQuestion();
+  });
+}
+
+if (nextLevelSummaryBtn) {
+  nextLevelSummaryBtn.addEventListener("click", () => {
+    const helpModal = document.getElementById("eduHelpModal");
+    if (helpModal) {
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    }
+    currentLevelIndex++;
+    startLevel();
+  });
+}
+
 
 /* Initialiser */
 document.addEventListener("DOMContentLoaded", async () => {
