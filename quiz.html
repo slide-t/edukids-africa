@@ -96,33 +96,6 @@
     <button id="eduCloseHelpBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✖</button>
   </div>
 </div>
-
-  
-<!-- Help Modal --
-  <div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 items-center justify-center z-50">
-  <div class="bg-white rounded-xl shadow-lg w-80 p-6 text-center relative">
-    <h2 class="text-xl font-bold mb-4">Need Help?</h2>
-    <div id="eduReplayLevelOptions" class="mb-2">
-      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="1">
-        Replay Level 1
-      </button>
-      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="2">
-        Replay Level 2
-      </button>
-      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-2 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="3">
-        Replay Level 3
-      </button>
-    </div>
-    <button id="eduResetLevelBtn" class="w-full bg-orange-600 text-white py-2 rounded-lg mb-2 hover:bg-orange-500 transition">
-      Reset Current Level
-    </button>
-    <button id="eduBackSubjectsBtn" class="w-full bg-gray-700 text-white py-2 rounded-lg mb-2 hover:bg-gray-600 transition">
-      Go Back to Subjects
-    </button>
-    <button id="eduCloseHelpBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✖</button>
-  </div>
-</div>
-  -->
 <!-- Shared site footer -->
   <footer>
     <div>
@@ -244,8 +217,6 @@
     </div>
   </div>
 </div>
-
-
 <script>
  // ========================
 // Floating Help Button JS
@@ -269,19 +240,6 @@ closeHelpBtn.addEventListener("click", () => {
   helpModal.classList.add("hidden");
   helpModal.classList.remove("flex");
 });
-
-  
-/*// Show modal
-helpBtn.addEventListener("click", () => {
-  helpModal.classList.remove("hidden");
-  helpModal.classList.add("flex");
-});
-
-// Close modal
-closeHelpBtn.addEventListener("click", () => {
-  helpModal.classList.add("hidden");
-  helpModal.classList.remove("flex");
-});*/
 
 // Replay specific level (1,2,3)
 replayBtns.forEach(btn => {
@@ -320,25 +278,10 @@ resetLevelBtn.addEventListener("click", () => {
   helpModal.classList.remove("flex");
 });
 
-  
-  
-  /*resetLevelBtn.addEventListener("click", () => {
-  score = 0;
-  currentQuestionIndex = 0;
-  prepareLevelQuestions();
-  renderQuestion();
-
-  helpModal.classList.add("hidden");
-  helpModal.classList.remove("flex");
-});*/
-
 // Go back to subjects (replace with your actual subjects page)
 backSubjectsBtn.addEventListener("click", () => {
   window.location.href = "subjects.html";
 });
-
-
-     
 </script>
   
 </body>
