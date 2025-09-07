@@ -1,5 +1,5 @@
 // ================================
-// quiz.js - EduKids Africa (full)
+// quiz.js - EduKids Africa (updated)
 // ================================
 
 /* Sounds */
@@ -17,8 +17,9 @@ const progressBar = document.getElementById("progressBar");
 const clockElement = document.getElementById("clock");
 const modal = document.getElementById("instructionModal");
 const startBtn = document.getElementById("startQuizBtn");
+const questionCountSelect = document.getElementById("questionCount"); // 👈 NEW
 
-/* End modal elements (must exist in HTML) */
+/* End modal elements */
 const endModal = document.getElementById("endModal");
 const endTitle = document.getElementById("endTitle");
 const endMessage = document.getElementById("endMessage");
@@ -33,6 +34,7 @@ let currentLevelIndex = 0;         // index into availableLevels
 let questions = [];                // questions for current level
 let currentQuestionIndex = 0;
 let score = 0;
+let selectedQuestionLimit = 10;    // 👈 default number of questions
 const PASS_PERCENT = 75;
 const progressKey = `EduKidsProgress_${subject}`; // localStorage key
 
@@ -108,34 +110,34 @@ function prepareLevelQuestions() {
     questions = [];
     return;
   }
+
   const levelKey = availableLevels[currentLevelIndex];
   let raw = subjectData[levelKey] || [];
 
-  // ✅ 1. filter out any malformed question objects
+  // ✅ 1. filter out malformed
   raw = raw.filter(q => q && q.question && (q.answer || q.correct || q.correctAnswer));
 
-  // ✅ 2. deep clone + normalize keys
+  // ✅ 2. deep clone + normalize
   questions = raw.map(q => ({
     question: q.question,
     options: Array.isArray(q.options) ? [...q.options] : [],
     answer: q.answer || q.correct || q.correctAnswer || ""
   }));
 
-  // ✅ 3. ensure the answer is always in options & shuffle options
+  // ✅ 3. ensure correct answer in options
   questions.forEach(q => {
     if (!q.options.includes(q.answer)) q.options.push(q.answer);
     q.options = shuffle(q.options);
   });
 
-  // ✅ 4. shuffle questions
+  // ✅ 4. shuffle question order
   questions = shuffle(questions);
 
-  // ✅ 5. (optional) enforce fixed number of questions per level
-  // change this number per level if needed, or comment it out to always use all
-  // const MAX_QUESTIONS = 50;
-  // if (questions.length > MAX_QUESTIONS) {
-  //   questions = questions.slice(0, MAX_QUESTIONS);
-  // }
+  // ✅ 5. enforce selected number of questions
+  const limit = selectedQuestionLimit || 10;
+  if (questions.length > limit) {
+    questions = questions.slice(0, limit);
+  }
 }
 
 /* Render a question & its shuffled options */
@@ -310,6 +312,10 @@ if (nextBtn) {
 /* Instruction modal start button */
 if (startBtn) {
   startBtn.addEventListener("click", () => {
+    // 👇 Capture dropdown choice
+    if (questionCountSelect) {
+      selectedQuestionLimit = parseInt(questionCountSelect.value) || 10;
+    }
     if (modal) modal.style.display = "none";
     startLevel();
   });
