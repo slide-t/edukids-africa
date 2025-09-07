@@ -1,4 +1,4 @@
-<script>
+
     const menu = document.getElementById('menu');
     const nav = document.getElementById('nav');
     const closeBtn = document.getElementById('closeMenu');
@@ -50,4 +50,4 @@
         console.log("Service Worker Registered");
       });
     }
-  </script>
+  
