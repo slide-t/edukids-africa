@@ -197,7 +197,7 @@ function renderQuestion() {
     });
   }
   updateScoreBoard();
-}
+
 startTimer();
 }
 
