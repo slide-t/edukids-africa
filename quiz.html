@@ -16,7 +16,9 @@
       <!-- Clock -->
       <div class="flex items-center gap-2">
         <i class="lucide lucide-clock text-white"></i>
-        <span id="clock" class="font-mono">00:00:00</span>
+        <!--<span id="clock" class="font-mono">00:00:00</span>-->
+    <span id="clock" class="font-mono"></span>
+        
       </div>
       <!-- Score & Level -->
       <div class="flex items-center gap-4">
@@ -61,7 +63,25 @@
   ?
 </button>
 
-<!-- Help Modal -->
+  <!-- Floating Help Modal -->
+<div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
+  <div class="bg-white p-6 rounded-2xl shadow-lg w-80">
+    <h2 class="text-xl font-bold mb-4">Need Help?</h2>
+    
+    <div id="eduReplayLevelOptions" class="space-y-2">
+      <button class="eduHelpBtnOption w-full bg-blue-100 py-2 rounded hidden" data-level="1">Replay Level 1</button>
+      <button class="eduHelpBtnOption w-full bg-blue-100 py-2 rounded hidden" data-level="2">Replay Level 2</button>
+      <button class="eduHelpBtnOption w-full bg-blue-100 py-2 rounded hidden" data-level="3">Replay Level 3</button>
+    </div>
+
+    <button id="eduResetLevelBtn" class="w-full mt-4 bg-yellow-200 py-2 rounded">Restart Current Level</button>
+    <button id="eduBackSubjectsBtn" class="w-full mt-2 bg-gray-200 py-2 rounded">Back to Subjects</button>
+    <button id="eduCloseHelpBtn" class="w-full mt-4 bg-red-200 py-2 rounded">Close</button>
+  </div>
+</div>
+
+
+<!-- Help Modal --
 <div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 items-center justify-center z-50">
   <div class="bg-white rounded-xl shadow-lg w-[90%] max-w-2xl p-6 text-center relative overflow-y-auto max-h-[80vh]">
     <h2 class="text-xl font-bold mb-4">Need Help?</h2>
@@ -84,6 +104,7 @@
     <button id="eduBackSubjectsBtn" class="w-full bg-gray-700 text-white py-2 rounded-lg mb-2 hover:bg-gray-600 transition">
       Go Back to Subjects
     </button>
+  -->
 
     <!-- RESULTS SUMMARY -->
     <div id="eduResultsSummary" class="mt-6 text-left">
