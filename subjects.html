@@ -34,11 +34,18 @@
       <div id="searchTooltip">Please enter a subject to search!</div>
     </div>
   </div>
+<div class="max-w-4xl mx-auto mt-48 px-4">
+  <h1 class="text-3xl text-center font-bold text-gray-900 mb-8">Subjects Offered</h1>
+  <div id="subject-list" class="space-y-6"></div> <!-- increased space-y -->
+</div>
 
+
+  <!--
   <div class="max-w-4xl mx-auto mt-48 px-4">
     <h1 class="text-3xl text-center font-bold text-gray-900 mb-8">Subjects Offered</h1>
     <div id="subject-list" class="space-y-4"></div>
   </div>
+  
   <!-- Shared site footer -->
   <footer>
     <div>
@@ -172,7 +179,11 @@
       subjectList.innerHTML = "";
       Object.keys(subjects).forEach(category => {
         const groupDiv = document.createElement("div");
-        groupDiv.className = "bg-white shadow rounded-lg overflow-hidden";
+        groupDiv.className = "bg-white shadow rounded-lg overflow-hidden mb-6"; // added mb-6 for consistent bottom margin
+
+        
+       /* const groupDiv = document.createElement("div");
+        groupDiv.className = "bg-white shadow rounded-lg overflow-hidden";*/
 
         const heading = document.createElement("h2");
         heading.className = "flex justify-between items-center px-4 py-3 cursor-pointer text-lg font-semibold bg-gray-100 hover:bg-gray-200";
