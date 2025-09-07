@@ -369,13 +369,30 @@ if (nextBtn) {
 }
 
 /* Instruction modal start button */
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startQuizBtn");
+  const modal = document.getElementById("instructionModal");
+  
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+      startLevel();
+    });
+  }
+});
+
+
+/* Instruction modal start button *
 if (startBtn) {
   startBtn.addEventListener("click", () => {
     if (modal) modal.style.display = "none";
     startLevel();
   });
 }
-
+*/
 const retrySummaryBtn = document.getElementById("retryBtn");
 const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
 
