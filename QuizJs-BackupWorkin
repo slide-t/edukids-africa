@@ -36,6 +36,44 @@ let score = 0;
 const PASS_PERCENT = 75;
 const progressKey = `EduKidsProgress_${subject}`; // localStorage key
 
+/* timer for each question */
+
+let timerInterval;
+let timeLeft = 15;
+const circle = document.getElementById("timerCircle");
+const timerText = document.getElementById("timerText");
+const circleLength = 220; // circumference
+
+
+function startTimer() {
+  clearInterval(timerInterval);
+  timeLeft = 15;
+  timerText.textContent = timeLeft;
+  circle.style.strokeDasharray = circleLength;
+  circle.style.strokeDashoffset = 0;
+
+  timerInterval = setInterval(() => {
+    timeLeft--;
+    timerText.textContent = timeLeft;
+
+    const progress = (timeLeft / 15) * circleLength;
+    circle.style.strokeDashoffset = circleLength - progress;
+
+    if (timeLeft <= 0) {
+      clearInterval(timerInterval);
+      // auto move to next question or mark wrong
+      handleTimeout();
+    }
+  }, 1000);
+}
+
+function handleTimeout() {
+  // treat as incorrect and move on
+  currentQuestionIndex++;
+  renderQuestion();
+}
+
+
 /* Utility: start clock */
 function startClock() {
   setInterval(() => {
@@ -159,7 +197,9 @@ function renderQuestion() {
     });
   }
   updateScoreBoard();
+startTimer();
 }
+
 
 /* When user selects an option */
 function onSelectOption(selectedText, btnEl) {
@@ -276,31 +316,36 @@ function endLevel() {
   const totalQuestions = questions.length || 1;
   const percent = (score / totalQuestions) * 100;
   const passed = percent >= PASS_PERCENT;
-
   const levelKey = availableLevels[currentLevelIndex];
+
+  const summaryMessage = document.getElementById("summaryMessage");
+  const retryBtn = document.getElementById("retryBtn");
+  const nextLevelBtn = document.getElementById("nextLevelBtn");
+  const helpModal = document.getElementById("eduHelpModal");
+
+  if (summaryMessage) {
+    summaryMessage.textContent = `You scored ${score}/${totalQuestions} (${Math.round(percent)}%).`;
+  }
+
   if (passed) {
     saveLevelPassed(levelKey);
 
-    // ✅ Auto-start next level if available
-    currentLevelIndex++;
-    if (currentLevelIndex < availableLevels.length) {
-      levelUpSound.play();
-      alert(`🎉 Congrats! You passed ${levelKey}. Moving to next level...`);
-      startLevel();
-    } else {
-      alert(`👑 You completed all levels for ${subject}!`);
-    }
+    if (retryBtn) retryBtn.classList.add("hidden");
+    if (nextLevelBtn) nextLevelBtn.classList.remove("hidden");
   } else {
-    gameOverSound.play();
-    alert(`❌ You scored ${score}/${totalQuestions} (${Math.round(percent)}%). Required: ${PASS_PERCENT}%.`);
-    // Restart same level
-    prepareLevelQuestions();
-    currentQuestionIndex = 0;
-    score = 0;
-    renderQuestion();
+    if (retryBtn) retryBtn.classList.remove("hidden");
+    if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
   }
-}
 
+  // ✅ Show summary inside Help Modal
+  if (helpModal) {
+    helpModal.classList.remove("hidden");
+    helpModal.classList.add("flex");
+  }
+
+  // stop timer
+  clearInterval(timerInterval);
+}
 
 /* Button handlers for end modal */
 if (retryBtn) {
@@ -324,12 +369,59 @@ if (nextBtn) {
 }
 
 /* Instruction modal start button */
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startQuizBtn");
+  const modal = document.getElementById("instructionModal");
+  
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      if (modal) {
+        modal.classList.add("hidden");
+        modal.classList.remove("flex");
+      }
+      startLevel();
+    });
+  }
+});
+
+
+/* Instruction modal start button *
 if (startBtn) {
   startBtn.addEventListener("click", () => {
     if (modal) modal.style.display = "none";
     startLevel();
   });
 }
+*/
+const retrySummaryBtn = document.getElementById("retryBtn");
+const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
+
+if (retrySummaryBtn) {
+  retrySummaryBtn.addEventListener("click", () => {
+    const helpModal = document.getElementById("eduHelpModal");
+    if (helpModal) {
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    }
+    prepareLevelQuestions();
+    currentQuestionIndex = 0;
+    score = 0;
+    renderQuestion();
+  });
+}
+
+if (nextLevelSummaryBtn) {
+  nextLevelSummaryBtn.addEventListener("click", () => {
+    const helpModal = document.getElementById("eduHelpModal");
+    if (helpModal) {
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    }
+    currentLevelIndex++;
+    startLevel();
+  });
+}
+
 
 /* Initialiser */
 document.addEventListener("DOMContentLoaded", async () => {
