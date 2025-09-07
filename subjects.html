@@ -190,8 +190,7 @@
         heading.innerHTML = `${category} <i class="fas fa-chevron-down"></i>`;
 
         const listDiv = document.createElement("div");
-          listDiv.className = "subject-list pb-6"; 
-        /* listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";*/
+         listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
 
         subjects[category]
           .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
