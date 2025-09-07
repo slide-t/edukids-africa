@@ -173,27 +173,24 @@
       subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
     }
   }
+
 function renderSubjects(filter = "") {
+  const subjectList = document.getElementById("subject-list");
   subjectList.innerHTML = "";
 
   Object.keys(subjects).forEach(category => {
+    // Group container
     const groupDiv = document.createElement("div");
-    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4"; // margin bottom consistent
+    groupDiv.className = "subject-group bg-white rounded-xl shadow p-4 mb-4"; // add mb-4 for spacing between categories
 
     // Category heading
     const heading = document.createElement("h2");
-    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2";
     heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
 
-    /*
-// Subject list container
-const listDiv = document.createElement("div");
-listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 pb-4"; // added padding bottom
-*/
-    
-    // Subject list container
+    // Subject list container with extra padding-bottom
     const listDiv = document.createElement("div");
-    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
+    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 pb-6 space-y-2"; // pb-6 for extra spacing
 
     // Add filtered subjects
     subjects[category]
@@ -209,7 +206,7 @@ listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duratio
     // Toggle on heading click
     heading.addEventListener("click", () => {
       listDiv.classList.toggle("max-h-0");
-      listDiv.classList.toggle("max-h-96");
+      listDiv.classList.toggle("max-h-96"); // expanded height
       const icon = heading.querySelector("i");
       icon.classList.toggle("rotate-180");
     });
@@ -218,66 +215,16 @@ listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duratio
     groupDiv.appendChild(heading);
     groupDiv.appendChild(listDiv);
     subjectList.appendChild(groupDiv);
-
-    // Auto-expand matching category when filtering
-    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
-      listDiv.classList.replace("max-h-0", "max-h-96");
-      heading.querySelector("i").classList.add("rotate-180");
-    }
   });
-}
 
-
-
-    
-  /*function renderSubjects(filter = "") {
-    subjectList.innerHTML = "";
-
-    Object.keys(subjects).forEach(category => {
-      const groupDiv = document.createElement("div");
-      groupDiv.className = "subject-group bg-white rounded-xl shadow p-4 mb-4"; // Tailwind padding & margin
-
-      // Category heading
-      const heading = document.createElement("h2");
-      heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2";
-      heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
-
-      // Subject list container
-      const listDiv = document.createElement("div");
-      listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 pb-4 space-y-2";
-
-      // Add filtered subjects
-      subjects[category]
-        .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
-        .forEach(sub => {
-          const item = document.createElement("a");
-          item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
-          item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
-          item.textContent = sub;
-          listDiv.appendChild(item);
-        });
-
-      // Toggle on heading click
-      heading.addEventListener("click", () => {
-        listDiv.classList.toggle("max-h-0");
-        listDiv.classList.toggle("max-h-96");
-        const icon = heading.querySelector("i");
-        icon.classList.toggle("rotate-180");
-      });
-
-      // Append to group
-      groupDiv.appendChild(heading);
-      groupDiv.appendChild(listDiv);
-      subjectList.appendChild(groupDiv);
-
-      // Auto-expand matching category when filtering
-      if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
-        listDiv.classList.replace("max-h-0", "max-h-96");
-        heading.querySelector("i").classList.add("rotate-180");
-      }
+  // Auto-expand matching category only on search
+  if(filter) {
+    Object.values(subjectList.querySelectorAll(".subject-list")).forEach(list => {
+      list.classList.remove("max-h-0");
+      list.classList.add("max-h-96");
     });
-  }*/
-
+  }
+}
   // Search filtering
   searchInput.addEventListener("input", e => {
     const value = e.target.value.trim();
