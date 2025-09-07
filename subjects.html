@@ -189,8 +189,11 @@
         heading.className = "flex justify-between items-center px-4 py-3 cursor-pointer text-lg font-semibold bg-gray-100 hover:bg-gray-200";
         heading.innerHTML = `${category} <i class="fas fa-chevron-down"></i>`;
 
-        const listDiv = document.createElement("div");
-         listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
+        const listDiv = document.createElement("div");  
+        listDiv.className = "subject-list"; // keep base class
+        listDiv.classList.add("pb-4");       // add consistent bottom padding
+
+        /*listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";*/
 
         subjects[category]
           .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
