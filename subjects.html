@@ -1,6 +1,318 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subjects - EduKids Africa</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; background: #f4f4f4; padding: 20px; color: #333; }
+
+    .subject-container {
+      max-width: 900px;
+      margin: 180px auto 30px auto; /* space for fixed navbar */
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+
+    .subject-container h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color:#001219;
+    }
+
+    /* Fixed Search Box */
+    .search-box {
+      position: fixed;
+      top: 80px; /* adjust for navbar height */
+      left: 50%;
+      transform: translateX(-50%);
+      display:flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      width: 100%;
+      max-width: 900px;
+      z-index: 50;
+      background: #f4f4f4;
+      padding: 10px 20px;
+      border-radius: 25px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+    }
+
+    .search-box input {
+      padding:10px 15px;
+      width:75%;
+      max-width:600px;
+      border:1px solid #ccc;
+      border-radius:25px;
+      transition: all 0.4s ease;
+    }
+
+    .search-box input:focus {
+      width:85%;
+      outline:none;
+      box-shadow:0 0 8px rgba(0,18,25,0.3);
+      border-color:#001219;
+    }
+
+    /* Tooltip */
+    #searchTooltip {
+      position: absolute;
+      top: -35px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: #ffe066;
+      color: #222;
+      font-size: 0.9rem;
+      padding: 6px 12px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+      z-index: 100;
+      display: none;
+      white-space: nowrap;
+    }
+
+    #searchTooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: #ffe066 transparent transparent transparent;
+    }
+
+    /* Subject Groups */
+    .subject-group h2 {
+      color:#001219;
+      cursor:pointer;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:10px;
+      border-bottom:1px solid #ddd;
+    }
+
+    .subject-list {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.6s ease;
+      padding-left:15px;
+    }
+
+    .subject-list.show { max-height:600px; }
+
+    .subject-item {
+      display:block;
+      padding:10px 15px;
+      margin:5px 0;
+      border-radius:8px;
+      background:#f9f9f9;
+      color:#001219;
+      text-decoration:none;
+      transition:transform 0.2s ease, background 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .subject-item:hover {
+      background:#ffcc00;
+      color:#222;
+      transform:scale(1.05) translateY(-2px);
+      box-shadow:0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    #subjectsContainer {
+      max-height:0;
+      overflow:hidden;
+      transition:max-height 0.6s ease, transform 0.4s ease;
+      transform-origin: top;
+    }
+
+    #subjectsContainer.expanded {
+      max-height:2000px;
+      transform:rotateX(0deg);
+    }
+
+    /* Footer */
+    footer {
+      background: #2c1a47;
+      color: #fff;
+      padding: 20px;
+      right:0;
+      left:0;
+      margin: 50px auto;
+      text-align: center;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 0.3rem 0.6rem;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
+
+    .footer-links a:hover {
+      background: #ffcc00;
+      color: #222;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Search Bar -->
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="" />
+    <div id="searchTooltip">Please enter a subject to search!</div>
+  </div>
+
+  <div class="subject-container">
+    <h1>Subjects Offered</h1>
+    <!-- Container for Subjects -->
+    <div id="subject-list"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>© <span id="year"></span> EduKids Africa. All rights reserved.</p>
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+  </footer>
+
+  <script>
+    // Year auto-update
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Typing placeholder
+    const placeholderText = "search by subject here...";
+    let i = 0;
+    function typePlaceholder() {
+      if (i <= placeholderText.length) {
+        document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
+        i++;
+        setTimeout(typePlaceholder, 120);
+      }
+    }
+    typePlaceholder();
+
+    // Subjects JSON
+    const subjects = {
+      "Primary School": [
+        "English Language","Mathematics","Basic Science","Basic Technology",
+        "Cultural & Creative Arts","Social Studies","French","Agriculture",
+        "Home Economics","Computer Studies"
+      ],
+      "Secondary School": [
+        "English Language","Mathematics","Biology","Chemistry",
+        "Physics","Economics","Literature in English","Government",
+        "Geography","Accounting"
+      ],
+      "Cambridge Curriculum Standard": [
+        "English as a Second Language","Mathematics","Physics",
+        "Biology","Chemistry","History","Business Studies","ICT"
+      ],
+      "WAEC Past Questions": [
+        "English Language","Mathematics","Physics",
+        "Biology","Chemistry","History","Business Studies","ICT"
+      ],
+      "JAMB Past Questions": [
+        "English Language","Mathematics","Physics",
+        "Biology","Chemistry","History","Business Studies","ICT"
+      ]
+    };
+
+    const subjectList = document.getElementById("subject-list");
+
+    function renderSubjects(filter="") {
+      subjectList.innerHTML = "";
+      Object.keys(subjects).forEach(category => {
+        const groupDiv = document.createElement("div");
+        groupDiv.className = "subject-group";
+
+        const heading = document.createElement("h2");
+        heading.innerHTML = `${category} <i class="fas fa-chevron-down"></i>`;
+
+        const listDiv = document.createElement("div");
+        listDiv.className = "subject-list";
+
+        subjects[category]
+          .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+          .forEach(sub => {
+            const item = document.createElement("a");
+            item.className = "subject-item";
+            item.textContent = sub;
+            item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
+            listDiv.appendChild(item);
+          });
+
+        heading.addEventListener("click", () => {
+          listDiv.classList.toggle("show");
+          heading.querySelector("i").classList.toggle("fa-chevron-down");
+          heading.querySelector("i").classList.toggle("fa-chevron-up");
+        });
+
+        groupDiv.appendChild(heading);
+        groupDiv.appendChild(listDiv);
+        subjectList.appendChild(groupDiv);
+      });
+    }
+
+    renderSubjects();
+
+    // Search filter with auto-expand
+    const searchInput = document.getElementById("searchInput");
+    const subjectsContainer = document.getElementById("subjectsContainer");
+
+    searchInput.addEventListener("input", e => {
+      const value = e.target.value.trim();
+      renderSubjects(value);
+      // auto expand all categories when typing
+      document.querySelectorAll(".subject-list").forEach(list => {
+        if(value !== "") list.classList.add("show");
+      });
+    });
+
+    // Tooltip for empty search on Enter
+    const tooltip = document.getElementById("searchTooltip");
+    searchInput.addEventListener("keydown", e => {
+      if(e.key === "Enter" && e.target.value.trim() === "") {
+        tooltip.style.display = "block";
+        setTimeout(() => { tooltip.style.display = "none"; }, 10000);
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Subjects - EduKids Africa</title>
