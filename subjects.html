@@ -173,8 +173,58 @@
       subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
     }
   }
+function renderSubjects(filter = "") {
+  subjectList.innerHTML = "";
 
-  function renderSubjects(filter = "") {
+  Object.keys(subjects).forEach(category => {
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4"; // margin bottom consistent
+
+    // Category heading
+    const heading = document.createElement("h2");
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
+    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+    // Subject list container
+    const listDiv = document.createElement("div");
+    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
+
+    // Add filtered subjects
+    subjects[category]
+      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(sub => {
+        const item = document.createElement("a");
+        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
+        item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
+        item.textContent = sub;
+        listDiv.appendChild(item);
+      });
+
+    // Toggle on heading click
+    heading.addEventListener("click", () => {
+      listDiv.classList.toggle("max-h-0");
+      listDiv.classList.toggle("max-h-96");
+      const icon = heading.querySelector("i");
+      icon.classList.toggle("rotate-180");
+    });
+
+    // Append to group
+    groupDiv.appendChild(heading);
+    groupDiv.appendChild(listDiv);
+    subjectList.appendChild(groupDiv);
+
+    // Auto-expand matching category when filtering
+    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
+      listDiv.classList.replace("max-h-0", "max-h-96");
+      heading.querySelector("i").classList.add("rotate-180");
+    }
+  });
+}
+
+
+
+    
+  /*function renderSubjects(filter = "") {
     subjectList.innerHTML = "";
 
     Object.keys(subjects).forEach(category => {
@@ -220,7 +270,7 @@
         heading.querySelector("i").classList.add("rotate-180");
       }
     });
-  }
+  }*/
 
   // Search filtering
   searchInput.addEventListener("input", e => {
