@@ -612,8 +612,8 @@
   { "question": "Which simple machine can you use to stir soup?", "options": ["Spoon", "Hammer", "Cutlass", "Hoe"], "answer": "Spoon" },
   { "question": "Give one thing a simple machine can help you do.", "options": ["Make work easier", "Eat food", "Sing songs", "Sleep"], "answer": "Make work easier" },
   { "question": "What do we mean by technology in our everyday life?", "options": ["Tools and machines that help us", "Playing outside", "Eating food", "Watching TV"], "answer": "Tools and machines that help us" },
-  { "question": "Which of these is used in the playground to go up and down?", "options": ["Seesaw", "Chair", "Box", "Fan"], "answer": "Seesaw" },
-
+  { "question": "Which of these is used in the playground to go up and down?", "options": ["Seesaw", "Chair", "Box", "Fan"],  "answer": "Seesaw"  }
+      
   { "question": "What are the five senses?", "options": ["Sight, hearing, touch, smell, taste", "Jump, run, play, eat, sleep", "Read, write, draw, sing, dance", "Cold, hot, wet, dry, warm"], "answer": "Sight, hearing, touch, smell, taste" },
   { "question": "Which sense helps you see colors?", "options": ["Sight", "Smell", "Taste", "Touch"], "answer": "Sight" },
   { "question": "Which sense helps you smell food?", "options": ["Smell", "Taste", "Sight", "Hearing"], "answer": "Smell" },
