@@ -193,7 +193,7 @@
         listDiv.className = "subject-list"; // keep base class
         listDiv.classList.add("pb-4");       // add consistent bottom padding
 
-        /*listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";*/
+        listDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
 
         subjects[category]
           .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
