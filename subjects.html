@@ -25,15 +25,11 @@
 </head>
 <body>
 <div class="subject-container">
-  <h1>Enter Subject Here</h1>
+  <h1>Subjects Offered</h1>
 
-  <!-- Tooltip (insert just after search box in HTML) -->
-<div id="searchTooltip" 
-     class="hidden absolute bg-yellow-300 text-black text-sm px-3 py-1 rounded shadow-md"
-     style="top: 60px; left: 50%; transform: translateX(-50%); z-index: 50;">
-  Please enter a subject to search 🔍
-</div>
-
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="" />
+  </div>
 
   <div id="subjectsContainer">
     <div id="subject-list"></div>
@@ -118,26 +114,6 @@
 
   // Initial load
   loadSubjects();
- 
-const searchInput = document.getElementById("searchInput");
-const searchTooltip = document.getElementById("searchTooltip");
-
-// Show tooltip if user presses Enter or tries to search empty input
-searchInput.addEventListener("keydown", (e) => {
-  if (e.key === "Enter" && searchInput.value.trim() === "") {
-    showTooltip();
-  }
-});
-
-function showTooltip() {
-  searchTooltip.classList.remove("hidden");
-  // Remove after 10 seconds
-  setTimeout(() => {
-    searchTooltip.classList.add("hidden");
-  }, 10000);
-}
-
- 
 </script>
 </body>
 </html>
