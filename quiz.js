@@ -1,5 +1,5 @@
 // ================================
-// quiz.js - EduKids Africa (updated)
+// quiz.js - EduKids Africa (ALL QUESTIONS PER LEVEL)
 // ================================
 
 /* Sounds */
@@ -17,9 +17,8 @@ const progressBar = document.getElementById("progressBar");
 const clockElement = document.getElementById("clock");
 const modal = document.getElementById("instructionModal");
 const startBtn = document.getElementById("startQuizBtn");
-const questionCountSelect = document.getElementById("questionCount"); // 👈 NEW
 
-/* End modal elements */
+/* End modal elements (must exist in HTML) */
 const endModal = document.getElementById("endModal");
 const endTitle = document.getElementById("endTitle");
 const endMessage = document.getElementById("endMessage");
@@ -34,7 +33,6 @@ let currentLevelIndex = 0;         // index into availableLevels
 let questions = [];                // questions for current level
 let currentQuestionIndex = 0;
 let score = 0;
-let selectedQuestionLimit = 10;    // 👈 default number of questions
 const PASS_PERCENT = 75;
 const progressKey = `EduKidsProgress_${subject}`; // localStorage key
 
@@ -83,16 +81,16 @@ async function loadSubjectData() {
 
     availableLevels = Object.keys(subjectData)
       .filter(k => /^Level\s*\d+/i.test(k))
-      .sort((a,b) => {
-        const na = parseInt(a.match(/\d+/)[0],10);
-        const nb = parseInt(b.match(/\d+/)[0],10);
+      .sort((a, b) => {
+        const na = parseInt(a.match(/\d+/)[0], 10);
+        const nb = parseInt(b.match(/\d+/)[0], 10);
         return na - nb;
       });
 
     const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
     let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
     if (firstNotPassed === -1) {
-      currentLevelIndex = availableLevels.length; // special marker -> completed
+      currentLevelIndex = availableLevels.length; // completed all
     } else {
       currentLevelIndex = firstNotPassed;
     }
@@ -110,37 +108,32 @@ function prepareLevelQuestions() {
     questions = [];
     return;
   }
-
   const levelKey = availableLevels[currentLevelIndex];
   let raw = subjectData[levelKey] || [];
 
-  // ✅ 1. filter out malformed
+  // 1. filter out malformed
   raw = raw.filter(q => q && q.question && (q.answer || q.correct || q.correctAnswer));
 
-  // ✅ 2. deep clone + normalize
+  // 2. deep clone + normalize
   questions = raw.map(q => ({
     question: q.question,
     options: Array.isArray(q.options) ? [...q.options] : [],
     answer: q.answer || q.correct || q.correctAnswer || ""
   }));
 
-  // ✅ 3. ensure correct answer in options
+  // 3. ensure answer is always in options
   questions.forEach(q => {
     if (!q.options.includes(q.answer)) q.options.push(q.answer);
     q.options = shuffle(q.options);
   });
 
-  // ✅ 4. shuffle question order
+  // 4. shuffle questions
   questions = shuffle(questions);
 
-  // ✅ 5. enforce selected number of questions
-  const limit = selectedQuestionLimit || 10;
-  if (questions.length > limit) {
-    questions = questions.slice(0, limit);
-  }
+  // ✅ NO REDUCTION — all questions in the level are used
 }
 
-/* Render a question & its shuffled options */
+/* Render a question */
 function renderQuestion() {
   if (!questions.length || currentQuestionIndex >= questions.length) {
     endLevel();
@@ -151,7 +144,7 @@ function renderQuestion() {
   if (questionText) questionText.textContent = q.question;
   if (optionsContainer) {
     optionsContainer.innerHTML = "";
-    q.options.forEach((opt, idx) => {
+    q.options.forEach((opt) => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "w-full text-left px-4 py-3 rounded-lg bg-purple-100 hover:bg-purple-200 transition";
@@ -200,11 +193,11 @@ function updateScoreBoard() {
     return;
   }
   if (scoreDisplay) scoreDisplay.textContent = `Score: ${score}/${questions.length}`;
-  const pct = Math.round(((currentQuestionIndex) / questions.length) * 100);
+  const pct = Math.round((currentQuestionIndex / questions.length) * 100);
   if (progressBar) progressBar.style.width = `${pct}%`;
 }
 
-/* Show end modal (pass/fail) */
+/* Show end modal */
 function showEndModal(passed, totalCorrect, totalQuestions) {
   if (!endModal) return;
   if (passed) {
@@ -233,14 +226,14 @@ function hideEndModal() {
   endModal.classList.remove("flex");
 }
 
-/* Save level passed to localStorage */
+/* Save level passed */
 function saveLevelPassed(levelKey) {
   const obj = JSON.parse(localStorage.getItem(progressKey) || "{}");
   obj[levelKey] = true;
   localStorage.setItem(progressKey, JSON.stringify(obj));
 }
 
-/* Determine and start the current level */
+/* Start the current level */
 function startLevel() {
   if (currentLevelIndex >= availableLevels.length) {
     if (!endModal) {
@@ -290,7 +283,7 @@ function endLevel() {
   }
 }
 
-/* Button handlers for end modal */
+/* Button handlers */
 if (retryBtn) {
   retryBtn.addEventListener("click", () => {
     hideEndModal();
@@ -312,10 +305,6 @@ if (nextBtn) {
 /* Instruction modal start button */
 if (startBtn) {
   startBtn.addEventListener("click", () => {
-    // 👇 Capture dropdown choice
-    if (questionCountSelect) {
-      selectedQuestionLimit = parseInt(questionCountSelect.value) || 10;
-    }
     if (modal) modal.style.display = "none";
     startLevel();
   });
@@ -332,7 +321,7 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   if (modal) {
-    // leave modal visible until user clicks Start
+    // wait for user to click Start
   } else {
     startLevel();
   }
