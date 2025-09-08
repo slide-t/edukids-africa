@@ -60,15 +60,30 @@ function renderSubjects(filter="") {
     const groupDiv = document.createElement("div");
     groupDiv.className = "bg-white rounded-xl shadow overflow-hidden";
 
+    
     // Heading
-    const heading = document.createElement("h2");
+heading.addEventListener("click", () => {
+  if (listDiv.style.maxHeight && listDiv.style.maxHeight !== "0px") {
+    listDiv.style.maxHeight = "0px";
+  } else {
+    listDiv.style.maxHeight = listDiv.scrollHeight + "px";
+  }
+  heading.querySelector("i").classList.toggle("rotate-180");
+});
+
+    
+    /*const heading = document.createElement("h2");
     heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
     heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+*/
+// Subject list
+const listDiv = document.createElement("div");
+listDiv.className = "overflow-hidden transition-all duration-500 space-y-2 px-4 pb-6 max-h-0"; // extra pb-6
 
-    // Subject list
+  /*// Subject list
     const listDiv = document.createElement("div");
     listDiv.className = "max-h-0 overflow-hidden transition-all duration-500 pb-4 space-y-2 px-4";
-
+*/
     subjects[category]
       .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
       .forEach(sub => {
