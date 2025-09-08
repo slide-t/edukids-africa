@@ -2,40 +2,130 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Subjects - EduKids Africa</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduKids Africa - Quiz</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-  <style>
-    /* Tooltip */
-    #searchTooltip {
-      @apply absolute -top-10 left-1/2 transform -translate-x-1/2 bg-yellow-300 text-gray-900 text-sm px-3 py-1 rounded shadow-lg z-50;
-      display: none;
-      white-space: nowrap;
-    }
-    #searchTooltip::after {
-      content: '';
-      position: absolute;
-      bottom: -6px;
-      left: 50%;
-      transform: translateX(-50%);
-      border-width: 6px;
-      border-style: solid;
-      border-color: #fde68a transparent transparent transparent; /* yellow arrow */
-    }
-  </style>
+  <link href="https://unpkg.com/lucide-static/font/lucide.css" rel="stylesheet">
 </head>
-<body class="bg-gray-100">
-  <!-- Fixed Search -->
-  <div class="fixed top-20 left-1/2 transform -translate-x-1/2 w-full max-w-3xl px-4 z-40">
-    <div class="relative flex flex-col items-center">
-      <input id="searchInput" type="text" placeholder="" class="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
-      <div id="searchTooltip">Please enter a subject to search!</div>
+<body class="bg-gray-100 text-gray-800 font-sans">
+
+  <!-- HEADER -->
+  <header class="bg-purple-800 text-white p-4 flex justify-between items-center">
+    <h1 class="text-xl font-bold">EduKids Africa</h1>
+    <div class="flex items-center gap-6">
+      <!-- Clock -->
+      <div class="flex items-center gap-2">
+        <i class="lucide lucide-clock text-white"></i>
+        <span id="clock" class="font-mono">00:00:00</span>
+      </div>
+      <!-- Score & Level -->
+      <div class="flex items-center gap-4">
+        <span id="levelDisplay" class="font-bold">Level 1</span>
+        <span id="scoreDisplay" class="bg-white text-purple-800 px-3 py-1 rounded-lg shadow">Score: 0/0</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN QUIZ CONTAINER -->
+  <main class="max-w-3xl mx-auto p-6">
+    <div class="bg-white rounded-xl shadow-lg p-8 min-h-[400px] flex flex-col justify-between">
+      <!-- Question -->
+      <h2 id="questionText" class="text-lg font-semibold mb-6">Loading question...</h2>
+      <!-- Options -->
+      <div id="optionsContainer" class="space-y-4"></div>
+      <!-- Progress -->
+      <div class="mt-8">
+        <div class="w-full bg-gray-200 rounded-full h-3">
+          <div id="progressBar" class="bg-purple-600 h-3 rounded-full" style="width:0%"></div>
+        </div>
+      </div>
+    </div>
+
+   <!-- Timer Circle -->
+<div class="flex justify-center mb-4">
+  <div class="relative w-20 h-20">
+    <svg class="w-20 h-20 transform -rotate-90">
+      <circle cx="40" cy="40" r="35" stroke="gray" stroke-width="6" fill="transparent" />
+      <circle id="timerCircle" cx="40" cy="40" r="35" stroke="#7e22ce" stroke-width="6" fill="transparent"
+        stroke-dasharray="220" stroke-dashoffset="0" stroke-linecap="round" />
+    </svg>
+    <div class="absolute inset-0 flex items-center justify-center font-bold text-purple-800">
+      <span id="timerText">15</span>s
     </div>
   </div>
-<div class="max-w-4xl mx-auto mt-48 px-4">
-  <h1 class="text-3xl text-center font-bold text-gray-900 mb-8">Subjects Offered</h1>
-  <div id="subject-list" class="space-y-6"></div> <!-- increased space-y -->
+</div>
+ 
+  </main>
+
+  <!-- INSTRUCTION MODAL -->
+  <div id="instructionModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 max-w-md text-center shadow-lg">
+      <h2 class="text-xl font-bold mb-4">Welcome to EduKids Africa Quiz 🎉</h2>
+      <p class="mb-4 text-gray-700">
+        Answer the questions carefully. Each correct answer gives you a point.
+        To move to the next level, you must meet the pass mark.
+      </p>
+      <button id="startQuizBtn" class="bg-purple-800 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition">
+        I'm Ready 🚀
+      </button>
+    </div>
+  </div>
+
+  <!-- Floating Help Button -->
+  <button id="eduHelpBtn" 
+    class="fixed bottom-6 right-6 w-14 h-14 rounded-full bg-orange-700 text-white shadow-lg hover:bg-orange-600 transition z-50">
+    ?
+  </button>
+
+<!-- Help Modal -->
+<div id="eduHelpModal" class="hidden fixed inset-0 bg-black bg-opacity-40 flex items-center justify-center z-50">
+  <div class="bg-white rounded-xl shadow-lg w-full max-w-md p-6 text-center relative">
+
+    <h2 class="text-xl font-bold mb-4">Need Help?</h2>
+    
+    <!-- Quick Summary / Instructions -->
+    <div id="eduSummary" class="mb-4 text-gray-700 text-sm bg-gray-100 p-3 rounded-lg">
+      <p><strong>📌 Quick Summary:</strong></p>
+      <p>- Replay any level to practice again.</p>
+      <p>- Reset will shuffle and restart current level.</p>
+      <p>- You can always go back to Subjects.</p>
+    </div>
+
+    <!-- Replay Options -->
+    <div id="eduReplayLevelOptions" class="mb-2">
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-3 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="1">
+        Replay Level 1
+      </button>
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-3 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="2">
+        Replay Level 2
+      </button>
+      <button class="eduHelpBtnOption w-full bg-purple-600 text-white py-3 rounded-lg mb-2 hover:bg-purple-500 transition" data-level="3">
+        Replay Level 3
+      </button>
+    </div>
+
+    <button id="eduResetLevelBtn" class="w-full bg-orange-600 text-white py-3 rounded-lg mb-2 hover:bg-orange-500 transition">
+      Reset Current Level
+    </button>
+    <button id="eduBackSubjectsBtn" class="w-full bg-gray-700 text-white py-3 rounded-lg mb-2 hover:bg-gray-600 transition">
+      Go Back to Subjects
+    </button>
+
+    <!-- 🔹 New: Level Summary Section -->
+    <hr class="my-4">
+    <h3 class="text-lg font-bold mb-2">Level Summary</h3>
+    <p id="summaryMessage" class="mb-4 text-gray-700">No results yet.</p>
+    <div class="flex justify-center gap-4">
+      <button id="retryBtn" class="bg-red-600 text-white px-5 py-2 rounded-lg hover:bg-red-500 transition hidden">
+        Retry 🔄
+      </button>
+      <button id="nextLevelBtn" class="bg-purple-800 text-white px-5 py-2 rounded-lg hover:bg-purple-700 transition hidden">
+        Next Level 🚀
+      </button>
+    </div>
+
+    <button id="eduCloseHelpBtn" class="absolute top-2 right-2 text-gray-500 hover:text-gray-700">✖</button>
+  </div>
 </div>
   <!-- Shared site footer -->
   <footer>
@@ -45,22 +135,26 @@
       <p style="font-size:0.9rem; color:#aaa;">
         © <span id="year"></span> EduKids Africa. All rights reserved.
       </p>
-    </div>   
-  <nav class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="subjects.html">Subjects</a>
-    <a href="contact.html">Contact</a>
-    <a href="blog.html">Blog</a>
-  </nav> 
+    </div>
+    
+    <nav class="footer-links">
+      <a href="index.html">Home</a>
+      <a href="subjects.html">Subjects</a>
+      <a href="contact.html">Contact</a>
+      <a href="blog.html">Blog</a>
+    </nav>
   </footer>
+
   <style>
-/* Footer */
+    /* Footer */
     footer {
       background: #2c1a47;
       color: #fff;
       padding: 20px;
+      right:0;
+      left:0;
+      margin: 50px auto;
       text-align: center;
-      margin-top: 25px;
     }
 
     .typing-logo {
@@ -83,157 +177,145 @@
     @keyframes blink {
       50% { border-color: transparent; }
     }
+
     .footer-links {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  flex-wrap: wrap;
-  margin-bottom: 0.5rem;
-}
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.5rem;
+    }
 
-.footer-links a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: 600;
-  position: relative;
-  padding: 0.3rem 0.6rem;
-  transition: all 0.3s ease;
-  border-radius: 8px;
-}
+    .footer-links a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      position: relative;
+      padding: 0.3rem 0.6rem;
+      transition: all 0.3s ease;
+      border-radius: 8px;
+    }
 
-.footer-links a:hover {
-  background: #ffcc00;
-  color: #222;
-}
+    .footer-links a:hover {
+      background: #ffcc00;
+      color: #222;
+    }
 
-.footer-links a.active {
-  color: #fff;
-  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
-  background: #009999;
-}
+    .footer-links a.active {
+      color: #fff;
+      box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+      background: #009999;
+    }
 
-.footer-note {
-  color: #ccc;
-  font-size: 0.9rem;
-}
+    .footer-note {
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+  </style>
 
-</style>
+  <!-- EXTERNAL SCRIPT -->
+  <script src="quiz.js"></script>
 
+  <!-- LEVEL SUMMARY MODAL -->
+  <div id="summaryModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl p-6 max-w-md w-full text-center shadow-lg">
+      <h2 id="summaryTitle" class="text-xl font-bold mb-4">Level Summary</h2>
+      <p id="summaryMessage" class="mb-4 text-gray-700"></p>
+      <div class="flex justify-center gap-4">
+        <button id="retryBtn" class="bg-red-600 text-white px-6 py-2 rounded-lg hover:bg-red-500 transition hidden">
+          Retry 🔄
+        </button>
+        <button id="nextLevelBtn" class="bg-purple-800 text-white px-6 py-2 rounded-lg hover:bg-purple-700 transition hidden">
+          Next Level 🚀
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- END SCREEN MODAL -->
+  <div id="endModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-xl shadow-xl p-6 max-w-md w-full text-center">
+      <h2 id="endTitle" class="text-xl font-bold mb-3"></h2>
+      <p id="endMessage" class="text-gray-700 mb-6"></p>
+      <div class="flex justify-center gap-4">
+        <button id="retryBtn"
+          class="bg-orange-600 hover:bg-orange-500 text-white px-5 py-2 rounded-lg font-semibold hidden">
+          Retry Level 🔄
+        </button>
+        <button id="nextBtn"
+          class="bg-purple-700 hover:bg-purple-600 text-white px-5 py-2 rounded-lg font-semibold hidden">
+          Next Level ➡️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Floating Help Button Script -->
   <script>
-  // Year auto-update
-  document.getElementById("year").textContent = new Date().getFullYear();
+    const helpBtn = document.getElementById("eduHelpBtn");
+    const helpModal = document.getElementById("eduHelpModal");
+    const closeHelpBtn = document.getElementById("eduCloseHelpBtn");
+    const replayBtns = document.querySelectorAll("#eduReplayLevelOptions .eduHelpBtnOption");
+    const resetLevelBtn = document.getElementById("eduResetLevelBtn");
+    const backSubjectsBtn = document.getElementById("eduBackSubjectsBtn");
 
-  // Typing placeholder animation
-  const placeholderText = "search by subject here...";
-  let i = 0;
-  function typePlaceholder() {
-    if (i <= placeholderText.length) {
-      document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
-      i++;
-      setTimeout(typePlaceholder, 120);
-    }
-  }
-  typePlaceholder();
-
-  const subjectList = document.getElementById("subject-list");
-  const searchInput = document.getElementById("searchInput");
-
-  // Tooltip element
-  let tooltip = document.getElementById("searchTooltip");
-  if (!tooltip) {
-    tooltip = document.createElement("div");
-    tooltip.id = "searchTooltip";
-    tooltip.className = "absolute bg-yellow-300 text-gray-900 px-3 py-2 rounded shadow-lg text-sm";
-    tooltip.style.display = "none";
-    tooltip.style.zIndex = "50";
-    document.body.appendChild(tooltip);
-  }
-
-  let subjects = {};
-
-  // Load subjects.json
-  async function loadSubjects() {
-    try {
-      const res = await fetch('subjects.json');
-      subjects = await res.json();
-      renderSubjects();
-    } catch (err) {
-      console.error("Failed to load subjects.json", err);
-      subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
-    }
-  }
-
-function renderSubjects(filter = "") {
-  subjectList.innerHTML = "";
-
-  Object.keys(subjects).forEach(category => {
-    const groupDiv = document.createElement("div");
-    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4"; // margin bottom consistent
-
-    // Category heading
-    const heading = document.createElement("h2");
-    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
-    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
-
-    // Subject list container
-    const listDiv = document.createElement("div");
-    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
-
-    // Add filtered subjects
-    subjects[category]
-      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
-      .forEach(sub => {
-        const item = document.createElement("a");
-        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
-        /* ONLY LINE CHANGED BELOW: category -> level */
-        item.href = `quiz.html?level=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;
-        item.textContent = sub;
-        listDiv.appendChild(item);
-      });
-
-    // Toggle on heading click
-    heading.addEventListener("click", () => {
-      listDiv.classList.toggle("max-h-0");
-      listDiv.classList.toggle("max-h-96");
-      const icon = heading.querySelector("i");
-      icon.classList.toggle("rotate-180");
+    // Show modal
+    helpBtn.addEventListener("click", () => {
+      helpModal.classList.remove("hidden");
+      helpModal.classList.add("flex");
     });
 
-    // Append to group
-    groupDiv.appendChild(heading);
-    groupDiv.appendChild(listDiv);
-    subjectList.appendChild(groupDiv);
+    // Close modal
+    closeHelpBtn.addEventListener("click", () => {
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    });
 
-    // Auto-expand matching category when filtering
-    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
-      listDiv.classList.replace("max-h-0", "max-h-96");
-      heading.querySelector("i").classList.add("rotate-180");
+    // Replay specific level
+    replayBtns.forEach(btn => {
+      btn.addEventListener("click", () => {
+        const level = parseInt(btn.dataset.level);
+        if (typeof startLevel === "function" && availableLevels && availableLevels.length >= level) {
+          const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+          const levelKey = availableLevels[level - 1];
+          if (progress[levelKey]) delete progress[levelKey];
+          localStorage.setItem(progressKey, JSON.stringify(progress));
+
+          currentLevelIndex = level - 1;
+          score = 0;
+          currentQuestionIndex = 0;
+          prepareLevelQuestions();
+          renderQuestion();
+
+          helpModal.classList.add("hidden");
+          helpModal.classList.remove("flex");
+        }
+      });
+    });
+
+    // Reset current level
+    resetLevelBtn.addEventListener("click", () => {
+      score = 0;
+      currentQuestionIndex = 0;
+      prepareLevelQuestions();
+      renderQuestion();
+      helpModal.classList.add("hidden");
+      helpModal.classList.remove("flex");
+    });
+
+    // Go back to subjects
+    backSubjectsBtn.addEventListener("click", () => {
+      window.location.href = "subjects.html";
+    });
+
+    // Live clock
+    function updateClock() {
+      const now = new Date();
+      document.getElementById("clock").textContent =
+        now.toLocaleTimeString("en-GB", { hour12: false });
     }
-  });
-}  
-  // Search filtering
-  searchInput.addEventListener("input", e => {
-    const value = e.target.value.trim();
-    renderSubjects(value);
-  });
-
-  // Tooltip for empty search on Enter
-  searchInput.addEventListener("keydown", e => {
-    if (e.key === "Enter" && e.target.value.trim() === "") {
-      const rect = searchInput.getBoundingClientRect();
-      tooltip.textContent = "Please enter a subject to search!";
-      tooltip.style.top = rect.bottom + window.scrollY + 8 + "px";
-      tooltip.style.left = rect.left + window.scrollX + "px";
-      tooltip.style.display = "block";
-
-      setTimeout(() => {
-        tooltip.style.display = "none";
-      }, 10000);
-    }
-  });
-
-  // Load subjects on page load
-  loadSubjects();
-</script>    
+    setInterval(updateClock, 1000);
+    updateClock();
+  </script>
 </body>
 </html>
