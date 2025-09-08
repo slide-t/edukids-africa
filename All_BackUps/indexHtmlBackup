@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- Primary Meta Tags -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Edukids Africa – Better Future for Your Kids</title>
+<meta name="description" content="Edukids Africa connects children across Africa, Asia, Europe, and the Arabian Peninsula with quality learning experiences, creative workshops, and skill development for a brighter future. Based in Lagos, Nigeria, reaching students in Accra, Cairo, Nairobi, Johannesburg, Addis Ababa, Cape Town, and beyond. Expanding globally to Dubai, Riyadh, New Delhi, Beijing, Tokyo, London, Paris, Berlin, Rome, Madrid, and more.">
+<meta name="keywords" content="Edukids Africa, kids education Nigeria, Ghana Accra, South Africa Cape Town Johannesburg, Kenya Nairobi, Egypt Cairo, Ethiopia Addis Ababa, Morocco Rabat, Tunisia Tunis, Algeria Algiers, Dubai UAE, Saudi Arabia Riyadh Jeddah, Qatar Doha, Oman Muscat, Kuwait City, Turkey Ankara Istanbul, India New Delhi Mumbai Bangalore, Pakistan Islamabad Karachi Lahore, Bangladesh Dhaka, Sri Lanka Colombo, China Beijing Shanghai Hong Kong, Japan Tokyo Osaka Kyoto, South Korea Seoul, Indonesia Jakarta, Malaysia Kuala Lumpur, Singapore, Philippines Manila, Thailand Bangkok, Vietnam Hanoi Ho Chi Minh City, Europe kids education, UK London Manchester, France Paris Lyon, Germany Berlin Munich Frankfurt, Italy Rome Milan Venice, Spain Madrid Barcelona, Portugal Lisbon, Netherlands Amsterdam, Belgium Brussels, Switzerland Zurich Geneva, Austria Vienna, Sweden Stockholm, Norway Oslo, Denmark Copenhagen, Finland Helsinki, Poland Warsaw, Russia Moscow, Ukraine Kyiv, global kids learning, creative workshops for children, international education">
+<meta name="author" content="Edukids Africa">
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Edukids Africa – Better Future for Your Kids">
+<meta property="og:description" content="Empowering young minds with creative learning across Africa, Asia, Europe, and the Middle East — from Lagos, Accra, Nairobi, Cairo to Dubai, Riyadh, New Delhi, Beijing, Tokyo, London, Paris, and beyond.">
+<meta property="og:url" content="https://slide-t.github.io/edukids-africa/">
+<meta property="og:image" content="https://slide-t.github.io/edukids-africa/assets/og-image.jpg">
+<meta property="og:site_name" content="Edukids Africa">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Edukids Africa – Better Future for Your Kids">
+<meta name="twitter:description" content="Unlock global experiential learning for kids in Africa, Asia, Europe, and the Middle East. From Nigeria, Ghana, Kenya, South Africa to India, China, Japan, UK, France, and more.">
+<meta name="twitter:image" content="https://slide-t.github.io/edukids-africa/assets/twitter-image.jpg">
+
+<!-- Favicon -->
+<link rel="icon" href="/edukids-favicon.png" type="image/png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edukids - Better Future</title>
+
+  <!-- Fonts & Icons -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+ <!-- <link rel="stylesheet" href="style.css"/>-->
+
+
+  <style>
+    * {
+     box-sizing: border-box;
+      margin:0;
+      padding:0;
+    }
+    body {
+      margin: 0;
+      padding:0;
+      font-family: 'Poppins', sans-serif;
+      background: #2c1a47;
+      color: #fff;
+      position: relative;
+      overflow-x: hidden;
+    }
+    /* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  position: fixed;          /* fixed to viewport */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(44, 26, 71, 0.85); /* #2c1a47 with opacity */
+  backdrop-filter: blur(6px);         /* subtle glass effect */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+  .logo {
+      font-size: 28px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 20px;
+    }
+    nav a {
+      text-decoration: none;
+      color: #fff;
+      padding: 8px 15px;
+      border-radius: 25px;
+      transition: 0.3s;
+    }
+    nav a:hover {
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+.menu-toggle {
+      display: none;
+      font-size: 36px;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      color: #fff;
+    }
+    /* Close button */
+    .close-btn {
+      display: none;
+      background: rgba(255,255,255,0.15);
+      border: none;
+      color: #fff;
+      font-size: 16px;
+      text-align: center;
+      padding: 8px 20px;
+      border-radius: 25px;
+      margin-bottom: 20px;
+      cursor: pointer;
+      backdrop-filter: blur(10px);
+      transition: all 0.3s;
+    }
+
+    .close-btn:hover {
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 0 12px rgba(255,255,255,0.6);
+    }
+
+    /* Overlay */
+    #overlay {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: rgba(0,0,0,0.6);
+      z-index: 900;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #overlay.active {
+      display: block;
+      opacity: 1;
+    }
+
+    /* Decorative doodles */
+    .doodle {
+      position: absolute;
+      opacity: 0.15;
+      z-index: 0;
+      animation: float 6s ease-in-out infinite;
+    }
+    .doodle1 { top: 80px; left: 20px; width: 120px; animation-delay: 0s; }
+    .doodle2 { top: 200px; right: 30px; width: 140px; animation-delay: 2s; }
+    .doodle3 { bottom: 150px; left: 50px; width: 100px; animation-delay: 4s; }
+    .doodle4 { bottom: 100px; right: 50px; width: 160px; animation-delay: 6s; }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-20px) rotate(5deg); }
+    }
+
+/* Hero */
+.hero {
+  padding: 120px 20px 60px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #fff;
+  line-height:1.2;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s ease forwards;
+}
+    .hero h2 {
+  font-size: 38px;
+  font-weight: 700;
+  margin-top: 0;
+  color: #ff6b6b;
+  opacity: 0;
+  transform: translateY(-30px);
+  animation: fadeSlideDown 1s ease forwards;
+    }
+
+.hero p {
+  font-size: 18px;
+  max-width: 600px;
+  margin: auto;
+  color: #ddd;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlideUp 1.2s ease forwards;
+  animation-delay: 0.3s;
+}
+
+.hero .buttons {
+  margin-top: 25px;
+  opacity: 0;
+  transform: scale(0.9);
+  animation: fadeInScale 1s ease forwards;
+  animation-delay: 0.6s;
+}
+
+.hero .buttons button {
+  padding: 15px 32px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+}
+
+.hero .get-started {
+  background: #6c5ce7;
+  color: #fff;
+}
+
+.hero .get-started:hover {
+  background: #5a4bd4;
+}
+
+.hero .play-btn {
+  background: #fff;
+  color: #6c5ce7;
+}
+
+/* Animations */
+@keyframes fadeSlideDown {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Larger fonts for desktop */
+@media (min-width: 992px) {
+  .hero h1, h2 {
+    font-size: 64px;
+  }
+  .hero p {
+    font-size: 20px;
+  }
+  .hero .buttons button {
+    font-size: 18px;
+    padding: 18px 40px;
+  }
+}
+  .hero .buttons a.get-started {
+  display: inline-block;
+  padding: 15px 32px;
+  border: none;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.3s;
+  background:6c5ce7;
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero .buttons a.get-started:hover {
+  background: #5a4bd4;
+}  
+/* Cards container */
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px 20px;
+}
+
+/* Each card */
+.card {
+  background: #fff;
+  border-radius: 20px;
+  padding: 40px 20px;
+  width: 360px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  position: relative;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+/* Image wrapper (holds circle + image) */
+.img-wrapper {
+  position: relative;
+  width: 180px;
+  height: 180px;
+  margin: 0 auto 15px;
+}
+
+/* Circle background behind image */
+.circle-bg {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Different background colors */
+.circle-bg.orange {
+  background: #ff6b35;
+}
+.circle-bg.yellow {
+  background: #ffbe0b;
+}
+
+/* Student image — bigger than circle */
+.img-wrapper img {
+  position: absolute;
+  bottom: -10px; /* pushes image slightly outside */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;   /* bigger than circle */
+  height: auto;
+  z-index: 1;
+}
+
+/* Name */
+.card h3 {
+  margin: 15px 0 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Stats box */
+.stats {
+  margin-top: 12px;
+  background: #2c1a47;
+  border-radius: 15px;
+  padding: 12px;
+  color: #fff;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.stats i {
+  margin-right: 8px;
+  color: #ff9f43;
+}
+    
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: #2c1a47;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%;
+        height: 100vh;
+        padding: 30px 20px;
+        z-index: 1000;
+        transition: right 0.4s ease-in-out;
+      }
+
+      nav.active {
+        right: 0;
+      }
+
+      nav a {
+        display: block;
+        width: 90%;
+        text-align: center;
+        margin: 8px 0;
+        font-size: 18px;
+        padding: 8px 0;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .close-btn {
+        display: block;
+      }
+    }
+
+  /* Signup Button Wrapper */
+.signup-wrapper {
+  margin-top: 25px;
+  text-align: center;
+}
+
+/* Signup Button */
+.signup-btn {
+  width: 80%;                /* spans most of the page */
+  max-width: 400px;           /* keep it balanced */
+  padding: 15px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25), inset 0 0 15px rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.signup-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.3), inset 0 0 20px rgba(255,255,255,0.4);
+}
+
+/* Water bubble animated shine */
+.signup-btn::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(255,255,255,0.4) 20%, transparent 70%);
+  animation: bubble 6s infinite linear;
+  transform: rotate(25deg);
+}
+
+@keyframes bubble {
+  0% { transform: translateX(-100%) translateY(0) rotate(25deg); }
+  50% { transform: translateX(0) translateY(-20%) rotate(25deg); }
+  100% { transform: translateX(100%) tranteY(0) rotate(25deg); }
+}
+  </style>
+</head>
+<body>
+
+  
+  <!-- HEADER -->
+  <header>
+    <div class="logo">Edukids Africa<span style="color:#ff6b6b;">.</span></div>
+    <nav id="nav">
+      <button id="closeMenu" class="close-btn">CLOSE</button>
+      <a href="#home">Home</a>
+      <a href="#students">Students</a>
+      <a href="#about">About</a>
+      <a href="#service">Our Services</a>
+      <a href="#contact">Contact</a>
+      <a href="reg.html">Sign Up</a>
+    </nav>
+    <div class="menu-toggle" id="menu">☰</div>
+  </header>
+
+  <!-- Overlay -->
+  <div id="overlay"></div>
+
+  <!-- Decorative doodle graphics -->
+  <img src="https://i.ibb.co/gTL8jHc/doodle1.png" class="doodle doodle1" alt="doodle">
+  <img src="https://i.ibb.co/ysGZh8c/doodle2.png" class="doodle doodle2" alt="doodle">
+  <img src="https://i.ibb.co/HHQpwzf/doodle3.png" class="doodle doodle3" alt="doodle">
+  <img src="https://i.ibb.co/wWbLxZy/doodle4.png" class="doodle doodle4" alt="doodle">
+
+  <!-- Hero Section -->
+   
+  <section class="hero" id="home">
+    
+    <h1>Igniting Passion for Learning – </h1><br><h2>Discover. Learn. Excel.</h2>
+    <!--<p>We just don’t give our students only lecture but real life experiment, workshops and field experience throughout the journey!</p>-->
+   <p>At EduKids Africa, we go beyond lectures — inspiring children through real-life experiments, engaging workshops, and hands-on experiences that spark curiosity and excellence.</p>
+    <div class="buttons">
+  <a href="subjects.html" class="get-started">
+    <i class="fas fa-play-circle"></i> Play Quiz Here
+  </a>
+  <button class="play-btn"><i class="fas fa-video"></i></button>
+</div>
+  </section>
+<div class="signup-wrapper">
+  <button class="signup-btn" onclick="window.location.href='reg.html'">Signup Here</button>
+
+</div>
+  <div class="button-container">
+  <button id="openSubjectsBtn" class="btn-secondary">
+    Browse Subjects Offered
+  </button>
+</div>
+  <!-- Cards Section -->
+<section class="cards" id="students">
+  <div class="card">
+    <div class="img-wrapper">
+      <div class="circle-bg orange"></div>
+      <img src="https://slide-t.github.io/edukids-africa/images/sophia_1.png" alt="Sophia">
+    </div>
+    <h3>Sophia Elizabeth</h3>
+    <div class="stats"><i class="fas fa-user-graduate"></i> 7.5k+ Active Students</div>
+    <div class="stats"><i class="fas fa-bolt"></i> All Subjects Quiz</div>
+  </div>
+
+  <div class="card">
+    <div class="img-wrapper">
+      <div class="circle-bg yellow"></div>
+      <img src="https://slide-t.github.io/edukids-africa/images/jayden_1.png" alt="Jayden">
+    </div>
+    <h3>Jayden Gabriel</h3>
+    <div class="stats"><i class="fas fa-user-graduate"></i> 10k+ Active Students</div>
+    <div class="stats"><i class="fas fa-bolt"></i> 27+ Available Subjects</div>
+  </div>
+</section>
+
+  <section id="service">
+  <h2 class="service-title">Our Services</h2>
+  <div class="slider-wrapper">
+    <div class="service-cards">
+      
+      <div class="service-card">
+        <i class="fas fa-code service-icon"></i>
+        <h3>Web Development</h3>
+        <p>Custom, responsive, and high-performance websites designed to enhance your digital presence.</p>
+        <a href="https://wa.me/2349131697494" class="service-btn">Request Now</a>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-paint-brush service-icon"></i>
+        <h3>Graphics Design</h3>
+        <p>Creative visual solutions that communicate your brand identity with clarity and impact.</p>
+        <a href="https://wa.me/2349131697494" class="service-btn">Request Now</a>
+      </div>
+      
+      <div class="service-card">
+        <i class="fas fa-chalkboard-teacher service-icon"></i>
+        <h3>Training</h3>
+        <p>Comprehensive online and offline training programs tailored to equip learners with practical skills.</p>
+        <a href="https://wa.me/2349131697494" class="service-btn">Request Now</a>
+      </div>
+      
+      <div class="service-card">
+        <div class="tech-icons">
+          <i class="fab fa-html5"></i>
+          <i class="fab fa-css3-alt"></i>
+          <i class="fab fa-js"></i>
+        </div>
+        <h3>HTML, CSS & JavaScript</h3>
+        <p>Hands-on instruction in the core technologies of the web, from fundamentals to advanced techniques.</p>
+        <a href="https://wa.me/2349131697494" class="service-btn">Request Now</a>
+      </div>
+    
+    </div>
+    
+    <div class="dots">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+</section>
+
+<style>
+  #service {
+    background: #fff;
+    background-size: cover;
+    background-attachment: fixed;
+    padding:  20px;
+    text-align: center;
+  }
+
+  .service-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: purple;
+    margin-bottom: 20px;
+  }
+
+  .slider-wrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .service-cards {
+    display: flex;
+    width: calc(300px * 4 + 40px);
+    animation: slide 12s infinite;
+  }
+
+  .service-card {
+    flex: 0 0 320px;
+    height: 360px;
+    margin: 0 10px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.15); /* transparent */
+    backdrop-filter: blur(12px);           /* frosted glass effect */
+    -webkit-backdrop-filter: blur(12px);
+    color: black;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-weight: bold;
+  }
+
+  .service-icon {
+    font-size: 50px;
+    color: orange;
+    margin-bottom: 15px;
+  }
+
+  .tech-icons {
+    font-size: 40px;
+    margin-bottom: 15px;
+  }
+
+  .tech-icons i {
+    margin: 0 5px;
+    color: #ff6b35;
+  }
+
+  .service-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: black;
+    font-weight: bold;
+  }
+
+  .service-card p {
+    font-size: 14px;
+    line-height: 1.5;
+    flex-grow: 1;
+    font-weight: bold;
+  }
+
+  .service-btn {
+    display: inline-block;
+    padding: 10px 15px;
+    background:  #ffbe0b;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+
+  .service-btn:hover {
+    background:  #f0c243;
+  }
+
+  /* Slider animation */
+  @keyframes slide {
+    0%, 20%   { transform: translateX(0); }
+    25%, 45%  { transform: translateX(-320px); }
+    50%, 70%  { transform: translateX(-640px); }
+    75%, 95%  { transform: translateX(-960px); }
+    100%      { transform: translateX(0); }
+  }
+
+  /* Dots */
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+  }
+
+  .dots span {
+    width: 12px;
+    height: 12px;
+    background: purple;
+    border-radius: 50%;
+    opacity: 0.4;
+    transition: 0.3s;
+  }
+
+  .dots span.active {
+    opacity: 1;
+  }
+
+  /* Desktop - stop sliding */
+  @media (min-width: 768px) {
+    .service-cards {
+      width: auto;
+      animation: none;
+      justify-content: center;
+    }
+    .dots { display: none; }
+  }
+/* Overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Shared modal */
+.modal {
+  background: #2c1a47;
+  color: #fff;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+  animation: fadeIn 0.4s ease;
+  position: relative;
+}
+
+/* Sizes */
+.modal.small { width: 360px; }
+.modal.big { width: 550px; max-height: 90vh; overflow-y: auto; }
+
+/* Close buttons */
+.close-modal {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 24px;
+  color: #ff6b6b;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.close-modal.top { top: 10px; right: 15px; }
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+/* Buttons */
+.btn-primary, .btn-secondary {    
+ background: #6c5ce7;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  margin: 8px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 80%;   /* spans most of the page */
+  max-width: 400px;           /* keep it balanced */
+  padding: 15px 20px;
+  font-size: 1.2rem;
+  font-weight: 600;   */ 
+}
+.btn-primary:hover, .btn-secondary:hover {
+  background: #5a4bd4;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+    
+</style>
+
+<script>
+  // Animate dots with slider
+  const dots = document.querySelectorAll('.dots span');
+  let current = 0;
+
+  setInterval(() => {
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[current].classList.add('active');
+    current = (current + 1) % dots.length;
+  }, 3000);
+</script>
+
+  
+  <!-- Footer -->
+  <div id="footer"></div>
+  <!-- Scripts -->
+  <script>
+    const menu = document.getElementById('menu');
+    const nav = document.getElementById('nav');
+    const closeBtn = document.getElementById('closeMenu');
+    const overlay = document.getElementById('overlay');
+
+    function openMenu() {
+      nav.classList.add('active');
+      overlay.classList.add('active');
+    }
+
+    function closeMenuFn() {
+      nav.classList.remove('active');
+      overlay.classList.remove('active');
+    }
+
+    menu.addEventListener('click', openMenu);
+    closeBtn.addEventListener('click', closeMenuFn);
+    overlay.addEventListener('click', closeMenuFn);
+
+    document.querySelectorAll('#nav a').forEach(link => {
+      link.addEventListener('click', closeMenuFn);
+    });
+
+    // Load footer
+    async function loadFooter() {
+      const footerEl = document.getElementById("footer");
+      let footerHTML = "";
+      try {
+        let response = await fetch("footer.html");
+        if (!response.ok) throw new Error("Not found locally");
+        footerHTML = await response.text();
+      } catch (e1) {
+        try {
+          let response = await fetch("/footer.html");
+          if (!response.ok) throw new Error("Not found in root");
+          footerHTML = await response.text();
+        } catch (e2) {
+          console.error("Footer could not be loaded:", e2);
+          footerHTML = "<p style='text-align:center;color:#fff;'>Footer not available</p>";
+        }
+      }
+      footerEl.innerHTML = footerHTML;
+    }
+    loadFooter();
+
+    // Register service worker
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.register("/sw.js").then(() => {
+        console.log("Service Worker Registered");
+      });
+    }
+  </script>
+<!-- Small Modal: Choose Category -->
+<div id="chooseModal" class="modal-overlay">
+  <div class="modal small">
+    <h2>Select Category</h2>
+    <p>Please choose a subject category:</p>
+    <div class="modal-actions">
+      <button class="btn-primary" id="primaryBtn">Primary School</button>
+      <button class="btn-primary" id="secondaryBtn">Secondary School</button>
+      <button class="btn-primary" id="cambridgeBtn">Cambridge Subjects</button>
+    </div>
+    <button class="close-modal">&times;</button>
+  </div>
+</div>
+  
+<!-- Big Modal: Subject List -->
+<div id="subjectsModal" class="modal-overlay">
+  <div class="modal big">
+    <button class="close-modal top">&times;</button>
+    <h2 id="subjectTitle">Subjects</h2>
+    <ul id="subjectList"></ul>
+    <button id="okBtn" class="btn-primary">OK</button>
+  </div>
+</div>
+<script>
+  const openSubjectsBtn = document.getElementById("openSubjectsBtn");
+  const chooseModal = document.getElementById("chooseModal");
+  const subjectsModal = document.getElementById("subjectsModal");
+  const subjectList = document.getElementById("subjectList");
+  const subjectTitle = document.getElementById("subjectTitle");
+  const primaryBtn = document.getElementById("primaryBtn");
+  const secondaryBtn = document.getElementById("secondaryBtn");
+  const okBtn = document.getElementById("okBtn");
+  const closeButtons = document.querySelectorAll(".close-modal");
+
+  const primarySubjects = [
+    "English Studies","Mathematics","Basic Science & Technology",
+    "Physical & Health Education","ICT","National Value Education",
+    "Religious Studies","Cultural & Creative Arts","History","Yoruba · Igbo · Hausa · Arabic"
+  ];
+
+  const secondarySubjects = [
+    "English Language","Mathematics","Biology","Chemistry","Physics","Government","Civic Education",
+    "Agricultural Science","Literature in English","Data Processing","Financial Accounting","Commerce",
+    "Economics","French","Further Mathematics","Geography","Information Technology","CRS & IRS","Yoruba · Igbo · Hausa · Arabic"
+  ];
+
+  // Open small modal
+  openSubjectsBtn.addEventListener("click", () => {
+    chooseModal.style.display = "flex";
+  });
+
+  // Handle category selection
+  function showSubjects(title, subjects) {
+    subjectTitle.textContent = title;
+    subjectList.innerHTML = subjects.map(s => `<li>${s}</li>`).join("");
+    chooseModal.style.display = "none";
+    subjectsModal.style.display = "flex";
+  }
+
+  primaryBtn.addEventListener("click", () => showSubjects("Primary School Subjects", primarySubjects));
+  secondaryBtn.addEventListener("click", () => showSubjects("Secondary School Subjects", secondarySubjects));
+
+  // Close big modal with OK
+  okBtn.addEventListener("click", () => {
+    subjectsModal.style.display = "none";
+    chooseModal.style.display = "flex";
+  });
+
+  // Close buttons
+  closeButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+      subjectsModal.style.display = "none";
+      chooseModal.style.display = "none";
+    });
+  });
+
+  // Click outside
+  window.addEventListener("click", e => {
+    if (e.target === chooseModal || e.target === subjectsModal) {
+      chooseModal.style.display = "none";
+      subjectsModal.style.display = "none";
+    }
+  });
+
+  // ESC key
+  window.addEventListener("keydown", e => {
+    if (e.key === "Escape") {
+      chooseModal.style.display = "none";
+      subjectsModal.style.display = "none";
+    }
+  });
+
+// Cambridge subject function 
+  const cambridgeBtn = document.getElementById("cambridgeBtn");
+
+  const cambridgeSubjects = [
+    "English (First Language)",
+    "English Literature",
+    "Mathematics",
+    "Additional Mathematics",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Computer Science",
+    "Geography",
+    "History",
+    "Economics",
+    "Business Studies",
+    "Accounting",
+    "Sociology",
+    "French / Spanish / German / Arabic / Mandarin",
+    "Global Perspectives",
+    "Art & Design",
+    "Drama",
+    "Music",
+    "Physical Education"
+  ];
+
+  cambridgeBtn.addEventListener("click", () => 
+    showSubjects("Cambridge Subjects", cambridgeSubjects)
+  );
+  
+</script>
+  
+</body>
+</html>
