@@ -124,7 +124,46 @@ function normalizeSubjectToFileName(s) {
   return s.toLowerCase().trim().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
 }
 
+/* Load subject JSON dynamically */
 async function loadSubjectData() {
+  try {
+    const category = new URLSearchParams(window.location.search).get("category") || "Primary";
+    const fileName = `${subject}.json`; // subject already in Title Case (e.g. Mathematics, English-Language)
+    const filePath = `questions/${category}/${fileName}`;
+
+    const res = await fetch(filePath);
+    if (!res.ok) {
+      console.error(`File not found: ${filePath}`);
+      if (questionText) questionText.textContent = `Quiz not available for "${subject}".`;
+      return false;
+    }
+
+    subjectData = await res.json();
+
+    // Collect Level keys
+    availableLevels = Object.keys(subjectData)
+      .filter(k => /^Level\s*\d+/i.test(k))
+      .sort((a, b) => {
+        const na = parseInt(a.match(/\d+/)[0], 10);
+        const nb = parseInt(b.match(/\d+/)[0], 10);
+        return na - nb;
+      });
+
+    // Load progress from localStorage
+    const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+    let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
+    currentLevelIndex = firstNotPassed === -1 ? availableLevels.length : firstNotPassed;
+
+    return true;
+  } catch (err) {
+    console.error("Failed to load subject file", err);
+    if (questionText) questionText.textContent = `Error loading quiz for "${subject}".`;
+    return false;
+  }
+}
+
+
+/*async function loadSubjectData() {
   try {
     const fname = normalizeSubjectToFileName(subject);
     // Try folder-based file first
@@ -197,7 +236,7 @@ async function loadSubjectData() {
     return false;
   }
 }
-
+*/
 /* ---------- Prepare / Render Questions ---------- */
 function prepareLevelQuestions() {
   if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
