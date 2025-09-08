@@ -1,87 +1,239 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Subject</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Subjects - EduKids Africa</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <style>
+    /* Tooltip */
+    #searchTooltip {
+      @apply absolute -top-10 left-1/2 transform -translate-x-1/2 bg-yellow-300 text-gray-900 text-sm px-3 py-1 rounded shadow-lg z-50;
+      display: none;
+      white-space: nowrap;
+    }
+    #searchTooltip::after {
+      content: '';
+      position: absolute;
+      bottom: -6px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-width: 6px;
+      border-style: solid;
+      border-color: #fde68a transparent transparent transparent; /* yellow arrow */
+    }
+  </style>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-
-  <!-- Navbar -->
-  <nav class="bg-purple-900 text-white px-6 py-4 flex justify-between items-center">
-    <a href="subjects.html" class="font-bold text-xl">Quiz App</a>
-    <button id="menuToggle" class="lg:hidden focus:outline-none">
-      <svg id="menuIcon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-      </svg>
-    </button>
-    <ul id="menu" class="hidden lg:flex space-x-6 font-medium">
-      <li><a href="index.html" class="hover:text-yellow-400 transition">Home</a></li>
-      <li><a href="subjects.html" class="hover:text-yellow-400 transition">Subjects</a></li>
-    </ul>
-  </nav>
-
-  <!-- Subjects Container -->
-  <main class="flex-grow container mx-auto px-4 py-8">
-    <div class="bg-white shadow-lg rounded-xl p-6 max-w-3xl mx-auto">
-      <h1 class="text-2xl font-bold mb-6 text-center">Choose Your Subject</h1>
-      <div id="subjectsContainer" class="grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+<body class="bg-gray-100">
+  <!-- Fixed Search -->
+  <div class="fixed top-20 left-1/2 transform -translate-x-1/2 w-full max-w-3xl px-4 z-40">
+    <div class="relative flex flex-col items-center">
+      <input id="searchInput" type="text" placeholder="" class="w-full px-4 py-3 rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 transition" />
+      <div id="searchTooltip">Please enter a subject to search!</div>
     </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white py-6 mt-10 relative overflow-hidden">
-    <div class="container mx-auto flex items-center justify-between px-4">
-      <img src="assets/logo.png" alt="Logo" class="w-10 h-10">
-      <h1 id="footerLogo" class="font-bold text-lg whitespace-nowrap">EduQuiz</h1>
-    </div>
+  </div>
+<div class="max-w-4xl mx-auto mt-48 px-4">
+  <h1 class="text-3xl text-center font-bold text-gray-900 mb-8">Subjects Offered</h1>
+  <div id="subject-list" class="space-y-6"></div> <!-- increased space-y -->
+</div>
+  <!-- Shared site footer -->
+  <footer>
+    <div>
+      <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+      <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
+      <p style="font-size:0.9rem; color:#aaa;">
+        © <span id="year"></span> EduKids Africa. All rights reserved.
+      </p>
+    </div>   
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav> 
   </footer>
-
-  <!-- Subject Loader -->
-  <script>
-    async function loadSubjects() {
-      try {
-        const response = await fetch("subjects.json");
-        const data = await response.json();
-        const container = document.getElementById("subjectsContainer");
-
-        for (const level in data) {
-          // Level Title
-          const levelTitle = document.createElement("h2");
-          levelTitle.className = "text-xl font-semibold mt-6 col-span-full";
-          levelTitle.textContent = level;
-          container.appendChild(levelTitle);
-
-          // Subjects
-          data[level].forEach(subject => {
-            const link = document.createElement("a");
-            link.href = `quiz.html?level=${encodeURIComponent(level)}&subject=${encodeURIComponent(subject)}`;
-            link.className = "block bg-purple-700 text-white rounded-lg px-4 py-3 text-center font-medium hover:bg-purple-800 transition";
-            link.textContent = subject;
-            container.appendChild(link);
-          });
-        }
-      } catch (error) {
-        console.error("Error loading subjects:", error);
-      }
+  <style>
+/* Footer */
+    footer {
+      background: #2c1a47;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      margin-top: 25px;
     }
 
-    loadSubjects();
+    .typing-logo {
+      margin-bottom: 10px;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: #ff6b6b;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid #ff6b6b;
+      width: 0;
+      animation: typing 3s steps(20, end) infinite alternate, blink 0.8s infinite;
+    }
 
-    // Navbar toggle
-    const menuToggle = document.getElementById("menuToggle");
-    const menu = document.getElementById("menu");
-    const menuIcon = document.getElementById("menuIcon");
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 220px; }
+    }
 
-    menuToggle.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
-      if (!menu.classList.contains("hidden")) {
-        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>';
-      } else {
-        menuIcon.innerHTML = '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>';
-      }
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    .footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  padding: 0.3rem 0.6rem;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.footer-links a:hover {
+  background: #ffcc00;
+  color: #222;
+}
+
+.footer-links a.active {
+  color: #fff;
+  box-shadow: 0 0 8px #00e6e6, 0 0 15px #00e6e6;
+  background: #009999;
+}
+
+.footer-note {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+</style>
+
+  <script>
+  // Year auto-update
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Typing placeholder animation
+  const placeholderText = "search by subject here...";
+  let i = 0;
+  function typePlaceholder() {
+    if (i <= placeholderText.length) {
+      document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
+      i++;
+      setTimeout(typePlaceholder, 120);
+    }
+  }
+  typePlaceholder();
+
+  const subjectList = document.getElementById("subject-list");
+  const searchInput = document.getElementById("searchInput");
+
+  // Tooltip element
+  let tooltip = document.getElementById("searchTooltip");
+  if (!tooltip) {
+    tooltip = document.createElement("div");
+    tooltip.id = "searchTooltip";
+    tooltip.className = "absolute bg-yellow-300 text-gray-900 px-3 py-2 rounded shadow-lg text-sm";
+    tooltip.style.display = "none";
+    tooltip.style.zIndex = "50";
+    document.body.appendChild(tooltip);
+  }
+
+  let subjects = {};
+
+  // Load subjects.json
+  async function loadSubjects() {
+    try {
+      const res = await fetch('subjects.json');
+      subjects = await res.json();
+      renderSubjects();
+    } catch (err) {
+      console.error("Failed to load subjects.json", err);
+      subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
+    }
+  }
+
+function renderSubjects(filter = "") {
+  subjectList.innerHTML = "";
+
+  Object.keys(subjects).forEach(category => {
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4"; // margin bottom consistent
+
+    // Category heading
+    const heading = document.createElement("h2");
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
+    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+    // Subject list container
+    const listDiv = document.createElement("div");
+    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
+
+    // Add filtered subjects
+    subjects[category]
+      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(sub => {
+        const item = document.createElement("a");
+        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
+        /* ONLY LINE CHANGED BELOW: category -> level */
+        item.href = `quiz.html?level=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;
+        item.textContent = sub;
+        listDiv.appendChild(item);
+      });
+
+    // Toggle on heading click
+    heading.addEventListener("click", () => {
+      listDiv.classList.toggle("max-h-0");
+      listDiv.classList.toggle("max-h-96");
+      const icon = heading.querySelector("i");
+      icon.classList.toggle("rotate-180");
     });
-  </script>
+
+    // Append to group
+    groupDiv.appendChild(heading);
+    groupDiv.appendChild(listDiv);
+    subjectList.appendChild(groupDiv);
+
+    // Auto-expand matching category when filtering
+    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
+      listDiv.classList.replace("max-h-0", "max-h-96");
+      heading.querySelector("i").classList.add("rotate-180");
+    }
+  });
+}  
+  // Search filtering
+  searchInput.addEventListener("input", e => {
+    const value = e.target.value.trim();
+    renderSubjects(value);
+  });
+
+  // Tooltip for empty search on Enter
+  searchInput.addEventListener("keydown", e => {
+    if (e.key === "Enter" && e.target.value.trim() === "") {
+      const rect = searchInput.getBoundingClientRect();
+      tooltip.textContent = "Please enter a subject to search!";
+      tooltip.style.top = rect.bottom + window.scrollY + 8 + "px";
+      tooltip.style.left = rect.left + window.scrollX + "px";
+      tooltip.style.display = "block";
+
+      setTimeout(() => {
+        tooltip.style.display = "none";
+      }, 10000);
+    }
+  });
+
+  // Load subjects on page load
+  loadSubjects();
+</script>    
 </body>
 </html>
