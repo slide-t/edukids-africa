@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduKids Africa - Subjects</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="flex flex-col min-h-screen bg-gray-50">
+
+  <!-- Subject selection block -->
+  <main class="flex-grow container mx-auto px-4 py-8">
+    <div id="subjectsContainer" class="bg-white shadow-lg rounded-xl p-6 max-w-3xl mx-auto text-center">
+      <h1 class="text-2xl font-bold mb-6">Choose a Subject</h1>
+      
+      <div class="grid gap-4 sm:grid-cols-2">
+        <a href="quiz.html?level=Primary&subject=Mathematics" 
+           class="px-6 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition block">
+          Mathematics
+        </a>
+        
+        <a href="quiz.html?level=Primary&subject=English-Language" 
+           class="px-6 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition block">
+          English Language
+        </a>
+  
+        <a href="quiz.html?level=Primary&subject=Science" 
+           class="px-6 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition block">
+          Science
+        </a>
+        
+        <a href="quiz.html?level=Primary&subject=Social-Studies" 
+           class="px-6 py-3 bg-purple-700 text-white rounded-lg hover:bg-purple-800 transition block">
+          Social Studies
+        </a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Existing quiz container (unchanged) -->
+  <div id="quizContainer" class="bg-white shadow-lg rounded-xl p-6 max-w-3xl mx-auto mt-8 hidden">
+    <h2 id="quizTitle" class="text-xl font-bold mb-4"></h2>
+    <div id="quizBoard"></div>
+    <button id="nextBtn" 
+            class="mt-4 px-6 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition">
+      Next
+    </button>
+  </div>
+
+  <script src="quiz.js"></script>
+</body>
+</html>
