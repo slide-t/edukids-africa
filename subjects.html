@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Subjects - EduKids Africa</title>
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+/* Typing placeholder animation */
+@keyframes blink {
+  50% { border-color: transparent; }
+}
+/* Footer roll-in animation */
+@keyframes rollIn {
+  0% { transform: translateX(200%) rotate(360deg); opacity: 0; }
+  100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+}
+</style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- Main Container -->
+<div class="max-w-4xl mx-auto mt-32 px-4">
+
+  <!-- Page Title -->
+  <h1 class="text-3xl font-bold text-center text-gray-900 mb-8">Subjects Offered</h1>
+
+  <!-- Search Box -->
+  <div class="search-box fixed top-20 left-0 w-full flex justify-center mb-16 z-50">
+    <input type="text" id="searchInput" class="px-4 py-2 w-3/4 max-w-lg rounded-full border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600 transition-all" placeholder="">
+    <div id="searchTooltip" class="absolute -bottom-10 text-white bg-red-600 px-3 py-1 rounded shadow hidden">Please type a subject name</div>
+  </div>
+
+  <!-- Subject List -->
+  <div id="subject-list" class="space-y-4 mt-24"></div>
+</div>
+
+<!-- Footer -->
+<footer class="bg-purple-900 text-white mt-20 py-8 flex flex-col md:flex-row items-center justify-between px-6">
+  <div class="flex items-center space-x-4">
+    <img src="logo.png" alt="EduKids Logo" class="h-12 w-12">
+    <h2 class="text-2xl font-bold animate-rollIn">EduKids Africa</h2>
+  </div>
+  <nav class="flex space-x-6 mt-4 md:mt-0">
+    <a href="index.html" class="hover:text-yellow-400 transition">Home</a>
+    <a href="subjects.html" class="hover:text-yellow-400 transition">Subjects</a>
+    <a href="contact.html" class="hover:text-yellow-400 transition">Contact</a>
+    <a href="blog.html" class="hover:text-yellow-400 transition">Blog</a>
+  </nav>
+</footer>
+
+<script>
+// Animated placeholder
+const placeholderText = "search by subject here...";
+let i = 0;
+const searchInput = document.getElementById("searchInput");
+function typePlaceholder() {
+  if(i <= placeholderText.length){
+    searchInput.setAttribute("placeholder", placeholderText.slice(0,i));
+    i++;
+    setTimeout(typePlaceholder, 120);
+  }
+}
+typePlaceholder();
+
+// Tooltip
+const tooltip = document.getElementById("searchTooltip");
+
+// Load subjects.json
+let subjects = {};
+async function loadSubjects() {
+  try {
+    const res = await fetch("subjects.json");
+    subjects = await res.json();
+    renderSubjects();
+  } catch(err) {
+    console.error(err);
+    document.getElementById("subject-list").innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
+  }
+}
+
+// Render subjects
+function renderSubjects(filter="") {
+  const container = document.getElementById("subject-list");
+  container.innerHTML = "";
+
+  Object.keys(subjects).forEach(category => {
+    // Group container
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "bg-white rounded-xl shadow p-4";
+
+    // Heading
+    const heading = document.createElement("h2");
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2";
+    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+    // Subject list
+    const listDiv = document.createElement("div");
+    listDiv.className = "overflow-hidden transition-all duration-500 space-y-2 px-2 pb-6";
+    listDiv.style.maxHeight = "0px"; // collapsed by default
+
+    // Subjects
+    subjects[category].filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(sub => {
+        const item = document.createElement("a");
+        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition";
+        item.href = `quiz.html?subject=${sub.toLowerCase().replace(/\s+/g,'-')}`;
+        item.textContent = sub;
+        listDiv.appendChild(item);
+      });
+
+    // Toggle
+    heading.addEventListener("click", () => {
+      if(listDiv.style.maxHeight && listDiv.style.maxHeight !== "0px"){
+        listDiv.style.maxHeight = "0px";
+      } else {
+        listDiv.style.maxHeight = listDiv.scrollHeight + "px";
+      }
+      heading.querySelector("i").classList.toggle("rotate-180");
+    });
+
+    groupDiv.appendChild(heading);
+    groupDiv.appendChild(listDiv);
+    container.appendChild(groupDiv);
+  });
+}
+
+// Search filter
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.trim();
+  renderSubjects(value);
+});
+
+// Show tooltip on empty Enter
+searchInput.addEventListener("keydown", e => {
+  if(e.key === "Enter" && e.target.value.trim() === ""){
+    tooltip.classList.remove("hidden");
+    setTimeout(()=> tooltip.classList.add("hidden"), 10000);
+  }
+});
+
+loadSubjects();
+</script>
+
+</body>
+</html>
