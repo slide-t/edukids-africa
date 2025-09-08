@@ -196,8 +196,7 @@
 { "question": "Which planets are gas giants?", "options": ["Jupiter and Saturn", "Earth and Mars", "Mercury and Venus", "Neptune and Pluto"], "answer": "Jupiter and Saturn" },
 { "question": "Which organ helps in pumping blood throughout the body?", "options": ["Heart", "Lungs", "Kidneys", "Liver"], "answer": "Heart" },
 { "question": "Which gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" }
-    
-  ]
+    ]
    }
  }
   
