@@ -6,7 +6,8 @@
     "Basic-Technology",
     "Social-Studies",
     "Civic-Education",
-    "Agricultural-Science"
+    "Agricultural-Science",
+    "Home-Economics"
   ],
   "Secondary": [
     "Mathematics",
@@ -17,7 +18,9 @@
     "Geography",
     "Economics",
     "Government",
-    "Literature-in-English"
+    "Literature-in-English",
+    "Commerce",
+    "Financial-Accounting"
   ],
   "WAEC": [
     "Mathematics",
