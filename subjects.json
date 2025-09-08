@@ -1,23 +1,6 @@
 {
-  "Languages": [
-    "English",
-    "French",
-    "Spanish"
-  ],
-  "Sciences": [
+  "Primary": [
     "Mathematics",
-    "Physics",
-    "Biology",
-    "Chemistry"
-  ],
-  "Social Studies": [
-    "History",
-    "Geography",
-    "Civics"
-  ],
-  "Creative Arts": [
-    "Music",
-    "Drawing",
-    "Drama"
+    "English"
   ]
 }
