@@ -1,180 +1,125 @@
-// quiz.js
+// ================================
+// quiz.js - EduKids Africa
+// ================================
 
-// DOM Elements
+/* Sounds */
+const correctSound = new Audio("https://actions.google.com/sounds/v1/cartoon/clang_and_wobble.ogg");
+const wrongSound = new Audio("https://actions.google.com/sounds/v1/cartoon/wood_plank_flicks.ogg");
+const levelUpSound = new Audio("https://actions.google.com/sounds/v1/cartoon/congratulations.ogg");
+
+/* DOM Elements */
+const quizTitle = document.getElementById("quizTitle");
+const startQuizBtn = document.getElementById("startQuizBtn");
+const questionContainer = document.getElementById("questionContainer");
 const questionText = document.getElementById("questionText");
 const optionsContainer = document.getElementById("optionsContainer");
-const progressBar = document.getElementById("progressBar");
-const levelDisplay = document.getElementById("levelDisplay");
-const scoreDisplay = document.getElementById("scoreDisplay");
-const timerCircle = document.getElementById("timerCircle");
-const timerText = document.getElementById("timerText");
+const nextBtn = document.getElementById("nextBtn");
+const resultContainer = document.getElementById("resultContainer");
+const scoreText = document.getElementById("scoreText");
 
-// State
+/* State */
 let questions = [];
-let shuffledQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let timer;
-let timeLeft = 15;
 
-// Sounds
-const correctSound = new Audio("assets/correct.mp3");
-const wrongSound = new Audio("assets/wrong.mp3");
+/* Get URL params */
+const urlParams = new URLSearchParams(window.location.search);
+const level = urlParams.get("level");
+const subject = urlParams.get("subject");
 
-// Parse subject + level from query string
-const params = new URLSearchParams(window.location.search);
-const subject = params.get("subject");
-const level = params.get("level"); // Primary or Secondary
-
-if (!subject || !level) {
-  alert("Missing subject or level in URL");
-  throw new Error("Missing subject or level");
+/* Validate */
+if (!level || !subject) {
+  alert("Missing subject or level in URL.");
+  throw new Error("Missing subject or level in URL");
 }
 
-// Build correct JSON file path
-const quizFile = `questions/${level}/${subject}.json`;
+/* File path */
+const questionsPath = `questions/${level}/${subject}.json`;
 
-// Load quiz data
-async function loadQuiz() {
+/* Load questions */
+async function loadQuestions() {
   try {
-    const res = await fetch(quizFile);
-    if (!res.ok) throw new Error("Quiz file not found");
-
-    const data = await res.json();
-    if (!data) throw new Error("Empty quiz file");
-
-    // Detect if file has subject object wrapper
-    if (data[subject]) {
-      questions = data[subject]["Level1"] || [];
-    } else {
-      questions = data;
+    const response = await fetch(questionsPath);
+    if (!response.ok) {
+      throw new Error(`Failed to load ${questionsPath}`);
     }
-
-    if (questions.length === 0) throw new Error("No questions found");
-
-    shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
-    startLevel();
-  } catch (err) {
-    console.error("Error loading quiz:", err);
-    questionText.textContent = "Quiz not available.";
+    questions = await response.json();
+    quizTitle.textContent = `${subject.replace("-", " ")} Quiz (${level})`;
+  } catch (error) {
+    console.error("Error loading questions:", error);
+    quizTitle.textContent = "Error loading quiz.";
+    startQuizBtn.disabled = true;
   }
 }
 
-// Start level
-function startLevel() {
-  score = 0;
-  currentQuestionIndex = 0;
-  levelDisplay.textContent = `${level} - Level 1`;
-  scoreDisplay.textContent = `Score: 0/${shuffledQuestions.length}`;
-  renderQuestion();
+/* Start quiz */
+function startQuiz() {
+  startQuizBtn.classList.add("hidden");
+  questionContainer.classList.remove("hidden");
+  showQuestion();
 }
 
-// Render a question
-function renderQuestion() {
+/* Show question */
+function showQuestion() {
   resetState();
 
-  if (currentQuestionIndex >= shuffledQuestions.length) {
-    return endLevel();
-  }
+  const currentQuestion = questions[currentQuestionIndex];
+  questionText.textContent = currentQuestion.question;
 
-  const q = shuffledQuestions[currentQuestionIndex];
-  questionText.textContent = q.question;
-
-  q.options.forEach(option => {
-    const btn = document.createElement("button");
-    btn.textContent = option;
-    btn.className =
-      "w-full px-4 py-2 text-left bg-gray-100 rounded-lg hover:bg-yellow-400 transition";
-    btn.onclick = () => selectAnswer(btn, q.answer);
-    optionsContainer.appendChild(btn);
+  currentQuestion.options.forEach(option => {
+    const button = document.createElement("button");
+    button.textContent = option;
+    button.className =
+      "w-full px-4 py-2 bg-gray-200 rounded-lg hover:bg-gray-300 transition";
+    button.addEventListener("click", () => selectAnswer(button, currentQuestion.answer));
+    optionsContainer.appendChild(button);
   });
-
-  updateProgress();
-  startTimer();
 }
 
-// Handle answer selection
+/* Reset */
+function resetState() {
+  nextBtn.classList.add("hidden");
+  optionsContainer.innerHTML = "";
+}
+
+/* Select answer */
 function selectAnswer(button, correctAnswer) {
-  clearInterval(timer);
+  const selectedAnswer = button.textContent;
 
-  const selected = button.textContent;
-
-  if (selected === correctAnswer) {
-    button.classList.add("bg-green-500", "text-white");
-    correctSound.play();
+  if (selectedAnswer === correctAnswer) {
+    button.classList.add("bg-green-400");
     score++;
+    correctSound.play();
   } else {
-    button.classList.add("bg-red-500", "text-white");
+    button.classList.add("bg-red-400");
     wrongSound.play();
   }
 
-  Array.from(optionsContainer.children).forEach(btn => {
-    btn.disabled = true;
-    if (btn.textContent === correctAnswer) {
-      btn.classList.add("bg-green-500", "text-white");
-    }
-  });
-
-  scoreDisplay.textContent = `Score: ${score}/${shuffledQuestions.length}`;
-
-  setTimeout(() => {
-    currentQuestionIndex++;
-    renderQuestion();
-  }, 1200);
+  Array.from(optionsContainer.children).forEach(btn => (btn.disabled = true));
+  nextBtn.classList.remove("hidden");
 }
 
-// Timer
-function startTimer() {
-  clearInterval(timer);
-  timeLeft = 15;
-  updateTimerDisplay();
-
-  timer = setInterval(() => {
-    timeLeft--;
-    updateTimerDisplay();
-    if (timeLeft <= 0) {
-      clearInterval(timer);
-      autoFail();
-    }
-  }, 1000);
+/* Next */
+function nextQuestion() {
+  currentQuestionIndex++;
+  if (currentQuestionIndex < questions.length) {
+    showQuestion();
+  } else {
+    showResult();
+  }
 }
 
-function updateTimerDisplay() {
-  timerText.textContent = timeLeft;
-  const progress = (timeLeft / 15) * 220;
-  timerCircle.setAttribute("stroke-dasharray", "220");
-  timerCircle.setAttribute("stroke-dashoffset", `${220 - progress}`);
+/* Show result */
+function showResult() {
+  questionContainer.classList.add("hidden");
+  resultContainer.classList.remove("hidden");
+  scoreText.textContent = `${score} out of ${questions.length}`;
+  levelUpSound.play();
 }
 
-function autoFail() {
-  wrongSound.play();
-  Array.from(optionsContainer.children).forEach(btn => {
-    btn.disabled = true;
-  });
-  setTimeout(() => {
-    currentQuestionIndex++;
-    renderQuestion();
-  }, 1000);
-}
+/* Event listeners */
+startQuizBtn.addEventListener("click", startQuiz);
+nextBtn.addEventListener("click", nextQuestion);
 
-// Reset for next question
-function resetState() {
-  optionsContainer.innerHTML = "";
-  clearInterval(timer);
-}
-
-// Progress bar
-function updateProgress() {
-  const percent = ((currentQuestionIndex + 1) / shuffledQuestions.length) * 100;
-  progressBar.style.width = `${percent}%`;
-}
-
-// End of level
-function endLevel() {
-  questionText.textContent = `🎉 You finished! Final Score: ${score}/${shuffledQuestions.length}`;
-  optionsContainer.innerHTML = "";
-  clearInterval(timer);
-}
-
-// Init
-loadQuiz();
+/* Init */
+loadQuestions();
