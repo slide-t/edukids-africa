@@ -316,6 +316,38 @@
     }
     setInterval(updateClock, 1000);
     updateClock();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const startBtn = document.getElementById("startQuizBtn");
+  if (startBtn) {
+    startBtn.addEventListener("click", () => {
+      // Get subject from query string
+      const params = new URLSearchParams(window.location.search);
+      const subject = params.get("subject");
+      
+      if (!subject) {
+        alert("No subject selected!");
+        return;
+      }
+
+      // Load the right JSON file
+      const fileName = subject.toLowerCase().replace(/\s+/g, "-") + ".json";
+      fetch(`questions/${fileName}`)
+        .then(res => res.json())
+        .then(data => {
+          // Your existing logic to start quiz
+          console.log("Loaded questions:", data);
+          startQuiz(data);
+        })
+        .catch(err => {
+          console.error("Error loading quiz:", err);
+          alert("Sorry, quiz not available.");
+        });
+    });
+  }
+});
+
+    
   </script>
 </body>
 </html>
