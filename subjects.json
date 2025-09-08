@@ -1,24 +1,56 @@
 {
   "Primary School": [
-    "English Language", "Mathematics", "Basic Science", "Basic Technology",
-    "Cultural & Creative Arts", "Social Studies", "French", "Agriculture",
-    "Home Economics", "Computer Studies"
+    "English Language",
+    "Mathematics",
+    "Basic Science",
+    "Basic Technology",
+    "Cultural & Creative Arts",
+    "Social Studies",
+    "French",
+    "Agriculture",
+    "Home Economics",
+    "Computer Studies"
   ],
   "Secondary School": [
-    "English Language", "Mathematics", "Biology", "Chemistry",
-    "Physics", "Economics", "Literature in English", "Government",
-    "Geography", "Accounting"
+    "English Language",
+    "Mathematics",
+    "Biology",
+    "Chemistry",
+    "Physics",
+    "Economics",
+    "Literature in English",
+    "Government",
+    "Geography",
+    "Accounting"
   ],
   "Cambridge Curriculum Standard": [
-    "English as a Second Language", "Mathematics", "Physics",
-    "Biology", "Chemistry", "History", "Business Studies", "ICT"
+    "English as a Second Language",
+    "Mathematics",
+    "Physics",
+    "Biology",
+    "Chemistry",
+    "History",
+    "Business Studies",
+    "ICT"
   ],
   "WAEC Past Questions": [
-    "English Language", "Mathematics", "Physics",
-    "Biology", "Chemistry", "History", "Business Studies", "ICT"
+    "English Language",
+    "Mathematics",
+    "Physics",
+    "Biology",
+    "Chemistry",
+    "History",
+    "Business Studies",
+    "ICT"
   ],
   "JAMB Past Questions": [
-    "English Language", "Mathematics", "Physics",
-    "Biology", "Chemistry", "History", "Business Studies", "ICT"
+    "English Language",
+    "Mathematics",
+    "Physics",
+    "Biology",
+    "Chemistry",
+    "History",
+    "Business Studies",
+    "ICT"
   ]
 }
