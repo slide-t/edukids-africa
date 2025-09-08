@@ -197,6 +197,6 @@
       { "question": "A cube has volume 64 cm³. Find its edge.", "options": ["2 cm", "3 cm", "4 cm", "5 cm"], "answer": "4 cm" },
       { "question": "Find the mean of: 5, 10, 15, 20, 25.", "options": ["12", "13", "14", "15"], "answer": "15" },
       { "question": "The radius of a circle is 14 cm. Find its circumference (π=22/7).", "options": ["86 cm", "88 cm", "90 cm", "92 cm"], "answer": "88 cm" }
-    ]
+      ]
     }
-  }
+  
