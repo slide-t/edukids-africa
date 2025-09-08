@@ -15,7 +15,7 @@ const scoreDisplay = document.getElementById("scoreDisplay");
 const levelDisplay = document.getElementById("levelDisplay");
 const progressBar = document.getElementById("progressBar");
 const clockElement = document.getElementById("clock");
-const modal = document.getElementById("instructionModal");
+/*const modal = document.getElementById("instructionModal");*/
 const startBtn = document.getElementById("startQuizBtn");
 
 /* End modal elements */
