@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Subjects Offered</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <style>
+    /* Footer logo animation */
+    @keyframes rollIn {
+      0% { transform: translateX(100%) rotate(720deg); opacity: 0; }
+      100% { transform: translateX(0) rotate(0deg); opacity: 1; }
+    }
+    .logo-animate {
+      animation: rollIn 1.2s ease forwards;
+    }
+    /* Smooth typing caret */
+    ::placeholder {
+      transition: opacity .3s ease;
+    }
+  </style>
+</head>
+<body class="bg-gray-100 flex flex-col min-h-screen">
+
+  <!-- Main Container -->
+  <div class="max-w-4xl mx-auto mt-32 px-4 flex-grow">
+    <!-- Search -->
+    <div class="mb-6 relative">
+      <input id="searchInput" type="text" 
+             class="w-full p-3 rounded-lg border border-gray-300 shadow-sm focus:ring-2 focus:ring-purple-500 focus:outline-none" 
+             placeholder=""/>
+      <div id="searchTooltip" 
+           class="hidden absolute -bottom-10 left-0 bg-yellow-400 text-gray-900 text-sm font-medium px-3 py-1 rounded shadow">
+        Please enter a subject to search
+      </div>
+    </div>
+
+    <!-- Subject Heading -->
+    <h1 class="text-3xl text-center font-bold text-gray-900 mb-8">Subjects Offered</h1>
+    <div id="subject-list" class="space-y-6"></div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-white py-6 mt-10">
+    <div class="max-w-4xl mx-auto flex items-center justify-between px-4">
+      <!-- Logo Img -->
+      <img src="logo.png" alt="Logo" class="h-10 w-10 rounded-full shadow-md logo-animate">
+      <!-- Animated Logo Text -->
+      <span class="text-lg font-bold logo-animate">EduQuiz Platform</span>
+      <!-- Year -->
+      <span>&copy; <span id="year"></span></span>
+    </div>
+  </footer>
+
+  <script>
+    // Auto-update year
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Typing placeholder
+    const placeholderText = "search by subject here...";
+    let i = 0;
+    function typePlaceholder() {
+      if (i <= placeholderText.length) {
+        document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
+        i++;
+        setTimeout(typePlaceholder, 120);
+      } else {
+        i = 0; // restart typing loop
+        setTimeout(typePlaceholder, 1000);
+      }
+    }
+    typePlaceholder();
+
+    const subjectList = document.getElementById("subject-list");
+    const searchInput = document.getElementById("searchInput");
+    const tooltip = document.getElementById("searchTooltip");
+
+    let subjects = {};
+
+    // Load subjects.json
+    async function loadSubjects() {
+      try {
+        const res = await fetch('subjects.json');
+        subjects = await res.json();
+        renderSubjects();
+      } catch (err) {
+        console.error("Failed to load subjects.json", err);
+        subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
+      }
+    }
+
+    function renderSubjects(filter = "") {
+      subjectList.innerHTML = "";
+
+      Object.keys(subjects).forEach(category => {
+        const groupDiv = document.createElement("div");
+        groupDiv.className = "subject-group bg-white rounded-xl shadow p-4";
+
+        // Category heading
+        const heading = document.createElement("h2");
+        heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 border-b border-gray-300 pb-2";
+        heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+        // Subject list container
+        const listDiv = document.createElement("div");
+        listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 space-y-2 pb-4";
+
+        // Add filtered subjects
+        subjects[category]
+          .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+          .forEach(sub => {
+            const item = document.createElement("a");
+            item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition";
+            item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
+            item.textContent = sub;
+            listDiv.appendChild(item);
+          });
+
+        // Toggle expand/collapse
+        heading.addEventListener("click", () => {
+          listDiv.classList.toggle("max-h-0");
+          listDiv.classList.toggle("max-h-96");
+          const icon = heading.querySelector("i");
+          icon.classList.toggle("rotate-180");
+        });
+
+        groupDiv.appendChild(heading);
+        groupDiv.appendChild(listDiv);
+        subjectList.appendChild(groupDiv);
+      });
+    }
+
+    // Search filter
+    searchInput.addEventListener("input", e => {
+      const value = e.target.value.trim();
+      renderSubjects(value);
+      // expand all when typing
+      document.querySelectorAll("#subject-list .max-h-0").forEach(list => {
+        list.classList.replace("max-h-0", "max-h-96");
+      });
+    });
+
+    // Tooltip for empty search on Enter
+    searchInput.addEventListener("keydown", e => {
+      if (e.key === "Enter" && e.target.value.trim() === "") {
+        tooltip.style.display = "block";
+        setTimeout(() => { tooltip.style.display = "none"; }, 10000);
+      }
+    });
+
+    loadSubjects();
+  </script>
+</body>
+</html>
