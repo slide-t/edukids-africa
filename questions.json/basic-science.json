@@ -1,5 +1,4 @@
 
-}
 "Basic Science" : {
 
   "Level1": [
@@ -56,3 +55,70 @@
 { "question": "Which is used to see in the dark?", "options": ["Flashlight", "Sunglasses", "Mirror", "Fan"], "answer": "Flashlight" },
 { "question": "Where does a fish live?", "options": ["Land", "Water", "Air", "Tree"], "answer": "Water" }
  ],
+
+"Level2": [
+    { "question": "What gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+{ "question": "Which organ pumps blood around the body?", "options": ["Lungs", "Heart", "Kidney", "Stomach"], "answer": "Heart" },
+{ "question": "Which part of the plant makes food?", "options": ["Root", "Leaf", "Stem", "Flower"], "answer": "Leaf" },
+{ "question": "Water changes to gas when it is?", "options": ["Freezing", "Boiling", "Condensing", "Melting"], "answer": "Boiling" },
+{ "question": "What keeps us warm in winter?", "options": ["Clothes", "Ice", "Water", "Sunlight"], "answer": "Clothes" },
+{ "question": "Which is a solid?", "options": ["Water", "Ice", "Steam", "Air"], "answer": "Ice" },
+{ "question": "Which planet is known as the Red Planet?", "options": ["Mars", "Earth", "Venus", "Jupiter"], "answer": "Mars" },
+{ "question": "Which sense helps us hear?", "options": ["Nose", "Ear", "Tongue", "Eye"], "answer": "Ear" },
+{ "question": "Which of these animals lays eggs?", "options": ["Dog", "Cat", "Snake", "Cow"], "answer": "Snake" },
+{ "question": "Which part of the body helps us to see?", "options": ["Ear", "Eye", "Hand", "Foot"], "answer": "Eye" },
+{ "question": "Which type of energy comes from the sun?", "options": ["Solar", "Wind", "Sound", "Chemical"], "answer": "Solar" },
+{ "question": "Which animal is a mammal?", "options": ["Whale", "Shark", "Crocodile", "Frog"], "answer": "Whale" },
+{ "question": "Rain comes from?", "options": ["Clouds", "Rivers", "Mountains", "Oceans"], "answer": "Clouds" },
+{ "question": "Which of these is a herbivore?", "options": ["Lion", "Cow", "Tiger", "Wolf"], "answer": "Cow" },
+{ "question": "Which part of a plant holds it in the soil?", "options": ["Leaf", "Root", "Stem", "Flower"], "answer": "Root" },
+{ "question": "Which of these is a liquid?", "options": ["Ice", "Water", "Stone", "Sand"], "answer": "Water" },
+{ "question": "Which part of the human body helps us breathe?", "options": ["Lungs", "Heart", "Stomach", "Brain"], "answer": "Lungs" },
+{ "question": "Which planet do we live on?", "options": ["Mars", "Venus", "Earth", "Mercury"], "answer": "Earth" },
+{ "question": "Which of these animals can fly?", "options": ["Elephant", "Crow", "Lion", "Cat"], "answer": "Crow" },
+{ "question": "The process of water turning into vapor is called?", "options": ["Evaporation", "Condensation", "Freezing", "Melting"], "answer": "Evaporation" },
+  
+{ "question": "What gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" },
+{ "question": "Which organ pumps blood around the body?", "options": ["Lungs", "Heart", "Kidney", "Stomach"], "answer": "Heart" },
+{ "question": "Which part of the plant makes food?", "options": ["Root", "Leaf", "Stem", "Flower"], "answer": "Leaf" },
+{ "question": "Water changes to gas when it is?", "options": ["Freezing", "Boiling", "Condensing", "Melting"], "answer": "Boiling" },
+{ "question": "What keeps us warm in winter?", "options": ["Clothes", "Ice", "Water", "Sunlight"], "answer": "Clothes" },
+{ "question": "Which is a solid?", "options": ["Water", "Ice", "Steam", "Air"], "answer": "Ice" },
+{ "question": "Which planet is known as the Red Planet?", "options": ["Mars", "Earth", "Venus", "Jupiter"], "answer": "Mars" },
+{ "question": "Which sense helps us hear?", "options": ["Nose", "Ear", "Tongue", "Eye"], "answer": "Ear" },
+{ "question": "Which of these animals lays eggs?", "options": ["Dog", "Cat", "Snake", "Cow"], "answer": "Snake" },
+{ "question": "Which part of the body helps us to see?", "options": ["Ear", "Eye", "Hand", "Foot"], "answer": "Eye" },
+{ "question": "Which type of energy comes from the sun?", "options": ["Solar", "Wind", "Sound", "Chemical"], "answer": "Solar" },
+{ "question": "Which animal is a mammal?", "options": ["Whale", "Shark", "Crocodile", "Frog"], "answer": "Whale" },
+{ "question": "Rain comes from?", "options": ["Clouds", "Rivers", "Mountains", "Oceans"], "answer": "Clouds" },
+{ "question": "Which of these is a herbivore?", "options": ["Lion", "Cow", "Tiger", "Wolf"], "answer": "Cow" },
+{ "question": "Which part of a plant holds it in the soil?", "options": ["Leaf", "Root", "Stem", "Flower"], "answer": "Root" },
+{ "question": "Which of these is a liquid?", "options": ["Ice", "Water", "Stone", "Sand"], "answer": "Water" },
+{ "question": "Which part of the human body helps us breathe?", "options": ["Lungs", "Heart", "Stomach", "Brain"], "answer": "Lungs" },
+{ "question": "Which planet do we live on?", "options": ["Mars", "Venus", "Earth", "Mercury"], "answer": "Earth" },
+{ "question": "Which of these animals can fly?", "options": ["Elephant", "Crow", "Lion", "Cat"], "answer": "Crow" },
+{ "question": "The process of water turning into vapor is called?", "options": ["Evaporation", "Condensation", "Freezing", "Melting"], "answer": "Evaporation" },
+  
+{ "question": "Which of these is a carnivore?", "options": ["Tiger", "Cow", "Rabbit", "Sheep"], "answer": "Tiger" },
+{ "question": "Which gas do humans breathe in?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"], "answer": "Oxygen" },
+{ "question": "Which of these is a source of light?", "options": ["Moon", "Sun", "Earth", "Cloud"], "answer": "Sun" },
+{ "question": "Which part of the plant transports water?", "options": ["Leaf", "Stem", "Flower", "Root"], "answer": "Stem" },
+{ "question": "Which of these is not a planet?", "options": ["Sun", "Earth", "Mars", "Venus"], "answer": "Sun" },
+{ "question": "What do bees collect from flowers?", "options": ["Honey", "Pollen", "Water", "Leaves"], "answer": "Pollen" },
+{ "question": "Which body part helps us smell?", "options": ["Tongue", "Nose", "Ear", "Eye"], "answer": "Nose" },
+{ "question": "Which animal lives both on land and water?", "options": ["Frog", "Tiger", "Elephant", "Horse"], "answer": "Frog" },
+{ "question": "Which of these animals is cold-blooded?", "options": ["Lizard", "Dog", "Cat", "Cow"], "answer": "Lizard" },
+{ "question": "Which process gives plants their green color?", "options": ["Photosynthesis", "Respiration", "Evaporation", "Condensation"], "answer": "Photosynthesis" },
+{ "question": "Which part of the plant produces flowers?", "options": ["Root", "Stem", "Flower", "Leaf"], "answer": "Flower" },
+{ "question": "Which of these is a natural resource?", "options": ["Coal", "Plastic", "Glass", "Paper"], "answer": "Coal" },
+{ "question": "Which of these helps a bird fly?", "options": ["Beak", "Claws", "Wings", "Tail"], "answer": "Wings" },
+{ "question": "Which of these animals is an insect?", "options": ["Butterfly", "Frog", "Snake", "Dog"], "answer": "Butterfly" },
+{ "question": "Which of these is used to measure temperature?", "options": ["Ruler", "Thermometer", "Balance", "Clock"], "answer": "Thermometer" },
+{ "question": "Which of these is a source of sound?", "options": ["Speaker", "Water", "Stone", "Air"], "answer": "Speaker" },
+{ "question": "Which of these animals is nocturnal?", "options": ["Owl", "Lion", "Elephant", "Rabbit"], "answer": "Owl" },
+{ "question": "Which planet has rings around it?", "options": ["Saturn", "Mars", "Earth", "Venus"], "answer": "Saturn" },
+{ "question": "Which part of the body helps us taste?", "options": ["Nose", "Tongue", "Ear", "Eye"], "answer": "Tongue" },
+{ "question": "Which of these is renewable energy?", "options": ["Solar", "Coal", "Oil", "Gas"], "answer": "Solar" }
+  ],
+
+  
