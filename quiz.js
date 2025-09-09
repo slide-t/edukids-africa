@@ -1,108 +1,130 @@
 // quiz.js
 
-// Audio feedback
-const correctAudio = new Audio("audio/correct.mp3");
-const wrongAudio = new Audio("audio/wrong.mp3");
+// ===== Question Bank =====
+const questions = {
+  Primary: {
+    "Mathematics": [
+      {
+        question: "What is 2 + 2?",
+        options: ["3", "4", "5", "6"],
+        answer: "4"
+      },
+      {
+        question: "What is 10 - 7?",
+        options: ["2", "3", "4", "5"],
+        answer: "3"
+      }
+    ],
+    "English Language": [
+      {
+        question: "Which one is a noun?",
+        options: ["Run", "Book", "Quickly", "Happy"],
+        answer: "Book"
+      },
+      {
+        question: "Choose the correct spelling:",
+        options: ["Baloone", "Balloon", "Baloon", "Balloone"],
+        answer: "Balloon"
+      }
+    ],
+    "Basic Science": [
+      {
+        question: "Which planet is known as the Red Planet?",
+        options: ["Earth", "Mars", "Jupiter", "Venus"],
+        answer: "Mars"
+      }
+    ],
+    "Basic Technology": [
+      {
+        question: "Which tool is used to drive nails into wood?",
+        options: ["Hammer", "Screwdriver", "Pliers", "Saw"],
+        answer: "Hammer"
+      }
+    ]
+  },
+  Secondary: {
+    "Mathematics": [
+      {
+        question: "Simplify: 2x + 3x",
+        options: ["5", "5x", "6x", "x^5"],
+        answer: "5x"
+      }
+    ],
+    "English Language": [
+      {
+        question: "Identify the verb: She runs every morning.",
+        options: ["She", "Runs", "Every", "Morning"],
+        answer: "Runs"
+      }
+    ],
+    "Biology": [
+      {
+        question: "What is the basic unit of life?",
+        options: ["Cell", "Tissue", "Organ", "Organism"],
+        answer: "Cell"
+      }
+    ],
+    "Physics": [
+      {
+        question: "What is the SI unit of force?",
+        options: ["Joule", "Newton", "Watt", "Pascal"],
+        answer: "Newton"
+      }
+    ]
+  }
+};
 
-// Parse URL params
-const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category");
-const subject = urlParams.get("subject");
+// ===== Helper: Get query params =====
+function getQueryParams() {
+  const params = new URLSearchParams(window.location.search);
+  return {
+    category: params.get("category"),
+    subject: params.get("subject")
+  };
+}
 
-// Elements
-const questionContainer = document.getElementById("question-container");
-const nextBtn = document.getElementById("next-btn");
-const scoreContainer = document.getElementById("score-container");
+// ===== Load Quiz =====
+function loadQuiz() {
+  const { category, subject } = getQueryParams();
+  const quizContainer = document.getElementById("quiz-container");
+  const title = document.getElementById("quiz-title");
 
-let questions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-
-// Load questions JSON
-async function loadQuestions() {
-  if (!category || !subject) {
-    questionContainer.innerHTML = `<p class="text-red-600">Invalid subject/category.</p>`;
+  if (!category || !subject || !questions[category] || !questions[category][subject]) {
+    title.textContent = "Subject Not Found";
+    quizContainer.innerHTML = `<p class="text-red-600">No quiz available for "${subject}" in ${category}.</p>`;
     return;
   }
 
-  const filePath = `questions/${category}/${subject}.json`;
-  try {
-    const res = await fetch(filePath);
-    if (!res.ok) throw new Error("File not found");
-    const data = await res.json();
+  title.textContent = `${category} - ${subject} Quiz`;
 
-    if (!data || data.length === 0) {
-      throw new Error("No questions in file");
-    }
+  questions[category][subject].forEach((q, index) => {
+    const div = document.createElement("div");
+    div.className = "mb-6 p-4 bg-white rounded-lg shadow";
 
-    // Shuffle and take 5
-    questions = shuffle(data).slice(0, 5);
-    currentQuestionIndex = 0;
-    score = 0;
-    showQuestion();
-  } catch (err) {
-    console.error(err);
-    questionContainer.innerHTML = `<p class="text-red-600">Quiz not available for ${subject} (${category}).</p>`;
-  }
-}
+    const qText = document.createElement("p");
+    qText.className = "font-semibold mb-2";
+    qText.textContent = `${index + 1}. ${q.question}`;
+    div.appendChild(qText);
 
-// Shuffle helper
-function shuffle(arr) {
-  return arr.sort(() => Math.random() - 0.5);
-}
+    q.options.forEach(option => {
+      const btn = document.createElement("button");
+      btn.className = "block w-full text-left px-4 py-2 mb-2 border rounded hover:bg-yellow-300";
+      btn.textContent = option;
 
-// Display one question
-function showQuestion() {
-  const q = questions[currentQuestionIndex];
-  questionContainer.innerHTML = `
-    <h2 class="text-xl font-semibold mb-4">${q.question}</h2>
-    <div class="space-y-2">
-      ${q.options
-        .map(
-          (opt) => `
-        <button class="option w-full px-4 py-2 bg-gray-100 rounded hover:bg-indigo-500 hover:text-white transition">
-          ${opt}
-        </button>`
-        )
-        .join("")}
-    </div>
-  `;
+      btn.addEventListener("click", () => {
+        if (option === q.answer) {
+          btn.classList.add("bg-green-400", "text-white");
+        } else {
+          btn.classList.add("bg-red-400", "text-white");
+        }
+      });
 
-  document.querySelectorAll(".option").forEach((btn) => {
-    btn.addEventListener("click", () => selectAnswer(btn.textContent, q.answer));
+      div.appendChild(btn);
+    });
+
+    quizContainer.appendChild(div);
   });
 }
 
-// Handle answer selection
-function selectAnswer(selected, correct) {
-  if (selected === correct) {
-    score++;
-    correctAudio.play();
-  } else {
-    wrongAudio.play();
-  }
-  nextBtn.classList.remove("hidden");
-}
-
-// Next button logic
-nextBtn.addEventListener("click", () => {
-  currentQuestionIndex++;
-  if (currentQuestionIndex < questions.length) {
-    showQuestion();
-    nextBtn.classList.add("hidden");
-  } else {
-    showScore();
-  }
-});
-
-// Final score
-function showScore() {
-  questionContainer.innerHTML = `
-    <h2 class="text-2xl font-bold">Quiz Completed!</h2>
-    <p class="mt-4">You scored <span class="font-semibold">${score}</span> out of <span class="font-semibold">${questions.length}</span>.</p>
-  `;
-  scoreContainer.classList.remove("hidden");
-}
-
-// Load on page start
-loadQuestions();
+// ===== Run =====
+document.addEventListener("DOMContentLoaded", loadQuiz);
