@@ -259,9 +259,9 @@
     { "question": "Which part of cassava is eaten?", "options": ["Root", "Stem", "Leaf", "Flower"], "answer": "Root" },
     { "question": "Which of these is a correct kitchen hygiene practice?", "options": ["Wash hands before cooking", "Cook with dirty utensils", "Leave food uncovered", "Spill water on floor"], "answer": "Wash hands before cooking" },
     { "question": "Which of these is a tuber crop?", "options": ["Yam", "Maize", "Rice", "Beans"], "answer": "Yam" }
-  ]
-}
-
+     ]
+    }
+  }
 
   "Secondary": {
     "Mathematics": { "Level1": [], "Level2": [] },
