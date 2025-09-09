@@ -12,6 +12,7 @@ const urlsToCache = [
   "/quiz.html",
   "/quiz.js",
   "/questions",
+  "/questions.json",
   "/reg.html",
   "student.html"
 ];
