@@ -1,12 +1,37 @@
 // Get subject from URL
-const params = new URLSearchParams(window.location.search);
-const subject = params.get("subject");
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+const subject = urlParams.get("subject");
+const key = `${category}-${subject}`;
 
+/*const params = new URLSearchParams(window.location.search);
+const subject = params.get("subject");
+*/
 // Update title
 document.getElementById("quiz-title").textContent = subject ? `${subject} Quiz` : "Quiz";
 
 // Questions stored directly in JS for now
-const quizData = {
+
+const questions = {
+  "Primary-Mathematics": [
+    { question: "What is 2 + 2?", options: ["3","4","5","6"], answer: "4" },
+    { question: "What is 5 × 3?", options: ["15","10","20","25"], answer: "15" }
+  ],
+  "Secondary-Mathematics": [
+    { question: "Simplify: 2x + 3x", options: ["5x","6x","x^2","2x^2"], answer: "5x" },
+    { question: "Solve: 4y = 20", options: ["4","5","10","20"], answer: "5" }
+  ],
+  "Primary-English Language": [
+    { question: "Choose the correct spelling:", options: ["becos","because","becaus","becuz"], answer: "because" },
+    { question: "Select the noun:", options: ["run","happy","book","quickly"], answer: "book" }
+  ],
+  "Secondary-English Language": [
+    { question: "What is a synonym for 'happy'?", options: ["sad","angry","joyful","tired"], answer: "joyful" },
+    { question: "Identify the adverb:", options: ["quickly","dog","blue","teacher"], answer: "quickly" }
+  ]
+};
+
+/*const quizData = {
   English: [
     {
       question: "What is the plural of 'child'?",
@@ -42,7 +67,7 @@ const quizData = {
     }
   ]
 };
-
+*/
 const quizContainer = document.getElementById("quiz-container");
 const resultDiv = document.getElementById("result");
 
