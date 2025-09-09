@@ -19,23 +19,28 @@ const clockElement = document.getElementById("clock");
 const modal = document.getElementById("instructionModal");
 const startBtn = document.getElementById("startQuizBtn");
 
-/* End modal elements (must exist in HTML) */
+/* End modal elements */
 const endModal = document.getElementById("endModal");
 const endTitle = document.getElementById("endTitle");
 const endMessage = document.getElementById("endMessage");
 const retryBtn = document.getElementById("retryBtn");
 const nextBtn = document.getElementById("nextBtn");
 
+/* Summary/help modal */
+const retrySummaryBtn = document.getElementById("retryBtn");
+const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
+
 /* State */
 let subject = decodeURIComponent(new URLSearchParams(window.location.search).get("subject") || "Mathematics");
-let subjectData = {};              
-let availableLevels = [];          
-let currentLevelIndex = 0;         
-let questions = [];                
+let category = decodeURIComponent(new URLSearchParams(window.location.search).get("category") || "Primary");
+let subjectData = {};
+let availableLevels = [];
+let currentLevelIndex = 0;
+let questions = [];
 let currentQuestionIndex = 0;
 let score = 0;
 const PASS_PERCENT = 75;
-const progressKey = `EduKidsProgress_${subject}`; 
+const progressKey = `EduKidsProgress_${subject}`;
 
 /* Timer */
 let timerInterval;
@@ -44,20 +49,34 @@ const circle = document.getElementById("timerCircle");
 const timerText = document.getElementById("timerText");
 const circleLength = 220;
 
-/* Timer functions */
+/* ---------------------- Utility Functions ---------------------- */
+function startClock() {
+  setInterval(() => {
+    if (clockElement) clockElement.textContent = new Date().toLocaleTimeString();
+  }, 1000);
+}
+
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+/* ---------------------- Timer ---------------------- */
 function startTimer() {
   clearInterval(timerInterval);
   timeLeft = 15;
-  timerText.textContent = timeLeft;
-  circle.style.strokeDasharray = circleLength;
-  circle.style.strokeDashoffset = 0;
+  if (timerText) timerText.textContent = timeLeft;
+  if (circle) circle.style.strokeDasharray = circleLength;
 
   timerInterval = setInterval(() => {
     timeLeft--;
-    timerText.textContent = timeLeft;
-    const progress = (timeLeft / 15) * circleLength;
-    circle.style.strokeDashoffset = circleLength - progress;
-
+    if (timerText) timerText.textContent = timeLeft;
+    if (circle) {
+      circle.style.strokeDashoffset = circleLength - (timeLeft / 15) * circleLength;
+    }
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
       handleTimeout();
@@ -70,68 +89,47 @@ function handleTimeout() {
   renderQuestion();
 }
 
-/* Clock */
-function startClock() {
-  setInterval(() => {
-    const now = new Date();
-    if (clockElement) clockElement.textContent = now.toLocaleTimeString();
-  }, 1000);
-}
-
-/* Shuffle utility */
-function shuffle(array) {
-  for (let i = array.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
-
-/* Load questions: folder first, fallback to questions.json */
+/* ---------------------- Load Questions ---------------------- */
 async function loadSubjectData() {
-  const category = new URLSearchParams(window.location.search).get("category") || "Primary";
-  const filePath = `questions/${category}/${subject}.json`;
-
   try {
-    const res = await fetch(filePath);
-    if (!res.ok) throw new Error("File not found in questions folder");
+    // Primary source: questions folder
+    const folderUrl = `questions/${category}/${subject}.json`;
+    let res = await fetch(folderUrl);
+    if (!res.ok) throw new Error("Folder file not found, fallback to questions.json");
     subjectData = await res.json();
-    return true;
   } catch (err) {
-    console.warn(`Could not load ${filePath}, falling back to questions.json`);
+    console.warn(err.message);
     try {
-      const fallbackRes = await fetch("questions.json");
-      const data = await fallbackRes.json();
-      if (category && data[category] && data[category][subject]) {
+      // Fallback: questions.json
+      const res = await fetch("questions.json");
+      const data = await res.json();
+      if (data[category] && data[category][subject]) {
         subjectData = data[category][subject];
-      } else if (data[subject]) {
-        subjectData = data[subject];
       } else {
-        let found = null;
-        for (const k of Object.keys(data)) {
-          if (typeof data[k] === "object" && data[k][subject]) {
-            found = data[k][subject];
-            break;
-          }
-        }
-        if (found) subjectData = found;
+        subjectData = data[subject] || {};
       }
-
-      if (!subjectData || Object.keys(subjectData).length === 0) {
-        console.error("No question data found for subject:", subject);
-        return false;
-      }
-      return true;
     } catch (err2) {
-      console.error("Failed to load fallback questions.json", err2);
+      console.error("No question data found for subject:", subject);
       return false;
     }
-  }  
+  }
+
+  // Levels
+  availableLevels = Object.keys(subjectData)
+    .filter(k => /^level\s*\d+/i.test(k))
+    .sort((a,b) => parseInt(a.match(/\d+/)[0],10) - parseInt(b.match(/\d+/)[0],10));
+
+  // Load progress
+  const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+  let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
+  currentLevelIndex = firstNotPassed === -1 ? availableLevels.length : firstNotPassed;
+
+  return true;
 }
 
-/* Prepare questions for current level */
+/* ---------------------- Prepare Questions ---------------------- */
 function prepareLevelQuestions() {
-  if (currentLevelIndex < 0 || currentLevelIndex >= availableLevels.length) {
+  if (currentLevelIndex >= availableLevels.length) {
     questions = [];
     return;
   }
@@ -142,22 +140,19 @@ function prepareLevelQuestions() {
     options: Array.isArray(q.options) ? [...q.options] : [],
     answer: q.answer || q.correct || q.correctAnswer || ""
   }));
-
-  questions = shuffle(questions);
-  questions = questions.map(q => {
+  questions = shuffle(questions).map(q => {
     if (!q.options.includes(q.answer)) q.options.push(q.answer);
-    q.options = shuffle([...q.options]);
+    q.options = shuffle(q.options);
     return q;
   });
 }
 
-/* Render question */
+/* ---------------------- Render Question ---------------------- */
 function renderQuestion() {
   if (!questions.length || currentQuestionIndex >= questions.length) {
     endLevel();
     return;
   }
-
   const q = questions[currentQuestionIndex];
   if (questionText) questionText.textContent = q.question;
   if (optionsContainer) {
@@ -175,7 +170,7 @@ function renderQuestion() {
   startTimer();
 }
 
-/* Option selection */
+/* ---------------------- Select Option ---------------------- */
 function onSelectOption(selectedText, btnEl) {
   const q = questions[currentQuestionIndex];
   const correct = q.answer;
@@ -187,8 +182,9 @@ function onSelectOption(selectedText, btnEl) {
   } else {
     if (btnEl) btnEl.classList.add("bg-red-500", "text-white");
     wrongSound.play();
+    // highlight correct
     const children = [...optionsContainer.children];
-    const correctBtn = children.find(child => child.textContent === correct);
+    const correctBtn = children.find(c => c.textContent === correct);
     if (correctBtn) correctBtn.classList.add("bg-green-500", "text-white");
   }
 
@@ -196,119 +192,70 @@ function onSelectOption(selectedText, btnEl) {
 
   setTimeout(() => {
     currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      renderQuestion();
-    } else {
-      endLevel();
-    }
+    renderQuestion();
   }, 900);
 }
 
-/* Score & progress */
+/* ---------------------- Score & Progress ---------------------- */
 function updateScoreBoard() {
-  if (!questions || questions.length === 0) {
+  if (!questions.length) {
     if (scoreDisplay) scoreDisplay.textContent = `Score: 0/0`;
     if (progressBar) progressBar.style.width = `0%`;
     return;
   }
   if (scoreDisplay) scoreDisplay.textContent = `Score: ${score}/${questions.length}`;
-  const pct = Math.round(((currentQuestionIndex) / questions.length) * 100);
+  const pct = Math.round((currentQuestionIndex / questions.length) * 100);
   if (progressBar) progressBar.style.width = `${pct}%`;
 }
 
-/* End modal */
-function showEndModal(passed, totalCorrect, totalQuestions) {
-  if (!endModal) return;
-  if (passed) {
-    levelUpSound.play();
-    endTitle.textContent = `🎉 Level Passed!`;
-    const percent = Math.round((totalCorrect / totalQuestions) * 100);
-    endMessage.textContent = `You scored ${totalCorrect}/${totalQuestions} (${percent}%). Well done — next level unlocked.`;
-    retryBtn.classList.add("hidden");
-    nextBtn.classList.remove("hidden");
-  } else {
-    gameOverSound.play();
-    const percent = Math.round((totalCorrect / totalQuestions) * 100);
-    endTitle.textContent = `❌ Level Failed`;
-    endMessage.textContent = `You scored ${totalCorrect}/${totalQuestions} (${percent}%). You need ${PASS_PERCENT}% to pass. Try again.`;
-    retryBtn.classList.remove("hidden");
-    nextBtn.classList.add("hidden");
-  }
-  endModal.classList.remove("hidden");
-  endModal.classList.add("flex");
-}
-
-function hideEndModal() {
-  if (!endModal) return;
-  endModal.classList.add("hidden");
-  endModal.classList.remove("flex");
-}
-
-/* Save progress */
+/* ---------------------- End Level ---------------------- */
 function saveLevelPassed(levelKey) {
   const obj = JSON.parse(localStorage.getItem(progressKey) || "{}");
   obj[levelKey] = true;
   localStorage.setItem(progressKey, JSON.stringify(obj));
 }
 
-/* Start level */
-function startLevel() {
-  if (currentLevelIndex >= availableLevels.length) {
-    if (!endModal) {
-      alert(`🎓 You have completed all levels for ${subject}!`);
-      return;
-    }
-    endTitle.textContent = `👑 Course Completed!`;
-    endMessage.textContent = `You have completed all available levels for ${subject}. Great job!`;
-    retryBtn.classList.add("hidden");
-    nextBtn.classList.add("hidden");
-    endModal.classList.remove("hidden");
-    endModal.classList.add("flex");
-    return;
-  }
-
-  const levelKey = availableLevels[currentLevelIndex];
-  if (levelDisplay) levelDisplay.textContent = levelKey;
-  prepareLevelQuestions();
-  currentQuestionIndex = 0;
-  score = 0;
-  renderQuestion();
-}
-
-/* End level */
 function endLevel() {
   const totalQuestions = questions.length || 1;
   const percent = (score / totalQuestions) * 100;
   const passed = percent >= PASS_PERCENT;
   const levelKey = availableLevels[currentLevelIndex];
 
-  const summaryMessage = document.getElementById("summaryMessage");
-  const retryBtn = document.getElementById("retryBtn");
-  const nextLevelBtn = document.getElementById("nextLevelBtn");
-  const helpModal = document.getElementById("eduHelpModal");
+  if (passed) saveLevelPassed(levelKey);
 
-  if (summaryMessage) summaryMessage.textContent = `You scored ${score}/${totalQuestions} (${Math.round(percent)}%).`;
-
-  if (passed) {
-    saveLevelPassed(levelKey);
-    if (retryBtn) retryBtn.classList.add("hidden");
-    if (nextLevelBtn) nextLevelBtn.classList.remove("hidden");
-  } else {
-    if (retryBtn) retryBtn.classList.remove("hidden");
-    if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
-  }
-
-  if (helpModal) {
-    helpModal.classList.remove("hidden");
-    helpModal.classList.add("flex");
+  // Show end modal
+  if (endModal && endTitle && endMessage) {
+    endModal.classList.remove("hidden");
+    endModal.classList.add("flex");
+    endTitle.textContent = passed ? `🎉 Level Passed!` : `❌ Level Failed`;
+    endMessage.textContent = `You scored ${score}/${totalQuestions} (${Math.round(percent)}%).`;
   }
 
   clearInterval(timerInterval);
 }
 
-/* Button handlers */
+/* ---------------------- Start Level ---------------------- */
+function startLevel() {
+  if (currentLevelIndex >= availableLevels.length) {
+    if (endModal && endTitle && endMessage) {
+      endTitle.textContent = `👑 Course Completed!`;
+      endMessage.textContent = `You have completed all available levels for ${subject}.`;
+      endModal.classList.remove("hidden");
+      endModal.classList.add("flex");
+    }
+    return;
+  }
+
+  if (levelDisplay) levelDisplay.textContent = availableLevels[currentLevelIndex];
+  prepareLevelQuestions();
+  currentQuestionIndex = 0;
+  score = 0;
+  renderQuestion();
+}
+
+/* ---------------------- Event Listeners ---------------------- */
 if (retryBtn) retryBtn.addEventListener("click", () => {
-  hideEndModal();
+  if (endModal) endModal.classList.add("hidden");
   prepareLevelQuestions();
   currentQuestionIndex = 0;
   score = 0;
@@ -316,38 +263,12 @@ if (retryBtn) retryBtn.addEventListener("click", () => {
 });
 
 if (nextBtn) nextBtn.addEventListener("click", () => {
-  hideEndModal();
+  if (endModal) endModal.classList.add("hidden");
   currentLevelIndex++;
   startLevel();
 });
 
-/* Summary modal buttons */
-const retrySummaryBtn = document.getElementById("retryBtn");
-const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
-
-if (retrySummaryBtn) retrySummaryBtn.addEventListener("click", () => {
-  const helpModal = document.getElementById("eduHelpModal");
-  if (helpModal) {
-    helpModal.classList.add("hidden");
-    helpModal.classList.remove("flex");
-  }
-  prepareLevelQuestions();
-  currentQuestionIndex = 0;
-  score = 0;
-  renderQuestion();
-});
-
-if (nextLevelSummaryBtn) nextLevelSummaryBtn.addEventListener("click", () => {
-  const helpModal = document.getElementById("eduHelpModal");
-  if (helpModal) {
-    helpModal.classList.add("hidden");
-    helpModal.classList.remove("flex");
-  }
-  currentLevelIndex++;
-  startLevel();
-});
-
-/* Instruction modal */
+/* ---------------------- Initializer ---------------------- */
 document.addEventListener("DOMContentLoaded", async () => {
   startClock();
   const ok = await loadSubjectData();
@@ -356,22 +277,17 @@ document.addEventListener("DOMContentLoaded", async () => {
     return;
   }
 
-  if (modal) {
-    // leave modal visible until Start clicked
-    if (startBtn) {
-      startBtn.addEventListener("click", () => {
-        if (modal) {
-          modal.classList.add("hidden");
-          modal.classList.remove("flex");
-        }
-        startLevel();
-      });
-    }
+  // Start quiz
+  if (startBtn && modal) {
+    startBtn.addEventListener("click", () => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      startLevel();
+    });
   } else {
     startLevel();
   }
 });
-
 
 
 
