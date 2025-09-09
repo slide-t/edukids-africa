@@ -1,0 +1,34 @@
+{
+  "Primary": {
+    "Mathematics": {
+      "Level 1": [
+        { "question": "What is 2 + 3?", "options": ["4", "5", "6", "7"], "answer": "5" },
+        { "question": "What is 10 - 7?", "options": ["2", "3", "4", "5"], "answer": "3" }
+      ]
+    },
+    "English-Language": {
+      "Level 1": [
+        { "question": "Choose the correct spelling:", "options": ["becos", "because", "becaus", "becuz"], "answer": "because" },
+        { "question": "Which one is a noun?", "options": ["run", "beautiful", "chair", "quickly"], "answer": "chair" },
+        { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "answer": "children" }
+      ]
+    },
+    "Basic-Science": {
+      "Level 1": [
+        { "question": "Which planet is known as the Red Planet?", "options": ["Earth", "Mars", "Jupiter", "Saturn"], "answer": "Mars" }
+      ]
+    }
+  },
+  "Secondary": {
+    "Mathematics": {
+      "Level 1": [
+        { "question": "Solve: 12 ÷ 3", "options": ["2", "3", "4", "6"], "answer": "4" }
+      ]
+    },
+    "English-Language": {
+      "Level 1": [
+        { "question": "What is a synonym for 'happy'?", "options": ["sad", "angry", "joyful", "tired"], "answer": "joyful" }
+      ]
+    }
+  }
+}
