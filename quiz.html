@@ -6,15 +6,47 @@
   <title>Quiz - EduKids Africa</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-gray-100 text-gray-900 flex flex-col min-h-screen">
 
-  <div class="max-w-2xl mx-auto mt-12 p-6 bg-white rounded-xl shadow">
-    <h1 id="quiz-title" class="text-2xl font-bold text-center mb-6">Loading...</h1>
-    <div id="quiz-container"></div>
-    <button id="submitBtn" class="mt-6 w-full bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 transition">Submit Answers</button>
-    <div id="result" class="mt-4 text-center font-semibold"></div>
-  </div>
+  <!-- Navbar -->
+  <header class="bg-purple-900 text-white p-4 shadow">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+      <h1 class="text-xl font-bold">EduKids Africa</h1>
+      <a href="subjects.html" class="text-sm hover:underline">← Back to Subjects</a>
+    </div>
+  </header>
 
+  <!-- Quiz Container -->
+  <main class="flex-grow flex items-center justify-center p-4">
+    <div class="bg-white shadow-lg rounded-xl p-6 w-full max-w-2xl">
+      <!-- Dynamic Question Area -->
+      <div id="question-container" class="mb-6 text-center">
+        <p class="text-gray-500">Loading quiz...</p>
+      </div>
+
+      <!-- Next button -->
+      <button id="next-btn" class="hidden w-full py-2 px-4 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
+        Next Question
+      </button>
+
+      <!-- Score -->
+      <div id="score-container" class="hidden text-center mt-6">
+        <p class="text-lg font-semibold">Quiz finished!</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-purple-900 text-white p-4 text-center">
+    <p>&copy; <span id="year"></span> EduKids Africa. All rights reserved.</p>
+  </footer>
+
+  <!-- Auto year -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Quiz Logic -->
   <script src="quiz.js"></script>
 </body>
 </html>
