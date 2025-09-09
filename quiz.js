@@ -8,7 +8,7 @@ const key = `${category}-${subject}`;
 
 // ✅ Question bank (namespaced by category-subject)
 const questions = {
-  "Primary-Mathematics": [
+  "Mathematics": [
     { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
     { question: "What is 5 × 3?", options: ["15", "10", "20", "25"], answer: "15" }
   ],
@@ -16,7 +16,7 @@ const questions = {
     { question: "Simplify: 2x + 3x", options: ["5x", "6x", "x^2", "2x^2"], answer: "5x" },
     { question: "Solve: 4y = 20", options: ["4", "5", "10", "20"], answer: "5" }
   ],
-  "Primary-English Language": [
+  "English Language": [
     { question: "Choose the correct spelling:", options: ["becos", "because", "becaus", "becuz"], answer: "because" },
     { question: "Select the noun:", options: ["run", "happy", "book", "quickly"], answer: "book" }
   ],
