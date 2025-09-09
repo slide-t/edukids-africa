@@ -29,7 +29,14 @@
 
   <script>
    
-    function renderSubjects(filter = "") {
+   // Load subjects.json
+    fetch("subjects.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const subjectList = document.getElementById("subject-list");
+        const searchInput = document.getElementById("search");
+
+       function renderSubjects(filter = "") {
   subjectList.innerHTML = "";
 
   Object.keys(subjects).forEach(category => {
@@ -77,18 +84,9 @@
     }
   });
 }
-    
-    
-    
-    
-    /*// Load subjects.json
-    fetch("subjects.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const subjectList = document.getElementById("subject-list");
-        const searchInput = document.getElementById("search");
-
-        function renderSubjects(filter = "") {
+        
+        
+      /*  function renderSubjects(filter = "") {
           subjectList.innerHTML = "";
           Object.keys(data).forEach((category) => {
             const subjects = data[category].filter((s) =>
@@ -126,7 +124,7 @@
             categoryDiv.appendChild(list);
             subjectList.appendChild(categoryDiv);
           });
-        }
+        }*/
 
         renderSubjects();
 
