@@ -1,4 +1,14 @@
 {
-  "Primary": ["Mathematics", "English Language", "Basic Science", "Basic Technology"],
-  "Secondary": ["Mathematics", "English Language", "Biology", "Physics"]
+  "Primary": [
+    "Mathematics",
+    "English-Language",
+    "Basic-Science",
+    "Basic-Technology"
+  ],
+  "Secondary": [
+    "Mathematics",
+    "English-Language",
+    "Biology",
+    "Physics"
+  ]
 }
