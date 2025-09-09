@@ -7,7 +7,7 @@ document.getElementById("quiz-title").textContent = subject ? `${subject} Quiz` 
 
 // Questions stored directly in JS for now
 const quizData = {
-  English: [
+  English Language: [
     {
       question: "What is the plural of 'child'?",
       options: ["Childs", "Children", "Childes", "Childer"],
