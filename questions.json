@@ -260,7 +260,7 @@
     { "question": "Which of these is a correct kitchen hygiene practice?", "options": ["Wash hands before cooking", "Cook with dirty utensils", "Leave food uncovered", "Spill water on floor"], "answer": "Wash hands before cooking" },
     { "question": "Which of these is a tuber crop?", "options": ["Yam", "Maize", "Rice", "Beans"], "answer": "Yam" }
   ]
-},
+}
 
 
   "Secondary": {
