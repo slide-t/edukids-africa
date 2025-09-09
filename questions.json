@@ -1,33 +1,387 @@
 {
   "Primary": {
     "Mathematics": {
-      "Level 1": [
-        { "question": "What is 2 + 3?", "options": ["4", "5", "6", "7"], "answer": "5" },
-        { "question": "What is 10 - 7?", "options": ["2", "3", "4", "5"], "answer": "3" }
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
       ]
     },
     "English-Language": {
-      "Level 1": [
-        { "question": "Choose the correct spelling:", "options": ["becos", "because", "becaus", "becuz"], "answer": "because" },
-        { "question": "Which one is a noun?", "options": ["run", "beautiful", "chair", "quickly"], "answer": "chair" },
-        { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "answer": "children" }
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
       ]
     },
     "Basic-Science": {
-      "Level 1": [
-        { "question": "Which planet is known as the Red Planet?", "options": ["Earth", "Mars", "Jupiter", "Saturn"], "answer": "Mars" }
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Basic-Technology": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Social-Studies": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Civic-Education": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Agricultural-Science": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Home-Economics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
       ]
     }
   },
   "Secondary": {
     "Mathematics": {
-      "Level 1": [
-        { "question": "Solve: 12 ÷ 3", "options": ["2", "3", "4", "6"], "answer": "4" }
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
       ]
     },
     "English-Language": {
-      "Level 1": [
-        { "question": "What is a synonym for 'happy'?", "options": ["sad", "angry", "joyful", "tired"], "answer": "joyful" }
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Biology": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Chemistry": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Physics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Geography": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Economics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Government": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Literature-in-English": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Commerce": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Financial-Accounting": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    }
+  },
+  "WAEC": {
+    "Mathematics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "English-Language": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Biology": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Chemistry": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Physics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Agricultural-Science": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Geography": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Economics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Commerce": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Financial-Accounting": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    }
+  },
+  "Cambridge Curriculum Standard": {
+    "English as a Second Language": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Mathematics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Physics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Biology": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Chemistry": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "History": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Business Studies": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "ICT": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    }
+  },
+  "JAMB": {
+    "Mathematics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "English-Language": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Biology": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Chemistry": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Physics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Economics": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Government": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Literature-in-English": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Christian-Religious-Studies": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
+      ]
+    },
+    "Islamic-Religious-Studies": {
+      "Level1": [
+        { }
+      ],
+      "Level2": [
+        { }
       ]
     }
   }
