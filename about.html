@@ -6,7 +6,6 @@
   <title>About EduKids Africa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    /* Custom transition for chevron rotation */
     .rotate-0 { transform: rotate(0deg); }
     .rotate-180 { transform: rotate(180deg); }
     .transition-transform { transition: transform 0.3s ease; }
@@ -15,23 +14,32 @@
 <body class="bg-gray-50 text-gray-800">
 
   <!-- HEADER -->
-  <header class="flex items-center justify-between p-4 bg-white shadow-md sticky top-0 z-50">
-    <div class="flex items-center space-x-4">
-      <img src="logo.png" alt="EduKids Africa Logo" class="w-12 h-12 rounded-full">
-      <h1 class="text-xl font-bold">EduKids Africa</h1>
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+      <div class="flex items-center space-x-3">
+        <img src="logo.png" alt="EduKids Africa Logo" class="w-12 h-12 rounded-full">
+        <h1 class="text-xl font-bold">EduKids Africa</h1>
+      </div>
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none">
+          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+      <nav id="menu" class="hidden md:flex md:space-x-4">
+        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</button>
+        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</button>
+        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</button>
+        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</button>
+      </nav>
     </div>
-    <nav class="flex space-x-4">
-      <button class="px-4 py-2 bg-white rounded hover:bg-orange-500 hover:text-white transition">Home</button>
-      <button class="px-4 py-2 bg-white rounded hover:bg-orange-500 hover:text-white transition">Subjects</button>
-      <button class="px-4 py-2 bg-white rounded hover:bg-orange-500 hover:text-white transition">About</button>
-      <button class="px-4 py-2 bg-white rounded hover:bg-orange-500 hover:text-white transition">Contact</button>
-    </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="max-w-4xl mx-auto p-6 space-y-6">
 
-    <!-- SHORT HISTORY ABOUT THE AUTHOR -->
+    <!-- AUTHOR HISTORY -->
     <section class="bg-white p-6 rounded-xl shadow-md">
       <h2 class="text-2xl font-semibold mb-4">About the Author</h2>
       <p class="text-gray-700">
@@ -39,11 +47,11 @@
       </p>
     </section>
 
-    <!-- ROADMAP SUMMARY COLLAPSIBLE -->
+    <!-- ROADMAP COLLAPSIBLE -->
     <section class="bg-white p-6 rounded-xl shadow-md">
       <h2 class="text-2xl font-semibold mb-4">Our Roadmap</h2>
-      
-      <!-- Collapsible Item -->
+
+      <!-- Mission -->
       <div class="border-b border-gray-200">
         <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('mission')">
           <span class="font-medium">Mission</span>
@@ -58,7 +66,7 @@
         </div>
       </div>
 
-      <!-- Collapsible Item -->
+      <!-- Vision -->
       <div class="border-b border-gray-200">
         <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('vision')">
           <span class="font-medium">Vision</span>
@@ -73,7 +81,7 @@
         </div>
       </div>
 
-      <!-- Collapsible Item -->
+      <!-- Roadmap Highlights -->
       <div class="border-b border-gray-200">
         <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('roadmap')">
           <span class="font-medium">Roadmap Highlights</span>
@@ -100,7 +108,7 @@
     <p class="text-gray-500 text-sm">&copy; 2025 EduKids Africa. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT FOR COLLAPSIBLE -->
+  <!-- SCRIPT FOR COLLAPSIBLE AND MOBILE MENU -->
   <script>
     function toggleCollapse(id) {
       const content = document.getElementById(id);
@@ -115,6 +123,15 @@
         chevron.classList.add('rotate-180');
       }
     }
+
+    const menuBtn = document.getElementById('menu-btn');
+    const menu = document.getElementById('menu');
+    menuBtn.addEventListener('click', () => {
+      menu.classList.toggle('hidden');
+      menu.classList.toggle('flex');
+      menu.classList.toggle('flex-col');
+      menu.classList.toggle('space-y-2');
+    });
   </script>
 
 </body>
