@@ -182,7 +182,7 @@
     { "question": "Which of these is a form of communication?", "options": ["Telephone", "Letter", "Internet", "All of the above"], "answer": "All of the above" }
   ]
     },
-    "Civil-Education": {
+    "Civic-Education": {
     "Level1": [
     { "question": "Which of these is a good habit?", "options": ["Stealing", "Lying", "Obeying rules", "Fighting"], "answer": "Obeying rules" },
     { "question": "Who is a good citizen?", "options": ["Someone who pays taxes", "Someone who disobeys laws", "Someone who fights", "Someone who steals"], "answer": "Someone who pays taxes" },
