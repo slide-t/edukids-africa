@@ -35,8 +35,41 @@
       ]
     },
     "English-Language": {
-      "Level1": [],
-      "Level2": []
+      "Level1": [
+    { "question": "Choose the correct spelling:", "options": ["becos", "because", "becaus", "becuz"], "answer": "because" },
+    { "question": "Which one is a noun?", "options": ["run", "beautiful", "chair", "quickly"], "answer": "chair" },
+    { "question": "Which word is an adjective?", "options": ["run", "blue", "eat", "song"], "answer": "blue" },
+    { "question": "Which is a verb?", "options": ["table", "happy", "jump", "slow"], "answer": "jump" },
+    { "question": "What is the plural of 'child'?", "options": ["childs", "children", "childes", "childrens"], "answer": "children" },
+    { "question": "Which is a pronoun?", "options": ["dog", "he", "food", "car"], "answer": "he" },
+    { "question": "Which is a correct sentence?", "options": ["she are happy", "she is happy", "she am happy", "she be happy"], "answer": "she is happy" },
+    { "question": "Which word rhymes with 'cat'?", "options": ["dog", "hat", "cup", "pen"], "answer": "hat" },
+    { "question": "Which one is a question word?", "options": ["and", "where", "but", "so"], "answer": "where" },
+    { "question": "What is the opposite of 'hot'?", "options": ["warm", "cold", "heat", "burn"], "answer": "cold" },
+    { "question": "Choose the correct past tense: 'He ___ to school.'", "options": ["go", "going", "went", "gone"], "answer": "went" },
+    { "question": "Which of these is a proper noun?", "options": ["city", "river", "Lagos", "school"], "answer": "Lagos" },
+    { "question": "What sound does 'sh' make in 'ship'?", "options": ["s", "sh", "ch", "th"], "answer": "sh" },
+    { "question": "Fill in the blank: 'The sun ___ in the east.'", "options": ["rise", "rose", "rises", "raising"], "answer": "rises" },
+    { "question": "Which is the correct plural of 'box'?", "options": ["boxs", "boxes", "boxen", "boxies"], "answer": "boxes" }
+  ],
+
+  "Level2": [
+    { "question": "What is the opposite of 'begin'?", "options": ["start", "open", "finish", "go"], "answer": "finish" },
+    { "question": "Which sentence is in the future tense?", "options": ["She cooks rice", "She cooked rice", "She will cook rice", "She is cooking rice"], "answer": "She will cook rice" },
+    { "question": "Choose the correct word: 'They ___ playing football yesterday.'", "options": ["is", "was", "were", "are"], "answer": "were" },
+    { "question": "Which word is a conjunction?", "options": ["but", "book", "blue", "bird"], "answer": "but" },
+    { "question": "What is the comparative form of 'happy'?", "options": ["happier", "happiest", "most happy", "happyness"], "answer": "happier" },
+    { "question": "Which word is a synonym of 'small'?", "options": ["big", "tiny", "large", "huge"], "answer": "tiny" },
+    { "question": "Fill in the blank: 'He has lived here ___ 2010.'", "options": ["for", "since", "by", "from"], "answer": "since" },
+    { "question": "What is the superlative form of 'good'?", "options": ["better", "goodest", "best", "most good"], "answer": "best" },
+    { "question": "Choose the correct spelling:", "options": ["definately", "definitely", "definetely", "definetly"], "answer": "definitely" },
+    { "question": "Which word is an adverb?", "options": ["quickly", "happy", "song", "table"], "answer": "quickly" },
+    { "question": "Fill in the blank: 'Neither James ___ Peter was late.'", "options": ["nor", "or", "and", "but"], "answer": "nor" },
+    { "question": "What is the opposite of 'asleep'?", "options": ["dreaming", "awake", "tired", "rest"], "answer": "awake" },
+    { "question": "Choose the correct preposition: 'The cat is hiding ___ the table.'", "options": ["on", "under", "over", "into"], "answer": "under" },
+    { "question": "Which sentence uses the past perfect tense?", "options": ["I have eaten", "I had eaten", "I eat", "I was eating"], "answer": "I had eaten" },
+    { "question": "Which is the correct question tag: 'She is a teacher, ___?'", "options": ["isn't she", "wasn't she", "aren't she", "won't she"], "answer": "isn't she" }
+  ]
     },
     "Basic-Science": {
       "Level1": [],
