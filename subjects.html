@@ -188,7 +188,9 @@
           const item = document.createElement("a");
           item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition";
           // ✅ FIXED: pass category + subject
-          item.href = `quiz.html?category=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;
+         item.href = `quiz.html?category=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;
+          
+          /*item.href = `quiz.html?category=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;*/
           item.textContent = sub;
           listDiv.appendChild(item);
         });
