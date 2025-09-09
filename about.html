@@ -6,18 +6,39 @@
   <title>About EduKids Africa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
-    .rotate-0 { transform: rotate(0deg); }
-    .rotate-180 { transform: rotate(180deg); }
-    .transition-transform { transition: transform 0.3s ease; }
-
-    /* Slide-down animation for mobile menu */
+    /* Mobile menu slide animation */
     #mobile-menu {
       max-height: 0;
       overflow: hidden;
       transition: max-height 0.4s ease-in-out;
     }
     #mobile-menu.open {
-      max-height: 500px; /* enough for menu items */
+      max-height: 500px;
+    }
+
+    /* Hamburger → X animation */
+    .line {
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+    }
+    .active .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .active .line2 {
+      opacity: 0;
+    }
+    .active .line3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Collapsible sections */
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .collapse-content.open {
+      max-height: 500px; /* adjust as needed */
     }
   </style>
 </head>
@@ -34,10 +55,10 @@
 
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
-        <button id="menu-btn" class="focus:outline-none transition">
-          <svg class="w-9 h-9 text-gray-800" fill="none" stroke="currentColor" stroke-width="3" viewBox="0 0 24 24">
-            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-          </svg>
+        <button id="menu-btn" class="focus:outline-none flex flex-col justify-between w-9 h-9">
+          <span class="line line1 w-full h-1 bg-gray-800 rounded"></span>
+          <span class="line line2 w-full h-1 bg-gray-800 rounded"></span>
+          <span class="line line3 w-full h-1 bg-gray-800 rounded"></span>
         </button>
       </div>
 
@@ -53,7 +74,7 @@
     <!-- Mobile Nav -->
     <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 bg-white shadow-md md:hidden">
       <a href="https://slide-t.github.io/edukids-africa/index.html#home" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
-      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+      <a href="subjects.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
       <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
       <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
     </nav>
@@ -61,7 +82,7 @@
 
   <!-- MAIN CONTENT -->
   <main class="max-w-5xl mx-auto p-6 md:p-10 space-y-10">
-
+   
     <!-- AUTHOR -->
     <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg hover:shadow-xl transition">
       <h2 class="text-3xl font-bold mb-4 text-orange-600">About the Author</h2>
@@ -83,7 +104,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="mission" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <div id="mission" class="collapse-content">
           <p class="py-3 text-gray-700 text-lg">
             Our mission is to provide inclusive, high-quality digital learning experiences that empower children across Africa to build strong foundations in literacy, numeracy, and critical thinking.
           </p>
@@ -98,7 +119,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="vision" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <div id="vision" class="collapse-content">
           <p class="py-3 text-gray-700 text-lg">
             Our vision is to be Africa’s most trusted hub for innovative learning, inspiring creativity, confidence, and lifelong knowledge in every child.
           </p>
@@ -113,7 +134,7 @@
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="roadmap" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+        <div id="roadmap" class="collapse-content">
           <ul class="py-3 text-gray-700 text-lg list-disc list-inside space-y-2">
             <li>Launch interactive literacy modules for Grades 1–3.</li>
             <li>Develop gamified numeracy lessons and quizzes.</li>
@@ -124,6 +145,7 @@
         </div>
       </div>
     </section>
+  
   </main>
 
   <!-- FOOTER -->
@@ -133,40 +155,40 @@
 
   <!-- SCRIPT -->
   <script>
-    // Collapsible sections
-    function toggleCollapse(id) {
-      const content = document.getElementById(id);
-      const chevron = document.getElementById('chevron-' + id);
-
-      if(content.style.maxHeight && content.style.maxHeight !== "0px") {
-        content.style.maxHeight = "0px";
-        chevron.classList.remove('rotate-180');
-        chevron.classList.add('rotate-0');
-      } else {
-        content.style.maxHeight = content.scrollHeight + "px";
-        chevron.classList.remove('rotate-0');
-        chevron.classList.add('rotate-180');
-      }
-    }
-
-    // Mobile menu toggle with slide effect
+    // Mobile menu toggle
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 
-    // Initially keep mobile menu hidden
     mobileMenu.classList.remove('flex');
     mobileMenu.classList.add('hidden');
 
     menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+
       if (mobileMenu.classList.contains('hidden')) {
         mobileMenu.classList.remove('hidden');
-        setTimeout(() => mobileMenu.classList.add('open'), 10); // trigger animation
+        setTimeout(() => mobileMenu.classList.add('open'), 10);
       } else {
         mobileMenu.classList.remove('open');
-        setTimeout(() => mobileMenu.classList.add('hidden'), 400); // wait for animation
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400);
       }
     });
-  </script>
 
+    // Collapsible toggle
+    function toggleCollapse(id) {
+      const content = document.getElementById(id);
+      const chevron = document.getElementById('chevron-' + id);
+
+      content.classList.toggle('open');
+
+      if (content.classList.contains('open')) {
+        chevron.classList.remove('rotate-0');
+        chevron.classList.add('rotate-180');
+      } else {
+        chevron.classList.remove('rotate-180');
+        chevron.classList.add('rotate-0');
+      }
+    }
+  </script>
 </body>
 </html>
