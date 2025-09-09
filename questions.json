@@ -112,6 +112,43 @@
     { "question": "Which planet is the largest in our solar system?", "options": ["Saturn", "Mars", "Jupiter", "Neptune"], "answer": "Jupiter" }
   ]
 },
+  "Basic-Technology": {
+  "Level1": [
+    { "question": "Which of these is a simple machine?", "options": ["Car", "Lever", "Television", "Fan"], "answer": "Lever" },
+    { "question": "What do we use to drive a nail into wood?", "options": ["Hammer", "Saw", "Spoon", "Knife"], "answer": "Hammer" },
+    { "question": "Which tool is used to cut paper?", "options": ["Scissors", "Needle", "File", "Brush"], "answer": "Scissors" },
+    { "question": "Which of these is powered by electricity?", "options": ["Stone", "Fan", "Broom", "Book"], "answer": "Fan" },
+    { "question": "What shape are the wheels of a bicycle?", "options": ["Square", "Circle", "Triangle", "Rectangle"], "answer": "Circle" },
+    { "question": "Which device is used to talk to people far away?", "options": ["Radio", "Television", "Telephone", "Clock"], "answer": "Telephone" },
+    { "question": "Which of these uses fuel to work?", "options": ["Car", "Chair", "Table", "Stone"], "answer": "Car" },
+    { "question": "Which of these is not a machine?", "options": ["Hoe", "Shovel", "Book", "Wheelbarrow"], "answer": "Book" },
+    { "question": "Which tool is used to measure length?", "options": ["Spade", "Ruler", "Hammer", "Hoe"], "answer": "Ruler" },
+    { "question": "Which of these helps us to see clearly in the dark?", "options": ["Torchlight", "Mirror", "Stone", "Chair"], "answer": "Torchlight" },
+    { "question": "Which part of a bicycle do we use to make it move?", "options": ["Pedals", "Seat", "Bell", "Handle"], "answer": "Pedals" },
+    { "question": "Which tool is used to cut wood?", "options": ["Saw", "Ruler", "Pencil", "Eraser"], "answer": "Saw" },
+    { "question": "What type of energy powers a torchlight?", "options": ["Battery energy", "Wind energy", "Heat energy", "Solar energy"], "answer": "Battery energy" },
+    { "question": "Which of these is a farm tool?", "options": ["Hoe", "Plate", "Cup", "Book"], "answer": "Hoe" },
+    { "question": "Which of these helps in transporting goods?", "options": ["Bag", "Wheelbarrow", "Bottle", "Spoon"], "answer": "Wheelbarrow" }
+  ],
+
+  "Level2": [
+    { "question": "Which of these is a source of electrical energy?", "options": ["Battery", "Stone", "Paper", "Plastic"], "answer": "Battery" },
+    { "question": "Which part of a car is used to control its movement?", "options": ["Steering wheel", "Tyres", "Seat", "Mirror"], "answer": "Steering wheel" },
+    { "question": "What type of machine is a bicycle?", "options": ["Complex machine", "Simple machine", "Electronic machine", "Cooking machine"], "answer": "Complex machine" },
+    { "question": "Which of these converts electrical energy into sound?", "options": ["Radio", "Iron", "Fan", "Lamp"], "answer": "Radio" },
+    { "question": "What type of machine is a sewing machine?", "options": ["Electrical machine", "Manual machine", "Both electrical and manual", "Simple machine"], "answer": "Both electrical and manual" },
+    { "question": "Which device changes solar energy into electricity?", "options": ["Solar panel", "Battery", "Generator", "Bulb"], "answer": "Solar panel" },
+    { "question": "Which of these is a conductor of electricity?", "options": ["Wood", "Plastic", "Copper wire", "Rubber"], "answer": "Copper wire" },
+    { "question": "Which tool is used for tightening bolts and nuts?", "options": ["Spanner", "Hammer", "Scissors", "Needle"], "answer": "Spanner" },
+    { "question": "Which of these appliances produces heat?", "options": ["Television", "Electric iron", "Fan", "Radio"], "answer": "Electric iron" },
+    { "question": "Which energy powers an electric fan?", "options": ["Wind energy", "Electrical energy", "Solar energy", "Fuel energy"], "answer": "Electrical energy" },
+    { "question": "Which machine is used to grind grains into flour?", "options": ["Grinding machine", "Fan", "Television", "Bulb"], "answer": "Grinding machine" },
+    { "question": "Which of these is an example of a pulley system?", "options": ["Drawing water from a well", "Writing with a pencil", "Climbing stairs", "Reading a book"], "answer": "Drawing water from a well" },
+    { "question": "Which of these is an input device for a computer?", "options": ["Keyboard", "Monitor", "Printer", "Speaker"], "answer": "Keyboard" },
+    { "question": "What type of energy is produced by burning fuel?", "options": ["Heat energy", "Wind energy", "Solar energy", "Electrical energy"], "answer": "Heat energy" },
+    { "question": "Which of these is a safety rule in using electricity?", "options": ["Do not touch wet sockets", "Touch wires with wet hands", "Put metal into sockets", "Play with electric wires"], "answer": "Do not touch wet sockets" }
+  ]
+},
     "Social-Studies": {
       "Level1": [],
       "Level2": []
