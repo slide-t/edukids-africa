@@ -182,9 +182,42 @@
     { "question": "Which of these is a form of communication?", "options": ["Telephone", "Letter", "Internet", "All of the above"], "answer": "All of the above" }
   ]
     },
-    "Civic-Education": {
-      "Level1": [],
-      "Level2": []
+    "Civil-Education": {
+    "Level1": [
+    { "question": "Which of these is a good habit?", "options": ["Stealing", "Lying", "Obeying rules", "Fighting"], "answer": "Obeying rules" },
+    { "question": "Who is a good citizen?", "options": ["Someone who pays taxes", "Someone who disobeys laws", "Someone who fights", "Someone who steals"], "answer": "Someone who pays taxes" },
+    { "question": "Which of these is a national symbol?", "options": ["National flag", "National anthem", "Coat of arms", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these is a right of a child?", "options": ["Right to education", "Right to food", "Right to shelter", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these shows respect?", "options": ["Greeting elders", "Ignoring elders", "Fighting", "Shouting"], "answer": "Greeting elders" },
+    { "question": "Which of these is a duty of a child at home?", "options": ["Helping parents", "Being lazy", "Stealing food", "Shouting"], "answer": "Helping parents" },
+    { "question": "What colour in the Nigerian flag stands for peace?", "options": ["Green", "White", "Red", "Blue"], "answer": "White" },
+    { "question": "What is the name of Nigeria’s pledge?", "options": ["National pledge", "National anthem", "Oath of office", "None"], "answer": "National pledge" },
+    { "question": "Which of these is a good way to use water?", "options": ["Wasting water", "Fetching only what you need", "Pouring away water", "Leaving tap open"], "answer": "Fetching only what you need" },
+    { "question": "Who is a leader in the classroom?", "options": ["Class captain", "Driver", "Cook", "Trader"], "answer": "Class captain" },
+    { "question": "Which of these is a social value?", "options": ["Honesty", "Kindness", "Hard work", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these is the duty of a good citizen?", "options": ["To obey laws", "To destroy property", "To fight people", "To steal"], "answer": "To obey laws" },
+    { "question": "Which of these is not a good habit?", "options": ["Helping others", "Respecting elders", "Laziness", "Obedience"], "answer": "Laziness" },
+    { "question": "Which of these is an example of honesty?", "options": ["Returning lost money", "Stealing from friends", "Cheating in class", "Telling lies"], "answer": "Returning lost money" },
+    { "question": "Who is the leader of a country?", "options": ["President", "Teacher", "Policeman", "Governor"], "answer": "President" }
+  ],
+
+  "Level2": [
+    { "question": "Which of these is a democratic value?", "options": ["Freedom", "Dictatorship", "Oppression", "Slavery"], "answer": "Freedom" },
+    { "question": "What do we call people living in a country?", "options": ["Citizens", "Leaders", "Teachers", "Soldiers"], "answer": "Citizens" },
+    { "question": "Which of these is a duty of government?", "options": ["Provide security", "Cook food", "Teach in schools", "Farm for people"], "answer": "Provide security" },
+    { "question": "What does the green colour of the Nigerian flag stand for?", "options": ["Farming and agriculture", "Peace", "Unity", "Power"], "answer": "Farming and agriculture" },
+    { "question": "Which of these is an example of rule of law?", "options": ["Everyone is equal before the law", "Some people are above the law", "Only the poor obey laws", "None"], "answer": "Everyone is equal before the law" },
+    { "question": "Which body makes laws in Nigeria?", "options": ["National Assembly", "Judiciary", "Army", "Police"], "answer": "National Assembly" },
+    { "question": "Which body interprets the laws?", "options": ["Judiciary", "Executive", "Legislative", "Military"], "answer": "Judiciary" },
+    { "question": "Which of these is a right of a Nigerian citizen?", "options": ["Right to vote", "Right to education", "Right to life", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these is a duty of a student?", "options": ["To study hard", "To disobey teachers", "To fight classmates", "To lie"], "answer": "To study hard" },
+    { "question": "Which of these is a symbol of authority?", "options": ["Mace", "Book", "Table", "Pen"], "answer": "Mace" },
+    { "question": "Which of these is a national identity?", "options": ["National flag", "National passport", "National anthem", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these shows loyalty to the nation?", "options": ["Reciting the pledge", "Stealing", "Fighting", "Telling lies"], "answer": "Reciting the pledge" },
+    { "question": "What type of government is led by the people?", "options": ["Democracy", "Dictatorship", "Monarchy", "Communism"], "answer": "Democracy" },
+    { "question": "Which of these is a civic duty of citizens?", "options": ["Voting in elections", "Playing games", "Sleeping", "Singing"], "answer": "Voting in elections" },
+    { "question": "Who enforces the law in Nigeria?", "options": ["Police", "Judges", "Teachers", "Doctors"], "answer": "Police" }
+  ]
     },
     "Pre-Vocational-Studies": {
       "Level1": [],
