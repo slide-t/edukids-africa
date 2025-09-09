@@ -220,8 +220,41 @@
   ]
     },
     "Pre-Vocational-Studies": {
-      "Level1": [],
-      "Level2": []
+      "Level1": [
+    { "question": "Which of these is a farm tool?", "options": ["Hoe", "Pen", "Book", "Cup"], "answer": "Hoe" },
+    { "question": "Which animal gives us milk?", "options": ["Goat", "Hen", "Cow", "Sheep"], "answer": "Cow" },
+    { "question": "Which food is from plants?", "options": ["Rice", "Meat", "Egg", "Fish"], "answer": "Rice" },
+    { "question": "What do we use to sweep the floor?", "options": ["Broom", "Hoe", "Cutlass", "Plate"], "answer": "Broom" },
+    { "question": "Which of these is a domestic animal?", "options": ["Lion", "Goat", "Tiger", "Elephant"], "answer": "Goat" },
+    { "question": "Which crop is a root crop?", "options": ["Cassava", "Rice", "Maize", "Beans"], "answer": "Cassava" },
+    { "question": "Which of these is a source of protein?", "options": ["Beans", "Rice", "Yam", "Cassava"], "answer": "Beans" },
+    { "question": "Which of these is used for cooking?", "options": ["Pot", "Spoon", "Stove", "All of the above"], "answer": "All of the above" },
+    { "question": "Which of these animals gives us eggs?", "options": ["Hen", "Cow", "Goat", "Dog"], "answer": "Hen" },
+    { "question": "Which of these is a leafy vegetable?", "options": ["Spinach", "Rice", "Beans", "Yam"], "answer": "Spinach" },
+    { "question": "Which of these is a kitchen tool?", "options": ["Knife", "Cutlass", "Hoe", "Shovel"], "answer": "Knife" },
+    { "question": "What is poultry farming?", "options": ["Keeping chickens", "Keeping cows", "Fishing", "Planting yam"], "answer": "Keeping chickens" },
+    { "question": "Which of these is a fruit?", "options": ["Mango", "Cassava", "Rice", "Beans"], "answer": "Mango" },
+    { "question": "Which of these do farmers wear for protection?", "options": ["Boots", "Slippers", "Sandals", "Cap"], "answer": "Boots" },
+    { "question": "Which of these is needed to cook food?", "options": ["Fire", "Stone", "Water", "Chalk"], "answer": "Fire" }
+  ],
+
+  "Level2": [
+    { "question": "Which tool is used for weeding?", "options": ["Hoe", "Fork", "Shovel", "Axe"], "answer": "Hoe" },
+    { "question": "Which of these is a cereal crop?", "options": ["Maize", "Beans", "Yam", "Cassava"], "answer": "Maize" },
+    { "question": "Which nutrient helps us grow?", "options": ["Protein", "Sugar", "Fat", "Oil"], "answer": "Protein" },
+    { "question": "What do we use to preserve fish?", "options": ["Salt", "Sand", "Paper", "Stone"], "answer": "Salt" },
+    { "question": "Which of these is a legume?", "options": ["Beans", "Yam", "Rice", "Maize"], "answer": "Beans" },
+    { "question": "Which farm animal gives wool?", "options": ["Sheep", "Cow", "Hen", "Goat"], "answer": "Sheep" },
+    { "question": "Which of these is a safety rule in the kitchen?", "options": ["Do not play with fire", "Run around with knife", "Touch hot pot", "Leave gas on"], "answer": "Do not play with fire" },
+    { "question": "Which crop is used to make garri?", "options": ["Cassava", "Rice", "Maize", "Beans"], "answer": "Cassava" },
+    { "question": "Which of these is a processed food?", "options": ["Bread", "Yam", "Orange", "Mango"], "answer": "Bread" },
+    { "question": "Which of these is an oil crop?", "options": ["Groundnut", "Beans", "Rice", "Yam"], "answer": "Groundnut" },
+    { "question": "Which tool is used to fetch water?", "options": ["Bucket", "Cutlass", "Spade", "Fork"], "answer": "Bucket" },
+    { "question": "What do hens eat mostly?", "options": ["Grains", "Stones", "Sand", "Plastic"], "answer": "Grains" },
+    { "question": "Which part of cassava is eaten?", "options": ["Root", "Stem", "Leaf", "Flower"], "answer": "Root" },
+    { "question": "Which of these is a correct kitchen hygiene practice?", "options": ["Wash hands before cooking", "Cook with dirty utensils", "Leave food uncovered", "Spill water on floor"], "answer": "Wash hands before cooking" },
+    { "question": "Which of these is a tuber crop?", "options": ["Yam", "Maize", "Rice", "Beans"], "answer": "Yam" }
+     ]
     }
   },
 
