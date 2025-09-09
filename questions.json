@@ -261,7 +261,7 @@
     { "question": "Which of these is a tuber crop?", "options": ["Yam", "Maize", "Rice", "Beans"], "answer": "Yam" }
      ]
     }
-  }
+  },
 
   "Secondary": {
     "Mathematics": { "Level1": [], "Level2": [] },
