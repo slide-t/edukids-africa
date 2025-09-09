@@ -72,8 +72,41 @@
   ]
     },
     "Basic-Science": {
-      "Level1": [],
-      "Level2": []
+      "Level1": [
+    { "question": "Which of these is a living thing?", "options": ["Stone", "Tree", "Chair", "Book"], "answer": "Tree" },
+    { "question": "What do plants need to make food?", "options": ["Air, water, sunlight", "Sand, stones, air", "Heat, water, salt", "Wind, fire, smoke"], "answer": "Air, water, sunlight" },
+    { "question": "Which organ helps us to breathe?", "options": ["Heart", "Lungs", "Kidneys", "Stomach"], "answer": "Lungs" },
+    { "question": "Which part of the body helps us to see?", "options": ["Ears", "Nose", "Eyes", "Hands"], "answer": "Eyes" },
+    { "question": "What do we call animals that live in water?", "options": ["Reptiles", "Fish", "Birds", "Insects"], "answer": "Fish" },
+    { "question": "Which of these is a source of energy?", "options": ["Sun", "Moon", "Cloud", "Rock"], "answer": "Sun" },
+    { "question": "Which sense organ helps us to hear?", "options": ["Nose", "Eyes", "Ears", "Mouth"], "answer": "Ears" },
+    { "question": "What do we breathe in to stay alive?", "options": ["Carbon dioxide", "Oxygen", "Smoke", "Dust"], "answer": "Oxygen" },
+    { "question": "Which part of a plant is usually green?", "options": ["Root", "Leaf", "Stem", "Flower"], "answer": "Leaf" },
+    { "question": "What do we use to taste food?", "options": ["Eyes", "Tongue", "Nose", "Skin"], "answer": "Tongue" },
+    { "question": "Which of these is not a source of water?", "options": ["River", "Well", "Ocean", "Road"], "answer": "Road" },
+    { "question": "Which type of food helps us grow?", "options": ["Proteins", "Fats", "Vitamins", "Water"], "answer": "Proteins" },
+    { "question": "What do birds use to fly?", "options": ["Wings", "Legs", "Beaks", "Tails"], "answer": "Wings" },
+    { "question": "Which planet is closest to the sun?", "options": ["Earth", "Mercury", "Mars", "Venus"], "answer": "Mercury" },
+    { "question": "Which gas do plants release during photosynthesis?", "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"], "answer": "Oxygen" }
+  ],
+
+  "Level2": [
+    { "question": "What type of change is melting of ice?", "options": ["Physical change", "Chemical change", "Permanent change", "Nuclear change"], "answer": "Physical change" },
+    { "question": "Which organ pumps blood in the body?", "options": ["Liver", "Brain", "Heart", "Lungs"], "answer": "Heart" },
+    { "question": "Which of these is a simple machine?", "options": ["Television", "Lever", "Car", "Computer"], "answer": "Lever" },
+    { "question": "What part of the plant takes water from the soil?", "options": ["Leaf", "Stem", "Root", "Flower"], "answer": "Root" },
+    { "question": "Which of these animals is an amphibian?", "options": ["Frog", "Dog", "Goat", "Cat"], "answer": "Frog" },
+    { "question": "What is the boiling point of water?", "options": ["50°C", "100°C", "150°C", "200°C"], "answer": "100°C" },
+    { "question": "Which planet is known as the Red Planet?", "options": ["Venus", "Mars", "Earth", "Jupiter"], "answer": "Mars" },
+    { "question": "Which of these is a renewable source of energy?", "options": ["Coal", "Petrol", "Solar", "Gas"], "answer": "Solar" },
+    { "question": "Which blood cells fight diseases?", "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"], "answer": "White blood cells" },
+    { "question": "What force pulls objects towards the earth?", "options": ["Friction", "Magnetism", "Gravity", "Push"], "answer": "Gravity" },
+    { "question": "Which mineral is needed for strong bones?", "options": ["Iron", "Calcium", "Copper", "Zinc"], "answer": "Calcium" },
+    { "question": "Which of these is not biodegradable?", "options": ["Paper", "Plastic", "Food waste", "Leaves"], "answer": "Plastic" },
+    { "question": "Which part of the plant makes seeds?", "options": ["Leaf", "Root", "Flower", "Stem"], "answer": "Flower" },
+    { "question": "What is the main source of vitamin D?", "options": ["Fish", "Sunlight", "Meat", "Milk"], "answer": "Sunlight" },
+    { "question": "Which planet is the largest in our solar system?", "options": ["Saturn", "Mars", "Jupiter", "Neptune"], "answer": "Jupiter" }
+  ]
     },
     "Basic-Technology": {
       "Level1": [],
