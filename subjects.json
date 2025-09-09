@@ -1,62 +1,18 @@
 {
   "Primary": [
     "Mathematics",
-    "English",
-    "Basic-Science",
-    "Basic-Technology",
-    "Social-Studies",
-    "Civic-Education",
-    "Agricultural-Science",
-    "Home-Economics"
+    "English Language",
+    "Basic Science",
+    "Social Studies",
+    "Civic Education"
   ],
   "Secondary": [
     "Mathematics",
-    "English-Language",
+    "English Language",
     "Biology",
     "Chemistry",
     "Physics",
-    "Geography",
-    "Economics",
-    "Government",
-    "Literature-in-English",
-    "Commerce",
-    "Financial-Accounting"
-  ],
-  "WAEC": [
-    "Mathematics",
-    "English-Language",
-    "Biology",
-    "Chemistry",
-    "Physics",
-    "Agricultural-Science",
-    "Geography",
-    "Economics",
-    "Commerce",
-    "Financial-Accounting"
-  ],
-
-"Cambridge Curriculum Standard": [
-    "English as a Second Language",
-    "Mathematics",
-    "Physics",
-    "Biology",
-    "Chemistry",
-    "History",
-    "Business Studies",
-    "ICT"
-],
-  "JAMB": [
-    "Mathematics",
-    "English-Language",
-    "Biology",
-    "Chemistry",
-    "Physics",
-    "Economics",
-    "Government",
-    "Literature-in-English",
-    "Christian-Religious-Studies",
-    "Islamic-Religious-Studies"
+    "Literature in English",
+    "Government"
   ]
 }
-
-
