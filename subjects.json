@@ -6,8 +6,8 @@
     "Basic-Technology",
     "Social-Studies",
     "Civic-Education",
-    "Agricultural-Science",
-    "Home-Economics"
+    "Pre-Vocational Studies"
+  
   ],
   "Secondary": [
     "Mathematics",
@@ -15,6 +15,7 @@
     "Biology",
     "Chemistry",
     "Physics",
+    "Agricultural Science",
     "Geography",
     "Economics",
     "Government",
