@@ -1,14 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>About EduKids Africa</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
     .rotate-0 { transform: rotate(0deg); }
     .rotate-180 { transform: rotate(180deg); }
     .transition-transform { transition: transform 0.3s ease; }
+
+    /* Slide-down animation for mobile menu */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+    #mobile-menu.open {
+      max-height: 500px; /* enough for menu items */
+    }
   </style>
 </head>
 <body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
@@ -21,6 +31,7 @@
         <img src="logo.png" alt="EduKids Africa Logo" class="w-12 h-12 md:w-14 md:h-14 rounded-full">
         <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
       </div>
+
       <!-- Mobile Menu Button -->
       <div class="md:hidden">
         <button id="menu-btn" class="focus:outline-none transition">
@@ -29,20 +40,29 @@
           </svg>
         </button>
       </div>
-      <!-- Navigation -->
-      <nav id="menu" class="hidden md:flex md:space-x-6 text-lg font-medium">
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex md:space-x-6 text-lg font-medium">
         <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
         <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
         <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
         <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
       </nav>
     </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 bg-white shadow-md md:hidden">
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
+    </nav>
   </header>
 
   <!-- MAIN CONTENT -->
   <main class="max-w-5xl mx-auto p-6 md:p-10 space-y-10">
 
-    <!-- AUTHOR HISTORY -->
+    <!-- AUTHOR -->
     <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg hover:shadow-xl transition">
       <h2 class="text-3xl font-bold mb-4 text-orange-600">About the Author</h2>
       <p class="text-gray-700 text-lg">
@@ -51,7 +71,7 @@
       </p>
     </section>
 
-    <!-- ROADMAP COLLAPSIBLE -->
+    <!-- ROADMAP -->
     <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg hover:shadow-xl transition">
       <h2 class="text-3xl font-bold mb-6 text-orange-600">Our Roadmap</h2>
 
@@ -85,7 +105,7 @@
         </div>
       </div>
 
-      <!-- Roadmap Highlights -->
+      <!-- Highlights -->
       <div>
         <button class="w-full flex justify-between items-center py-4 text-left focus:outline-none text-xl font-semibold text-gray-800 hover:text-orange-600 transition" onclick="toggleCollapse('roadmap')">
           Roadmap Highlights
@@ -111,8 +131,9 @@
     <p class="text-gray-600 text-sm md:text-base">&copy; 2025 EduKids Africa. All rights reserved.</p>
   </footer>
 
-  <!-- SCRIPT FOR COLLAPSIBLE AND MOBILE MENU -->
+  <!-- SCRIPT -->
   <script>
+    // Collapsible sections
     function toggleCollapse(id) {
       const content = document.getElementById(id);
       const chevron = document.getElementById('chevron-' + id);
@@ -128,14 +149,22 @@
       }
     }
 
+    // Mobile menu toggle with slide effect
     const menuBtn = document.getElementById('menu-btn');
-    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    // Initially keep mobile menu hidden
+    mobileMenu.classList.remove('flex');
+    mobileMenu.classList.add('hidden');
+
     menuBtn.addEventListener('click', () => {
-      menu.classList.toggle('hidden');
-      menu.classList.toggle('flex');
-      menu.classList.toggle('flex-col');
-      menu.classList.toggle('space-y-3');
-      menu.classList.toggle('mt-4');
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileMenu.classList.add('open'), 10); // trigger animation
+      } else {
+        mobileMenu.classList.remove('open');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400); // wait for animation
+      }
     });
   </script>
 
