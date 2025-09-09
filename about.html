@@ -11,101 +11,104 @@
     .transition-transform { transition: transform 0.3s ease; }
   </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
 
   <!-- HEADER -->
   <header class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-6xl mx-auto flex items-center justify-between p-4">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <!-- Logo -->
       <div class="flex items-center space-x-3">
-        <img src="logo.png" alt="EduKids Africa Logo" class="w-12 h-12 rounded-full">
-        <h1 class="text-xl font-bold">EduKids Africa</h1>
+        <img src="logo.png" alt="EduKids Africa Logo" class="w-12 h-12 md:w-14 md:h-14 rounded-full">
+        <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
       </div>
+      <!-- Mobile Menu Button -->
       <div class="md:hidden">
-        <button id="menu-btn" class="focus:outline-none">
-          <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button id="menu-btn" class="focus:outline-none transition">
+          <svg class="w-7 h-7 text-gray-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
           </svg>
         </button>
       </div>
-      <nav id="menu" class="hidden md:flex md:space-x-4">
-        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</button>
-        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</button>
-        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</button>
-        <button class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</button>
+      <!-- Navigation -->
+      <nav id="menu" class="hidden md:flex md:space-x-6 text-lg font-medium">
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
       </nav>
     </div>
   </header>
 
   <!-- MAIN CONTENT -->
-  <main class="max-w-4xl mx-auto p-6 space-y-6">
+  <main class="max-w-5xl mx-auto p-6 md:p-10 space-y-10">
 
     <!-- AUTHOR HISTORY -->
-    <section class="bg-white p-6 rounded-xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">About the Author</h2>
-      <p class="text-gray-700">
-        EduKids Africa was founded by <strong>Kenny Omokehinde</strong>, an education enthusiast passionate about making learning accessible to children across Africa. With years of experience in digital education and curriculum development, Kenny aims to create interactive and engaging learning platforms tailored to young learners.
+    <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <h2 class="text-3xl font-bold mb-4 text-orange-600">About the Author</h2>
+      <p class="text-gray-700 text-lg">
+        EduKids Africa was founded by <strong class="text-gray-900">Kenny Omokehinde</strong>, an education innovator passionate about making learning accessible for every child across Africa. 
+        With expertise in digital education, curriculum design, and interactive platforms, Kenny envisions a future where technology bridges the learning gap and inspires curiosity in young minds.
       </p>
     </section>
 
     <!-- ROADMAP COLLAPSIBLE -->
-    <section class="bg-white p-6 rounded-xl shadow-md">
-      <h2 class="text-2xl font-semibold mb-4">Our Roadmap</h2>
+    <section class="bg-white p-6 md:p-10 rounded-2xl shadow-lg hover:shadow-xl transition">
+      <h2 class="text-3xl font-bold mb-6 text-orange-600">Our Roadmap</h2>
 
       <!-- Mission -->
       <div class="border-b border-gray-200">
-        <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('mission')">
-          <span class="font-medium">Mission</span>
-          <svg id="chevron-mission" class="w-5 h-5 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button class="w-full flex justify-between items-center py-4 text-left focus:outline-none text-xl font-semibold text-gray-800 hover:text-orange-600 transition" onclick="toggleCollapse('mission')">
+          Mission
+          <svg id="chevron-mission" class="w-6 h-6 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="mission" class="max-h-0 overflow-hidden transition-all duration-300">
-          <p class="py-2 text-gray-700">
-            Our mission is to provide accessible, high-quality digital learning content that empowers children across Africa to develop foundational skills in literacy, numeracy, and critical thinking.
+        <div id="mission" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p class="py-3 text-gray-700 text-lg">
+            Our mission is to provide inclusive, high-quality digital learning experiences that empower children across Africa to build strong foundations in literacy, numeracy, and critical thinking.
           </p>
         </div>
       </div>
 
       <!-- Vision -->
       <div class="border-b border-gray-200">
-        <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('vision')">
-          <span class="font-medium">Vision</span>
-          <svg id="chevron-vision" class="w-5 h-5 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <button class="w-full flex justify-between items-center py-4 text-left focus:outline-none text-xl font-semibold text-gray-800 hover:text-orange-600 transition" onclick="toggleCollapse('vision')">
+          Vision
+          <svg id="chevron-vision" class="w-6 h-6 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="vision" class="max-h-0 overflow-hidden transition-all duration-300">
-          <p class="py-2 text-gray-700">
-            Our vision is to become the leading platform for interactive and engaging education in Africa, fostering a love of learning and unlocking the potential of every child.
+        <div id="vision" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <p class="py-3 text-gray-700 text-lg">
+            Our vision is to be Africa’s most trusted hub for innovative learning, inspiring creativity, confidence, and lifelong knowledge in every child.
           </p>
         </div>
       </div>
 
       <!-- Roadmap Highlights -->
-      <div class="border-b border-gray-200">
-        <button class="w-full flex justify-between items-center py-3 text-left focus:outline-none" onclick="toggleCollapse('roadmap')">
-          <span class="font-medium">Roadmap Highlights</span>
-          <svg id="chevron-roadmap" class="w-5 h-5 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+      <div>
+        <button class="w-full flex justify-between items-center py-4 text-left focus:outline-none text-xl font-semibold text-gray-800 hover:text-orange-600 transition" onclick="toggleCollapse('roadmap')">
+          Roadmap Highlights
+          <svg id="chevron-roadmap" class="w-6 h-6 transition-transform rotate-0" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
           </svg>
         </button>
-        <div id="roadmap" class="max-h-0 overflow-hidden transition-all duration-300">
-          <ul class="py-2 text-gray-700 list-disc list-inside space-y-1">
-            <li>Launch interactive literacy modules for grades 1-3.</li>
-            <li>Develop numeracy games and quizzes for foundational skills.</li>
-            <li>Expand platform to include STEM and creative learning resources.</li>
-            <li>Introduce teacher dashboards and analytics for student tracking.</li>
-            <li>Build community engagement through workshops and webinars.</li>
+        <div id="roadmap" class="max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+          <ul class="py-3 text-gray-700 text-lg list-disc list-inside space-y-2">
+            <li>Launch interactive literacy modules for Grades 1–3.</li>
+            <li>Develop gamified numeracy lessons and quizzes.</li>
+            <li>Expand into STEM, arts, and creative problem-solving resources.</li>
+            <li>Provide teacher dashboards with performance analytics.</li>
+            <li>Foster community engagement through webinars and workshops.</li>
           </ul>
         </div>
       </div>
-
     </section>
   </main>
 
   <!-- FOOTER -->
-  <footer class="text-center p-4 bg-white mt-6 shadow-inner">
-    <p class="text-gray-500 text-sm">&copy; 2025 EduKids Africa. All rights reserved.</p>
+  <footer class="text-center p-6 bg-white mt-10 shadow-inner">
+    <p class="text-gray-600 text-sm md:text-base">&copy; 2025 EduKids Africa. All rights reserved.</p>
   </footer>
 
   <!-- SCRIPT FOR COLLAPSIBLE AND MOBILE MENU -->
@@ -113,6 +116,7 @@
     function toggleCollapse(id) {
       const content = document.getElementById(id);
       const chevron = document.getElementById('chevron-' + id);
+
       if(content.style.maxHeight && content.style.maxHeight !== "0px") {
         content.style.maxHeight = "0px";
         chevron.classList.remove('rotate-180');
@@ -130,7 +134,8 @@
       menu.classList.toggle('hidden');
       menu.classList.toggle('flex');
       menu.classList.toggle('flex-col');
-      menu.classList.toggle('space-y-2');
+      menu.classList.toggle('space-y-3');
+      menu.classList.toggle('mt-4');
     });
   </script>
 
