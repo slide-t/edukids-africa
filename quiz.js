@@ -1,123 +1,89 @@
-// Get subject from URL
+// quiz.js (minimal version with category + subject separation)
+
+// ✅ Parse URL parameters
 const urlParams = new URLSearchParams(window.location.search);
 const category = urlParams.get("category");
 const subject = urlParams.get("subject");
 const key = `${category}-${subject}`;
 
-/*const params = new URLSearchParams(window.location.search);
-const subject = params.get("subject");
-*/
-// Update title
-document.getElementById("quiz-title").textContent = subject ? `${subject} Quiz` : "Quiz";
-
-// Questions stored directly in JS for now
-
+// ✅ Question bank (namespaced by category-subject)
 const questions = {
   "Primary-Mathematics": [
-    { question: "What is 2 + 2?", options: ["3","4","5","6"], answer: "4" },
-    { question: "What is 5 × 3?", options: ["15","10","20","25"], answer: "15" }
+    { question: "What is 2 + 2?", options: ["3", "4", "5", "6"], answer: "4" },
+    { question: "What is 5 × 3?", options: ["15", "10", "20", "25"], answer: "15" }
   ],
   "Secondary-Mathematics": [
-    { question: "Simplify: 2x + 3x", options: ["5x","6x","x^2","2x^2"], answer: "5x" },
-    { question: "Solve: 4y = 20", options: ["4","5","10","20"], answer: "5" }
+    { question: "Simplify: 2x + 3x", options: ["5x", "6x", "x^2", "2x^2"], answer: "5x" },
+    { question: "Solve: 4y = 20", options: ["4", "5", "10", "20"], answer: "5" }
   ],
   "Primary-English Language": [
-    { question: "Choose the correct spelling:", options: ["becos","because","becaus","becuz"], answer: "because" },
-    { question: "Select the noun:", options: ["run","happy","book","quickly"], answer: "book" }
+    { question: "Choose the correct spelling:", options: ["becos", "because", "becaus", "becuz"], answer: "because" },
+    { question: "Select the noun:", options: ["run", "happy", "book", "quickly"], answer: "book" }
   ],
   "Secondary-English Language": [
-    { question: "What is a synonym for 'happy'?", options: ["sad","angry","joyful","tired"], answer: "joyful" },
-    { question: "Identify the adverb:", options: ["quickly","dog","blue","teacher"], answer: "quickly" }
+    { question: "What is a synonym for 'happy'?", options: ["sad", "angry", "joyful", "tired"], answer: "joyful" },
+    { question: "Identify the adverb:", options: ["quickly", "dog", "blue", "teacher"], answer: "quickly" }
   ]
 };
 
-/*const quizData = {
-  English: [
-    {
-      question: "What is the plural of 'child'?",
-      options: ["Childs", "Children", "Childes", "Childer"],
-      answer: "Children"
-    },
-    {
-      question: "Which of these is a vowel?",
-      options: ["B", "C", "E", "G"],
-      answer: "E"
-    },
-    {
-      question: "Choose the correct spelling:",
-      options: ["becos", "because", "becaus", "becuz"],
-      answer: "because"
-    }
-  ],
-  Mathematics: [
-    {
-      question: "What is 2 + 2?",
-      options: ["3", "4", "5", "6"],
-      answer: "4"
-    },
-    {
-      question: "What is 10 ÷ 2?",
-      options: ["2", "4", "5", "10"],
-      answer: "5"
-    },
-    {
-      question: "Solve: 5 × 3",
-      options: ["8", "10", "15", "20"],
-      answer: "15"
-    }
-  ]
-};
-*/
-const quizContainer = document.getElementById("quiz-container");
-const resultDiv = document.getElementById("result");
+// ✅ State variables
+let currentQuestionIndex = 0;
+let score = 0;
+const quizQuestions = questions[key] || [];
 
-function loadQuiz() {
-  quizContainer.innerHTML = "";
+// ✅ DOM elements
+const questionText = document.getElementById("questionText");
+const optionsContainer = document.getElementById("optionsContainer");
+const scoreDisplay = document.getElementById("scoreDisplay");
+const levelDisplay = document.getElementById("levelDisplay");
+const progressBar = document.getElementById("progressBar");
 
-  if (!quizData[subject]) {
-    quizContainer.innerHTML = `<p class="text-red-600">No quiz available for ${subject}.</p>`;
-    document.getElementById("submitBtn").style.display = "none";
+// ✅ Load a question
+function renderQuestion() {
+  if (currentQuestionIndex >= quizQuestions.length) {
+    showSummary();
     return;
   }
 
-  quizData[subject].forEach((q, index) => {
-    const div = document.createElement("div");
-    div.className = "mb-4";
+  const q = quizQuestions[currentQuestionIndex];
+  questionText.textContent = q.question;
+  optionsContainer.innerHTML = "";
 
-    const question = document.createElement("p");
-    question.className = "font-medium";
-    question.textContent = `${index + 1}. ${q.question}`;
-    div.appendChild(question);
-
-    q.options.forEach(opt => {
-      const label = document.createElement("label");
-      label.className = "block";
-      label.innerHTML = `
-        <input type="radio" name="q${index}" value="${opt}" class="mr-2"> ${opt}
-      `;
-      div.appendChild(label);
-    });
-
-    quizContainer.appendChild(div);
-  });
-}
-
-function checkAnswers() {
-  if (!quizData[subject]) return;
-
-  let score = 0;
-  quizData[subject].forEach((q, index) => {
-    const selected = document.querySelector(`input[name="q${index}"]:checked`);
-    if (selected && selected.value === q.answer) {
-      score++;
-    }
+  q.options.forEach(opt => {
+    const btn = document.createElement("button");
+    btn.textContent = opt;
+    btn.className =
+      "w-full px-4 py-2 bg-gray-200 rounded-lg hover:bg-purple-600 hover:text-white transition";
+    btn.onclick = () => handleAnswer(opt);
+    optionsContainer.appendChild(btn);
   });
 
-  resultDiv.textContent = `You scored ${score} out of ${quizData[subject].length}`;
+  scoreDisplay.textContent = `Score: ${score}/${quizQuestions.length}`;
+  progressBar.style.width = `${
+    (currentQuestionIndex / quizQuestions.length) * 100
+  }%`;
 }
 
-// Load on start
-loadQuiz();
+// ✅ Handle answer
+function handleAnswer(selected) {
+  const correct = quizQuestions[currentQuestionIndex].answer;
+  if (selected === correct) {
+    score++;
+  }
+  currentQuestionIndex++;
+  renderQuestion();
+}
 
-// Button action
-document.getElementById("submitBtn").addEventListener("click", checkAnswers);
+// ✅ Show summary
+function showSummary() {
+  questionText.textContent = "Quiz Complete!";
+  optionsContainer.innerHTML = `<p class="text-center text-lg">Your score: ${score} / ${quizQuestions.length}</p>`;
+  progressBar.style.width = "100%";
+}
+
+// ✅ Initialize
+if (!quizQuestions.length) {
+  questionText.textContent = `No questions available for ${category} - ${subject}`;
+} else {
+  renderQuestion();
+}
