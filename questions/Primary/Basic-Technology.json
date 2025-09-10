@@ -419,8 +419,310 @@
         "question": "Which of these is NOT a source of renewable energy?",
         "options": ["Wind", "Coal", "Water", "Sun"],
         "correct": "Coal"
-      }
-    ]
+      },
+      
+      {
+        "question": "Which type of drawing shows the inside details of a building or machine?",
+        "options": ["Pictorial drawing", "Oblique drawing", "Sectional drawing", "Orthographic drawing"],
+        "correct": "Sectional drawing"
+      },
+      {
+        "question": "The force that opposes motion when two surfaces rub against each other is called?",
+        "options": ["Friction", "Gravity", "Pressure", "Tension"],
+        "correct": "Friction"
+      },
+      {
+        "question": "Which of these is an electronic component that stores electrical energy?",
+        "options": ["Resistor", "Capacitor", "Diode", "Switch"],
+        "correct": "Capacitor"
+      },
+      {
+        "question": "Which type of lever has the fulcrum between the effort and the load?",
+        "options": ["First class lever", "Second class lever", "Third class lever", "Fourth class lever"],
+        "correct": "First class lever"
+      },
+      {
+        "question": "What is the main function of a transformer?",
+        "options": ["To store energy", "To generate electricity", "To increase or decrease voltage", "To change current to heat"],
+        "correct": "To increase or decrease voltage"
+      },
+      {
+        "question": "Which simple machine is used in a spade?",
+        "options": ["Lever", "Pulley", "Wheel and axle", "Screw"],
+        "correct": "Lever"
+      },
+      {
+        "question": "The ability of a material to resist breaking under force is called?",
+        "options": ["Strength", "Elasticity", "Flexibility", "Plasticity"],
+        "correct": "Strength"
+      },
+      {
+        "question": "Which of these tools is best for shaping wood?",
+        "options": ["Hammer", "File", "Saw", "Chisel"],
+        "correct": "Chisel"
+      },
+      {
+        "question": "What is the full meaning of ICT?",
+        "options": ["Information and Computer Technology", "Internet and Communication Technology", "Information and Communication Technology", "International Computer Technology"],
+        "correct": "Information and Communication Technology"
+      },
+      {
+        "question": "Which type of energy is possessed by water stored in a dam?",
+        "options": ["Kinetic energy", "Chemical energy", "Potential energy", "Thermal energy"],
+        "correct": "Potential energy"
+      },
+      {
+        "question": "Which of these materials is obtained from crude oil?",
+        "options": ["Coal", "Kerosene", "Charcoal", "Natural gas"],
+        "correct": "Kerosene"
+      },
+      {
+        "question": "Which of these instruments is used for drawing circles?",
+        "options": ["Set square", "Compass", "Protractor", "Divider"],
+        "correct": "Compass"
+      },
+      {
+        "question": "What type of circuit allows electricity to flow in only one direction?",
+        "options": ["Parallel circuit", "Open circuit", "Series circuit", "Direct current circuit"],
+        "correct": "Direct current circuit"
+      },
+      {
+        "question": "Which of these safety devices prevents electric shock in wet areas?",
+        "options": ["Insulation", "Earth wire", "Fuse", "Transformer"],
+        "correct": "Earth wire"
+      },
+      {
+        "question": "Which of these is the main advantage of renewable energy?",
+        "options": ["It is costly", "It never runs out", "It pollutes the environment", "It is non-reusable"],
+        "correct": "It never runs out"
+      },
+      {
+        "question": "The metal used to make electrical cables is usually?",
+        "options": ["Iron", "Copper", "Aluminium", "Zinc"],
+        "correct": "Copper"
+      },
+      {
+        "question": "Which type of motion does a clock pendulum make?",
+        "options": ["Circular motion", "Oscillatory motion", "Rotary motion", "Linear motion"],
+        "correct": "Oscillatory motion"
+      },
+      {
+        "question": "Which type of energy conversion takes place in an electric iron?",
+        "options": ["Electrical to heat", "Heat to sound", "Chemical to light", "Mechanical to heat"],
+        "correct": "Electrical to heat"
+      },
+      {
+        "question": "Which of these tools is used to tighten or loosen bolts and nuts?",
+        "options": ["Pliers", "Spanner", "Hammer", "File"],
+        "correct": "Spanner"
+      },
+      {
+        "question": "Which of these is an artificial source of light?",
+        "options": ["Moon", "Candle", "Sun", "Star"],
+        "correct": "Candle"
+      },
+      {
+        "question": "Which of these devices converts sound energy into electrical signals?",
+        "options": ["Speaker", "Microphone", "Amplifier", "Radio"],
+        "correct": "Microphone"
+      },
+      {
+        "question": "The ability of a material to return to its original shape after stretching is called?",
+        "options": ["Elasticity", "Strength", "Hardness", "Flexibility"],
+        "correct": "Elasticity"
+      },
+      {
+        "question": "What type of machine is a sewing machine?",
+        "options": ["Simple machine", "Complex machine", "First class lever", "Hydraulic machine"],
+        "correct": "Complex machine"
+      },
+      {
+        "question": "Which of these is the safest way to handle electrical appliances?",
+        "options": ["Use with wet hands", "Wear rubber slippers", "Stand on metal floor", "Touch bare wires"],
+        "correct": "Wear rubber slippers"
+      },
+      {
+        "question": "Which type of energy is stored in a charged battery?",
+        "options": ["Thermal energy", "Chemical energy", "Potential energy", "Kinetic energy"],
+        "correct": "Chemical energy"
+      },
+      {
+        "question": "Which instrument is used to measure electric current?",
+        "options": ["Voltmeter", "Ammeter", "Galvanometer", "Multimeter"],
+        "correct": "Ammeter"
+      },
+      {
+        "question": "Which of these is the best conductor of electricity?",
+        "options": ["Plastic", "Copper", "Wood", "Rubber"],
+        "correct": "Copper"
+      },
+      {
+        "question": "What is the main advantage of solar energy?",
+        "options": ["It is cheap and renewable", "It is always available at night", "It needs fuel", "It is non-renewable"],
+        "correct": "It is cheap and renewable"
+      },
+      {
+        "question": "What type of simple machine is a wheelbarrow?",
+        "options": ["First class lever", "Second class lever", "Third class lever", "Pulley"],
+        "correct": "Second class lever"
+      },
+      {
+        "question": "Which of these helps in reducing friction?",
+        "options": ["Oil and grease", "Rough surfaces", "Sandpaper", "Sharp edges"],
+        "correct": "Oil and grease"
+      },
+      {
+        "question": "Which part of a computer is used to store information permanently?",
+        "options": ["RAM", "ROM", "Monitor", "CPU"],
+        "correct": "ROM"
+      },
+      {
+        "question": "Which of these safety devices breaks a circuit when current is too high?",
+        "options": ["Resistor", "Switch", "Fuse", "Battery"],
+        "correct": "Fuse"
+      },
+      {
+        "question": "Which of these is an example of rotary motion?",
+        "options": ["Swinging of a pendulum", "Fan blades turning", "Car moving straight", "Man walking"],
+        "correct": "Fan blades turning"
+      },
+      {
+        "question": "The property of a metal that allows it to be drawn into thin wires is called?",
+        "options": ["Malleability", "Ductility", "Elasticity", "Flexibility"],
+        "correct": "Ductility"
+      },
+      {
+        "question": "Which of these is NOT a source of energy?",
+        "options": ["Coal", "Wind", "Water", "Plastic"],
+        "correct": "Plastic"
+      },
+      {
+        "question": "The process of joining two metals using heat is called?",
+        "options": ["Casting", "Forging", "Welding", "Filing"],
+        "correct": "Welding"
+      },
+      {
+        "question": "What type of machine is a pair of scissors?",
+        "options": ["Pulley", "Screw", "First class lever", "Third class lever"],
+        "correct": "First class lever"
+      },
+      {
+        "question": "Which of these is the best reason for recycling materials?",
+        "options": ["To waste resources", "To reduce pollution", "To increase rubbish", "To make things costly"],
+        "correct": "To reduce pollution"
+      },
+      {
+        "question": "The main part of a drawing board that holds paper is called?",
+        "options": ["Blade", "Working surface", "Edge strip", "Ruler"],
+        "correct": "Working surface"
+      },
+      {
+        "question": "Which of these is an insulator?",
+        "options": ["Aluminium", "Rubber", "Copper", "Steel"],
+        "correct": "Rubber"
+      },
+  {
+    "question": "Which of the following is NOT a simple machine?",
+    "options": ["Lever", "Pulley", "Gear", "Battery"],
+    "answer": "Battery"
+  },
+  {
+    "question": "The process of joining two metals by heating them until they melt and fuse together is called?",
+    "options": ["Soldering", "Nailing", "Filing", "Polishing"],
+    "answer": "Soldering"
+  },
+  {
+    "question": "Which material is most suitable for making the body of an aeroplane?",
+    "options": ["Wood", "Aluminium", "Copper", "Glass"],
+    "answer": "Aluminium"
+  },
+  {
+    "question": "A wheel and axle is used to make work easier by?",
+    "options": ["Increasing distance", "Reducing friction", "Increasing force", "Changing direction"],
+    "answer": "Increasing force"
+  },
+  {
+    "question": "Which of these tools is used to check if a surface is perfectly flat?",
+    "options": ["Mallet", "Spirit level", "File", "Pliers"],
+    "answer": "Spirit level"
+  },
+  {
+    "question": "The main source of energy for solar panels is?",
+    "options": ["Sunlight", "Wind", "Water", "Heat from fire"],
+    "answer": "Sunlight"
+  },
+  {
+    "question": "The type of drawing that shows an object as it looks to the eye is called?",
+    "options": ["Orthographic", "Pictorial", "Symbolic", "Schematic"],
+    "answer": "Pictorial"
+  },
+  {
+    "question": "What is the advantage of using gears in machines?",
+    "options": ["To increase beauty", "To transfer motion", "To generate electricity", "To reduce cost"],
+    "answer": "To transfer motion"
+  },
+  {
+    "question": "Which of the following is a manufactured material?",
+    "options": ["Stone", "Iron ore", "Plastic", "Sand"],
+    "answer": "Plastic"
+  },
+  {
+    "question": "The part of the bicycle that transmits force from the pedal to the wheel is?",
+    "options": ["Brake", "Chain", "Seat", "Handlebar"],
+    "answer": "Chain"
+  },
+  {
+    "question": "Which of these is a renewable source of energy?",
+    "options": ["Coal", "Petroleum", "Natural gas", "Wind"],
+    "answer": "Wind"
+  },
+  {
+    "question": "The safety device used to break a circuit when the current is too high is?",
+    "options": ["Switch", "Fuse", "Transformer", "Conductor"],
+    "answer": "Fuse"
+  },
+  {
+    "question": "The mechanical advantage of a machine is given by?",
+    "options": ["Load ÷ Effort", "Effort ÷ Load", "Load × Effort", "Load + Effort"],
+    "answer": "Load ÷ Effort"
+  },
+  {
+    "question": "A drawing instrument used for drawing circles and arcs is?",
+    "options": ["Divider", "Set square", "Protractor", "Compass"],
+    "answer": "Compass"
+  },
+  {
+    "question": "Which type of lever is a wheelbarrow?",
+    "options": ["First class", "Second class", "Third class", "Fourth class"],
+    "answer": "Second class"
+  },
+  {
+    "question": "The device used to store electrical energy is?",
+    "options": ["Resistor", "Capacitor", "Transformer", "Switch"],
+    "answer": "Capacitor"
+  },
+  {
+    "question": "In technical drawing, the thick continuous line is used to represent?",
+    "options": ["Hidden lines", "Object outlines", "Dimension lines", "Center lines"],
+    "answer": "Object outlines"
+  },
+  {
+    "question": "Which of these processes changes wood into charcoal?",
+    "options": ["Fermentation", "Carbonization", "Evaporation", "Condensation"],
+    "answer": "Carbonization"
+  },
+  {
+    "question": "The tool used for holding hot objects in the workshop is?",
+    "options": ["Hammer", "Tongs", "File", "Wrench"],
+    "answer": "Tongs"
+  },
+  {
+    "question": "The energy possessed by a moving object is called?",
+    "options": ["Potential energy", "Kinetic energy", "Heat energy", "Chemical energy"],
+    "answer": "Kinetic energy"
   }
+     ]
+   }
 }
+      
     
