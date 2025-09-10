@@ -1,0 +1,131 @@
+{
+  "Basic-Technology": {
+       "level1": [
+  {
+    "question": "What is the name of the tool we use to cut paper?",
+    "options": ["Hammer", "Scissors", "Ruler", "Spade"],
+    "answer": "Scissors"
+  },
+  {
+    "question": "Which of these is NOT a machine?",
+    "options": ["Bicycle", "Chair", "Car", "Fan"],
+    "answer": "Chair"
+  },
+  {
+    "question": "What is the use of a ruler?",
+    "options": ["To eat food", "To measure length", "To cut wood", "To sweep floor"],
+    "answer": "To measure length"
+  },
+  {
+    "question": "Which material is used to make tables and chairs?",
+    "options": ["Rubber", "Wood", "Sand", "Glass"],
+    "answer": "Wood"
+  },
+  {
+    "question": "What do we call things like hammer, saw, and pliers?",
+    "options": ["Toys", "Machines", "Tools", "Animals"],
+    "answer": "Tools"
+  },
+  {
+    "question": "Which of these is powered by electricity?",
+    "options": ["Stone", "Television", "Spoon", "Book"],
+    "answer": "Television"
+  },
+  {
+    "question": "Which of these is a simple machine?",
+    "options": ["Wheelbarrow", "Book", "Spoon", "Stone"],
+    "answer": "Wheelbarrow"
+  },
+  {
+    "question": "What is the use of a broom?",
+    "options": ["To measure", "To cut", "To sweep", "To eat"],
+    "answer": "To sweep"
+  },
+  {
+    "question": "Which of these is used to join pieces of wood together?",
+    "options": ["Hammer and nails", "Plate and spoon", "Fan and wire", "Book and pen"],
+    "answer": "Hammer and nails"
+  },
+  {
+    "question": "What type of energy makes a bulb shine?",
+    "options": ["Sound energy", "Electrical energy", "Food energy", "Heat energy"],
+    "answer": "Electrical energy"
+  },
+  {
+    "question": "Which one is safe to touch when working with tools?",
+    "options": ["The sharp edge of a blade", "The handle of scissors", "The head of a nail", "Bare wires"],
+    "answer": "The handle of scissors"
+  },
+  {
+    "question": "What do we call the small machine we use to sharpen pencils?",
+    "options": ["Grinder", "Sharpener", "Cutter", "Nail"],
+    "answer": "Sharpener"
+  },
+  {
+    "question": "Which of these materials is used to make clothes?",
+    "options": ["Cotton", "Glass", "Sand", "Metal"],
+    "answer": "Cotton"
+  },
+  {
+    "question": "What is the use of a spanner?",
+    "options": ["To open bottles", "To turn nuts and bolts", "To sweep floor", "To eat food"],
+    "answer": "To turn nuts and bolts"
+  },
+  {
+    "question": "Which of these is an example of a building material?",
+    "options": ["Sand", "Plate", "Chair", "Book"],
+    "answer": "Sand"
+  },
+  {
+    "question": "Which of these is used for digging the ground?",
+    "options": ["Hoe", "Plate", "Cup", "Ruler"],
+    "answer": "Hoe"
+  },
+  {
+    "question": "What type of tool is a cutlass?",
+    "options": ["Cutting tool", "Measuring tool", "Digging tool", "Cooking tool"],
+    "answer": "Cutting tool"
+  },
+  {
+    "question": "Which of these is a type of road transport?",
+    "options": ["Car", "Ship", "Aeroplane", "Canoe"],
+    "answer": "Car"
+  },
+  {
+    "question": "What is the use of nails in carpentry?",
+    "options": ["To eat food", "To hold wood together", "To play", "To sweep"],
+    "answer": "To hold wood together"
+  },
+  {
+    "question": "Which of these is powered by fuel?",
+    "options": ["Bicycle", "Car", "Table", "Fan"],
+    "answer": "Car"
+  },
+  {
+    "question": "What do we use to protect our eyes when cutting wood?",
+    "options": ["Helmet", "Safety goggles", "Boots", "Gloves"],
+    "answer": "Safety goggles"
+  },
+  {
+    "question": "Which of these is NOT a building material?",
+    "options": ["Cement", "Sand", "Stone", "Bread"],
+    "answer": "Bread"
+  },
+  {
+    "question": "Which tool is used by carpenters to smooth wood?",
+    "options": ["Plane", "Knife", "Plate", "Pen"],
+    "answer": "Plane"
+  },
+  {
+    "question": "What type of energy makes a fan work?",
+    "options": ["Sound energy", "Electrical energy", "Food energy", "Light energy"],
+    "answer": "Electrical energy"
+  },
+  {
+    "question": "Which of these is a form of water transport?",
+    "options": ["Ship", "Car", "Bus", "Bicycle"],
+    "answer": "Ship"
+  }
+  ]
+ } 
+}
