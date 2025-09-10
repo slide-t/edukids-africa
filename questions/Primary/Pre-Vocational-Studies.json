@@ -352,9 +352,110 @@
         "question": "The liquid food produced by cows for human consumption is ____?",
         "options": ["Milk", "Water", "Juice", "Oil"],
         "answer": "Milk"
-      }
-    ]
-  }
+      },
+        {
+          "question": "Why is it important to wash fruits before eating them?",
+          "options": ["To make them look shiny", "To remove dirt and germs", "To make them sweeter", "To change their color"],
+          "answer": "To remove dirt and germs"
+        },
+        {
+          "question": "Which of these is a correct way to preserve yam?",
+          "options": ["Leaving it in water", "Storing in a cool, dry place", "Keeping it in the sun always", "Putting it in a freezer while wet"],
+          "answer": "Storing in a cool, dry place"
+        },
+        {
+          "question": "Which of these items is NOT used for sweeping?",
+          "options": ["Broom", "Brush", "Mop", "Plate"],
+          "answer": "Plate"
+        },
+        {
+          "question": "One of the advantages of planting vegetables at home is:",
+          "options": ["They decorate the house", "They are always free to eat", "They cannot spoil", "They make the house dirty"],
+          "answer": "They are always free to eat"
+        },
+        {
+          "question": "Which of these is the safest way to cross the road?",
+          "options": ["Run quickly", "Look left, right, and left again", "Close your eyes and walk", "Follow your friends without looking"],
+          "answer": "Look left, right, and left again"
+        },
+        {
+          "question": "What is the first thing to do when you wake up in the morning?",
+          "options": ["Pray and brush your teeth", "Eat food immediately", "Go to school without washing", "Play outside"],
+          "answer": "Pray and brush your teeth"
+        },
+        {
+          "question": "Which of the following is a perishable food?",
+          "options": ["Tomato", "Rice", "Beans", "Groundnut"],
+          "answer": "Tomato"
+        },
+        {
+          "question": "What is the purpose of using soap when washing clothes?",
+          "options": ["To make the clothes colorful", "To remove dirt and stains", "To destroy the cloth", "To make clothes heavier"],
+          "answer": "To remove dirt and stains"
+        },
+        {
+          "question": "Which of the following is used for cooking food?",
+          "options": ["Plate", "Spoon", "Stove", "Cup"],
+          "answer": "Stove"
+        },
+        {
+          "question": "Why do farmers keep domestic animals?",
+          "options": ["For decoration", "For food and other products", "For playing games", "For fighting"],
+          "answer": "For food and other products"
+        },
+        {
+          "question": "Which of these is a correct way of keeping your classroom neat?",
+          "options": ["Throw papers on the floor", "Sweep regularly", "Spill water on the floor", "Write on the walls"],
+          "answer": "Sweep regularly"
+        },
+        {
+          "question": "Which of these is NOT a safety rule in the kitchen?",
+          "options": ["Do not play with fire", "Use a cloth to carry hot pots", "Run around with sharp knives", "Wash hands before cooking"],
+          "answer": "Run around with sharp knives"
+        },
+        {
+          "question": "Which of the following is a healthy practice?",
+          "options": ["Washing hands before eating", "Sleeping without bathing", "Eating food on the floor", "Playing in dirty water"],
+          "answer": "Washing hands before eating"
+        },
+        {
+          "question": "What do we call crops grown mainly for food?",
+          "options": ["Cash crops", "Food crops", "Flower crops", "Toy crops"],
+          "answer": "Food crops"
+        },
+        {
+          "question": "Which of these is an example of a cash crop?",
+          "options": ["Rice", "Beans", "Cocoa", "Yam"],
+          "answer": "Cocoa"
+        },
+        {
+          "question": "The act of taking care of your surroundings is called:",
+          "options": ["Farming", "Sanitation", "Cooking", "Decoration"],
+          "answer": "Sanitation"
+        },
+        {
+          "question": "What is the best way to keep leftover food?",
+          "options": ["On the table uncovered", "Inside the dustbin", "In a clean container", "Under the bed"],
+          "answer": "In a clean container"
+        },
+        {
+          "question": "Which of the following is NOT a benefit of farming?",
+          "options": ["Provides food", "Gives employment", "Pollutes the environment", "Provides raw materials"],
+          "answer": "Pollutes the environment"
+        },
+        {
+          "question": "Why do we boil drinking water?",
+          "options": ["To make it cold", "To kill germs", "To make it colorful", "To make it heavy"],
+          "answer": "To kill germs"
+        },
+        {
+          "question": "Which tool is used for digging in the farm?",
+          "options": ["Hoe", "Plate", "Spoon", "Bucket"],
+          "answer": "Hoe"
+        }
+      ]
+    }
+  ]
 }
 
 
