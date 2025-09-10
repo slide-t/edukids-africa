@@ -105,6 +105,106 @@
         "question": "Which of the following is used to test for starch?",
         "options": ["Benedict’s solution", "Iodine solution", "Litmus paper", "Lime water"],
         "answer": "Iodine solution"
+      },
+      {
+        "question": "Which gas turns lime water milky?",
+        "options": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+        "answer": "Carbon dioxide"
+      },
+      {
+        "question": "Which of these is NOT a property of metals?",
+        "options": ["Conduct heat", "Malleable", "Ductile", "Brittle"],
+        "answer": "Brittle"
+      },
+      {
+        "question": "What is the formula of common salt?",
+        "options": ["NaCl", "KCl", "CaCl2", "Na2CO3"],
+        "answer": "NaCl"
+      },
+      {
+        "question": "Which of these is a physical change?",
+        "options": ["Burning paper", "Rusting iron", "Melting ice", "Cooking rice"],
+        "answer": "Melting ice"
+      },
+      {
+        "question": "Which type of solution turns red litmus paper blue?",
+        "options": ["Acid", "Base", "Salt", "Neutral"],
+        "answer": "Base"
+      },
+      {
+        "question": "Which particle has a negative charge?",
+        "options": ["Neutron", "Proton", "Electron", "Nucleus"],
+        "answer": "Electron"
+      },
+      {
+        "question": "Which is the lightest gas?",
+        "options": ["Helium", "Oxygen", "Hydrogen", "Carbon dioxide"],
+        "answer": "Hydrogen"
+      },
+      {
+        "question": "Which of the following is NOT a mixture?",
+        "options": ["Sand and salt", "Oil and water", "Sodium chloride", "Air"],
+        "answer": "Sodium chloride"
+      },
+      {
+        "question": "What is the chemical symbol of calcium?",
+        "options": ["Cl", "Ca", "Co", "Cu"],
+        "answer": "Ca"
+      },
+      {
+        "question": "Which of these is a non-metal?",
+        "options": ["Iron", "Copper", "Sulphur", "Magnesium"],
+        "answer": "Sulphur"
+      },
+      {
+        "question": "Which gas is produced when metals react with acids?",
+        "options": ["Carbon dioxide", "Hydrogen", "Oxygen", "Nitrogen"],
+        "answer": "Hydrogen"
+      },
+      {
+        "question": "Which instrument is used to measure temperature?",
+        "options": ["Barometer", "Thermometer", "Hygrometer", "Voltmeter"],
+        "answer": "Thermometer"
+      },
+      {
+        "question": "Which of the following is an alloy?",
+        "options": ["Iron", "Copper", "Bronze", "Sulphur"],
+        "answer": "Bronze"
+      },
+      {
+        "question": "Which gas is commonly known as laughing gas?",
+        "options": ["Carbon monoxide", "Nitrous oxide", "Oxygen", "Methane"],
+        "answer": "Nitrous oxide"
+      },
+      {
+        "question": "Which separation method is used to purify water?",
+        "options": ["Filtration", "Sieving", "Distillation", "Evaporation"],
+        "answer": "Distillation"
+      },
+      {
+        "question": "Which of the following is a noble metal?",
+        "options": ["Gold", "Iron", "Aluminium", "Zinc"],
+        "answer": "Gold"
+      },
+      {
+        "question": "Which gas is used by plants in photosynthesis?",
+        "options": ["Oxygen", "Nitrogen", "Carbon dioxide", "Hydrogen"],
+        "answer": "Carbon dioxide"
+      },
+      {
+        "question": "What is the formula of methane?",
+        "options": ["CH3", "CH4", "C2H6", "C2H4"],
+        "answer": "CH4"
+      },
+      {
+        "question": "Which of the following is used to test for proteins?",
+        "options": ["Iodine solution", "Benedict’s solution", "Biuret solution", "Lime water"],
+        "answer": "Biuret solution"
+      },
+      {
+        "question": "Which acid is found in lemon juice?",
+        "options": ["Acetic acid", "Tartaric acid", "Citric acid", "Carbonic acid"],
+        "answer": "Citric acid"
       }
     ]
   }
