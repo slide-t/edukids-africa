@@ -448,8 +448,163 @@
         "options": ["Metaphor", "Simile", "Irony", "Personification"],
         "correct": "Simile"
       }
+    ],
+    "level3": [
+      {
+        "question": "Which of these is NOT a feature of an argumentative essay?",
+        "options": ["thesis statement", "logical reasoning", "dialogue between characters", "conclusion"],
+        "correct": "dialogue between characters"
+      },
+      {
+        "question": "Choose the correct concord: The committee ___ divided in their opinion.",
+        "options": ["is", "are", "were", "be"],
+        "correct": "is"
+      },
+      {
+        "question": "Which of the following best defines 'synopsis'?",
+        "options": ["a long story", "a summary", "an introduction", "a quotation"],
+        "correct": "a summary"
+      },
+      {
+        "question": "Identify the figure of speech: 'The pen is mightier than the sword.'",
+        "options": ["Hyperbole", "Personification", "Metonymy", "Irony"],
+        "correct": "Metonymy"
+      },
+      {
+        "question": "Which stress pattern is correct for the word 'economics'?",
+        "options": ["first syllable", "second syllable", "third syllable", "last syllable"],
+        "correct": "second syllable"
+      },
+      {
+        "question": "Fill in the blank: If I ___ earlier, I would have caught the bus.",
+        "options": ["leave", "left", "had left", "leaving"],
+        "correct": "had left"
+      },
+      {
+        "question": "What is the antonym of 'hostile'?",
+        "options": ["friendly", "angry", "wicked", "rude"],
+        "correct": "friendly"
+      },
+      {
+        "question": "Choose the correct reported speech: He said, 'I am reading a book.'",
+        "options": ["He said he reads a book.", "He said he was reading a book.", "He said he read a book.", "He said he is reading a book."],
+        "correct": "He said he was reading a book."
+      },
+      {
+        "question": "Which of these is NOT an element of a formal letter?",
+        "options": ["salutation", "body", "signature", "dialogue"],
+        "correct": "dialogue"
+      },
+      {
+        "question": "What is the meaning of the idiom 'to burn the midnight oil'?",
+        "options": ["to waste time", "to read late into the night", "to light a candle", "to travel overnight"],
+        "correct": "to read late into the night"
+      },
+      {
+        "question": "Which figure of speech is this: 'His words cut deeper than a knife'?",
+        "options": ["Irony", "Simile", "Metaphor", "Hyperbole"],
+        "correct": "Metaphor"
+      },
+      {
+        "question": "Which type of essay is: 'Education is better than wealth'?",
+        "options": ["Narrative", "Expository", "Argumentative", "Descriptive"],
+        "correct": "Argumentative"
+      },
+      {
+        "question": "Which of these sounds is a diphthong?",
+        "options": ["/eɪ/", "/p/", "/i/", "/s/"],
+        "correct": "/eɪ/"
+      },
+      {
+        "question": "Which tense is used: 'I will have graduated by next year.'",
+        "options": ["Future perfect", "Future continuous", "Present perfect", "Simple future"],
+        "correct": "Future perfect"
+      },
+      {
+        "question": "Identify the antonym of 'abundant'.",
+        "options": ["scarce", "plenty", "rare", "little"],
+        "correct": "scarce"
+      },
+      {
+        "question": "What is the main purpose of a summary passage?",
+        "options": ["to copy details", "to give personal opinion", "to reduce content to main ideas", "to lengthen a text"],
+        "correct": "to reduce content to main ideas"
+      },
+      {
+        "question": "Which punctuation mark is used to indicate omission?",
+        "options": ["Colon", "Apostrophe", "Comma", "Semicolon"],
+        "correct": "Apostrophe"
+      },
+      {
+        "question": "The figure of speech 'He kicked the bucket' means?",
+        "options": ["He played football", "He died", "He was angry", "He ran away"],
+        "correct": "He died"
+      },
+      {
+        "question": "Which part of speech is the underlined word: She is very *intelligent*.",
+        "options": ["Verb", "Adjective", "Adverb", "Noun"],
+        "correct": "Adjective"
+      },
+      {
+        "question": "In oral English, intonation is used to?",
+        "options": ["mark stress", "show mood or attitude", "separate syllables", "shorten words"],
+        "correct": "show mood or attitude"
+      },
+      {
+        "question": "What is the synonym of 'perseverance'?",
+        "options": ["laziness", "determination", "weakness", "idleness"],
+        "correct": "determination"
+      },
+      {
+        "question": "Choose the correct option: The teacher made the students ___ quietly.",
+        "options": ["to sit", "sit", "sat", "sitting"],
+        "correct": "sit"
+      },
+      {
+        "question": "Which figure of speech is in: 'The silence was so loud'?",
+        "options": ["Irony", "Oxymoron", "Simile", "Hyperbole"],
+        "correct": "Oxymoron"
+      },
+      {
+        "question": "In literature, which term describes the struggle between opposing forces?",
+        "options": ["theme", "conflict", "plot", "character"],
+        "correct": "conflict"
+      },
+      {
+        "question": "Which word is wrongly spelt?",
+        "options": ["conscience", "definately", "necessary", "parliament"],
+        "correct": "definately"
+      },
+      {
+        "question": "Which is an example of an expository essay?",
+        "options": ["The process of farming", "How I spent my last holiday", "My best friend", "Education is better than money"],
+        "correct": "The process of farming"
+      },
+      {
+        "question": "The synonym of 'ambiguous' is?",
+        "options": ["clear", "vague", "simple", "direct"],
+        "correct": "vague"
+      },
+      {
+        "question": "Which tense is correct: 'By the time we arrived, the match ___.'",
+        "options": ["ended", "had ended", "was ending", "ends"],
+        "correct": "had ended"
+      },
+      {
+        "question": "Which is a correct example of reported speech?",
+        "options": ["She said that she is going.", "She said that she was going.", "She said that she going.", "She said that she will going."],
+        "correct": "She said that she was going."
+      },
+      {
+        "question": "Which of these is NOT a feature of a descriptive essay?",
+        "options": ["vivid details", "imagery", "characters", "statistical data"],
+        "correct": "statistical data"
+      }
     ]
   }
 }
-      
+
+
+
+    
     
