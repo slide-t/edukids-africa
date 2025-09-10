@@ -855,9 +855,207 @@
         "question": "Which of these methods is best for controlling erosion?",
         "options": ["Overgrazing", "Planting cover crops", "Bush burning", "Deforestation"],
         "answer": "Planting cover crops"
+      },
+      {
+        "question": "Which of these is a leafy vegetable?",
+        "options": ["Spinach", "Maize", "Cocoa", "Groundnut"],
+        "answer": "Spinach"
+      },
+      {
+        "question": "Which animal product is used for making leather?",
+        "options": ["Wool", "Milk", "Hide and skin", "Eggs"],
+        "answer": "Hide and skin"
+      },
+      {
+        "question": "Which farming method causes destruction of soil organisms?",
+        "options": ["Mulching", "Bush burning", "Crop rotation", "Weeding"],
+        "answer": "Bush burning"
+      },
+      {
+        "question": "Which of these is a modern farm tool?",
+        "options": ["Hoe", "Cutlass", "Tractor", "Sickle"],
+        "answer": "Tractor"
+      },
+      {
+        "question": "The process of keeping animals in one place and feeding them is called?",
+        "options": ["Free range", "Nomadic rearing", "Intensive system", "Hunting"],
+        "answer": "Intensive system"
+      },
+      {
+        "question": "Which is the main reason for keeping poultry?",
+        "options": ["To beautify the house", "For meat and eggs", "To chase away pests", "To make noise"],
+        "answer": "For meat and eggs"
+      },
+      {
+        "question": "Which crop is used in making sugar?",
+        "options": ["Sugarcane", "Cassava", "Rice", "Yam"],
+        "answer": "Sugarcane"
+      },
+      {
+        "question": "The process of planting only one type of crop on a piece of land is called?",
+        "options": ["Mixed farming", "Crop rotation", "Mono-cropping", "Shifting cultivation"],
+        "answer": "Mono-cropping"
+      },
+      {
+        "question": "Which of these is NOT a type of soil?",
+        "options": ["Loamy", "Clay", "Rocky", "Plastic"],
+        "answer": "Plastic"
+      },
+      {
+        "question": "Which of these animals is reared mainly for milk production?",
+        "options": ["Dog", "Cow", "Goat", "Pig"],
+        "answer": "Cow"
+      },
+      {
+        "question": "Which of these is NOT a good storage structure?",
+        "options": ["Barn", "Silo", "Refrigerator", "Bush"],
+        "answer": "Bush"
+      },
+      {
+        "question": "Which method of irrigation involves water flowing along small channels?",
+        "options": ["Sprinkler", "Drip", "Furrow", "Flood"],
+        "answer": "Furrow"
+      },
+      {
+        "question": "Which of these is a leguminous crop?",
+        "options": ["Beans", "Rice", "Yam", "Cassava"],
+        "answer": "Beans"
+      },
+      {
+        "question": "Why should farmers wash their hands after applying chemicals?",
+        "options": ["To waste water", "To stay safe from poisoning", "To reduce crop growth", "To remove soil"],
+        "answer": "To stay safe from poisoning"
+      },
+      {
+        "question": "Which farm animal is kept for security purposes?",
+        "options": ["Dog", "Hen", "Cow", "Rabbit"],
+        "answer": "Dog"
+      },
+      {
+        "question": "Which of these crops produces oil?",
+        "options": ["Cocoa", "Palm fruit", "Yam", "Maize"],
+        "answer": "Palm fruit"
+      },
+      {
+        "question": "The spreading of animal dung on farmland is called?",
+        "options": ["Weeding", "Fertilizing", "Mulching", "Harrowing"],
+        "answer": "Fertilizing"
+      },
+      {
+        "question": "Which of these is NOT a storage pest?",
+        "options": ["Weevil", "Rat", "Butterfly", "Cockroach"],
+        "answer": "Butterfly"
+      },
+      {
+        "question": "Which type of farming combines growing of crops and rearing of animals?",
+        "options": ["Crop rotation", "Mixed farming", "Mono-cropping", "Shifting cultivation"],
+        "answer": "Mixed farming"
+      },
+      {
+        "question": "What is the importance of planting trees?",
+        "options": ["They cause erosion", "They provide shade, wood, and fruits", "They destroy farmland", "They increase desert"],
+        "answer": "They provide shade, wood, and fruits"
+      },
+      {
+        "question": "Which of these is an example of a root crop?",
+        "options": ["Yam", "Rice", "Beans", "Maize"],
+        "answer": "Yam"
+      },
+      {
+        "question": "Which part of the plant makes food?",
+        "options": ["Stem", "Leaf", "Root", "Flower"],
+        "answer": "Leaf"
+      },
+      {
+        "question": "Which farm animal provides both meat and wool?",
+        "options": ["Sheep", "Dog", "Hen", "Goat"],
+        "answer": "Sheep"
+      },
+      {
+        "question": "The process of cleaning farm tools after use helps to?",
+        "options": ["Waste time", "Prevent rust", "Spoil the tools", "Make tools heavy"],
+        "answer": "Prevent rust"
+      },
+      {
+        "question": "Which of these is NOT a source of protein?",
+        "options": ["Fish", "Egg", "Groundnut", "Cassava"],
+        "answer": "Cassava"
+      },
+      {
+        "question": "Which of these is a fiber crop?",
+        "options": ["Cotton", "Palm oil", "Beans", "Cocoa"],
+        "answer": "Cotton"
+      },
+      {
+        "question": "Which storage method prevents grains from insects?",
+        "options": ["Silo", "Barn", "Cupboard", "Open field"],
+        "answer": "Silo"
+      },
+      {
+        "question": "Which of these is a hand tool used for making ridges?",
+        "options": ["Hoe", "Cutlass", "Shovel", "Rake"],
+        "answer": "Hoe"
+      },
+      {
+        "question": "Which crop is used to make bread?",
+        "options": ["Rice", "Wheat", "Cassava", "Yam"],
+        "answer": "Wheat"
+      },
+      {
+        "question": "Which is the main advantage of crop rotation?",
+        "options": ["Increases erosion", "Improves soil fertility", "Reduces rainfall", "Kills animals"],
+        "answer": "Improves soil fertility"
+      },
+      {
+        "question": "Which of these animals is kept mainly for eggs?",
+        "options": ["Hen", "Dog", "Cow", "Rabbit"],
+        "answer": "Hen"
+      },
+      {
+        "question": "The act of planting crops along with trees is called?",
+        "options": ["Forestry", "Agro-forestry", "Deforestation", "Mono-cropping"],
+        "answer": "Agro-forestry"
+      },
+      {
+        "question": "Which farming practice involves moving from one farmland to another?",
+        "options": ["Mixed farming", "Shifting cultivation", "Crop rotation", "Zero tillage"],
+        "answer": "Shifting cultivation"
+      },
+      {
+        "question": "Which of these is a common disease of poultry?",
+        "options": ["Cough", "Newcastle disease", "Malaria", "Measles"],
+        "answer": "Newcastle disease"
+      },
+      {
+        "question": "Why is it important to wash vegetables before eating?",
+        "options": ["To waste water", "To remove dirt and germs", "To make them heavier", "To spoil the taste"],
+        "answer": "To remove dirt and germs"
+      },
+      {
+        "question": "Which of these is NOT a source of carbohydrates?",
+        "options": ["Rice", "Yam", "Maize", "Meat"],
+        "answer": "Meat"
+      },
+      {
+        "question": "Which animal is called a 'beast of burden' because it carries loads?",
+        "options": ["Dog", "Donkey", "Goat", "Hen"],
+        "answer": "Donkey"
+      },
+      {
+        "question": "The act of preparing the land before planting is called?",
+        "options": ["Harvesting", "Land preparation", "Storage", "Irrigation"],
+        "answer": "Land preparation"
+      },
+      {
+        "question": "Which of these is NOT an example of farm waste?",
+        "options": ["Manure", "Peels", "Straw", "Bread"],
+        "answer": "Bread"
+      },
+      {
+        "question": "The method of planting seeds directly into the soil is called?",
+        "options": ["Transplanting", "Broadcasting", "Direct planting", "Mulching"],
+        "answer": "Direct planting"
       }
     ]
   }
-}  
-      
-      
+}
