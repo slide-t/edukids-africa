@@ -201,7 +201,211 @@
         "options": ["Budding", "Binary fission", "Spore formation", "Fragmentation"],
         "correct": "Binary fission"
       }
+    ],
+    "level2": [
+      {
+        "question": "Which of the following groups contains only invertebrates?",
+        "options": ["Fish, Snake, Toad", "Butterfly, Earthworm, Snail", "Frog, Lizard, Rat", "Bird, Bat, Dog"],
+        "correct": "Butterfly, Earthworm, Snail"
+      },
+      {
+        "question": "Which kingdom do mushrooms belong to?",
+        "options": ["Plantae", "Animalia", "Fungi", "Protista"],
+        "correct": "Fungi"
+      },
+      {
+        "question": "Which of the following organisms is a protozoan?",
+        "options": ["Euglena", "Moss", "Fern", "Bacteria"],
+        "correct": "Euglena"
+      },
+      {
+        "question": "The main function of the xylem in plants is ____.",
+        "options": ["Transport of food", "Transport of water", "Storage of food", "Photosynthesis"],
+        "correct": "Transport of water"
+      },
+      {
+        "question": "Which vitamin is essential for blood clotting?",
+        "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin K"],
+        "correct": "Vitamin K"
+      },
+      {
+        "question": "The process by which green plants manufacture food using sunlight is ____.",
+        "options": ["Respiration", "Photosynthesis", "Fermentation", "Transpiration"],
+        "correct": "Photosynthesis"
+      },
+      {
+        "question": "The type of teeth used for tearing flesh in carnivores is ____.",
+        "options": ["Molars", "Premolars", "Incisors", "Canines"],
+        "correct": "Canines"
+      },
+      {
+        "question": "Which of the following organisms reproduces by budding?",
+        "options": ["Amoeba", "Hydra", "Earthworm", "Spider"],
+        "correct": "Hydra"
+      },
+      {
+        "question": "Which of these diseases is caused by bacteria?",
+        "options": ["Malaria", "Tuberculosis", "Ringworm", "HIV/AIDS"],
+        "correct": "Tuberculosis"
+      },
+      {
+        "question": "What type of nutrition is exhibited by fungi?",
+        "options": ["Autotrophic", "Heterotrophic", "Parasitic", "Both heterotrophic and parasitic"],
+        "correct": "Both heterotrophic and parasitic"
+      },
+      {
+        "question": "In plants, the opening through which gases are exchanged is called ____.",
+        "options": ["Cuticle", "Stoma", "Root hair", "Lenticel"],
+        "correct": "Stoma"
+      },
+      {
+        "question": "Which of these is a water-borne disease?",
+        "options": ["Tuberculosis", "Cholera", "Measles", "Polio"],
+        "correct": "Cholera"
+      },
+      {
+        "question": "The functional unit of the kidney is the ____.",
+        "options": ["Neuron", "Nephron", "Alveolus", "Capillary"],
+        "correct": "Nephron"
+      },
+      {
+        "question": "Which of these organisms is at the top of a food chain?",
+        "options": ["Herbivore", "Producer", "Carnivore", "Decomposer"],
+        "correct": "Carnivore"
+      },
+      {
+        "question": "The movement of water molecules from a region of high concentration to low concentration through a semi-permeable membrane is ____.",
+        "options": ["Diffusion", "Osmosis", "Transpiration", "Absorption"],
+        "correct": "Osmosis"
+      },
+      {
+        "question": "The organ responsible for detoxification of harmful substances is the ____.",
+        "options": ["Heart", "Kidney", "Liver", "Pancreas"],
+        "correct": "Liver"
+      },
+      {
+        "question": "Which blood group is considered the universal donor?",
+        "options": ["Group A", "Group B", "Group AB", "Group O"],
+        "correct": "Group O"
+      },
+      {
+        "question": "The circulatory system of humans is described as ____.",
+        "options": ["Open and double", "Closed and double", "Open and single", "Closed and single"],
+        "correct": "Closed and double"
+      },
+      {
+        "question": "The structural and functional unit of the nervous system is the ____.",
+        "options": ["Nephron", "Neuron", "Axon", "Dendrite"],
+        "correct": "Neuron"
+      },
+      {
+        "question": "Which of these is a sexually transmitted infection?",
+        "options": ["Measles", "Malaria", "Gonorrhoea", "Cholera"],
+        "correct": "Gonorrhoea"
+      },
+      {
+        "question": "In which part of the human body does fertilization usually take place?",
+        "options": ["Ovary", "Uterus", "Fallopian tube", "Cervix"],
+        "correct": "Fallopian tube"
+      },
+      {
+        "question": "The organ of balance in humans is located in the ____.",
+        "options": ["Nose", "Ear", "Eye", "Skin"],
+        "correct": "Ear"
+      },
+      {
+        "question": "Which class of food is the main source of energy?",
+        "options": ["Proteins", "Carbohydrates", "Vitamins", "Minerals"],
+        "correct": "Carbohydrates"
+      },
+      {
+        "question": "Which of the following diseases is prevented by vaccination?",
+        "options": ["Diabetes", "Tetanus", "Kwashiorkor", "Scurvy"],
+        "correct": "Tetanus"
+      },
+      {
+        "question": "The part of the microscope used to regulate the amount of light is the ____.",
+        "options": ["Eyepiece", "Objective lens", "Mirror", "Diaphragm"],
+        "correct": "Diaphragm"
+      },
+      {
+        "question": "Which of the following blood vessels carries blood away from the heart?",
+        "options": ["Veins", "Capillaries", "Arteries", "Venules"],
+        "correct": "Arteries"
+      },
+      {
+        "question": "Which of these processes occurs during inhalation?",
+        "options": ["Diaphragm relaxes", "Ribs move downward", "Lungs expand", "Air moves out"],
+        "correct": "Lungs expand"
+      },
+      {
+        "question": "Which part of the plant is responsible for reproduction?",
+        "options": ["Leaf", "Root", "Flower", "Stem"],
+        "correct": "Flower"
+      },
+      {
+        "question": "The type of skeleton found in insects is ____.",
+        "options": ["Exoskeleton", "Endoskeleton", "Hydrostatic skeleton", "Cartilaginous skeleton"],
+        "correct": "Exoskeleton"
+      },
+      {
+        "question": "Which of these is a renewable source of energy?",
+        "options": ["Petroleum", "Coal", "Solar energy", "Natural gas"],
+        "correct": "Solar energy"
+      },
+      {
+        "question": "The exchange of gases in the lungs occurs in the ____.",
+        "options": ["Trachea", "Bronchi", "Alveoli", "Diaphragm"],
+        "correct": "Alveoli"
+      },
+      {
+        "question": "Which of the following is NOT a component of the ecosystem?",
+        "options": ["Biotic factors", "Abiotic factors", "Gravity", "Decomposers"],
+        "correct": "Gravity"
+      },
+      {
+        "question": "The period of development of a baby in the womb is called ____.",
+        "options": ["Fertilization", "Gestation", "Ovulation", "Puberty"],
+        "correct": "Gestation"
+      },
+      {
+        "question": "The disease caused by deficiency of insulin is ____.",
+        "options": ["Kwashiorkor", "Diabetes", "Rickets", "Goitre"],
+        "correct": "Diabetes"
+      },
+      {
+        "question": "The hormone responsible for secondary sexual characteristics in males is ____.",
+        "options": ["Oestrogen", "Progesterone", "Testosterone", "Insulin"],
+        "correct": "Testosterone"
+      },
+      {
+        "question": "Which part of the digestive system absorbs digested food?",
+        "options": ["Stomach", "Large intestine", "Small intestine", "Rectum"],
+        "correct": "Small intestine"
+      },
+      {
+        "question": "The process of loss of water vapour from the leaves of plants is ____.",
+        "options": ["Respiration", "Photosynthesis", "Transpiration", "Osmosis"],
+        "correct": "Transpiration"
+      },
+      {
+        "question": "Which of these diseases is caused by a virus?",
+        "options": ["Typhoid", "Influenza", "Tuberculosis", "Cholera"],
+        "correct": "Influenza"
+      },
+      {
+        "question": "The organ that stores bile is the ____.",
+        "options": ["Pancreas", "Gall bladder", "Liver", "Stomach"],
+        "correct": "Gall bladder"
+      },
+      {
+        "question": "The breakdown of glucose to release energy in the absence of oxygen is called ____.",
+        "options": ["Aerobic respiration", "Anaerobic respiration", "Photosynthesis", "Oxidation"],
+        "correct": "Anaerobic respiration"
+      }
     ]
   }
 }
+
+      
       
