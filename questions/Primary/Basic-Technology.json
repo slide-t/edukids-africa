@@ -125,7 +125,135 @@
     "question": "Which of these is a form of water transport?",
     "options": ["Ship", "Car", "Bus", "Bicycle"],
     "answer": "Ship"
+  },
+  {
+    "question": "Which of these is an example of a kitchen tool?",
+    "options": ["Spoon", "Hammer", "Cutlass", "Ruler"],
+    "answer": "Spoon"
+  },
+  {
+    "question": "Which of these is used to protect our head?",
+    "options": ["Helmet", "Cap", "Boots", "Shirt"],
+    "answer": "Helmet"
+  },
+  {
+    "question": "Which of these is NOT a means of transportation?",
+    "options": ["Car", "Ship", "Aeroplane", "Tree"],
+    "answer": "Tree"
+  },
+  {
+    "question": "What do we use to protect our feet?",
+    "options": ["Helmet", "Gloves", "Boots", "Cap"],
+    "answer": "Boots"
+  },
+  {
+    "question": "What is the use of cement?",
+    "options": ["To eat food", "To build houses", "To cut wood", "To write"],
+    "answer": "To build houses"
+  },
+  {
+    "question": "Which of these is a safety rule in the workshop?",
+    "options": ["Run around", "Play with tools", "Use tools carefully", "Touch bare wires"],
+    "answer": "Use tools carefully"
+  },
+  {
+    "question": "What do we call materials like wood, iron, and plastic?",
+    "options": ["Building blocks", "Raw materials", "Toys", "Animals"],
+    "answer": "Raw materials"
+  },
+  {
+    "question": "Which of these is an electrical appliance?",
+    "options": ["Chair", "Television", "Stone", "Book"],
+    "answer": "Television"
+  },
+  {
+    "question": "Which of these is used to measure time?",
+    "options": ["Clock", "Ruler", "Knife", "Spoon"],
+    "answer": "Clock"
+  },
+  {
+    "question": "Which of these is NOT safe to play with?",
+    "options": ["Ball", "Electric wire", "Toy car", "Kite"],
+    "answer": "Electric wire"
+  },
+  {
+    "question": "Which of these is used for farming?",
+    "options": ["Hoe", "Plate", "Book", "Chair"],
+    "answer": "Hoe"
+  },
+  {
+    "question": "What is the use of a pencil?",
+    "options": ["To measure", "To write", "To cut", "To dig"],
+    "answer": "To write"
+  },
+  {
+    "question": "Which of these is an air transport?",
+    "options": ["Car", "Boat", "Aeroplane", "Bicycle"],
+    "answer": "Aeroplane"
+  },
+  {
+    "question": "Which of these is made of glass?",
+    "options": ["Table", "Cup", "Chair", "Hoe"],
+    "answer": "Cup"
+  },
+  {
+    "question": "Which tool is used to drive nails into wood?",
+    "options": ["Hammer", "Spoon", "Scissors", "Knife"],
+    "answer": "Hammer"
+  },
+  {
+    "question": "Which of these is a renewable material?",
+    "options": ["Tree", "Stone", "Sand", "Iron"],
+    "answer": "Tree"
+  },
+  {
+    "question": "What is the use of a hoe?",
+    "options": ["To measure", "To dig the ground", "To cut food", "To wash plates"],
+    "answer": "To dig the ground"
+  },
+  {
+    "question": "Which of these is a part of the bicycle?",
+    "options": ["Engine", "Wheel", "Wing", "Sail"],
+    "answer": "Wheel"
+  },
+  {
+    "question": "Which of these is a source of energy?",
+    "options": ["Battery", "Table", "Chair", "Stone"],
+    "answer": "Battery"
+  },
+  {
+    "question": "Which of these is a type of road?",
+    "options": ["Expressway", "Ship lane", "Runway", "Sea port"],
+    "answer": "Expressway"
+  },
+  {
+    "question": "What do we use to protect our hands when working?",
+    "options": ["Boots", "Gloves", "Helmet", "Cap"],
+    "answer": "Gloves"
+  },
+  {
+    "question": "Which of these is used to hold clothes together?",
+    "options": ["Button", "Brick", "Stone", "Plate"],
+    "answer": "Button"
+  },
+  {
+    "question": "Which of these is NOT a tool?",
+    "options": ["Cutlass", "Hammer", "Book", "Spanner"],
+    "answer": "Book"
+  },
+  {
+    "question": "What is the use of a fan?",
+    "options": ["To sweep", "To make air blow", "To cook", "To cut"],
+    "answer": "To make air blow"
+  },
+  {
+    "question": "Which of these is a solid material?",
+    "options": ["Water", "Air", "Stone", "Smoke"],
+    "answer": "Stone"
   }
   ]
- } 
 }
+}
+
+
+         
