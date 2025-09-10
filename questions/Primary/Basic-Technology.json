@@ -252,137 +252,174 @@
     "answer": "Stone"
   }
   ],
-
     "level2": [
+      { "question": "Which simple machine is used to lift a heavy load with less effort?", "options": ["Lever", "Wheel", "Pulley", "Screw"], "correct": "Lever" },
+      { "question": "Which of these materials is a good conductor of electricity?", "options": ["Wood", "Glass", "Rubber", "Copper"], "correct": "Copper" },
+      { "question": "What is the main source of energy for machines?", "options": ["Water", "Food", "Fuel", "Air"], "correct": "Fuel" },
+      { "question": "A pair of scissors is an example of which simple machine?", "options": ["Wedge", "Lever", "Pulley", "Inclined plane"], "correct": "Lever" },
+      { "question": "Which of the following is NOT a building material?", "options": ["Cement", "Sand", "Plastic", "Water"], "correct": "Plastic" },
+      { "question": "The broad part of a hoe is used for?", "options": ["Cutting wood", "Digging soil", "Weaving cloth", "Carrying water"], "correct": "Digging soil" },
+      { "question": "Which road sign shows a bend ahead?", "options": ["Triangle with curve", "Circle with cross", "Square with arrow", "Rectangle with line"], "correct": "Triangle with curve" },
+      { "question": "Which of these is a protective device used in electricity?", "options": ["Battery", "Fuse", "Bulb", "Switch"], "correct": "Fuse" },
+      { "question": "The horizontal part of a table is called?", "options": ["Leg", "Top", "Handle", "Edge"], "correct": "Top" },
+      { "question": "Which of the following is powered by petrol?", "options": ["Bicycle", "Motorcycle", "Wheelbarrow", "Skateboard"], "correct": "Motorcycle" },
+
+      { "question": "What type of energy is stored in a charged battery?", "options": ["Heat", "Electrical", "Chemical", "Kinetic"], "correct": "Chemical" },
+      { "question": "What is the use of a seatbelt in a car?", "options": ["Decoration", "Safety", "Comfort", "Cleaning"], "correct": "Safety" },
+      { "question": "Which of these is a digital device?", "options": ["Clock with hands", "Abacus", "Calculator", "Measuring tape"], "correct": "Calculator" },
+      { "question": "A round object that helps vehicles to move is?", "options": ["Drum", "Wheel", "Pulley", "Gear"], "correct": "Wheel" },
+      { "question": "The main part of a road where vehicles move is called?", "options": ["Lane", "Car park", "Pavement", "Bridge"], "correct": "Lane" },
+      { "question": "Which of these is NOT a source of energy?", "options": ["Coal", "Sun", "Water", "Plastic"], "correct": "Plastic" },
+      { "question": "A staircase is an example of which simple machine?", "options": ["Inclined plane", "Pulley", "Wheel", "Lever"], "correct": "Inclined plane" },
+      { "question": "The small wheel in a bicycle that controls direction is called?", "options": ["Back wheel", "Front wheel", "Spoke", "Pedal"], "correct": "Front wheel" },
+      { "question": "Which tool is used to tighten or loosen nuts?", "options": ["Hammer", "Spanner", "Saw", "File"], "correct": "Spanner" },
+      { "question": "What is the main raw material for making glass?", "options": ["Sand", "Clay", "Iron", "Wood"], "correct": "Sand" },
+
+      { "question": "Which machine is used to lift a bucket of water from a well?", "options": ["Pulley", "Lever", "Screw", "Wheel"], "correct": "Pulley" },
+      { "question": "Which of these is NOT an electrical appliance?", "options": ["Television", "Fan", "Torchlight", "Hoe"], "correct": "Hoe" },
+      { "question": "The movement of people and goods from one place to another is called?", "options": ["Transportation", "Communication", "Construction", "Production"], "correct": "Transportation" },
+      { "question": "What type of energy makes a fan to rotate?", "options": ["Solar", "Mechanical", "Electrical", "Chemical"], "correct": "Electrical" },
+      { "question": "A bricklayer’s main tool is?", "options": ["Trowel", "Spade", "Hammer", "Saw"], "correct": "Trowel" },
+      { "question": "Which of these is used for storing water in buildings?", "options": ["Tap", "Bucket", "Tank", "Pipe"], "correct": "Tank" },
+      { "question": "The part of a bicycle used to move it forward is?", "options": ["Seat", "Handle", "Pedal", "Chain"], "correct": "Pedal" },
+      { "question": "The correct road sign for STOP is?", "options": ["Square", "Circle", "Octagon", "Triangle"], "correct": "Octagon" },
+      { "question": "The pointed part of a nail is used for?", "options": ["Holding", "Cutting", "Driving into wood", "Polishing"], "correct": "Driving into wood" },
+      { "question": "Which of these is NOT a type of road?", "options": ["Expressway", "Footpath", "Bridge", "Chairway"], "correct": "Chairway" },
+
+      { "question": "What device changes electrical energy to light energy?", "options": ["Battery", "Switch", "Bulb", "Wire"], "correct": "Bulb" },
+      { "question": "A screw is used mainly for?", "options": ["Polishing", "Holding things together", "Digging", "Cutting"], "correct": "Holding things together" },
+      { "question": "Which of these is a renewable energy source?", "options": ["Coal", "Oil", "Sun", "Petrol"], "correct": "Sun" },
+      { "question": "Which of these is NOT a material used in making clothes?", "options": ["Cotton", "Wool", "Silk", "Cement"], "correct": "Cement" },
+      { "question": "The machine used for cutting grass in the field is?", "options": ["Tractor", "Lawn mower", "Grader", "Bulldozer"], "correct": "Lawn mower" },
+      { "question": "The process of making tools from wood is called?", "options": ["Metalwork", "Woodwork", "Pottery", "Weaving"], "correct": "Woodwork" },
+      { "question": "Which device is used to store electrical energy?", "options": ["Switch", "Battery", "Bulb", "Socket"], "correct": "Battery" },
+      { "question": "The broad road used by fast-moving cars is called?", "options": ["Street", "Alley", "Expressway", "Footpath"], "correct": "Expressway" },
+      { "question": "Which of these is NOT part of a car?", "options": ["Engine", "Bonnet", "Wing", "Chalkboard"], "correct": "Chalkboard" },
+      { "question": "What type of energy comes from moving water?", "options": ["Solar", "Hydro", "Wind", "Chemical"], "correct": "Hydro" },
+
+      { "question": "Which tool is used to measure length?", "options": ["Spanner", "Ruler", "Hammer", "Drill"], "correct": "Ruler" },
+      { "question": "A generator produces which type of energy?", "options": ["Heat", "Mechanical", "Electrical", "Light"], "correct": "Electrical" },
+      { "question": "The back wheel of a bicycle is connected to the pedal by?", "options": ["Handle", "Chain", "Brake", "Spoke"], "correct": "Chain" },
+      { "question": "Which of these is NOT a means of land transport?", "options": ["Car", "Bus", "Canoe", "Motorcycle"], "correct": "Canoe" },
+      { "question": "Which of these is used for cutting paper?", "options": ["Knife", "Scissors", "Saw", "Blade"], "correct": "Scissors" },
+      { "question": "A ladder is an example of?", "options": ["Lever", "Inclined plane", "Wheel", "Pulley"], "correct": "Inclined plane" },
+      { "question": "The machine used for carrying heavy loads in construction is?", "options": ["Crane", "Bike", "Car", "Train"], "correct": "Crane" },
+      { "question": "The tool used to dig holes for planting is?", "options": ["Cutlass", "Hoe", "Spade", "Axe"], "correct": "Hoe" },
+      { "question": "Which of these is used to join pieces of metal together?", "options": ["Nail", "Glue", "Welding", "Stapler"], "correct": "Welding" },
+      { "question": "The part of a car used for steering is?", "options": ["Engine", "Seat", "Steering wheel", "Tyre"], "correct": "Steering wheel" },
+
+      { "question": "Which of these is a safety rule on the road?", "options": ["Run across anytime", "Look left and right before crossing", "Sleep on the road", "Ignore traffic light"], "correct": "Look left and right before crossing" },
+      { "question": "What is the main raw material for making cement?", "options": ["Sand", "Limestone", "Clay", "Wood"], "correct": "Limestone" },
+      { "question": "The pointed part of a pencil is called?", "options": ["Body", "Tip", "Leg", "Cap"], "correct": "Tip" },
+      { "question": "Which of these is a good example of liquid fuel?", "options": ["Kerosene", "Coal", "Gas", "Wood"], "correct": "Kerosene" },
+      { "question": "The type of road meant for pedestrians is?", "options": ["Footpath", "Expressway", "Bridge", "Lane"], "correct": "Footpath" },
+      { "question": "Which machine is used to sew clothes?", "options": ["Drill", "Sewing machine", "Bulldozer", "Typewriter"], "correct": "Sewing machine" },
+      { "question": "The strong frame of a house is called?", "options": ["Wall", "Roof", "Foundation", "Pillar"], "correct": "Foundation" },
+      { "question": "The fan in the ceiling is called?", "options": ["Hand fan", "Ceiling fan", "Table fan", "Standing fan"], "correct": "Ceiling fan" },
+      { "question": "Which of these is NOT a source of power?", "options": ["Petrol", "Wind", "Sun", "Chair"], "correct": "Chair" },
+      { "question": "The sharp part of a cutlass is used for?", "options": ["Digging", "Cutting", "Tying", "Carrying"], "correct": "Cutting" }
+    ],
       {
-        "question": "Which of these materials is used for making electric wires?",
-        "options": ["Copper", "Wood", "Glass", "Paper"],
-        "answer": "Copper"
+        "question": "Which simple machine is used in scissors?",
+        "options": ["Lever and wheel", "Lever and wedge", "Lever and pulley", "Screw and inclined plane"],
+        "correct": "Lever and wedge"
       },
       {
-        "question": "Which of these is NOT a simple machine?",
-        "options": ["Lever", "Pulley", "Screw", "Television"],
-        "answer": "Television"
+        "question": "Which of these is NOT a conductor of electricity?",
+        "options": ["Copper", "Iron", "Rubber", "Aluminium"],
+        "correct": "Rubber"
       },
       {
-        "question": "What is the main source of energy for the Earth?",
-        "options": ["Moon", "Sun", "Stars", "Fire"],
-        "answer": "Sun"
+        "question": "The ability of a material to return to its original shape after being stretched is called?",
+        "options": ["Elasticity", "Flexibility", "Plasticity", "Strength"],
+        "correct": "Elasticity"
       },
       {
-        "question": "Which tool is used for cutting wood?",
-        "options": ["Saw", "Hammer", "Spanner", "Hoe"],
-        "answer": "Saw"
+        "question": "The drawing used by engineers to explain how things are built is called?",
+        "options": ["Sketch", "Blueprint", "Painting", "Poster"],
+        "correct": "Blueprint"
       },
       {
-        "question": "What is the use of a ruler?",
-        "options": ["To draw and measure", "To dig the soil", "To hammer nails", "To cook food"],
-        "answer": "To draw and measure"
+        "question": "Which device changes electrical energy into sound energy?",
+        "options": ["Radio", "Bulb", "Fan", "Heater"],
+        "correct": "Radio"
       },
       {
-        "question": "Which of these is an example of road transport?",
-        "options": ["Ship", "Bicycle", "Plane", "Canoe"],
-        "answer": "Bicycle"
+        "question": "The black part inside a pencil used for writing is made of?",
+        "options": ["Charcoal", "Lead", "Graphite", "Ink"],
+        "correct": "Graphite"
       },
       {
-        "question": "What do we call the part of a computer that shows pictures and words?",
-        "options": ["Mouse", "Keyboard", "Monitor", "Speaker"],
-        "answer": "Monitor"
+        "question": "What type of motion does the wheel of a moving car make?",
+        "options": ["Rotary motion", "Linear motion", "Oscillatory motion", "Random motion"],
+        "correct": "Rotary motion"
       },
       {
-        "question": "Which of these is a household appliance?",
-        "options": ["Spade", "Cutlass", "Iron", "Hammer"],
-        "answer": "Iron"
+        "question": "Which of these machines uses gears to work?",
+        "options": ["Bicycle", "Wheelbarrow", "Knife", "Pulley"],
+        "correct": "Bicycle"
       },
       {
-        "question": "Which of these moves on rails?",
-        "options": ["Car", "Plane", "Train", "Ship"],
-        "answer": "Train"
+        "question": "The type of energy stored in food is?",
+        "options": ["Light energy", "Chemical energy", "Heat energy", "Solar energy"],
+        "correct": "Chemical energy"
       },
       {
-        "question": "Which of these is a natural material?",
-        "options": ["Plastic", "Rubber", "Steel", "Cement"],
-        "answer": "Rubber"
+        "question": "Which of these is used to protect electrical circuits from damage?",
+        "options": ["Switch", "Fuse", "Plug", "Socket"],
+        "correct": "Fuse"
       },
       {
-        "question": "Which of these is used to tighten bolts and nuts?",
-        "options": ["Knife", "Spanner", "Saw", "File"],
-        "answer": "Spanner"
+        "question": "Which instrument is used to measure electric current?",
+        "options": ["Voltmeter", "Thermometer", "Ammeter", "Barometer"],
+        "correct": "Ammeter"
       },
       {
-        "question": "What is the use of a needle?",
-        "options": ["To sew cloth", "To cut wood", "To draw", "To dig soil"],
-        "answer": "To sew cloth"
+        "question": "What type of energy does a stretched bow have?",
+        "options": ["Kinetic energy", "Potential energy", "Thermal energy", "Nuclear energy"],
+        "correct": "Potential energy"
       },
       {
-        "question": "Which type of energy is produced by a battery?",
-        "options": ["Heat energy", "Light energy", "Electrical energy", "Sound energy"],
-        "answer": "Electrical energy"
+        "question": "Which of these is a natural source of light?",
+        "options": ["Torch", "Sun", "Bulb", "Lantern"],
+        "correct": "Sun"
       },
       {
-        "question": "Which of these is a safety rule at school?",
-        "options": ["Running on wet floor", "Playing with sharp objects", "Walking carefully", "Touching sockets"],
-        "answer": "Walking carefully"
+        "question": "The nut and bolt is an example of which simple machine?",
+        "options": ["Pulley", "Inclined plane", "Screw", "Lever"],
+        "correct": "Screw"
       },
       {
-        "question": "Which of these is an example of air transport?",
-        "options": ["Ship", "Car", "Aeroplane", "Bicycle"],
-        "answer": "Aeroplane"
+        "question": "Which safety device should be worn when working in a dusty workshop?",
+        "options": ["Helmet", "Gloves", "Nose mask", "Boots"],
+        "correct": "Nose mask"
       },
       {
-        "question": "Which of these protects the eyes?",
-        "options": ["Helmet", "Goggles", "Gloves", "Boots"],
-        "answer": "Goggles"
+        "question": "Which of these materials is magnetic?",
+        "options": ["Copper", "Iron", "Plastic", "Wood"],
+        "correct": "Iron"
       },
       {
-        "question": "Which of these is NOT a building material?",
-        "options": ["Sand", "Stone", "Glass", "Food"],
-        "answer": "Food"
+        "question": "The process of joining two pieces of metal using heat is called?",
+        "options": ["Soldering", "Welding", "Filing", "Painting"],
+        "correct": "Welding"
       },
       {
-        "question": "What type of energy makes a fan rotate?",
-        "options": ["Sound energy", "Electrical energy", "Heat energy", "Solar energy"],
-        "answer": "Electrical energy"
+        "question": "The type of energy possessed by a moving football is?",
+        "options": ["Light energy", "Kinetic energy", "Sound energy", "Potential energy"],
+        "correct": "Kinetic energy"
       },
       {
-        "question": "Which of these is used to smooth rough surfaces?",
-        "options": ["File", "Hammer", "Spanner", "Plier"],
-        "answer": "File"
+        "question": "The wheel and axle is used in which of these tools?",
+        "options": ["Scissors", "Screwdriver", "Door knob", "Knife"],
+        "correct": "Door knob"
       },
       {
-        "question": "Which part of a car moves it on the road?",
-        "options": ["Roof", "Engine", "Wheel", "Light"],
-        "answer": "Wheel"
-      },
-      {
-        "question": "Which of these is a liquid material?",
-        "options": ["Iron", "Water", "Stone", "Wood"],
-        "answer": "Water"
-      },
-      {
-        "question": "What is the use of a thermometer?",
-        "options": ["To measure length", "To measure time", "To measure temperature", "To measure weight"],
-        "answer": "To measure temperature"
-      },
-      {
-        "question": "Which of these is a renewable source of energy?",
-        "options": ["Petrol", "Coal", "Sunlight", "Gas"],
-        "answer": "Sunlight"
-      },
-      {
-        "question": "What is the use of an axe?",
-        "options": ["To cut wood", "To measure", "To paint", "To write"],
-        "answer": "To cut wood"
-      },
-      {
-        "question": "Which of these is a road safety rule?",
-        "options": ["Cross the road at zebra crossing", "Run across the road", "Close your eyes when crossing", "Ignore traffic lights"],
-        "answer": "Cross the road at zebra crossing"
+        "question": "Which of these is NOT a source of renewable energy?",
+        "options": ["Wind", "Coal", "Water", "Sun"],
+        "correct": "Coal"
       }
     ]
   }
 }
     
-
-
-         
