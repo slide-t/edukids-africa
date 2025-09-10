@@ -552,11 +552,111 @@
           "question": "Which tool is used for digging in the farm?",
           "options": ["Hoe", "Plate", "Spoon", "Bucket"],
           "answer": "Hoe"
+        },
+        {
+          "question": "Which of these is the correct way to store fresh fish?",
+          "options": ["Leave it in the sun", "Put it in a freezer", "Keep it on the table", "Wrap it in paper"],
+          "answer": "Put it in a freezer"
+        },
+        {
+          "question": "What do we call the act of growing crops and rearing animals?",
+          "options": ["Fishing", "Hunting", "Farming", "Cooking"],
+          "answer": "Farming"
+        },
+        {
+          "question": "Which of these is a source of protein?",
+          "options": ["Meat", "Rice", "Cassava", "Maize"],
+          "answer": "Meat"
+        },
+        {
+          "question": "Which of the following helps to keep our environment clean?",
+          "options": ["Sweeping daily", "Throwing refuse in the gutter", "Burning plastics carelessly", "Playing in dust"],
+          "answer": "Sweeping daily"
+        },
+        {
+          "question": "Why do we eat food?",
+          "options": ["To become sick", "To grow and get energy", "To waste money", "To spoil our stomach"],
+          "answer": "To grow and get energy"
+        },
+        {
+          "question": "Which of these is NOT a domestic animal?",
+          "options": ["Goat", "Hen", "Lion", "Dog"],
+          "answer": "Lion"
+        },
+        {
+          "question": "What is the main use of a cutlass on the farm?",
+          "options": ["For playing", "For weeding and cutting grass", "For decoration", "For eating food"],
+          "answer": "For weeding and cutting grass"
+        },
+        {
+          "question": "Which of these is the correct way to handle broken bottles?",
+          "options": ["Leave them on the ground", "Pack them carefully and dispose safely", "Play with them", "Throw them in the classroom"],
+          "answer": "Pack them carefully and dispose safely"
+        },
+        {
+          "question": "Which of these is a source of carbohydrate?",
+          "options": ["Beans", "Yam", "Egg", "Fish"],
+          "answer": "Yam"
+        },
+        {
+          "question": "Which of the following tools is used for watering plants?",
+          "options": ["Hoe", "Cutlass", "Watering can", "Rake"],
+          "answer": "Watering can"
+        },
+        {
+          "question": "Why should we cover food properly?",
+          "options": ["To allow flies to touch it", "To prevent germs and dirt", "To make it hot", "To make it bigger"],
+          "answer": "To prevent germs and dirt"
+        },
+        {
+          "question": "Which of these is NOT a safety rule on the farm?",
+          "options": ["Wear protective boots", "Play with sharp tools", "Wash hands after work", "Handle chemicals carefully"],
+          "answer": "Play with sharp tools"
+        },
+        {
+          "question": "Which of these is a use of water?",
+          "options": ["Cooking", "Cleaning", "Drinking", "All of the above"],
+          "answer": "All of the above"
+        },
+        {
+          "question": "Which of these is an example of a leafy vegetable?",
+          "options": ["Spinach", "Yam", "Groundnut", "Rice"],
+          "answer": "Spinach"
+        },
+        {
+          "question": "The correct place to dispose refuse is:",
+          "options": ["On the road", "In a waste bin", "In the classroom", "On the field"],
+          "answer": "In a waste bin"
+        },
+        {
+          "question": "Which of these is a protective clothing for farming?",
+          "options": ["Helmet", "Raincoat", "Boots and gloves", "Scarf"],
+          "answer": "Boots and gloves"
+        },
+        {
+          "question": "Which part of the plant do we eat in carrot?",
+          "options": ["Root", "Stem", "Leaf", "Flower"],
+          "answer": "Root"
+        },
+        {
+          "question": "Why is it important to wash plates after eating?",
+          "options": ["To keep them shiny only", "To prevent germs and dirt", "To waste water", "To decorate the kitchen"],
+          "answer": "To prevent germs and dirt"
+        },
+        {
+          "question": "Which of these animals gives us milk?",
+          "options": ["Dog", "Cow", "Hen", "Goat"],
+          "answer": "Cow"
+        },
+        {
+          "question": "Which of these is the best way to preserve leftover soup?",
+          "options": ["Leave it outside uncovered", "Keep in a clean container and refrigerate", "Pour it away", "Cover it with sand"],
+          "answer": "Keep in a clean container and refrigerate"
         }
       ]
     }
-  ]
 }
+      
       
 
 
