@@ -654,7 +654,110 @@
           "answer": "Keep in a clean container and refrigerate"
         }
       ],
-  
-
+  "Pre-Vocational-Studies": {
+    "level3": [
+      {
+        "question": "Which of these practices helps to maintain soil fertility for many years?",
+        "options": ["Continuous cropping", "Bush burning", "Crop rotation", "Overgrazing"],
+        "answer": "Crop rotation"
+      },
+      {
+        "question": "What is the main advantage of using organic manure?",
+        "options": ["It kills crops", "It enriches the soil naturally", "It makes crops taste bitter", "It removes weeds"],
+        "answer": "It enriches the soil naturally"
+      },
+      {
+        "question": "Which of these is NOT a product from oil palm?",
+        "options": ["Palm oil", "Palm kernel oil", "Palm wine", "Petrol"],
+        "answer": "Petrol"
+      },
+      {
+        "question": "What is the main function of silos on a farm?",
+        "options": ["To store grains", "To rear animals", "To grow crops", "To build houses"],
+        "answer": "To store grains"
+      },
+      {
+        "question": "Why is mulching important in crop farming?",
+        "options": ["It prevents soil erosion", "It increases soil heat", "It destroys crops", "It stops manure use"],
+        "answer": "It prevents soil erosion"
+      },
+      {
+        "question": "Which of these animals is best reared for both milk and skin?",
+        "options": ["Goat", "Sheep", "Camel", "Pig"],
+        "answer": "Camel"
+      },
+      {
+        "question": "Which method of irrigation involves channels of water moving across the land?",
+        "options": ["Drip irrigation", "Sprinkler irrigation", "Furrow irrigation", "Rain-fed farming"],
+        "answer": "Furrow irrigation"
+      },
+      {
+        "question": "Why is it important to space crops properly when planting?",
+        "options": ["To waste land", "To prevent overcrowding", "To make weeds grow fast", "To reduce yield"],
+        "answer": "To prevent overcrowding"
+      },
+      {
+        "question": "What is the difference between subsistence and commercial farming?",
+        "options": ["Subsistence is for family use, commercial is for sale", "Subsistence uses machines, commercial does not", "Commercial is smaller in size", "They are exactly the same"],
+        "answer": "Subsistence is for family use, commercial is for sale"
+      },
+      {
+        "question": "Which of these is a by-product of cotton?",
+        "options": ["Cooking oil", "Cotton wool", "Palm wine", "Cheese"],
+        "answer": "Cotton wool"
+      },
+      {
+        "question": "Why are legumes important in farming?",
+        "options": ["They spoil the soil", "They add nitrogen to the soil", "They prevent rainfall", "They grow without soil"],
+        "answer": "They add nitrogen to the soil"
+      },
+      {
+        "question": "Which of these animals is NOT a ruminant?",
+        "options": ["Cow", "Goat", "Pig", "Sheep"],
+        "answer": "Pig"
+      },
+      {
+        "question": "What is the first step in preparing land for farming?",
+        "options": ["Weeding", "Clearing", "Harvesting", "Irrigation"],
+        "answer": "Clearing"
+      },
+      {
+        "question": "Why is proper storage of farm produce important?",
+        "options": ["To waste food", "To increase spoilage", "To reduce post-harvest losses", "To attract pests"],
+        "answer": "To reduce post-harvest losses"
+      },
+      {
+        "question": "Which of these animals is best reared for egg production?",
+        "options": ["Hen", "Goat", "Rabbit", "Pig"],
+        "answer": "Hen"
+      },
+      {
+        "question": "Which tool is best for loosening soil before planting?",
+        "options": ["Hoe", "Cutlass", "Watering can", "Sickle"],
+        "answer": "Hoe"
+      },
+      {
+        "question": "What is the main disadvantage of bush burning?",
+        "options": ["It kills soil organisms", "It makes land fertile", "It clears the land quickly", "It prevents weeds"],
+        "answer": "It kills soil organisms"
+      },
+      {
+        "question": "Why do farmers prune crops like cocoa and orange trees?",
+        "options": ["To make the trees dry", "To encourage better yield", "To waste the branches", "To stop photosynthesis"],
+        "answer": "To encourage better yield"
+      },
+      {
+        "question": "Which of these crops is classified as a legume?",
+        "options": ["Beans", "Maize", "Rice", "Yam"],
+        "answer": "Beans"
+      },
+      {
+        "question": "Which type of farming involves rearing animals together with crops?",
+        "options": ["Crop farming", "Animal husbandry", "Mixed farming", "Poultry farming"],
+        "answer": "Mixed farming"
+      }
+    ]
+  }
+}
       
       
