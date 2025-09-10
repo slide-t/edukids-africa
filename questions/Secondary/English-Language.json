@@ -1,1 +1,455 @@
-
+{
+  "English-Language": {
+    "level1": [
+      {
+        "question": "Which of these is a vowel sound in speech work (monophthong)?",
+        "options": ["/ae/", "/ei/", "/au/", "/əu/"],
+        "correct": "/ae/"
+      },
+      {
+        "question": "Select the pronoun in the sentence: ‘They went to the market.’",
+        "options": ["They", "Went", "Market", "The"],
+        "correct": "They"
+      },
+      {
+        "question": "Which sentence uses passive voice correctly?",
+        "options": [
+          "The cake is eaten by the children.",
+          "Children ate the cake.",
+          "The cake eaten by children.",
+          "Children is eating the cake."
+        ],
+        "correct": "The cake is eaten by the children."
+      },
+      {
+        "question": "Which reading strategy does SPQ3R include?",
+        "options": ["Reflect", "Recite", "Restore", "Recheck"],
+        "correct": "Recite"
+      },
+      {
+        "question": "Identify the correct format of an informal letter opening.",
+        "options": [
+          "Dear Uncle John,",
+          "To Uncle John:",
+          "Uncle John:",
+          "Hello Uncle John—"
+        ],
+        "correct": "Dear Uncle John,"
+      },
+      {
+        "question": "Which is a feature of oral literature (e.g., folktales)?",
+        "options": ["Written language", "Didactic themes", "Complex plot structure", "Serial numbering"],
+        "correct": "Didactic themes"
+      },
+      {
+        "question": "Which figure of speech is used in: ‘The wind whispered through the trees’?",
+        "options": ["Alliteration", "Metaphor", "Personification", "Simile"],
+        "correct": "Personification"
+      },
+      {
+        "question": "Select the adjective in: ‘The quick fox jumped high.’",
+        "options": ["Fox", "Quick", "Jumped", "High"],
+        "correct": "Quick"
+      },
+      {
+        "question": "Which vowel sound contrasts in ‘hot’ and ‘part’?",
+        "options": ["/a:/ vs /ɔ: /", "/æ/ vs /ʌ/", "/a:/ vs /æ/", "/e/ vs /ə/"],
+        "correct": "/a:/ vs /æ/"
+      },
+      {
+        "question": "What is the difference between narrative and descriptive essays?",
+        "options": [
+          "Narrative tells a story; descriptive paints imagery.",
+          "Descriptive tells a story; narrative paints imagery.",
+          "Both are the same.",
+          "Neither uses characters."
+        ],
+        "correct": "Narrative tells a story; descriptive paints imagery."
+      },
+      {
+        "question": "Which part of speech is the word ‘because’?",
+        "options": ["Conjunction", "Preposition", "Verb", "Adverb"],
+        "correct": "Conjunction"
+      },
+      {
+        "question": "Identify the correct sequence: Introduction, Body, ____.",
+        "options": ["Conclusion", "Greeting", "Thesis", "Abstract"],
+        "correct": "Conclusion"
+      },
+      {
+        "question": "Which is a feature of drama used in literature study?",
+        "options": ["Narrator only", "Dialogue and stage direction", "No characters", "Single monologue"],
+        "correct": "Dialogue and stage direction"
+      },
+      {
+        "question": "Which of these is a tenses category introduced early on?",
+        "options": ["Simple past", "Present continuous", "Present perfect", "Past perfect continuous"],
+        "correct": "Simple past"
+      },
+      {
+        "question": "In speech work, which vowels form diphthongs like /ei/ and /əu/?",
+        "options": ["Monophthongs", "Bilabials", "Affricates", "Consonant clusters"],
+        "correct": "Monophthongs"
+      },
+      {
+        "question": "Which sentence uses an absolute adjective?",
+        "options": ["That building is massive.", "Her work is superior.", "He is very tall.", "She is faster."],
+        "correct": "Her work is superior."
+      },
+      {
+        "question": "What is a key element of narrative composition?",
+        "options": ["Plot", "Definition", "Feature", "Prefix"],
+        "correct": "Plot"
+      },
+      {
+        "question": "Which word class is ‘slowly’?",
+        "options": ["Adverb", "Noun", "Verb", "Preposition"],
+        "correct": "Adverb"
+      },
+      {
+        "question": "Which part of speech answers ‘when’, ‘where’, ‘how’?",
+        "options": ["Conjunction", "Adverb", "Pronoun", "Adjective"],
+        "correct": "Adverb"
+      },
+      {
+        "question": "Which figure of speech: ‘She is as brave as a lion’?",
+        "options": ["Simile", "Metaphor", "Personification", "Idiomatic expression"],
+        "correct": "Simile"
+      },
+      {
+        "question": "Which tense is used in: ‘She is writing a letter now’?",
+        "options": ["Present continuous", "Past simple", "Future perfect", "Present perfect"],
+        "correct": "Present continuous"
+      },
+      {
+        "question": "In composition, what follows the topic sentence?",
+        "options": ["Supporting details", "Greeting", "Reference", "Title"],
+        "correct": "Supporting details"
+      },
+      {
+        "question": "Which is not a type of literature addressed in Level 1?",
+        "options": ["Historical", "Drama", "Folktale", "Sci-fi"],
+        "correct": "Sci-fi"
+      },
+      {
+        "question": "Which word shows correct subject-verb agreement? ‘She ____ happy.’",
+        "options": ["are", "is", "am", "be"],
+        "correct": "is"
+      },
+      {
+        "question": "Which is an example of phrase in passive voice?",
+        "options": ["A song was sung.", "She will sing.", "They are singing.", "Sing the song."],
+        "correct": "A song was sung."
+      },
+      {
+        "question": "Which part of speech is ‘and’?",
+        "options": ["Conjunction", "Preposition", "Pronoun", "Determiner"],
+        "correct": "Conjunction"
+      },
+      {
+        "question": "Which speech skill is emphasized by SPQ3R’s ‘R’ for Recite?",
+        "options": ["Speaking", "Writing", "Listening", "Translation"],
+        "correct": "Speaking"
+      },
+      {
+        "question": "Which composition type introduces subject without argument?",
+        "options": ["Descriptive", "Argumentative", "Report", "Debate"],
+        "correct": "Descriptive"
+      },
+      {
+        "question": "Which verb type is exemplified in ‘She paints’ (action shows authority)?",
+        "options": ["Transitive", "Intransitive", "Auxiliary", "Modal"],
+        "correct": "Transitive"
+      },
+      {
+        "question": "What is the setting of a story?",
+        "options": ["Time and place", "Plot and theme", "Characters", "Genre"],
+        "correct": "Time and place"
+      },
+      {
+        "question": "Which word is a pronoun in: ‘Mary and I went to the store’?",
+        "options": ["Mary", "I", "Went", "Store"],
+        "correct": "I"
+      },
+      {
+        "question": "Which speech sound contrasts in ‘egg’ vs ‘burn’ (/e/ vs /ə/)?",
+        "options": ["/e/ vs /ə/", "/i/ vs /e/", "/o/ vs /u/", "/a/ vs /æ/"],
+        "correct": "/e/ vs /ə/"
+      },
+      {
+        "question": "Which composition includes an introduction, body, and conclusion?",
+        "options": ["All essays", "Narrative only", "Letter only", "None"],
+        "correct": "All essays"
+      },
+      {
+        "question": "Which figure of speech: ‘Time is money’?",
+        "options": ["Simile", "Personification", "Metaphor", "Alliteration"],
+        "correct": "Metaphor"
+      },
+      {
+        "question": "Which part of speech modifies a noun?",
+        "options": ["Adjective", "Verb", "Adverb", "Conjunction"],
+        "correct": "Adjective"
+      },
+      {
+        "question": "Which tense is exemplified by ‘They have eaten’?",
+        "options": ["Present perfect", "Past simple", "Future perfect", "Present continuous"],
+        "correct": "Present perfect"
+      }
+    ],
+    "level2": [
+      {
+        "question": "Choose the correct option: Neither the teacher nor the students ___ present.",
+        "options": ["was", "were", "are", "be"],
+        "correct": "were"
+      },
+      {
+        "question": "Which of these words is a synonym of 'benevolent'?",
+        "options": ["kind", "angry", "wicked", "selfish"],
+        "correct": "kind"
+      },
+      {
+        "question": "Pick the odd word out: run, walk, dance, quickly.",
+        "options": ["run", "walk", "dance", "quickly"],
+        "correct": "quickly"
+      },
+      {
+        "question": "Which figure of speech is used: 'The classroom was a beehive of activity'?",
+        "options": ["Simile", "Metaphor", "Personification", "Hyperbole"],
+        "correct": "Metaphor"
+      },
+      {
+        "question": "In oral English, the word 'photograph' is stressed on which syllable?",
+        "options": ["first", "second", "third", "last"],
+        "correct": "first"
+      },
+      {
+        "question": "Which is correct? 'He insisted ___ going to the market.'",
+        "options": ["on", "at", "to", "with"],
+        "correct": "on"
+      },
+      {
+        "question": "The opposite of 'scarce' is?",
+        "options": ["plenty", "absent", "rare", "little"],
+        "correct": "plenty"
+      },
+      {
+        "question": "Identify the type of sentence: 'Please, sit down.'",
+        "options": ["Declarative", "Imperative", "Interrogative", "Exclamatory"],
+        "correct": "Imperative"
+      },
+      {
+        "question": "Which of the following is not an expository essay topic?",
+        "options": ["The effects of drug abuse", "How I spent my last holiday", "The importance of exercise", "Causes of malaria"],
+        "correct": "How I spent my last holiday"
+      },
+      {
+        "question": "Which word is closest in meaning to 'audible'?",
+        "options": ["visible", "hearable", "silent", "soft"],
+        "correct": "hearable"
+      },
+      {
+        "question": "Choose the correct concord: The news ___ very interesting.",
+        "options": ["are", "were", "is", "be"],
+        "correct": "is"
+      },
+      {
+        "question": "In comprehension, what is the first step before answering questions?",
+        "options": ["Underline keywords", "Read the passage thoroughly", "Write a summary", "Check dictionary"],
+        "correct": "Read the passage thoroughly"
+      },
+      {
+        "question": "Which figure of speech is used: 'The sun smiled at the children'?",
+        "options": ["Personification", "Hyperbole", "Simile", "Metaphor"],
+        "correct": "Personification"
+      },
+      {
+        "question": "Which tense is correct: 'By next year, I ___ my studies.'",
+        "options": ["complete", "completed", "will have completed", "completing"],
+        "correct": "will have completed"
+      },
+      {
+        "question": "The antonym of 'generous' is?",
+        "options": ["selfless", "kind", "stingy", "caring"],
+        "correct": "stingy"
+      },
+      {
+        "question": "Which punctuation mark is needed: 'What a wonderful day___'",
+        "options": ["?", "!", ",", "."],
+        "correct": "!"
+      },
+      {
+        "question": "Which of these is a narrative essay topic?",
+        "options": ["My first day in secondary school", "The dangers of smoking", "The uses of the internet", "The effects of corruption"],
+        "correct": "My first day in secondary school"
+      },
+      {
+        "question": "Identify the clause: 'He left because he was tired.'",
+        "options": ["Main clause", "Subordinate clause", "Relative clause", "Independent clause"],
+        "correct": "Subordinate clause"
+      },
+      {
+        "question": "Which word is wrongly spelt?",
+        "options": ["accommodate", "pronounciation", "necessary", "environment"],
+        "correct": "pronounciation"
+      },
+      {
+        "question": "Which sound is represented by 'sh' in 'sheep'?",
+        "options": ["/ʃ/", "/s/", "/tʃ/", "/ʒ/"],
+        "correct": "/ʃ/"
+      },
+      {
+        "question": "In summary writing, what must be avoided?",
+        "options": ["Main ideas", "Supporting details", "Personal opinions", "Short sentences"],
+        "correct": "Personal opinions"
+      },
+      {
+        "question": "Which is an example of an interrogative sentence?",
+        "options": ["Where are you going?", "Go to the market.", "I am going home.", "How beautiful she is!"],
+        "correct": "Where are you going?"
+      },
+      {
+        "question": "The plural of 'child' is?",
+        "options": ["childs", "children", "childes", "childrens"],
+        "correct": "children"
+      },
+      {
+        "question": "Which of these best expresses contrast?",
+        "options": ["and", "but", "because", "so"],
+        "correct": "but"
+      },
+      {
+        "question": "What figure of speech is this: 'He eats like a horse'?",
+        "options": ["Metaphor", "Simile", "Hyperbole", "Irony"],
+        "correct": "Simile"
+      },
+      {
+        "question": "Which of these is NOT a type of essay writing?",
+        "options": ["Narrative", "Argumentative", "Poetic", "Expository"],
+        "correct": "Poetic"
+      },
+      {
+        "question": "What is the antonym of 'expand'?",
+        "options": ["enlarge", "increase", "shrink", "stretch"],
+        "correct": "shrink"
+      },
+      {
+        "question": "Choose the correct option: She has lived here ___ 2010.",
+        "options": ["since", "for", "from", "by"],
+        "correct": "since"
+      },
+      {
+        "question": "Identify the figure of speech: 'He cried a river of tears.'",
+        "options": ["Hyperbole", "Simile", "Metaphor", "Irony"],
+        "correct": "Hyperbole"
+      },
+      {
+        "question": "Which part of speech is the underlined word: She ran *quickly*.",
+        "options": ["Verb", "Adverb", "Adjective", "Noun"],
+        "correct": "Adverb"
+      },
+      {
+        "question": "Fill in the blank: The ___ of the story is the main idea.",
+        "options": ["theme", "plot", "character", "setting"],
+        "correct": "theme"
+      },
+      {
+        "question": "In oral English, the word 'develop' is stressed on which syllable?",
+        "options": ["first", "second", "third", "last"],
+        "correct": "second"
+      },
+      {
+        "question": "Choose the correct option: Either James or his brothers ___ responsible.",
+        "options": ["is", "are", "was", "be"],
+        "correct": "are"
+      },
+      {
+        "question": "The word 'unfriendly' is formed by adding what type of prefix?",
+        "options": ["Negative", "Oppositional", "Quantitative", "Plural"],
+        "correct": "Negative"
+      },
+      {
+        "question": "Which punctuation is correct: He asked, ___Have you finished?___",
+        "options": ["'Have you finished?'", "\"Have you finished?\"", "(Have you finished?)", "`Have you finished?`"],
+        "correct": "\"Have you finished?\""
+      },
+      {
+        "question": "Identify the antonym of 'ancient'.",
+        "options": ["modern", "old", "past", "historic"],
+        "correct": "modern"
+      },
+      {
+        "question": "Which type of clause is in: 'The boy who won the prize is my friend.'?",
+        "options": ["Adverbial clause", "Relative clause", "Main clause", "Conditional clause"],
+        "correct": "Relative clause"
+      },
+      {
+        "question": "Choose the correct word: He prefers rice ___ beans.",
+        "options": ["than", "to", "with", "over"],
+        "correct": "to"
+      },
+      {
+        "question": "Which word is the correct spelling?",
+        "options": ["recieve", "receive", "receeve", "recive"],
+        "correct": "receive"
+      },
+      {
+        "question": "What is the plural of 'syllabus'?",
+        "options": ["syllabuses", "syllabi", "syllabuss", "syllabuses/ syllabi"],
+        "correct": "syllabuses/ syllabi"
+      },
+      {
+        "question": "Which is an example of an exclamatory sentence?",
+        "options": ["When is your birthday?", "What a lovely baby!", "I am leaving now.", "Close the door."],
+        "correct": "What a lovely baby!"
+      },
+      {
+        "question": "Which of the following is an idiom?",
+        "options": ["Break the ice", "Jump quickly", "Walk fast", "Sing loudly"],
+        "correct": "Break the ice"
+      },
+      {
+        "question": "In summary writing, irrelevant details should be?",
+        "options": ["Included", "Eliminated", "Repeated", "Expanded"],
+        "correct": "Eliminated"
+      },
+      {
+        "question": "Which sound is represented by 'th' in 'think'?",
+        "options": ["/ð/", "/θ/", "/t/", "/s/"],
+        "correct": "/θ/"
+      },
+      {
+        "question": "What tense is this sentence: 'I had finished before he arrived'?",
+        "options": ["Past continuous", "Past perfect", "Future perfect", "Simple past"],
+        "correct": "Past perfect"
+      },
+      {
+        "question": "The synonym of 'courage' is?",
+        "options": ["bravery", "fear", "weakness", "timidity"],
+        "correct": "bravery"
+      },
+      {
+        "question": "Choose the correct option: She divided the cake ___ her friends.",
+        "options": ["between", "among", "into", "within"],
+        "correct": "among"
+      },
+      {
+        "question": "Which of these is a descriptive essay topic?",
+        "options": ["My village market", "The causes of road accidents", "Why reading is important", "The effect of pollution"],
+        "correct": "My village market"
+      },
+      {
+        "question": "Which punctuation mark is used for possession?",
+        "options": ["Comma", "Apostrophe", "Colon", "Semicolon"],
+        "correct": "Apostrophe"
+      },
+      {
+        "question": "The figure of speech 'He is as brave as a lion' is?",
+        "options": ["Metaphor", "Simile", "Irony", "Personification"],
+        "correct": "Simile"
+      }
+    ]
+  }
+}
+      
+    
