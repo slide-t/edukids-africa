@@ -1,1 +1,260 @@
+{
+  "Pre-Vocational-Studies": {
+    "level1": [
+      {
+        "question": "Which of these is a farm tool?",
+        "options": ["Hoe", "Plate", "Chair", "Spoon"],
+        "answer": "Hoe"
+      },
+      {
+        "question": "The main source of food is ____?",
+        "options": ["Farm", "Market", "School", "Church"],
+        "answer": "Farm"
+      },
+      {
+        "question": "Which of these is a fruit?",
+        "options": ["Mango", "Yam", "Onion", "Carrot"],
+        "answer": "Mango"
+      },
+      {
+        "question": "We keep chickens in a ____?",
+        "options": ["Pen", "Pond", "Cage", "Hut"],
+        "answer": "Pen"
+      },
+      {
+        "question": "Cows give us ____?",
+        "options": ["Milk", "Oil", "Fish", "Honey"],
+        "answer": "Milk"
+      },
+      {
+        "question": "Which of these is used for sewing?",
+        "options": ["Needle", "Plate", "Stone", "Chalk"],
+        "answer": "Needle"
+      },
+      {
+        "question": "The person who grows crops is a ____?",
+        "options": ["Farmer", "Doctor", "Teacher", "Driver"],
+        "answer": "Farmer"
+      },
+      {
+        "question": "Vegetables are important because they give us ____?",
+        "options": ["Vitamins", "Houses", "Clothes", "Shoes"],
+        "answer": "Vitamins"
+      },
+      {
+        "question": "We use a watering can for ____?",
+        "options": ["Cooking", "Watering plants", "Cleaning the house", "Carrying books"],
+        "answer": "Watering plants"
+      },
+      {
+        "question": "The home is where ____?",
+        "options": ["We live", "We sell goods", "We go to school", "We farm"],
+        "answer": "We live"
+      },
+      {
+        "question": "Which of these animals lives in water?",
+        "options": ["Goat", "Dog", "Fish", "Hen"],
+        "answer": "Fish"
+      },
+      {
+        "question": "Yam is usually planted with a ____?",
+        "options": ["Cutlass", "Hoe", "Stick", "Seed"],
+        "answer": "Stick"
+      },
+      {
+        "question": "A needle and thread are used for ____?",
+        "options": ["Sewing clothes", "Cooking", "Reading", "Planting seeds"],
+        "answer": "Sewing clothes"
+      },
+      {
+        "question": "Which of these is NOT a farm animal?",
+        "options": ["Hen", "Goat", "Lion", "Cow"],
+        "answer": "Lion"
+      },
+      {
+        "question": "The main meal in the morning is called ____?",
+        "options": ["Breakfast", "Lunch", "Dinner", "Snack"],
+        "answer": "Breakfast"
+      },
+      {
+        "question": "We get wool from which animal?",
+        "options": ["Sheep", "Dog", "Goat", "Horse"],
+        "answer": "Sheep"
+      },
+      {
+        "question": "Which of these is a protective clothing used in the kitchen?",
+        "options": ["Apron", "Gloves", "Uniform", "Boots"],
+        "answer": "Apron"
+      },
+      {
+        "question": "The place where we grow crops is called a ____?",
+        "options": ["Garden", "House", "Road", "School"],
+        "answer": "Garden"
+      },
+      {
+        "question": "The act of keeping our house neat is called ____?",
+        "options": ["Sweeping", "Eating", "Sleeping", "Singing"],
+        "answer": "Sweeping"
+      },
+      {
+        "question": "Which of these foods is rich in protein?",
+        "options": ["Beans", "Sugar", "Rice", "Salt"],
+        "answer": "Beans"
+      },
+      {
+        "question": "Which of these is a source of water for plants?",
+        "options": ["Rain", "Paper", "Chalk", "Sand"],
+        "answer": "Rain"
+      },
+      {
+        "question": "Palm oil is produced from ____?",
+        "options": ["Palm fruits", "Groundnut", "Beans", "Onions"],
+        "answer": "Palm fruits"
+      },
+      {
+        "question": "Which of these is a storage crop?",
+        "options": ["Yam", "Carrot", "Mango", "Cabbage"],
+        "answer": "Yam"
+      },
+      {
+        "question": "The baby of a goat is called ____?",
+        "options": ["Kid", "Cub", "Chick", "Calf"],
+        "answer": "Kid"
+      },
+      {
+        "question": "We use a broom to ____?",
+        "options": ["Sweep", "Cook", "Eat", "Plant"],
+        "answer": "Sweep"
+      },
+      {
+        "question": "The place where fishes are kept is called a ____?",
+        "options": ["Pond", "Stable", "Kennel", "Hut"],
+        "answer": "Pond"
+      },
+      {
+        "question": "Groundnut is rich in ____?",
+        "options": ["Oil", "Sugar", "Salt", "Starch"],
+        "answer": "Oil"
+      },
+      {
+        "question": "Which of these foods is an energy-giving food?",
+        "options": ["Rice", "Water", "Salt", "Pepper"],
+        "answer": "Rice"
+      },
+      {
+        "question": "An orange is rich in ____?",
+        "options": ["Vitamin C", "Protein", "Fat", "Iron"],
+        "answer": "Vitamin C"
+      },
+      {
+        "question": "The home of pigs is called a ____?",
+        "options": ["Sty", "Cage", "Pond", "Hut"],
+        "answer": "Sty"
+      },
+      {
+        "question": "Which of these is NOT a source of food?",
+        "options": ["Farm", "Factory", "Market", "Classroom"],
+        "answer": "Classroom"
+      },
+      {
+        "question": "A female chicken is called ____?",
+        "options": ["Hen", "Cock", "Chick", "Duck"],
+        "answer": "Hen"
+      },
+      {
+        "question": "The young of a cow is called ____?",
+        "options": ["Calf", "Cub", "Kid", "Chick"],
+        "answer": "Calf"
+      },
+      {
+        "question": "We use a cutlass to ____?",
+        "options": ["Clear grass", "Cook food", "Fetch water", "Sing songs"],
+        "answer": "Clear grass"
+      },
+      {
+        "question": "The food we eat at night is called ____?",
+        "options": ["Dinner", "Breakfast", "Lunch", "Snack"],
+        "answer": "Dinner"
+      },
+      {
+        "question": "Maize is also called ____?",
+        "options": ["Corn", "Rice", "Wheat", "Barley"],
+        "answer": "Corn"
+      },
+      {
+        "question": "Which of these is a safety rule in the kitchen?",
+        "options": ["Do not play with fire", "Run around with knives", "Pour water on oil", "Leave food uncovered"],
+        "answer": "Do not play with fire"
+      },
+      {
+        "question": "We use an axe to ____?",
+        "options": ["Cut wood", "Cook rice", "Weave cloth", "Plant yam"],
+        "answer": "Cut wood"
+      },
+      {
+        "question": "The home of a rabbit is called a ____?",
+        "options": ["Hutch", "Pen", "Nest", "Den"],
+        "answer": "Hutch"
+      },
+      {
+        "question": "Cassava is used to make ____?",
+        "options": ["Garri", "Tea", "Oil", "Butter"],
+        "answer": "Garri"
+      },
+      {
+        "question": "Which of these is a root crop?",
+        "options": ["Carrot", "Rice", "Beans", "Maize"],
+        "answer": "Carrot"
+      },
+      {
+        "question": "The process of putting seeds in the soil is called ____?",
+        "options": ["Planting", "Weeding", "Harvesting", "Watering"],
+        "answer": "Planting"
+      },
+      {
+        "question": "Which of these is a domestic animal?",
+        "options": ["Goat", "Lion", "Tiger", "Leopard"],
+        "answer": "Goat"
+      },
+      {
+        "question": "Which part of the body is used for smelling?",
+        "options": ["Nose", "Eyes", "Ears", "Hands"],
+        "answer": "Nose"
+      },
+      {
+        "question": "A baby hen is called a ____?",
+        "options": ["Chick", "Kid", "Calf", "Cub"],
+        "answer": "Chick"
+      },
+      {
+        "question": "We use a hoe mainly for ____?",
+        "options": ["Making ridges", "Cooking", "Harvesting maize", "Fetching water"],
+        "answer": "Making ridges"
+      },
+      {
+        "question": "Which of these is NOT a cash crop?",
+        "options": ["Cassava", "Cocoa", "Cotton", "Groundnut"],
+        "answer": "Cassava"
+      },
+      {
+        "question": "The liquid we drink to quench thirst is ____?",
+        "options": ["Water", "Oil", "Soap", "Kerosene"],
+        "answer": "Water"
+      },
+      {
+        "question": "Where do we rear chickens?",
+        "options": ["Poultry", "Stable", "Hutch", "Sty"],
+        "answer": "Poultry"
+      },
+      {
+        "question": "The tool used for watering plants is called a ____?",
+        "options": ["Watering can", "Axe", "Knife", "Cutlass"],
+        "answer": "Watering can"
+      }
+    ]
+  }
+}
 
+
+      
+      
