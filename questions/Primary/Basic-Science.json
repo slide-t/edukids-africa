@@ -512,8 +512,410 @@
         "options": ["Kidney", "Heart", "Liver", "Lungs"],
         "correct": "Kidney"
       }
+    ],
+    "level3": [
+      {
+        "question": "Which gas do plants release during photosynthesis?",
+        "options": ["Carbon dioxide", "Nitrogen", "Oxygen", "Hydrogen"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "Which part of the plant is responsible for making food?",
+        "options": ["Stem", "Root", "Leaf", "Flower"],
+        "correct": "Leaf"
+      },
+      {
+        "question": "The process by which water changes into vapour is called?",
+        "options": ["Condensation", "Evaporation", "Precipitation", "Freezing"],
+        "correct": "Evaporation"
+      },
+      {
+        "question": "Which planet is known as the 'Red Planet'?",
+        "options": ["Venus", "Mars", "Jupiter", "Saturn"],
+        "correct": "Mars"
+      },
+      {
+        "question": "The main source of vitamin D is?",
+        "options": ["Milk", "Fish", "Sunlight", "Vegetables"],
+        "correct": "Sunlight"
+      },
+      {
+        "question": "What type of energy is stored in food?",
+        "options": ["Mechanical energy", "Light energy", "Chemical energy", "Heat energy"],
+        "correct": "Chemical energy"
+      },
+      {
+        "question": "The smallest unit of life is?",
+        "options": ["Organ", "Tissue", "Cell", "Nucleus"],
+        "correct": "Cell"
+      },
+      {
+        "question": "Which of these is a communicable disease?",
+        "options": ["Diabetes", "Tuberculosis", "Cancer", "Asthma"],
+        "correct": "Tuberculosis"
+      },
+      {
+        "question": "Which system of the body helps in circulation of blood?",
+        "options": ["Respiratory system", "Digestive system", "Circulatory system", "Nervous system"],
+        "correct": "Circulatory system"
+      },
+      {
+        "question": "The change of a solid directly into gas is called?",
+        "options": ["Melting", "Condensation", "Sublimation", "Evaporation"],
+        "correct": "Sublimation"
+      },
+      {
+        "question": "Which of these is NOT a renewable source of energy?",
+        "options": ["Wind", "Coal", "Sun", "Water"],
+        "correct": "Coal"
+      },
+      {
+        "question": "Which organ controls all other parts of the body?",
+        "options": ["Heart", "Brain", "Lungs", "Liver"],
+        "correct": "Brain"
+      },
+      {
+        "question": "The part of the plant that bears fruits is the?",
+        "options": ["Root", "Flower", "Stem", "Leaf"],
+        "correct": "Flower"
+      },
+      {
+        "question": "Rusting of iron is an example of?",
+        "options": ["Physical change", "Chemical change", "Freezing", "Evaporation"],
+        "correct": "Chemical change"
+      },
+      {
+        "question": "The ability of the body to fight diseases is called?",
+        "options": ["Strength", "Immunity", "Digestion", "Circulation"],
+        "correct": "Immunity"
+      },
+      {
+        "question": "Which blood cells help to fight infections?",
+        "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+        "correct": "White blood cells"
+      },
+      {
+        "question": "The force that pulls objects towards the center of the earth is?",
+        "options": ["Friction", "Gravity", "Magnetism", "Air resistance"],
+        "correct": "Gravity"
+      },
+      {
+        "question": "Which part of the flower produces seeds?",
+        "options": ["Sepal", "Petal", "Ovary", "Stigma"],
+        "correct": "Ovary"
+      },
+      {
+        "question": "Lightning is a form of?",
+        "options": ["Magnetic energy", "Sound energy", "Electrical energy", "Light energy"],
+        "correct": "Electrical energy"
+      },
+      {
+        "question": "The bones in the body form the?",
+        "options": ["Nervous system", "Skeleton", "Digestive system", "Circulatory system"],
+        "correct": "Skeleton"
+       },
+      {
+        "question": "Which organ in humans is mainly responsible for pumping blood?",
+        "options": ["Brain", "Heart", "Liver", "Lungs"],
+        "correct": "Heart"
+      },
+      {
+        "question": "Water boils at what temperature at sea level?",
+        "options": ["50°C", "100°C", "80°C", "200°C"],
+        "correct": "100°C"
+      },
+      {
+        "question": "The earth rotates on its?",
+        "options": ["Orbit", "Axis", "Poles", "Surface"],
+        "correct": "Axis"
+      },
+      {
+        "question": "The organ responsible for breathing in humans is?",
+        "options": ["Heart", "Kidney", "Lungs", "Stomach"],
+        "correct": "Lungs"
+      },
+      {
+        "question": "Which of these is NOT a planet?",
+        "options": ["Mars", "Pluto", "Sun", "Venus"],
+        "correct": "Sun"
+      },
+      {
+        "question": "Which of the following animals lays eggs?",
+        "options": ["Dog", "Goat", "Hen", "Cat"],
+        "correct": "Hen"
+      },
+      {
+        "question": "The movement of the earth around the sun is called?",
+        "options": ["Rotation", "Revolution", "Reflection", "Refraction"],
+        "correct": "Revolution"
+      },
+      {
+        "question": "What type of energy is produced by moving water?",
+        "options": ["Solar energy", "Wind energy", "Hydroelectric energy", "Chemical energy"],
+        "correct": "Hydroelectric energy"
+      },
+      {
+        "question": "The substance that gives blood its red colour is?",
+        "options": ["Plasma", "Hemoglobin", "Oxygen", "Iron"],
+        "correct": "Hemoglobin"
+      },
+      {
+        "question": "Which of these is a simple machine?",
+        "options": ["Bicycle", "Scissors", "Lever", "Car"],
+        "correct": "Lever"
+      },
+      {
+        "question": "Which of these diseases is caused by mosquito bites?",
+        "options": ["Malaria", "Cholera", "Tuberculosis", "Polio"],
+        "correct": "Malaria"
+      },
+      {
+        "question": "The instrument used to measure temperature is?",
+        "options": ["Barometer", "Thermometer", "Rain gauge", "Hygrometer"],
+        "correct": "Thermometer"
+      },
+      {
+        "question": "Which of these planets is the largest?",
+        "options": ["Earth", "Jupiter", "Saturn", "Mars"],
+        "correct": "Jupiter"
+      },
+      {
+        "question": "The condition of the atmosphere at a place and time is called?",
+        "options": ["Climate", "Weather", "Season", "Rainfall"],
+        "correct": "Weather"
+      },
+      {
+        "question": "The organ that removes waste from the blood is?",
+        "options": ["Heart", "Kidney", "Liver", "Lungs"],
+        "correct": "Kidney"
+      },
+      {
+        "question": "Which of these is a man-made source of light?",
+        "options": ["Sun", "Stars", "Candle", "Moon"],
+        "correct": "Candle"
+      },
+      {
+        "question": "The ability of a material to return to its original shape after stretching is?",
+        "options": ["Flexibility", "Elasticity", "Rigidity", "Hardness"],
+        "correct": "Elasticity"
+      },
+      {
+        "question": "The organs that help humans to hear are?",
+        "options": ["Nose", "Tongue", "Ears", "Eyes"],
+        "correct": "Ears"
+      },
+      {
+        "question": "Which of these is NOT a property of water?",
+        "options": ["It has taste", "It has weight", "It has no colour", "It has no smell"],
+        "correct": "It has taste"
+      },
+      {
+        "question": "The planet closest to the sun is?",
+        "options": ["Earth", "Venus", "Mercury", "Mars"],
+        "correct": "Mercury"
+      },
+      {
+        "question": "The process by which plants prepare their food is called?",
+        "options": ["Respiration", "Digestion", "Photosynthesis", "Transpiration"],
+        "correct": "Photosynthesis"
+      },
+      {
+        "question": "The center of the solar system is the?",
+        "options": ["Moon", "Earth", "Sun", "Stars"],
+        "correct": "Sun"
+      },
+      {
+        "question": "Which part of a plant absorbs water and minerals?",
+        "options": ["Leaf", "Root", "Stem", "Flower"],
+        "correct": "Root"
+      },
+      {
+        "question": "The transfer of heat through solids is called?",
+        "options": ["Conduction", "Convection", "Radiation", "Evaporation"],
+        "correct": "Conduction"
+      },
+      {
+        "question": "Animals that eat both plants and flesh are called?",
+        "options": ["Herbivores", "Carnivores", "Omnivores", "Detritivores"],
+        "correct": "Omnivores"
+      },
+      {
+        "question": "The organ of sight is the?",
+        "options": ["Nose", "Eye", "Ear", "Tongue"],
+        "correct": "Eye"
+      },
+      {
+        "question": "The type of soil that holds the most water is?",
+        "options": ["Clay", "Sand", "Loam", "Gravel"],
+        "correct": "Clay"
+      },
+      {
+        "question": "What causes day and night?",
+        "options": ["Earth’s revolution", "Earth’s rotation", "Sun’s movement", "Moon’s orbit"],
+        "correct": "Earth’s rotation"
+      },
+      {
+        "question": "Which blood cells fight diseases in the body?",
+        "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+        "correct": "White blood cells"
+      },
+      {
+        "question": "The fastest means of communication is?",
+        "options": ["Letter", "Telephone", "Internet", "Radio"],
+        "correct": "Internet"
+      },
+      {
+        "question": "Which of these is NOT a vertebrate?",
+        "options": ["Fish", "Lizard", "Earthworm", "Bird"],
+        "correct": "Earthworm"
+      },
+      {
+        "question": "The movement of air from one place to another is called?",
+        "options": ["Rain", "Storm", "Wind", "Breeze"],
+        "correct": "Wind"
+      },
+      {
+        "question": "The substance that makes up 70% of the human body is?",
+        "options": ["Protein", "Water", "Blood", "Fat"],
+        "correct": "Water"
+      },
+      {
+        "question": "The smallest unit of life is the?",
+        "options": ["Organ", "Tissue", "Cell", "Nucleus"],
+        "correct": "Cell"
+      },
+      {
+        "question": "The process of changing water into vapour is?",
+        "options": ["Condensation", "Evaporation", "Freezing", "Melting"],
+        "correct": "Evaporation"
+      },
+      {
+        "question": "Which type of energy do we get from the sun?",
+        "options": ["Solar energy", "Wind energy", "Hydro energy", "Nuclear energy"],
+        "correct": "Solar energy"
+      },
+      {
+        "question": "The sense organ for taste is?",
+        "options": ["Nose", "Ear", "Eye", "Tongue"],
+        "correct": "Tongue"
+      },
+      {
+        "question": "The gas needed for burning is?",
+        "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "The method of separating sand from water is?",
+        "options": ["Filtration", "Evaporation", "Condensation", "Distillation"],
+        "correct": "Filtration"
+      },
+      {
+        "question": "The energy stored in food is?",
+        "options": ["Heat energy", "Kinetic energy", "Chemical energy", "Light energy"],
+        "correct": "Chemical energy"
+      },
+      {
+        "question": "The main source of Vitamin D is?",
+        "options": ["Fish", "Milk", "Sunlight", "Orange"],
+        "correct": "Sunlight"
+      },
+      {
+        "question": "The layer of the earth where plants grow is called?",
+        "options": ["Crust", "Mantle", "Core", "Surface"],
+        "correct": "Crust"
+      },
+      {
+        "question": "The part of the plant that makes food is?",
+        "options": ["Stem", "Root", "Leaf", "Flower"],
+        "correct": "Leaf"
+      },
+      {
+        "question": "Which of these is NOT a simple machine?",
+        "options": ["Lever", "Pulley", "Screwdriver", "Television"],
+        "correct": "Television"
+      },
+      {
+        "question": "The planet known as the ‘Red Planet’ is?",
+        "options": ["Earth", "Venus", "Mars", "Jupiter"],
+        "correct": "Mars"
+      },
+      {
+        "question": "The solid part of water is called?",
+        "options": ["Steam", "Ice", "Snow", "Frost"],
+        "correct": "Ice"
+      },
+      {
+        "question": "Which of these animals undergoes metamorphosis?",
+        "options": ["Goat", "Frog", "Dog", "Bird"],
+        "correct": "Frog"
+      },
+      {
+        "question": "The organ that pumps blood in humans is?",
+        "options": ["Brain", "Heart", "Lungs", "Liver"],
+        "correct": "Heart"
+      },
+      {
+        "question": "The natural satellite of the earth is?",
+        "options": ["Mars", "Moon", "Venus", "Star"],
+        "correct": "Moon"
+      },
+      {
+        "question": "The part of the body that helps us breathe is?",
+        "options": ["Lungs", "Kidney", "Stomach", "Brain"],
+        "correct": "Lungs"
+      },
+      {
+        "question": "An animal that feeds on dead plants and animals is called?",
+        "options": ["Herbivore", "Carnivore", "Omnivore", "Scavenger"],
+        "correct": "Scavenger"
+      },
+      {
+        "question": "The tool used to measure temperature is?",
+        "options": ["Barometer", "Thermometer", "Ruler", "Clock"],
+        "correct": "Thermometer"
+      },
+      {
+        "question": "Which of these is an example of a conductor?",
+        "options": ["Plastic", "Wood", "Copper", "Rubber"],
+        "correct": "Copper"
+      },
+      {
+        "question": "The main source of energy for man is?",
+        "options": ["Protein", "Carbohydrate", "Vitamins", "Water"],
+        "correct": "Carbohydrate"
+      },
+      {
+        "question": "Which of the following animals lays eggs?",
+        "options": ["Cat", "Hen", "Goat", "Dog"],
+        "correct": "Hen"
+      },
+      {
+        "question": "The gas we breathe out is?",
+        "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+        "correct": "Carbon dioxide"
+      },
+      {
+        "question": "The force that pulls everything towards the earth is?",
+        "options": ["Friction", "Gravity", "Magnetism", "Pressure"],
+        "correct": "Gravity"
+      },
+      {
+        "question": "Which organ helps us to hear?",
+        "options": ["Nose", "Ear", "Eye", "Skin"],
+        "correct": "Ear"
+      },
+      {
+        "question": "The type of energy in a moving car is?",
+        "options": ["Potential energy", "Kinetic energy", "Chemical energy", "Heat energy"],
+        "correct": "Kinetic energy"
+      },
+      {
+        "question": "Which of these is NOT a source of light?",
+        "options": ["Torchlight", "Candle", "Sun", "Mirror"],
+        "correct": "Mirror"
+      }
     ]
   }
 }
-
+      
     
