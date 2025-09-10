@@ -252,6 +252,311 @@
         "options": ["Family car", "School", "Private house", "Farmland"],
         "answer": "School"
       }
+    ],
+    "level2": [
+      {
+        "question": "Which practice involves treating someone’s injury on the spot before help arrives?",
+        "options": ["First Aid", "Surgery", "Diagnosis", "Assessment"],
+        "answer": "First Aid"
+      },
+      {
+        "question": "Which number will you call in an emergency in Nigeria (as taught in Primary 4)?",
+        "options": ["999", "767", "911", "112"],
+        "answer": "767"
+      },
+      {
+        "question": "Which group of people keeps peace and helps at the scene of accidents?",
+        "options": ["Teachers", "Security agents", "Traders", "Farmers"],
+        "answer": "Security agents"
+      },
+      {
+        "question": "What does 'drug abuse' mean?",
+        "options": ["Using medicine correctly", "Taking too much medicine", "Asking for medicine", "Giving medicine"],
+        "answer": "Taking too much medicine"
+      },
+      {
+        "question": "What is an effect of abusing drugs?",
+        "options": ["Improved health", "Illness", "Better eyesight", "Strong body"],
+        "answer": "Illness"
+      },
+      {
+        "question": "A substance that can make you sick if misused is called?",
+        "options": ["Herbs", "Medicine", "Food", "Water"],
+        "answer": "Medicine"
+      },
+      {
+        "question": "Who makes laws in Nigeria at the federal level?",
+        "options": ["Governor", "President", "National Assembly", "Oba"],
+        "answer": "National Assembly"
+      },
+      {
+        "question": "Which level of government is closer to your town or village?",
+        "options": ["Federal government", "Local government", "State government", "Country government"],
+        "answer": "Local government"
+      },
+      {
+        "question": "Who heads a State government?",
+        "options": ["Chairman", "Governor", "President", "King"],
+        "answer": "Governor"
+      },
+      {
+        "question": "The division of labor in farms includes things like fishery and animal husbandry. This is a part of:",
+        "options": ["Transportation", "Agricultural industry", "Teaching", "Trading"],
+        "answer": "Agricultural industry"
+      },
+      {
+        "question": "What is the practice of people farming together in different tasks called?",
+        "options": ["Teamwork", "Cooperation", "Division of labor", "Escalation"],
+        "answer": "Division of labor"
+      },
+      {
+        "question": "Why is division of labour necessary in agriculture?",
+        "options": ["It increases speed and quality", "It wastes time", "It makes work harder", "It makes plants wilt"],
+        "answer": "It increases speed and quality"
+      },
+      {
+        "question": "What is the best way to reduce road accidents?",
+        "options": ["Overloading vehicles", "Ignoring speed limits", "Use of safety signs and careful driving", "Driving fast"],
+        "answer": "Use of safety signs and careful driving"
+      },
+      {
+        "question": "One cause of road accidents is?",
+        "options": ["Good roads", "Obeying traffic laws", "Bad roads", "Using seat belts"],
+        "answer": "Bad roads"
+      },
+      {
+        "question": "A solution to road accidents is?",
+        "options": ["Drive carelessly", "Overload vehicles", "Ignore traffic signs", "Drive with care and obey signs"],
+        "answer": "Drive with care and obey signs"
+      },
+      {
+        "question": "Which of these is a type of accident mentioned in Social Studies?",
+        "options": ["Flood", "Road accident", "Party accident", "Happy accident"],
+        "answer": "Road accident"
+      },
+      {
+        "question": "Which type of government shares power among federal, state, and local?",
+        "options": ["Traditional", "Single", "Federal", "Dictatorship"],
+        "answer": "Federal"
+      },
+      {
+        "question": "Which branch controls law making in Nigeria?",
+        "options": ["Legislature", "Judiciary", "Executive", "Monarchy"],
+        "answer": "Legislature"
+      },
+      {
+        "question": "Which branch of government enforces laws?",
+        "options": ["Legislature", "Judiciary", "Executive", "Media"],
+        "answer": "Executive"
+      },
+      {
+        "question": "Which branch settles disputes and interprets laws?",
+        "options": ["Legislature", "Judiciary", "Executive", "Army"],
+        "answer": "Judiciary"
+      },
+      {
+        "question": "Why should children avoid taking medicine without adult supervision?",
+        "options": ["It is safe", "It can be dangerous", "It tastes sweet", "It makes them tall"],
+        "answer": "It can be dangerous"
+      },
+      {
+        "question": "What is the role of the family in society?",
+        "options": ["To destroy culture", "To train children and provide care", "To break rules", "To increase accidents"],
+        "answer": "To train children and provide care"
+      },
+      {
+        "question": "Which of these is a type of family?",
+        "options": ["Village family", "Extended family", "School family", "Market family"],
+        "answer": "Extended family"
+      },
+      {
+        "question": "Which of these is an effect of large family size?",
+        "options": ["Plenty resources for all", "Struggle for resources", "Easier training", "Less expenses"],
+        "answer": "Struggle for resources"
+      },
+      {
+        "question": "Who is the head of a nuclear family?",
+        "options": ["Mother", "Children", "Father or mother", "Uncle"],
+        "answer": "Father or mother"
+      },
+      {
+        "question": "One function of the extended family is?",
+        "options": ["Support and guidance", "Disobedience", "Wasting food", "Road building"],
+        "answer": "Support and guidance"
+      },
+      {
+        "question": "Which of these is NOT a cause of accidents?",
+        "options": ["Careless driving", "Bad roads", "Use of seat belts", "Over speeding"],
+        "answer": "Use of seat belts"
+      },
+      {
+        "question": "What should you do if a classmate is injured during play?",
+        "options": ["Run away", "Call for help and apply First Aid", "Laugh", "Ignore it"],
+        "answer": "Call for help and apply First Aid"
+      },
+      {
+        "question": "What is the name given to rules that guide our actions in society?",
+        "options": ["Songs", "Games", "Laws", "Food"],
+        "answer": "Laws"
+      },
+      {
+        "question": "What is one duty of citizens in a country?",
+        "options": ["Paying taxes", "Ignoring laws", "Breaking rules", "Destroying property"],
+        "answer": "Paying taxes"
+      },
+      {
+        "question": "The body responsible for making laws in Nigeria is?",
+        "options": ["Senate and House of Representatives", "Judiciary", "Executive", "Army"],
+        "answer": "Senate and House of Representatives"
+      },
+      {
+        "question": "When people work together for the benefit of all, it is called?",
+        "options": ["Conflict", "Cooperation", "Disobedience", "Punishment"],
+        "answer": "Cooperation"
+      },
+      {
+        "question": "Which of these is a way of showing cooperation at school?",
+        "options": ["Refusing to share", "Working in group assignments", "Breaking rules", "Fighting classmates"],
+        "answer": "Working in group assignments"
+      },
+      {
+        "question": "What is one importance of cooperation in the family?",
+        "options": ["It brings unity", "It causes quarrels", "It wastes time", "It leads to disobedience"],
+        "answer": "It brings unity"
+      },
+      {
+        "question": "What is a community?",
+        "options": ["A group of people living together in an area", "A group of cars", "A group of trees", "A group of animals"],
+        "answer": "A group of people living together in an area"
+      },
+      {
+        "question": "One benefit of living in a community is?",
+        "options": ["Isolation", "Shared facilities and security", "Loneliness", "Fighting"],
+        "answer": "Shared facilities and security"
+      },
+      {
+        "question": "What is one responsibility of leaders in the community?",
+        "options": ["To provide guidance and settle disputes", "To cause trouble", "To ignore rules", "To create confusion"],
+        "answer": "To provide guidance and settle disputes"
+      },
+      {
+        "question": "What is one way of maintaining peace in society?",
+        "options": ["Disobedience", "Respecting laws and authority", "Fighting neighbors", "Destroying property"],
+        "answer": "Respecting laws and authority"
+      },
+      {
+        "question": "What is the full meaning of FRSC?",
+        "options": ["Federal Road Safety Commission", "First Rescue Safety Corps", "Federal Road Service Council", "First Road Safety Committee"],
+        "answer": "Federal Road Safety Commission"
+      },
+      {
+        "question": "Which symbol on the road tells drivers to stop?",
+        "options": ["Stop sign", "Speed limit sign", "Hospital sign", "Roundabout sign"],
+        "answer": "Stop sign"
+      },
+      {
+        "question": "Why do we celebrate national holidays?",
+        "options": ["To remember important events and heroes", "To waste time", "To fight", "To travel abroad"],
+        "answer": "To remember important events and heroes"
+      },
+      {
+        "question": "Which of these is a national symbol of Nigeria?",
+        "options": ["The coat of arms", "School logo", "Football jersey", "Market logo"],
+        "answer": "The coat of arms"
+      },
+      {
+        "question": "The green color in the Nigerian flag stands for?",
+        "options": ["Peace", "Agriculture", "Strength", "Unity"],
+        "answer": "Agriculture"
+      },
+      {
+        "question": "The white color in the Nigerian flag represents?",
+        "options": ["Unity", "Peace", "Power", "Wealth"],
+        "answer": "Peace"
+      },
+      {
+        "question": "Which of these is an effect of disobedience to rules?",
+        "options": ["Peace", "Punishment", "Orderliness", "Unity"],
+        "answer": "Punishment"
+      },
+      {
+        "question": "What is one effect of cooperation in society?",
+        "options": ["Development", "Fighting", "Destruction", "Disunity"],
+        "answer": "Development"
+      },
+      {
+        "question": "One common cause of conflicts in schools is?",
+        "options": ["Sharing things", "Misunderstanding and selfishness", "Respecting teachers", "Keeping friends"],
+        "answer": "Misunderstanding and selfishness"
+      },
+      {
+        "question": "How can conflicts in the classroom be resolved?",
+        "options": ["By fighting", "By dialogue and reporting to teacher", "By ignoring rules", "By shouting"],
+        "answer": "By dialogue and reporting to teacher"
+      },
+      {
+        "question": "Which group is responsible for judging law breakers?",
+        "options": ["The Judiciary", "The Executive", "The Legislature", "The Police Band"],
+        "answer": "The Judiciary"
+      },
+      {
+        "question": "The people who elect leaders during elections are called?",
+        "options": ["Voters", "Teachers", "Soldiers", "Drivers"],
+        "answer": "Voters"
+      },
+      {
+        "question": "Why should children obey their parents?",
+        "options": ["To gain love and proper training", "To get money always", "To play all day", "To avoid school"],
+        "answer": "To gain love and proper training"
+      },
+      {
+        "question": "What is the importance of sanitation in the environment?",
+        "options": ["It prevents diseases", "It causes sickness", "It wastes time", "It destroys nature"],
+        "answer": "It prevents diseases"
+      },
+      {
+        "question": "Which of these is a good sanitation habit?",
+        "options": ["Proper disposal of waste", "Throwing dirt in the gutter", "Burning plastics openly", "Littering roads"],
+        "answer": "Proper disposal of waste"
+      },
+      {
+        "question": "One common cause of environmental pollution is?",
+        "options": ["Proper waste disposal", "Burning refuse in open air", "Tree planting", "Good drainage"],
+        "answer": "Burning refuse in open air"
+      },
+      {
+        "question": "Why should we plant trees?",
+        "options": ["They provide oxygen and prevent erosion", "They cause accidents", "They make noise", "They block the road"],
+        "answer": "They provide oxygen and prevent erosion"
+      },
+      {
+        "question": "Which of these is a social problem in Nigeria?",
+        "options": ["Corruption", "Unity", "Clean water", "Peace"],
+        "answer": "Corruption"
+      },
+      {
+        "question": "One major responsibility of government is?",
+        "options": ["To provide security and welfare", "To cause war", "To stop education", "To sell goods"],
+        "answer": "To provide security and welfare"
+      },
+      {
+        "question": "A good citizen should?",
+        "options": ["Obey laws and respect others", "Destroy property", "Fight leaders", "Refuse taxes"],
+        "answer": "Obey laws and respect others"
+      },
+      {
+        "question": "Why is education important for children?",
+        "options": ["It develops knowledge and skills", "It wastes time", "It stops play", "It makes children sick"],
+        "answer": "It develops knowledge and skills"
+      },
+      {
+        "question": "Which of these is a way of showing honesty?",
+        "options": ["Returning lost items", "Telling lies", "Cheating in exams", "Stealing"],
+        "answer": "Returning lost items"
+      }
     ]
   }
 }
+
+      
+      
