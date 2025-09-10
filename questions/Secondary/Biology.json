@@ -599,8 +599,212 @@
       "Excretory system"
     ],
     "answer": "Circulatory system"
+  },
+      {
+        "question": "Which kingdom includes multicellular organisms that make their own food through photosynthesis?",
+        "options": ["Plantae", "Animalia", "Fungi", "Protista"],
+        "answer": "Plantae"
+      },
+      {
+        "question": "What is the main function of the large intestine in humans?",
+        "options": ["Absorption of water", "Digestion of proteins", "Production of bile", "Absorption of fats"],
+        "answer": "Absorption of water"
+      },
+      {
+        "question": "Which type of joint allows movement in all directions, such as the shoulder joint?",
+        "options": ["Hinge joint", "Ball-and-socket joint", "Pivot joint", "Gliding joint"],
+        "answer": "Ball-and-socket joint"
+      },
+      {
+        "question": "Which process produces gametes in humans?",
+        "options": ["Mitosis", "Meiosis", "Fertilization", "Cloning"],
+        "answer": "Meiosis"
+      },
+      {
+        "question": "What is the term for an organism’s physical appearance or observable traits?",
+        "options": ["Genotype", "Phenotype", "Chromosome", "Allele"],
+        "answer": "Phenotype"
+      },
+      {
+        "question": "Which blood group is considered the universal donor?",
+        "options": ["A", "B", "AB", "O"],
+        "answer": "O"
+      },
+      {
+        "question": "What is the name of the green pigment that absorbs light for photosynthesis?",
+        "options": ["Carotene", "Chlorophyll", "Xanthophyll", "Anthocyanin"],
+        "answer": "Chlorophyll"
+      },
+      {
+        "question": "Which type of skeleton is found in insects?",
+        "options": ["Endoskeleton", "Exoskeleton", "Hydrostatic skeleton", "Cartilage skeleton"],
+        "answer": "Exoskeleton"
+      },
+      {
+        "question": "Which part of the nephron is responsible for ultrafiltration?",
+        "options": ["Loop of Henle", "Bowman’s capsule", "Collecting duct", "Proximal tubule"],
+        "answer": "Bowman’s capsule"
+      },
+      {
+        "question": "What is the genetic material found in the nucleus of cells?",
+        "options": ["RNA", "DNA", "Protein", "Lipid"],
+        "answer": "DNA"
+      },
+      {
+        "question": "Which organ secretes insulin?",
+        "options": ["Liver", "Pancreas", "Kidney", "Stomach"],
+        "answer": "Pancreas"
+      },
+      {
+        "question": "What is the term for the permanent disappearance of a species?",
+        "options": ["Evolution", "Extinction", "Adaptation", "Speciation"],
+        "answer": "Extinction"
+      },
+      {
+        "question": "Which blood vessels carry blood away from the heart?",
+        "options": ["Arteries", "Veins", "Capillaries", "Venules"],
+        "answer": "Arteries"
+      },
+      {
+        "question": "Which type of nutrition is shown by fungi?",
+        "options": ["Autotrophic", "Saprophytic", "Parasitic", "Symbiotic"],
+        "answer": "Saprophytic"
+      },
+      {
+        "question": "Which organ in the human body is primarily responsible for detoxification?",
+        "options": ["Kidney", "Liver", "Lungs", "Spleen"],
+        "answer": "Liver"
+      },
+      {
+        "question": "What is the main function of the cerebrum in humans?",
+        "options": ["Coordination and balance", "Control of involuntary actions", "Thought and voluntary actions", "Filtering blood"],
+        "answer": "Thought and voluntary actions"
+      },
+      {
+        "question": "Which organisms are prokaryotic?",
+        "options": ["Fungi", "Bacteria", "Algae", "Protozoa"],
+        "answer": "Bacteria"
+      },
+      {
+        "question": "Which process converts glucose into energy in the presence of oxygen?",
+        "options": ["Anaerobic respiration", "Aerobic respiration", "Fermentation", "Transpiration"],
+        "answer": "Aerobic respiration"
+      },
+      {
+        "question": "Which hormone regulates the amount of sugar in the blood?",
+        "options": ["Adrenaline", "Thyroxine", "Insulin", "Progesterone"],
+        "answer": "Insulin"
+      },
+      {
+        "question": "Which plant tissue transports food from the leaves to other parts of the plant?",
+        "options": ["Xylem", "Phloem", "Cambium", "Cortex"],
+        "answer": "Phloem"
+      },
+      {
+        "question": "What is the smallest unit of heredity that controls a specific characteristic?",
+        "options": ["Gene", "Chromosome", "DNA", "Allele"],
+        "answer": "Gene"
+      },
+      {
+        "question": "Which part of the human digestive system is responsible for most nutrient absorption?",
+        "options": ["Stomach", "Small intestine", "Large intestine", "Pancreas"],
+        "answer": "Small intestine"
+      },
+      {
+        "question": "What is the process by which plants make their own food?",
+        "options": ["Respiration", "Photosynthesis", "Transpiration", "Fermentation"],
+        "answer": "Photosynthesis"
+      },
+      {
+        "question": "Which blood component is responsible for clotting?",
+        "options": ["Plasma", "Red blood cells", "White blood cells", "Platelets"],
+        "answer": "Platelets"
+      },
+      {
+        "question": "Which part of the flower develops into a fruit after fertilization?",
+        "options": ["Stamen", "Ovary", "Style", "Sepal"],
+        "answer": "Ovary"
+      },
+      {
+        "question": "Which vitamin is essential for blood clotting?",
+        "options": ["Vitamin A", "Vitamin C", "Vitamin K", "Vitamin D"],
+        "answer": "Vitamin K"
+      },
+      {
+        "question": "Which part of the nervous system connects the brain to the rest of the body?",
+        "options": ["Spinal cord", "Cerebellum", "Medulla", "Hypothalamus"],
+        "answer": "Spinal cord"
+      },
+      {
+        "question": "Which group of organisms produce their own food through photosynthesis?",
+        "options": ["Animals", "Fungi", "Plants", "Protozoa"],
+        "answer": "Plants"
+      },
+      {
+        "question": "Which type of immunity is developed after vaccination?",
+        "options": ["Natural immunity", "Passive immunity", "Active immunity", "Innate immunity"],
+        "answer": "Active immunity"
+      },
+      {
+        "question": "Which stage of cell division ensures genetic variation in organisms?",
+        "options": ["Mitosis", "Meiosis", "Cytokinesis", "Binary fission"],
+        "answer": "Meiosis"
+      },
+      {
+        "question": "Which human organ produces bile?",
+        "options": ["Pancreas", "Gall bladder", "Liver", "Stomach"],
+        "answer": "Liver"
+      },
+      {
+        "question": "Which gas is released during photosynthesis?",
+        "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "answer": "Oxygen"
+      },
+      {
+        "question": "Which part of the cell controls cell activities?",
+        "options": ["Nucleus", "Mitochondria", "Cytoplasm", "Cell wall"],
+        "answer": "Nucleus"
+      },
+      {
+        "question": "What is the main function of villi in the small intestine?",
+        "options": ["Absorb nutrients", "Produce enzymes", "Secrete hormones", "Filter waste"],
+        "answer": "Absorb nutrients"
+      },
+      {
+        "question": "Which blood vessels have thin walls and allow exchange of substances?",
+        "options": ["Arteries", "Veins", "Capillaries", "Aorta"],
+        "answer": "Capillaries"
+      },
+      {
+        "question": "Which reproductive method involves one parent producing identical offspring?",
+        "options": ["Asexual reproduction", "Sexual reproduction", "Cross-pollination", "Self-fertilization"],
+        "answer": "Asexual reproduction"
+      },
+      {
+        "question": "Which part of the human respiratory system is the site of gas exchange?",
+        "options": ["Bronchi", "Alveoli", "Trachea", "Nostrils"],
+        "answer": "Alveoli"
+      },
+      {
+        "question": "What is the structural and functional unit of the kidney?",
+        "options": ["Neuron", "Nephron", "Glomerulus", "Tubule"],
+        "answer": "Nephron"
+      },
+      {
+        "question": "Which type of fertilization occurs in amphibians?",
+        "options": ["Internal fertilization", "External fertilization", "Self-fertilization", "Cross-fertilization"],
+        "answer": "External fertilization"
+      },
+      {
+        "question": "Which process describes the breakdown of glucose without oxygen?",
+        "options": ["Aerobic respiration", "Anaerobic respiration", "Photosynthesis", "Fermentation"],
+        "answer": "Anaerobic respiration"
+      }
+    ]
   }
-]
+}
 
+
+      
       
       
