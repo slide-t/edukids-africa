@@ -599,6 +599,156 @@
         "question": "Which of these is NOT a feature of a descriptive essay?",
         "options": ["vivid details", "imagery", "characters", "statistical data"],
         "correct": "statistical data"
+      },
+      {
+        "question": "Which of the following best describes irony?",
+        "options": ["A comparison using 'like' or 'as'", "Saying the opposite of what is meant", "Giving human qualities to objects", "Exaggeration"],
+        "correct": "Saying the opposite of what is meant"
+      },
+      {
+        "question": "Which of these is a feature of a debate?",
+        "options": ["plot", "proposers and opposers", "stanzas", "actors"],
+        "correct": "proposers and opposers"
+      },
+      {
+        "question": "Choose the correct concord: Neither the boy nor the girls ___ present.",
+        "options": ["was", "were", "is", "be"],
+        "correct": "were"
+      },
+      {
+        "question": "Which of these literary terms means the main idea of a text?",
+        "options": ["theme", "plot", "conflict", "tone"],
+        "correct": "theme"
+      },
+      {
+        "question": "Which sentence is correctly punctuated?",
+        "options": ["Its raining, we must stay inside.", "It's raining; we must stay inside.", "Its raining; we must stay inside.", "It's raining we must stay inside."],
+        "correct": "It's raining; we must stay inside."
+      },
+      {
+        "question": "The antonym of 'benevolent' is?",
+        "options": ["kind", "cruel", "generous", "friendly"],
+        "correct": "cruel"
+      },
+      {
+        "question": "Which part of speech is the underlined word: He spoke *softly*.",
+        "options": ["Noun", "Verb", "Adverb", "Adjective"],
+        "correct": "Adverb"
+      },
+      {
+        "question": "What is the meaning of the idiom 'a blessing in disguise'?",
+        "options": ["Something bad that turns out good", "An obvious advantage", "A curse", "A visible gift"],
+        "correct": "Something bad that turns out good"
+      },
+      {
+        "question": "Which tense is correct: By 2026, she ___ in the company for 10 years.",
+        "options": ["will work", "will have worked", "worked", "is working"],
+        "correct": "will have worked"
+      },
+      {
+        "question": "Which figure of speech: 'The stars danced in the sky'?",
+        "options": ["Personification", "Metaphor", "Hyperbole", "Irony"],
+        "correct": "Personification"
+      },
+      {
+        "question": "Which is a feature of a narrative essay?",
+        "options": ["dialogue", "statistics", "argument", "definition"],
+        "correct": "dialogue"
+      },
+      {
+        "question": "Which is the correct spelling?",
+        "options": ["seperate", "separrate", "separate", "seperete"],
+        "correct": "separate"
+      },
+      {
+        "question": "Which of these is NOT a function of intonation?",
+        "options": ["to show mood", "to distinguish questions from statements", "to shorten words", "to express doubt"],
+        "correct": "to shorten words"
+      },
+      {
+        "question": "Identify the antonym of 'optimistic'.",
+        "options": ["hopeful", "cheerful", "pessimistic", "positive"],
+        "correct": "pessimistic"
+      },
+      {
+        "question": "Which essay type explains 'The Causes of Unemployment in Nigeria'?",
+        "options": ["Expository", "Narrative", "Descriptive", "Argumentative"],
+        "correct": "Expository"
+      },
+      {
+        "question": "In literature, what term describes the time and place of a story?",
+        "options": ["plot", "setting", "theme", "conflict"],
+        "correct": "setting"
+      },
+      {
+        "question": "Which figure of speech is: 'Time is a thief'?",
+        "options": ["Metaphor", "Personification", "Simile", "Hyperbole"],
+        "correct": "Metaphor"
+      },
+      {
+        "question": "Which is the correct indirect speech? He said, 'I will travel tomorrow.'",
+        "options": ["He said he will travel tomorrow.", "He said he would travel the next day.", "He said he travels tomorrow.", "He said he travelled the next day."],
+        "correct": "He said he would travel the next day."
+      },
+      {
+        "question": "Which sound is represented by 'sh' in 'shoe'?",
+        "options": ["/s/", "/ʃ/", "/z/", "/ʒ/"],
+        "correct": "/ʃ/"
+      },
+      {
+        "question": "The synonym of 'magnify' is?",
+        "options": ["reduce", "expand", "shrink", "lessen"],
+        "correct": "expand"
+      },
+      {
+        "question": "Which sentence is an example of a complex sentence?",
+        "options": ["I like tea.", "She went home and cooked.", "Although it rained, we played football.", "Bring me the book."],
+        "correct": "Although it rained, we played football."
+      },
+      {
+        "question": "Choose the correct option: We arrived ___ the airport on time.",
+        "options": ["in", "at", "on", "into"],
+        "correct": "at"
+      },
+      {
+        "question": "Which is a feature of a formal speech?",
+        "options": ["colloquial language", "greetings to the audience", "personal diary entries", "riddles"],
+        "correct": "greetings to the audience"
+      },
+      {
+        "question": "What is the antonym of 'expand'?",
+        "options": ["increase", "contract", "enlarge", "spread"],
+        "correct": "contract"
+      },
+      {
+        "question": "Which punctuation is used to show a direct quotation?",
+        "options": ["Colon", "Quotation marks", "Semicolon", "Dash"],
+        "correct": "Quotation marks"
+      },
+      {
+        "question": "Which literary device is: 'She sells sea shells on the seashore'?",
+        "options": ["Alliteration", "Simile", "Onomatopoeia", "Irony"],
+        "correct": "Alliteration"
+      },
+      {
+        "question": "What is the meaning of the idiom 'let the cat out of the bag'?",
+        "options": ["Release a pet", "Reveal a secret", "Open a shop", "Chase away trouble"],
+        "correct": "Reveal a secret"
+      },
+      {
+        "question": "Which of these is an antonym of 'fragile'?",
+        "options": ["delicate", "weak", "strong", "soft"],
+        "correct": "strong"
+      },
+      {
+        "question": "Which is the correct option: I demand that he ___ punished.",
+        "options": ["is", "be", "was", "being"],
+        "correct": "be"
+      },
+      {
+        "question": "Which of these is a synonym for 'vivid'?",
+        "options": ["clear", "dull", "faint", "weak"],
+        "correct": "clear"
       }
     ]
   }
