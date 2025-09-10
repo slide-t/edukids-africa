@@ -93,7 +93,63 @@ function shuffle(array) {
 }
 
 /* Load questions.json and prepare available levels */
+/* Load questions.json and prepare available levels */
 async function loadSubjectData() {
+  try {
+    const category = new URLSearchParams(window.location.search).get("category");
+    const subject = new URLSearchParams(window.location.search).get("subject");
+
+    if (!category || !subject) {
+      console.error("Category or subject missing in URL");
+      return false;
+    }
+
+    // Build direct file path, e.g. questions/Primary/Mathematics.json
+    const filePath = `questions/${category}/${subject}.json`;
+
+    const res = await fetch(filePath);
+    if (!res.ok) {
+      console.error(`Failed to load ${filePath}`);
+      return false;
+    }
+
+    subjectData = await res.json();
+
+    if (!subjectData || Object.keys(subjectData).length === 0) {
+      console.error("No question data found for subject:", subject);
+      return false;
+    }
+
+    // Collect Level keys & sort (Level 1, Level 2, ...)
+    availableLevels = Object.keys(subjectData)
+      .filter(k => /^Level\s*\d+/i.test(k))
+      .sort((a, b) => {
+        const na = parseInt(a.match(/\d+/)[0], 10);
+        const nb = parseInt(b.match(/\d+/)[0], 10);
+        return na - nb;
+      });
+
+    // load progress from localStorage to set starting level
+    const progressKey = `EduKidsProgress_${category}_${subject}`;
+    const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+
+    // find first level not passed
+    let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
+    if (firstNotPassed === -1) {
+      currentLevelIndex = availableLevels.length; // all completed
+    } else {
+      currentLevelIndex = firstNotPassed;
+    }
+
+    return true;
+  } catch (err) {
+    console.error("Error loading subject file:", err);
+    return false;
+  }
+}
+
+
+/*async function loadSubjectData() {
   try {
     const res = await fetch("questions.json");
     const data = await res.json();
@@ -129,7 +185,7 @@ async function loadSubjectData() {
         const nb = parseInt(b.match(/\d+/)[0],10);
         return na - nb;
       });
-
+*/
     // load progress from localStorage to set starting level
     const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
     // find first level not passed
