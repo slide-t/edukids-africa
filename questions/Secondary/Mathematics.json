@@ -445,34 +445,314 @@
         "correct": "3"
       }
     ],
-
-    "level3": [
+"level3": [
       {
-        "question": "If sinθ = 3/5, find cosθ",
-        "options": ["4/5", "5/3", "3/4", "12/13"],
+        "question": "Simplify: (x + 2)(x² - 2x + 4)",
+        "options": ["x³ + 8", "x³ - 8", "x³ + 2x² - 4x + 8", "x³ - 2x² + 4x - 8"],
+        "correct": "x³ + 8"
+      },
+      {
+        "question": "If log₁₀(2) = 0.3010, log₁₀(5) = 0.6990, find log₁₀(20).",
+        "options": ["1.0000", "1.3010", "0.9990", "2.0000"],
+        "correct": "1.3010"
+      },
+      {
+        "question": "Differentiate y = 3x² with respect to x.",
+        "options": ["3x", "6x", "x²", "2x"],
+        "correct": "6x"
+      },
+      {
+        "question": "Integrate: ∫2x dx",
+        "options": ["x² + C", "2x² + C", "2x + C", "x + C"],
+        "correct": "x² + C"
+      },
+      {
+        "question": "If sinθ = 3/5, find cosθ (θ acute).",
+        "options": ["4/5", "3/4", "5/3", "1/5"],
         "correct": "4/5"
       },
       {
-        "question": "Differentiate: y = 3x² + 2x",
-        "options": ["6x + 2", "6x² + 2", "3x + 2", "x² + 2"],
-        "correct": "6x + 2"
+        "question": "Find the derivative of y = e^x.",
+        "options": ["e^x", "xe^(x-1)", "ln(x)", "1/x"],
+        "correct": "e^x"
       },
       {
-        "question": "Integrate: ∫(2x) dx",
-        "options": ["2x²", "x²", "x² + c", "x²/2"],
-        "correct": "x² + c"
+        "question": "Solve: log₂(x) = 5",
+        "options": ["25", "32", "64", "128"],
+        "correct": "32"
       },
       {
-        "question": "If A = [1 2; 3 4], find det(A)",
-        "options": ["-2", "-1", "2", "5"],
-        "correct": "-2"
+        "question": "Evaluate: ∫₀² (x²) dx",
+        "options": ["4", "6", "8", "10"],
+        "correct": "8"
       },
       {
-        "question": "Solve for x: log₁₀x = 2",
-        "options": ["10", "20", "50", "100"],
-        "correct": "100"
+        "question": "If a matrix A = [[2,1],[3,4]], find det(A).",
+        "options": ["5", "6", "7", "8"],
+        "correct": "5"
+      },
+      {
+        "question": "Solve: 2cos²θ - 1 = 0",
+        "options": ["θ = 30°", "θ = 45°", "θ = 60°", "θ = 90°"],
+        "correct": "θ = 45°"
+      },
+      {
+        "question": "Expand using binomial theorem: (1 + x)³",
+        "options": ["1 + 3x + 3x² + x³", "1 + 2x + x²", "1 + x³", "1 + x + x² + x³"],
+        "correct": "1 + 3x + 3x² + x³"
+      },
+      {
+        "question": "If tanθ = 3/4, find secθ.",
+        "options": ["4/5", "5/4", "3/5", "5/3"],
+        "correct": "5/4"
+      },
+      {
+        "question": "Differentiate y = 5sinx.",
+        "options": ["5cosx", "-5cosx", "5sinx", "-5sinx"],
+        "correct": "5cosx"
+      },
+      {
+        "question": "Find the inverse of matrix [[1,2],[3,4]].",
+        "options": [
+          "1/(-2) [[4,-2],[-3,1]]",
+          "1/(-2) [[-4,2],[3,-1]]",
+          "1/(-2) [[4,3],[2,1]]",
+          "None"
+        ],
+        "correct": "1/(-2) [[4,-2],[-3,1]]"
+      },
+      {
+        "question": "Solve: d²y/dx² of y = x³",
+        "options": ["3x²", "6x", "2x", "3"],
+        "correct": "6x"
+      },
+      {
+        "question": "Find the common ratio in GP: 2, 6, 18, 54...",
+        "options": ["2", "3", "4", "6"],
+        "correct": "3"
+      },
+      {
+        "question": "Find the sum of first 10 terms of AP: 2, 5, 8...",
+        "options": ["140", "150", "155", "160"],
+        "correct": "155"
+      },
+      {
+        "question": "Evaluate: ∫cosx dx",
+        "options": ["sinx + C", "-sinx + C", "cosx + C", "-cosx + C"],
+        "correct": "sinx + C"
+      },
+      {
+        "question": "Differentiate y = ln(x).",
+        "options": ["1/x", "x", "ln(x)", "e^x"],
+        "correct": "1/x"
+      },
+      {
+        "question": "Solve: e^x = 1",
+        "options": ["x = 0", "x = 1", "x = -1", "x = e"],
+        "correct": "x = 0"
+      },
+      {
+        "question": "If nP2 = 56, find n.",
+        "options": ["7", "8", "9", "10"],
+        "correct": "8"
+      },
+      {
+        "question": "Find the variance of 2,4,6,8,10.",
+        "options": ["6.0", "7.5", "8.0", "10.0"],
+        "correct": "8.0"
+      },
+      {
+        "question": "Find the determinant of [[3,4],[2,5]].",
+        "options": ["7", "8", "11", "15"],
+        "correct": "7"
+      },
+      {
+        "question": "Simplify: (sin²x + cos²x).",
+        "options": ["0", "1", "2", "sinx"],
+        "correct": "1"
+      },
+      {
+        "question": "Solve: ∫e^(2x) dx",
+        "options": ["1/2 e^(2x) + C", "2e^(2x) + C", "e^(x) + C", "e^(2x) + C"],
+        "correct": "1/2 e^(2x) + C"
+      },
+      {
+        "question": "Differentiate y = tanx.",
+        "options": ["sec²x", "cos²x", "sin²x", "-cosec²x"],
+        "correct": "sec²x"
+      },
+      {
+        "question": "The mean deviation is always?",
+        "options": ["Negative", "Positive", "Zero", "Undefined"],
+        "correct": "Positive"
+      },
+      {
+        "question": "If 2^x = 16, find x.",
+        "options": ["2", "3", "4", "5"],
+        "correct": "4"
+      },
+      {
+        "question": "Find the gradient of curve y = x² at x = 3.",
+        "options": ["3", "6", "9", "12"],
+        "correct": "6"
+      },
+      {
+        "question": "Evaluate: ∫₀¹ (3x²) dx",
+        "options": ["1", "2", "3", "4"],
+        "correct": "1"
+      },
+      {
+        "question": "Solve for x: 3x – 7 = 11",
+        "options": ["x = 4", "x = 6", "x = –6", "x = –4"],
+        "correct": "x = 6"
+      },
+      {
+        "question": "A straight line has equation y = 2x + 3. What is the gradient of the line?",
+        "options": ["2", "3", "–2", "–3"],
+        "correct": "2"
+      },
+      {
+        "question": "Find the simple interest on ₦8,000 at 5% per annum for 3 years.",
+        "options": ["₦800", "₦1,000", "₦1,200", "₦1,500"],
+        "correct": "₦1,200"
+      },
+      {
+        "question": "Which of these represents a quadratic equation?",
+        "options": ["x + 5 = 0", "x² – 3x + 2 = 0", "2/x = 5", "3x – 7 = 0"],
+        "correct": "x² – 3x + 2 = 0"
+      },
+      {
+        "question": "A die is rolled once. What is the probability of getting an even number?",
+        "options": ["1/2", "1/3", "1/6", "2/3"],
+        "correct": "1/2"
+      },
+      {
+        "question": "Find the value of k if 3x + 2y = k passes through the point (2, 5).",
+        "options": ["16", "17", "19", "21"],
+        "correct": "19"
+      },
+      {
+        "question": "The distance around a circular field is 44m. Find its radius. (Take π = 22/7)",
+        "options": ["7m", "14m", "21m", "28m"],
+        "correct": "7m"
+      },
+      {
+        "question": "Solve: 5x/2 = 20",
+        "options": ["x = 2", "x = 4", "x = 8", "x = 10"],
+        "correct": "x = 8"
+      },
+      {
+        "question": "Which of these numbers is prime?",
+        "options": ["21", "25", "31", "33"],
+        "correct": "31"
+      },
+      {
+        "question": "What is the median of 4, 8, 10, 15, 20, 25, 30?",
+        "options": ["10", "15", "20", "18"],
+        "correct": "15"
+      },
+      {
+        "question": "Factorize: x² – 9",
+        "options": ["(x – 3)(x + 3)", "(x – 9)(x + 1)", "(x – 1)(x + 9)", "(x – 3)(x – 3)"],
+        "correct": "(x – 3)(x + 3)"
+      },
+      {
+        "question": "Convert 0.375 to a fraction in its simplest form.",
+        "options": ["3/5", "3/8", "5/8", "7/8"],
+        "correct": "3/8"
+      },
+      {
+        "question": "The mean of 5 numbers is 12. If the sum of 4 of them is 50, what is the 5th number?",
+        "options": ["8", "10", "12", "14"],
+        "correct": "10"
+      },
+      {
+        "question": "Find the area of a triangle with base 12cm and height 8cm.",
+        "options": ["24cm²", "48cm²", "60cm²", "96cm²"],
+        "correct": "48cm²"
+      },
+      {
+        "question": "The value of log₁₀ 1000 is?",
+        "options": ["1", "2", "3", "4"],
+        "correct": "3"
+      },
+      {
+        "question": "A shopkeeper bought a radio for ₦3,600 and sold it for ₦4,500. Find the percentage profit.",
+        "options": ["20%", "22.5%", "25%", "30%"],
+        "correct": "25%"
+      },
+      {
+        "question": "If 2x + 3 = 11, what is the value of x?",
+        "options": ["3", "4", "5", "6"],
+        "correct": "4"
+      },
+      {
+        "question": "Find the nth term of the sequence: 2, 5, 8, 11, …",
+        "options": ["3n – 1", "2n + 3", "n + 2", "n + 5"],
+        "correct": "3n – 1"
+      },
+      {
+        "question": "In a class of 40 students, 22 are boys. What fraction are girls?",
+        "options": ["9/20", "11/20", "18/40", "11/18"],
+        "correct": "9/20"
+      },
+      {
+        "question": "Find the value of x if 4(x – 2) = 12",
+        "options": ["2", "3", "4", "5"],
+        "correct": "5"
+      },
+      {
+        "question": "Solve for y: 2y + 5 = 3y – 4",
+        "options": ["y = –9", "y = –1", "y = 1", "y = 9"],
+        "correct": "y = 9"
+      },
+      {
+        "question": "What is the probability of selecting a red ball from a bag containing 3 red, 5 blue, and 2 green balls?",
+        "options": ["1/3", "3/10", "2/5", "1/5"],
+        "correct": "3/10"
+      },
+      {
+        "question": "The interior angle of a regular polygon is 120°. How many sides does it have?",
+        "options": ["4", "5", "6", "8"],
+        "correct": "6"
+      },
+      {
+        "question": "Simplify: (2/3) ÷ (4/9)",
+        "options": ["3/2", "2/3", "3/4", "9/8"],
+        "correct": "3/2"
+      },
+      {
+        "question": "Find the mode of 2, 5, 7, 5, 9, 5, 10, 7, 7.",
+        "options": ["5", "7", "9", "10"],
+        "correct": "5"
+      },
+      {
+        "question": "Which of these equations is linear?",
+        "options": ["2x + 5 = 0", "x² – 1 = 0", "y = 3x² + 4", "x³ – 8 = 0"],
+        "correct": "2x + 5 = 0"
+      },
+      {
+        "question": "A man spends 2/5 of his salary on food and 1/3 on rent. What fraction remains?",
+        "options": ["4/15", "6/15", "7/15", "8/15"],
+        "correct": "4/15"
+      },
+      {
+        "question": "The gradient of a line is 1/2 and passes through (0, 3). What is its equation?",
+        "options": ["y = 1/2x + 3", "y = 2x + 3", "y = –1/2x + 3", "y = 3x + 2"],
+        "correct": "y = 1/2x + 3"
+      },
+      {
+        "question": "Solve: 5/8 of a number = 25. What is the number?",
+        "options": ["30", "35", "40", "45"],
+        "correct": "40"
+      },
+      {
+        "question": "What is the standard form of 0.000345?",
+        "options": ["3.45 × 10⁻⁴", "3.45 × 10⁻³", "3.45 × 10⁻⁵", "3.45 × 10⁻²"],
+        "correct": "3.45 × 10⁻⁴"
       }
-      // ... continue until 60 questions
     ]
   }
 }
+  
+  
