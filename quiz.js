@@ -185,7 +185,7 @@ async function loadSubjectData() {
         const nb = parseInt(b.match(/\d+/)[0],10);
         return na - nb;
       });
-*/
+
     // load progress from localStorage to set starting level
     const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
     // find first level not passed
@@ -203,7 +203,7 @@ async function loadSubjectData() {
     console.error("Failed to load questions.json", err);
     return false;
   }
-}
+}*/
 
 /* Load and prepare the questions for the current level */
 function prepareLevelQuestions() {
