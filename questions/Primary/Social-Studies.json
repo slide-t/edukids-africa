@@ -1,1 +1,257 @@
-
+{
+  "Social-Studies": {
+    "level1": [
+      {
+        "question": "Which of these is a type of family?",
+        "options": ["Extended family", "School family", "Village family", "Market family"],
+        "answer": "Extended family"
+      },
+      {
+        "question": "The father is the ____ of the family.",
+        "options": ["Leader", "Servant", "Visitor", "Stranger"],
+        "answer": "Leader"
+      },
+      {
+        "question": "The people who live around us in the same area are called?",
+        "options": ["Relatives", "Community", "Strangers", "Visitors"],
+        "answer": "Community"
+      },
+      {
+        "question": "The main duty of the police is to?",
+        "options": ["Teach children", "Catch thieves", "Sell goods", "Farm crops"],
+        "answer": "Catch thieves"
+      },
+      {
+        "question": "The colour of the Nigerian flag is?",
+        "options": ["Red and Blue", "Green and White", "Yellow and Black", "Orange and Brown"],
+        "answer": "Green and White"
+      },
+      {
+        "question": "A person who sells goods in the market is called?",
+        "options": ["Farmer", "Trader", "Driver", "Teacher"],
+        "answer": "Trader"
+      },
+      {
+        "question": "Which of these is a social group?",
+        "options": ["Family", "Stone", "Chair", "Book"],
+        "answer": "Family"
+      },
+      {
+        "question": "We use roads mainly for?",
+        "options": ["Fishing", "Farming", "Transportation", "Sleeping"],
+        "answer": "Transportation"
+      },
+      {
+        "question": "The capital of Nigeria is?",
+        "options": ["Lagos", "Kano", "Abuja", "Ibadan"],
+        "answer": "Abuja"
+      },
+      {
+        "question": "Children should learn to say ____ when they receive something.",
+        "options": ["Sorry", "Goodbye", "Thank you", "Welcome"],
+        "answer": "Thank you"
+      },
+      {
+        "question": "The act of showing love for one’s country is called?",
+        "options": ["Friendship", "Patriotism", "Selfishness", "Tribalism"],
+        "answer": "Patriotism"
+      },
+      {
+        "question": "Which of these is an occupation?",
+        "options": ["Doctor", "Football", "Dancing", "Sleeping"],
+        "answer": "Doctor"
+      },
+      {
+        "question": "The colour that represents peace in the Nigerian flag is?",
+        "options": ["Green", "Blue", "White", "Yellow"],
+        "answer": "White"
+      },
+      {
+        "question": "The body that makes laws in Nigeria is?",
+        "options": ["Court", "National Assembly", "Police", "Market"],
+        "answer": "National Assembly"
+      },
+      {
+        "question": "The major means of communication with a mobile phone is?",
+        "options": ["Cooking", "Speaking", "Calling and texting", "Walking"],
+        "answer": "Calling and texting"
+      },
+      {
+        "question": "A place where pupils are taught is called?",
+        "options": ["Market", "School", "Hospital", "Bank"],
+        "answer": "School"
+      },
+      {
+        "question": "The two main seasons in Nigeria are?",
+        "options": ["Summer and Winter", "Rainy and Dry", "Hot and Cold", "Day and Night"],
+        "answer": "Rainy and Dry"
+      },
+      {
+        "question": "The traditional head of a town is called?",
+        "options": ["King or Oba", "Driver", "Teacher", "Trader"],
+        "answer": "King or Oba"
+      },
+      {
+        "question": "Which of these is a social problem?",
+        "options": ["Stealing", "Helping", "Reading", "Playing"],
+        "answer": "Stealing"
+      },
+      {
+        "question": "The national currency of Nigeria is?",
+        "options": ["Dollar", "Cedi", "Naira", "Pound"],
+        "answer": "Naira"
+      },
+      {
+        "question": "The people who take care of our health in hospitals are called?",
+        "options": ["Farmers", "Nurses and Doctors", "Teachers", "Drivers"],
+        "answer": "Nurses and Doctors"
+      },
+      {
+        "question": "The Nigerian coat of arms has how many horses?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "2"
+      },
+      {
+        "question": "The black shield in the coat of arms stands for?",
+        "options": ["Peace", "Unity", "Fertile soil", "Strength"],
+        "answer": "Fertile soil"
+      },
+      {
+        "question": "The two major religions in Nigeria are?",
+        "options": ["Christianity and Islam", "Hinduism and Buddhism", "Judaism and Sikhism", "Christianity and Buddhism"],
+        "answer": "Christianity and Islam"
+      },
+      {
+        "question": "A place where people buy and sell goods is called?",
+        "options": ["School", "Market", "Hospital", "Church"],
+        "answer": "Market"
+      },
+      {
+        "question": "The head of a local government is called?",
+        "options": ["President", "Governor", "Chairman", "King"],
+        "answer": "Chairman"
+      },
+      {
+        "question": "What is the name of the Nigerian national anthem?",
+        "options": ["Lift Every Voice", "Arise O Compatriots", "God Save the Queen", "O Nigeria My Country"],
+        "answer": "Arise O Compatriots"
+      },
+      {
+        "question": "The first leader of Nigeria after independence was?",
+        "options": ["Nnamdi Azikiwe", "Obafemi Awolowo", "Tafawa Balewa", "Ahmadu Bello"],
+        "answer": "Tafawa Balewa"
+      },
+      {
+        "question": "The official residence of the President of Nigeria is called?",
+        "options": ["Government House", "Aso Rock Villa", "National Assembly", "White House"],
+        "answer": "Aso Rock Villa"
+      },
+      {
+        "question": "The leader of a state government in Nigeria is called?",
+        "options": ["Governor", "Chairman", "Mayor", "Minister"],
+        "answer": "Governor"
+      },
+      {
+        "question": "The person who teaches children in school is a?",
+        "options": ["Driver", "Teacher", "Farmer", "Trader"],
+        "answer": "Teacher"
+      },
+      {
+        "question": "The Nigerian currency is divided into?",
+        "options": ["Kobo and Pounds", "Naira and Kobo", "Dollar and Cent", "Yen and Sen"],
+        "answer": "Naira and Kobo"
+      },
+      {
+        "question": "We show respect to elders by?",
+        "options": ["Greeting them", "Ignoring them", "Shouting at them", "Fighting them"],
+        "answer": "Greeting them"
+      },
+      {
+        "question": "The largest city in Nigeria by population is?",
+        "options": ["Abuja", "Kano", "Lagos", "Ibadan"],
+        "answer": "Lagos"
+      },
+      {
+        "question": "The green colour in the Nigerian flag stands for?",
+        "options": ["Fertile land", "Peace", "Unity", "Water"],
+        "answer": "Fertile land"
+      },
+      {
+        "question": "The body responsible for keeping laws and order in Nigeria is?",
+        "options": ["The Army", "The Police", "The Teachers", "The Traders"],
+        "answer": "The Police"
+      },
+      {
+        "question": "The symbol of authority in a community is the?",
+        "options": ["Crown", "Drum", "Book", "Bag"],
+        "answer": "Crown"
+      },
+      {
+        "question": "The leader of a school is called?",
+        "options": ["Class Captain", "Prefect", "Head Teacher", "Councillor"],
+        "answer": "Head Teacher"
+      },
+      {
+        "question": "The national language spoken in Nigeria is?",
+        "options": ["English", "French", "Yoruba", "Hausa"],
+        "answer": "English"
+      },
+      {
+        "question": "The Nigerian coat of arms has how many flowers at the base?",
+        "options": ["One red flower", "Two white flowers", "Coctus spectabilis flowers", "Three yellow flowers"],
+        "answer": "Coctus spectabilis flowers"
+      },
+  
+      {
+        "question": "What does traffic light help to control?",
+        "options": ["People", "Vehicles", "Road accidents", "Animals"],
+        "answer": "Vehicles"
+      },
+      {
+        "question": "Which of these is a good value?",
+        "options": ["Stealing", "Honesty", "Cheating", "Lying"],
+        "answer": "Honesty"
+      },
+      {
+        "question": "Who is responsible for keeping law and order in society?",
+        "options": ["Doctor", "Teacher", "Police", "Farmer"],
+        "answer": "Police"
+      },
+      {
+        "question": "Which of these is NOT a means of communication?",
+        "options": ["Radio", "Television", "Market", "Newspaper"],
+        "answer": "Market"
+      },
+      {
+        "question": "The first people we live with as children are our?",
+        "options": ["Friends", "Teachers", "Family", "Neighbors"],
+        "answer": "Family"
+      },
+      {
+        "question": "Which of these helps us to know right from wrong?",
+        "options": ["Rules", "Games", "Songs", "Stories"],
+        "answer": "Rules"
+      },
+      {
+        "question": "Which of these is an important national symbol of Nigeria?",
+        "options": ["Football", "Coat of Arms", "Drum", "River"],
+        "answer": "Coat of Arms"
+      },
+      {
+        "question": "Which of these is a way of showing respect?",
+        "options": ["Fighting", "Greeting", "Shouting", "Lying"],
+        "answer": "Greeting"
+      },
+      {
+        "question": "What is the act of helping people in need called?",
+        "options": ["Selfishness", "Kindness", "Anger", "Greed"],
+        "answer": "Kindness"
+      },
+      {
+        "question": "Which of these is an example of a public property?",
+        "options": ["Family car", "School", "Private house", "Farmland"],
+        "answer": "School"
+      }
+    ]
+  }
+}
