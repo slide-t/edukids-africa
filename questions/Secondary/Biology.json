@@ -1,0 +1,106 @@
+{
+  "Biology": {
+    "level1": [
+      {
+        "question": "The organ that helps filter waste from the blood is ____.",
+        "options": ["Heart", "Kidney", "Lungs", "Stomach"],
+        "correct": "Kidney"
+      },
+      {
+        "question": "Which of these is a vector of malaria?",
+        "options": ["Housefly", "Mosquito", "Cockroach", "Ant"],
+        "correct": "Mosquito"
+      },
+      {
+        "question": "Which of the following is a habitat for fish?",
+        "options": ["Forest", "Soil", "Water", "Desert"],
+        "correct": "Water"
+      },
+      {
+        "question": "An organism that can make its own food is called ____.",
+        "options": ["Heterotroph", "Autotroph", "Parasite", "Decomposer"],
+        "correct": "Autotroph"
+      },
+      {
+        "question": "The main function of roots in plants is ____.",
+        "options": ["Photosynthesis", "Absorption of water", "Reproduction", "Respiration"],
+        "correct": "Absorption of water"
+      },
+      {
+        "question": "Which of these is NOT a communicable disease?",
+        "options": ["Tuberculosis", "Cholera", "Hypertension", "Measles"],
+        "correct": "Hypertension"
+      },
+      {
+        "question": "The respiratory organ in fish is the ____.",
+        "options": ["Lungs", "Gills", "Skin", "Trachea"],
+        "correct": "Gills"
+      },
+      {
+        "question": "The study of living things is called ____.",
+        "options": ["Physics", "Biology", "Chemistry", "Ecology"],
+        "correct": "Biology"
+      },
+      {
+        "question": "Which of these foods is rich in protein?",
+        "options": ["Rice", "Beans", "Cassava", "Maize"],
+        "correct": "Beans"
+      },
+      {
+        "question": "The main function of the skeleton is ____.",
+        "options": ["To produce blood", "To support the body", "To digest food", "To transport oxygen"],
+        "correct": "To support the body"
+      },
+      {
+        "question": "Which of these is an example of a mammal?",
+        "options": ["Lizard", "Frog", "Goat", "Chicken"],
+        "correct": "Goat"
+      },
+      {
+        "question": "Which part of the plant carries out photosynthesis?",
+        "options": ["Leaf", "Root", "Stem", "Flower"],
+        "correct": "Leaf"
+      },
+      {
+        "question": "Which of the following diseases is caused by lack of vitamin C?",
+        "options": ["Kwashiorkor", "Scurvy", "Rickets", "Night blindness"],
+        "correct": "Scurvy"
+      },
+      {
+        "question": "The organ that digests food in the body is the ____.",
+        "options": ["Heart", "Stomach", "Kidney", "Liver"],
+        "correct": "Stomach"
+      },
+      {
+        "question": "Which of these is an example of a reptile?",
+        "options": ["Snake", "Toad", "Eagle", "Rat"],
+        "correct": "Snake"
+      },
+      {
+        "question": "The removal of waste products from the body is called ____.",
+        "options": ["Respiration", "Circulation", "Excretion", "Digestion"],
+        "correct": "Excretion"
+      },
+      {
+        "question": "Which blood cells fight against diseases?",
+        "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+        "correct": "White blood cells"
+      },
+      {
+        "question": "Which part of a plant absorbs water and minerals?",
+        "options": ["Leaf", "Root", "Stem", "Flower"],
+        "correct": "Root"
+      },
+      {
+        "question": "Which group of animals have feathers?",
+        "options": ["Mammals", "Birds", "Reptiles", "Amphibians"],
+        "correct": "Birds"
+      },
+      {
+        "question": "Which of these is a mode of reproduction in amoeba?",
+        "options": ["Budding", "Binary fission", "Spore formation", "Fragmentation"],
+        "correct": "Binary fission"
+      }
+    ]
+  }
+}
