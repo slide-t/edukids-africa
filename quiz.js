@@ -1,145 +1,190 @@
-<script>
-  // ===== Utility: Get query parameters =====
-  function getQueryParams() {
-    const params = new URLSearchParams(window.location.search);
-    return {
-      category: params.get("category"),
-      subject: params.get("subject")
-    };
-  }
+// ==========================
+// Quiz.js (Updated - No Modal, Auto Start)
+// ==========================
 
-  const { category, subject } = getQueryParams();
+// Global variables
+let subject = "";
+let subjectData = {};
+let availableLevels = [];
+let currentLevelIndex = 0;
+let progressKey = "";
+let currentLevel = "";
+let questions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+let correctSound = new Audio("audio/correct.mp3");
+let wrongSound = new Audio("audio/wrong.mp3");
 
-  // ===== Quiz State =====
-  let questions = [];
-  let currentQuestionIndex = 0;
-  let score = 0;
+// ========== LOAD SUBJECT DATA ==========
+async function loadSubjectData() {
+  subject = decodeURIComponent(new URLSearchParams(window.location.search).get("subject") || "Mathematics");
+  const category = decodeURIComponent(new URLSearchParams(window.location.search).get("category") || "");
+  progressKey = `${subject}_progress`;
 
-  // ===== DOM Elements =====
-  const questionEl = document.getElementById("question");
-  const optionsEl = document.getElementById("options");
-  const nextBtn = document.getElementById("next-btn");
-  const scoreEl = document.getElementById("score");
-  const subjectTitleEl = document.getElementById("subject-title");
-
-  // ===== Audio =====
-  const correctSound = new Audio("assets/audio/correct.mp3");
-  const wrongSound = new Audio("assets/audio/wrong.mp3");
-
-  // ===== Load Questions =====
-  async function loadQuestions() {
-    if (!category || !subject) {
-      alert("Invalid subject selection!");
-      return;
-    }
-
-    // Try to load from questions/<category>/<subject>.json
-    const subjectPath = `questions/${category}/${subject}.json`;
-
+  // Try category-specific JSON
+  if (category) {
+    const path = `questions/${category}/${subject}.json`;
     try {
-      const res = await fetch(subjectPath);
+      const res = await fetch(path);
       if (res.ok) {
-        questions = await res.json();
-        startQuiz();
-        return;
-      } else {
-        throw new Error("Subject file not found");
+        subjectData = await res.json();
+        console.log(`✅ Loaded ${subject} from ${path}`);
+        setupLevels();
+        startLevel(); // 🚀 auto start
+        return true;
       }
     } catch (err) {
-      console.warn(`Could not load ${subjectPath}. Falling back to questions.json`, err);
+      console.warn(`⚠️ Could not load ${path}, falling back...`, err);
+    }
+  }
 
-      // Fallback: Load from global questions.json
-      try {
-        const res = await fetch("questions.json");
-        if (!res.ok) throw new Error("questions.json not found");
+  // Fallback to global questions.json
+  try {
+    const res = await fetch("questions.json");
+    if (!res.ok) throw new Error("questions.json not found");
+    const data = await res.json();
 
-        const allData = await res.json();
-        if (allData[subject]) {
-          questions = allData[subject];
-          startQuiz();
-        } else {
-          throw new Error("Subject not in questions.json");
+    if (category && data[category] && data[category][subject]) {
+      subjectData = data[category][subject];
+    } else if (data[subject]) {
+      subjectData = data[subject];
+    } else {
+      // scan all categories
+      for (const k of Object.keys(data)) {
+        if (typeof data[k] === "object" && data[k][subject]) {
+          subjectData = data[k][subject];
+          break;
         }
-      } catch (finalErr) {
-        console.error("No questions available!", finalErr);
-        questionEl.textContent = "No questions found for this subject.";
-        nextBtn.style.display = "none";
       }
     }
+
+    if (!subjectData || Object.keys(subjectData).length === 0) {
+      console.error("No question data found for subject:", subject);
+      return false;
+    }
+
+    console.log(`✅ Loaded ${subject} from fallback questions.json`);
+    setupLevels();
+    startLevel(); // 🚀 auto start
+    return true;
+  } catch (err) {
+    console.error("❌ Failed to load questions.json", err);
+    return false;
   }
+}
 
-  // ===== Start Quiz =====
-  function startQuiz() {
-    subjectTitleEl.textContent = `${category} - ${subject}`;
-    currentQuestionIndex = 0;
-    score = 0;
-    scoreEl.textContent = `Score: ${score}`;
-    showQuestion();
-  }
-
-  // ===== Show Question =====
-  function showQuestion() {
-    const q = questions[currentQuestionIndex];
-    questionEl.textContent = q.question;
-    optionsEl.innerHTML = "";
-
-    q.options.forEach(option => {
-      const btn = document.createElement("button");
-      btn.className =
-        "w-full text-left px-4 py-2 mb-2 bg-gray-100 rounded-lg hover:bg-indigo-500 hover:text-white transition";
-      btn.textContent = option;
-
-      btn.onclick = () => selectAnswer(option, q.answer, btn);
-
-      optionsEl.appendChild(btn);
+// ========== SETUP LEVELS ==========
+function setupLevels() {
+  availableLevels = Object.keys(subjectData)
+    .filter(k => /^Level\s*\d+/i.test(k))
+    .sort((a, b) => {
+      const na = parseInt(a.match(/\d+/)[0], 10);
+      const nb = parseInt(b.match(/\d+/)[0], 10);
+      return na - nb;
     });
 
-    nextBtn.style.display = "none";
+  if (availableLevels.length === 0) {
+    alert(`Sorry, no playable levels found for ${subject}.`);
+    return;
   }
 
-  // ===== Select Answer =====
-  function selectAnswer(selected, correct, btn) {
-    const buttons = optionsEl.querySelectorAll("button");
-
-    buttons.forEach(b => (b.disabled = true));
-
-    if (selected === correct) {
-      btn.classList.add("bg-green-500", "text-white");
-      score++;
-      scoreEl.textContent = `Score: ${score}`;
-      correctSound.play();
-    } else {
-      btn.classList.add("bg-red-500", "text-white");
-      wrongSound.play();
-
-      // highlight correct answer
-      buttons.forEach(b => {
-        if (b.textContent === correct) {
-          b.classList.add("bg-green-500", "text-white");
-        }
-      });
+  // Handle missing/only levels
+  if (availableLevels.length === 1) {
+    alert(`You only have ${availableLevels[0]} to play for ${subject}.`);
+  } else {
+    const nums = availableLevels.map(l => parseInt(l.match(/\d+/)[0], 10));
+    const missing = [];
+    for (let i = nums[0]; i <= nums[nums.length - 1]; i++) {
+      if (!nums.includes(i)) missing.push(i);
     }
-
-    nextBtn.style.display = "block";
-  }
-
-  // ===== Next Question =====
-  nextBtn.addEventListener("click", () => {
-    currentQuestionIndex++;
-    if (currentQuestionIndex < questions.length) {
-      showQuestion();
-    } else {
-      endQuiz();
+    if (missing.length > 0) {
+      alert(
+        `Note: Level${missing.length > 1 ? "s" : ""} ${missing.join(", ")} ${
+          missing.length > 1 ? "are" : "is"
+        } missing. You can only play ${availableLevels.join(", ")} for ${subject}.`
+      );
     }
-  });
-
-  // ===== End Quiz =====
-  function endQuiz() {
-    questionEl.textContent = "Quiz Completed!";
-    optionsEl.innerHTML = `<p class="text-lg font-semibold">Your final score is ${score} / ${questions.length}</p>`;
-    nextBtn.style.display = "none";
   }
 
-  // ===== Start on page load =====
-  loadQuestions();
-</script>
+  // Track progress
+  const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+  let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
+  currentLevelIndex = (firstNotPassed === -1) ? availableLevels.length : firstNotPassed;
+}
+
+// ========== START LEVEL ==========
+function startLevel() {
+  if (currentLevelIndex >= availableLevels.length) {
+    alert("🎉 Congratulations! You’ve completed all levels for " + subject);
+    return;
+  }
+
+  currentLevel = availableLevels[currentLevelIndex];
+  questions = subjectData[currentLevel];
+  currentQuestionIndex = 0;
+  score = 0;
+
+  document.getElementById("quiz-board").innerHTML = `<h2>${currentLevel}</h2>`;
+  showQuestion();
+}
+
+// ========== SHOW QUESTION ==========
+function showQuestion() {
+  if (currentQuestionIndex >= questions.length) {
+    endLevel();
+    return;
+  }
+
+  const q = questions[currentQuestionIndex];
+  const quizBoard = document.getElementById("quiz-board");
+
+  quizBoard.innerHTML = `
+    <div class="question">
+      <p>${q.question}</p>
+      <div class="options">
+        ${q.options.map((opt, i) => `<button onclick="checkAnswer('${opt}')">${opt}</button>`).join("")}
+      </div>
+    </div>
+  `;
+}
+
+// ========== CHECK ANSWER ==========
+function checkAnswer(answer) {
+  const q = questions[currentQuestionIndex];
+  if (answer === q.answer) {
+    correctSound.play();
+    score++;
+  } else {
+    wrongSound.play();
+  }
+
+  currentQuestionIndex++;
+  showQuestion();
+}
+
+// ========== END LEVEL ==========
+function endLevel() {
+  const quizBoard = document.getElementById("quiz-board");
+
+  quizBoard.innerHTML = `
+    <h2>${currentLevel} Completed!</h2>
+    <p>Your Score: ${score} / ${questions.length}</p>
+    <button onclick="nextLevel()">Next Level</button>
+  `;
+
+  // Save progress
+  const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
+  progress[currentLevel] = { score, total: questions.length, passed: true };
+  localStorage.setItem(progressKey, JSON.stringify(progress));
+}
+
+// ========== NEXT LEVEL ==========
+function nextLevel() {
+  currentLevelIndex++;
+  startLevel();
+}
+
+// ========== INIT ==========
+window.onload = () => {
+  loadSubjectData();
+};
