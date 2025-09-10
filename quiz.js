@@ -1,4 +1,3 @@
-
 // ================================
 // quiz.js - EduKids Africa (full)
 // ================================
@@ -17,7 +16,6 @@ const levelDisplay = document.getElementById("levelDisplay");
 const progressBar = document.getElementById("progressBar");
 const clockElement = document.getElementById("clock");
 const modal = document.getElementById("instructionModal");
-const startBtn = document.getElementById("startQuizBtn");
 
 /* End modal elements (must exist in HTML) */
 const endModal = document.getElementById("endModal");
@@ -38,13 +36,11 @@ const PASS_PERCENT = 75;
 const progressKey = `EduKidsProgress_${subject}`; // localStorage key
 
 /* timer for each question */
-
 let timerInterval;
 let timeLeft = 15;
 const circle = document.getElementById("timerCircle");
 const timerText = document.getElementById("timerText");
 const circleLength = 220; // circumference
-
 
 function startTimer() {
   clearInterval(timerInterval);
@@ -62,18 +58,15 @@ function startTimer() {
 
     if (timeLeft <= 0) {
       clearInterval(timerInterval);
-      // auto move to next question or mark wrong
       handleTimeout();
     }
   }, 1000);
 }
 
 function handleTimeout() {
-  // treat as incorrect and move on
   currentQuestionIndex++;
   renderQuestion();
 }
-
 
 /* Utility: start clock */
 function startClock() {
@@ -124,7 +117,6 @@ async function loadSubjectData() {
     } else if (data[subject]) {
       subjectData = data[subject];
     } else {
-      // fallback: scan all categories
       for (const k of Object.keys(data)) {
         if (typeof data[k] === "object" && data[k][subject]) {
           subjectData = data[k][subject];
@@ -163,17 +155,13 @@ function setupLevels() {
     return;
   }
 
-  // If only one level exists
   if (availableLevels.length === 1) {
     alert(`You only have ${availableLevels[0]} to play for ${subject}.`);
   } else {
-    // Check for missing levels in sequence
     const nums = availableLevels.map(l => parseInt(l.match(/\d+/)[0], 10));
     const missing = [];
     for (let i = nums[0]; i <= nums[nums.length - 1]; i++) {
-      if (!nums.includes(i)) {
-        missing.push(i);
-      }
+      if (!nums.includes(i)) missing.push(i);
     }
     if (missing.length > 0) {
       alert(
@@ -184,67 +172,9 @@ function setupLevels() {
     }
   }
 
-  // Handle progress
   const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
   let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
   currentLevelIndex = (firstNotPassed === -1) ? availableLevels.length : firstNotPassed;
-}
-
-/* Load questions.json and prepare available levels *
-async function loadSubjectData() {
-  try {
-    const res = await fetch("questions.json");
-    const data = await res.json();
-    // Support nested structure: e.g. data["Primary School"]["Mathematics"] or top-level data["Mathematics"]
-    // Try either (category param may exist)
-    const category = new URLSearchParams(window.location.search).get("category");
-    if (category && data[category] && data[category][subject]) {
-      subjectData = data[category][subject];
-    } else if (data[subject]) {
-      subjectData = data[subject];
-    } else {
-      // maybe the JSON uses top-level categories (like "Primary School") - find subject anywhere
-      let found = null;
-      for (const k of Object.keys(data)) {
-        if (typeof data[k] === "object" && data[k][subject]) {
-          found = data[k][subject];
-          break;
-        }
-      }
-      if (found) subjectData = found;
-    }
-
-    if (!subjectData || Object.keys(subjectData).length === 0) {
-      console.error("No question data found for subject:", subject);
-      return false;
-    }
-
-    // Collect Level keys & sort (Level 1, Level 2, ...)
-    availableLevels = Object.keys(subjectData)
-      .filter(k => /^Level\s*\d+/i.test(k))
-      .sort((a,b) => {
-        const na = parseInt(a.match(/\d+/)[0],10);
-        const nb = parseInt(b.match(/\d+/)[0],10);
-        return na - nb;
-      });
-*/
-    // load progress from localStorage to set starting level
-    const progress = JSON.parse(localStorage.getItem(progressKey) || "{}");
-    // find first level not passed
-    let firstNotPassed = availableLevels.findIndex(l => !progress[l]);
-    if (firstNotPassed === -1) {
-      // all passed -> either show completion screen or start at last level completed + 1 (but none)
-      // We'll default to the last level index + 1 (which means all completed)
-      currentLevelIndex = availableLevels.length; // special marker -> completed
-    } else {
-      currentLevelIndex = firstNotPassed;
-    }
-
-    return true;
-  } catch (err) {
-    console.error("Failed to load questions.json", err);
-    return false;
-  }
 }
 
 /* Load and prepare the questions for the current level */
@@ -253,22 +183,15 @@ function prepareLevelQuestions() {
     questions = [];
     return;
   }
-  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
+  const levelKey = availableLevels[currentLevelIndex];
   const raw = subjectData[levelKey] || [];
-  // deep clone to avoid mutating original data
-  questions = raw.map(q => {
-    // allow either "answer" or "correct" keys in JSON (backwards compatibility)
-    return {
-      question: q.question,
-      options: Array.isArray(q.options) ? [...q.options] : [],
-      answer: q.answer || q.correct || q.correctAnswer || ""
-    };
-  });
+  questions = raw.map(q => ({
+    question: q.question,
+    options: Array.isArray(q.options) ? [...q.options] : [],
+    answer: q.answer || q.correct || q.correctAnswer || ""
+  }));
 
-  // Shuffle questions and options
-  questions = shuffle(questions);
-  questions = questions.map(q => {
-    // ensure answer is present in options (if not, add it)
+  questions = shuffle(questions).map(q => {
     if (!q.options.includes(q.answer)) q.options.push(q.answer);
     q.options = shuffle([...q.options]);
     return q;
@@ -286,7 +209,7 @@ function renderQuestion() {
   if (questionText) questionText.textContent = q.question;
   if (optionsContainer) {
     optionsContainer.innerHTML = "";
-    q.options.forEach((opt, idx) => {
+    q.options.forEach(opt => {
       const btn = document.createElement("button");
       btn.type = "button";
       btn.className = "w-full text-left px-4 py-3 rounded-lg bg-purple-100 hover:bg-purple-200 transition";
@@ -296,16 +219,14 @@ function renderQuestion() {
     });
   }
   updateScoreBoard();
-startTimer();
+  startTimer();
 }
-
 
 /* When user selects an option */
 function onSelectOption(selectedText, btnEl) {
   const q = questions[currentQuestionIndex];
   const correct = q.answer;
 
-  // mark chosen / correct
   if (selectedText === correct) {
     score++;
     if (btnEl) btnEl.classList.add("bg-green-500", "text-white");
@@ -313,16 +234,12 @@ function onSelectOption(selectedText, btnEl) {
   } else {
     if (btnEl) btnEl.classList.add("bg-red-500", "text-white");
     wrongSound.play();
-    // highlight correct
-    const children = [...optionsContainer.children];
-    const correctBtn = children.find(child => child.textContent === correct);
+    const correctBtn = [...optionsContainer.children].find(child => child.textContent === correct);
     if (correctBtn) correctBtn.classList.add("bg-green-500", "text-white");
   }
 
-  // disable all options
   [...optionsContainer.children].forEach(c => c.disabled = true);
 
-  // move next
   setTimeout(() => {
     currentQuestionIndex++;
     if (currentQuestionIndex < questions.length) {
@@ -363,7 +280,6 @@ function showEndModal(passed, totalCorrect, totalQuestions) {
     retryBtn.classList.remove("hidden");
     nextBtn.classList.add("hidden");
   }
-  // show modal (Tailwind classes)
   endModal.classList.remove("hidden");
   endModal.classList.add("flex");
 }
@@ -384,9 +300,7 @@ function saveLevelPassed(levelKey) {
 
 /* Determine and start the current level */
 function startLevel() {
-  // if all levels already passed
   if (currentLevelIndex >= availableLevels.length) {
-    // show final completion message
     if (!endModal) {
       alert(`🎓 You have completed all levels for ${subject}!`);
       return;
@@ -400,14 +314,11 @@ function startLevel() {
     return;
   }
 
-  const levelKey = availableLevels[currentLevelIndex]; // e.g. "Level 1"
+  const levelKey = availableLevels[currentLevelIndex];
   if (levelDisplay) levelDisplay.textContent = levelKey;
-  // prepare questions for current level
   prepareLevelQuestions();
-  // reset counters
   currentQuestionIndex = 0;
   score = 0;
-  // render first question
   renderQuestion();
 }
 
@@ -428,7 +339,6 @@ function endLevel() {
 
   if (passed) {
     saveLevelPassed(levelKey);
-
     if (retryBtn) retryBtn.classList.add("hidden");
     if (nextLevelBtn) nextLevelBtn.classList.remove("hidden");
   } else {
@@ -436,21 +346,18 @@ function endLevel() {
     if (nextLevelBtn) nextLevelBtn.classList.add("hidden");
   }
 
-  // ✅ Show summary inside Help Modal
   if (helpModal) {
     helpModal.classList.remove("hidden");
     helpModal.classList.add("flex");
   }
 
-  // stop timer
   clearInterval(timerInterval);
 }
 
-/* Button handlers for end modal */
+/* Button handlers */
 if (retryBtn) {
   retryBtn.addEventListener("click", () => {
     hideEndModal();
-    // restart the same level with fresh shuffle
     prepareLevelQuestions();
     currentQuestionIndex = 0;
     score = 0;
@@ -461,49 +368,10 @@ if (retryBtn) {
 if (nextBtn) {
   nextBtn.addEventListener("click", () => {
     hideEndModal();
-    // move to next level
     currentLevelIndex++;
     startLevel();
   });
 }
-
-document.addEventListener("DOMContentLoaded", async () => {
-  startClock();
-  const ok = await loadSubjectData();
-  if (!ok) {
-    if (questionText) questionText.textContent = `No quiz data found for "${subject}".`;
-    return;
-  }
-
-  const modal = document.getElementById("instructionModal");
-  if (modal) {
-    setTimeout(() => {
-      modal.classList.add("hidden");
-      modal.classList.remove("flex");
-      startLevel();
-    }, 3000); // ⏳ auto-close after 3 seconds
-  } else {
-    startLevel();
-  }
-});
-
-/* Instruction modal start button *
-document.addEventListener("DOMContentLoaded", () => {
-  const startBtn = document.getElementById("startQuizBtn");
-  const modal = document.getElementById("instructionModal");
-  
-  if (startBtn) {
-    startBtn.addEventListener("click", () => {
-      if (modal) {
-        modal.classList.add("hidden");
-        modal.classList.remove("flex");
-      }
-      startLevel();
-    });
-  }
-});
-
-*/
 
 const retrySummaryBtn = document.getElementById("retryBtn");
 const nextLevelSummaryBtn = document.getElementById("nextLevelBtn");
@@ -534,23 +402,23 @@ if (nextLevelSummaryBtn) {
   });
 }
 
-
 /* Initialiser */
 document.addEventListener("DOMContentLoaded", async () => {
   startClock();
 
   const ok = await loadSubjectData();
   if (!ok) {
-    // show friendly error on page
     if (questionText) questionText.textContent = `No quiz data found for "${subject}".`;
     return;
   }
 
-  // If user already completed none -> show instruction modal if present, else start immediately.
   if (modal) {
-    // leave modal visible until user clicks Start (existing behavior)
+    setTimeout(() => {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      startLevel();
+    }, 3000); // auto close modal after 3 seconds
   } else {
-    // no instruction modal found - start automatically
     startLevel();
   }
 });
