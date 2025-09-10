@@ -300,124 +300,26 @@
   // Load subjects on page load
   loadSubjects();
 </script>
-  <!--
   <script>
-  // Year auto-update
-  document.getElementById("year").textContent = new Date().getFullYear();
+// Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  // Typing placeholder animation
-  const placeholderText = "search by subject here...";
-  let i = 0;
-  function typePlaceholder() {
-    if (i <= placeholderText.length) {
-      document.getElementById("searchInput").setAttribute("placeholder", placeholderText.slice(0, i));
-      i++;
-      setTimeout(typePlaceholder, 120);
-    }
-  }
-  typePlaceholder();
+    mobileMenu.classList.remove('flex');
+    mobileMenu.classList.add('hidden');
 
-  const subjectList = document.getElementById("subject-list");
-  const searchInput = document.getElementById("searchInput");
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
 
-  // Tooltip element
-  let tooltip = document.getElementById("searchTooltip");
-  if (!tooltip) {
-    tooltip = document.createElement("div");
-    tooltip.id = "searchTooltip";
-    tooltip.className = "absolute bg-yellow-300 text-gray-900 px-3 py-2 rounded shadow-lg text-sm";
-    tooltip.style.display = "none";
-    tooltip.style.zIndex = "50";
-    document.body.appendChild(tooltip);
-  }
-
-  let subjects = {};
-
-  // Load subjects.json
-  async function loadSubjects() {
-    try {
-      const res = await fetch('subjects.json');
-      subjects = await res.json();
-      renderSubjects();
-    } catch (err) {
-      console.error("Failed to load subjects.json", err);
-      subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
-    }
-  }
-
-function renderSubjects(filter = "") {
-  subjectList.innerHTML = "";
-
-  Object.keys(subjects).forEach(category => {
-    const groupDiv = document.createElement("div");
-    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4"; // margin bottom consistent
-
-    // Category heading
-    const heading = document.createElement("h2");
-    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
-    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
-
-    // Subject list container
-    const listDiv = document.createElement("div");
-    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500"; // no extra padding
-
-    // Add filtered subjects
-    subjects[category]
-      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
-      .forEach(sub => {
-        const item = document.createElement("a");
-        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
-        item.href = `quiz.html?subject=${encodeURIComponent(sub)}`;
-        item.textContent = sub;
-        listDiv.appendChild(item);
-      });
-
-    // Toggle on heading click
-    heading.addEventListener("click", () => {
-      listDiv.classList.toggle("max-h-0");
-      listDiv.classList.toggle("max-h-96");
-      const icon = heading.querySelector("i");
-      icon.classList.toggle("rotate-180");
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileMenu.classList.add('open'), 10);
+      } else {
+        mobileMenu.classList.remove('open');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+      }
     });
-
-    // Append to group
-    groupDiv.appendChild(heading);
-    groupDiv.appendChild(listDiv);
-    subjectList.appendChild(groupDiv);
-
-    // Auto-expand matching category when filtering
-    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
-      listDiv.classList.replace("max-h-0", "max-h-96");
-      heading.querySelector("i").classList.add("rotate-180");
-    }
-  });
-}
-
-  // Search filtering
-  searchInput.addEventListener("input", e => {
-    const value = e.target.value.trim();
-    renderSubjects(value);
-  });
-
-  // Tooltip for empty search on Enter
-  searchInput.addEventListener("keydown", e => {
-    if (e.key === "Enter" && e.target.value.trim() === "") {
-      const rect = searchInput.getBoundingClientRect();
-      tooltip.textContent = "Please enter a subject to search!";
-      tooltip.style.top = rect.bottom + window.scrollY + 8 + "px";
-      tooltip.style.left = rect.left + window.scrollX + "px";
-      tooltip.style.display = "block";
-
-      setTimeout(() => {
-        tooltip.style.display = "none";
-      }, 10000);
-    }
-  });
-
-  // Load subjects on page load
-  loadSubjects();
-</script>
-   -->
-  <script src="script.js"></script>
+    
+  </script>
 </body>
 </html>
