@@ -720,9 +720,110 @@
     "question": "The energy possessed by a moving object is called?",
     "options": ["Potential energy", "Kinetic energy", "Heat energy", "Chemical energy"],
     "answer": "Kinetic energy"
+  },
+  
+    [
+  {
+    "question": "The part of a drawing board that prevents the T-square from slipping is called?",
+    "options": ["Blade", "Edge", "Straight edge", "Working edge"],
+    "answer": "Working edge"
+  },
+  {
+    "question": "Which of the following devices converts sound energy into electrical energy?",
+    "options": ["Loudspeaker", "Microphone", "Battery", "Camera"],
+    "answer": "Microphone"
+  },
+  {
+    "question": "In electricity, the unit of resistance is?",
+    "options": ["Watt", "Volt", "Ohm", "Ampere"],
+    "answer": "Ohm"
+  },
+  {
+    "question": "Which material is best for making the tip of a cutting tool?",
+    "options": ["Rubber", "Soft iron", "High carbon steel", "Plastic"],
+    "answer": "High carbon steel"
+  },
+  {
+    "question": "The power that makes a moving bicycle stop is?",
+    "options": ["Magnetic force", "Frictional force", "Electrical force", "Gravitational force"],
+    "answer": "Frictional force"
+  },
+  {
+    "question": "The part of a lever where force is applied is called?",
+    "options": ["Effort", "Load", "Pivot", "Fulcrum"],
+    "answer": "Effort"
+  },
+  {
+    "question": "Which of these energy sources is NOT renewable?",
+    "options": ["Sun", "Coal", "Wind", "Water"],
+    "answer": "Coal"
+  },
+  {
+    "question": "Which of the following is a third-class lever?",
+    "options": ["Scissors", "Wheelbarrow", "Fishing rod", "Seesaw"],
+    "answer": "Fishing rod"
+  },
+  {
+    "question": "Which tool is used for cutting thin sheets of metal?",
+    "options": ["Chisel", "Snips", "File", "Saw"],
+    "answer": "Snips"
+  },
+  {
+    "question": "The primary purpose of insulators is to?",
+    "options": ["Allow heat flow", "Conduct electricity", "Prevent electric shock", "Store current"],
+    "answer": "Prevent electric shock"
+  },
+  {
+    "question": "The process of coating iron with zinc to prevent rusting is called?",
+    "options": ["Electroplating", "Painting", "Galvanization", "Polishing"],
+    "answer": "Galvanization"
+  },
+  {
+    "question": "The device that converts mechanical energy into electrical energy is?",
+    "options": ["Motor", "Generator", "Transformer", "Battery"],
+    "answer": "Generator"
+  },
+  {
+    "question": "The use of a protractor in technical drawing is for measuring?",
+    "options": ["Circles", "Angles", "Straight lines", "Parallel lines"],
+    "answer": "Angles"
+  },
+  {
+    "question": "Which type of energy is stored in food?",
+    "options": ["Heat energy", "Chemical energy", "Kinetic energy", "Nuclear energy"],
+    "answer": "Chemical energy"
+  },
+  {
+    "question": "A drawing scale of 1:100 means?",
+    "options": ["1 unit on paper = 100 units in real life", "100 units on paper = 1 unit in real life", "Both are equal", "None of the above"],
+    "answer": "1 unit on paper = 100 units in real life"
+  },
+  {
+    "question": "The use of seatbelts in vehicles is to?",
+    "options": ["Decorate the car", "Make driving faster", "Reduce injury during accidents", "Stop car from moving"],
+    "answer": "Reduce injury during accidents"
+  },
+  {
+    "question": "The main function of lubricants in machines is to?",
+    "options": ["Stop electricity", "Reduce friction", "Make machines heavy", "Produce energy"],
+    "answer": "Reduce friction"
+  },
+  {
+    "question": "Which of these is an electronic device?",
+    "options": ["Radio", "Pencil", "Stone", "Chair"],
+    "answer": "Radio"
+  },
+  {
+    "question": "The small wheels inside a clock are examples of?",
+    "options": ["Screws", "Levers", "Gears", "Springs"],
+    "answer": "Gears"
+  },
+  {
+    "question": "Which of the following materials is a conductor?",
+    "options": ["Wood", "Glass", "Copper", "Rubber"],
+    "answer": "Copper"
   }
-     ]
-   }
+   ]
+  }
 }
-      
     
