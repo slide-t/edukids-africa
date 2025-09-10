@@ -653,11 +653,314 @@
           "options": ["Leave it outside uncovered", "Keep in a clean container and refrigerate", "Pour it away", "Cover it with sand"],
           "answer": "Keep in a clean container and refrigerate"
         }
+      ],
+    {
+      "level3": [
+        {
+          "question": "Which of the following is the correct way to preserve yam tubers for a long period?",
+          "options": ["Keep in water", "Store in a cool dry barn", "Leave under the sun daily", "Cover with wet cloth"],
+          "answer": "Store in a cool dry barn"
+        },
+        {
+          "question": "The practice of raising crops and animals together on the same piece of land is called:",
+          "options": ["Irrigation", "Mixed farming", "Crop rotation", "Monocropping"],
+          "answer": "Mixed farming"
+        },
+        {
+          "question": "Which of these tools is most suitable for making ridges on the farm?",
+          "options": ["Hoe", "Cutlass", "Rake", "Shovel"],
+          "answer": "Hoe"
+        },
+        {
+          "question": "Which of the following is a cash crop?",
+          "options": ["Cocoa", "Maize", "Cassava", "Yam"],
+          "answer": "Cocoa"
+        },
+        {
+          "question": "The process of removing weeds from the farm is called:",
+          "options": ["Harvesting", "Weeding", "Planting", "Irrigation"],
+          "answer": "Weeding"
+        },
+        {
+          "question": "Which of these is NOT a method of food preservation?",
+          "options": ["Drying", "Freezing", "Salting", "Burning"],
+          "answer": "Burning"
+        },
+        {
+          "question": "Why do farmers practice crop rotation?",
+          "options": ["To decorate the farm", "To improve soil fertility and reduce pests", "To harvest faster", "To waste land"],
+          "answer": "To improve soil fertility and reduce pests"
+        },
+        {
+          "question": "The rearing of birds like chicken, turkey, and duck is called:",
+          "options": ["Fishing", "Poultry farming", "Hunting", "Dairy farming"],
+          "answer": "Poultry farming"
+        },
+        {
+          "question": "Which of the following is an example of a leguminous crop?",
+          "options": ["Beans", "Maize", "Yam", "Rice"],
+          "answer": "Beans"
+        },
+        {
+          "question": "The correct place to keep farming tools after use is:",
+          "options": ["On the farm", "In the kitchen", "In the tool shed", "On the roadside"],
+          "answer": "In the tool shed"
+        },
+        {
+          "question": "Which nutrient in food helps to build and repair body tissues?",
+          "options": ["Carbohydrates", "Proteins", "Fats and oils", "Vitamins"],
+          "answer": "Proteins"
+        },
+        {
+          "question": "One of the following is a danger of bush burning:",
+          "options": ["It adds humus", "It kills soil organisms", "It improves soil fertility", "It saves the forest"],
+          "answer": "It kills soil organisms"
+        },
+        {
+          "question": "A farmer who grows only maize every year on his land is practicing:",
+          "options": ["Mixed farming", "Monocropping", "Crop rotation", "Shifting cultivation"],
+          "answer": "Monocropping"
+        },
+        {
+          "question": "Which of these is the best safety practice when using farm chemicals?",
+          "options": ["Drink a little to test it", "Wear gloves and mask", "Spray with bare hands", "Store near food"],
+          "answer": "Wear gloves and mask"
+        },
+        {
+          "question": "Which of the following animals gives us wool?",
+          "options": ["Sheep", "Goat", "Hen", "Dog"],
+          "answer": "Sheep"
+        },
+        {
+          "question": "What is the importance of compost manure?",
+          "options": ["It destroys crops", "It improves soil fertility naturally", "It makes soil hard", "It attracts rodents"],
+          "answer": "It improves soil fertility naturally"
+        },
+        {
+          "question": "Which of the following is NOT a protective wear on the farm?",
+          "options": ["Boots", "Gloves", "Helmet", "Sandals"],
+          "answer": "Sandals"
+        },
+        {
+          "question": "The main reason for food processing is:",
+          "options": ["To spoil the food", "To make food safer, tastier, and last longer", "To make food more expensive", "To waste resources"],
+          "answer": "To make food safer, tastier, and last longer"
+        },
+        {
+          "question": "Which of these is a product of oil palm?",
+          "options": ["Palm oil", "Groundnut oil", "Shea butter", "Cocoa powder"],
+          "answer": "Palm oil"
+        },
+        {
+          "question": "Which of these is NOT a step in maintaining personal hygiene?",
+          "options": ["Bathing daily", "Brushing teeth", "Washing clothes", "Eating dirty food"],
+          "answer": "Eating dirty food"
+        },
+        {
+          "question": "Which of these farm animals provides both milk and meat?",
+          "options": ["Cow", "Dog", "Goat", "Horse"],
+          "answer": "Cow"
+        },
+        {
+          "question": "The act of supplying water to crops during dry season is called:",
+          "options": ["Harvesting", "Irrigation", "Weeding", "Fertilizing"],
+          "answer": "Irrigation"
+        },
+        {
+          "question": "The process of selecting the best seeds for planting is called:",
+          "options": ["Seed dressing", "Seed selection", "Seedling", "Seed storage"],
+          "answer": "Seed selection"
+        },
+        {
+          "question": "The correct way to carry a cutlass is by:",
+          "options": ["Placing it on your head", "Holding the blade", "Holding the handle down", "Dragging it on the ground"],
+          "answer": "Holding the handle down"
+        },
+        {
+          "question": "Which of these is a traditional method of food preservation?",
+          "options": ["Canning", "Freezing", "Smoking", "Refrigeration"],
+          "answer": "Smoking"
+        },
+        {
+          "question": "Why is it important to wash fruits before eating?",
+          "options": ["To waste water", "To remove dirt and germs", "To make them heavier", "To change the taste"],
+          "answer": "To remove dirt and germs"
+        },
+        {
+          "question": "A farmer who plants only yam every year is practicing:",
+          "options": ["Crop rotation", "Mixed farming", "Monocropping", "Shifting cultivation"],
+          "answer": "Monocropping"
+        },
+        {
+          "question": "Which of these is a source of protein food?",
+          "options": ["Beans", "Rice", "Sugar", "Cassava"],
+          "answer": "Beans"
+        },
+        {
+          "question": "The instrument used for measuring rainfall is called:",
+          "options": ["Rain gauge", "Thermometer", "Barometer", "Wind vane"],
+          "answer": "Rain gauge"
+        },
+        {
+          "question": "One advantage of mechanized farming is:",
+          "options": ["It uses more energy from humans", "It makes farming faster and easier", "It wastes resources", "It reduces farm produce"],
+          "answer": "It makes farming faster and easier"
+        },
+        {
+          "question": "The correct way to treat minor cuts in the kitchen is:",
+          "options": ["Leave it untreated", "Cover with a dirty cloth", "Wash with clean water and cover with plaster", "Rub with soil"],
+          "answer": "Wash with clean water and cover with plaster"
+        },
+        {
+          "question": "The process of raising fish for food is called:",
+          "options": ["Fishing", "Fish farming", "Hunting", "Aquatic hunting"],
+          "answer": "Fish farming"
+        },
+        {
+          "question": "Which of these is an example of a domestic animal?",
+          "options": ["Lion", "Tiger", "Sheep", "Leopard"],
+          "answer": "Sheep"
+        },
+        {
+          "question": "Which nutrient gives the body energy?",
+          "options": ["Vitamins", "Carbohydrates", "Proteins", "Minerals"],
+          "answer": "Carbohydrates"
+        },
+        {
+          "question": "Which of these should NOT be done when cooking with gas?",
+          "options": ["Close the valve after use", "Allow leakage", "Use a lighter safely", "Turn off when not in use"],
+          "answer": "Allow leakage"
+        },
+        {
+          "question": "The act of keeping the environment clean and safe is called:",
+          "options": ["Pollution", "Sanitation", "Deforestation", "Mining"],
+          "answer": "Sanitation"
+        },
+        {
+          "question": "Which of these is a danger of eating uncovered food?",
+          "options": ["It looks fine", "It can contain germs and cause sickness", "It is cheaper", "It is more colorful"],
+          "answer": "It can contain germs and cause sickness"
+        },
+        {
+          "question": "The main reason for fencing a farm is to:",
+          "options": ["Decorate the farm", "Prevent animals and thieves from entering", "Make farming expensive", "Waste materials"],
+          "answer": "Prevent animals and thieves from entering"
+        },
+        {
+          "question": "Which of these is an example of a household equipment?",
+          "options": ["Refrigerator", "Hoe", "Cutlass", "Shovel"],
+          "answer": "Refrigerator"
+        },
+        {
+          "question": "What is the major importance of agriculture?",
+          "options": ["It provides food and raw materials", "It destroys land", "It wastes money", "It reduces health"],
+          "answer": "It provides food and raw materials"
+        },
+        {
+          "question": "Which of these farm animals provides both milk and meat?",
+          "options": ["Cow", "Dog", "Goat", "Horse"],
+          "answer": "Cow"
+        },
+        {
+          "question": "The act of supplying water to crops during dry season is called:",
+          "options": ["Harvesting", "Irrigation", "Weeding", "Fertilizing"],
+          "answer": "Irrigation"
+        },
+        {
+          "question": "The process of selecting the best seeds for planting is called:",
+          "options": ["Seed dressing", "Seed selection", "Seedling", "Seed storage"],
+          "answer": "Seed selection"
+        },
+        {
+          "question": "The correct way to carry a cutlass is by:",
+          "options": ["Placing it on your head", "Holding the blade", "Holding the handle down", "Dragging it on the ground"],
+          "answer": "Holding the handle down"
+        },
+        {
+          "question": "Which of these is a traditional method of food preservation?",
+          "options": ["Canning", "Freezing", "Smoking", "Refrigeration"],
+          "answer": "Smoking"
+        },
+        {
+          "question": "Why is it important to wash fruits before eating?",
+          "options": ["To waste water", "To remove dirt and germs", "To make them heavier", "To change the taste"],
+          "answer": "To remove dirt and germs"
+        },
+        {
+          "question": "A farmer who plants only yam every year is practicing:",
+          "options": ["Crop rotation", "Mixed farming", "Monocropping", "Shifting cultivation"],
+          "answer": "Monocropping"
+        },
+        {
+          "question": "Which of these is a source of protein food?",
+          "options": ["Beans", "Rice", "Sugar", "Cassava"],
+          "answer": "Beans"
+        },
+        {
+          "question": "The instrument used for measuring rainfall is called:",
+          "options": ["Rain gauge", "Thermometer", "Barometer", "Wind vane"],
+          "answer": "Rain gauge"
+        },
+        {
+          "question": "One advantage of mechanized farming is:",
+          "options": ["It uses more energy from humans", "It makes farming faster and easier", "It wastes resources", "It reduces farm produce"],
+          "answer": "It makes farming faster and easier"
+        },
+        {
+          "question": "The correct way to treat minor cuts in the kitchen is:",
+          "options": ["Leave it untreated", "Cover with a dirty cloth", "Wash with clean water and cover with plaster", "Rub with soil"],
+          "answer": "Wash with clean water and cover with plaster"
+        },
+        {
+          "question": "The process of raising fish for food is called:",
+          "options": ["Fishing", "Fish farming", "Hunting", "Aquatic hunting"],
+          "answer": "Fish farming"
+        },
+        {
+          "question": "Which of these is an example of a domestic animal?",
+          "options": ["Lion", "Tiger", "Sheep", "Leopard"],
+          "answer": "Sheep"
+        },
+        {
+          "question": "Which nutrient gives the body energy?",
+          "options": ["Vitamins", "Carbohydrates", "Proteins", "Minerals"],
+          "answer": "Carbohydrates"
+        },
+        {
+          "question": "Which of these should NOT be done when cooking with gas?",
+          "options": ["Close the valve after use", "Allow leakage", "Use a lighter safely", "Turn off when not in use"],
+          "answer": "Allow leakage"
+        },
+        {
+          "question": "The act of keeping the environment clean and safe is called:",
+          "options": ["Pollution", "Sanitation", "Deforestation", "Mining"],
+          "answer": "Sanitation"
+        },
+        {
+          "question": "Which of these is a danger of eating uncovered food?",
+          "options": ["It looks fine", "It can contain germs and cause sickness", "It is cheaper", "It is more colorful"],
+          "answer": "It can contain germs and cause sickness"
+        },
+        {
+          "question": "The main reason for fencing a farm is to:",
+          "options": ["Decorate the farm", "Prevent animals and thieves from entering", "Make farming expensive", "Waste materials"],
+          "answer": "Prevent animals and thieves from entering"
+        },
+        {
+          "question": "Which of these is an example of a household equipment?",
+          "options": ["Refrigerator", "Hoe", "Cutlass", "Shovel"],
+          "answer": "Refrigerator"
+        },
+        {
+          "question": "What is the major importance of agriculture?",
+          "options": ["It provides food and raw materials", "It destroys land", "It wastes money", "It reduces health"],
+          "answer": "It provides food and raw materials"
+        }
       ]
     }
+  ]
 }
-      
-      
+        
 
 
       
