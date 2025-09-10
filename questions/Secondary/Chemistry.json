@@ -1,0 +1,111 @@
+{
+  "Chemistry": {
+    "level1": [
+      {
+        "question": "Which of the following is NOT a state of matter?",
+        "options": ["Solid", "Liquid", "Gas", "Energy"],
+        "answer": "Energy"
+      },
+      {
+        "question": "What is the smallest particle of an element that retains its properties?",
+        "options": ["Molecule", "Atom", "Compound", "Mixture"],
+        "answer": "Atom"
+      },
+      {
+        "question": "Which of these is a chemical change?",
+        "options": ["Melting of ice", "Burning of wood", "Boiling of water", "Breaking glass"],
+        "answer": "Burning of wood"
+      },
+      {
+        "question": "Which gas is necessary for burning?",
+        "options": ["Carbon dioxide", "Oxygen", "Nitrogen", "Hydrogen"],
+        "answer": "Oxygen"
+      },
+      {
+        "question": "Which of the following is a mixture?",
+        "options": ["Air", "Water", "Salt", "Iron"],
+        "answer": "Air"
+      },
+      {
+        "question": "Which of these is NOT a method of separating mixtures?",
+        "options": ["Filtration", "Evaporation", "Distillation", "Combustion"],
+        "answer": "Combustion"
+      },
+      {
+        "question": "What is the symbol of sodium?",
+        "options": ["Na", "So", "S", "Sn"],
+        "answer": "Na"
+      },
+      {
+        "question": "What is the chemical symbol for water?",
+        "options": ["H2", "O2", "H2O", "OH"],
+        "answer": "H2O"
+      },
+      {
+        "question": "Which of the following is an acid?",
+        "options": ["NaCl", "HCl", "KOH", "Ca(OH)2"],
+        "answer": "HCl"
+      },
+      {
+        "question": "Which of the following tastes sour?",
+        "options": ["Base", "Salt", "Acid", "Water"],
+        "answer": "Acid"
+      },
+      {
+        "question": "Which of these is a base?",
+        "options": ["NaOH", "H2SO4", "CO2", "HCl"],
+        "answer": "NaOH"
+      },
+      {
+        "question": "Which of the following is a noble gas?",
+        "options": ["Oxygen", "Nitrogen", "Helium", "Hydrogen"],
+        "answer": "Helium"
+      },
+      {
+        "question": "Which of these is used to test for hydrogen gas?",
+        "options": [
+          "A burning splint makes a 'pop' sound",
+          "Blue litmus turns red",
+          "It extinguishes fire",
+          "It glows in the dark"
+        ],
+        "answer": "A burning splint makes a 'pop' sound"
+      },
+      {
+        "question": "Which part of the atom carries a positive charge?",
+        "options": ["Electron", "Neutron", "Proton", "Nucleus"],
+        "answer": "Proton"
+      },
+      {
+        "question": "What is the pH of a neutral solution?",
+        "options": ["0", "7", "14", "1"],
+        "answer": "7"
+      },
+      {
+        "question": "Which of these is NOT a chemical symbol?",
+        "options": ["Cl", "Ag", "Xy", "Au"],
+        "answer": "Xy"
+      },
+      {
+        "question": "Which element is essential for respiration in humans?",
+        "options": ["Oxygen", "Hydrogen", "Carbon dioxide", "Nitrogen"],
+        "answer": "Oxygen"
+      },
+      {
+        "question": "What is the chemical symbol for gold?",
+        "options": ["Gd", "Au", "Ag", "Go"],
+        "answer": "Au"
+      },
+      {
+        "question": "Which of these is an example of a compound?",
+        "options": ["Water", "Iron", "Oxygen", "Sulphur"],
+        "answer": "Water"
+      },
+      {
+        "question": "Which of the following is used to test for starch?",
+        "options": ["Benedict’s solution", "Iodine solution", "Litmus paper", "Lime water"],
+        "answer": "Iodine solution"
+      }
+    ]
+  }
+}
