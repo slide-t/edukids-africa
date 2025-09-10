@@ -251,9 +251,138 @@
     "options": ["Water", "Air", "Stone", "Smoke"],
     "answer": "Stone"
   }
-  ]
+  ],
+
+    "level2": [
+      {
+        "question": "Which of these materials is used for making electric wires?",
+        "options": ["Copper", "Wood", "Glass", "Paper"],
+        "answer": "Copper"
+      },
+      {
+        "question": "Which of these is NOT a simple machine?",
+        "options": ["Lever", "Pulley", "Screw", "Television"],
+        "answer": "Television"
+      },
+      {
+        "question": "What is the main source of energy for the Earth?",
+        "options": ["Moon", "Sun", "Stars", "Fire"],
+        "answer": "Sun"
+      },
+      {
+        "question": "Which tool is used for cutting wood?",
+        "options": ["Saw", "Hammer", "Spanner", "Hoe"],
+        "answer": "Saw"
+      },
+      {
+        "question": "What is the use of a ruler?",
+        "options": ["To draw and measure", "To dig the soil", "To hammer nails", "To cook food"],
+        "answer": "To draw and measure"
+      },
+      {
+        "question": "Which of these is an example of road transport?",
+        "options": ["Ship", "Bicycle", "Plane", "Canoe"],
+        "answer": "Bicycle"
+      },
+      {
+        "question": "What do we call the part of a computer that shows pictures and words?",
+        "options": ["Mouse", "Keyboard", "Monitor", "Speaker"],
+        "answer": "Monitor"
+      },
+      {
+        "question": "Which of these is a household appliance?",
+        "options": ["Spade", "Cutlass", "Iron", "Hammer"],
+        "answer": "Iron"
+      },
+      {
+        "question": "Which of these moves on rails?",
+        "options": ["Car", "Plane", "Train", "Ship"],
+        "answer": "Train"
+      },
+      {
+        "question": "Which of these is a natural material?",
+        "options": ["Plastic", "Rubber", "Steel", "Cement"],
+        "answer": "Rubber"
+      },
+      {
+        "question": "Which of these is used to tighten bolts and nuts?",
+        "options": ["Knife", "Spanner", "Saw", "File"],
+        "answer": "Spanner"
+      },
+      {
+        "question": "What is the use of a needle?",
+        "options": ["To sew cloth", "To cut wood", "To draw", "To dig soil"],
+        "answer": "To sew cloth"
+      },
+      {
+        "question": "Which type of energy is produced by a battery?",
+        "options": ["Heat energy", "Light energy", "Electrical energy", "Sound energy"],
+        "answer": "Electrical energy"
+      },
+      {
+        "question": "Which of these is a safety rule at school?",
+        "options": ["Running on wet floor", "Playing with sharp objects", "Walking carefully", "Touching sockets"],
+        "answer": "Walking carefully"
+      },
+      {
+        "question": "Which of these is an example of air transport?",
+        "options": ["Ship", "Car", "Aeroplane", "Bicycle"],
+        "answer": "Aeroplane"
+      },
+      {
+        "question": "Which of these protects the eyes?",
+        "options": ["Helmet", "Goggles", "Gloves", "Boots"],
+        "answer": "Goggles"
+      },
+      {
+        "question": "Which of these is NOT a building material?",
+        "options": ["Sand", "Stone", "Glass", "Food"],
+        "answer": "Food"
+      },
+      {
+        "question": "What type of energy makes a fan rotate?",
+        "options": ["Sound energy", "Electrical energy", "Heat energy", "Solar energy"],
+        "answer": "Electrical energy"
+      },
+      {
+        "question": "Which of these is used to smooth rough surfaces?",
+        "options": ["File", "Hammer", "Spanner", "Plier"],
+        "answer": "File"
+      },
+      {
+        "question": "Which part of a car moves it on the road?",
+        "options": ["Roof", "Engine", "Wheel", "Light"],
+        "answer": "Wheel"
+      },
+      {
+        "question": "Which of these is a liquid material?",
+        "options": ["Iron", "Water", "Stone", "Wood"],
+        "answer": "Water"
+      },
+      {
+        "question": "What is the use of a thermometer?",
+        "options": ["To measure length", "To measure time", "To measure temperature", "To measure weight"],
+        "answer": "To measure temperature"
+      },
+      {
+        "question": "Which of these is a renewable source of energy?",
+        "options": ["Petrol", "Coal", "Sunlight", "Gas"],
+        "answer": "Sunlight"
+      },
+      {
+        "question": "What is the use of an axe?",
+        "options": ["To cut wood", "To measure", "To paint", "To write"],
+        "answer": "To cut wood"
+      },
+      {
+        "question": "Which of these is a road safety rule?",
+        "options": ["Cross the road at zebra crossing", "Run across the road", "Close your eyes when crossing", "Ignore traffic lights"],
+        "answer": "Cross the road at zebra crossing"
+      }
+    ]
+  }
 }
-}
+    
 
 
          
