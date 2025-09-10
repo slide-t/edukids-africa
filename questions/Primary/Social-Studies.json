@@ -554,9 +554,414 @@
         "options": ["Returning lost items", "Telling lies", "Cheating in exams", "Stealing"],
         "answer": "Returning lost items"
       }
+    ],
+    "level3": [
+      {
+        "question": "Which body is responsible for making laws in Nigeria?",
+        "options": ["The Legislature", "The Judiciary", "The Executive", "The Police"],
+        "answer": "The Legislature"
+      },
+      {
+        "question": "The right to vote and be voted for is called?",
+        "options": ["Political right", "Cultural right", "Religious right", "Social right"],
+        "answer": "Political right"
+      },
+      {
+        "question": "One effect of child labour is?",
+        "options": ["Poor education", "Good health", "Wealth creation", "Improved learning"],
+        "answer": "Poor education"
+      },
+      {
+        "question": "The lowest court in Nigeria is?",
+        "options": ["Customary Court", "High Court", "Court of Appeal", "Supreme Court"],
+        "answer": "Customary Court"
+      },
+      {
+        "question": "What is the importance of interdependence in society?",
+        "options": ["It helps people meet their needs", "It causes laziness", "It increases conflict", "It makes people selfish"],
+        "answer": "It helps people meet their needs"
+      },
+      {
+        "question": "The system of government where power belongs to the people is?",
+        "options": ["Democracy", "Monarchy", "Dictatorship", "Colonialism"],
+        "answer": "Democracy"
+      },
+      {
+        "question": "One major effect of corruption in Nigeria is?",
+        "options": ["Poor development", "Unity", "Peace", "Improved economy"],
+        "answer": "Poor development"
+      },
+      {
+        "question": "The two main seasons in Nigeria are?",
+        "options": ["Rainy and Dry", "Hot and Cold", "Summer and Winter", "Snow and Spring"],
+        "answer": "Rainy and Dry"
+      },
+      {
+        "question": "Which of these is an effect of poor sanitation?",
+        "options": ["Outbreak of diseases", "Clean environment", "Good health", "Safe water"],
+        "answer": "Outbreak of diseases"
+      },
+      {
+        "question": "The act of showing love and pride for one’s country is called?",
+        "options": ["Patriotism", "Corruption", "Dictatorship", "Selfishness"],
+        "answer": "Patriotism"
+      },
+      {
+        "question": "The highest court in Nigeria is?",
+        "options": ["Supreme Court", "Magistrate Court", "Customary Court", "Sharia Court"],
+        "answer": "Supreme Court"
+      },
+      {
+        "question": "The family type that consists of father, mother, and children is?",
+        "options": ["Nuclear family", "Extended family", "Polygamous family", "Step family"],
+        "answer": "Nuclear family"
+      },
+      {
+        "question": "The act of being fair and truthful is called?",
+        "options": ["Justice", "Corruption", "Cheating", "Fraud"],
+        "answer": "Justice"
+      },
+      {
+        "question": "One way of promoting national unity is?",
+        "options": ["Inter-ethnic marriage", "Tribalism", "Disobedience", "Corruption"],
+        "answer": "Inter-ethnic marriage"
+      },
+      {
+        "question": "The process of teaching children culture and values is?",
+        "options": ["Socialization", "Industrialization", "Urbanization", "Migration"],
+        "answer": "Socialization"
+      },
+      {
+        "question": "One danger of rural-urban migration is?",
+        "options": ["Overcrowding in cities", "Peaceful communities", "Development in villages", "Job creation in villages"],
+        "answer": "Overcrowding in cities"
+      },
+      {
+        "question": "Which of these is NOT a natural resource?",
+        "options": ["Computer", "Coal", "Water", "Oil"],
+        "answer": "Computer"
+      },
+      {
+        "question": "The movement of people from one place to another is called?",
+        "options": ["Migration", "Circulation", "Exploration", "Transport"],
+        "answer": "Migration"
+      },
+      {
+        "question": "A person who rules a country by force is called?",
+        "options": ["Dictator", "Democrat", "Governor", "Patriot"],
+        "answer": "Dictator"
+      },
+      {
+        "question": "The national currency of Nigeria is?",
+        "options": ["Naira", "Dollar", "Pound", "Cedi"],
+        "answer": "Naira"
+      },
+      {
+        "question": "The movement of goods and services from one place to another is called?",
+        "options": ["Transportation", "Migration", "Communication", "Circulation"],
+        "answer": "Transportation"
+      },
+      {
+        "question": "The three arms of government are?",
+        "options": ["Executive, Legislature, Judiciary", "Executive, Police, Army", "Judiciary, Teachers, Legislature", "Legislature, Students, Market Women"],
+        "answer": "Executive, Legislature, Judiciary"
+      },
+      {
+        "question": "The green colour on the Nigerian flag represents?",
+        "options": ["Agriculture", "Peace", "Unity", "Strength"],
+        "answer": "Agriculture"
+      },
+      {
+        "question": "Which of these is an example of a cultural practice?",
+        "options": ["Marriage rites", "Electricity supply", "Internet usage", "Banking"],
+        "answer": "Marriage rites"
+      },
+      {
+        "question": "The symbol of authority of the President of Nigeria is?",
+        "options": ["The Mace", "The Constitution", "The Flag", "The Coat of Arms"],
+        "answer": "The Constitution"
+      },
+      {
+        "question": "The body responsible for conducting elections in Nigeria is?",
+        "options": ["INEC", "WAEC", "NTA", "FRSC"],
+        "answer": "INEC"
+      },
+      {
+        "question": "The act of treating people unfairly because of their tribe or colour is called?",
+        "options": ["Discrimination", "Patriotism", "Loyalty", "Unity"],
+        "answer": "Discrimination"
+      },
+      {
+        "question": "What is the national motto of Nigeria?",
+        "options": ["Unity and Faith, Peace and Progress", "Love and Unity", "Hope and Development", "Freedom and Justice"],
+        "answer": "Unity and Faith, Peace and Progress"
+      },
+      {
+        "question": "The organ of government that interprets the law is?",
+        "options": ["Judiciary", "Executive", "Legislature", "Civil Service"],
+        "answer": "Judiciary"
+      },
+      {
+        "question": "What is the highest ruling body in a local government?",
+        "options": ["Local Government Council", "Community Chiefs", "Ward Leaders", "Youth Leaders"],
+        "answer": "Local Government Council"
+      },
+      {
+        "question": "Which of these is a responsibility of a good citizen?",
+        "options": ["Obeying laws", "Causing violence", "Disobeying rules", "Dodging tax"],
+        "answer": "Obeying laws"
+      },
+      {
+        "question": "The Coat of Arms of Nigeria has two horses which stand for?",
+        "options": ["Dignity", "Strength", "Unity", "Peace"],
+        "answer": "Dignity"
+      },
+      {
+        "question": "What is the main duty of the police force?",
+        "options": ["To maintain law and order", "To print money", "To make laws", "To conduct elections"],
+        "answer": "To maintain law and order"
+      },
+      {
+        "question": "The type of marriage where a man marries only one wife is?",
+        "options": ["Monogamy", "Polygamy", "Extended marriage", "Family marriage"],
+        "answer": "Monogamy"
+      },
+      {
+        "question": "The act of being devoted and loyal to one’s country is?",
+        "options": ["Nationalism", "Corruption", "Tribalism", "Cheating"],
+        "answer": "Nationalism"
+      },
+      {
+        "question": "The child of one’s uncle or aunt is called?",
+        "options": ["Cousin", "Nephew", "Niece", "Sibling"],
+        "answer": "Cousin"
+      },
+      {
+        "question": "One problem caused by overpopulation is?",
+        "options": ["Lack of jobs", "Peaceful society", "Unity", "Progress"],
+        "answer": "Lack of jobs"
+      },
+      {
+        "question": "The black shield on the Nigerian Coat of Arms represents?",
+        "options": ["Fertile soil", "Strength", "Unity", "Peace"],
+        "answer": "Fertile soil"
+      },
+      {
+        "question": "The period when Nigeria got independence is?",
+        "options": ["1960", "1970", "1957", "1980"],
+        "answer": "1960"
+      },
+      {
+        "question": "The act of helping people in need without expecting a reward is?",
+        "options": ["Charity", "Corruption", "Disobedience", "Fraud"],
+        "answer": "Charity"
+      },
+      {
+        "question": "Which of the following is the most important reason for obeying traffic rules?",
+        "options": ["To avoid punishment", "To prevent accidents", "To please the government", "To save time"],
+        "answer": "To prevent accidents"
+      },
+      {
+        "question": "The three arms of government in Nigeria are the Executive, Legislative, and ____?",
+        "options": ["Civil Service", "Judiciary", "Police", "Military"],
+        "answer": "Judiciary"
+      },
+      {
+        "question": "Which of these is NOT a natural resource found in Nigeria?",
+        "options": ["Crude oil", "Coal", "Diamond", "Tin"],
+        "answer": "Diamond"
+      },
+      {
+        "question": "A child that helps the aged to cross the road is showing ____?",
+        "options": ["Disobedience", "Disrespect", "Good citizenship", "Carelessness"],
+        "answer": "Good citizenship"
+      },
+      {
+        "question": "Which of these is the correct order of the stages of human growth?",
+        "options": ["Adult → Child → Teenager → Old age", "Child → Teenager → Adult → Old age", "Old age → Teenager → Adult → Child", "Teenager → Child → Adult → Old age"],
+        "answer": "Child → Teenager → Adult → Old age"
+      },
+      {
+        "question": "In a democratic government, who has the right to vote?",
+        "options": ["Children under 10", "Adults above 18", "All students", "Only government workers"],
+        "answer": "Adults above 18"
+      },
+      {
+        "question": "Which of these actions can destroy peace in a community?",
+        "options": ["Obeying rules", "Fighting and quarrelling", "Helping neighbors", "Participating in community service"],
+        "answer": "Fighting and quarrelling"
+      },
+      {
+        "question": "The major duty of the police force is to ____?",
+        "options": ["Make laws", "Maintain law and order", "Build roads", "Collect taxes"],
+        "answer": "Maintain law and order"
+      },
+      {
+        "question": "Which of these is an example of extended family?",
+        "options": ["Father, mother, and children", "Father, mother, children, grandparents, and cousins", "Husband and wife", "Mother and son"],
+        "answer": "Father, mother, children, grandparents, and cousins"
+      },
+      {
+        "question": "The Sahara Desert is located in which continent?",
+        "options": ["Asia", "South America", "Africa", "Europe"],
+        "answer": "Africa"
+      },
+      {
+        "question": "One of the benefits of cooperation in the community is ____?",
+        "options": ["Delay in projects", "Development", "Poverty", "Crime"],
+        "answer": "Development"
+      },
+      {
+        "question": "Which of these is NOT an example of a civic right?",
+        "options": ["Right to vote", "Right to education", "Right to steal", "Right to life"],
+        "answer": "Right to steal"
+      },
+      {
+        "question": "Who was the first executive president of Nigeria?",
+        "options": ["Dr. Nnamdi Azikiwe", "General Yakubu Gowon", "Alhaji Shehu Shagari", "Chief Olusegun Obasanjo"],
+        "answer": "Alhaji Shehu Shagari"
+      },
+      {
+        "question": "The practice of treating people unfairly because of their tribe or religion is called ____?",
+        "options": ["Unity", "Tolerance", "Discrimination", "Friendship"],
+        "answer": "Discrimination"
+      },
+      {
+        "question": "Which of these organizations is responsible for maintaining peace in the world?",
+        "options": ["WHO", "UNICEF", "UN", "AU"],
+        "answer": "UN"
+      },
+      {
+        "question": "The process of moving from one place to another in search of better living conditions is called ____?",
+        "options": ["Migration", "Urbanization", "Transportation", "Civilization"],
+        "answer": "Migration"
+      },
+      {
+        "question": "Which of these is a consequence of corruption in society?",
+        "options": ["Development", "Good governance", "Poverty", "Justice"],
+        "answer": "Poverty"
+      },
+      {
+        "question": "The leader of a local government is called ____?",
+        "options": ["Governor", "Chairman", "Councillor", "Minister"],
+        "answer": "Chairman"
+      },
+      {
+        "question": "The Nigerian flag has how many colours?",
+        "options": ["One", "Two", "Three", "Four"],
+        "answer": "Two"
+      },
+      {
+        "question": "Which of these is NOT a reason for establishing schools?",
+        "options": ["To educate children", "To build character", "To promote ignorance", "To prepare for the future"],
+        "answer": "To promote ignorance"
+      },
+      {
+        "question": "Which of these is the primary reason for paying tax in Nigeria?",
+        "options": ["To enrich politicians", "To fund government services", "To punish citizens", "To save money for banks"],
+        "answer": "To fund government services"
+      },
+      {
+        "question": "The traditional ruler of the Yoruba people is called ____?",
+        "options": ["Oba", "Emir", "Obi", "Sarki"],
+        "answer": "Oba"
+      },
+      {
+        "question": "A citizen who refuses to vote during elections is neglecting his ____?",
+        "options": ["Right", "Duty", "Privilege", "Freedom"],
+        "answer": "Duty"
+      },
+      {
+        "question": "Which of these rivers is the longest in Nigeria?",
+        "options": ["River Benue", "River Kaduna", "River Ogun", "River Niger"],
+        "answer": "River Niger"
+      },
+      {
+        "question": "The act of keeping the environment neat and free from waste is called ____?",
+        "options": ["Sanitation", "Corruption", "Pollution", "Erosion"],
+        "answer": "Sanitation"
+      },
+      {
+        "question": "The period when Nigeria was under British control is called ____?",
+        "options": ["Independence", "Colonial rule", "Civil rule", "Military era"],
+        "answer": "Colonial rule"
+      },
+      {
+        "question": "The two major seasons in Nigeria are ____?",
+        "options": ["Summer and Winter", "Harmattan and Dry", "Rainy and Dry", "Snowy and Sunny"],
+        "answer": "Rainy and Dry"
+      },
+      {
+        "question": "Which of these is NOT a responsibility of a good citizen?",
+        "options": ["Obeying laws", "Paying taxes", "Joining armed robbery", "Voting during elections"],
+        "answer": "Joining armed robbery"
+      },
+      {
+        "question": "What is the main function of the legislature?",
+        "options": ["To make laws", "To punish criminals", "To interpret laws", "To enforce laws"],
+        "answer": "To make laws"
+      },
+      {
+        "question": "The physical surroundings in which people live is called ____?",
+        "options": ["Community", "Environment", "Society", "Family"],
+        "answer": "Environment"
+      },
+      {
+        "question": "Who among the following was a nationalist leader in Nigeria?",
+        "options": ["Lord Lugard", "Herbert Macaulay", "Mungo Park", "David Livingstone"],
+        "answer": "Herbert Macaulay"
+      },
+      {
+        "question": "Which of these is NOT a method of preserving food?",
+        "options": ["Smoking", "Drying", "Freezing", "Spoiling"],
+        "answer": "Spoiling"
+      },
+      {
+        "question": "The leader of the family is usually the ____?",
+        "options": ["Mother", "Father", "Children", "Uncle"],
+        "answer": "Father"
+      },
+      {
+        "question": "A person who does not belong to any country is called a ____?",
+        "options": ["Foreigner", "Citizen", "Stateless person", "Migrant"],
+        "answer": "Stateless person"
+      },
+      {
+        "question": "The process of wearing away the soil by wind or water is called ____?",
+        "options": ["Farming", "Deforestation", "Erosion", "Mining"],
+        "answer": "Erosion"
+      },
+      {
+        "question": "The three colours of traffic lights represent Stop, Get Ready, and ____?",
+        "options": ["Wait", "Go", "Turn", "Move Slowly"],
+        "answer": "Go"
+      },
+      {
+        "question": "One of the following is a national symbol of Nigeria:",
+        "options": ["Naira", "National flag", "Television", "Stadium"],
+        "answer": "National flag"
+      },
+      {
+        "question": "The United Nations Day is celebrated on ____?",
+        "options": ["October 1", "June 12", "October 24", "December 25"],
+        "answer": "October 24"
+      },
+      {
+        "question": "Which of these is NOT a reason for forming cooperative societies?",
+        "options": ["To help members save money", "To encourage unity", "To fight community leaders", "To support business growth"],
+        "answer": "To fight community leaders"
+      },
+      {
+        "question": "The act of cutting down trees without replacing them is called ____?",
+        "options": ["Afforestation", "Deforestation", "Reforestation", "Desertification"],
+        "answer": "Deforestation"
+      }
     ]
   }
 }
 
+
+      
+      
       
       
