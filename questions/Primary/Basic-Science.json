@@ -255,6 +255,265 @@
         "options": ["Body", "Book", "Chair", "House"],
         "correct": "Body"
       }
+    ],
+
+    "level2": [
+      {
+        "question": "The process by which plants make their own food is called ______.",
+        "options": ["Photosynthesis", "Digestion", "Respiration", "Evaporation"],
+        "correct": "Photosynthesis"
+      },
+      {
+        "question": "Which of these is NOT a planet?",
+        "options": ["Sun", "Mars", "Venus", "Earth"],
+        "correct": "Sun"
+      },
+      {
+        "question": "The organs in the chest that help us breathe are called ______.",
+        "options": ["Lungs", "Kidneys", "Heart", "Stomach"],
+        "correct": "Lungs"
+      },
+      {
+        "question": "The movement of the earth around the sun is called ______.",
+        "options": ["Revolution", "Rotation", "Spinning", "Orbiting"],
+        "correct": "Revolution"
+      },
+      {
+        "question": "Water changes to ice when it is ______.",
+        "options": ["Frozen", "Heated", "Evaporated", "Condensed"],
+        "correct": "Frozen"
+      },
+      {
+        "question": "The basic needs of man are food, shelter and ______.",
+        "options": ["Clothing", "Money", "Phone", "Television"],
+        "correct": "Clothing"
+      },
+      {
+        "question": "The organ that pumps blood round the body is the ______.",
+        "options": ["Heart", "Brain", "Liver", "Lungs"],
+        "correct": "Heart"
+      },
+      {
+        "question": "Fish breathe with their ______.",
+        "options": ["Gills", "Lungs", "Skin", "Nose"],
+        "correct": "Gills"
+      },
+      {
+        "question": "The force that pulls objects towards the ground is called ______.",
+        "options": ["Gravity", "Friction", "Magnetism", "Pressure"],
+        "correct": "Gravity"
+      },
+      {
+        "question": "The part of the plant that carries water to the leaves is the ______.",
+        "options": ["Stem", "Root", "Flower", "Seed"],
+        "correct": "Stem"
+      },
+
+      {
+        "question": "The boiling point of water is ______ degrees Celsius.",
+        "options": ["100", "50", "0", "200"],
+        "correct": "100"
+      },
+      {
+        "question": "Animals that feed on plants and animals are called ______.",
+        "options": ["Omnivores", "Herbivores", "Carnivores", "Scavengers"],
+        "correct": "Omnivores"
+      },
+      {
+        "question": "The sense organ for hearing is the ______.",
+        "options": ["Ear", "Eye", "Nose", "Tongue"],
+        "correct": "Ear"
+      },
+      {
+        "question": "The part of the body that controls all other parts is the ______.",
+        "options": ["Brain", "Heart", "Stomach", "Lungs"],
+        "correct": "Brain"
+      },
+      {
+        "question": "A young frog is called a ______.",
+        "options": ["Tadpole", "Cub", "Puppy", "Chick"],
+        "correct": "Tadpole"
+      },
+      {
+        "question": "The earth rotates on its ______.",
+        "options": ["Axis", "Orbit", "Poles", "Equator"],
+        "correct": "Axis"
+      },
+      {
+        "question": "Water is made up of hydrogen and ______.",
+        "options": ["Oxygen", "Carbon", "Nitrogen", "Helium"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "The sun rises in the ______.",
+        "options": ["East", "West", "North", "South"],
+        "correct": "East"
+      },
+      {
+        "question": "Which of these is NOT a source of energy?",
+        "options": ["Stone", "Sun", "Food", "Fuel"],
+        "correct": "Stone"
+      },
+      {
+        "question": "The earth is shaped like a ______.",
+        "options": ["Sphere", "Box", "Plate", "Cone"],
+        "correct": "Sphere"
+      },
+
+      {
+        "question": "Which of these animals lays eggs?",
+        "options": ["Hen", "Dog", "Cat", "Goat"],
+        "correct": "Hen"
+      },
+      {
+        "question": "The part of the plant that produces seeds is the ______.",
+        "options": ["Flower", "Stem", "Leaf", "Root"],
+        "correct": "Flower"
+      },
+      {
+        "question": "We get sugar from ______.",
+        "options": ["Sugarcane", "Yam", "Rice", "Cassava"],
+        "correct": "Sugarcane"
+      },
+      {
+        "question": "The change from caterpillar to butterfly is called ______.",
+        "options": ["Metamorphosis", "Evaporation", "Reproduction", "Photosynthesis"],
+        "correct": "Metamorphosis"
+      },
+      {
+        "question": "The part of the body used for digestion of food is the ______.",
+        "options": ["Stomach", "Brain", "Liver", "Kidney"],
+        "correct": "Stomach"
+      },
+      {
+        "question": "A group of stars is called a ______.",
+        "options": ["Constellation", "Planet", "Galaxy", "Cloud"],
+        "correct": "Constellation"
+      },
+      {
+        "question": "Objects that give out light on their own are called ______.",
+        "options": ["Luminous", "Non-luminous", "Reflectors", "Opaque"],
+        "correct": "Luminous"
+      },
+      {
+        "question": "The movement of water through the soil and back to the atmosphere is called the ______.",
+        "options": ["Water cycle", "Food chain", "Photosynthesis", "Metamorphosis"],
+        "correct": "Water cycle"
+      },
+      {
+        "question": "The three states of matter are solid, liquid and ______.",
+        "options": ["Gas", "Stone", "Sand", "Cloud"],
+        "correct": "Gas"
+      },
+      {
+        "question": "The part of the body that helps us to breathe is the ______.",
+        "options": ["Lungs", "Heart", "Stomach", "Brain"],
+        "correct": "Lungs"
+      },
+
+      {
+        "question": "Animals that live both on land and in water are called ______.",
+        "options": ["Amphibians", "Reptiles", "Birds", "Fish"],
+        "correct": "Amphibians"
+      },
+      {
+        "question": "The process of breaking down food in the body is called ______.",
+        "options": ["Digestion", "Respiration", "Circulation", "Absorption"],
+        "correct": "Digestion"
+      },
+      {
+        "question": "The organ that helps in pumping blood is the ______.",
+        "options": ["Heart", "Liver", "Brain", "Kidney"],
+        "correct": "Heart"
+      },
+      {
+        "question": "We use our skin to ______.",
+        "options": ["Feel", "See", "Hear", "Smell"],
+        "correct": "Feel"
+      },
+      {
+        "question": "A young cat is called a ______.",
+        "options": ["Kitten", "Puppy", "Cub", "Chick"],
+        "correct": "Kitten"
+      },
+      {
+        "question": "The fastest means of transportation is by ______.",
+        "options": ["Air", "Road", "Water", "Rail"],
+        "correct": "Air"
+      },
+      {
+        "question": "The blood is made up of plasma, red blood cells, white blood cells and ______.",
+        "options": ["Platelets", "Water", "Tissues", "Bones"],
+        "correct": "Platelets"
+      },
+      {
+        "question": "The organ that controls balance in the body is the ______.",
+        "options": ["Ear", "Eye", "Nose", "Skin"],
+        "correct": "Ear"
+      },
+      {
+        "question": "Plants take in carbon dioxide and release ______.",
+        "options": ["Oxygen", "Hydrogen", "Nitrogen", "Helium"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "Which of these is a source of protein?",
+        "options": ["Beans", "Sugar", "Rice", "Yam"],
+        "correct": "Beans"
+      },
+
+      {
+        "question": "Animals that suckle their young ones are called ______.",
+        "options": ["Mammals", "Birds", "Fish", "Reptiles"],
+        "correct": "Mammals"
+      },
+      {
+        "question": "The smallest unit of life is the ______.",
+        "options": ["Cell", "Organ", "Tissue", "Organism"],
+        "correct": "Cell"
+      },
+      {
+        "question": "The part of the plant that absorbs water is the ______.",
+        "options": ["Root", "Leaf", "Stem", "Flower"],
+        "correct": "Root"
+      },
+      {
+        "question": "The type of energy we get from the sun is ______.",
+        "options": ["Solar energy", "Heat energy", "Light energy", "All of the above"],
+        "correct": "Solar energy"
+      },
+      {
+        "question": "The liquid part of the blood is called ______.",
+        "options": ["Plasma", "Platelet", "Water", "Serum"],
+        "correct": "Plasma"
+      },
+      {
+        "question": "The natural satellite of the earth is the ______.",
+        "options": ["Moon", "Star", "Mars", "Venus"],
+        "correct": "Moon"
+      },
+      {
+        "question": "The sense organ for smell is the ______.",
+        "options": ["Nose", "Eye", "Ear", "Skin"],
+        "correct": "Nose"
+      },
+      {
+        "question": "The rotation of the earth causes ______.",
+        "options": ["Day and Night", "Seasons", "Rain", "Winds"],
+        "correct": "Day and Night"
+      },
+      {
+        "question": "A group of related food items is called a food ______.",
+        "options": ["Class", "Chain", "Cycle", "Web"],
+        "correct": "Class"
+      },
+      {
+        "question": "The organ that filters waste from the blood is the ______.",
+        "options": ["Kidney", "Heart", "Liver", "Lungs"],
+        "correct": "Kidney"
+      }
     ]
   }
 }
+
+    
