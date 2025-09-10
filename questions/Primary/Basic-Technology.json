@@ -319,6 +319,7 @@
       { "question": "Which of these is NOT a source of power?", "options": ["Petrol", "Wind", "Sun", "Chair"], "correct": "Chair" },
       { "question": "The sharp part of a cutlass is used for?", "options": ["Digging", "Cutting", "Tying", "Carrying"], "correct": "Cutting" }
     ],
+    "level3": [
       {
         "question": "Which simple machine is used in scissors?",
         "options": ["Lever and wheel", "Lever and wedge", "Lever and pulley", "Screw and inclined plane"],
