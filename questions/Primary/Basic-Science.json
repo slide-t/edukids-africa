@@ -1,0 +1,260 @@
+{
+  "Basic Science": {
+    "level1": [
+      {
+        "question": "Which of these is a source of light?",
+        "options": ["Sun", "Stone", "Spoon", "Chair"],
+        "correct": "Sun"
+      },
+      {
+        "question": "Which part of the plant is usually green?",
+        "options": ["Root", "Leaf", "Stem", "Seed"],
+        "correct": "Leaf"
+      },
+      {
+        "question": "We use our eyes to ______.",
+        "options": ["See", "Eat", "Run", "Talk"],
+        "correct": "See"
+      },
+      {
+        "question": "Which of these animals can fly?",
+        "options": ["Goat", "Dog", "Hen", "Fish"],
+        "correct": "Hen"
+      },
+      {
+        "question": "The air we breathe in contains ______.",
+        "options": ["Oxygen", "Water", "Sand", "Fire"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "Which of these is used to wash our clothes?",
+        "options": ["Soap", "Stone", "Paper", "Stick"],
+        "correct": "Soap"
+      },
+      {
+        "question": "The main source of heat is the ______.",
+        "options": ["Sun", "Moon", "Stars", "Cloud"],
+        "correct": "Sun"
+      },
+      {
+        "question": "Which part of the body is used for smelling?",
+        "options": ["Nose", "Eye", "Ear", "Mouth"],
+        "correct": "Nose"
+      },
+      {
+        "question": "What do we use to write on a blackboard?",
+        "options": ["Chalk", "Pen", "Pencil", "Crayon"],
+        "correct": "Chalk"
+      },
+      {
+        "question": "Plants need ______ to make their food.",
+        "options": ["Sunlight", "Stone", "Plastic", "Cloth"],
+        "correct": "Sunlight"
+      },
+
+      {
+        "question": "Which of these is a domestic animal?",
+        "options": ["Cow", "Lion", "Tiger", "Elephant"],
+        "correct": "Cow"
+      },
+      {
+        "question": "We use our ears to ______.",
+        "options": ["Hear", "See", "Eat", "Smell"],
+        "correct": "Hear"
+      },
+      {
+        "question": "The hard part of a tree is called the ______.",
+        "options": ["Bark", "Leaf", "Fruit", "Flower"],
+        "correct": "Bark"
+      },
+      {
+        "question": "The Earth is covered by land and ______.",
+        "options": ["Water", "Sand", "Fire", "Smoke"],
+        "correct": "Water"
+      },
+      {
+        "question": "A place where we plant crops is called a ______.",
+        "options": ["Farm", "House", "Market", "School"],
+        "correct": "Farm"
+      },
+      {
+        "question": "Which of these is not a fruit?",
+        "options": ["Apple", "Banana", "Stone", "Orange"],
+        "correct": "Stone"
+      },
+      {
+        "question": "The moon shines at ______.",
+        "options": ["Night", "Day", "Morning", "Afternoon"],
+        "correct": "Night"
+      },
+      {
+        "question": "We get milk from a ______.",
+        "options": ["Cow", "Hen", "Goat", "Sheep"],
+        "correct": "Cow"
+      },
+      {
+        "question": "The organ we use for tasting is the ______.",
+        "options": ["Tongue", "Nose", "Eye", "Ear"],
+        "correct": "Tongue"
+      },
+      {
+        "question": "Which of these can we drink?",
+        "options": ["Water", "Sand", "Fire", "Stone"],
+        "correct": "Water"
+      },
+
+      {
+        "question": "The part of the plant that grows under the soil is the ______.",
+        "options": ["Root", "Leaf", "Flower", "Stem"],
+        "correct": "Root"
+      },
+      {
+        "question": "Which of these is a living thing?",
+        "options": ["Dog", "Car", "Stone", "Chair"],
+        "correct": "Dog"
+      },
+      {
+        "question": "We use a thermometer to measure ______.",
+        "options": ["Temperature", "Length", "Weight", "Time"],
+        "correct": "Temperature"
+      },
+      {
+        "question": "What do plants give out during photosynthesis?",
+        "options": ["Oxygen", "Carbon dioxide", "Smoke", "Fire"],
+        "correct": "Oxygen"
+      },
+      {
+        "question": "The part of the body used for walking is the ______.",
+        "options": ["Leg", "Hand", "Head", "Eye"],
+        "correct": "Leg"
+      },
+      {
+        "question": "A young dog is called a ______.",
+        "options": ["Puppy", "Kid", "Cub", "Chick"],
+        "correct": "Puppy"
+      },
+      {
+        "question": "The process of water changing into vapor is called ______.",
+        "options": ["Evaporation", "Condensation", "Freezing", "Melting"],
+        "correct": "Evaporation"
+      },
+      {
+        "question": "The natural home of animals is called ______.",
+        "options": ["Habitat", "School", "Hospital", "Market"],
+        "correct": "Habitat"
+      },
+      {
+        "question": "The part of the body used for thinking is the ______.",
+        "options": ["Brain", "Hand", "Leg", "Stomach"],
+        "correct": "Brain"
+      },
+      {
+        "question": "We use a clock to tell the ______.",
+        "options": ["Time", "Weight", "Temperature", "Length"],
+        "correct": "Time"
+      },
+
+      {
+        "question": "A baby hen is called a ______.",
+        "options": ["Chick", "Cub", "Calf", "Kid"],
+        "correct": "Chick"
+      },
+      {
+        "question": "The ground is also called the ______.",
+        "options": ["Earth", "Sky", "Cloud", "Water"],
+        "correct": "Earth"
+      },
+      {
+        "question": "Animals that eat only plants are called ______.",
+        "options": ["Herbivores", "Carnivores", "Omnivores", "Scavengers"],
+        "correct": "Herbivores"
+      },
+      {
+        "question": "Animals that eat only meat are called ______.",
+        "options": ["Carnivores", "Herbivores", "Omnivores", "Insects"],
+        "correct": "Carnivores"
+      },
+      {
+        "question": "The sense organ for sight is the ______.",
+        "options": ["Eye", "Ear", "Nose", "Tongue"],
+        "correct": "Eye"
+      },
+      {
+        "question": "The energy we get from food is called ______.",
+        "options": ["Energy", "Light", "Heat", "Cold"],
+        "correct": "Energy"
+      },
+      {
+        "question": "Which of these is used for cutting paper?",
+        "options": ["Scissors", "Stone", "Stick", "Broom"],
+        "correct": "Scissors"
+      },
+      {
+        "question": "The main source of water is ______.",
+        "options": ["Rain", "Car", "Fire", "Sand"],
+        "correct": "Rain"
+      },
+      {
+        "question": "Which of these is a non-living thing?",
+        "options": ["Stone", "Goat", "Tree", "Boy"],
+        "correct": "Stone"
+      },
+      {
+        "question": "The main source of food for man is ______.",
+        "options": ["Plants", "Stones", "Sand", "Plastic"],
+        "correct": "Plants"
+      },
+
+      {
+        "question": "We use our mouth to ______.",
+        "options": ["Talk", "Hear", "See", "Smell"],
+        "correct": "Talk"
+      },
+      {
+        "question": "The part of the plant that bears fruits is the ______.",
+        "options": ["Flower", "Root", "Stem", "Leaf"],
+        "correct": "Flower"
+      },
+      {
+        "question": "Animals that eat both plants and meat are called ______.",
+        "options": ["Omnivores", "Herbivores", "Carnivores", "Reptiles"],
+        "correct": "Omnivores"
+      },
+      {
+        "question": "The largest planet in the solar system is ______.",
+        "options": ["Jupiter", "Earth", "Mars", "Venus"],
+        "correct": "Jupiter"
+      },
+      {
+        "question": "The solid part of the earth is called ______.",
+        "options": ["Land", "Water", "Air", "Cloud"],
+        "correct": "Land"
+      },
+      {
+        "question": "The soft part inside the mouth used for tasting is the ______.",
+        "options": ["Tongue", "Tooth", "Ear", "Nose"],
+        "correct": "Tongue"
+      },
+      {
+        "question": "We breathe in oxygen and breathe out ______.",
+        "options": ["Carbon dioxide", "Smoke", "Fire", "Dust"],
+        "correct": "Carbon dioxide"
+      },
+      {
+        "question": "The part of the plant that makes food is the ______.",
+        "options": ["Leaf", "Root", "Stem", "Seed"],
+        "correct": "Leaf"
+      },
+      {
+        "question": "The instrument used to measure length is a ______.",
+        "options": ["Ruler", "Cup", "Clock", "Plate"],
+        "correct": "Ruler"
+      },
+      {
+        "question": "The skin covers and protects the ______.",
+        "options": ["Body", "Book", "Chair", "House"],
+        "correct": "Body"
+      }
+    ]
+  }
+}
