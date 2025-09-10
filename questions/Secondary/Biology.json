@@ -402,6 +402,56 @@
         "question": "The breakdown of glucose to release energy in the absence of oxygen is called ____.",
         "options": ["Aerobic respiration", "Anaerobic respiration", "Photosynthesis", "Oxidation"],
         "correct": "Anaerobic respiration"
+      },
+      {
+        "question": "The functional unit of the kidney is the ____.",
+        "options": ["Neuron", "Alveolus", "Nephron", "Villus"],
+        "correct": "Nephron"
+      },
+      {
+        "question": "The part of the cell responsible for controlling activities is the ____.",
+        "options": ["Mitochondrion", "Nucleus", "Chloroplast", "Cytoplasm"],
+        "correct": "Nucleus"
+      },
+      {
+        "question": "The type of reproduction that involves only one parent is ____.",
+        "options": ["Sexual reproduction", "Asexual reproduction", "Pollination", "Fertilization"],
+        "correct": "Asexual reproduction"
+      },
+      {
+        "question": "The blood cells that fight diseases are called ____.",
+        "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma"],
+        "correct": "White blood cells"
+      },
+      {
+        "question": "The type of joint found at the elbow is ____.",
+        "options": ["Ball and socket", "Hinge joint", "Pivot joint", "Gliding joint"],
+        "correct": "Hinge joint"
+      },
+      {
+        "question": "Which vitamin is produced in the skin when exposed to sunlight?",
+        "options": ["Vitamin A", "Vitamin B", "Vitamin C", "Vitamin D"],
+        "correct": "Vitamin D"
+      },
+      {
+        "question": "The structural and functional unit of life is the ____.",
+        "options": ["Tissue", "Organ", "Cell", "System"],
+        "correct": "Cell"
+      },
+      {
+        "question": "The ability of living organisms to detect and respond to changes in the environment is ____.",
+        "options": ["Reproduction", "Respiration", "Irritability", "Growth"],
+        "correct": "Irritability"
+      },
+      {
+        "question": "Which organ in humans is responsible for filtering blood?",
+        "options": ["Heart", "Liver", "Kidney", "Spleen"],
+        "correct": "Kidney"
+      },
+      {
+        "question": "The waste product excreted by the lungs is ____.",
+        "options": ["Urea", "Sweat", "Carbon dioxide", "Salt"],
+        "correct": "Carbon dioxide"
       }
     ]
   }
