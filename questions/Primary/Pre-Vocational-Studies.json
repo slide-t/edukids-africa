@@ -251,6 +251,108 @@
         "options": ["Watering can", "Axe", "Knife", "Cutlass"],
         "answer": "Watering can"
       }
+    ],
+    "level2": [
+      {
+        "question": "Which of these is a vegetable crop?",
+        "options": ["Spinach", "Yam", "Rice", "Cocoa"],
+        "answer": "Spinach"
+      },
+      {
+        "question": "The process of clearing unwanted plants from the farm is called ____?",
+        "options": ["Weeding", "Harvesting", "Planting", "Fertilizing"],
+        "answer": "Weeding"
+      },
+      {
+        "question": "Which farm animal produces wool?",
+        "options": ["Sheep", "Cow", "Pig", "Goat"],
+        "answer": "Sheep"
+      },
+      {
+        "question": "Which tool is best for tilling the soil?",
+        "options": ["Hoe", "Knife", "Hammer", "Saw"],
+        "answer": "Hoe"
+      },
+      {
+        "question": "A male chicken is called a ____?",
+        "options": ["Rooster", "Hen", "Chick", "Duck"],
+        "answer": "Rooster"
+      },
+      {
+        "question": "The process of preserving food by drying is called ____?",
+        "options": ["Sun drying", "Boiling", "Cooling", "Freezing"],
+        "answer": "Sun drying"
+      },
+      {
+        "question": "Which of the following is a fruit crop?",
+        "options": ["Mango", "Carrot", "Cabbage", "Lettuce"],
+        "answer": "Mango"
+      },
+      {
+        "question": "The place where cows are kept is called a ____?",
+        "options": ["Cattle pen", "Poultry", "Hutch", "Kennel"],
+        "answer": "Cattle pen"
+      },
+      {
+        "question": "The act of putting fertilizer on crops is called ____?",
+        "options": ["Fertilization", "Planting", "Cultivation", "Irrigation"],
+        "answer": "Fertilization"
+      },
+      {
+        "question": "Which part of the cassava plant is eaten?",
+        "options": ["Root", "Leaf", "Stem", "Flower"],
+        "answer": "Root"
+      },
+      {
+        "question": "The tool used for cutting down trees is a ____?",
+        "options": ["Axe", "Hoe", "Knife", "Spade"],
+        "answer": "Axe"
+      },
+      {
+        "question": "Which of these is a method of food preservation?",
+        "options": ["Salting", "Burning", "Spoiling", "Rotting"],
+        "answer": "Salting"
+      },
+      {
+        "question": "What do we call young goats?",
+        "options": ["Kids", "Calves", "Chicks", "Puppies"],
+        "answer": "Kids"
+      },
+      {
+        "question": "The process of supplying water to crops is known as ____?",
+        "options": ["Irrigation", "Harvesting", "Planting", "Grazing"],
+        "answer": "Irrigation"
+      },
+      {
+        "question": "Which of these is a storage structure for grains?",
+        "options": ["Silo", "Pen", "Cage", "Stable"],
+        "answer": "Silo"
+      },
+      {
+        "question": "Which of these is a source of protein?",
+        "options": ["Beans", "Rice", "Cassava", "Sugar"],
+        "answer": "Beans"
+      },
+      {
+        "question": "Which farming method prevents soil erosion?",
+        "options": ["Terracing", "Burning", "Overgrazing", "Deforestation"],
+        "answer": "Terracing"
+      },
+      {
+        "question": "Which of these animals is reared mainly for eggs?",
+        "options": ["Hen", "Goat", "Sheep", "Cattle"],
+        "answer": "Hen"
+      },
+      {
+        "question": "The practice of growing crops and rearing animals together is called ____?",
+        "options": ["Mixed farming", "Irrigation", "Crop rotation", "Poultry farming"],
+        "answer": "Mixed farming"
+      },
+      {
+        "question": "The liquid food produced by cows for human consumption is ____?",
+        "options": ["Milk", "Water", "Juice", "Oil"],
+        "answer": "Milk"
+      }
     ]
   }
 }
