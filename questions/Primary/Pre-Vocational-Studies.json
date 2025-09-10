@@ -755,9 +755,109 @@
         "question": "Which type of farming involves rearing animals together with crops?",
         "options": ["Crop farming", "Animal husbandry", "Mixed farming", "Poultry farming"],
         "answer": "Mixed farming"
+      },
+      {
+        "question": "Which farm animal provides wool used for making clothes?",
+        "options": ["Sheep", "Goat", "Cow", "Pig"],
+        "answer": "Sheep"
+      },
+      {
+        "question": "Which of these is NOT a method of food preservation?",
+        "options": ["Salting", "Smoking", "Boiling", "Spoiling"],
+        "answer": "Spoiling"
+      },
+      {
+        "question": "Why is drainage important in farmland?",
+        "options": ["To flood the land", "To remove excess water", "To stop planting", "To increase erosion"],
+        "answer": "To remove excess water"
+      },
+      {
+        "question": "Which of these is an example of root crop?",
+        "options": ["Maize", "Cocoa", "Cassava", "Millet"],
+        "answer": "Cassava"
+      },
+      {
+        "question": "Which agricultural practice involves supplying water to crops during dry season?",
+        "options": ["Harvesting", "Irrigation", "Storage", "Mulching"],
+        "answer": "Irrigation"
+      },
+      {
+        "question": "Which animal is popularly known as ‘man’s best friend’?",
+        "options": ["Cat", "Dog", "Goat", "Sheep"],
+        "answer": "Dog"
+      },
+      {
+        "question": "Which of these is NOT a farm implement?",
+        "options": ["Hoe", "Cutlass", "Tractor", "Television"],
+        "answer": "Television"
+      },
+      {
+        "question": "Why is weeding important on farms?",
+        "options": ["To waste energy", "To prevent weeds from competing with crops", "To increase weeds", "To reduce crop growth"],
+        "answer": "To prevent weeds from competing with crops"
+      },
+      {
+        "question": "What is the best method of preserving tomatoes for a long time?",
+        "options": ["Sun drying", "Boiling", "Freezing", "Smoking"],
+        "answer": "Sun drying"
+      },
+      {
+        "question": "Which insect is useful in the production of honey?",
+        "options": ["Ant", "Bee", "Butterfly", "Fly"],
+        "answer": "Bee"
+      },
+      {
+        "question": "What is the name of young ones of goats?",
+        "options": ["Calves", "Kittens", "Kids", "Lambs"],
+        "answer": "Kids"
+      },
+      {
+        "question": "Which of these is an example of cash crop?",
+        "options": ["Yam", "Cocoa", "Beans", "Cassava"],
+        "answer": "Cocoa"
+      },
+      {
+        "question": "Which method of land preparation involves cutting down trees and bushes?",
+        "options": ["Clearing", "Ploughing", "Weeding", "Pruning"],
+        "answer": "Clearing"
+      },
+      {
+        "question": "Which part of the plant is eaten in yam?",
+        "options": ["Root", "Stem", "Leaf", "Flower"],
+        "answer": "Stem"
+      },
+      {
+        "question": "Which of these is NOT a source of protein?",
+        "options": ["Fish", "Meat", "Eggs", "Rice"],
+        "answer": "Rice"
+      },
+      {
+        "question": "Why is crop rotation important?",
+        "options": ["It reduces soil fertility", "It increases pests", "It prevents soil from wearing out quickly", "It wastes farmland"],
+        "answer": "It prevents soil from wearing out quickly"
+      },
+      {
+        "question": "Which type of soil holds the most water?",
+        "options": ["Clay", "Sandy", "Loamy", "Gravel"],
+        "answer": "Clay"
+      },
+      {
+        "question": "What is the main use of fertilizer in farming?",
+        "options": ["To make soil hard", "To kill weeds", "To increase soil nutrients", "To dry crops"],
+        "answer": "To increase soil nutrients"
+      },
+      {
+        "question": "Which of these crops is mainly grown in northern Nigeria?",
+        "options": ["Cocoa", "Groundnut", "Oil palm", "Rubber"],
+        "answer": "Groundnut"
+      },
+      {
+        "question": "Which of these methods is best for controlling erosion?",
+        "options": ["Overgrazing", "Planting cover crops", "Bush burning", "Deforestation"],
+        "answer": "Planting cover crops"
       }
     ]
   }
-}
+}  
       
       
