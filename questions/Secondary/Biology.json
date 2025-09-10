@@ -453,9 +453,154 @@
         "options": ["Urea", "Sweat", "Carbon dioxide", "Salt"],
         "correct": "Carbon dioxide"
       }
-    ]
+    ],
+    "level3": [ 
+  {
+    "question": "Which cell organelle is responsible for energy production in eukaryotic cells?",
+    "options": ["Mitochondria", "Nucleus", "Chloroplast", "Golgi apparatus"],
+    "answer": "Mitochondria"
+  },
+  {
+    "question": "What pigment is found in chloroplasts that captures light energy for photosynthesis?",
+    "options": ["Carotene", "Chlorophyll", "Xanthophyll", "Hemoglobin"],
+    "answer": "Chlorophyll"
+  },
+  {
+    "question": "Define osmosis.",
+    "options": [
+      "Movement of water molecules from a region of low solute concentration to high solute concentration through a semi-permeable membrane",
+      "Movement of solutes against a concentration gradient",
+      "Exchange of gases in the lungs",
+      "Production of energy in cells"
+    ],
+    "answer": "Movement of water molecules from a region of low solute concentration to high solute concentration through a semi-permeable membrane"
+  },
+  {
+    "question": "Which type of blood cell helps fight infections in the human body?",
+    "options": ["Red blood cells", "White blood cells", "Platelets", "Plasma cells"],
+    "answer": "White blood cells"
+  },
+  {
+    "question": "What is the function of red blood cells?",
+    "options": ["Fight infection", "Carry oxygen", "Clot blood", "Produce antibodies"],
+    "answer": "Carry oxygen"
+  },
+  {
+    "question": "Name the protein responsible for carrying oxygen in red blood cells.",
+    "options": ["Keratin", "Myosin", "Hemoglobin", "Collagen"],
+    "answer": "Hemoglobin"
+  },
+  {
+    "question": "Which part of the plant is primarily responsible for absorbing water and minerals?",
+    "options": ["Leaves", "Stem", "Roots", "Flowers"],
+    "answer": "Roots"
+  },
+  {
+    "question": "What is transpiration?",
+    "options": [
+      "Loss of oxygen from leaves",
+      "Loss of carbon dioxide from leaves",
+      "Loss of water vapor through stomata in leaves",
+      "Absorption of minerals from soil"
+    ],
+    "answer": "Loss of water vapor through stomata in leaves"
+  },
+  {
+    "question": "State one difference between xylem and phloem.",
+    "options": [
+      "Xylem transports water, phloem transports food",
+      "Xylem transports food, phloem transports water",
+      "Both transport only oxygen",
+      "Both transport only minerals"
+    ],
+    "answer": "Xylem transports water, phloem transports food"
+  },
+  {
+    "question": "Which part of the human brain controls balance and coordination?",
+    "options": ["Cerebrum", "Medulla", "Cerebellum", "Thalamus"],
+    "answer": "Cerebellum"
+  },
+  {
+    "question": "Define mitosis.",
+    "options": [
+      "Cell division that produces four daughter cells",
+      "Cell division that produces two identical daughter cells",
+      "Fusion of male and female gametes",
+      "Process of cell death"
+    ],
+    "answer": "Cell division that produces two identical daughter cells"
+  },
+  {
+    "question": "What is the main function of the ribosome in a cell?",
+    "options": ["Protein synthesis", "Energy production", "DNA replication", "Transport of materials"],
+    "answer": "Protein synthesis"
+  },
+  {
+    "question": "Give two examples of vertebrates.",
+    "options": [
+      "Dog and fish",
+      "Ant and spider",
+      "Earthworm and snail",
+      "Grasshopper and butterfly"
+    ],
+    "answer": "Dog and fish"
+  },
+  {
+    "question": "What is the role of enzymes in digestion?",
+    "options": [
+      "To transport oxygen",
+      "To speed up breakdown of food molecules",
+      "To produce energy",
+      "To fight infections"
+    ],
+    "answer": "To speed up breakdown of food molecules"
+  },
+  {
+    "question": "Which human organ is responsible for filtering waste from the blood?",
+    "options": ["Liver", "Kidney", "Heart", "Lungs"],
+    "answer": "Kidney"
+  },
+  {
+    "question": "Name the male reproductive organ in flowering plants.",
+    "options": ["Pistil", "Carpel", "Stamen", "Ovary"],
+    "answer": "Stamen"
+  },
+  {
+    "question": "What is the function of stomata in plant leaves?",
+    "options": [
+      "Absorb minerals",
+      "Exchange gases and allow water loss",
+      "Provide support",
+      "Produce flowers"
+    ],
+    "answer": "Exchange gases and allow water loss"
+  },
+  {
+    "question": "Which gas do humans exhale as a waste product of respiration?",
+    "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+    "answer": "Carbon dioxide"
+  },
+  {
+    "question": "State one structural difference between animal cells and plant cells.",
+    "options": [
+      "Plant cells have chloroplasts and cell walls, animal cells do not",
+      "Animal cells have chloroplasts and cell walls, plant cells do not",
+      "Animal cells have vacuoles, plant cells do not",
+      "Both are exactly the same"
+    ],
+    "answer": "Plant cells have chloroplasts and cell walls, animal cells do not"
+  },
+  {
+    "question": "Which organ system in humans includes the heart and blood vessels?",
+    "options": [
+      "Respiratory system",
+      "Circulatory system",
+      "Digestive system",
+      "Excretory system"
+    ],
+    "answer": "Circulatory system"
   }
-}
+]
 
       
       
