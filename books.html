@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Books</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    h1 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #333;
+    }
+    .book-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .book-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease-in-out;
+    }
+    .book-card:hover {
+      transform: scale(1.02);
+    }
+    .book-card img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+    .book-card h3 {
+      margin: 10px 0;
+      font-size: 1.2rem;
+      color: #222;
+    }
+    .book-card p {
+      margin: 0;
+      color: #666;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px 5px;
+      padding: 8px 15px;
+      background: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    .order-btn {
+      display: none;
+      background: #28a745;
+    }
+    .popup {
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.6);
+      display: none;
+      justify-content: center;
+      align-items: center;
+    }
+    .popup-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 500px;
+      width: 90%;
+      text-align: left;
+    }
+    .popup-content h2 {
+      margin-top: 0;
+    }
+    .close-btn {
+      float: right;
+      font-size: 20px;
+      cursor: pointer;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Our Books</h1>
+<div class="book-grid" id="bookGrid"></div>
+
+<!-- Popup -->
+<div class="popup" id="popup">
+  <div class="popup-content">
+    <span class="close-btn" onclick="closePopup()">&times;</span>
+    <h2 id="popupTitle"></h2>
+    <p id="popupDesc"></p>
+  </div>
+</div>
+
+<script>
+  // Example JSON Data (replace with external file if needed)
+  const books = [
+    {
+      "title": "The Future of Learning",
+      "author": "Azeez Olajide",
+      "image": "https://via.placeholder.com/200x250",
+      "description": "This book explores modern learning trends. <br><br><b>Awards:</b> Best Educational Text 2024 <br><b>Author:</b> Experienced educator and researcher with 20+ years."
+    },
+    {
+      "title": "Coding for Kids",
+      "author": "Jane Smith",
+      "image": "https://via.placeholder.com/200x250",
+      "description": "An engaging introduction to coding for young learners. <br><br><b>Awards:</b> STEM Award 2023 <br><b>Author:</b> Software engineer and teacher."
+    },
+    {
+      "title": "Biology Simplified",
+      "author": "Michael Johnson",
+      "image": "https://via.placeholder.com/200x250",
+      "description": "Simplifies biology concepts for students. <br><br><b>Awards:</b> African Education Prize 2022 <br><b>Author:</b> University professor and author of 5 books."
+    }
+  ];
+
+  const bookGrid = document.getElementById('bookGrid');
+  const popup = document.getElementById('popup');
+  const popupTitle = document.getElementById('popupTitle');
+  const popupDesc = document.getElementById('popupDesc');
+
+  function renderBooks() {
+    books.forEach((book, index) => {
+      const card = document.createElement('div');
+      card.classList.add('book-card');
+      card.innerHTML = `
+        <img src="${book.image}" alt="${book.title}">
+        <h3>${book.title}</h3>
+        <p>By ${book.author}</p>
+        <button class="btn" onclick="showPopup('${book.title}', \`${book.description}\`)">More Info</button>
+        <button class="btn add-btn" onclick="toggleOrder(this)">Add to Cart</button>
+        <a href="https://yourpwa.com" target="_blank" class="btn order-btn">Order Now</a>
+      `;
+      bookGrid.appendChild(card);
+    });
+  }
+
+  function showPopup(title, desc) {
+    popup.style.display = 'flex';
+    popupTitle.innerText = title;
+    popupDesc.innerHTML = desc;
+  }
+
+  function closePopup() {
+    popup.style.display = 'none';
+  }
+
+  function toggleOrder(btn) {
+    const orderBtn = btn.nextElementSibling;
+    orderBtn.style.display = orderBtn.style.display === 'inline-block' ? 'none' : 'inline-block';
+  }
+
+  renderBooks();
+</script>
+
+</body>
+</html>
