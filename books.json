@@ -1,30 +1,112 @@
-[
-  {
-    "title": "The Future of Learning",
-    "author": "Azeez Olajide",
-    "subject": "Education",
-    "image": "https://via.placeholder.com/200x250",
-    "description": "Explores modern learning trends. <br><br><b>Awards:</b> Best Educational Text 2024 <br><b>Author:</b> Educator with 20+ years of research experience."
-  },
-  {
-    "title": "Coding for Kids",
-    "author": "Jane Smith",
-    "subject": "Technology",
-    "image": "https://via.placeholder.com/200x250",
-    "description": "Introduction to coding for young learners. <br><br><b>Awards:</b> STEM Award 2023 <br><b>Author:</b> Software engineer and teacher."
-  },
-  {
-    "title": "Biology Simplified",
-    "author": "Michael Johnson",
-    "subject": "Biology",
-    "image": "https://via.placeholder.com/200x250",
-    "description": "Simplifies biology concepts for secondary students. <br><br><b>Awards:</b> African Education Prize 2022 <br><b>Author:</b> University professor and author of 5 books."
-  },
-  {
-    "title": "Mathematics Made Easy",
-    "author": "Sarah Lee",
-    "subject": "Mathematics",
-    "image": "https://via.placeholder.com/200x250",
-    "description": "Step-by-step guide to mastering mathematics. <br><br><b>Awards:</b> National Math Prize 2021 <br><b>Author:</b> Math teacher with 15 years of classroom experience."
-  }
-]
+{
+  "books": [
+    {
+      "title": "Principles of Modern Chemistry",
+      "author": "Raymond Chang",
+      "subject": "Chemistry",
+      "cover": "https://covers.openlibrary.org/b/id/12541210-L.jpg",
+      "description": "A comprehensive textbook covering the foundation of chemical principles, equations, and laboratory practices.",
+      "award": "Best Academic Chemistry Book 2021",
+      "experience": "Author with 30+ years in chemical education and research."
+    },
+    {
+      "title": "Organic Chemistry Simplified",
+      "author": "Paula Yurkanis Bruice",
+      "subject": "Chemistry",
+      "cover": "https://covers.openlibrary.org/b/id/12541211-L.jpg",
+      "description": "Focuses on organic compounds and reactions, written in a student-friendly language with clear illustrations.",
+      "award": "Top Choice Textbook in Organic Studies",
+      "experience": "Renowned professor of organic chemistry with global recognition."
+    },
+    {
+      "title": "Fundamentals of Physics",
+      "author": "David Halliday",
+      "subject": "Physics",
+      "cover": "https://covers.openlibrary.org/b/id/12541320-L.jpg",
+      "description": "An essential introduction to classical and modern physics with problem-solving strategies.",
+      "award": "World Physics Education Award",
+      "experience": "Internationally recognized physicist and educator."
+    },
+    {
+      "title": "Conceptual Physics",
+      "author": "Paul Hewitt",
+      "subject": "Physics",
+      "cover": "https://covers.openlibrary.org/b/id/12541321-L.jpg",
+      "description": "Simplifies physics concepts for beginners, focusing on real-world examples and clear illustrations.",
+      "award": "Innovative Science Writing Award",
+      "experience": "Over 40 years of teaching conceptual physics worldwide."
+    },
+    {
+      "title": "Human Geography: People, Place, and Culture",
+      "author": "Erin H. Fouberg",
+      "subject": "Geography",
+      "cover": "https://covers.openlibrary.org/b/id/12541420-L.jpg",
+      "description": "Explores the interaction of people with environments, including population, migration, and globalization.",
+      "award": "Geography Society Award 2020",
+      "experience": "Author with extensive field research in cultural geography."
+    },
+    {
+      "title": "Physical Geography of the World",
+      "author": "James Petersen",
+      "subject": "Geography",
+      "cover": "https://covers.openlibrary.org/b/id/12541421-L.jpg",
+      "description": "Covers earth’s landscapes, climates, and ecosystems with modern maps and illustrations.",
+      "award": "Outstanding Earth Science Book",
+      "experience": "Professor and researcher in physical geography."
+    },
+    {
+      "title": "English Grammar in Use",
+      "author": "Raymond Murphy",
+      "subject": "English Language",
+      "cover": "https://covers.openlibrary.org/b/id/12541520-L.jpg",
+      "description": "A self-study reference and practice book for learners of English at intermediate levels.",
+      "award": "Best English Reference Guide",
+      "experience": "English educator with 25+ years in language teaching."
+    },
+    {
+      "title": "Literature and Composition",
+      "author": "Carol Jago",
+      "subject": "English Language",
+      "cover": "https://covers.openlibrary.org/b/id/12541521-L.jpg",
+      "description": "Focuses on improving reading comprehension, literary analysis, and writing skills.",
+      "award": "National Teacher’s Choice Award",
+      "experience": "Well-known curriculum developer in English literature."
+    },
+    {
+      "title": "Exploring Social Studies",
+      "author": "Linda Bennett",
+      "subject": "Social Studies",
+      "cover": "https://covers.openlibrary.org/b/id/12541620-L.jpg",
+      "description": "Introduces students to history, government, and cultures around the world.",
+      "award": "Educational Innovation Award",
+      "experience": "Social Studies teacher with over 20 years of classroom practice."
+    },
+    {
+      "title": "World History Atlas",
+      "author": "Jeremy Black",
+      "subject": "Social Studies",
+      "cover": "https://covers.openlibrary.org/b/id/12541621-L.jpg",
+      "description": "Combines maps and timelines to explain key events in human history.",
+      "award": "Atlas Book of the Year",
+      "experience": "Renowned historian and world history lecturer."
+    },
+    {
+      "title": "Introduction to Pre-Vocational Studies",
+      "author": "M. O. Adeyemi",
+      "subject": "Pre-Vocational Studies",
+      "cover": "https://covers.openlibrary.org/b/id/12541720-L.jpg",
+      "description": "Covers agricultural science, home economics, and basic technology for beginners.",
+      "award": "African Education Development Award",
+      "experience": "Author with practical teaching in vocational studies across Africa."
+    },
+    {
+      "title": "Practical Skills for Young Learners",
+      "author": "Ngozi Okafor",
+      "subject": "Pre-Vocational Studies",
+      "cover": "https://covers.openlibrary.org/b/id/12541721-L.jpg",
+      "description": "Hands-on guide to learning vocational skills such as sewing, farming, and simple crafts.",
+      "award": "Youth Empowerment Book Award",
+      "experience": "Educator with focus on vocational training for schools without computers."
+    }
+  ]
+}
