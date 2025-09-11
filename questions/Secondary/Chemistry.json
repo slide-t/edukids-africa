@@ -460,8 +460,214 @@
       "options": ["Loss of electrons", "Gain of electrons", "Sharing of electrons", "Neutralization of ions"],
       "answer": "Loss of electrons"
     }
+    ],
+    "level 3": [
+      {
+        "question": "Which quantum number describes the orientation of an orbital in space?",
+        "options": ["Principal quantum number", "Azimuthal quantum number", "Magnetic quantum number", "Spin quantum number"],
+        "answer": "Magnetic quantum number"
+      },
+      {
+        "question": "What is the hybridization of carbon in methane (CH4)?",
+        "options": ["sp", "sp2", "sp3", "sp3d"],
+        "answer": "sp3"
+      },
+      {
+        "question": "Which gas is produced at the anode during the electrolysis of concentrated sodium chloride solution?",
+        "options": ["Oxygen", "Chlorine", "Hydrogen", "Nitrogen"],
+        "answer": "Chlorine"
+      },
+      {
+        "question": "The pH of a 0.001 M HCl solution is approximately?",
+        "options": ["1", "2", "3", "4"],
+        "answer": "3"
+      },
+      {
+        "question": "Which of these is NOT a colligative property?",
+        "options": ["Vapor pressure lowering", "Osmotic pressure", "Boiling point elevation", "Density"],
+        "answer": "Density"
+      },
+      {
+        "question": "In the periodic table, electronegativity generally increases across a period because?",
+        "options": ["Nuclear charge increases", "Atomic size increases", "Shielding effect increases", "Number of shells increases"],
+        "answer": "Nuclear charge increases"
+      },
+      {
+        "question": "The first ionization energy of sodium is lower than that of magnesium because?",
+        "options": ["Sodium has more protons", "Sodium has a larger atomic radius", "Magnesium has more shielding", "Sodium has more neutrons"],
+        "answer": "Sodium has a larger atomic radius"
+      },
+      {
+        "question": "Which salt is formed when hydrochloric acid reacts with sodium carbonate?",
+        "options": ["Sodium chloride", "Sodium hydroxide", "Sodium sulfate", "Sodium nitrate"],
+        "answer": "Sodium chloride"
+      },
+      {
+        "question": "Which orbital can hold a maximum of 10 electrons?",
+        "options": ["s", "p", "d", "f"],
+        "answer": "d"
+      },
+      {
+        "question": "The oxidation number of phosphorus in H3PO4 is?",
+        "options": ["+3", "+5", "+4", "+2"],
+        "answer": "+5"
+      },
+      {
+        "question": "Which organic compound decolourizes bromine water without heating?",
+        "options": ["Ethane", "Ethene", "Methane", "Ethanoic acid"],
+        "answer": "Ethene"
+      },
+      {
+        "question": "The type of crystalline solid formed by sodium chloride is?",
+        "options": ["Molecular crystal", "Ionic crystal", "Covalent crystal", "Metallic crystal"],
+        "answer": "Ionic crystal"
+      },
+      {
+        "question": "Which of the following is a secondary alcohol?",
+        "options": ["Propan-2-ol", "Methanol", "Ethanol", "Propan-1-ol"],
+        "answer": "Propan-2-ol"
+      },
+      {
+        "question": "During nuclear fission, heavy nuclei split to form?",
+        "options": ["Lighter nuclei", "Heavier nuclei", "Photons only", "Electrons only"],
+        "answer": "Lighter nuclei"
+      },
+      {
+        "question": "What is the main ore of iron?",
+        "options": ["Bauxite", "Haematite", "Galena", "Malachite"],
+        "answer": "Haematite"
+      },
+      {
+        "question": "Which reagent is used to test for the presence of protein?",
+        "options": ["Iodine solution", "Fehling’s solution", "Biuret reagent", "Benedict’s solution"],
+        "answer": "Biuret reagent"
+      },
+      {
+        "question": "The half-life of a radioactive isotope is 10 minutes. How much of a 16 g sample remains after 30 minutes?",
+        "options": ["8 g", "4 g", "2 g", "1 g"],
+        "answer": "2 g"
+      },
+      {
+        "question": "Which type of chemical reaction is represented by: 2KClO3 → 2KCl + 3O2?",
+        "options": ["Synthesis", "Decomposition", "Neutralization", "Double displacement"],
+        "answer": "Decomposition"
+      },
+      {
+        "question": "The gas responsible for the characteristic smell of rotten eggs is?",
+        "options": ["Hydrogen chloride", "Sulfur dioxide", "Hydrogen sulfide", "Ammonia"],
+        "answer": "Hydrogen sulfide"
+      },
+      {
+        "question": "Which hydrocarbon series has the general formula CnH2n+2?",
+        "options": ["Alkanes", "Alkenes", "Alkynes", "Arenes"],
+        "answer": "Alkanes"
+      },
+      {
+        "question": "Which of the following pairs are allotropes of carbon?",
+        "options": ["Graphite and Diamond", "Carbon dioxide and Carbon monoxide", "Coal and Carbon dioxide", "Charcoal and Methane"],
+        "answer": "Graphite and Diamond"
+      },
+      {
+        "question": "The main reason metals are good conductors of electricity is because?",
+        "options": ["They have free electrons", "They have high density", "They are malleable", "They have high melting points"],
+        "answer": "They have free electrons"
+      },
+      {
+        "question": "Which of these gases is used in the manufacture of sulphuric acid?",
+        "options": ["Sulfur dioxide", "Oxygen", "Hydrogen", "Nitrogen"],
+        "answer": "Sulfur dioxide"
+      },
+      {
+        "question": "The isotope used in the treatment of cancer is?",
+        "options": ["Cobalt-60", "Carbon-14", "Uranium-238", "Potassium-40"],
+        "answer": "Cobalt-60"
+      },
+      {
+        "question": "Which property of transition metals makes them useful as catalysts?",
+        "options": ["Variable oxidation states", "High density", "Good conductivity", "Shiny appearance"],
+        "answer": "Variable oxidation states"
+      },
+      {
+        "question": "The relative molecular mass of a substance is measured against?",
+        "options": ["Hydrogen atom", "Carbon-12 atom", "Oxygen-16 atom", "Nitrogen atom"],
+        "answer": "Carbon-12 atom"
+      },
+      {
+        "question": "Which process is used to convert glucose into ethanol?",
+        "options": ["Fermentation", "Distillation", "Polymerization", "Saponification"],
+        "answer": "Fermentation"
+      },
+      {
+        "question": "The type of reaction between an acid and a metal carbonate is?",
+        "options": ["Neutralization", "Displacement", "Decomposition", "Combustion"],
+        "answer": "Neutralization"
+      },
+      {
+        "question": "Which hydrocarbon series contains a triple bond?",
+        "options": ["Alkanes", "Alkenes", "Alkynes", "Arenes"],
+        "answer": "Alkynes"
+      },
+      {
+        "question": "The enthalpy change for a reaction measured under constant pressure is known as?",
+        "options": ["Heat capacity", "Latent heat", "Enthalpy of reaction", "Activation energy"],
+        "answer": "Enthalpy of reaction"
+      },
+      {
+        "question": "Which of these is an example of a buffer solution?",
+        "options": ["HCl solution", "NaOH solution", "CH3COOH + CH3COONa", "NH3 + HCl"],
+        "answer": "CH3COOH + CH3COONa"
+      },
+      {
+        "question": "Which chemical compound is responsible for the blue color of copper(II) sulfate crystals?",
+        "options": ["Water of crystallization", "Hydroxide ions", "Chloride ions", "Oxygen atoms"],
+        "answer": "Water of crystallization"
+      },
+      {
+        "question": "Which process involves the removal of impurities from bauxite before extracting aluminium?",
+        "options": ["Bayer process", "Haber process", "Contact process", "Solvay process"],
+        "answer": "Bayer process"
+      },
+      {
+        "question": "The energy required to start a chemical reaction is called?",
+        "options": ["Ionization energy", "Activation energy", "Lattice energy", "Bond energy"],
+        "answer": "Activation energy"
+      },
+      {
+        "question": "In chromatography, the substance that moves up the paper with the solvent is called?",
+        "options": ["Stationary phase", "Mobile phase", "Solute", "Residue"],
+        "answer": "Mobile phase"
+      },
+      {
+        "question": "Which of the following is an example of a conjugated base?",
+        "options": ["OH-", "NH4+", "Cl-", "H3O+"],
+        "answer": "Cl-"
+      },
+      {
+        "question": "Which of these best explains the metallic bonding model?",
+        "options": ["Sea of delocalized electrons", "Shared pairs of electrons", "Electrostatic attraction between ions", "Van der Waals forces"],
+        "answer": "Sea of delocalized electrons"
+      },
+      {
+        "question": "The electrode potential of a half-cell is measured relative to?",
+        "options": ["Oxygen electrode", "Standard hydrogen electrode", "Calomel electrode", "Copper electrode"],
+        "answer": "Standard hydrogen electrode"
+      },
+      {
+        "question": "The bleaching action of chlorine is due to?",
+        "options": ["Reduction", "Oxidation", "Hydrolysis", "Neutralization"],
+        "answer": "Oxidation"
+      },
+      {
+        "question": "Which of these compounds exhibits hydrogen bonding?",
+        "options": ["CH4", "NH3", "CO2", "NaCl"],
+        "answer": "NH3"
+      }
     ]
   }
+}
+
+
+      
 
 
     
