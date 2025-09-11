@@ -1,5 +1,4 @@
-{
-  "books": [
+[
     {
       "title": "Principles of Modern Chemistry",
       "author": "Raymond Chang",
@@ -109,4 +108,4 @@
       "experience": "Educator with focus on vocational training for schools without computers."
     }
   ]
-}
+
