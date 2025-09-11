@@ -206,6 +206,212 @@
         "options": ["Acetic acid", "Tartaric acid", "Citric acid", "Carbonic acid"],
         "answer": "Citric acid"
       }
-    ]
-  }
+    ],
+
+  "level2":
+             [
+    {
+      "question": "Which of the following is an example of a compound?",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Helium"],
+      "answer": "Carbon dioxide"
+    },
+    {
+      "question": "The smallest particle of an element that retains its properties is called?",
+      "options": ["Atom", "Molecule", "Ion", "Proton"],
+      "answer": "Atom"
+    },
+    {
+      "question": "Which scientist proposed the plum pudding model of the atom?",
+      "options": ["Dalton", "Rutherford", "Thomson", "Bohr"],
+      "answer": "Thomson"
+    },
+    {
+      "question": "The process of separating salt from seawater by evaporation is called?",
+      "options": ["Distillation", "Filtration", "Evaporation", "Sublimation"],
+      "answer": "Evaporation"
+    },
+    {
+      "question": "Which of the following is NOT a chemical change?",
+      "options": ["Burning of wood", "Rusting of iron", "Melting of ice", "Cooking of food"],
+      "answer": "Melting of ice"
+    },
+    {
+      "question": "The modern periodic table is arranged in order of?",
+      "options": ["Atomic mass", "Atomic number", "Valency", "Reactivity"],
+      "answer": "Atomic number"
+    },
+    {
+      "question": "The pH of pure water at room temperature is?",
+      "options": ["0", "7", "14", "1"],
+      "answer": "7"
+    },
+    {
+      "question": "Which gas is given off when metals react with acids?",
+      "options": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+      "answer": "Hydrogen"
+    },
+    {
+      "question": "Which of these substances is an element?",
+      "options": ["Water", "Ammonia", "Sulfur", "Salt"],
+      "answer": "Sulfur"
+    },
+    {
+      "question": "The reaction between an acid and a base produces?",
+      "options": ["Salt and water", "Carbon dioxide and water", "Oxygen and salt", "Acid only"],
+      "answer": "Salt and water"
+    },
+    {
+      "question": "Which of the following elements is a halogen?",
+      "options": ["Chlorine", "Oxygen", "Magnesium", "Neon"],
+      "answer": "Chlorine"
+    },
+    {
+      "question": "Avogadro’s number is approximately?",
+      "options": ["3.0 × 10^8", "6.02 × 10^23", "1.6 × 10^-19", "9.8 m/s^2"],
+      "answer": "6.02 × 10^23"
+    },
+    {
+      "question": "Which type of bond is formed when two atoms share electrons?",
+      "options": ["Ionic bond", "Covalent bond", "Metallic bond", "Hydrogen bond"],
+      "answer": "Covalent bond"
+    },
+    {
+      "question": "The instrument used to measure the volume of liquids accurately in the laboratory is?",
+      "options": ["Beaker", "Pipette", "Test tube", "Evaporating dish"],
+      "answer": "Pipette"
+    },
+    {
+      "question": "Which of these oxides is amphoteric?",
+      "options": ["CO2", "Na2O", "ZnO", "SO2"],
+      "answer": "ZnO"
+    },
+    {
+      "question": "The law of conservation of mass was first stated by?",
+      "options": ["Dalton", "Lavoisier", "Mendeleev", "Boyle"],
+      "answer": "Lavoisier"
+    },
+    {
+      "question": "Which of these gases is responsible for the greenhouse effect?",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "answer": "Carbon dioxide"
+    },
+    {
+      "question": "Which functional group is present in alcohols?",
+      "options": ["–OH", "–COOH", "–CHO", "–NH2"],
+      "answer": "–OH"
+    },
+    {
+      "question": "The periodic table was first arranged in order of atomic mass by?",
+      "options": ["Mendeleev", "Dalton", "Moseley", "Rutherford"],
+      "answer": "Mendeleev"
+    },
+    {
+      "question": "An acid that completely dissociates in water is called?",
+      "options": ["Weak acid", "Strong acid", "Organic acid", "Inorganic acid"],
+      "answer": "Strong acid"
+    },
+    {
+      "question": "Which separation technique is used for separating mixtures based on differences in boiling points?",
+      "options": ["Filtration", "Chromatography", "Distillation", "Decantation"],
+      "answer": "Distillation"
+    },
+    {
+      "question": "The neutralization of an acid by a base is what type of reaction?",
+      "options": ["Exothermic", "Endothermic", "Combustion", "Decomposition"],
+      "answer": "Exothermic"
+    },
+    {
+      "question": "Which of the following is an example of a noble gas?",
+      "options": ["Argon", "Nitrogen", "Fluorine", "Chlorine"],
+      "answer": "Argon"
+    },
+    {
+      "question": "The atomic number of an element represents the number of?",
+      "options": ["Neutrons", "Protons", "Electrons + Protons", "Protons + Neutrons"],
+      "answer": "Protons"
+    },
+    {
+      "question": "Which of these hydrocarbons is unsaturated?",
+      "options": ["Methane", "Ethene", "Propane", "Butane"],
+      "answer": "Ethene"
+    },
+    {
+      "question": "The process by which a liquid changes into gas at all temperatures is called?",
+      "options": ["Boiling", "Evaporation", "Condensation", "Freezing"],
+      "answer": "Evaporation"
+    },
+    {
+      "question": "Which gas is used in the manufacture of ammonia by the Haber process?",
+      "options": ["Oxygen", "Nitrogen", "Chlorine", "Carbon dioxide"],
+      "answer": "Nitrogen"
+    },
+    {
+      "question": "The substance that speeds up a chemical reaction without being consumed is called?",
+      "options": ["Reactant", "Product", "Catalyst", "Inhibitor"],
+      "answer": "Catalyst"
+    },
+    {
+      "question": "Which type of reaction is represented by: AB → A + B?",
+      "options": ["Synthesis", "Decomposition", "Neutralization", "Displacement"],
+      "answer": "Decomposition"
+    },
+    {
+      "question": "In electrolysis, the electrode where reduction occurs is the?",
+      "options": ["Anode", "Cathode", "Electrolyte", "Diode"],
+      "answer": "Cathode"
+    },
+    {
+      "question": "The ability of carbon to form long chains is called?",
+      "options": ["Isomerism", "Catenation", "Polymerization", "Crystallization"],
+      "answer": "Catenation"
+    },
+    {
+      "question": "Which metal is commonly extracted from bauxite?",
+      "options": ["Iron", "Aluminium", "Copper", "Zinc"],
+      "answer": "Aluminium"
+    },
+    {
+      "question": "The energy required to remove an electron from an atom in the gaseous state is called?",
+      "options": ["Electron affinity", "Ionization energy", "Electronegativity", "Activation energy"],
+      "answer": "Ionization energy"
+    },
+    {
+      "question": "What is the oxidation number of sulfur in H2SO4?",
+      "options": ["+2", "+4", "+6", "0"],
+      "answer": "+6"
+    },
+    {
+      "question": "Which solution turns red litmus paper blue?",
+      "options": ["Acid", "Base", "Salt solution", "Alcohol"],
+      "answer": "Base"
+    },
+    {
+      "question": "Which property of water makes it known as a universal solvent?",
+      "options": ["It is tasteless", "It is colorless", "It dissolves many substances", "It is neutral"],
+      "answer": "It dissolves many substances"
+    },
+    {
+      "question": "The radioactive isotope used in dating archaeological specimens is?",
+      "options": ["Carbon-12", "Carbon-14", "Uranium-235", "Potassium-40"],
+      "answer": "Carbon-14"
+    },
+    {
+      "question": "The electron arrangement of sodium (atomic number 11) is?",
+      "options": ["2, 8, 1", "2, 7, 2", "2, 6, 3", "2, 8, 2"],
+      "answer": "2, 8, 1"
+    },
+    {
+      "question": "Which of these gases is used in fire extinguishers?",
+      "options": ["Oxygen", "Carbon dioxide", "Nitrogen", "Hydrogen"],
+      "answer": "Carbon dioxide"
+    },
+    {
+      "question": "Which separation method is best for separating pigments in ink?",
+      "options": ["Distillation", "Filtration", "Chromatography", "Decantation"],
+      "answer": "Chromatography"
+    }
+  ]
 }
+
+
+    
