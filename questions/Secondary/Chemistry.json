@@ -661,6 +661,106 @@
         "question": "Which of these compounds exhibits hydrogen bonding?",
         "options": ["CH4", "NH3", "CO2", "NaCl"],
         "answer": "NH3"
+      },
+      {
+        "question": "Which of the following oxides is amphoteric?",
+        "options": ["Na2O", "Al2O3", "CO2", "CaO"],
+        "answer": "Al2O3"
+      },
+      {
+        "question": "Which term describes the minimum energy that reacting particles must have for a reaction to occur?",
+        "options": ["Bond energy", "Activation energy", "Ionization energy", "Kinetic energy"],
+        "answer": "Activation energy"
+      },
+      {
+        "question": "Which type of polymerization involves the opening of a double bond?",
+        "options": ["Condensation polymerization", "Addition polymerization", "Hydrolysis", "Cracking"],
+        "answer": "Addition polymerization"
+      },
+      {
+        "question": "Which of the following is a greenhouse gas?",
+        "options": ["Oxygen", "Carbon dioxide", "Argon", "Neon"],
+        "answer": "Carbon dioxide"
+      },
+      {
+        "question": "The standard enthalpy change of combustion is defined as?",
+        "options": ["Heat change when one mole of a substance is completely burned in oxygen", "Heat released when two moles of hydrogen combine with oxygen", "Energy needed to remove one mole of electrons", "Heat absorbed when a bond is broken"],
+        "answer": "Heat change when one mole of a substance is completely burned in oxygen"
+      },
+      {
+        "question": "Which gas is liberated when dilute hydrochloric acid reacts with calcium carbonate?",
+        "options": ["Hydrogen", "Carbon dioxide", "Oxygen", "Chlorine"],
+        "answer": "Carbon dioxide"
+      },
+      {
+        "question": "Which part of an electrochemical cell is the site of reduction?",
+        "options": ["Anode", "Cathode", "Salt bridge", "Electrolyte"],
+        "answer": "Cathode"
+      },
+      {
+        "question": "The solubility of gases in liquids decreases with?",
+        "options": ["Increase in pressure", "Decrease in pressure", "Increase in temperature", "Constant temperature"],
+        "answer": "Increase in temperature"
+      },
+      {
+        "question": "Which of these is an example of an aromatic compound?",
+        "options": ["Methane", "Ethene", "Benzene", "Propane"],
+        "answer": "Benzene"
+      },
+      {
+        "question": "What is the oxidation number of chromium in K2Cr2O7?",
+        "options": ["+6", "+2", "+3", "+4"],
+        "answer": "+6"
+      },
+      {
+        "question": "Which of the following elements has the highest electronegativity?",
+        "options": ["Oxygen", "Fluorine", "Chlorine", "Nitrogen"],
+        "answer": "Fluorine"
+      },
+      {
+        "question": "In the Haber process, the purpose of the iron catalyst is to?",
+        "options": ["Increase equilibrium yield", "Increase rate of reaction", "Decrease activation energy", "Absorb ammonia formed"],
+        "answer": "Increase rate of reaction"
+      },
+      {
+        "question": "Which of these salts is insoluble in water?",
+        "options": ["NaCl", "KNO3", "PbSO4", "CaCl2"],
+        "answer": "PbSO4"
+      },
+      {
+        "question": "What is the color of phenolphthalein in alkaline solution?",
+        "options": ["Colorless", "Pink", "Red", "Blue"],
+        "answer": "Pink"
+      },
+      {
+        "question": "Which of these is NOT a greenhouse gas?",
+        "options": ["Methane", "Oxygen", "Carbon dioxide", "Nitrous oxide"],
+        "answer": "Oxygen"
+      },
+      {
+        "question": "Which of these hydrocarbons undergo substitution reactions most readily?",
+        "options": ["Alkanes", "Alkenes", "Alkynes", "Arenes"],
+        "answer": "Alkanes"
+      },
+      {
+        "question": "Which type of crystalline solid is formed by diamond?",
+        "options": ["Ionic crystal", "Molecular crystal", "Covalent network crystal", "Metallic crystal"],
+        "answer": "Covalent network crystal"
+      },
+      {
+        "question": "Which process is used to obtain pure nitrogen from liquid air?",
+        "options": ["Fractional distillation", "Filtration", "Crystallization", "Chromatography"],
+        "answer": "Fractional distillation"
+      },
+      {
+        "question": "Which acid is commonly called 'oil of vitriol'?",
+        "options": ["Hydrochloric acid", "Nitric acid", "Sulfuric acid", "Phosphoric acid"],
+        "answer": "Sulfuric acid"
+      },
+      {
+        "question": "Which of these is used as an indicator in acid-base titration?",
+        "options": ["Ethanol", "Phenolphthalein", "Sodium chloride", "Glucose"],
+        "answer": "Phenolphthalein"
       }
     ]
   }
