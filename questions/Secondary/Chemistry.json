@@ -409,9 +409,59 @@
       "question": "Which separation method is best for separating pigments in ink?",
       "options": ["Distillation", "Filtration", "Chromatography", "Decantation"],
       "answer": "Chromatography"
+    },
+    {
+      "question": "Which of the following is a noble gas?",
+      "options": ["Helium", "Chlorine", "Oxygen", "Hydrogen"],
+      "answer": "Helium"
+    },
+    {
+      "question": "Which gas is produced when zinc reacts with dilute hydrochloric acid?",
+      "options": ["Oxygen", "Carbon dioxide", "Hydrogen", "Nitrogen"],
+      "answer": "Hydrogen"
+    },
+    {
+      "question": "What is the chemical formula of ammonium ion?",
+      "options": ["NH3", "NH4+", "NH4-", "N2H4"],
+      "answer": "NH4+"
+    },
+    {
+      "question": "Which law states that equal volumes of gases at the same temperature and pressure contain the same number of molecules?",
+      "options": ["Dalton’s Law", "Boyle’s Law", "Avogadro’s Law", "Charles’ Law"],
+      "answer": "Avogadro’s Law"
+    },
+    {
+      "question": "Which of these is an endothermic process?",
+      "options": ["Melting of ice", "Condensation of steam", "Combustion of fuel", "Neutralization reaction"],
+      "answer": "Melting of ice"
+    },
+    {
+      "question": "The main constituent of natural gas is?",
+      "options": ["Ethane", "Methane", "Butane", "Propane"],
+      "answer": "Methane"
+    },
+    {
+      "question": "Which property of acids is responsible for their sour taste?",
+      "options": ["Presence of hydrogen ions", "Presence of hydroxide ions", "Presence of sodium ions", "Presence of chloride ions"],
+      "answer": "Presence of hydrogen ions"
+    },
+    {
+      "question": "Which scientist proposed the plum pudding model of the atom?",
+      "options": ["Rutherford", "Thomson", "Bohr", "Dalton"],
+      "answer": "Thomson"
+    },
+    {
+      "question": "Which is the lightest element in the periodic table?",
+      "options": ["Oxygen", "Hydrogen", "Helium", "Lithium"],
+      "answer": "Hydrogen"
+    },
+    {
+      "question": "In redox reactions, oxidation is defined as?",
+      "options": ["Loss of electrons", "Gain of electrons", "Sharing of electrons", "Neutralization of ions"],
+      "answer": "Loss of electrons"
     }
-  ]
-}
+    ]
+  }
 
 
     
