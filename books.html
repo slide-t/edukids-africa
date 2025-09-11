@@ -4,192 +4,145 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Books</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 20px;
-      background: #f9f9f9;
-    }
-    h1 {
-      text-align: center;
-      margin-bottom: 30px;
-      color: #333;
-    }
-    .book-grid {
-      display: grid;
-      gap: 20px;
-    }
-    /* Mobile: 2 per row */
-    @media (max-width: 768px) {
-      .book-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-    }
-    /* Desktop: 4 per row */
-    @media (min-width: 769px) {
-      .book-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-    }
-    .book-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      overflow: hidden;
-      text-align: center;
-      transition: transform 0.2s ease-in-out;
-    }
-    .book-card:hover {
-      transform: scale(1.02);
-    }
-    .book-card img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-    }
-    .book-card h3 {
-      margin: 10px 0;
-      font-size: 1.1rem;
-      color: #222;
-    }
-    .book-card p {
-      margin: 0;
-      color: #666;
-      font-size: 0.9rem;
-    }
-    .btn {
-      display: inline-block;
-      margin: 10px 5px;
-      padding: 8px 15px;
-      background: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      font-size: 0.9rem;
-      transition: background 0.2s;
-    }
-    .btn:hover {
-      background: #0056b3;
-    }
-    .order-btn {
-      display: none;
-      background: #28a745;
-    }
-    .popup {
-      position: fixed;
-      top: 0; left: 0;
-      width: 100%; height: 100%;
-      background: rgba(0,0,0,0.6);
-      display: none;
-      justify-content: center;
-      align-items: center;
-      z-index: 1000;
-    }
-    .popup-content {
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 500px;
-      width: 90%;
-      text-align: left;
-      position: relative;
-    }
-    .popup-content h2 {
-      margin-top: 0;
-    }
-    .close-btn {
-      position: absolute;
-      top: 10px;
-      right: 15px;
-      font-size: 22px;
-      cursor: pointer;
-      color: red;
-    }
-  </style>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
+<body class="bg-gray-100">
 
-<h1>Our Books</h1>
-<div class="book-grid" id="bookGrid"></div>
+  <h1 class="text-center text-3xl font-bold text-purple-900 my-8">Our Books</h1>
 
-<!-- Popup -->
-<div class="popup" id="popup">
-  <div class="popup-content">
-    <span class="close-btn" onclick="closePopup()">&times;</span>
-    <h2 id="popupTitle"></h2>
-    <p id="popupDesc"></p>
+  <!-- Search + Filters -->
+  <div class="max-w-6xl mx-auto px-4 mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
+    <input type="text" id="searchInput" placeholder="Search by title, author, or subject..."
+      class="col-span-1 sm:col-span-2 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-700">
+
+    <div class="flex gap-2">
+      <select id="authorFilter" class="w-1/2 border border-gray-300 rounded-md px-2 py-2 focus:ring-2 focus:ring-purple-700">
+        <option value="">All Authors</option>
+      </select>
+      <select id="subjectFilter" class="w-1/2 border border-gray-300 rounded-md px-2 py-2 focus:ring-2 focus:ring-purple-700">
+        <option value="">All Subjects</option>
+      </select>
+    </div>
   </div>
-</div>
 
-<script>
-  // Example JSON Data
-  const books = [
-    {
-      "title": "The Future of Learning",
-      "author": "Azeez Olajide",
-      "image": "https://slide-t.github.io/edukids-africa/images/book1.jpg",
-      "description": "This book explores modern learning trends. <br><br><b>Awards:</b> Best Educational Text 2024 <br><b>Author:</b> Experienced educator and researcher with 20+ years."
-    },
-    {
-      "title": "Coding for Kids",
-      "author": "Jane Smith",
-      "image": "https://slide-t.github.io/edukids-africa/images/book2.jpg",
-      "description": "An engaging introduction to coding for young learners. <br><br><b>Awards:</b> STEM Award 2023 <br><b>Author:</b> Software engineer and teacher."
-    },
-    {
-      "title": "Biology Simplified",
-      "author": "Michael Johnson",
-      "image": "https://slide-t.github.io/edukids-africa/images/book3.jpg",
-      "description": "Simplifies biology concepts for students. <br><br><b>Awards:</b> African Education Prize 2022 <br><b>Author:</b> University professor and author of 5 books."
-    },
-    {
-      "title": "Mathematics Made Easy",
-      "author": "Sarah Lee",
-      "image": "https://via.placeholder.com/200x250",
-      "description": "Step-by-step approach to mathematics. <br><br><b>Awards:</b> National Math Prize 2021 <br><b>Author:</b> Math teacher with 15 years of experience."
+  <!-- Books Grid -->
+  <div id="bookGrid" class="grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+
+  <!-- Popup -->
+  <div id="popup" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-11/12 relative">
+      <button onclick="closePopup()" class="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
+      <h2 id="popupTitle" class="text-xl font-semibold text-purple-800 mb-4"></h2>
+      <p id="popupDesc" class="text-gray-700"></p>
+    </div>
+  </div>
+
+  <script>
+    let books = [];
+    let filteredBooks = [];
+
+    async function loadBooks() {
+      const res = await fetch("books.json");
+      books = await res.json();
+      filteredBooks = [...books];
+
+      populateFilters();
+      renderBooks();
     }
-  ];
 
-  const bookGrid = document.getElementById('bookGrid');
-  const popup = document.getElementById('popup');
-  const popupTitle = document.getElementById('popupTitle');
-  const popupDesc = document.getElementById('popupDesc');
+    function populateFilters() {
+      const authors = [...new Set(books.map(b => b.author))];
+      const subjects = [...new Set(books.map(b => b.subject))];
 
-  function renderBooks() {
-    books.forEach(book => {
-      const card = document.createElement('div');
-      card.classList.add('book-card');
-      card.innerHTML = `
-        <img src="${book.image}" alt="${book.title}">
-        <h3>${book.title}</h3>
-        <p>By ${book.author}</p>
-        <button class="btn" onclick="showPopup('${book.title}', \`${book.description}\`)">More Info</button>
-        <button class="btn add-btn" onclick="toggleOrder(this)">Add to Cart</button>
-        <a href="https://yourpwa.com" target="_blank" class="btn order-btn">Order Now</a>
-      `;
-      bookGrid.appendChild(card);
-    });
-  }
+      const authorFilter = document.getElementById("authorFilter");
+      const subjectFilter = document.getElementById("subjectFilter");
 
-  function showPopup(title, desc) {
-    popup.style.display = 'flex';
-    popupTitle.innerText = title;
-    popupDesc.innerHTML = desc;
-  }
+      authors.forEach(author => {
+        let opt = document.createElement("option");
+        opt.value = author;
+        opt.textContent = author;
+        authorFilter.appendChild(opt);
+      });
 
-  function closePopup() {
-    popup.style.display = 'none';
-  }
+      subjects.forEach(subject => {
+        let opt = document.createElement("option");
+        opt.value = subject;
+        opt.textContent = subject;
+        subjectFilter.appendChild(opt);
+      });
+    }
 
-  function toggleOrder(btn) {
-    const orderBtn = btn.nextElementSibling;
-    orderBtn.style.display = orderBtn.style.display === 'inline-block' ? 'none' : 'inline-block';
-  }
+    function renderBooks() {
+      const bookGrid = document.getElementById("bookGrid");
+      bookGrid.innerHTML = "";
 
-  renderBooks();
-</script>
+      if (filteredBooks.length === 0) {
+        bookGrid.innerHTML = `<p class="text-center col-span-full text-gray-600">No books found.</p>`;
+        return;
+      }
+
+      filteredBooks.forEach(book => {
+        const card = document.createElement("div");
+        card.className = "bg-white rounded-xl shadow hover:shadow-xl transition p-4 flex flex-col text-center";
+
+        card.innerHTML = `
+          <img src="${book.image}" alt="${book.title}" class="w-full h-48 object-cover rounded-md mb-3">
+          <h3 class="text-lg font-semibold text-purple-900">${book.title}</h3>
+          <p class="text-sm text-gray-600 mb-2">By ${book.author}</p>
+          <span class="text-xs text-gray-500 italic mb-2">${book.subject}</span>
+          <button class="bg-purple-700 text-white px-3 py-1 rounded-md text-sm mb-2 hover:bg-purple-900 transition" 
+                  onclick="showPopup('${book.title}', \`${book.description}\`)">More Info</button>
+          <button class="bg-purple-800 text-white px-4 py-2 rounded-md text-sm hover:bg-purple-900 transition" 
+                  onclick="toggleBuyNow(this)">Add to Cart</button>
+          <a href="https://yourpwa.com" target="_blank" 
+             class="hidden bg-green-600 text-white px-4 py-2 mt-2 rounded-md text-sm hover:bg-green-700 transition">Buy Now</a>
+        `;
+        bookGrid.appendChild(card);
+      });
+    }
+
+    function showPopup(title, desc) {
+      document.getElementById("popupTitle").innerText = title;
+      document.getElementById("popupDesc").innerHTML = desc;
+      document.getElementById("popup").classList.remove("hidden");
+      document.getElementById("popup").classList.add("flex");
+    }
+
+    function closePopup() {
+      document.getElementById("popup").classList.remove("flex");
+      document.getElementById("popup").classList.add("hidden");
+    }
+
+    function toggleBuyNow(btn) {
+      const buyNowBtn = btn.nextElementSibling;
+      buyNowBtn.classList.toggle("hidden");
+    }
+
+    // Filtering Logic
+    document.getElementById("searchInput").addEventListener("input", applyFilters);
+    document.getElementById("authorFilter").addEventListener("change", applyFilters);
+    document.getElementById("subjectFilter").addEventListener("change", applyFilters);
+
+    function applyFilters() {
+      const search = document.getElementById("searchInput").value.toLowerCase();
+      const author = document.getElementById("authorFilter").value;
+      const subject = document.getElementById("subjectFilter").value;
+
+      filteredBooks = books.filter(book => {
+        return (
+          (book.title.toLowerCase().includes(search) ||
+           book.author.toLowerCase().includes(search) ||
+           (book.subject && book.subject.toLowerCase().includes(search))) &&
+          (author === "" || book.author === author) &&
+          (subject === "" || book.subject === subject)
+        );
+      });
+
+      renderBooks();
+    }
+
+    loadBooks();
+  </script>
 
 </body>
 </html>
