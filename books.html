@@ -6,143 +6,152 @@
   <title>Books</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100">
+<body class="bg-purple-950 text-white min-h-screen">
 
-  <h1 class="text-center text-3xl font-bold text-purple-900 my-8">Our Books</h1>
+  <!-- Header -->
+  <header class="p-6 text-center bg-purple-900 shadow-lg">
+    <h1 class="text-3xl font-bold">Our Book Collection</h1>
+    <p class="text-purple-300 mt-2">Explore, Preview & Order Your Favorite Books</p>
+  </header>
 
-  <!-- Search + Filters -->
-  <div class="max-w-6xl mx-auto px-4 mb-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-    <input type="text" id="searchInput" placeholder="Search by title, author, or subject..."
-      class="col-span-1 sm:col-span-2 border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-purple-700">
-
-    <div class="flex gap-2">
-      <select id="authorFilter" class="w-1/2 border border-gray-300 rounded-md px-2 py-2 focus:ring-2 focus:ring-purple-700">
-        <option value="">All Authors</option>
+  <!-- Search & Filters -->
+  <section class="p-6">
+    <div class="flex flex-col md:flex-row gap-4">
+      <input 
+        id="searchBar" 
+        type="text" 
+        placeholder="Search by title..." 
+        class="p-2 rounded-md border border-purple-700 text-black w-full md:w-1/3"
+      />
+      <select id="filterAuthor" class="p-2 rounded-md border border-purple-700 text-black w-full md:w-1/3">
+        <option value="">Filter by Author</option>
       </select>
-      <select id="subjectFilter" class="w-1/2 border border-gray-300 rounded-md px-2 py-2 focus:ring-2 focus:ring-purple-700">
-        <option value="">All Subjects</option>
+      <select id="filterSubject" class="p-2 rounded-md border border-purple-700 text-black w-full md:w-1/3">
+        <option value="">Filter by Subject</option>
       </select>
     </div>
-  </div>
+  </section>
 
   <!-- Books Grid -->
-  <div id="bookGrid" class="grid gap-6 px-4 sm:grid-cols-2 lg:grid-cols-4"></div>
+  <main class="p-6">
+    <div id="books-container" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+  </main>
 
-  <!-- Popup -->
-  <div id="popup" class="fixed inset-0 bg-black bg-opacity-60 hidden items-center justify-center z-50">
-    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-11/12 relative">
-      <button onclick="closePopup()" class="absolute top-2 right-2 text-red-500 text-xl font-bold">&times;</button>
-      <h2 id="popupTitle" class="text-xl font-semibold text-purple-800 mb-4"></h2>
-      <p id="popupDesc" class="text-gray-700"></p>
+  <!-- Modal for Description -->
+  <div id="bookModal" class="fixed inset-0 hidden bg-black bg-opacity-70 flex items-center justify-center z-50">
+    <div class="bg-purple-900 p-6 rounded-lg shadow-lg max-w-lg w-full relative">
+      <button onclick="closeModal()" class="absolute top-2 right-2 text-white text-xl">✖</button>
+      <h2 id="modalTitle" class="text-2xl font-bold mb-2"></h2>
+      <p id="modalAuthor" class="mb-2 text-purple-300"></p>
+      <p id="modalDescription" class="text-purple-100"></p>
     </div>
   </div>
 
   <script>
-    let books = [];
-    let filteredBooks = [];
+    let booksData = [];
 
+    // Load JSON
     async function loadBooks() {
-      const res = await fetch("books.json");
-      books = await res.json();
-      filteredBooks = [...books];
-
+      const response = await fetch("books.json");
+      booksData = await response.json();
+      displayBooks(booksData);
       populateFilters();
-      renderBooks();
     }
 
-    function populateFilters() {
-      const authors = [...new Set(books.map(b => b.author))];
-      const subjects = [...new Set(books.map(b => b.subject))];
-
-      const authorFilter = document.getElementById("authorFilter");
-      const subjectFilter = document.getElementById("subjectFilter");
-
-      authors.forEach(author => {
-        let opt = document.createElement("option");
-        opt.value = author;
-        opt.textContent = author;
-        authorFilter.appendChild(opt);
-      });
-
-      subjects.forEach(subject => {
-        let opt = document.createElement("option");
-        opt.value = subject;
-        opt.textContent = subject;
-        subjectFilter.appendChild(opt);
-      });
-    }
-
-    function renderBooks() {
-      const bookGrid = document.getElementById("bookGrid");
-      bookGrid.innerHTML = "";
-
-      if (filteredBooks.length === 0) {
-        bookGrid.innerHTML = `<p class="text-center col-span-full text-gray-600">No books found.</p>`;
-        return;
-      }
-
-      filteredBooks.forEach(book => {
+    // Display Books
+    function displayBooks(books) {
+      const container = document.getElementById("books-container");
+      container.innerHTML = "";
+      books.forEach(book => {
         const card = document.createElement("div");
-        card.className = "bg-white rounded-xl shadow hover:shadow-xl transition p-4 flex flex-col text-center";
+        card.className = "bg-purple-800 rounded-lg shadow-lg overflow-hidden hover:scale-105 transition-transform";
 
         card.innerHTML = `
-          <img src="${book.image}" alt="${book.title}" class="w-full h-48 object-cover rounded-md mb-3">
-          <h3 class="text-lg font-semibold text-purple-900">${book.title}</h3>
-          <p class="text-sm text-gray-600 mb-2">By ${book.author}</p>
-          <span class="text-xs text-gray-500 italic mb-2">${book.subject}</span>
-          <button class="bg-purple-700 text-white px-3 py-1 rounded-md text-sm mb-2 hover:bg-purple-900 transition" 
-                  onclick="showPopup('${book.title}', \`${book.description}\`)">More Info</button>
-          <button class="bg-purple-800 text-white px-4 py-2 rounded-md text-sm hover:bg-purple-900 transition" 
-                  onclick="toggleBuyNow(this)">Add to Cart</button>
-          <a href="https://yourpwa.com" target="_blank" 
-             class="hidden bg-green-600 text-white px-4 py-2 mt-2 rounded-md text-sm hover:bg-green-700 transition">Buy Now</a>
+          <img src="${book.image}" alt="${book.title}" class="w-full h-40 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-bold">${book.title}</h3>
+            <p class="text-sm text-purple-300">by ${book.author}</p>
+            <button onclick="openModal('${book.title}','${book.author}','${book.description}')" 
+              class="mt-2 text-sm text-yellow-400 underline">Read More</button>
+            <div class="mt-4">
+              <button onclick="toggleCart(this)" class="bg-yellow-500 text-black px-3 py-1 rounded-md w-full">
+                Add to Cart
+              </button>
+              <a href="your-pwa-link" 
+                class="hidden mt-2 block bg-green-500 text-black px-3 py-1 rounded-md text-center">
+                Buy Now
+              </a>
+            </div>
+          </div>
         `;
-        bookGrid.appendChild(card);
+        container.appendChild(card);
       });
     }
 
-    function showPopup(title, desc) {
-      document.getElementById("popupTitle").innerText = title;
-      document.getElementById("popupDesc").innerHTML = desc;
-      document.getElementById("popup").classList.remove("hidden");
-      document.getElementById("popup").classList.add("flex");
-    }
-
-    function closePopup() {
-      document.getElementById("popup").classList.remove("flex");
-      document.getElementById("popup").classList.add("hidden");
-    }
-
-    function toggleBuyNow(btn) {
-      const buyNowBtn = btn.nextElementSibling;
+    // Toggle Add to Cart → Buy Now
+    function toggleCart(button) {
+      const buyNowBtn = button.nextElementSibling;
       buyNowBtn.classList.toggle("hidden");
     }
 
-    // Filtering Logic
-    document.getElementById("searchInput").addEventListener("input", applyFilters);
-    document.getElementById("authorFilter").addEventListener("change", applyFilters);
-    document.getElementById("subjectFilter").addEventListener("change", applyFilters);
+    // Open Modal
+    function openModal(title, author, description) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalAuthor").textContent = "by " + author;
+      document.getElementById("modalDescription").textContent = description;
+      document.getElementById("bookModal").classList.remove("hidden");
+    }
 
-    function applyFilters() {
-      const search = document.getElementById("searchInput").value.toLowerCase();
-      const author = document.getElementById("authorFilter").value;
-      const subject = document.getElementById("subjectFilter").value;
+    // Close Modal
+    function closeModal() {
+      document.getElementById("bookModal").classList.add("hidden");
+    }
 
-      filteredBooks = books.filter(book => {
+    // Filters
+    function populateFilters() {
+      const authors = [...new Set(booksData.map(book => book.author))];
+      const subjects = [...new Set(booksData.map(book => book.subject))];
+
+      const authorFilter = document.getElementById("filterAuthor");
+      const subjectFilter = document.getElementById("filterSubject");
+
+      authors.forEach(author => {
+        const option = document.createElement("option");
+        option.value = author;
+        option.textContent = author;
+        authorFilter.appendChild(option);
+      });
+
+      subjects.forEach(subject => {
+        const option = document.createElement("option");
+        option.value = subject;
+        option.textContent = subject;
+        subjectFilter.appendChild(option);
+      });
+    }
+
+    // Search + Filter Functionality
+    document.getElementById("searchBar").addEventListener("input", filterBooks);
+    document.getElementById("filterAuthor").addEventListener("change", filterBooks);
+    document.getElementById("filterSubject").addEventListener("change", filterBooks);
+
+    function filterBooks() {
+      const search = document.getElementById("searchBar").value.toLowerCase();
+      const author = document.getElementById("filterAuthor").value;
+      const subject = document.getElementById("filterSubject").value;
+
+      const filtered = booksData.filter(book => {
         return (
-          (book.title.toLowerCase().includes(search) ||
-           book.author.toLowerCase().includes(search) ||
-           (book.subject && book.subject.toLowerCase().includes(search))) &&
+          book.title.toLowerCase().includes(search) &&
           (author === "" || book.author === author) &&
           (subject === "" || book.subject === subject)
         );
       });
 
-      renderBooks();
+      displayBooks(filtered);
     }
 
     loadBooks();
   </script>
-
 </body>
 </html>
