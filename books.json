@@ -1,5 +1,34 @@
+
 [
-    {
+  {
+    "title": "The Future of Learning",
+    "author": "Azeez Olajide",
+    "subject": "Education",
+    "image": "https://via.placeholder.com/200x250",
+    "description": "Explores modern learning trends. <br><br><b>Awards:</b> Best Educational Text 2024 <br><b>Author:</b> Educator with 20+ years of research experience."
+  },
+  {
+    "title": "Coding for Kids",
+    "author": "Jane Smith",
+    "subject": "Technology",
+    "image": "https://via.placeholder.com/200x250",
+    "description": "Introduction to coding for young learners. <br><br><b>Awards:</b> STEM Award 2023 <br><b>Author:</b> Software engineer and teacher."
+  },
+  {
+    "title": "Biology Simplified",
+    "author": "Michael Johnson",
+    "subject": "Biology",
+    "image": "https://via.placeholder.com/200x250",
+    "description": "Simplifies biology concepts for secondary students. <br><br><b>Awards:</b> African Education Prize 2022 <br><b>Author:</b> University professor and author of 5 books."
+  },
+  {
+    "title": "Mathematics Made Easy",
+    "author": "Sarah Lee",
+    "subject": "Mathematics",
+    "image": "https://via.placeholder.com/200x250",
+    "description": "Step-by-step guide to mastering mathematics. <br><br><b>Awards:</b> National Math Prize 2021 <br><b>Author:</b> Math teacher with 15 years of classroom experience."
+  },
+{
       "title": "Principles of Modern Chemistry",
       "author": "Raymond Chang",
       "subject": "Chemistry",
