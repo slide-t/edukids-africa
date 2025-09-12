@@ -1,159 +1,131 @@
-{ 
-  "Spellings": [
-
 {
-  "level": 1,
-  "total_clues": 25,
-  "sound_blocks": [
-    {
-      "sound": "ee",
-      "wordBank": [
-        "see",
-        "tree",
-        "bee",
-        "feet",
-        "cheese",
-        "sleep",
-        "peel",
-        "week"
-      ],
-      "clues": [
-        { "id": 1, "clue": "To look with your eyes", "answer": "see" },
-        { "id": 2, "clue": "A tall plant with branches and leaves", "answer": "tree" },
-        { "id": 3, "clue": "A flying insect that makes honey", "answer": "bee" },
-        { "id": 4, "clue": "The parts of the body we stand on (plural)", "answer": "feet" },
-        { "id": 5, "clue": "A yellow food made from milk, often on pizza", "answer": "cheese" }
-      ]
-    },
-    {
-      "sound": "ai",
-      "wordBank": [
-        "rain",
-        "paint",
-        "tail",
-        "mail",
-        "train",
-        "chain",
-        "wait",
-        "snail"
-      ],
-      "clues": [
-        { "id": 6, "clue": "Water that falls from the sky", "answer": "rain" },
-        { "id": 7, "clue": "What you use with a brush to make a picture", "answer": "paint" },
-        { "id": 8, "clue": "The long part at the back of a cat or dog", "answer": "tail" },
-        { "id": 9, "clue": "Letters and packages delivered to your house", "answer": "mail" },
-        { "id": 10, "clue": "A vehicle that runs on tracks and carries people", "answer": "train" }
-      ]
-    },
-    {
-      "sound": "air",
-      "wordBank": [
-        "hair",
-        "chair",
-        "fair",
-        "pair",
-        "stair"
-      ],
-      "clues": [
-        { "id": 11, "clue": "What grows on your head", "answer": "hair" },
-        { "id": 12, "clue": "Something you sit on", "answer": "chair" },
-        { "id": 13, "clue": "A place with rides and games (or an event with prizes)", "answer": "fair" }
-      ]
-    },
-    {
-      "sound": "al",
-      "wordBank": [
-        "ball",
-        "walnut",
-        "call",
-        "wall",
-        "small"
-      ],
-      "clues": [
-        { "id": 14, "clue": "A round toy you can throw or kick", "answer": "ball" }
-      ]
-    },
-    {
-      "sound": "ar",
-      "wordBank": [
-        "car",
-        "park",
-        "star",
-        "farm",
-        "arm"
-      ],
-      "clues": [
-        { "id": 15, "clue": "A vehicle with four wheels that takes you places", "answer": "car" },
-        { "id": 16, "clue": "A place with grass, trees and often swings", "answer": "park" },
-        { "id": 17, "clue": "Shines at night in the sky", "answer": "star" }
-      ]
-    },
-    {
-      "sound": "ay",
-      "wordBank": [
-        "play",
-        "day",
-        "say",
-        "pray",
-        "may"
-      ],
-      "clues": [
-        { "id": 18, "clue": "Opposite of night", "answer": "day" },
-        { "id": 19, "clue": "To speak words", "answer": "say" }
-      ]
-    },
-    {
-      "sound": "ea",
-      "wordBank": [
-        "eat",
-        "seat",
-        "leaf",
-        "team",
-        "beach"
-      ],
-      "clues": [
-        { "id": 20, "clue": "To put food into your mouth", "answer": "eat" }
-      ]
-    },
-    {
-      "sound": "e (short e)",
-      "wordBank": [
-        "bed",
-        "pen",
-        "red",
-        "net",
-        "ten"
-      ],
-      "clues": [
-        { "id": 21, "clue": "You sleep on it", "answer": "bed" },
-        { "id": 22, "clue": "You write with it", "answer": "pen" }
-      ]
-    },
-    {
-      "sound": "el",
-      "wordBank": [
-        "bell",
-        "shell",
-        "sell",
-        "tunnel"
-      ],
-      "clues": [
-        { "id": 23, "clue": "A small sound-making object often on a door or at school", "answer": "bell" }
-      ]
-    },
-    {
-      "sound": "er",
-      "wordBank": [
-        "water",
-        "butter",
-        "paper",
-        "sister",
-        "summer"
-      ],
-      "clues": [
-        { "id": 24, "clue": "You drink this when you are thirsty", "answer": "water" },
-        { "id": 25, "clue": "A season that is hot and sunny", "answer": "summer" }
-      ]
-    }
-  ]
+  "Spelling": {
+    "Level1": [
+      { "question": "To look with your eyes", "options": ["see", "tree", "bee", "feet"], "answer": "see" },
+      { "question": "A tall plant with branches and leaves", "options": ["tree", "cheese", "sleep", "week"], "answer": "tree" },
+      { "question": "A flying insect that makes honey", "options": ["bee", "feet", "cheese", "peel"], "answer": "bee" },
+      { "question": "The parts of the body we stand on (plural)", "options": ["feet", "tree", "see", "sleep"], "answer": "feet" },
+      { "question": "A yellow food made from milk, often on pizza", "options": ["cheese", "week", "peel", "bee"], "answer": "cheese" },
+
+      { "question": "Water that falls from the sky", "options": ["rain", "paint", "tail", "mail"], "answer": "rain" },
+      { "question": "What you use with a brush to make a picture", "options": ["paint", "snail", "chain", "tail"], "answer": "paint" },
+      { "question": "The long part at the back of a cat or dog", "options": ["tail", "train", "rain", "mail"], "answer": "tail" },
+      { "question": "Letters and packages delivered to your house", "options": ["mail", "chain", "train", "snail"], "answer": "mail" },
+      { "question": "A vehicle that runs on tracks and carries people", "options": ["train", "rain", "paint", "tail"], "answer": "train" },
+
+      { "question": "What grows on your head", "options": ["hair", "chair", "fair", "pair"], "answer": "hair" },
+      { "question": "Something you sit on", "options": ["chair", "hair", "stair", "fair"], "answer": "chair" },
+      { "question": "A place with rides and games (or an event with prizes)", "options": ["fair", "pair", "stair", "chair"], "answer": "fair" },
+
+      { "question": "A round toy you can throw or kick", "options": ["ball", "call", "wall", "small"], "answer": "ball" },
+
+      { "question": "A vehicle with four wheels that takes you places", "options": ["car", "farm", "star", "arm"], "answer": "car" },
+      { "question": "A place with grass, trees and often swings", "options": ["park", "car", "farm", "arm"], "answer": "park" },
+      { "question": "Shines at night in the sky", "options": ["star", "arm", "farm", "car"], "answer": "star" },
+
+      { "question": "Opposite of night", "options": ["day", "say", "play", "pray"], "answer": "day" },
+      { "question": "To speak words", "options": ["say", "pray", "day", "play"], "answer": "say" },
+
+      { "question": "To put food into your mouth", "options": ["eat", "seat", "team", "beach"], "answer": "eat" },
+
+      { "question": "You sleep on it", "options": ["bed", "pen", "red", "net"], "answer": "bed" },
+      { "question": "You write with it", "options": ["pen", "red", "ten", "net"], "answer": "pen" },
+
+      { "question": "A small sound-making object often on a door or at school", "options": ["bell", "shell", "sell", "tunnel"], "answer": "bell" },
+
+      { "question": "You drink this when you are thirsty", "options": ["water", "butter", "paper", "sister"], "answer": "water" }
+    ],
+    "Level2": [
+      { "question": "A small bird that sings sweetly", "options": ["bird", "sir", "girl", "shirt"], "answer": "bird" },
+      { "question": "A man with a title of respect", "options": ["sir", "bird", "girl", "shirt"], "answer": "sir" },
+      { "question": "A young female child", "options": ["girl", "sir", "shirt", "bird"], "answer": "girl" },
+
+      { "question": "A round fruit that can be red, green, or yellow", "options": ["apple", "oak", "boat", "goat"], "answer": "apple" },
+      { "question": "A strong tree with acorns", "options": ["oak", "boat", "goat", "soap"], "answer": "oak" },
+      { "question": "A small vehicle that floats on water", "options": ["boat", "goat", "oak", "soap"], "answer": "boat" },
+
+      { "question": "A farm animal that gives milk and has horns", "options": ["goat", "boat", "soap", "oak"], "answer": "goat" },
+      { "question": "Something you use to wash your hands", "options": ["soap", "rope", "goat", "oak"], "answer": "soap" },
+      { "question": "Long and strong cord, often used for tying", "options": ["rope", "soap", "goat", "oak"], "answer": "rope" },
+
+      { "question": "A room with books you can borrow", "options": ["library", "berry", "marry", "carry"], "answer": "library" },
+      { "question": "A small, round fruit, often blue or red", "options": ["berry", "library", "marry", "carry"], "answer": "berry" },
+      { "question": "To join someone as husband or wife", "options": ["marry", "carry", "library", "berry"], "answer": "marry" },
+
+      { "question": "To take something from one place to another", "options": ["carry", "marry", "berry", "library"], "answer": "carry" },
+      { "question": "An insect with wings that makes a buzzing sound", "options": ["fly", "cry", "try", "sky"], "answer": "fly" },
+      { "question": "To shed tears when you are sad", "options": ["cry", "fly", "sky", "try"], "answer": "cry" },
+
+      { "question": "The space high above us, where the sun and clouds are", "options": ["sky", "cry", "fly", "try"], "answer": "sky" },
+      { "question": "To make an effort to do something", "options": ["try", "sky", "cry", "fly"], "answer": "try" },
+      { "question": "To have a meal in the morning", "options": ["breakfast", "fast", "lunch", "bread"], "answer": "breakfast" },
+
+      { "question": "To move quickly on your feet", "options": ["run", "walk", "fast", "jump"], "answer": "run" },
+      { "question": "Opposite of slow", "options": ["fast", "run", "walk", "sleep"], "answer": "fast" },
+      { "question": "To prepare food with heat", "options": ["cook", "book", "look", "hook"], "answer": "cook" },
+
+      { "question": "A set of written pages bound together", "options": ["book", "look", "cook", "hook"], "answer": "book" },
+      { "question": "To direct your eyes at something", "options": ["look", "cook", "book", "hook"], "answer": "look" },
+      { "question": "Something you use to catch a fish", "options": ["hook", "look", "cook", "book"], "answer": "hook" },
+
+      { "question": "To rest with your eyes closed", "options": ["sleep", "keep", "deep", "sheep"], "answer": "sleep" },
+      { "question": "To hold something and not let it go", "options": ["keep", "sleep", "sheep", "deep"], "answer": "keep" },
+      { "question": "A farm animal that gives wool", "options": ["sheep", "sleep", "deep", "keep"], "answer": "sheep" },
+
+      { "question": "Far down from the surface", "options": ["deep", "sleep", "keep", "sheep"], "answer": "deep" },
+      { "question": "To move through water using arms and legs", "options": ["swim", "swam", "swum", "swing"], "answer": "swim" }
+    ],
+
+    "Level3": [
+      { "question": "Opposite of dark", "options": ["light", "night", "fight", "right"], "answer": "light" },
+      { "question": "The time when it is not day", "options": ["night", "light", "bright", "fight"], "answer": "night" },
+      { "question": "To use fists or weapons against someone", "options": ["fight", "light", "right", "night"], "answer": "fight" },
+      { "question": "Opposite of wrong", "options": ["right", "fight", "night", "bright"], "answer": "right" },
+
+      { "question": "To show happiness with your face", "options": ["smile", "mile", "while", "pile"], "answer": "smile" },
+      { "question": "A distance of 1,760 yards", "options": ["mile", "smile", "while", "pile"], "answer": "mile" },
+      { "question": "A short time period", "options": ["while", "smile", "pile", "mile"], "answer": "while" },
+      { "question": "A stack of things", "options": ["pile", "smile", "mile", "while"], "answer": "pile" },
+
+      { "question": "An animal that says 'moo'", "options": ["cow", "how", "now", "town"], "answer": "cow" },
+      { "question": "A word to ask in what way", "options": ["how", "cow", "now", "town"], "answer": "how" },
+      { "question": "At the present moment", "options": ["now", "cow", "town", "how"], "answer": "now" },
+      { "question": "A place where many people live together", "options": ["town", "cow", "how", "now"], "answer": "town" },
+
+      { "question": "A boy child", "options": ["boy", "toy", "joy", "coin"], "answer": "boy" },
+      { "question": "Something children play with", "options": ["toy", "boy", "joy", "coin"], "answer": "toy" },
+      { "question": "A feeling of great happiness", "options": ["joy", "toy", "boy", "coin"], "answer": "joy" },
+      { "question": "A small round piece of money", "options": ["coin", "boy", "toy", "joy"], "answer": "coin" },
+
+      { "question": "A sound made with your mouth when happy", "options": ["laugh", "rough", "cough", "tough"], "answer": "laugh" },
+      { "question": "Not smooth, with a hard surface", "options": ["rough", "tough", "laugh", "cough"], "answer": "rough" },
+      { "question": "To clear your throat with a loud sound", "options": ["cough", "laugh", "rough", "tough"], "answer": "cough" },
+      { "question": "Strong and hard to break", "options": ["tough", "rough", "cough", "laugh"], "answer": "tough" },
+
+      { "question": "A part of the body used to breathe", "options": ["phone", "graph", "elephant", "photo"], "answer": "elephant" },
+      { "question": "A device you use to call people", "options": ["phone", "graph", "photo", "elephant"], "answer": "phone" },
+      { "question": "A drawing that shows information", "options": ["graph", "phone", "photo", "elephant"], "answer": "graph" },
+      { "question": "A picture taken with a camera", "options": ["photo", "phone", "graph", "elephant"], "answer": "photo" },
+
+      { "question": "A question word meaning 'for what reason?'", "options": ["why", "when", "which", "where"], "answer": "why" },
+      { "question": "A question word meaning 'at what time?'", "options": ["when", "why", "which", "where"], "answer": "when" },
+      { "question": "A question word used for choosing between options", "options": ["which", "where", "when", "why"], "answer": "which" },
+      { "question": "A question word asking about a place", "options": ["where", "when", "why", "which"], "answer": "where" },
+
+      { "question": "The act of creating something new", "options": ["creation", "station", "nation", "action"], "answer": "creation" },
+      { "question": "A place where trains stop", "options": ["station", "nation", "creation", "action"], "answer": "station" },
+      { "question": "A large group of people in one country", "options": ["nation", "station", "creation", "action"], "answer": "nation" },
+      { "question": "Something you do", "options": ["action", "nation", "creation", "station"], "answer": "action" },
+
+      { "question": "The edge of a river", "options": ["bank", "bench", "bridge", "ledge"], "answer": "bank" },
+      { "question": "A long seat for several people", "options": ["bench", "bank", "bridge", "ledge"], "answer": "bench" },
+      { "question": "Something that joins two sides over water", "options": ["bridge", "ledge", "bank", "bench"], "answer": "bridge" },
+      { "question": "A narrow shelf on a wall or cliff", "options": ["ledge", "bridge", "bench", "bank"], "answer": "ledge" },
+
+      { "question": "A young dog", "options": ["puppy", "happy", "nappy", "yuppy"], "answer": "puppy" },
+      { "question": "Opposite of sad", "options": ["happy", "puppy", "nappy", "yuppy"], "answer": "happy" },
+      { "question": "A baby’s diaper", "options": ["nappy", "puppy", "happy", "yuppy"], "answer": "nappy" },
+      { "question": "A slang word for a young, rich person", "options": ["yuppy", "puppy", "happy", "nappy"], "answer": "yuppy" }
+    ]
+  }
 }
