@@ -1,0 +1,18 @@
+[
+  {
+    "id": "pri1",
+    "name": "Primary 1",
+    "topics": [
+      { "id": "maths_numbers", "title": "Numbers and Counting", "detailsPage": "topics-details.html?topic=maths_numbers" },
+      { "id": "english_alphabets", "title": "Alphabets & Spelling", "detailsPage": "topics-details.html?topic=english_alphabets" }
+    ]
+  },
+  {
+    "id": "pri2",
+    "name": "Primary 2",
+    "topics": [
+      { "id": "maths_addition", "title": "Addition & Subtraction", "detailsPage": "topics-details.html?topic=maths_addition" },
+      { "id": "science_animals", "title": "Animals & Habitats", "detailsPage": "topics-details.html?topic=science_animals" }
+    ]
+  }
+]
