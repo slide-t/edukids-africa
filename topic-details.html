@@ -1,66 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Topic Details - EduKids Africa</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKids Africa - Topic Details</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 min-h-screen flex flex-col">
-  <!-- Header -->
-  <header class="bg-white shadow-md p-4">
-    <div class="max-w-5xl mx-auto flex items-center justify-between">
-      <h1 class="text-xl md:text-2xl font-bold text-orange-600">EduKids Africa</h1>
-      <a href="subjects-curric.html" class="px-4 py-2 bg-orange-500 text-white rounded hover:bg-orange-600 transition">← Back to Curriculum</a>
-    </div>
-  </header>
+<body class="bg-gray-50 p-6">
 
-  <!-- Content -->
-  <main class="flex-grow max-w-5xl mx-auto p-6">
-    <div id="topic-container" class="bg-white shadow rounded-lg p-6">
-      <h2 id="topic-title" class="text-2xl font-bold text-gray-800 mb-4"></h2>
-      <p id="topic-content" class="text-gray-700 leading-relaxed"></p>
-    </div>
-  </main>
-
-  <!-- Footer -->
-  <footer class="bg-gray-900 text-white text-center py-4">
-    <p>© <span id="year"></span> EduKids Africa. All rights reserved.</p>
-  </footer>
+  <div class="max-w-3xl mx-auto bg-white shadow-lg rounded-lg p-6">
+    <h1 id="topicTitle" class="text-2xl font-bold text-indigo-700 mb-4"></h1>
+    <p id="topicExplanation" class="text-gray-700 leading-relaxed"></p>
+    <div id="topicExamples" class="mt-4"></div>
+    <a href="subjects-curric.html" class="inline-block mt-6 text-indigo-600 hover:underline">← Back to Curriculum</a>
+  </div>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    async function loadTopicDetails() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const topicId = urlParams.get("id");
 
-    // Get topic id from query string
-    const params = new URLSearchParams(window.location.search);
-    const topicId = params.get("topic");
+      const res = await fetch("topics.json");
+      const data = await res.json();
 
-    async function loadTopic() {
-      if (!topicId) {
-        document.getElementById("topic-container").innerHTML =
-          "<p class='text-red-600'>No topic selected.</p>";
-        return;
-      }
+      if (data[topicId]) {
+        document.getElementById("topicTitle").textContent = data[topicId].title;
+        document.getElementById("topicExplanation").textContent = data[topicId].explanation;
 
-      try {
-        const res = await fetch("topics.json");
-        const topics = await res.json();
-
-        if (topics[topicId]) {
-          document.getElementById("topic-title").textContent = topics[topicId].title;
-          document.getElementById("topic-content").textContent = topics[topicId].content;
-        } else {
-          document.getElementById("topic-container").innerHTML =
-            "<p class='text-red-600'>Topic not found in topics.json.</p>";
-        }
-      } catch (err) {
-        console.error("Error loading topics.json", err);
-        document.getElementById("topic-container").innerHTML =
-          "<p class='text-red-600'>Failed to load topic details.</p>";
+        const examplesDiv = document.getElementById("topicExamples");
+        data[topicId].examples.forEach(example => {
+          const p = document.createElement("p");
+          p.textContent = `• ${example}`;
+          p.className = "text-gray-600";
+          examplesDiv.appendChild(p);
+        });
       }
     }
 
-    loadTopic();
+    loadTopicDetails();
   </script>
 </body>
 </html>
