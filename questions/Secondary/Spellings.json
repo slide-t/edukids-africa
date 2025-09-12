@@ -1,0 +1,51 @@
+{
+  "Spellings": {
+    "able": {
+      "Level1": [
+        { "question": "A word meaning fit or capable", "options": ["able", "table", "cable", "fable"], "answer": "able" },
+        { "question": "Furniture with four legs", "options": ["stable", "table", "cable", "label"], "answer": "table" },
+        { "question": "A wire that carries electricity", "options": ["cable", "fable", "label", "gable"], "answer": "cable" },
+        { "question": "A short story with a moral", "options": ["label", "table", "cable", "fable"], "answer": "fable" },
+        { "question": "A sticker with information", "options": ["gable", "label", "stable", "cable"], "answer": "label" },
+        { "question": "The triangular top of a wall, just under the roof", "options": ["fable", "gable", "cable", "table"], "answer": "gable" },
+        { "question": "A building for horses", "options": ["stable", "table", "able", "cable"], "answer": "stable" },
+        { "question": "Opposite of unable", "options": ["disable", "able", "label", "cable"], "answer": "able" },
+        { "question": "Opposite of unstable", "options": ["fable", "stable", "cable", "label"], "answer": "stable" },
+        { "question": "Something you put food on", "options": ["table", "gable", "label", "cable"], "answer": "table" },
+
+        { "question": "Part of a door or drawer you pull", "options": ["handle", "stable", "table", "cable"], "answer": "handle" },
+        { "question": "To turn off or make unable", "options": ["disable", "fable", "gable", "label"], "answer": "disable" },
+        { "question": "To make able again", "options": ["enable", "stable", "cable", "table"], "answer": "enable" },
+        { "question": "A work of fiction often with animals", "options": ["fable", "label", "cable", "gable"], "answer": "fable" },
+        { "question": "The opposite of enable", "options": ["disable", "stable", "able", "table"], "answer": "disable" },
+        { "question": "A triangle-shaped end of a roof", "options": ["gable", "cable", "label", "table"], "answer": "gable" },
+        { "question": "If you are capable, you are also ___", "options": ["able", "stable", "fable", "label"], "answer": "able" },
+        { "question": "Strong and not likely to fall", "options": ["stable", "cable", "gable", "label"], "answer": "stable" },
+        { "question": "A fairy tale or legend", "options": ["fable", "gable", "cable", "able"], "answer": "fable" },
+        { "question": "A word often written on a jar or box", "options": ["label", "table", "gable", "stable"], "answer": "label" },
+
+        { "question": "To give someone the power to do something", "options": ["enable", "disable", "cable", "gable"], "answer": "enable" },
+        { "question": "You sit at this when eating meals", "options": ["table", "stable", "label", "gable"], "answer": "table" },
+        { "question": "A word describing someone fit to do a task", "options": ["able", "fable", "stable", "label"], "answer": "able" },
+        { "question": "A place where animals like horses are kept", "options": ["stable", "table", "gable", "fable"], "answer": "stable" },
+        { "question": "A part of the roof shaped like a triangle", "options": ["gable", "label", "stable", "cable"], "answer": "gable" },
+        { "question": "Thin rope often used for electricity", "options": ["cable", "fable", "gable", "stable"], "answer": "cable" },
+        { "question": "A moral story", "options": ["fable", "label", "table", "gable"], "answer": "fable" },
+        { "question": "A paper tag tied to something", "options": ["label", "gable", "cable", "stable"], "answer": "label" },
+        { "question": "You are ___ to read this text", "options": ["able", "table", "cable", "fable"], "answer": "able" },
+        { "question": "This holds many wires together", "options": ["cable", "gable", "stable", "label"], "answer": "cable" },
+
+        { "question": "A dining surface in a home", "options": ["table", "label", "gable", "stable"], "answer": "table" },
+        { "question": "To stop someone from working normally", "options": ["disable", "enable", "cable", "gable"], "answer": "disable" },
+        { "question": "To make something possible", "options": ["enable", "disable", "fable", "gable"], "answer": "enable" },
+        { "question": "A classic story with a lesson", "options": ["fable", "stable", "table", "label"], "answer": "fable" },
+        { "question": "A supporting structure for animals", "options": ["stable", "table", "gable", "label"], "answer": "stable" },
+        { "question": "Small sticker or tag on clothes", "options": ["label", "fable", "gable", "cable"], "answer": "label" },
+        { "question": "The upper end of a house wall", "options": ["gable", "table", "stable", "cable"], "answer": "gable" },
+        { "question": "Being skilled and competent means you are ___", "options": ["able", "fable", "table", "cable"], "answer": "able" },
+        { "question": "You connect a TV with this", "options": ["cable", "label", "gable", "fable"], "answer": "cable" },
+        { "question": "Meals are often served on this", "options": ["table", "gable", "stable", "label"], "answer": "table" }
+      ]
+    }
+  }
+}
