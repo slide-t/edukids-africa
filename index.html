@@ -1034,24 +1034,32 @@ header {
 
 <script>
   // ===== Access Modal with localStorage =====
-window.onload = function() {
-  // If access was already granted, hide the overlay
-  if (localStorage.getItem("eduKidsAccess") === "granted") {
-    document.getElementById("access-overlay").style.display = "none";
-  }
-};
+  window.onload = function () {
+    // If access already granted, hide overlay
+    if (localStorage.getItem("eduKidsAccess") === "granted") {
+      document.getElementById("access-overlay").style.display = "none";
+    }
+  };
 
-function checkAccess() {
-  const key = document.getElementById("access-key").value;
-  const errorMsg = document.getElementById("error-msg");
+  function checkAccess() {
+    const key = document.getElementById("access-key").value.trim();
+    const errorMsg = document.getElementById("error-msg");
 
-  if (key === "onlymeEdukidsAdmin") {
-    document.getElementById("access-overlay").style.display = "none";
-    localStorage.setItem("eduKidsAccess", "granted"); // Remember access
-  } else {
-    errorMsg.style.display = "block";
+    if (key === "onlymeEdukidsAdmin") {
+      document.getElementById("access-overlay").style.display = "none";
+      localStorage.setItem("eduKidsAccess", "granted"); // Remember access
+      errorMsg.style.display = "none";
+    } else {
+      errorMsg.style.display = "block";
+    }
   }
-}
+
+  // Allow pressing Enter to submit
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "Enter" && document.getElementById("access-overlay").style.display !== "none") {
+      checkAccess();
+    }
+  });
 </script>
   
 </body>
