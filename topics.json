@@ -1,11 +1,14 @@
-
 {
   "maths_numbers": {
     "title": "Numbers and Counting",
-    "content": "This topic introduces pupils to numbers 1-20 with examples and exercises."
+    "content": "This topic introduces pupils to numbers 1–20 with songs, objects, and exercises for practice."
   },
   "english_alphabets": {
     "title": "Alphabets & Spelling",
-    "content": "Children learn A-Z letters, sounds, and basic spelling practice."
+    "content": "Children learn A–Z letters, sounds, and simple spelling activities with fun examples."
+  },
+  "science_animals": {
+    "title": "Animals & Habitats",
+    "content": "Pupils will study common animals, their sounds, and where they live (land, water, air)."
   }
 }
