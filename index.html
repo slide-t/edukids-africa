@@ -1033,16 +1033,25 @@ header {
 </style>
 
 <script>
-  function checkAccess() {
-    const key = document.getElementById("access-key").value;
-    const errorMsg = document.getElementById("error-msg");
-
-    if (key === "onlymeEdukidsAdmin") {
-      document.getElementById("access-overlay").style.display = "none";
-    } else {
-      errorMsg.style.display = "block";
-    }
+  // ===== Access Modal with localStorage =====
+window.onload = function() {
+  // If access was already granted, hide the overlay
+  if (localStorage.getItem("eduKidsAccess") === "granted") {
+    document.getElementById("access-overlay").style.display = "none";
   }
+};
+
+function checkAccess() {
+  const key = document.getElementById("access-key").value;
+  const errorMsg = document.getElementById("error-msg");
+
+  if (key === "onlymeEdukidsAdmin") {
+    document.getElementById("access-overlay").style.display = "none";
+    localStorage.setItem("eduKidsAccess", "granted"); // Remember access
+  } else {
+    errorMsg.style.display = "block";
+  }
+}
 </script>
   
 </body>
