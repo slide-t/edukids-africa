@@ -3,30 +3,40 @@
     "id": 1,
     "subjectId": 1,
     "title": "Introduction to Numbers",
-    "detailsPage": "topics-details.html?id=1"
+    "detailsPage": "topics-details.html?id=1",
+    "description": "This topic introduces children to counting numbers, starting from 1 to 20.",
+    "sample": "Example: Count the fruits on the table. If there are 5 apples, the number is 5."
   },
   {
     "id": 2,
     "subjectId": 1,
     "title": "Addition and Subtraction",
-    "detailsPage": "topics-details.html?id=2"
+    "detailsPage": "topics-details.html?id=2",
+    "description": "Students learn basic addition and subtraction using small numbers.",
+    "sample": "2 + 3 = 5. If you have 5 oranges and give away 2, you are left with 3."
   },
   {
     "id": 3,
     "subjectId": 2,
     "title": "Basic English Grammar",
-    "detailsPage": "topics-details.html?id=3"
+    "detailsPage": "topics-details.html?id=3",
+    "description": "This topic teaches the basics of grammar like nouns, verbs, and adjectives.",
+    "sample": "Example: The dog runs fast. ('dog' is a noun, 'runs' is a verb)."
   },
   {
     "id": 4,
     "subjectId": 2,
     "title": "Reading Comprehension",
-    "detailsPage": "topics-details.html?id=4"
+    "detailsPage": "topics-details.html?id=4",
+    "description": "Students practice understanding short passages.",
+    "sample": "Read: 'The sun is bright.' Question: What is bright? Answer: The sun."
   },
   {
     "id": 5,
     "subjectId": 3,
     "title": "Living and Non-living Things",
-    "detailsPage": "topics-details.html?id=5"
+    "detailsPage": "topics-details.html?id=5",
+    "description": "Children learn how to identify things that are alive and things that are not.",
+    "sample": "Example: A dog is living because it eats and grows. A chair is non-living."
   }
 ]
