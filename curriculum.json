@@ -1,22 +1,144 @@
 {
   "Mathematics": {
     "Primary 1": [
-      { "id": "math-p1-1", "title": "Numbers 1–10" },
-      { "id": "math-p1-2", "title": "Basic Shapes" }
+      { "id": "math-p1-1", "title": "Numbers 1–20" },
+      { "id": "math-p1-2", "title": "Basic Shapes" },
+      { "id": "math-p1-3", "title": "Simple Addition" }
     ],
     "Primary 2": [
       { "id": "math-p2-1", "title": "Addition and Subtraction" },
-      { "id": "math-p2-2", "title": "Measurement (Length)" }
+      { "id": "math-p2-2", "title": "Measurement (Length & Weight)" },
+      { "id": "math-p2-3", "title": "Multiplication Basics" }
+    ],
+    "Primary 3": [
+      { "id": "math-p3-1", "title": "Division Basics" },
+      { "id": "math-p3-2", "title": "Fractions (½, ¼)" },
+      { "id": "math-p3-3", "title": "Word Problems" }
+    ],
+    "Primary 4": [
+      { "id": "math-p4-1", "title": "Multiplication Table" },
+      { "id": "math-p4-2", "title": "Decimals" },
+      { "id": "math-p4-3", "title": "Geometry (Angles)" }
+    ],
+    "Primary 5": [
+      { "id": "math-p5-1", "title": "Factors and Multiples" },
+      { "id": "math-p5-2", "title": "Area and Perimeter" },
+      { "id": "math-p5-3", "title": "Data Handling" }
+    ],
+    "Primary 6": [
+      { "id": "math-p6-1", "title": "Percentages" },
+      { "id": "math-p6-2", "title": "Probability" },
+      { "id": "math-p6-3", "title": "Algebra Basics" }
     ]
   },
   "English": {
     "Primary 1": [
       { "id": "eng-p1-1", "title": "Alphabet and Phonics" },
-      { "id": "eng-p1-2", "title": "Simple Words" }
+      { "id": "eng-p1-2", "title": "Simple Words" },
+      { "id": "eng-p1-3", "title": "Picture Reading" }
     ],
     "Primary 2": [
       { "id": "eng-p2-1", "title": "Reading Short Sentences" },
-      { "id": "eng-p2-2", "title": "Nouns and Verbs" }
+      { "id": "eng-p2-2", "title": "Nouns and Verbs" },
+      { "id": "eng-p2-3", "title": "Comprehension Practice" }
+    ],
+    "Primary 3": [
+      { "id": "eng-p3-1", "title": "Adjectives" },
+      { "id": "eng-p3-2", "title": "Paragraph Writing" },
+      { "id": "eng-p3-3", "title": "Story Reading" }
+    ],
+    "Primary 4": [
+      { "id": "eng-p4-1", "title": "Tenses (Past, Present, Future)" },
+      { "id": "eng-p4-2", "title": "Composition Writing" },
+      { "id": "eng-p4-3", "title": "Comprehension Skills" }
+    ],
+    "Primary 5": [
+      { "id": "eng-p5-1", "title": "Figures of Speech" },
+      { "id": "eng-p5-2", "title": "Letter Writing" },
+      { "id": "eng-p5-3", "title": "Summary Skills" }
+    ],
+    "Primary 6": [
+      { "id": "eng-p6-1", "title": "Formal Letter Writing" },
+      { "id": "eng-p6-2", "title": "Debate and Speech" },
+      { "id": "eng-p6-3", "title": "Advanced Comprehension" }
+    ]
+  },
+  "Basic Science": {
+    "Primary 1": [
+      { "id": "sci-p1-1", "title": "Living and Non-Living Things" },
+      { "id": "sci-p1-2", "title": "Parts of the Body" }
+    ],
+    "Primary 2": [
+      { "id": "sci-p2-1", "title": "Plants Around Us" },
+      { "id": "sci-p2-2", "title": "Weather and Seasons" }
+    ],
+    "Primary 3": [
+      { "id": "sci-p3-1", "title": "Animals and Their Habitats" },
+      { "id": "sci-p3-2", "title": "Simple Machines" }
+    ],
+    "Primary 4": [
+      { "id": "sci-p4-1", "title": "Water Cycle" },
+      { "id": "sci-p4-2", "title": "Energy (Heat & Light)" }
+    ],
+    "Primary 5": [
+      { "id": "sci-p5-1", "title": "The Solar System" },
+      { "id": "sci-p5-2", "title": "Forces and Motion" }
+    ],
+    "Primary 6": [
+      { "id": "sci-p6-1", "title": "Electricity" },
+      { "id": "sci-p6-2", "title": "Environmental Conservation" }
+    ]
+  },
+  "Social Studies": {
+    "Primary 1": [
+      { "id": "soc-p1-1", "title": "My Family" },
+      { "id": "soc-p1-2", "title": "My School" }
+    ],
+    "Primary 2": [
+      { "id": "soc-p2-1", "title": "Community Helpers" },
+      { "id": "soc-p2-2", "title": "Traffic Rules" }
+    ],
+    "Primary 3": [
+      { "id": "soc-p3-1", "title": "Culture and Tradition" },
+      { "id": "soc-p3-2", "title": "Leadership" }
+    ],
+    "Primary 4": [
+      { "id": "soc-p4-1", "title": "Nigeria: States and Capitals" },
+      { "id": "soc-p4-2", "title": "National Symbols" }
+    ],
+    "Primary 5": [
+      { "id": "soc-p5-1", "title": "Citizenship" },
+      { "id": "soc-p5-2", "title": "Democracy" }
+    ],
+    "Primary 6": [
+      { "id": "soc-p6-1", "title": "The Constitution" },
+      { "id": "soc-p6-2", "title": "African Unity" }
+    ]
+  },
+  "Computer Studies": {
+    "Primary 1": [
+      { "id": "com-p1-1", "title": "Parts of a Computer" },
+      { "id": "com-p1-2", "title": "Turning On and Off a Computer" }
+    ],
+    "Primary 2": [
+      { "id": "com-p2-1", "title": "Keyboard and Mouse" },
+      { "id": "com-p2-2", "title": "Uses of Computers" }
+    ],
+    "Primary 3": [
+      { "id": "com-p3-1", "title": "Typing Practice" },
+      { "id": "com-p3-2", "title": "Introduction to Paint" }
+    ],
+    "Primary 4": [
+      { "id": "com-p4-1", "title": "File and Folder Management" },
+      { "id": "com-p4-2", "title": "Basic Word Processing" }
+    ],
+    "Primary 5": [
+      { "id": "com-p5-1", "title": "Internet Basics" },
+      { "id": "com-p5-2", "title": "Email and Communication" }
+    ],
+    "Primary 6": [
+      { "id": "com-p6-1", "title": "Coding with Scratch" },
+      { "id": "com-p6-2", "title": "Introduction to HTML" }
     ]
   }
 }
