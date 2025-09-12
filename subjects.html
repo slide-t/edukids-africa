@@ -244,9 +244,10 @@
       heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
 
       // Subject list container
-      const listDiv = document.createElement("div");
-      listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500";
-
+     const listDiv = document.createElement("div");
+     listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500";
+      /*listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500";
+     */
       // Add filtered subjects
       subjects[category]
         .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
