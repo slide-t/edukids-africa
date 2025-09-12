@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduKids Africa - Topic Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+
+  <!-- Header -->
+  <header class="bg-purple-800 text-white p-4 shadow-md sticky top-0 z-50">
+    <h1 class="text-xl font-bold text-center">EduKids Africa</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-3xl mx-auto p-6 bg-white mt-6 rounded-lg shadow-md">
+    <h2 id="topicTitle" class="text-2xl font-bold text-purple-800 mb-2"></h2>
+    <h3 id="subjectName" class="text-lg text-gray-600 mb-4"></h3>
+
+    <!-- Explanation -->
+    <section id="topicContent" class="space-y-4 text-gray-700 leading-relaxed">
+      <!-- Loaded dynamically -->
+    </section>
+
+    <!-- Example Section -->
+    <section id="examples" class="mt-6">
+      <h4 class="text-lg font-semibold text-purple-700">Examples</h4>
+      <div id="examplesList" class="list-disc list-inside space-y-2 text-gray-700"></div>
+    </section>
+
+    <!-- Practice Section -->
+    <section class="mt-6">
+      <a id="practiceBtn"
+         href="#"
+         class="block w-full text-center bg-purple-700 hover:bg-purple-800 text-white font-semibold py-3 rounded-lg shadow-md transition">
+        Practice Questions
+      </a>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script>
+    // Read URL params
+    const params = new URLSearchParams(window.location.search);
+    const subject = params.get("subject");
+    const topic = params.get("topic");
+
+    document.getElementById("topicTitle").textContent = topic || "Topic";
+    document.getElementById("subjectName").textContent = subject ? `Subject: ${subject}` : "";
+
+    // Demo JSON (later replace with topics.json)
+    const topicsData = {
+      "Mathematics": {
+        "Fractions": {
+          "content": "Fractions represent parts of a whole. For example, 1/2 means one part out of two equal parts.",
+          "examples": [
+            "If you eat 2 slices from a pizza cut into 8, you ate 2/8 = 1/4.",
+            "3/5 of a class are girls means 3 girls for every 5 students."
+          ],
+          "practiceLink": "quiz.html?subject=Mathematics&topic=Fractions"
+        }
+      },
+      "Science": {
+        "Photosynthesis": {
+          "content": "Photosynthesis is the process by which green plants make their own food using sunlight, water, and carbon dioxide.",
+          "examples": [
+            "The equation: 6CO₂ + 6H₂O → C₆H₁₂O₆ + 6O₂.",
+            "Plants need chlorophyll to absorb sunlight."
+          ],
+          "practiceLink": "quiz.html?subject=Science&topic=Photosynthesis"
+        }
+      }
+    };
+
+    // Load topic details
+    if (subject && topic && topicsData[subject] && topicsData[subject][topic]) {
+      const data = topicsData[subject][topic];
+      document.getElementById("topicContent").innerHTML = `<p>${data.content}</p>`;
+      
+      // Examples
+      const exList = document.getElementById("examplesList");
+      data.examples.forEach(ex => {
+        const li = document.createElement("li");
+        li.textContent = ex;
+        exList.appendChild(li);
+      });
+
+      // Practice link
+      document.getElementById("practiceBtn").href = data.practiceLink;
+    } else {
+      document.getElementById("topicContent").innerHTML = "<p class='text-red-600'>No details available for this topic yet.</p>";
+      document.getElementById("practiceBtn").style.display = "none";
+    }
+  </script>
+</body>
+</html>
