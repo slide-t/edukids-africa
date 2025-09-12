@@ -1,1 +1,159 @@
+{ 
+  "Spellings": [
 
+{
+  "level": 1,
+  "total_clues": 25,
+  "sound_blocks": [
+    {
+      "sound": "ee",
+      "wordBank": [
+        "see",
+        "tree",
+        "bee",
+        "feet",
+        "cheese",
+        "sleep",
+        "peel",
+        "week"
+      ],
+      "clues": [
+        { "id": 1, "clue": "To look with your eyes", "answer": "see" },
+        { "id": 2, "clue": "A tall plant with branches and leaves", "answer": "tree" },
+        { "id": 3, "clue": "A flying insect that makes honey", "answer": "bee" },
+        { "id": 4, "clue": "The parts of the body we stand on (plural)", "answer": "feet" },
+        { "id": 5, "clue": "A yellow food made from milk, often on pizza", "answer": "cheese" }
+      ]
+    },
+    {
+      "sound": "ai",
+      "wordBank": [
+        "rain",
+        "paint",
+        "tail",
+        "mail",
+        "train",
+        "chain",
+        "wait",
+        "snail"
+      ],
+      "clues": [
+        { "id": 6, "clue": "Water that falls from the sky", "answer": "rain" },
+        { "id": 7, "clue": "What you use with a brush to make a picture", "answer": "paint" },
+        { "id": 8, "clue": "The long part at the back of a cat or dog", "answer": "tail" },
+        { "id": 9, "clue": "Letters and packages delivered to your house", "answer": "mail" },
+        { "id": 10, "clue": "A vehicle that runs on tracks and carries people", "answer": "train" }
+      ]
+    },
+    {
+      "sound": "air",
+      "wordBank": [
+        "hair",
+        "chair",
+        "fair",
+        "pair",
+        "stair"
+      ],
+      "clues": [
+        { "id": 11, "clue": "What grows on your head", "answer": "hair" },
+        { "id": 12, "clue": "Something you sit on", "answer": "chair" },
+        { "id": 13, "clue": "A place with rides and games (or an event with prizes)", "answer": "fair" }
+      ]
+    },
+    {
+      "sound": "al",
+      "wordBank": [
+        "ball",
+        "walnut",
+        "call",
+        "wall",
+        "small"
+      ],
+      "clues": [
+        { "id": 14, "clue": "A round toy you can throw or kick", "answer": "ball" }
+      ]
+    },
+    {
+      "sound": "ar",
+      "wordBank": [
+        "car",
+        "park",
+        "star",
+        "farm",
+        "arm"
+      ],
+      "clues": [
+        { "id": 15, "clue": "A vehicle with four wheels that takes you places", "answer": "car" },
+        { "id": 16, "clue": "A place with grass, trees and often swings", "answer": "park" },
+        { "id": 17, "clue": "Shines at night in the sky", "answer": "star" }
+      ]
+    },
+    {
+      "sound": "ay",
+      "wordBank": [
+        "play",
+        "day",
+        "say",
+        "pray",
+        "may"
+      ],
+      "clues": [
+        { "id": 18, "clue": "Opposite of night", "answer": "day" },
+        { "id": 19, "clue": "To speak words", "answer": "say" }
+      ]
+    },
+    {
+      "sound": "ea",
+      "wordBank": [
+        "eat",
+        "seat",
+        "leaf",
+        "team",
+        "beach"
+      ],
+      "clues": [
+        { "id": 20, "clue": "To put food into your mouth", "answer": "eat" }
+      ]
+    },
+    {
+      "sound": "e (short e)",
+      "wordBank": [
+        "bed",
+        "pen",
+        "red",
+        "net",
+        "ten"
+      ],
+      "clues": [
+        { "id": 21, "clue": "You sleep on it", "answer": "bed" },
+        { "id": 22, "clue": "You write with it", "answer": "pen" }
+      ]
+    },
+    {
+      "sound": "el",
+      "wordBank": [
+        "bell",
+        "shell",
+        "sell",
+        "tunnel"
+      ],
+      "clues": [
+        { "id": 23, "clue": "A small sound-making object often on a door or at school", "answer": "bell" }
+      ]
+    },
+    {
+      "sound": "er",
+      "wordBank": [
+        "water",
+        "butter",
+        "paper",
+        "sister",
+        "summer"
+      ],
+      "clues": [
+        { "id": 24, "clue": "You drink this when you are thirsty", "answer": "water" },
+        { "id": 25, "clue": "A season that is hot and sunny", "answer": "summer" }
+      ]
+    }
+  ]
+}
