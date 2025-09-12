@@ -20,16 +20,22 @@
     <h2 class="text-xl font-semibold text-gray-800 mb-4">Subjects & Topics</h2>
     
     <div id="subjectsContainer" class="space-y-4">
-      <!-- Dynamic content from subjects.json will load here -->
+      <!-- Dynamic content will load here -->
     </div>
   </main>
 
   <!-- Script -->
   <script>
-    async function loadSubjects() {
+    async function loadSubjectsAndTopics() {
       try {
-        const res = await fetch("subjects.json");
-        const subjects = await res.json();
+        // Load subjects.json
+        const resSubjects = await fetch("subjects.json");
+        const subjects = await resSubjects.json();
+
+        // Load topics.json
+        const resTopics = await fetch("topics.json");
+        const topicsData = await resTopics.json();
+
         const container = document.getElementById("subjectsContainer");
 
         subjects.forEach(sub => {
@@ -37,7 +43,7 @@
           const subjectDiv = document.createElement("div");
           subjectDiv.className = "bg-white rounded-lg shadow-md";
 
-          // Subject header with chevron
+          // Subject header
           const header = document.createElement("div");
           header.className = "flex justify-between items-center p-4 cursor-pointer bg-purple-50 hover:bg-purple-100";
           header.innerHTML = `
@@ -48,12 +54,15 @@
             </svg>
           `;
 
-          // Topics container (collapsed by default)
+          // Topics container (collapsed)
           const topicsDiv = document.createElement("div");
           topicsDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
-          
-          if (sub.topics) {
-            sub.topics.forEach(topic => {
+
+          // Filter topics by subject id
+          const subjectTopics = topicsData.filter(t => t.subjectId === sub.id);
+
+          if (subjectTopics.length > 0) {
+            subjectTopics.forEach(topic => {
               const topicItem = document.createElement("div");
               topicItem.className = "px-6 py-2 border-t border-gray-200 hover:bg-purple-50 cursor-pointer text-gray-700";
               topicItem.textContent = topic.title;
@@ -64,7 +73,7 @@
             });
           }
 
-          // Toggle accordion
+          // Accordion toggle
           header.addEventListener("click", () => {
             const svg = header.querySelector("svg");
             const expanded = topicsDiv.classList.contains("max-h-96");
@@ -82,11 +91,11 @@
           container.appendChild(subjectDiv);
         });
       } catch (err) {
-        console.error("Error loading subjects.json", err);
+        console.error("Error loading subjects/topics JSON", err);
       }
     }
 
-    loadSubjects();
+    loadSubjectsAndTopics();
   </script>
 </body>
 </html>
