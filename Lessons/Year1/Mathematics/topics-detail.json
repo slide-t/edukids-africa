@@ -1,0 +1,32 @@
+[
+  {
+    "id": "numbers",
+    "title": "Numbers & Counting",
+    "description": "This lesson introduces pupils to numbers from 1 to 20. They will learn to count objects, recognize numbers, and write them correctly. The aim is to build strong foundational number sense.",
+    "image": "images/numbers.jpg",
+    "resources": [
+      { "name": "Counting Song (YouTube)", "link": "https://www.youtube.com/watch?v=DR-cfDsHCGA" },
+      { "name": "Printable Counting Worksheet", "link": "worksheets/numbers-counting.pdf" }
+    ]
+  },
+  {
+    "id": "addition",
+    "title": "Addition Basics",
+    "description": "Pupils will learn how to add small numbers using objects, pictures, and number lines. They will understand the concept of 'putting together' to form a total.",
+    "image": "images/addition.jpg",
+    "resources": [
+      { "name": "Interactive Addition Game", "link": "https://www.splashlearn.com/addition-games" },
+      { "name": "Addition Worksheet", "link": "worksheets/addition-basics.pdf" }
+    ]
+  },
+  {
+    "id": "subtraction",
+    "title": "Subtraction Basics",
+    "description": "This topic introduces subtraction as 'taking away'. Pupils will use real objects and drawings to practice simple subtraction facts.",
+    "image": "images/subtraction.jpg",
+    "resources": [
+      { "name": "Subtraction Game", "link": "https://www.splashlearn.com/subtraction-games" },
+      { "name": "Printable Subtraction Worksheet", "link": "worksheets/subtraction-basics.pdf" }
+    ]
+  }
+]
