@@ -156,9 +156,7 @@
           { "id": "four_letter", "title": "Four-Letter Words", "detailsPage": "topics-details.html?topic=spellings_four_letter" },
           { "id": "common_nouns", "title": "Common Nouns", "detailsPage": "topics-details.html?topic=spellings_nouns" }
         ]
-      }
-    ]
-  },
+       },
   {
     "id": "Year3",
     "name": "Year 3",
@@ -173,8 +171,6 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "spellings", "name": "Spellings", "topics": [] }
     ]
-  }
-]
   },
   {
     "id": "Year4",
@@ -190,8 +186,6 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "spellings", "name": "Spellings", "topics": [] }
     ]
-  }
-]
   },
   {
     "id": "Year5",
@@ -207,8 +201,6 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "spellings", "name": "Spellings", "topics": [] }
     ]
-  }
-]
   },
   {
     "id": "Year6",
