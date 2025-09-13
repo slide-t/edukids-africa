@@ -1,0 +1,103 @@
+[
+  {
+    "id": "numbers",
+    "title": "Numbers & Counting",
+    "content": "<p>In this lesson, pupils will learn numbers from 1 to 20. Use fingers, objects, and number charts to practice counting.</p>",
+    "examples": [
+      "Count 5 apples 🍎🍎🍎🍎🍎",
+      "Trace and write numbers from 1–10"
+    ],
+    "image": "images/numbers-chart.png"
+  },
+  {
+    "id": "addition",
+    "title": "Simple Addition",
+    "content": "<p>Addition means putting things together. Example: 2 + 3 = 5. Children practice with objects like fruits or blocks.</p>",
+    "examples": [
+      "2 pencils ✏️ + 1 pencil ✏️ = 3 pencils",
+      "4 oranges 🍊 + 2 oranges 🍊 = 6 oranges"
+    ],
+    "image": "images/addition-example.png"
+  },
+  {
+    "id": "subtraction",
+    "title": "Simple Subtraction",
+    "content": "<p>Subtraction means taking away. Example: 5 – 2 = 3. Children can practice with toys or candies.</p>",
+    "examples": [
+      "5 candies 🍬🍬🍬🍬🍬 – 2 🍬🍬 = 3 candies",
+      "7 – 4 = 3"
+    ],
+    "image": "images/subtraction-example.png"
+  },
+  {
+    "id": "shapes",
+    "title": "Shapes and Colors",
+    "content": "<p>Pupils learn basic shapes such as circle, square, triangle, and rectangle. Each shape is linked with common objects.</p>",
+    "examples": [
+      "A ball ⚽ is a circle",
+      "A book 📘 is a rectangle"
+    ],
+    "image": "images/shapes.png"
+  },
+  {
+    "id": "counting_twos",
+    "title": "Counting in Twos",
+    "content": "<p>Skip counting introduces children to multiplication. Start by counting 2, 4, 6, 8, etc.</p>",
+    "examples": [
+      "2, 4, 6, 8, 10",
+      "Count pairs of shoes 👟👟"
+    ],
+    "image": "images/counting-twos.png"
+  },
+  {
+    "id": "number_bonds",
+    "title": "Number Bonds to 10",
+    "content": "<p>Number bonds are pairs of numbers that add up to a target number. Pupils learn how numbers join to make 10.</p>",
+    "examples": [
+      "7 + 3 = 10",
+      "6 + 4 = 10"
+    ],
+    "image": "images/number-bonds.png"
+  },
+  {
+    "id": "comparing_numbers",
+    "title": "Comparing Numbers",
+    "content": "<p>Pupils compare numbers using greater than (&gt;), less than (&lt;), or equal to (=).</p>",
+    "examples": [
+      "5 > 3",
+      "2 < 8",
+      "4 = 4"
+    ],
+    "image": "images/comparing.png"
+  },
+  {
+    "id": "position",
+    "title": "Position and Direction",
+    "content": "<p>Children learn words like left, right, above, below, in front, and behind using classroom objects.</p>",
+    "examples": [
+      "The ball is <b>under</b> the table",
+      "The cat 🐱 is <b>on</b> the chair"
+    ],
+    "image": "images/position.png"
+  },
+  {
+    "id": "time",
+    "title": "Introduction to Time",
+    "content": "<p>Pupils are introduced to clocks and learn how to read hours (1 o’clock, 2 o’clock, etc.).</p>",
+    "examples": [
+      "The big hand is at 12, the small hand at 3 → 3 o’clock",
+      "Bedtime is 8 o’clock"
+    ],
+    "image": "images/time.png"
+  },
+  {
+    "id": "word_problems",
+    "title": "Word Problems",
+    "content": "<p>Pupils solve simple real-life problems using addition and subtraction. This builds logical thinking.</p>",
+    "examples": [
+      "Ali has 3 pencils. He buys 2 more. How many pencils in total?",
+      "If there are 6 birds and 2 fly away, how many are left?"
+    ],
+    "image": "images/word-problems.png"
+  }
+]
