@@ -2,93 +2,144 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EduKids Africa | Topic Details</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Topic Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+    header {
+      background: #001219;
+      color: #fff;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 900px;
+      margin: 2rem auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .topic-title {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      color: #001219;
+    }
+    .topic-description {
+      margin-bottom: 1.5rem;
+    }
+    .topic-image {
+      max-width: 100%;
+      border-radius: 6px;
+      margin-bottom: 1.5rem;
+    }
+    .resources {
+      margin-top: 1.5rem;
+    }
+    .resources h3 {
+      margin-bottom: 0.8rem;
+      color: #005f73;
+    }
+    .resources ul {
+      list-style: none;
+      padding: 0;
+    }
+    .resources ul li {
+      margin: 0.5rem 0;
+    }
+    .resources ul li a {
+      text-decoration: none;
+      color: #0a9396;
+    }
+    .resources ul li a:hover {
+      text-decoration: underline;
+    }
+    .back-btn {
+      display: inline-block;
+      margin-top: 2rem;
+      padding: 0.6rem 1.2rem;
+      background: #001219;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .back-btn:hover {
+      background: #005f73;
+    }
+  </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
-
-  <!-- Header -->
-  <header class="bg-purple-700 text-white p-4 shadow-md">
-    <h1 class="text-xl font-bold">EduKids Africa – Topic Details</h1>
+<body>
+  <header>
+    <h1>EduKids Africa - Topic Details</h1>
   </header>
 
-  <!-- Main Container -->
-  <main class="max-w-3xl mx-auto p-6">
-    <!-- Back button -->
-    <button onclick="history.back()" 
-      class="mb-4 px-4 py-2 bg-gray-200 hover:bg-gray-300 text-gray-700 rounded shadow">
-      ← Back
-    </button>
+  <div class="container">
+    <h2 class="topic-title" id="topicTitle">Loading...</h2>
+    <img id="topicImage" class="topic-image" src="" alt="Topic Image" style="display:none;" />
+    <p class="topic-description" id="topicDescription">Please wait while we load the topic details.</p>
 
-    <!-- Topic content -->
-    <section id="topicContent" class="bg-white p-6 rounded-lg shadow-lg">
-      <h2 id="topicTitle" class="text-2xl font-bold text-purple-700 mb-4"></h2>
-      <div id="topicBody" class="prose max-w-none mb-6"></div>
+    <div class="resources" id="topicResources" style="display:none;">
+      <h3>Learning Resources:</h3>
+      <ul id="resourceList"></ul>
+    </div>
 
-      <!-- Example Section -->
-      <div id="examplesSection" class="mb-6 hidden">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Examples:</h3>
-        <ul id="examplesList" class="list-disc list-inside space-y-2"></ul>
-      </div>
-
-      <!-- Image Section -->
-      <div id="imageSection" class="hidden">
-        <h3 class="text-xl font-semibold text-gray-800 mb-2">Illustration:</h3>
-        <img id="topicImage" src="" alt="Topic illustration" class="rounded shadow-md max-h-64">
-      </div>
-    </section>
-  </main>
+    <a href="subjects-curric.html" class="back-btn">← Back to Classes</a>
+  </div>
 
   <script>
-    async function loadTopicDetails() {
-      const params = new URLSearchParams(window.location.search);
-      const year = params.get("year");     // e.g. year1
-      const subject = params.get("subject"); // e.g. Mathematics
-      const topicId = params.get("topic");   // e.g. numbers
+    // Utility to fetch query params
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
+    }
 
-      if (!year || !subject || !topicId) {
-        document.getElementById("topicContent").innerHTML = 
-          "<p class='text-red-600'>Invalid topic details provided in URL.</p>";
+    // Load topic details
+    async function loadTopicDetails() {
+      const topicId = getQueryParam("topic");
+      if (!topicId) {
+        document.getElementById("topicTitle").textContent = "No topic selected.";
         return;
       }
 
       try {
-        // Fetch the correct JSON file
-        const filePath = `Lessons/${year}/${subject}/topics-details.json`;
-        const res = await fetch(filePath);
-        const topics = await res.json();
+        const res = await fetch("Lessons/topics-details.json");
+        const data = await res.json();
 
-        // Find topic
-        const topic = topics.find(t => t.id === topicId);
+        const topic = data.find(t => t.id === topicId);
         if (!topic) {
-          document.getElementById("topicContent").innerHTML = 
-            "<p class='text-red-600'>Topic not found.</p>";
+          document.getElementById("topicTitle").textContent = "Topic not found.";
           return;
         }
 
-        // Fill data
+        // Fill in details
         document.getElementById("topicTitle").textContent = topic.title;
-        document.getElementById("topicBody").innerHTML = topic.content;
-
-        if (topic.examples && topic.examples.length > 0) {
-          document.getElementById("examplesSection").classList.remove("hidden");
-          const ul = document.getElementById("examplesList");
-          topic.examples.forEach(ex => {
-            const li = document.createElement("li");
-            li.textContent = ex;
-            ul.appendChild(li);
-          });
-        }
+        document.getElementById("topicDescription").textContent = topic.description;
 
         if (topic.image) {
-          document.getElementById("imageSection").classList.remove("hidden");
-          document.getElementById("topicImage").src = topic.image;
+          const img = document.getElementById("topicImage");
+          img.src = topic.image;
+          img.style.display = "block";
         }
-      } catch (err) {
-        console.error("Error loading topic details:", err);
-        document.getElementById("topicContent").innerHTML = 
-          "<p class='text-red-600'>Unable to load topic details.</p>";
+
+        if (topic.resources && topic.resources.length > 0) {
+          document.getElementById("topicResources").style.display = "block";
+          const list = document.getElementById("resourceList");
+          list.innerHTML = "";
+          topic.resources.forEach(r => {
+            const li = document.createElement("li");
+            li.innerHTML = `<a href="${r.link}" target="_blank">${r.name}</a>`;
+            list.appendChild(li);
+          });
+        }
+      } catch (error) {
+        console.error("Error loading topic details:", error);
+        document.getElementById("topicTitle").textContent = "Error loading details.";
       }
     }
 
