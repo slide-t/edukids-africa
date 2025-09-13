@@ -224,155 +224,52 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "spellings", "name": "Spellings", "topics": [] }
     ]
-  }
-]
   },
-
-
-  
   {
-    "id": "year7",
-    "name": "Year 7 (JSS 1)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "integers", "title": "Integers", "detailsPage": "topics-details.html?topic=maths_integers" },
-          { "id": "algebra", "title": "Basic Algebra", "detailsPage": "topics-details.html?topic=maths_algebra" },
-          { "id": "probability", "title": "Probability Basics", "detailsPage": "topics-details.html?topic=maths_probability" }
-        ]
+  "id": "Year7",
+  "name": "Year 7 (JSS 1)",
+  "subjects": [
+    { "id": "mathematics", "name": "Mathematics", "topics": [] },
+    { "id": "english-language", "name": "English-Language", "topics": [] },
+    { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+    { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+    { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+    { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+    { "id": "computer-studies", "name": "Computer-Studies", "topics": [] },
+    { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+    { "id": "business-studies", "name": "Business-Studies", "topics": [] }
+  ]
+},
+{
+  "id": "Year8",
+  "name": "Year 8 (JSS 2)",
+  "subjects": [
+    { "id": "mathematics", "name": "Mathematics", "topics": [] },
+    { "id": "english-language", "name": "English-Language", "topics": [] },
+    { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+    { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+    { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+    { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+    { "id": "computer-studies", "name": "Computer-Studies", "topics": [] },
+    { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+    { "id": "business-studies", "name": "Business-Studies", "topics": [] }
+  ]
+},
+{
+  "id": "Year9",
+  "name": "Year 9 (JSS 3)",
+  "subjects": [
+    { "id": "mathematics", "name": "Mathematics", "topics": [] },
+    { "id": "english-language", "name": "English-Language", "topics": [] },
+    { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+    { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+    { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+    { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+    { "id": "computer-studies", "name": "Computer-Studies", "topics": [] },
+    { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+    { "id": "business-studies", "name": "Business-Studies", "topics": [] }
+  ]
+}
+]
+}
       
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "narrative", "title": "Narrative Writing", "detailsPage": "topics-details.html?topic=english_narrative" },
-          { "id": "drama", "title": "Drama & Plays", "detailsPage": "topics-details.html?topic=english_drama" },
-          { "id": "poetry", "title": "Poetry", "detailsPage": "topics-details.html?topic=english_poetry" }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "year8",
-    "name": "Year 8 (JSS 2)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "equations", "title": "Equations", "detailsPage": "topics-details.html?topic=maths_equations" },
-          { "id": "geometry", "title": "Geometry & Angles", "detailsPage": "topics-details.html?topic=maths_geometry_angles" },
-          { "id": "statistics", "title": "Statistics", "detailsPage": "topics-details.html?topic=maths_statistics" }
-        ]
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "essay", "title": "Descriptive Essay", "detailsPage": "topics-details.html?topic=english_descriptive" },
-          { "id": "debate", "title": "Debate Skills", "detailsPage": "topics-details.html?topic=english_debate" },
-          { "id": "summary", "title": "Summary Writing", "detailsPage": "topics-details.html?topic=english_summary" }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "year9",
-    "name": "Year 9 (JSS 3)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "simultaneous", "title": "Simultaneous Equations", "detailsPage": "topics-details.html?topic=maths_simultaneous" },
-          { "id": "mensuration", "title": "Mensuration", "detailsPage": "topics-details.html?topic=maths_mensuration" },
-          { "id": "sets", "title": "Sets", "detailsPage": "topics-details.html?topic=maths_sets" }
-        ]
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "report", "title": "Report Writing", "detailsPage": "topics-details.html?topic=english_report" },
-          { "id": "literature", "title": "Literature Basics", "detailsPage": "topics-details.html?topic=english_literature" },
-          { "id": "letter", "title": "Formal & Informal Letters", "detailsPage": "topics-details.html?topic=english_letter" }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "year10",
-    "name": "Year 10 (SS 1)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "quadratics", "title": "Quadratic Equations", "detailsPage": "topics-details.html?topic=maths_quadratics" },
-          { "id": "logarithms", "title": "Logarithms", "detailsPage": "topics-details.html?topic=maths_logarithms" },
-          { "id": "progression", "title": "Sequences & Progressions", "detailsPage": "topics-details.html?topic=maths_progressions" }
-        ]
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "oral", "title": "Oral English", "detailsPage": "topics-details.html?topic=english_oral" },
-          { "id": "literary", "title": "Literary Appreciation", "detailsPage": "topics-details.html?topic=english_literary" },
-          { "id": "drama_analysis", "title": "Drama Analysis", "detailsPage": "topics-details.html?topic=english_drama_analysis" }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "year11",
-    "name": "Year 11 (SS 2)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "trigonometry", "title": "Trigonometry", "detailsPage": "topics-details.html?topic=maths_trigonometry" },
-          { "id": "calculus", "title": "Introduction to Calculus", "detailsPage": "topics-details.html?topic=maths_calculus" },
-          { "id": "vectors", "title": "Vectors", "detailsPage": "topics-details.html?topic=maths_vectors" }
-        ]
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "drama_criticism", "title": "Drama Criticism", "detailsPage": "topics-details.html?topic=english_drama_criticism" },
-          { "id": "prose", "title": "Prose Fiction", "detailsPage": "topics-details.html?topic=english_prose" },
-          { "id": "poetry_analysis", "title": "Poetry Analysis", "detailsPage": "topics-details.html?topic=english_poetry_analysis" }
-        ]
-      }
-    ]
-  },
-  {
-    "id": "year12",
-    "name": "Year 12 (SS 3)",
-    "subjects": [
-      {
-        "id": "maths",
-        "name": "Mathematics",
-        "topics": [
-          { "id": "advanced_calculus", "title": "Advanced Calculus", "detailsPage": "topics-details.html?topic=maths_adv_calculus" },
-          { "id": "complex_numbers", "title": "Complex Numbers", "detailsPage": "topics-details.html?topic=maths_complex" },
-          { "id": "matrices", "title": "Matrices & Determinants", "detailsPage": "topics-details.html?topic=maths_matrices" }
-        ]
-      },
-      {
-        "id": "english",
-        "name": "English Language",
-        "topics": [
-          { "id": "essay_criticism", "title": "Essay & Criticism", "detailsPage": "topics-details.html?topic=english_essay_criticism" },
-          { "id": "linguistics", "title": "Introduction to Linguistics", "detailsPage": "topics-details.html?topic=english_linguistics" },
-          { "id": "lit_review", "title": "Literature Review", "detailsPage": "topics-details.html?topic=english_lit_review" }
-        ]
-      }
-    ]
-  }
-]
