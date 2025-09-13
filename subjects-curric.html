@@ -1,3 +1,200 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduKids Africa - Curriculum</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Mobile menu animation */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+    #mobile-menu.open {
+      max-height: 500px;
+    }
+    /* Hamburger to X */
+    .line { transition: all 0.3s ease-in-out; transform-origin: center; }
+    .active .line1 { transform: rotate(45deg) translate(5px, 5px); }
+    .active .line2 { opacity: 0; }
+    .active .line3 { transform: rotate(-45deg) translate(5px, -5px); }
+  </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+<!-- HEADER -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+  <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+    <div class="flex items-center space-x-3">
+      <img src="https://slide-t.github.io/edukids-africa/images/logo.png" alt="EduKids Africa Logo" class="w-12 h-12 md:w-14 md:h-14 rounded-full">
+      <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
+    </div>
+    <div class="md:hidden">
+      <button id="menu-btn" class="focus:outline-none flex flex-col justify-between w-9 h-9">
+        <span class="line line1 w-full h-1 bg-gray-800 rounded"></span>
+        <span class="line line2 w-full h-1 bg-gray-800 rounded"></span>
+        <span class="line line3 w-full h-1 bg-gray-800 rounded"></span>
+      </button>
+    </div>
+    <nav class="hidden md:flex md:space-x-6 text-lg font-medium">
+      <a href="index.html#home" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+      <a href="subjects.html" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+      <a href="about.html" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+      <a href="contact.html" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
+    </nav>
+  </div>
+  <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 bg-white shadow-md md:hidden">
+    <a href="index.html#home" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+    <a href="subjects.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+    <a href="about.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+    <a href="contact.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
+  </nav>
+</header>
+
+<!-- MAIN -->
+<div class="max-w-4xl mx-auto py-10 px-4">
+  <h1 class="text-3xl font-bold text-center text-purple-800 mb-8">
+    Curriculum - Year System
+  </h1>
+  <div id="classesContainer" class="space-y-4"></div>
+</div>
+
+<!-- MODAL -->
+<div id="topicsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
+  <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
+    <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-black">&times;</button>
+    <h2 id="modalTitle" class="text-xl font-semibold text-purple-700 mb-4"></h2>
+    <div id="topicsList" class="space-y-2"></div>
+  </div>
+</div>
+
+<script>
+function slugify(text) {
+  return String(text || '').trim().toLowerCase().replace(/\s+/g, '_').replace(/[^\w\-]+/g, '').replace(/\_+/g, '_');
+}
+
+async function loadClasses() {
+  try {
+    const res = await fetch('classes.json');
+    const data = await res.json();
+    let classes = Array.isArray(data) ? data : data.years || data.classes || [];
+    const container = document.getElementById('classesContainer');
+    container.innerHTML = '';
+
+    classes.forEach(cls => {
+      const yearId = cls.id || slugify(cls.name);
+      const classDiv = document.createElement('div');
+      classDiv.className = 'bg-white rounded-lg shadow-md';
+
+      const header = document.createElement('div');
+      header.className = 'flex justify-between items-center p-4 cursor-pointer bg-purple-50 hover:bg-purple-100';
+      header.innerHTML = `
+        <span class="font-semibold text-purple-800">${cls.name}</span>
+        <svg class="w-5 h-5 text-purple-600 transition-transform duration-300 transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+      `;
+
+      const subjectsDiv = document.createElement('div');
+      subjectsDiv.className = 'max-h-0 overflow-hidden transition-all duration-500';
+
+      (cls.subjects || []).forEach(sub => {
+        const subject = typeof sub === 'string' ? { id: slugify(sub), name: sub } : sub;
+        const item = document.createElement('div');
+        item.className = 'px-6 py-3 border-t border-gray-200 hover:bg-purple-50 cursor-pointer text-gray-700 font-medium';
+        item.textContent = subject.name;
+        item.onclick = () => openTopicsModal(yearId, cls.name, subject);
+        subjectsDiv.appendChild(item);
+      });
+
+      header.onclick = () => {
+        const svg = header.querySelector('svg');
+        const expanded = subjectsDiv.classList.contains('max-h-96');
+        subjectsDiv.classList.toggle('max-h-96', !expanded);
+        subjectsDiv.classList.toggle('max-h-0', expanded);
+        svg.classList.toggle('rotate-180', !expanded);
+      };
+
+      classDiv.appendChild(header);
+      classDiv.appendChild(subjectsDiv);
+      container.appendChild(classDiv);
+    });
+  } catch (err) {
+    document.getElementById('classesContainer').innerHTML = '<p class="text-red-600">Error loading classes.json</p>';
+  }
+}
+
+async function openTopicsModal(yearId, yearName, subject) {
+  const modal = document.getElementById('topicsModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const topicsList = document.getElementById('topicsList');
+  modalTitle.textContent = `${yearName} - ${subject.name} Topics`;
+  topicsList.innerHTML = '<p class="text-sm text-gray-500">Loading…</p>';
+  modal.classList.remove('hidden');
+
+  let topics = subject.topics || [];
+  if (!topics.length) {
+    try {
+      const res = await fetch(`Lessons/${yearId}/${subject.id}/topics-details.json`);
+      const json = await res.json();
+      topics = Array.isArray(json) ? json : json.topics || [];
+    } catch {}
+  }
+
+  topicsList.innerHTML = '';
+  if (!topics.length) {
+    topicsList.innerHTML = `<a href="topics-details.html?year=${encodeURIComponent(yearId)}&subject=${encodeURIComponent(subject.id)}" class="inline-block mt-2 px-3 py-2 bg-purple-600 text-white rounded">Open subject page</a>`;
+  } else {
+    topics.forEach(t => {
+      const topic = typeof t === 'string' ? { id: slugify(t), title: t } : t;
+      const a = document.createElement('a');
+      a.href = `topics-details.html?year=${encodeURIComponent(yearId)}&subject=${encodeURIComponent(subject.id)}&topic=${encodeURIComponent(topic.id)}`;
+      a.textContent = '📘 ' + topic.title;
+      a.className = 'block px-4 py-2 rounded hover:bg-purple-50 text-gray-700 font-medium';
+      topicsList.appendChild(a);
+    });
+  }
+}
+
+document.getElementById('closeModal').onclick = () => document.getElementById('topicsModal').classList.add('hidden');
+document.addEventListener('DOMContentLoaded', loadClasses);
+</script>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <h2 class="typing-logo">EduKids Africa<span style="color:#fff;">.</span></h2>
+    <p class="brand-caption">Shaping Bright Futures with Love & Learning</p>
+    <p style="font-size:0.9rem; color:#aaa;">© <span id="year"></span> EduKids Africa. All rights reserved.</p>
+  </div>
+  <nav class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="subjects.html">Subjects</a>
+    <a href="contact.html">Contact</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+</footer>
+<style>
+footer{background:#2c1a47;color:#fff;padding:20px;margin:50px auto;text-align:center}
+.typing-logo{margin-bottom:10px;font-size:1.6rem;font-weight:700;color:#ff6b6b;white-space:nowrap;overflow:hidden;border-right:3px solid #ff6b6b;width:0;animation:typing 3s steps(20,end) infinite alternate,blink .8s infinite}
+@keyframes typing{from{width:0}to{width:220px}}@keyframes blink{50%{border-color:transparent}}
+.footer-links{display:flex;justify-content:center;gap:2rem;flex-wrap:wrap;margin-bottom:.5rem}
+.footer-links a{color:#fff;text-decoration:none;font-weight:600;padding:.3rem .6rem;transition:.3s;border-radius:8px}
+.footer-links a:hover{background:#ffcc00;color:#222}
+.footer-links a.active{box-shadow:0 0 8px #00e6e6,0 0 15px #00e6e6;background:#009999}
+</style>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
+
+
+
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -46,7 +243,7 @@
 
 
 
-<!-- HEADER -->
+<!-- HEADER --
   <header class="bg-white shadow-md sticky top-0 z-50">
     <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
       <!-- Logo -->
@@ -55,7 +252,7 @@
         <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile Menu Button --
       <div class="md:hidden">
         <button id="menu-btn" class="focus:outline-none flex flex-col justify-between w-9 h-9">
           <span class="line line1 w-full h-1 bg-gray-800 rounded"></span>
@@ -64,7 +261,7 @@
         </button>
       </div>
 
-      <!-- Desktop Nav -->
+      <!-- Desktop Nav --
       <nav class="hidden md:flex md:space-x-6 text-lg font-medium">
         <a href="https://slide-t.github.io/edukids-africa/index.html#home" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
         <a href="subjects.html" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
@@ -73,7 +270,7 @@
       </nav>
     </div>
 
-    <!-- Mobile Nav -->
+    <!-- Mobile Nav --
     <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 bg-white shadow-md md:hidden">
       <a href="https://slide-t.github.io/edukids-africa/index.html#home" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
       <a href="subjects.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
@@ -86,11 +283,11 @@
       Curriculum - Year System
     </h1>
 
-    <!-- Classes container -->
+    <!-- Classes container --
     <div id="classesContainer" class="space-y-4"></div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal --
   <div id="topicsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden flex items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-6 relative">
       <button id="closeModal" class="absolute top-3 right-3 text-gray-600 hover:text-black">&times;</button>
