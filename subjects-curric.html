@@ -70,96 +70,132 @@
   </div>
 </div>
 <!-- subjects-curric.html -->
-  <!--
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    fetch("classes.json")
-      .then((res) => res.json())
-      .then((data) => {
-        const container = document.getElementById("classesContainer");
+  <script>
+function slugify(text) {
+  return String(text || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\_+/g, '_');
+}
 
-        data.forEach((year) => {
-          // Accordion Item
-          const yearDiv = document.createElement("div");
-          yearDiv.className = "accordion-item";
+async function loadClasses() {
+  try {
+    const res = await fetch('classes.json');
+    const data = await res.json();
+    let classes = Array.isArray(data) ? data : data.years || data.classes || [];
+    const container = document.getElementById('classesContainer');
+    container.innerHTML = '';
 
-          yearDiv.innerHTML = `
-            <button class="accordion-btn">${year.name}</button>
-            <div class="accordion-content"></div>
-          `;
+    classes.forEach(cls => {
+      const yearId = cls.id || slugify(cls.name);
+      const classDiv = document.createElement('div');
+      classDiv.className = 'bg-white rounded-lg shadow-md';
 
-          const contentDiv = yearDiv.querySelector(".accordion-content");
+      // Year Header
+      const header = document.createElement('div');
+      header.className =
+        'flex justify-between items-center p-4 cursor-pointer bg-purple-50 hover:bg-purple-100';
+      header.innerHTML = `
+        <span class="font-semibold text-purple-800">${cls.name}</span>
+        <svg class="w-5 h-5 text-purple-600 transition-transform duration-300 transform" 
+             fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/>
+        </svg>
+      `;
 
-          // Subjects under each year
-          year.subjects.forEach((subject) => {
-            const subjBtn = document.createElement("button");
-            subjBtn.className = "subject-btn";
-            subjBtn.textContent = subject.name;
+      // Subjects container
+      const subjectsDiv = document.createElement('div');
+      subjectsDiv.className =
+        'max-h-0 overflow-hidden transition-all duration-500';
 
-            subjBtn.addEventListener("click", () => {
-              openModal(subject.name, `lessons/${year.id.toLowerCase()}/${subject.id}/topics-details.json`);
-            });
+      (cls.subjects || []).forEach(sub => {
+        const subject =
+          typeof sub === 'string' ? { id: slugify(sub), name: sub } : sub;
+        const btn = document.createElement('button');
+        btn.className =
+          'w-full text-left px-6 py-3 border-t border-gray-200 hover:bg-purple-50 text-gray-700 font-medium';
+        btn.textContent = subject.name;
 
-            contentDiv.appendChild(subjBtn);
-          });
-
-          container.appendChild(yearDiv);
-        });
-
-        // Accordion Toggle
-        const buttons = document.querySelectorAll(".accordion-btn");
-        buttons.forEach((btn) => {
-          btn.addEventListener("click", function () {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
-          });
-        });
+        btn.onclick = () => openTopicsModal(yearId, cls.name, subject);
+        subjectsDiv.appendChild(btn);
       });
 
-    // Modal Handler
-    function openModal(subjectName, jsonPath) {
-      const modal = document.getElementById("modal");
-      const modalTitle = document.getElementById("modalTitle");
-      const modalBody = document.getElementById("modalBody");
+      // Accordion toggle
+      header.onclick = () => {
+        const svg = header.querySelector('svg');
+        const expanded = subjectsDiv.classList.contains('max-h-96');
+        subjectsDiv.classList.toggle('max-h-96', !expanded);
+        subjectsDiv.classList.toggle('max-h-0', expanded);
+        svg.classList.toggle('rotate-180', !expanded);
+      };
 
-      modalTitle.textContent = subjectName;
-      modalBody.innerHTML = "<p>Loading topics...</p>";
-      modal.style.display = "block";
+      classDiv.appendChild(header);
+      classDiv.appendChild(subjectsDiv);
+      container.appendChild(classDiv);
+    });
+  } catch (err) {
+    document.getElementById('classesContainer').innerHTML =
+      '<p class="text-red-600">Error loading classes.json</p>';
+  }
+}
 
-      fetch(jsonPath)
-        .then((res) => {
-          if (!res.ok) throw new Error("File not found");
-          return res.json();
-        })
-        .then((topics) => {
-          modalBody.innerHTML = "";
-          if (topics.length === 0) {
-            modalBody.innerHTML = "<p>No topics yet.</p>";
-          } else {
-            topics.forEach((topic) => {
-              const topicLink = document.createElement("a");
-              topicLink.href = `topics-details.html?id=${topic.id}&year=${encodeURIComponent(jsonPath)}`;
-              topicLink.textContent = topic.title;
-              topicLink.className = "topic-link";
-              modalBody.appendChild(topicLink);
-              modalBody.appendChild(document.createElement("br"));
-            });
-          }
-        })
-        .catch(() => {
-          modalBody.innerHTML = "<p style='color:red;'>Error loading topics.</p>";
-        });
+async function openTopicsModal(yearId, yearName, subject) {
+  const modal = document.getElementById('topicsModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const topicsList = document.getElementById('topicsList');
+  modalTitle.textContent = `${yearName} - ${subject.name} Topics`;
+  topicsList.innerHTML = '<p class="text-sm text-gray-500">Loading…</p>';
+  modal.classList.remove('hidden');
+
+  let topics = subject.topics || [];
+  if (!topics.length) {
+    try {
+      const path = `Lessons/${yearId.toLowerCase()}/${subject.id}/topics-details.json`;
+      const res = await fetch(path);
+      const json = await res.json();
+      topics = Array.isArray(json) ? json : json.topics || [];
+    } catch (err) {
+      console.error("Couldn’t load topics for", subject.id, err);
     }
+  }
 
-    // Modal Close
-    document.getElementById("closeModal").onclick = function () {
-      document.getElementById("modal").style.display = "none";
-    };
-  });
+  topicsList.innerHTML = '';
+  if (!topics.length) {
+    // fallback: subject page
+    topicsList.innerHTML = `
+      <a href="topics-details.html?year=${encodeURIComponent(
+        yearId
+      )}&subject=${encodeURIComponent(
+      subject.id
+    )}" class="inline-block mt-2 px-3 py-2 bg-purple-600 text-white rounded">
+        Open ${subject.name} Page
+      </a>`;
+  } else {
+    topics.forEach(t => {
+      const topic =
+        typeof t === 'string' ? { id: slugify(t), title: t } : t;
+      const a = document.createElement('a');
+      a.href = `topics-details.html?year=${encodeURIComponent(
+        yearId
+      )}&subject=${encodeURIComponent(
+        subject.id
+      )}&topic=${encodeURIComponent(topic.id)}`;
+      a.textContent = '📘 ' + topic.title;
+      a.className =
+        'block px-4 py-2 rounded hover:bg-purple-50 text-gray-700 font-medium';
+      topicsList.appendChild(a);
+    });
+  }
+}
+
+document.getElementById('closeModal').onclick = () =>
+  document.getElementById('topicsModal').classList.add('hidden');
+
+document.addEventListener('DOMContentLoaded', loadClasses);
 </script>
--->
-  
+  <!--
   <script>
 function slugify(text) {
   return String(text || '').trim().toLowerCase().replace(/\s+/g, '_').replace(/[^\w\-]+/g, '').replace(/\_+/g, '_');
