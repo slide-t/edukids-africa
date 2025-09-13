@@ -1,151 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>EduKids Africa - Topic Details</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<style>
-  body {
-    background-color: #f3f4f6;
-    font-family: sans-serif;
-  }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EduKids Africa - Topic Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
+      user-select: none; /* prevent text selection */
+    }
 
-  /* Panel */
-  .panel {
-    max-width: 800px;
-    margin: 40px auto;
-    background: #fff;
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-    max-height: 80vh;
-    overflow-y: auto;
-    position: relative;
-  }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background: white;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
 
-  .panel img {
-    max-width: 100%;
-    margin: 15px 0;
-    border-radius: 8px;
-  }
+    .panel-header {
+      background: #7c3aed;
+      color: white;
+      padding: 1rem 1.5rem;
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
 
-  .panel h1 {
-    font-size: 1.8rem;
-    color: #6b21a8;
-    margin-bottom: 12px;
-  }
+    .panel-body {
+      max-height: 70vh;
+      overflow-y: auto;
+      padding: 1.5rem;
+    }
 
-  .panel p {
-    margin-bottom: 12px;
-    line-height: 1.6;
-    color: #374151;
-  }
+    .topic-image {
+      max-width: 100%;
+      border-radius: 0.25rem;
+      margin-bottom: 1rem;
+    }
 
-  .panel ul li {
-    margin-left: 20px;
-    margin-bottom: 8px;
-    list-style-type: disc;
-  }
+    .examples {
+      margin-top: 1rem;
+    }
 
-  /* Scrollbar */
-  .panel::-webkit-scrollbar {
-    width: 8px;
-  }
-  .panel::-webkit-scrollbar-thumb {
-    background-color: #a855f7;
-    border-radius: 4px;
-  }
+    .examples li {
+      margin-bottom: 0.5rem;
+      padding-left: 1.2rem;
+      position: relative;
+    }
 
-  /* Prevent copy/cut/paste */
-  body {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
-  }
+    .examples li::before {
+      content: "✅";
+      position: absolute;
+      left: 0;
+    }
 
-</style>
+    /* Disable copy/paste/right-click */
+    body, .panel-body {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
 </head>
-<body>
+<body oncontextmenu="return false;" oncopy="return false;" oncut="return false;" onpaste="return false;">
 
-<div class="panel" id="topicPanel">
-  <h1 id="topicTitle">Loading...</h1>
-  <div id="topicContent"></div>
-  <ul id="topicExamples"></ul>
-  <img id="topicImage" src="" alt="Topic Image" />
-</div>
+  <div class="container">
+    <div class="panel-header" id="topicTitle">Loading...</div>
+    <div class="panel-body" id="topicContent">
+      <p>Loading content, please wait...</p>
+    </div>
+  </div>
 
-<script>
-  // Helper: Get query param
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
-
-  async function loadTopic() {
-    const topicId = getQueryParam('topic');
-    if (!topicId) {
-      document.getElementById('topicPanel').innerHTML = "<p>Topic not found.</p>";
-      return;
+  <script>
+    function getQueryParam(param) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(param);
     }
 
-    // Loop through Years & Subjects to find topic-details.json
-    // You may replace "Year1" and "maths" dynamically if needed
-    // For simplicity, assuming folder structure: Lessons/YearX/Subject/topics-details.json
-    const years = ["Year1","Year2","Year3","Year4","Year5","Year6","Year7","Year8","Year9","Year10","Year11","Year12"];
-    const subjects = ["maths","english","science"];
+    async function loadTopic() {
+      const topicId = getQueryParam('topic');
+      const year = getQueryParam('year');
+      const subject = getQueryParam('subject');
 
-    let found = false;
-
-    for (let y of years) {
-      for (let s of subjects) {
-        try {
-          const res = await fetch(`Lessons/${y}/${s}/topics-details.json`);
-          if (!res.ok) continue;
-          const topics = await res.json();
-          const topic = topics.find(t => t.id === topicId);
-          if (topic) {
-            document.getElementById('topicTitle').textContent = topic.title;
-            document.getElementById('topicContent').innerHTML = topic.content;
-            
-            const examplesUl = document.getElementById('topicExamples');
-            examplesUl.innerHTML = "";
-            if(topic.examples && topic.examples.length > 0) {
-              topic.examples.forEach(ex => {
-                const li = document.createElement('li');
-                li.textContent = ex;
-                examplesUl.appendChild(li);
-              });
-            }
-
-            const img = document.getElementById('topicImage');
-            img.src = topic.image || "";
-            img.alt = topic.title;
-
-            found = true;
-            break;
-          }
-        } catch (err) {
-          // Skip if file not found
-          continue;
-        }
+      if (!topicId || !year || !subject) {
+        document.getElementById('topicContent').innerHTML = '<p class="text-red-600">Missing topic, year or subject parameter in URL.</p>';
+        return;
       }
-      if (found) break;
+
+      try {
+        const res = await fetch(`Lessons/${year}/${subject}/topics-details.json`);
+        if (!res.ok) throw new Error("Topic JSON not found");
+        const topics = await res.json();
+        const topic = topics.find(t => t.id === topicId);
+
+        if (!topic) {
+          document.getElementById('topicContent').innerHTML = '<p class="text-red-600">Topic not found.</p>';
+          return;
+        }
+
+        document.getElementById('topicTitle').textContent = topic.title;
+
+        let contentHtml = `<div>${topic.content}</div>`;
+
+        if (topic.image) {
+          contentHtml += `<img src="${topic.image}" alt="${topic.title}" class="topic-image">`;
+        }
+
+        if (topic.examples && topic.examples.length > 0) {
+          contentHtml += `<div class="examples"><h3 class="font-semibold mb-2">Examples:</h3><ul>`;
+          topic.examples.forEach(ex => {
+            contentHtml += `<li>${ex}</li>`;
+          });
+          contentHtml += `</ul></div>`;
+        }
+
+        document.getElementById('topicContent').innerHTML = contentHtml;
+
+      } catch (err) {
+        document.getElementById('topicContent').innerHTML = `<p class="text-red-600">Error loading topic: ${err.message}</p>`;
+      }
     }
 
-    if (!found) {
-      document.getElementById('topicPanel').innerHTML = "<p>Topic details not found.</p>";
-    }
-  }
-
-  // Disable right-click and copy/paste
-  document.addEventListener('contextmenu', e => e.preventDefault());
-  document.addEventListener('copy', e => e.preventDefault());
-  document.addEventListener('cut', e => e.preventDefault());
-  document.addEventListener('paste', e => e.preventDefault());
-
-  loadTopic();
-</script>
+    loadTopic();
+  </script>
 </body>
 </html>
