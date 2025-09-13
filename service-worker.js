@@ -10,6 +10,7 @@ const urlsToCache = [
   "/subjects-curric.html",
   "/topic-details.html",
   "/topics.json",
+  "/classes.json",
   "/books.html",
   "/books.json",
   "/subjects.html",
