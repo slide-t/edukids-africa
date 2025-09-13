@@ -133,8 +133,7 @@
       { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
       { "id": "business-studies", "name": "Business Studies", "topics": [] }
     ]
-  }
-],
+  },
   {
     "id": "Year10",
     "name": "Year 10 (SS 1)",
