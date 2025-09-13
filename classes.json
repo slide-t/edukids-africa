@@ -1,188 +1,919 @@
 [
   {
-    "id": "year1",
+    "id": "Year1",
     "name": "Year 1",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "alphabets_and_sounds",
+            "title": "Alphabets and Sounds",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=alphabets_and_sounds"
+          },
+          {
+            "id": "simple_words",
+            "title": "Simple Words",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=simple_words"
+          },
+          {
+            "id": "basic_sentences",
+            "title": "Basic Sentences",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=basic_sentences"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "numbers_1_to_20",
+            "title": "Numbers 1–20",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=numbers_1_to_20"
+          },
+          {
+            "id": "simple_addition",
+            "title": "Simple Addition",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_addition"
+          },
+          {
+            "id": "simple_subtraction",
+            "title": "Simple Subtraction",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_subtraction"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "one_nigerian_language",
+            "title": "One Nigerian Language (Reading & Writing)",
+            "detailsPage": "Lessons/Year1/nigerian-language/topics-details.html?topic=one_nigerian_language"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "living_and_non_living",
+            "title": "Living & Non-Living Things",
+            "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=living_and_non_living"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "body_parts",
+            "title": "Parts of the Body",
+            "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=body_parts"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "drawing_and_coloring",
+            "title": "Drawing & Coloring",
+            "detailsPage": "Lessons/Year1/cultural_and_creative_arts/topics-details.html?topic=drawing_and_coloring"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "stories_in_religion",
+            "title": "Stories in Religion",
+            "detailsPage": "Lessons/Year1/religious_studies/topics-details.html?topic=stories_in_religion"
+          }
+        ]
+      }
     ]
   },
   {
-    "id": "year2",
+    "id": "Year2",
     "name": "Year 2",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "reading_short_stories",
+            "title": "Reading Short Stories",
+            "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=reading_short_stories"
+          },
+          {
+            "id": "spelling_basic",
+            "title": "Basic Spelling",
+            "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=spelling_basic"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "numbers_1_to_100",
+            "title": "Numbers 1-100",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=numbers_1_to_100"
+          },
+          {
+            "id": "addition_and_subtraction_within_100",
+            "title": "Addition & Subtraction Within 100",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=addition_and_subtraction_within_100"
+          },
+          {
+            "id": "simple_multiplication",
+            "title": "Simple Multiplication",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=simple_multiplication"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "oral_language",
+            "title": "Oral Language Skills",
+            "detailsPage": "Lessons/Year2/nigerian-language/topics-details.html?topic=oral_language"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "plants_and_animals",
+            "title": "Plants & Animals",
+            "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=plants_and_animals"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "hygiene",
+            "title": "Keeping Clean & Hygiene",
+            "detailsPage": "Lessons/Year2/physical_and_health_education/topics-details.html?topic=hygiene"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "songs_and_rhymes",
+            "title": "Songs & Rhymes",
+            "detailsPage": "Lessons/Year2/cultural_and_creative_arts/topics-details.html?topic=songs_and_rhymes"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "religious_stories_and_values",
+            "title": "Stories & Values",
+            "detailsPage": "Lessons/Year2/religious_studies/topics-details.html?topic=religious_stories_and_values"
+          }
+        ]
+      }
     ]
   },
   {
-    "id": "year3",
+    "id": "Year3",
     "name": "Year 3",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "comprehension_passages",
+            "title": "Comprehension Passages",
+            "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=comprehension_passages"
+          },
+          {
+            "id": "letter_writing",
+            "title": "Letter Writing",
+            "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=letter_writing"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "multiplication_tables_1_to_10",
+            "title": "Multiplication Tables 1-10",
+            "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=multiplication_tables_1_to_10"
+          },
+          {
+            "id": "fractions_half_quarter",
+            "title": "Fractions (½, ¼)",
+            "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=fractions_half_quarter"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "storytelling",
+            "title": "Storytelling & Listening Skills",
+            "detailsPage": "Lessons/Year3/nigerian-language/topics-details.html?topic=storytelling"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "weather_and_seasons",
+            "title": "Weather & Seasons",
+            "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=weather_and_seasons"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "movement_and_games",
+            "title": "Movement & Games",
+            "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=movement_and_games"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "folk_songs",
+            "title": "Folk Songs & Rhymes",
+            "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=folk_songs"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "moral_values",
+            "title": "Moral Values",
+            "detailsPage": "Lessons/Year3/religious_studies/topics-details.html?topic=moral_values"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year4",
     "name": "Year 4",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "poems_and_rhymes",
+            "title": "Poems & Rhymes",
+            "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=poems_and_rhymes"
+          },
+          {
+            "id": "paragraph_writing",
+            "title": "Paragraph Writing",
+            "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=paragraph_writing"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "place_value_and_rounding",
+            "title": "Place Value & Rounding",
+            "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=place_value_and_rounding"
+          },
+          {
+            "id": "operation_with_larger_numbers",
+            "title": "Addition & Subtraction of Larger Numbers",
+            "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=addition_subtraction_larger_numbers"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "states_of_matter",
+            "title": "States of Matter",
+            "detailsPage": "Lessons/Year4/basic-science/topics-details.html?topic=states_of_matter"
+          }
+        ]
+      },
+      {
+        "id": "digital_literacy",
+        "name": "Digital Literacy",
+        "topics": [
+          {
+            "id": "introduction_to_ict",
+            "title": "Introduction to ICT",
+            "detailsPage": "Lessons/Year4/digital_literacy/topics-details.html?topic=introduction_to_ict"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "stories_and_prayers",
+            "title": "Stories & Prayers",
+            "detailsPage": "Lessons/Year4/religious_studies/topics-details.html?topic=stories_and_prayers"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year5",
     "name": "Year 5",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "dialogue_writing",
+            "title": "Dialogue Writing",
+            "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=dialogue_writing"
+          },
+          {
+            "id": "comprehension_longer_passage",
+            "title": "Comprehension: Longer Passages",
+            "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=comprehension_longer_passage"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "fractions_and_decimals",
+            "title": "Fractions & Decimals",
+            "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=fractions_and_decimals"
+          },
+          {
+            "id": "ratio_and_proportion",
+            "title": "Ratio & Proportion",
+            "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=ratio_and_proportion"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "environment_pollution",
+            "title": "Environmental Pollution",
+            "detailsPage": "Lessons/Year5/basic-science/topics-details.html?topic=environment_pollution"
+          }
+        ]
+      },
+      {
+        "id": "digital_literacy",
+        "name": "Digital Literacy",
+        "topics": [
+          {
+            "id": "using_computers",
+            "title": "Using Computers",
+            "detailsPage": "Lessons/Year5/digital_literacy/topics-details.html?topic=using_computers"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "religious_dialogue",
+            "title": "Religious Dialogue & Respect",
+            "detailsPage": "Lessons/Year5/religious_studies/topics-details.html?topic=religious_dialogue"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year6",
     "name": "Year 6",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
-      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
-      { "id": "spellings", "name": "Spellings", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "essay_writing",
+            "title": "Essay Writing",
+            "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=essay_writing"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "integers_and_operations",
+            "title": "Integers & Operations",
+            "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=integers_and_operations"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "energy_sources",
+            "title": "Energy Sources (Renewable & Non-renewable)",
+            "detailsPage": "Lessons/Year6/basic-science/topics-details.html?topic=energy_sources"
+          }
+        ]
+      },
+      {
+        "id": "digital_literacy",
+        "name": "Digital Literacy",
+        "topics": [
+          {
+            "id": "internet_safety",
+            "title": "Internet Safety",
+            "detailsPage": "Lessons/Year6/digital_literacy/topics-details.html?topic=internet_safety"
+          }
+        ]
+      },
+      {
+        "id": "religious_studies",
+        "name": "Religious Studies",
+        "topics": [
+          {
+            "id": "community_service",
+            "title": "Community Service",
+            "detailsPage": "Lessons/Year6/religious_studies/topics-details.html?topic=community_service"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year7",
     "name": "Year 7 (JSS 1)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic Education", "topics": [] },
-      { "id": "computer-studies", "name": "Computer Studies/ICT", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural and Creative Arts", "topics": [] },
-      { "id": "business-studies", "name": "Business Studies", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "grammar_clauses",
+            "title": "Grammar: Clauses",
+            "detailsPage": "Lessons/Year7/english-language/topics-details.html?topic=grammar_clauses"
+          },
+          {
+            "id": "comprehension_jss1",
+            "title": "Comprehension JSS1",
+            "detailsPage": "Lessons/Year7/english-language/topics-details.html?topic=comprehension_jss1"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "fractions_and_decimals_jss1",
+            "title": "Fractions & Decimals (JSS1)",
+            "detailsPage": "Lessons/Year7/mathematics/topics-details.html?topic=fractions_and_decimals_jss1"
+          },
+          {
+            "id": "basic_algebra",
+            "title": "Basic Algebra",
+            "detailsPage": "Lessons/Year7/mathematics/topics-details.html?topic=basic_algebra"
+          }
+        ]
+      },
+      {
+        "id": "integrated-science",
+        "name": "Integrated Science",
+        "topics": [
+          {
+            "id": "cells_and_tissues",
+            "title": "Cells & Tissues",
+            "detailsPage": "Lessons/Year7/integrated-science/topics-details.html?topic=cells_and_tissues"
+          }
+        ]
+      },
+      {
+        "id": "digital-technologies",
+        "name": "Digital Technologies",
+        "topics": [
+          {
+            "id": "introduction_to_computers",
+            "title": "Introduction to Computers",
+            "detailsPage": "Lessons/Year7/digital-technologies/topics-details.html?topic=introduction_to_computers"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "mother_tongue_reading",
+            "title": "Mother Tongue Reading",
+            "detailsPage": "Lessons/Year7/nigerian-language/topics-details.html?topic=mother_tongue_reading"
+          }
+        ]
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "topics": [
+          {
+            "id": "history_nigeria",
+            "title": "History of Nigeria",
+            "detailsPage": "Lessons/Year7/social-studies/topics-details.html?topic=history_nigeria"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year8",
     "name": "Year 8 (JSS 2)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic Education", "topics": [] },
-      { "id": "computer-studies", "name": "Computer Studies/ICT", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural and Creative Arts", "topics": [] },
-      { "id": "business-studies", "name": "Business Studies", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "advanced_comprehension_jss2",
+            "title": "Advanced Comprehension JSS2",
+            "detailsPage": "Lessons/Year8/english-language/topics-details.html?topic=advanced_comprehension_jss2"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "geometry_basics",
+            "title": "Geometry Basics",
+            "detailsPage": "Lessons/Year8/mathematics/topics-details.html?topic=geometry_basics"
+          }
+        ]
+      },
+      {
+        "id": "integrated-science",
+        "name": "Integrated Science",
+        "topics": [
+          {
+            "id": "matter_and_its_properties",
+            "title": "Matter & Its Properties",
+            "detailsPage": "Lessons/Year8/integrated-science/topics-details.html?topic=matter_and_its_properties"
+          }
+        ]
+      },
+      {
+        "id": "digital-technologies",
+        "name": "Digital Technologies",
+        "topics": [
+          {
+            "id": "internet_research",
+            "title": "Internet Research & Tools",
+            "detailsPage": "Lessons/Year8/digital-technologies/topics-details.html?topic=internet_research"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "language_composition",
+            "title": "Language Composition",
+            "detailsPage": "Lessons/Year8/nigerian-language/topics-details.html?topic=language_composition"
+          }
+        ]
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "topics": [
+          {
+            "id": "geography_basics",
+            "title": "Geography Basics",
+            "detailsPage": "Lessons/Year8/social-studies/topics-details.html?topic=geography_basics"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year9",
     "name": "Year 9 (JSS 3)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "basic-science", "name": "Basic Science", "topics": [] },
-      { "id": "basic-technology", "name": "Basic Technology", "topics": [] },
-      { "id": "social-studies", "name": "Social Studies", "topics": [] },
-      { "id": "civic-education", "name": "Civic Education", "topics": [] },
-      { "id": "computer-studies", "name": "Computer Studies/ICT", "topics": [] },
-      { "id": "cultural-and-creative-arts", "name": "Cultural and Creative Arts", "topics": [] },
-      { "id": "business-studies", "name": "Business Studies", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "essay_writing_jss3",
+            "title": "Essay Writing (JSS3)",
+            "detailsPage": "Lessons/Year9/english-language/topics-details.html?topic=essay_writing_jss3"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "statistics_graphs",
+            "title": "Statistics & Graphs",
+            "detailsPage": "Lessons/Year9/mathematics/topics-details.html?topic=statistics_graphs"
+          }
+        ]
+      },
+      {
+        "id": "integrated-science",
+        "name": "Integrated Science",
+        "topics": [
+          {
+            "id": "energy_and_forces",
+            "title": "Energy & Forces",
+            "detailsPage": "Lessons/Year9/integrated-science/topics-details.html?topic=energy_and_forces"
+          }
+        ]
+      },
+      {
+        "id": "digital-technologies",
+        "name": "Digital Technologies",
+        "topics": [
+          {
+            "id": "coding_basics",
+            "title": "Coding Basics",
+            "detailsPage": "Lessons/Year9/digital-technologies/topics-details.html?topic=coding_basics"
+          }
+        ]
+      },
+      {
+        "id": "nigerian-language",
+        "name": "Nigerian Language",
+        "topics": [
+          {
+            "id": "advanced_reading",
+            "title": "Advanced Reading",
+            "detailsPage": "Lessons/Year9/nigerian-language/topics-details.html?topic=advanced_reading"
+          }
+        ]
+      },
+      {
+        "id": "social-studies",
+        "name": "Social Studies",
+        "topics": [
+          {
+            "id": "civic_responsibilities",
+            "title": "Civic Responsibilities",
+            "detailsPage": "Lessons/Year9/social-studies/topics-details.html?topic=civic_responsibilities"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year10",
     "name": "Year 10 (SS 1)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "biology", "name": "Biology", "topics": [] },
-      { "id": "chemistry", "name": "Chemistry", "topics": [] },
-      { "id": "physics", "name": "Physics", "topics": [] },
-      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
-      { "id": "economics", "name": "Economics", "topics": [] },
-      { "id": "government", "name": "Government", "topics": [] },
-      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
-      { "id": "commerce", "name": "Commerce", "topics": [] },
-      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "literature_analysis",
+            "title": "Literature Analysis",
+            "detailsPage": "Lessons/Year10/english-language/topics-details.html?topic=literature_analysis"
+          }
+        ]
+      },
+      {
+        "id": "general_mathematics",
+        "name": "General Mathematics",
+        "topics": [
+          {
+            "id": "trigonometry_basics",
+            "title": "Trigonometry Basics",
+            "detailsPage": "Lessons/Year10/general_mathematics/topics-details.html?topic=trigonometry_basics"
+          }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "topics": [
+          {
+            "id": "measurement_and_units",
+            "title": "Measurement & Units",
+            "detailsPage": "Lessons/Year10/physics/topics-details.html?topic=measurement_and_units"
+          }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "topics": [
+          {
+            "id": "matter_and_reactions",
+            "title": "Matter & Reactions",
+            "detailsPage": "Lessons/Year10/chemistry/topics-details.html?topic=matter_and_reactions"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "cell_structure",
+            "title": "Cell Structure",
+            "detailsPage": "Lessons/Year10/biology/topics-details.html?topic=cell_structure"
+          }
+        ]
+      },
+      {
+        "id": "digital-technologies",
+        "name": "Digital Technologies",
+        "topics": [
+          {
+            "id": "computer_programming_basics",
+            "title": "Computer Programming Basics",
+            "detailsPage": "Lessons/Year10/digital-technologies/topics-details.html?topic=computer_programming_basics"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year11",
     "name": "Year 11 (SS 2)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "biology", "name": "Biology", "topics": [] },
-      { "id": "chemistry", "name": "Chemistry", "topics": [] },
-      { "id": "physics", "name": "Physics", "topics": [] },
-      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
-      { "id": "economics", "name": "Economics", "topics": [] },
-      { "id": "government", "name": "Government", "topics": [] },
-      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
-      { "id": "commerce", "name": "Commerce", "topics": [] },
-      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "advanced_grammar",
+            "title": "Advanced Grammar",
+            "detailsPage": "Lessons/Year11/english-language/topics-details.html?topic=advanced_grammar"
+          }
+        ]
+      },
+      {
+        "id": "general_mathematics",
+        "name": "General Mathematics",
+        "topics": [
+          {
+            "id": "algebra_polynomials",
+            "title": "Algebra: Polynomials",
+            "detailsPage": "Lessons/Year11/general_mathematics/topics-details.html?topic=algebra_polynomials"
+          }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "topics": [
+          {
+            "id": "electricity_and_magnetism",
+            "title": "Electricity & Magnetism",
+            "detailsPage": "Lessons/Year11/physics/topics-details.html?topic=electricity_and_magnetism"
+          }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "topics": [
+          {
+            "id": "organic_chemistry_basics",
+            "title": "Organic Chemistry Basics",
+            "detailsPage": "Lessons/Year11/chemistry/topics-details.html?topic=organic_chemistry_basics"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "genetics_introduction",
+            "title": "Genetics Introduction",
+            "detailsPage": "Lessons/Year11/biology/topics-details.html?topic=genetics_introduction"
+          }
+        ]
+      }
     ]
   },
   {
     "id": "Year12",
     "name": "Year 12 (SS 3)",
     "subjects": [
-      { "id": "mathematics", "name": "Mathematics", "topics": [] },
-      { "id": "english-language", "name": "English-Language", "topics": [] },
-      { "id": "biology", "name": "Biology", "topics": [] },
-      { "id": "chemistry", "name": "Chemistry", "topics": [] },
-      { "id": "physics", "name": "Physics", "topics": [] },
-      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
-      { "id": "economics", "name": "Economics", "topics": [] },
-      { "id": "government", "name": "Government", "topics": [] },
-      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
-      { "id": "commerce", "name": "Commerce", "topics": [] },
-      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "world_literature",
+            "title": "World Literature",
+            "detailsPage": "Lessons/Year12/english-language/topics-details.html?topic=world_literature"
+          }
+        ]
+      },
+      {
+        "id": "general_mathematics",
+        "name": "General Mathematics",
+        "topics": [
+          {
+            "id": "probability_and_statistics",
+            "title": "Probability & Statistics",
+            "detailsPage": "Lessons/Year12/general_mathematics/topics-details.html?topic=probability_and_statistics"
+          }
+        ]
+      },
+      {
+        "id": "physics",
+        "name": "Physics",
+        "topics": [
+          {
+            "id": "quantum_phenomena",
+            "title": "Quantum Phenomena",
+            "detailsPage": "Lessons/Year12/physics/topics-details.html?topic=quantum_phenomena"
+          }
+        ]
+      },
+      {
+        "id": "chemistry",
+        "name": "Chemistry",
+        "topics": [
+          {
+            "id": "stoichiometry",
+            "title": "Stoichiometry",
+            "detailsPage": "Lessons/Year12/chemistry/topics-details.html?topic=stoichiometry"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "evolution_and_heritance",
+            "title": "Evolution & Heritance",
+            "detailsPage": "Lessons/Year12/biology/topics-details.html?topic=evolution_and_heritance"
+          }
+        ]
+      }
     ]
   }
 ]
