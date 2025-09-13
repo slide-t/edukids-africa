@@ -8,7 +8,7 @@ const urlsToCache = [
   "/footer.html",
   "/about.html",
   "/subjects-curric.html",
-  "/topic-details.html",
+  "/topics-details.html",
   "/topics.json",
   "/classes.json",
   "/books.html",
