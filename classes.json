@@ -1,6 +1,6 @@
 [
   {
-    "id": "Year1",
+    "id": "year1",
     "name": "Year 1",
     "subjects": [
       { "id": "mathematics", "name": "Mathematics", "topics": [] },
@@ -15,7 +15,7 @@
     ]
   },
   {
-    "id": "Year2",
+    "id": "year2",
     "name": "Year 2",
     "subjects": [
       { "id": "mathematics", "name": "Mathematics", "topics": [] },
@@ -30,7 +30,7 @@
     ]
   },
   {
-    "id": "Year3",
+    "id": "year3",
     "name": "Year 3",
     "subjects": [
       { "id": "mathematics", "name": "Mathematics", "topics": [] },
