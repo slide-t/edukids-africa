@@ -10,7 +10,7 @@
 
   <div class="max-w-4xl mx-auto py-10 px-4">
     <h1 class="text-3xl font-bold text-center text-purple-800 mb-8">
-      Curriculum - Primary & Secondary (Year System)
+      Curriculum - Year System
     </h1>
 
     <!-- Classes container -->
@@ -49,32 +49,39 @@
             </svg>
           `;
 
-          // Collapsible section
-          const contentDiv = document.createElement("div");
-          contentDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
+          // Collapsible container for subjects
+          const subjectsDiv = document.createElement("div");
+          subjectsDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
 
-          // Show "View Topics" button
-          const btn = document.createElement("button");
-          btn.textContent = "View Topics";
-          btn.className = "m-4 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700";
-          btn.onclick = () => openModal(cls);
-          contentDiv.appendChild(btn);
+          if (cls.subjects) {
+            cls.subjects.forEach(sub => {
+              const subjectItem = document.createElement("div");
+              subjectItem.className = "px-6 py-3 border-t border-gray-200 hover:bg-purple-50 cursor-pointer text-gray-700 font-medium";
+              subjectItem.textContent = sub.name;
+
+              subjectItem.onclick = () => {
+                openModal(cls.name, sub);
+              };
+
+              subjectsDiv.appendChild(subjectItem);
+            });
+          }
 
           // Toggle accordion
           header.addEventListener("click", () => {
             const svg = header.querySelector("svg");
-            const expanded = contentDiv.classList.contains("max-h-40");
+            const expanded = subjectsDiv.classList.contains("max-h-96");
             if (expanded) {
-              contentDiv.classList.replace("max-h-40", "max-h-0");
+              subjectsDiv.classList.replace("max-h-96", "max-h-0");
               svg.classList.remove("rotate-180");
             } else {
-              contentDiv.classList.replace("max-h-0", "max-h-40");
+              subjectsDiv.classList.replace("max-h-0", "max-h-96");
               svg.classList.add("rotate-180");
             }
           });
 
           classDiv.appendChild(header);
-          classDiv.appendChild(contentDiv);
+          classDiv.appendChild(subjectsDiv);
           container.appendChild(classDiv);
         });
       } catch (err) {
@@ -82,12 +89,12 @@
       }
     }
 
-    function openModal(cls) {
-      document.getElementById("modalTitle").textContent = cls.name + " - Topics";
+    function openModal(yearName, subject) {
+      document.getElementById("modalTitle").textContent = `${yearName} - ${subject.name} Topics`;
       const topicsList = document.getElementById("topicsList");
       topicsList.innerHTML = "";
 
-      cls.topics.forEach(topic => {
+      subject.topics.forEach(topic => {
         const link = document.createElement("a");
         link.href = topic.detailsPage;
         link.textContent = "📘 " + topic.title;
