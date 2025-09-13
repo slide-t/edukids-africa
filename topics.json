@@ -1,0 +1,118 @@
+{
+  "Primary 1": {
+    "Mathematics": [
+      "Numbers 1–20",
+      "Simple Addition",
+      "Simple Subtraction",
+      "Shapes and Colors",
+      "Counting in Twos",
+      "Number Bonds to 10",
+      "Comparing Numbers",
+      "Position and Direction",
+      "Introduction to Time",
+      "Word Problems"
+    ],
+    "English": [
+      "Alphabets and Sounds",
+      "Simple Words",
+      "Basic Sentences",
+      "Reading Short Stories",
+      "Rhyming Words",
+      "Nouns and Verbs",
+      "Picture Reading",
+      "Opposites",
+      "Listening Skills",
+      "Simple Dictation"
+    ],
+    "Basic Science": [
+      "Living and Non-Living Things",
+      "Parts of the Body",
+      "Our Environment",
+      "Plants Around Us",
+      "Animals Around Us",
+      "Air and Water",
+      "The Sun and Moon",
+      "Weather",
+      "Food We Eat",
+      "Keeping Clean"
+    ]
+  },
+
+  "Primary 2": {
+    "Mathematics": [
+      "Numbers 1–100",
+      "Place Value",
+      "Addition and Subtraction within 100",
+      "Simple Multiplication",
+      "Simple Division",
+      "Even and Odd Numbers",
+      "Fractions (1/2, 1/4)",
+      "Measurement of Length",
+      "Telling Time (Hours)",
+      "Money (Coins and Notes)"
+    ],
+    "English": [
+      "Phonics Practice",
+      "Sentence Building",
+      "Paragraph Writing",
+      "Adjectives",
+      "Pronouns",
+      "Storytelling",
+      "Comprehension (Short Passages)",
+      "Common Spelling Words",
+      "Punctuation Marks",
+      "Dialogue Reading"
+    ],
+    "Basic Science": [
+      "Parts of a Plant",
+      "Uses of Water",
+      "Sources of Energy",
+      "Simple Machines",
+      "Our Five Senses",
+      "Weather Changes",
+      "Rocks and Soil",
+      "Safety in the Home",
+      "Healthy Living",
+      "Recycling"
+    ]
+  },
+
+  "Primary 3": {
+    "Mathematics": [
+      "Numbers up to 1000",
+      "Place Value and Rounding",
+      "Addition with Carrying",
+      "Subtraction with Borrowing",
+      "Multiplication Table (1–10)",
+      "Division as Sharing",
+      "Simple Word Problems",
+      "Fractions (1/2, 1/3, 1/4)",
+      "Length and Mass",
+      "Pictographs"
+    ],
+    "English": [
+      "Parts of Speech",
+      "Simple Composition",
+      "Comprehension Passages",
+      "Synonyms and Antonyms",
+      "Letter Writing",
+      "Spelling Rules",
+      "Story Sequencing",
+      "Poems and Rhymes",
+      "Listening Comprehension",
+      "Speech Practice"
+    ],
+    "Basic Science": [
+      "Human Body Systems",
+      "Plant Life Cycle",
+      "Animal Habitats",
+      "Day and Night",
+      "Energy (Light and Sound)",
+      "The Earth and Sky",
+      "Simple First Aid",
+      "Pollution",
+      "Weather Instruments",
+      "Safety Rules in School"
+    ]
+  }
+}
