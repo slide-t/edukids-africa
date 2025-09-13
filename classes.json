@@ -159,6 +159,76 @@
       }
     ]
   },
+  {
+    "id": "Year3",
+    "name": "Year 3",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
+      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+      { "id": "spellings", "name": "Spellings", "topics": [] }
+    ]
+  }
+]
+  },
+  {
+    "id": "Year4",
+    "name": "Year 4",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
+      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+      { "id": "spellings", "name": "Spellings", "topics": [] }
+    ]
+  }
+]
+  },
+  {
+    "id": "Year5",
+    "name": "Year 5",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
+      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+      { "id": "spellings", "name": "Spellings", "topics": [] }
+    ]
+  }
+]
+  },
+  {
+    "id": "Year6",
+    "name": "Year 6",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "basic-science", "name": "Basic-Science", "topics": [] },
+      { "id": "basic-technology", "name": "Basic-Technology", "topics": [] },
+      { "id": "social-studies", "name": "Social-Studies", "topics": [] },
+      { "id": "civic-education", "name": "Civic-Education", "topics": [] },
+      { "id": "pre-vocational-studies", "name": "Pre-Vocational-Studies", "topics": [] },
+      { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
+      { "id": "spellings", "name": "Spellings", "topics": [] }
+    ]
+  }
+]
+  },
+
+
   
   {
     "id": "year7",
@@ -172,6 +242,7 @@
           { "id": "algebra", "title": "Basic Algebra", "detailsPage": "topics-details.html?topic=maths_algebra" },
           { "id": "probability", "title": "Probability Basics", "detailsPage": "topics-details.html?topic=maths_probability" }
         ]
+      
       },
       {
         "id": "english",
