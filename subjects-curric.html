@@ -98,7 +98,220 @@
       <div id="topicsList" class="space-y-2"></div>
     </div>
   </div>
+<script>
+/* Robust subjects-curric loader + modal topic fetcher */
 
+// small slug helper
+function slugify(text) {
+  return String(text || '')
+    .trim()
+    .toLowerCase()
+    .replace(/\s+/g, '_')
+    .replace(/[^\w\-]+/g, '')
+    .replace(/\_+/g, '_');
+}
+
+async function loadClasses() {
+  try {
+    const res = await fetch('classes.json');
+    if (!res.ok) throw new Error('Could not fetch classes.json');
+    const data = await res.json();
+
+    // support multiple shapes: array, { years: [...] }, { classes: [...] }
+    let classes = [];
+    if (Array.isArray(data)) classes = data;
+    else if (Array.isArray(data.years)) classes = data.years;
+    else if (Array.isArray(data.classes)) classes = data.classes;
+    else {
+      console.error('classes.json has unexpected format. Expected an array or an object with "years" or "classes".');
+      return;
+    }
+
+    const container = document.getElementById('classesContainer');
+    container.innerHTML = '';
+
+    classes.forEach(clsRaw => {
+      // normalize class object
+      const cls = {
+        id: clsRaw.id || slugify(clsRaw.name || clsRaw.id || 'year'),
+        name: clsRaw.name || clsRaw.id || 'Unnamed Year',
+        subjects: Array.isArray(clsRaw.subjects) ? clsRaw.subjects : []
+      };
+
+      // wrapper card
+      const classDiv = document.createElement('div');
+      classDiv.className = 'bg-white rounded-lg shadow-md';
+
+      // header with chevron
+      const header = document.createElement('div');
+      header.className = 'flex justify-between items-center p-4 cursor-pointer bg-purple-50 hover:bg-purple-100';
+      header.innerHTML = `
+        <span class="font-semibold text-purple-800">${cls.name}</span>
+        <svg class="w-5 h-5 text-purple-600 transition-transform duration-300 transform"
+             fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+        </svg>
+      `;
+
+      // collapse container
+      const subjectsDiv = document.createElement('div');
+      subjectsDiv.className = 'max-h-0 overflow-hidden transition-all duration-500';
+
+      // iterate subjects (allow strings or objects)
+      cls.subjects.forEach(subRaw => {
+        // normalize subject
+        let sub;
+        if (typeof subRaw === 'string') {
+          sub = { id: slugify(subRaw), name: subRaw, topics: null };
+        } else {
+          sub = {
+            id: subRaw.id || slugify(subRaw.name || ''),
+            name: subRaw.name || subRaw.id || 'Unnamed Subject',
+            topics: Array.isArray(subRaw.topics) ? subRaw.topics : (subRaw.topicsList || null)
+          };
+        }
+
+        const subjectItem = document.createElement('div');
+        subjectItem.className = 'px-6 py-3 border-t border-gray-200 hover:bg-purple-50 cursor-pointer text-gray-700 font-medium';
+        subjectItem.textContent = sub.name;
+
+        // open modal showing topics (async)
+        subjectItem.addEventListener('click', () => openTopicsModal(cls.id, cls.name, sub));
+
+        subjectsDiv.appendChild(subjectItem);
+      });
+
+      // accordion toggle
+      header.addEventListener('click', () => {
+        const svg = header.querySelector('svg');
+        const expanded = subjectsDiv.classList.contains('max-h-96');
+        if (expanded) {
+          subjectsDiv.classList.replace('max-h-96', 'max-h-0');
+          svg.classList.remove('rotate-180');
+        } else {
+          subjectsDiv.classList.replace('max-h-0', 'max-h-96');
+          svg.classList.add('rotate-180');
+        }
+      });
+
+      classDiv.appendChild(header);
+      classDiv.appendChild(subjectsDiv);
+      container.appendChild(classDiv);
+    });
+
+  } catch (err) {
+    console.error('Error loading classes.json:', err);
+    const container = document.getElementById('classesContainer');
+    if (container) container.innerHTML = '<p class="text-red-600">Failed to load classes.json — check the console.</p>';
+  }
+}
+
+// Try to load topics for the subject. If subject.topics exists use it,
+// otherwise attempt to fetch Lessons/{yearId}/{subjectId}/topics-details.json
+async function openTopicsModal(yearId, yearName, subject) {
+  const modal = document.getElementById('topicsModal');
+  const modalTitle = document.getElementById('modalTitle');
+  const topicsList = document.getElementById('topicsList');
+
+  modalTitle.textContent = `${yearName} - ${subject.name} Topics`;
+  topicsList.innerHTML = '<p class="text-sm text-gray-500">Loading topics…</p>';
+  modal.classList.remove('hidden');
+
+  let topics = Array.isArray(subject.topics) && subject.topics.length ? subject.topics : null;
+
+  if (!topics) {
+    // attempt to fetch topics-details.json from likely paths
+    const tries = [
+      `Lessons/${yearId}/${subject.id}/topics-details.json`,
+      `Lessons/${yearId}/${subject.name}/topics-details.json`,
+      `Lessons/${yearId}/${slugify(subject.name)}/topics-details.json`,
+      // fallback to a top-level topics-details.json
+      `Lessons/${yearId}/${subject.id}/topics.json`,
+      `Lessons/${yearId}/${slugify(subject.name)}/topics.json`
+    ];
+
+    for (let path of tries) {
+      try {
+        const r = await fetch(path);
+        if (!r.ok) continue;
+        const json = await r.json();
+        // json can be an array (topic objects) or an object with a topics array
+        if (Array.isArray(json) && json.length) {
+          // convert to uniform topic objects (id + title + optional detailsPage)
+          topics = json.map(t => {
+            if (typeof t === 'string') return { id: slugify(t), title: t };
+            return { id: t.id || slugify(t.title || ''), title: t.title || t.name || '', detailsPage: t.detailsPage || null };
+          });
+          break;
+        } else if (json && Array.isArray(json.topics) && json.topics.length) {
+          topics = json.topics.map(t => {
+            if (typeof t === 'string') return { id: slugify(t), title: t };
+            return { id: t.id || slugify(t.title || ''), title: t.title || t.name || '', detailsPage: t.detailsPage || null };
+          });
+          break;
+        }
+      } catch (e) {
+        // ignore and try next path
+        continue;
+      }
+    }
+  } else {
+    // if topics were provided in classes.json they might be strings => normalize
+    topics = topics.map(t => {
+      if (typeof t === 'string') return { id: slugify(t), title: t };
+      return { id: t.id || slugify(t.title || t.name || ''), title: t.title || t.name || '', detailsPage: t.detailsPage || null };
+    });
+  }
+
+  // render topics in modal
+  topicsList.innerHTML = '';
+  if (!topics || topics.length === 0) {
+    topicsList.innerHTML = '<p class="text-sm text-gray-500">No topics found for this subject.</p>';
+    // also show fallback link to topics-details page (subject-level)
+    const fallback = document.createElement('a');
+    fallback.href = `topics-details.html?year=${encodeURIComponent(yearId)}&subject=${encodeURIComponent(subject.id)}`;
+    fallback.textContent = 'Open subject page';
+    fallback.className = 'inline-block mt-3 px-3 py-2 bg-purple-600 text-white rounded';
+    topicsList.appendChild(fallback);
+    return;
+  }
+
+  topics.forEach(topic => {
+    const a = document.createElement('a');
+    const topicId = topic.id || slugify(topic.title || topic);
+    // if topic has detailsPage already, use it; else build standard link
+    const href = topic.detailsPage
+      ? topic.detailsPage
+      : `topics-details.html?year=${encodeURIComponent(yearId)}&subject=${encodeURIComponent(subject.id)}&topic=${encodeURIComponent(topicId)}`;
+
+    a.setAttribute('href', href);
+    a.textContent = '📘 ' + (topic.title || topicId);
+    a.className = 'block px-4 py-2 rounded hover:bg-purple-50 text-gray-700 font-medium';
+    topicsList.appendChild(a);
+  });
+
+  // allow clicking outside modal content to close
+  // (modal element was the overlay with id "topicsModal")
+  modal.onclick = (e) => {
+    // if click is on overlay (not inside the inner content)
+    const inner = modal.querySelector('.bg-white');
+    if (!inner.contains(e.target)) {
+      modal.classList.add('hidden');
+      modal.onclick = null;
+    }
+  };
+}
+
+// close button
+const closeBtn = document.getElementById('closeModal');
+if (closeBtn) closeBtn.onclick = () => {
+  document.getElementById('topicsModal').classList.add('hidden');
+};
+
+document.addEventListener('DOMContentLoaded', loadClasses);
+</script>
+
+  <!--
 <script>
 async function loadClasses() {
   try {
@@ -191,7 +404,7 @@ document.getElementById("closeModal").onclick = () => {
 
 loadClasses();
 </script>
-  
+  -->
 
 <script>
     // Mobile menu toggle
