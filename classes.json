@@ -133,7 +133,8 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "business-studies", "name": "Business-Studies", "topics": [] }
     ]
-  },
+  }
+],
   {
     "id": "Year10",
     "name": "Year 10 (SS 1)",
