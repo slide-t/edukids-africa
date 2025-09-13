@@ -1,81 +1,151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic Details - EduKids Africa</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EduKids Africa - Topic Details</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  body {
+    background-color: #f3f4f6;
+    font-family: sans-serif;
+  }
+
+  /* Panel */
+  .panel {
+    max-width: 800px;
+    margin: 40px auto;
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+  }
+
+  .panel img {
+    max-width: 100%;
+    margin: 15px 0;
+    border-radius: 8px;
+  }
+
+  .panel h1 {
+    font-size: 1.8rem;
+    color: #6b21a8;
+    margin-bottom: 12px;
+  }
+
+  .panel p {
+    margin-bottom: 12px;
+    line-height: 1.6;
+    color: #374151;
+  }
+
+  .panel ul li {
+    margin-left: 20px;
+    margin-bottom: 8px;
+    list-style-type: disc;
+  }
+
+  /* Scrollbar */
+  .panel::-webkit-scrollbar {
+    width: 8px;
+  }
+  .panel::-webkit-scrollbar-thumb {
+    background-color: #a855f7;
+    border-radius: 4px;
+  }
+
+  /* Prevent copy/cut/paste */
+  body {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+</style>
 </head>
-<body class="bg-gray-50 font-sans">
+<body>
 
-  <!-- Navbar -->
-  <header class="bg-purple-800 text-white p-4 shadow">
-    <h1 class="text-lg font-bold">EduKids Africa</h1>
-  </header>
+<div class="panel" id="topicPanel">
+  <h1 id="topicTitle">Loading...</h1>
+  <div id="topicContent"></div>
+  <ul id="topicExamples"></ul>
+  <img id="topicImage" src="" alt="Topic Image" />
+</div>
 
-  <!-- Main Content -->
-  <main class="max-w-3xl mx-auto p-6">
-    <!-- Dynamic Topic Container -->
-    <div id="topicContainer" class="bg-white rounded-xl shadow-md p-6">
-      <p class="text-gray-500">Loading topic...</p>
-    </div>
-  </main>
+<script>
+  // Helper: Get query param
+  function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+  }
 
-  <!-- Script -->
-  <script>
-    async function loadTopicDetails() {
-      try {
-        // Get topic id from URL
-        const params = new URLSearchParams(window.location.search);
-        const topicId = params.get("topic");
-        
-        if (!topicId) {
-          document.getElementById("topicContainer").innerHTML =
-            "<p class='text-red-500'>No topic selected.</p>";
-          return;
-        }
-
-        // Fetch topics-details.json
-        const res = await fetch("topics-details.json");
-        const topics = await res.json();
-
-        // Find the topic by id
-        const topic = topics.find(t => t.id === topicId);
-
-        if (!topic) {
-          document.getElementById("topicContainer").innerHTML =
-            "<p class='text-red-500'>Topic not found.</p>";
-          return;
-        }
-
-        // Render the topic details
-        document.getElementById("topicContainer").innerHTML = `
-          <h2 class="text-2xl font-bold text-purple-700 mb-4">${topic.title}</h2>
-          <div class="prose max-w-none mb-6">${topic.content}</div>
-          <h3 class="text-lg font-semibold text-gray-700 mb-2">Examples:</h3>
-          <ul class="list-disc list-inside mb-6 space-y-1">
-            ${topic.examples.map(ex => `<li>${ex}</li>`).join("")}
-          </ul>
-          ${
-            topic.image
-              ? `<img src="${topic.image}" alt="${topic.title}" 
-                     class="rounded-lg shadow-md w-full max-w-md mx-auto mb-4" />`
-              : ""
-          }
-          <button onclick="history.back()" 
-                  class="mt-4 bg-purple-600 text-white px-4 py-2 rounded-lg shadow hover:bg-purple-700">
-            ⬅ Back
-          </button>
-        `;
-      } catch (err) {
-        console.error("Error loading topic:", err);
-        document.getElementById("topicContainer").innerHTML =
-          "<p class='text-red-500'>Error loading topic details.</p>";
-      }
+  async function loadTopic() {
+    const topicId = getQueryParam('topic');
+    if (!topicId) {
+      document.getElementById('topicPanel').innerHTML = "<p>Topic not found.</p>";
+      return;
     }
 
-    loadTopicDetails();
-  </script>
+    // Loop through Years & Subjects to find topic-details.json
+    // You may replace "Year1" and "maths" dynamically if needed
+    // For simplicity, assuming folder structure: Lessons/YearX/Subject/topics-details.json
+    const years = ["Year1","Year2","Year3","Year4","Year5","Year6","Year7","Year8","Year9","Year10","Year11","Year12"];
+    const subjects = ["maths","english","science"];
 
+    let found = false;
+
+    for (let y of years) {
+      for (let s of subjects) {
+        try {
+          const res = await fetch(`Lessons/${y}/${s}/topics-details.json`);
+          if (!res.ok) continue;
+          const topics = await res.json();
+          const topic = topics.find(t => t.id === topicId);
+          if (topic) {
+            document.getElementById('topicTitle').textContent = topic.title;
+            document.getElementById('topicContent').innerHTML = topic.content;
+            
+            const examplesUl = document.getElementById('topicExamples');
+            examplesUl.innerHTML = "";
+            if(topic.examples && topic.examples.length > 0) {
+              topic.examples.forEach(ex => {
+                const li = document.createElement('li');
+                li.textContent = ex;
+                examplesUl.appendChild(li);
+              });
+            }
+
+            const img = document.getElementById('topicImage');
+            img.src = topic.image || "";
+            img.alt = topic.title;
+
+            found = true;
+            break;
+          }
+        } catch (err) {
+          // Skip if file not found
+          continue;
+        }
+      }
+      if (found) break;
+    }
+
+    if (!found) {
+      document.getElementById('topicPanel').innerHTML = "<p>Topic details not found.</p>";
+    }
+  }
+
+  // Disable right-click and copy/paste
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.addEventListener('copy', e => e.preventDefault());
+  document.addEventListener('cut', e => e.preventDefault());
+  document.addEventListener('paste', e => e.preventDefault());
+
+  loadTopic();
+</script>
 </body>
 </html>
