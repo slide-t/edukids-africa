@@ -69,8 +69,98 @@
     <div id="topicsList" class="space-y-2"></div>
   </div>
 </div>
+<!-- subjects-curric.html -->
 
 <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    fetch("classes.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const container = document.getElementById("classesContainer");
+
+        data.forEach((year) => {
+          // Accordion Item
+          const yearDiv = document.createElement("div");
+          yearDiv.className = "accordion-item";
+
+          yearDiv.innerHTML = `
+            <button class="accordion-btn">${year.name}</button>
+            <div class="accordion-content"></div>
+          `;
+
+          const contentDiv = yearDiv.querySelector(".accordion-content");
+
+          // Subjects under each year
+          year.subjects.forEach((subject) => {
+            const subjBtn = document.createElement("button");
+            subjBtn.className = "subject-btn";
+            subjBtn.textContent = subject.name;
+
+            subjBtn.addEventListener("click", () => {
+              openModal(subject.name, `lessons/${year.id.toLowerCase()}/${subject.id}/topics-details.json`);
+            });
+
+            contentDiv.appendChild(subjBtn);
+          });
+
+          container.appendChild(yearDiv);
+        });
+
+        // Accordion Toggle
+        const buttons = document.querySelectorAll(".accordion-btn");
+        buttons.forEach((btn) => {
+          btn.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+          });
+        });
+      });
+
+    // Modal Handler
+    function openModal(subjectName, jsonPath) {
+      const modal = document.getElementById("modal");
+      const modalTitle = document.getElementById("modalTitle");
+      const modalBody = document.getElementById("modalBody");
+
+      modalTitle.textContent = subjectName;
+      modalBody.innerHTML = "<p>Loading topics...</p>";
+      modal.style.display = "block";
+
+      fetch(jsonPath)
+        .then((res) => {
+          if (!res.ok) throw new Error("File not found");
+          return res.json();
+        })
+        .then((topics) => {
+          modalBody.innerHTML = "";
+          if (topics.length === 0) {
+            modalBody.innerHTML = "<p>No topics yet.</p>";
+          } else {
+            topics.forEach((topic) => {
+              const topicLink = document.createElement("a");
+              topicLink.href = `topics-details.html?id=${topic.id}&year=${encodeURIComponent(jsonPath)}`;
+              topicLink.textContent = topic.title;
+              topicLink.className = "topic-link";
+              modalBody.appendChild(topicLink);
+              modalBody.appendChild(document.createElement("br"));
+            });
+          }
+        })
+        .catch(() => {
+          modalBody.innerHTML = "<p style='color:red;'>Error loading topics.</p>";
+        });
+    }
+
+    // Modal Close
+    document.getElementById("closeModal").onclick = function () {
+      document.getElementById("modal").style.display = "none";
+    };
+  });
+</script>
+
+  <!--
+  <script>
 function slugify(text) {
   return String(text || '').trim().toLowerCase().replace(/\s+/g, '_').replace(/[^\w\-]+/g, '').replace(/\_+/g, '_');
 }
