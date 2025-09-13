@@ -19,7 +19,9 @@ const urlsToCache = [
   "/quiz.js",
   "/reg.html",
   "/student.html",
-  "/questions.json"
+  "/questions.json",
+  "/questions",
+  "/lessons"
 ];
 
 // Install & Cache static assets
