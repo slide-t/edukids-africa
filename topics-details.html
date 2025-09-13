@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduKids Africa - Topic Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      user-select: none; /* Prevent text selection */
+      background: #f3f4f6;
+    }
+    #topicsContainer {
+      max-height: 75vh;
+      overflow-y: auto;
+      padding-right: 10px;
+    }
+    .topic-card {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin-bottom: 20px;
+      transition: transform 0.2s;
+    }
+    .topic-card:hover { transform: translateY(-3px); }
+    .topic-image { max-width: 100%; border-radius: 8px; margin-bottom: 15px; }
+    .topic-title { font-size: 1.5rem; font-weight: 700; color: #6b46c1; margin-bottom: 10px; }
+    .topic-content { font-size: 1rem; color: #333; margin-bottom: 10px; }
+    .topic-examples { list-style-type: disc; margin-left: 20px; color: #555; }
+    .breadcrumb { margin-bottom: 15px; font-size: 0.95rem; color: #555; }
+    .breadcrumb a { color: #6b46c1; text-decoration: underline; margin-right: 5px; }
+  </style>
+</head>
+<body class="p-4 font-sans">
+
+  <!-- Breadcrumb -->
+  <div id="breadcrumb" class="breadcrumb"></div>
+
+  <h1 class="text-3xl font-bold text-center text-purple-800 mb-6">
+    Topic Details
+  </h1>
+
+  <div id="topicsContainer"></div>
+
+  <script>
+    // Prevent right-click, copy, cut, paste
+    ['contextmenu','copy','cut','paste'].forEach(e => {
+      document.addEventListener(e, event => event.preventDefault());
+    });
+
+    async function loadTopics() {
+      try {
+        // Get query parameters
+        const params = new URLSearchParams(window.location.search);
+        const year = params.get('year') || 'Year1';
+        const subjectName = params.get('subject');
+
+        if (!subjectName) {
+          document.getElementById('topicsContainer').innerHTML =
+            '<p class="text-red-500 font-semibold">No subject selected.</p>';
+          return;
+        }
+
+        // Breadcrumb
+        const breadcrumbDiv = document.getElementById('breadcrumb');
+        breadcrumbDiv.innerHTML = `<a href="subjects-curric.html">Curriculum</a> / ${year} / ${subjectName}`;
+
+        // Load JSON
+        const res = await fetch(`Lessons/${year}/maths/topics-details.json`); // adjust folder based on your path
+        const topics = await res.json();
+        const container = document.getElementById('topicsContainer');
+        container.innerHTML = '';
+
+        topics.forEach(topic => {
+          const card = document.createElement('div');
+          card.className = 'topic-card';
+
+          const title = document.createElement('h2');
+          title.className = 'topic-title';
+          title.textContent = topic.title;
+
+          const img = document.createElement('img');
+          img.className = 'topic-image';
+          img.src = topic.image;
+          img.alt = topic.title;
+
+          const content = document.createElement('div');
+          content.className = 'topic-content';
+          content.innerHTML = topic.content;
+
+          const examplesTitle = document.createElement('h3');
+          examplesTitle.className = 'font-semibold text-purple-700 mt-2 mb-1';
+          examplesTitle.textContent = 'Examples:';
+
+          const examplesList = document.createElement('ul');
+          examplesList.className = 'topic-examples';
+          topic.examples.forEach(ex => {
+            const li = document.createElement('li');
+            li.textContent = ex;
+            examplesList.appendChild(li);
+          });
+
+          card.appendChild(title);
+          card.appendChild(img);
+          card.appendChild(content);
+          card.appendChild(examplesTitle);
+          card.appendChild(examplesList);
+
+          container.appendChild(card);
+        });
+
+      } catch (err) {
+        console.error('Error loading topics:', err);
+        document.getElementById('topicsContainer').innerHTML =
+          '<p class="text-red-500 font-semibold">Failed to load topics. Check file path.</p>';
+      }
+    }
+
+    loadTopics();
+  </script>
+</body>
+</html>
