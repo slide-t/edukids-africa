@@ -1,277 +1,83 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Topic Details</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f4f4f4;
-      overflow: hidden;
-      user-select: none; /* Prevent copy */
-    }
-
-    .panel {
-      max-width: 800px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      height: 90vh;
-      overflow-y: auto; /* Scrollable */
-    }
-
-    .panel h2 {
-      margin-top: 0;
-      color: #001219;
-      text-align: center;
-    }
-
-    .content {
-      margin: 20px 0;
-      line-height: 1.6;
-    }
-
-    .examples {
-      background: #f9f9f9;
-      padding: 10px;
-      border-left: 4px solid #001219;
-      margin: 15px 0;
-    }
-
-    .examples p {
-      margin: 5px 0;
-    }
-
-    .image-box {
-      text-align: center;
-      margin: 20px 0;
-    }
-
-    .image-box img {
-      max-width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-    }
-
-    .back-btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 10px 15px;
-      background: #001219;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 6px;
-      transition: background 0.3s;
-    }
-
-    .back-btn:hover {
-      background: #005f73;
-    }
-  </style>
+  <title>Topics Details</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-  <div class="panel" id="topicPanel">
-    <h2>Loading...</h2>
-    <div class="content"></div>
+<body class="bg-gray-50 font-sans">
+
+  <div class="max-w-4xl mx-auto py-8 px-4">
+    <h1 id="pageTitle" class="text-2xl font-bold text-purple-700 mb-6">Loading...</h1>
+
+    <!-- Topics container -->
+    <div id="topicsContainer" class="grid gap-4"></div>
+
+    <!-- Back button -->
+    <div class="mt-8">
+      <a href="subjects-curric.html" class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">⬅ Back to Classes</a>
+    </div>
   </div>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      // Parse query params
-      const urlParams = new URLSearchParams(window.location.search);
-      const topicId = urlParams.get("id");
-      const jsonPath = urlParams.get("year"); // contains lessons/yearX/subject/topics-details.json
+<script>
+function getQueryParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    year: urlParams.get('year'),
+    subject: urlParams.get('subject'),
+    topic: urlParams.get('topic')
+  };
+}
 
-      if (!topicId || !jsonPath) {
-        document.getElementById("topicPanel").innerHTML = "<h2>Error: Missing parameters</h2>";
-        return;
+async function loadTopics() {
+  const { year, subject, topic } = getQueryParams();
+  const pageTitle = document.getElementById('pageTitle');
+  const container = document.getElementById('topicsContainer');
+
+  if (!year || !subject) {
+    pageTitle.textContent = "Error: Missing parameters";
+    container.innerHTML = "<p class='text-red-600'>Year or Subject not specified.</p>";
+    return;
+  }
+
+  pageTitle.textContent = `${year} - ${subject.replace(/-/g, ' ')} Topics`;
+  container.innerHTML = "<p class='text-gray-500'>Loading topics...</p>";
+
+  try {
+    const res = await fetch(`Lessons/${year}/${subject}/topics-details.json`);
+    const data = await res.json();
+    const topics = Array.isArray(data) ? data : data.topics || [];
+
+    container.innerHTML = '';
+
+    if (!topics.length) {
+      container.innerHTML = "<p class='text-red-600'>No topics found for this subject.</p>";
+      return;
+    }
+
+    topics.forEach(t => {
+      const topicObj = typeof t === 'string' ? { id: t.toLowerCase().replace(/\s+/g, '_'), title: t } : t;
+
+      const div = document.createElement('div');
+      div.className = "p-4 bg-white shadow rounded hover:bg-purple-50 cursor-pointer";
+
+      if (topic && topicObj.id === topic) {
+        div.innerHTML = `<h2 class="text-lg font-semibold text-purple-700">${topicObj.title}</h2>
+                         <p class="text-gray-600 mt-2">${topicObj.content || "Content coming soon..."}</p>`;
+      } else {
+        div.innerHTML = `<a href="topics-details.html?year=${encodeURIComponent(year)}&subject=${encodeURIComponent(subject)}&topic=${encodeURIComponent(topicObj.id)}"
+                          class="block text-purple-600 font-medium hover:underline">📘 ${topicObj.title}</a>`;
       }
 
-      fetch(jsonPath)
-        .then(res => {
-          if (!res.ok) throw new Error("JSON not found");
-          return res.json();
-        })
-        .then(data => {
-          const topic = data.find(t => t.id === topicId);
-          if (!topic) {
-            document.getElementById("topicPanel").innerHTML = "<h2>Topic not found</h2>";
-            return;
-          }
-
-          const panel = document.getElementById("topicPanel");
-          panel.innerHTML = `
-            <h2>${topic.title}</h2>
-            <div class="content">${topic.content}</div>
-            <div class="examples">
-              <h3>Examples:</h3>
-              ${topic.examples.map(ex => `<p>• ${ex}</p>`).join("")}
-            </div>
-            <div class="image-box">
-              <img src="${topic.image}" alt="${topic.title}">
-            </div>
-            <a href="subjects-curric.html" class="back-btn">← Back</a>
-          `;
-        })
-        .catch(() => {
-          document.getElementById("topicPanel").innerHTML = "<h2>Error loading topic</h2>";
-        });
-
-      // Disable copy & right-click
-      document.addEventListener("copy", e => e.preventDefault());
-      document.addEventListener("contextmenu", e => e.preventDefault());
+      container.appendChild(div);
     });
-  </script>
-</body>
-</html>
+  } catch (err) {
+    container.innerHTML = "<p class='text-red-600'>Error loading topics file.</p>";
+  }
+}
 
-
-
-
-
-
-
-<!--
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EduKids Africa - Topic Details</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    body {
-      user-select: none; /* Prevent text selection */
-      background: #f3f4f6;
-    }
-    #topicsContainer {
-      max-height: 75vh;
-      overflow-y: auto;
-      padding-right: 10px;
-    }
-    .topic-card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      padding: 20px;
-      margin-bottom: 20px;
-      transition: transform 0.2s;
-    }
-    .topic-card:hover { transform: translateY(-3px); }
-    .topic-image { max-width: 100%; border-radius: 8px; margin-bottom: 15px; }
-    .topic-title { font-size: 1.5rem; font-weight: 700; color: #6b46c1; margin-bottom: 10px; }
-    .topic-content { font-size: 1rem; color: #333; margin-bottom: 10px; }
-    .topic-examples { list-style-type: disc; margin-left: 20px; color: #555; }
-    .breadcrumb { margin-bottom: 15px; font-size: 0.95rem; color: #555; }
-    .breadcrumb a { color: #6b46c1; text-decoration: underline; margin-right: 5px; }
-  </style>
-</head>
-<body class="p-4 font-sans">
-
-  <!-- Breadcrumb --
-  <div id="breadcrumb" class="breadcrumb"></div>
-
-  <h1 class="text-3xl font-bold text-center text-purple-800 mb-6">
-    Topic Details
-  </h1>
-
-  <div id="topicsContainer"></div>
-
-  <script>
-    // Prevent right-click, copy, cut, paste
-    ['contextmenu','copy','cut','paste'].forEach(e => {
-      document.addEventListener(e, event => event.preventDefault());
-    });
-
-    async function loadTopics() {
-      try {
-        // Get query parameters
-        const params = new URLSearchParams(window.location.search);
-        const year = params.get('year') || 'Year1';
-        const subject = params.get('subject') || 'maths';
-        const topicId = params.get('topic'); // optional
-
-        // Breadcrumb
-        const breadcrumbDiv = document.getElementById('breadcrumb');
-        breadcrumbDiv.innerHTML = `<a href="subjects-curric.html">Curriculum</a> / ${year} / ${subject}`;
-
-        // Load JSON for selected subject/year
-        const res = await fetch(`Lessons/${year}/${subject}/topics-details.json`);
-        const topics = await res.json();
-        const container = document.getElementById('topicsContainer');
-        container.innerHTML = '';
-
-        // If a specific topicId is passed, filter
-        const filteredTopics = topicId
-          ? topics.filter(t => t.id === topicId)
-          : topics;
-
-        if (filteredTopics.length === 0) {
-          container.innerHTML = '<p class="text-red-500 font-semibold">No topic found.</p>';
-          return;
-        }
-
-        // Render topics
-        filteredTopics.forEach(topic => {
-          const card = document.createElement('div');
-          card.className = 'topic-card';
-
-          // Title first
-          const title = document.createElement('h2');
-          title.className = 'topic-title';
-          title.textContent = topic.title;
-          card.appendChild(title);
-
-          // Optional image
-          if (topic.image) {
-            const img = document.createElement('img');
-            img.className = 'topic-image';
-            img.src = topic.image;
-            img.alt = topic.title;
-            card.appendChild(img);
-          }
-
-          // Main content
-          const content = document.createElement('div');
-          content.className = 'topic-content';
-          content.innerHTML = topic.content;
-          card.appendChild(content);
-
-          // Examples list
-          if (topic.examples && topic.examples.length) {
-            const examplesTitle = document.createElement('h3');
-            examplesTitle.className = 'font-semibold text-purple-700 mt-2 mb-1';
-            examplesTitle.textContent = 'Examples:';
-
-            const examplesList = document.createElement('ul');
-            examplesList.className = 'topic-examples';
-            topic.examples.forEach(ex => {
-              const li = document.createElement('li');
-              li.textContent = ex;
-              examplesList.appendChild(li);
-            });
-
-            card.appendChild(examplesTitle);
-            card.appendChild(examplesList);
-          }
-
-          container.appendChild(card);
-        });
-
-      } catch (err) {
-        console.error('Error loading topics:', err);
-        document.getElementById('topicsContainer').innerHTML =
-          '<p class="text-red-500 font-semibold">Failed to load topics. Check file path.</p>';
-      }
-    }
-
-    loadTopics();
-  </script>
+document.addEventListener('DOMContentLoaded', loadTopics);
+</script>
 </body>
 </html>
