@@ -2,55 +2,23 @@
   {
     "id": "year1",
     "name": "Year 1",
-    "topics": [
-      { "id": "maths_numbers", "title": "Numbers and Counting", "detailsPage": "topics-details.html?topic=maths_numbers" },
-      { "id": "english_alphabets", "title": "Alphabets & Spelling", "detailsPage": "topics-details.html?topic=english_alphabets" },
-      { "id": "science_plants", "title": "Introduction to Plants", "detailsPage": "topics-details.html?topic=science_plants" }
-    ]
-  },
-  {
-    "id": "year2",
-    "name": "Year 2",
-    "topics": [
-      { "id": "maths_addition", "title": "Addition & Subtraction", "detailsPage": "topics-details.html?topic=maths_addition" },
-      { "id": "english_phonics", "title": "Phonics and Simple Words", "detailsPage": "topics-details.html?topic=english_phonics" },
-      { "id": "science_animals", "title": "Animals & Habitats", "detailsPage": "topics-details.html?topic=science_animals" }
-    ]
-  },
-  {
-    "id": "year3",
-    "name": "Year 3",
-    "topics": [
-      { "id": "maths_multiplication", "title": "Multiplication & Division", "detailsPage": "topics-details.html?topic=maths_multiplication" },
-      { "id": "english_grammar", "title": "Basic Grammar", "detailsPage": "topics-details.html?topic=english_grammar" },
-      { "id": "science_humanbody", "title": "The Human Body", "detailsPage": "topics-details.html?topic=science_humanbody" }
-    ]
-  },
-  {
-    "id": "year4",
-    "name": "Year 4",
-    "topics": [
-      { "id": "maths_fractions", "title": "Fractions & Decimals", "detailsPage": "topics-details.html?topic=maths_fractions" },
-      { "id": "english_comprehension", "title": "Comprehension", "detailsPage": "topics-details.html?topic=english_comprehension" },
-      { "id": "science_energy", "title": "Energy and Light", "detailsPage": "topics-details.html?topic=science_energy" }
-    ]
-  },
-  {
-    "id": "year5",
-    "name": "Year 5",
-    "topics": [
-      { "id": "maths_geometry", "title": "Geometry & Shapes", "detailsPage": "topics-details.html?topic=maths_geometry" },
-      { "id": "english_writing", "title": "Creative Writing", "detailsPage": "topics-details.html?topic=english_writing" },
-      { "id": "science_matter", "title": "Matter & Materials", "detailsPage": "topics-details.html?topic=science_matter" }
-    ]
-  },
-  {
-    "id": "year6",
-    "name": "Year 6",
-    "topics": [
-      { "id": "maths_percentages", "title": "Percentages & Ratios", "detailsPage": "topics-details.html?topic=maths_percentages" },
-      { "id": "english_essay", "title": "Essay Writing", "detailsPage": "topics-details.html?topic=english_essay" },
-      { "id": "science_environment", "title": "Environment & Conservation", "detailsPage": "topics-details.html?topic=science_environment" }
+    "subjects": [
+      {
+        "id": "maths",
+        "name": "Mathematics",
+        "topics": [
+          { "id": "numbers", "title": "Numbers & Counting", "detailsPage": "topics-details.html?topic=maths_numbers" },
+          { "id": "addition", "title": "Addition Basics", "detailsPage": "topics-details.html?topic=maths_addition" }
+        ]
+      },
+      {
+        "id": "english",
+        "name": "English Language",
+        "topics": [
+          { "id": "alphabets", "title": "Alphabets & Spelling", "detailsPage": "topics-details.html?topic=english_alphabets" },
+          { "id": "reading", "title": "Reading Skills", "detailsPage": "topics-details.html?topic=english_reading" }
+        ]
+      }
     ]
   }
 ]
