@@ -5,9 +5,82 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EduKids Africa - Curriculum</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+  /* Mobile menu slide animation */
+    #mobile-menu {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-in-out;
+    }
+    #mobile-menu.open {
+      max-height: 500px;
+    }
+
+    /* Hamburger → X animation */
+    .line {
+      transition: all 0.3s ease-in-out;
+      transform-origin: center;
+    }
+    .active .line1 {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .active .line2 {
+      opacity: 0;
+    }
+    .active .line3 {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
+    /* Collapsible sections */
+    .collapse-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease;
+    }
+    .collapse-content.open {
+      max-height: 500px; /* adjust as needed */
+    }
+  </style>
 </head>
 <body class="bg-gray-100 font-sans">
 
+
+
+<!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-3">
+        <img src="https://slide-t.github.io/edukids-africa/images/logo.png" alt="EduKids Africa Logo" class="w-12 h-12 md:w-14 md:h-14 rounded-full">
+        <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
+      </div>
+
+      <!-- Mobile Menu Button -->
+      <div class="md:hidden">
+        <button id="menu-btn" class="focus:outline-none flex flex-col justify-between w-9 h-9">
+          <span class="line line1 w-full h-1 bg-gray-800 rounded"></span>
+          <span class="line line2 w-full h-1 bg-gray-800 rounded"></span>
+          <span class="line line3 w-full h-1 bg-gray-800 rounded"></span>
+        </button>
+      </div>
+
+      <!-- Desktop Nav -->
+      <nav class="hidden md:flex md:space-x-6 text-lg font-medium">
+        <a href="https://slide-t.github.io/edukids-africa/index.html#home" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+        <a href="subjects.html" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+        <a href="#" class="px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
+      </nav>
+    </div>
+
+    <!-- Mobile Nav -->
+    <nav id="mobile-menu" class="flex-col space-y-2 px-6 pb-4 bg-white shadow-md md:hidden">
+      <a href="https://slide-t.github.io/edukids-africa/index.html#home" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Home</a>
+      <a href="subjects.html" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Subjects</a>
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">About</a>
+      <a href="#" class="block px-4 py-2 rounded hover:bg-orange-500 hover:text-white transition">Contact</a>
+    </nav>
+  </header>
   <div class="max-w-4xl mx-auto py-10 px-4">
     <h1 class="text-3xl font-bold text-center text-purple-800 mb-8">
       Curriculum - Year System
@@ -111,5 +184,26 @@
 
     loadClasses();
   </script>
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenu.classList.remove('flex');
+    mobileMenu.classList.add('hidden');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileMenu.classList.add('open'), 10);
+      } else {
+        mobileMenu.classList.remove('open');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+      }
+    });
+</script>
+  
 </body>
 </html>
