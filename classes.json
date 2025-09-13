@@ -133,5 +133,55 @@
       { "id": "cultural-and-creative-arts", "name": "Cultural-and-Creative-Arts", "topics": [] },
       { "id": "business-studies", "name": "Business-Studies", "topics": [] }
     ]
+  },
+  {
+    "id": "Year10",
+    "name": "Year 10 (SS 1)",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "biology", "name": "Biology", "topics": [] },
+      { "id": "chemistry", "name": "Chemistry", "topics": [] },
+      { "id": "physics", "name": "Physics", "topics": [] },
+      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
+      { "id": "economics", "name": "Economics", "topics": [] },
+      { "id": "government", "name": "Government", "topics": [] },
+      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
+      { "id": "commerce", "name": "Commerce", "topics": [] },
+      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+    ]
+  },
+  {
+    "id": "Year11",
+    "name": "Year 11 (SS 2)",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "biology", "name": "Biology", "topics": [] },
+      { "id": "chemistry", "name": "Chemistry", "topics": [] },
+      { "id": "physics", "name": "Physics", "topics": [] },
+      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
+      { "id": "economics", "name": "Economics", "topics": [] },
+      { "id": "government", "name": "Government", "topics": [] },
+      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
+      { "id": "commerce", "name": "Commerce", "topics": [] },
+      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+    ]
+  },
+  {
+    "id": "Year12",
+    "name": "Year 12 (SS 3)",
+    "subjects": [
+      { "id": "mathematics", "name": "Mathematics", "topics": [] },
+      { "id": "english-language", "name": "English-Language", "topics": [] },
+      { "id": "biology", "name": "Biology", "topics": [] },
+      { "id": "chemistry", "name": "Chemistry", "topics": [] },
+      { "id": "physics", "name": "Physics", "topics": [] },
+      { "id": "agricultural-science", "name": "Agricultural Science", "topics": [] },
+      { "id": "economics", "name": "Economics", "topics": [] },
+      { "id": "government", "name": "Government", "topics": [] },
+      { "id": "literature-in-english", "name": "Literature-in-English", "topics": [] },
+      { "id": "commerce", "name": "Commerce", "topics": [] },
+      { "id": "financial-accounting", "name": "Financial Accounting", "topics": [] }
+    ]
   }
-]
