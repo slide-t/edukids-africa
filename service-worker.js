@@ -1,4 +1,4 @@
-const CACHE_NAME = "edukids-africa-v4"; // bump version on deploy
+const CACHE_NAME = "edukids-africa-v5"; // bump version on deploy
 const urlsToCache = [
   "/",
   "/index.html",
@@ -20,11 +20,11 @@ const urlsToCache = [
   "/reg.html",
   "/student.html",
   "/questions.json",
-  "/questions",
-  "/lessons"
+  "/questions/",   // cache folder
+  "/lessons/"      // cache folder
 ];
 
-// Install & Cache static assets
+// Install & cache immediately
 self.addEventListener("install", (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => cache.addAll(urlsToCache))
@@ -32,15 +32,11 @@ self.addEventListener("install", (event) => {
   self.skipWaiting();
 });
 
-// Activate & Clean old caches
+// Activate & clean old cache
 self.addEventListener("activate", (event) => {
   event.waitUntil(
-    caches.keys().then((cacheNames) =>
-      Promise.all(
-        cacheNames
-          .filter((name) => name !== CACHE_NAME)
-          .map((name) => caches.delete(name))
-      )
+    caches.keys().then((names) =>
+      Promise.all(names.filter((n) => n !== CACHE_NAME).map((n) => caches.delete(n)))
     )
   );
   self.clients.claim();
@@ -50,52 +46,41 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const url = new URL(event.request.url);
 
-  // Network-first for JS/JSON and questions folder
+  // Network-first for JSON, JS, questions & lessons
   if (
     url.pathname.endsWith(".js") ||
     url.pathname.endsWith(".json") ||
-    url.pathname.includes("/questions")
+    url.pathname.includes("/questions") ||
+    url.pathname.includes("/lessons")
   ) {
     event.respondWith(
       fetch(event.request)
         .then((response) => {
-          // Check version only for JSON in questions folder
-          if (url.pathname.includes("/questions") && response.ok) {
-            response.clone().json().then((data) => {
-              const cacheKey = event.request.url;
-              caches.open(CACHE_NAME).then((cache) => {
-                cache.match(cacheKey).then((cachedResp) => {
-                  if (cachedResp) {
-                    cachedResp.json().then((cachedData) => {
-                      if (data.version !== cachedData.version) {
-                        cache.put(cacheKey, response.clone());
-                      }
-                    });
-                  } else {
-                    cache.put(cacheKey, response.clone());
-                  }
-                });
-              });
-            });
-          } else {
-            // cache JS and other JSON normally
-            caches.open(CACHE_NAME).then((cache) => {
-              cache.put(event.request, response.clone());
-            });
+          if (response && response.ok) {
+            caches.open(CACHE_NAME).then((cache) => cache.put(event.request, response.clone()));
           }
           return response;
         })
-        .catch(() => caches.match(event.request))
+        .catch(() => caches.match(event.request)) // fallback offline
     );
-  } else {
-    // Cache-first for other assets
-    event.respondWith(
-      caches.match(event.request).then((response) => response || fetch(event.request))
-    );
+    return;
   }
+
+  // Stale-while-revalidate for HTML, CSS, images
+  event.respondWith(
+    caches.match(event.request).then((cachedResp) => {
+      const fetchPromise = fetch(event.request).then((networkResp) => {
+        if (networkResp && networkResp.ok) {
+          caches.open(CACHE_NAME).then((cache) => cache.put(event.request, networkResp.clone()));
+        }
+        return networkResp;
+      }).catch(() => cachedResp); // fallback if offline
+      return cachedResp || fetchPromise;
+    })
+  );
 });
 
-// Optional: Force cache update from page
+// Manual cache update trigger
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "UPDATE_CACHE") {
     caches.open(CACHE_NAME).then((cache) => {
