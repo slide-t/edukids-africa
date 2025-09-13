@@ -186,5 +186,27 @@ footer{background:#2c1a47;color:#fff;padding:20px;margin:50px auto;text-align:ce
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+
+<script>
+    // Mobile menu toggle
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+
+    mobileMenu.classList.remove('flex');
+    mobileMenu.classList.add('hidden');
+
+    menuBtn.addEventListener('click', () => {
+      menuBtn.classList.toggle('active');
+
+      if (mobileMenu.classList.contains('hidden')) {
+        mobileMenu.classList.remove('hidden');
+        setTimeout(() => mobileMenu.classList.add('open'), 10);
+      } else {
+        mobileMenu.classList.remove('open');
+        setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+      }
+    });
+</script>
+  
 </body>
 </html>
