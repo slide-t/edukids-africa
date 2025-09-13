@@ -2,6 +2,155 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Curriculum - EduKids Africa</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="bg-gray-100">
+  <!-- HEADER -->
+  <header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto flex items-center justify-between p-4 md:p-6">
+      <div class="flex items-center space-x-3">
+        <img src="https://slide-t.github.io/edukids-africa/images/logo.png" alt="EduKids Africa Logo" class="w-12 h-12 rounded-full">
+        <h1 class="text-2xl md:text-3xl font-bold text-orange-600">EduKids Africa</h1>
+      </div>
+      <nav class="hidden md:flex md:space-x-6 text-lg font-medium">
+        <a href="index.html" class="px-4 py-2 hover:bg-orange-500 hover:text-white rounded">Home</a>
+        <a href="subjects.html" class="px-4 py-2 hover:bg-orange-500 hover:text-white rounded">Subjects</a>
+        <a href="subjects-curric.html" class="px-4 py-2 bg-orange-500 text-white rounded">Curriculum</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="max-w-4xl mx-auto mt-12 px-4">
+    <h1 class="text-3xl text-center font-bold text-gray-900 mb-6">Curriculum</h1>
+    <div id="curriculum-list" class="space-y-6"></div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-white text-center p-4 mt-10">
+    <p>&copy; <span id="year"></span> EduKids Africa. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const curriculumList = document.getElementById("curriculum-list");
+
+    // Curriculum categories and classes
+    const structure = {
+      "Primary": ["primary1", "primary2", "primary3", "primary4", "primary5", "primary6"],
+      "Secondary": ["junior1", "junior2", "junior3", "senior1", "senior2", "senior3"]
+    };
+
+    // Render curriculum
+    function renderCurriculum() {
+      Object.entries(structure).forEach(([category, classes]) => {
+        const groupDiv = document.createElement("div");
+        groupDiv.className = "bg-white rounded-xl shadow";
+
+        // Category header (collapsible)
+        const heading = document.createElement("h2");
+        heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b";
+        heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+        const classListDiv = document.createElement("div");
+        classListDiv.className = "max-h-0 overflow-hidden transition-all duration-500";
+
+        // Add classes inside
+        classes.forEach(cls => {
+          const btn = document.createElement("button");
+          btn.className = "w-full text-left block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition";
+          btn.textContent = cls.replace(/(\d+)/, " $1").replace("junior","Junior ").replace("senior","Senior ");
+          btn.addEventListener("click", () => openTopicsModal(category.toLowerCase(), cls));
+          classListDiv.appendChild(btn);
+        });
+
+        // Expand/Collapse
+        heading.addEventListener("click", () => {
+          classListDiv.classList.toggle("max-h-0");
+          classListDiv.classList.toggle("max-h-96");
+          heading.querySelector("i").classList.toggle("rotate-180");
+        });
+
+        groupDiv.appendChild(heading);
+        groupDiv.appendChild(classListDiv);
+        curriculumList.appendChild(groupDiv);
+      });
+    }
+
+    // Open topics modal (fetch topics.json for the class)
+    async function openTopicsModal(category, cls) {
+      const url = `lessons/${category}/${cls}/topics.json`;
+      try {
+        const res = await fetch(url);
+        const topicsData = await res.json();
+
+        // Build modal
+        const modal = document.createElement("div");
+        modal.className = "fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 p-4";
+        modal.innerHTML = `
+          <div class="bg-white rounded-xl shadow-lg max-w-lg w-full p-6 relative">
+            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-500" id="closeModal">
+              <i class="fas fa-times"></i>
+            </button>
+            <h2 class="text-xl font-bold mb-4">${cls.replace(/(\d+)/," $1").toUpperCase()} Topics</h2>
+            <div id="topicsList" class="space-y-2"></div>
+          </div>
+        `;
+
+        // Insert topics
+        const topicsList = modal.querySelector("#topicsList");
+        Object.entries(topicsData).forEach(([subject, topics]) => {
+          const subjectDiv = document.createElement("div");
+          subjectDiv.innerHTML = `<h3 class="font-semibold text-gray-800">${subject}</h3>`;
+          topics.forEach(t => {
+            const link = document.createElement("a");
+            link.className = "block px-3 py-2 bg-gray-100 rounded hover:bg-orange-400 hover:text-white";
+            link.href = `topics-details.html?cat=${category}&class=${cls}&id=${t.id}`;
+            link.textContent = t.title;
+            subjectDiv.appendChild(link);
+          });
+          topicsList.appendChild(subjectDiv);
+        });
+
+        document.body.appendChild(modal);
+
+        // Close modal
+        modal.querySelector("#closeModal").addEventListener("click", () => modal.remove());
+        modal.addEventListener("click", e => { if (e.target === modal) modal.remove(); });
+
+      } catch (err) {
+        alert("Failed to load topics for " + cls);
+        console.error(err);
+      }
+    }
+
+    renderCurriculum();
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Subjects Curriculum</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -10,11 +159,11 @@
   <div class="container mx-auto p-6">
     <h1 class="text-2xl font-bold text-center text-purple-700 mb-6">Primary School Curriculum</h1>
 
-    <!-- Container for subjects -->
+    <!-- Container for subjects --
     <div id="subjectsContainer" class="space-y-4"></div>
   </div>
 
-  <!-- Modal -->
+  <!-- Modal --
   <div id="topicsModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50">
     <div class="bg-white rounded-lg shadow-xl w-11/12 max-w-3xl p-6 relative">
       <button onclick="closeModal()" class="absolute top-3 right-3 text-gray-500 hover:text-red-500 text-xl">&times;</button>
