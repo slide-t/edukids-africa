@@ -1,3 +1,143 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic Details</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      overflow: hidden;
+      user-select: none; /* Prevent copy */
+    }
+
+    .panel {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      height: 90vh;
+      overflow-y: auto; /* Scrollable */
+    }
+
+    .panel h2 {
+      margin-top: 0;
+      color: #001219;
+      text-align: center;
+    }
+
+    .content {
+      margin: 20px 0;
+      line-height: 1.6;
+    }
+
+    .examples {
+      background: #f9f9f9;
+      padding: 10px;
+      border-left: 4px solid #001219;
+      margin: 15px 0;
+    }
+
+    .examples p {
+      margin: 5px 0;
+    }
+
+    .image-box {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .image-box img {
+      max-width: 100%;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 15px;
+      background: #001219;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .back-btn:hover {
+      background: #005f73;
+    }
+  </style>
+</head>
+<body>
+  <div class="panel" id="topicPanel">
+    <h2>Loading...</h2>
+    <div class="content"></div>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Parse query params
+      const urlParams = new URLSearchParams(window.location.search);
+      const topicId = urlParams.get("id");
+      const jsonPath = urlParams.get("year"); // contains lessons/yearX/subject/topics-details.json
+
+      if (!topicId || !jsonPath) {
+        document.getElementById("topicPanel").innerHTML = "<h2>Error: Missing parameters</h2>";
+        return;
+      }
+
+      fetch(jsonPath)
+        .then(res => {
+          if (!res.ok) throw new Error("JSON not found");
+          return res.json();
+        })
+        .then(data => {
+          const topic = data.find(t => t.id === topicId);
+          if (!topic) {
+            document.getElementById("topicPanel").innerHTML = "<h2>Topic not found</h2>";
+            return;
+          }
+
+          const panel = document.getElementById("topicPanel");
+          panel.innerHTML = `
+            <h2>${topic.title}</h2>
+            <div class="content">${topic.content}</div>
+            <div class="examples">
+              <h3>Examples:</h3>
+              ${topic.examples.map(ex => `<p>• ${ex}</p>`).join("")}
+            </div>
+            <div class="image-box">
+              <img src="${topic.image}" alt="${topic.title}">
+            </div>
+            <a href="subjects-curric.html" class="back-btn">← Back</a>
+          `;
+        })
+        .catch(() => {
+          document.getElementById("topicPanel").innerHTML = "<h2>Error loading topic</h2>";
+        });
+
+      // Disable copy & right-click
+      document.addEventListener("copy", e => e.preventDefault());
+      document.addEventListener("contextmenu", e => e.preventDefault());
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+<!--
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,7 +174,7 @@
 </head>
 <body class="p-4 font-sans">
 
-  <!-- Breadcrumb -->
+  <!-- Breadcrumb --
   <div id="breadcrumb" class="breadcrumb"></div>
 
   <h1 class="text-3xl font-bold text-center text-purple-800 mb-6">
