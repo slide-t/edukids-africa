@@ -591,29 +591,40 @@
   loadSubjects();
 </script>
   -->
-  <script>
-// Mobile menu toggle
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
+  
+  
+<script>
+  // Mobile menu toggle
+  const menuBtn = document.getElementById('menu-btn');
+  const mobileMenu = document.getElementById('mobile-menu');
 
-    mobileMenu.classList.remove('flex');
-    mobileMenu.classList.add('hidden');
+  mobileMenu.classList.remove('flex');
+  mobileMenu.classList.add('hidden');
 
-    menuBtn.addEventListener('click', () => {
-      menuBtn.classList.toggle('active');
+  menuBtn.addEventListener('click', () => {
+    menuBtn.classList.toggle('active');
 
-      if (mobileMenu.classList.contains('hidden')) {
-        mobileMenu.classList.remove('hidden');
-        setTimeout(() => mobileMenu.classList.add('open'), 10);
-      } else {
+    if (mobileMenu.classList.contains('hidden')) {
+      mobileMenu.classList.remove('hidden');
+      setTimeout(() => mobileMenu.classList.add('open'), 10);
+    } else {
+      mobileMenu.classList.remove('open');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 400);
+    }
+  });
+
+  // Auto-close mobile menu on link click
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      if (mobileMenu.classList.contains('open')) {
+        menuBtn.classList.remove('active');
         mobileMenu.classList.remove('open');
         setTimeout(() => mobileMenu.classList.add('hidden'), 400);
       }
     });
-    
-  </script>
-  
-
+  });
+</script>
 
 
   
