@@ -9,6 +9,171 @@
     /* Prevent right click & copy */
     body {
       user-select: none;
+      position: relative;
+      overflow-x: hidden;
+    }
+
+    /* Watermark styling */
+    .watermark {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-30deg);
+      font-size: 4rem;
+      font-weight: 700;
+      color: rgba(128, 0, 128, 0.08); /* faint purple */
+      pointer-events: none;
+      z-index: 0;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    /* Keep main content above watermark */
+    .content {
+      position: relative;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body class="bg-gray-50 font-sans">
+
+  <!-- Watermark -->
+  <div class="watermark">EduKids Africa</div>
+
+  <div class="max-w-4xl mx-auto py-8 px-4 content">
+    <div class="bg-purple-900 text-white rounded-t-lg p-4 text-center shadow">
+      <h1 id="topicTitle" class="text-2xl font-bold">Loading...</h1>
+    </div>
+
+    <!-- Scrollable panel -->
+    <div class="bg-white shadow p-6 max-h-[70vh] overflow-y-auto space-y-6" id="topicContent">
+      <p class="text-gray-500">Fetching topic details...</p>
+    </div>
+
+    <div class="bg-purple-900 text-white rounded-b-lg p-3 text-center text-sm shadow">
+      © EduKids Africa – All Rights Reserved
+    </div>
+
+    <!-- Back buttons -->
+    <div class="mt-8 flex justify-between">
+      <a href="javascript:history.back()" 
+         class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">⬅ Back</a>
+      <a href="subjects-curric.html" 
+         class="px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700">🏫 All Classes</a>
+    </div>
+  </div>
+
+<script>
+function getQueryParams() {
+  const urlParams = new URLSearchParams(window.location.search);
+  return {
+    year: urlParams.get('year'),
+    subject: urlParams.get('subject'),
+    topic: urlParams.get('topic')
+  };
+}
+
+async function loadFullNotes() {
+  const { year, subject, topic } = getQueryParams();
+  const titleEl = document.getElementById('topicTitle');
+  const contentEl = document.getElementById('topicContent');
+
+  if (!year || !subject || !topic) {
+    titleEl.textContent = "Error: Missing parameters";
+    contentEl.innerHTML = "<p class='text-red-600'>Year, Subject, or Topic not specified.</p>";
+    return;
+  }
+
+  titleEl.textContent = "Loading...";
+
+  try {
+    const res = await fetch(`FullNotes/${year}/${subject}/full-notes.json`);
+    const data = await res.json();
+
+    // Find topic
+    const topicData = Array.isArray(data) 
+      ? data.find(t => t.id === topic) 
+      : (data.topics || []).find(t => t.id === topic);
+
+    if (!topicData) {
+      titleEl.textContent = "Topic not found";
+      contentEl.innerHTML = "<p class='text-red-600'>No details available for this topic.</p>";
+      return;
+    }
+
+    // Populate page
+    titleEl.textContent = topicData.title;
+
+    contentEl.innerHTML = `
+      <div>
+        ${topicData.content || "<p>No content available.</p>"}
+      </div>
+
+      ${topicData.examples ? `
+      <div>
+        <h2 class="text-lg font-semibold text-purple-700 mb-2">Examples</h2>
+        <ul class="list-disc pl-6 text-gray-700">
+          ${topicData.examples.map(ex => `<li>${ex}</li>`).join("")}
+        </ul>
+      </div>` : ""}
+
+      ${topicData.takehome ? `
+      <div>
+        <h2 class="text-lg font-semibold text-purple-700 mb-2">Take Home</h2>
+        <p class="text-gray-700">${topicData.takehome}</p>
+      </div>` : ""}
+
+      ${topicData.exercises ? `
+      <div>
+        <h2 class="text-lg font-semibold text-purple-700 mb-2">Exercises</h2>
+        <ul class="list-decimal pl-6 text-gray-700">
+          ${topicData.exercises.map(ex => `<li>${ex}</li>`).join("")}
+        </ul>
+      </div>` : ""}
+
+      ${topicData.image ? `
+      <div class="mt-4">
+        <img src="${topicData.image}" alt="${topicData.title}" class="rounded shadow max-h-64 object-contain mx-auto">
+      </div>` : ""}
+    `;
+  } catch (err) {
+    titleEl.textContent = "Error loading notes";
+    contentEl.innerHTML = "<p class='text-red-600'>Could not load full notes file.</p>";
+  }
+}
+
+document.addEventListener('DOMContentLoaded', loadFullNotes);
+
+// Disable right click
+document.addEventListener('contextmenu', e => e.preventDefault());
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Topic Full Notes</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Prevent right click & copy */
+    body {
+      user-select: none;
     }
   </style>
 </head>
@@ -17,12 +182,12 @@
   <div class="max-w-4xl mx-auto py-8 px-4">
     <h1 id="topicTitle" class="text-2xl font-bold text-purple-700 mb-6">Loading...</h1>
 
-    <!-- Scrollable panel -->
+    <!-- Scrollable panel --
     <div class="bg-white shadow rounded p-6 max-h-[70vh] overflow-y-auto space-y-6" id="topicContent">
       <p class="text-gray-500">Fetching topic details...</p>
     </div>
 
-    <!-- Back button -->
+    <!-- Back button --
     <div class="mt-8 flex justify-between">
       <a href="javascript:history.back()" 
          class="px-4 py-2 bg-gray-200 text-gray-800 rounded hover:bg-gray-300">⬅ Back</a>
