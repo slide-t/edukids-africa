@@ -1,195 +1,142 @@
-
 [
   {
-    "id": "alphabet",
-    "title": "L'alphabet et les sons",
-    "content": "<p>Les élèves apprennent les 26 lettres de l'alphabet (A–Z) et les sons qu'elles produisent. Ils pratiquent en chantant la chanson de l'alphabet.</p>",
-    "examples": [
-      "A pour Avion ✈️",
-      "B pour Ballon ⚽",
-      "C pour Chat 🐱"
-    ],
-    "takehome": "1. Répétez l'alphabet à la maison. 2. Identifiez les lettres dans vos livres. 3. Chantez la chanson de l'alphabet chaque jour. 4. Dessinez des objets correspondant aux lettres. 5. Pratiquez les sons des lettres avec un adulte.",
+    "id": "alphabets",
+    "title": "Les lettres et leurs sons",
+    "content": "<p>Les élèves apprennent les 26 lettres de l'alphabet (A–Z) et les sons correspondants. Ils pratiquent en chantant la chanson de l'alphabet.</p>",
+    "examples": ["A pour Avion ✈️", "B pour Ballon ⚽", "C pour Chat 🐱"],
+    "takehome": "1. Dessinez les lettres sur du papier ou dans le sable. 2. Chantez la chanson de l'alphabet à la maison. 3. Identifiez des lettres sur les emballages et panneaux.",
     "exercises": [
-      "Écrire les lettres A à Z.",
-      "Relier la lettre à l'objet correspondant.",
-      "Prononcer les lettres à haute voix.",
-      "Colorier les lettres dans un livre d'activités.",
-      "Chercher des lettres dans l'environnement."
+      "Écoutez le son et choisissez la lettre correspondante.",
+      "Tracez chaque lettre 5 fois.",
+      "Associez chaque lettre à une image correcte."
     ],
-    "image": "images/alphabet.png"
+    "image": "images/french-alphabets.png",
+    "audio": "audio/french-alphabets.mp3"
   },
   {
-    "id": "nombres",
-    "title": "Nombres et comptage",
-    "content": "<p>Les élèves apprennent à compter, reconnaître et écrire les nombres de 1 à 20. Ils utilisent des objets pour pratiquer le comptage.</p>",
-    "examples": [
-      "Compter 10 balles ⚽",
-      "Compter 5 crayons ✏️",
-      "Dire les nombres de 1 à 20 à voix haute"
-    ],
-    "takehome": "1. Comptez les objets à la maison. 2. Jouez à des jeux de comptage. 3. Écrivez les nombres avec un crayon. 4. Chantez des chansons sur les nombres. 5. Comptez les marches en montant l'escalier.",
+    "id": "numbers",
+    "title": "Les nombres 1 à 10",
+    "content": "<p>Les élèves apprennent à compter, reconnaître et écrire les nombres de 1 à 10. Utilisez des objets autour pour compter et pratiquer.</p>",
+    "examples": ["1 – un 🍎", "2 – deux 🐶", "3 – trois ⚽"],
+    "takehome": "1. Comptez vos jouets à la maison. 2. Identifiez les nombres sur les calendriers et les bus. 3. Écrivez les nombres dans le sable ou avec de la craie.",
     "exercises": [
-      "Écrire les nombres de 1 à 20.",
-      "Dessiner 10 objets et les compter.",
-      "Relier les nombres aux objets.",
-      "Compter les jouets et écrire les nombres.",
-      "Tracer les nombres sur du papier ou dans le sable."
+      "Comptez 5 pommes et écrivez le nombre.",
+      "Choisissez le plus grand nombre entre 3 et 7.",
+      "Tracez les nombres 1 à 10 dans votre cahier."
     ],
-    "image": "images/numbers.png"
+    "image": "images/french-numbers.png",
+    "audio": "audio/french-numbers.mp3"
   },
   {
-    "id": "couleurs",
-    "title": "Couleurs et formes",
-    "content": "<p>Les élèves apprennent les couleurs de base (rouge, bleu, vert, jaune) et les formes géométriques (cercle, carré, triangle, rectangle).</p>",
-    "examples": [
-      "Rouge ❤️",
-      "Bleu 💙",
-      "Cercle ⚪",
-      "Carré ⬛"
-    ],
-    "takehome": "1. Identifier les couleurs dans la maison. 2. Dessiner des formes et les colorier. 3. Jouer à des jeux de tri par couleur. 4. Observer les formes des objets. 5. Discuter des couleurs avec un adulte.",
+    "id": "greetings",
+    "title": "Salutations et présentations",
+    "content": "<p>Les élèves apprennent à saluer et se présenter : Bonjour, Bonsoir, Salut, Je m'appelle ...</p>",
+    "examples": ["Bonjour! 🌞", "Salut! 👋", "Je m'appelle Emma."],
+    "takehome": "1. Pratiquez les salutations avec votre famille. 2. Présentez-vous à un ami ou un parent.",
     "exercises": [
-      "Colorier des cercles et des carrés.",
-      "Relier la couleur à l'objet correspondant.",
-      "Tracer des formes géométriques.",
-      "Nommer 5 couleurs différentes.",
-      "Dessiner un objet en utilisant plusieurs formes."
+      "Choisissez la bonne salutation pour le matin.",
+      "Complétez: Je m'___ Jean.",
+      "Associez chaque salutation à la bonne image."
     ],
-    "image": "images/colors-shapes.png"
+    "image": "images/french-greetings.png",
+    "audio": "audio/french-greetings.mp3"
   },
   {
-    "id": "salutations",
-    "title": "Salutations et expressions",
-    "content": "<p>Les élèves apprennent à dire bonjour, au revoir, merci, s'il vous plaît, et à se présenter correctement.</p>",
-    "examples": [
-      "Bonjour 👋",
-      "Merci 🙏",
-      "Au revoir 👋"
-    ],
-    "takehome": "1. Saluer les membres de la famille chaque jour. 2. Dire merci après avoir reçu quelque chose. 3. Pratiquer les expressions avec un ami. 4. Écouter et répéter les salutations. 5. Apprendre à poser des questions simples.",
+    "id": "colors",
+    "title": "Les couleurs",
+    "content": "<p>Les élèves apprennent les couleurs : rouge, bleu, jaune, vert, noir, blanc.</p>",
+    "examples": ["Rouge 🍎", "Bleu 🌊", "Jaune 🌟"],
+    "takehome": "1. Identifiez les couleurs dans votre chambre. 2. Dessinez et colorez avec les couleurs apprises.",
     "exercises": [
-      "Pratiquer les salutations avec un camarade.",
-      "Écrire 5 expressions courtes.",
-      "Dessiner une situation de salutation.",
-      "Associer les expressions à des images.",
-      "Répéter les phrases à haute voix."
+      "Cliquez sur la couleur correspondant à 'Bleu'.",
+      "Associez chaque objet à sa couleur correcte.",
+      "Tracez les lettres du mot 'Rouge'."
     ],
-    "image": "images/greetings.png"
+    "image": "images/french-colors.png",
+    "audio": "audio/french-colors.mp3"
   },
   {
-    "id": "famille",
-    "title": "Ma famille",
-    "content": "<p>Les élèves apprennent les membres de la famille et comment les nommer en français (mère, père, frère, sœur).</p>",
-    "examples": [
-      "Mère 👩",
-      "Père 👨",
-      "Frère 👦",
-      "Sœur 👧"
-    ],
-    "takehome": "1. Dessiner votre famille. 2. Dire les noms des membres de votre famille. 3. Parler de votre famille avec un adulte. 4. Apprendre à utiliser 'mon' et 'ma'. 5. Chanter des chansons sur la famille.",
-    "exercises": [
-      "Écrire les membres de la famille.",
-      "Relier les mots aux images.",
-      "Nommer votre frère et sœur.",
-      "Colorier les membres de la famille.",
-      "Créer une carte de votre famille."
-    ],
-    "image": "images/family.png"
-  },
-  {
-    "id": "animaux",
+    "id": "animals",
     "title": "Les animaux",
-    "content": "<p>Les élèves découvrent les animaux domestiques et sauvages, leur nom en français et les sons qu'ils font.</p>",
-    "examples": [
-      "Chat 🐱 – miaou",
-      "Chien 🐶 – ouaf",
-      "Vache 🐄 – meuh"
-    ],
-    "takehome": "1. Nommer les animaux vus à la maison ou au zoo. 2. Dessiner votre animal préféré. 3. Apprendre le son des animaux. 4. Jouer à deviner l'animal. 5. Parler des animaux avec un adulte.",
+    "content": "<p>Les élèves apprennent le nom des animaux courants et leurs sons : chat, chien, oiseau, vache.</p>",
+    "examples": ["Chat 🐱", "Chien 🐶", "Vache 🐄"],
+    "takehome": "1. Observez les animaux autour de vous. 2. Essayez de prononcer les noms des animaux à la maison.",
     "exercises": [
-      "Relier l'image de l'animal à son nom.",
-      "Écrire 5 animaux en français.",
-      "Imiter les sons des animaux.",
-      "Dessiner un animal et colorier.",
-      "Classer les animaux en domestiques et sauvages."
+      "Écoutez le son et identifiez l'animal.",
+      "Associez l'animal à la bonne image.",
+      "Complétez: Le ___ dit 'meow'."
     ],
-    "image": "images/animals.png"
+    "image": "images/french-animals.png",
+    "audio": "audio/french-animals.mp3"
   },
   {
-    "id": "aliments",
-    "title": "Les aliments",
-    "content": "<p>Les élèves apprennent le nom des aliments courants et comment les décrire en français.</p>",
-    "examples": [
-      "Pomme 🍎",
-      "Pain 🍞",
-      "Lait 🥛"
-    ],
-    "takehome": "1. Identifier les aliments dans la cuisine. 2. Nommer vos plats préférés en français. 3. Pratiquer les phrases 'J'aime' ou 'Je n'aime pas'. 4. Dessiner votre repas. 5. Goûter et dire le nom des aliments.",
+    "id": "family",
+    "title": "Les membres de la famille",
+    "content": "<p>Les élèves apprennent les membres de la famille : père, mère, frère, sœur, grand-mère, grand-père.</p>",
+    "examples": ["Père 👨", "Mère 👩", "Frère 👦"],
+    "takehome": "1. Dessinez votre famille et écrivez les noms en français. 2. Apprenez les mots en chantant.",
     "exercises": [
-      "Écrire les noms de 5 aliments.",
-      "Relier l'image à l'aliment.",
-      "Colorier les aliments.",
-      "Dire 'J'aime' ou 'Je n'aime pas' pour chaque aliment.",
-      "Créer une liste d'achats en français."
+      "Associez chaque membre de la famille à l'image correcte.",
+      "Complétez: Ma ___ est gentille.",
+      "Cliquez sur le mot correspondant à 'grand-père'."
     ],
-    "image": "images/food.png"
+    "image": "images/french-family.png",
+    "audio": "audio/french-family.mp3"
   },
   {
-    "id": "jouets",
-    "title": "Les jouets",
-    "content": "<p>Les élèves apprennent le nom des jouets en français et à décrire leur couleur ou forme.</p>",
-    "examples": [
-      "Balle ⚽",
-      "Poupée 🪆",
-      "Voiture 🚗"
-    ],
-    "takehome": "1. Identifier vos jouets préférés. 2. Décrire la couleur des jouets. 3. Jouer et dire le nom en français. 4. Dessiner vos jouets. 5. Partager vos jouets avec un camarade.",
+    "id": "fruits-vegetables",
+    "title": "Les fruits et légumes",
+    "content": "<p>Les élèves apprennent les fruits et légumes : pomme, banane, carotte, tomate.</p>",
+    "examples": ["Pomme 🍎", "Banane 🍌", "Carotte 🥕"],
+    "takehome": "1. Comptez les fruits dans votre panier. 2. Apprenez le nom de 5 légumes et fruits à la maison.",
     "exercises": [
-      "Écrire le nom de 5 jouets.",
-      "Colorier les jouets.",
-      "Associer le jouet à l'image.",
-      "Dire la couleur des jouets.",
-      "Classer les jouets par type."
+      "Cliquez sur le mot correspondant à l'image.",
+      "Associez le mot et l'image correcte.",
+      "Écrivez le mot 'Banane' dans votre cahier."
     ],
-    "image": "images/toys.png"
+    "image": "images/french-fruits.png",
+    "audio": "audio/french-fruits.mp3"
   },
   {
-    "id": "vêtements",
-    "title": "Les vêtements",
-    "content": "<p>Les élèves découvrent le nom des vêtements courants et apprennent à les décrire en couleur et en taille.</p>",
-    "examples": [
-      "Chemise 👕",
-      "Pantalon 👖",
-      "Chaussures 👟"
-    ],
-    "takehome": "1. Identifier vos vêtements à la maison. 2. Décrire vos habits préférés. 3. Apprendre les couleurs des vêtements. 4. Dessiner votre tenue. 5. Parler de vos habits avec un adulte.",
+    "id": "body-parts",
+    "title": "Les parties du corps",
+    "content": "<p>Les élèves apprennent les parties du corps : tête, bras, jambe, main, pied.</p>",
+    "examples": ["Tête 🧑", "Bras 💪", "Main ✋"],
+    "takehome": "1. Touchez les parties du corps en disant le mot en français. 2. Chantez la chanson 'Tête, Épaules, Genoux et Pieds'.",
     "exercises": [
-      "Écrire 5 vêtements.",
-      "Relier le mot à l'image.",
-      "Colorier les vêtements.",
-      "Classer les vêtements par type.",
-      "Dire la couleur des vêtements."
+      "Cliquez sur la bonne partie du corps.",
+      "Complétez: J'ai deux ___ pour marcher.",
+      "Associez le mot et l'image correcte."
     ],
-    "image": "images/clothes.png"
+    "image": "images/french-body.png",
+    "audio": "audio/french-body.mp3"
   },
   {
-    "id": "jours",
+    "id": "days-week",
     "title": "Les jours de la semaine",
-    "content": "<p>Les élèves apprennent les noms des jours de la semaine et leur ordre.</p>",
-    "examples": [
-      "Lundi, Mardi, Mercredi",
-      "Jeudi, Vendredi, Samedi",
-      "Dimanche"
-    ],
-    "takehome": "1. Réciter les jours de la semaine. 2. Chanter une chanson sur les jours. 3. Écrire les jours sur du papier. 4. Observer quel jour nous sommes. 5. Associer activités aux jours.",
+    "content": "<p>Les élèves apprennent les jours : lundi, mardi, mercredi, jeudi, vendredi, samedi, dimanche.</p>",
+    "examples": ["Lundi", "Mardi", "Mercredi"],
+    "takehome": "1. Écrivez le jour d'aujourd'hui chaque matin. 2. Chantez la chanson des jours de la semaine.",
     "exercises": [
-      "Écrire les 7 jours de la semaine.",
-      "Relier l'activité au jour correspondant.",
-      "Tracer les jours sur du papier.",
-      "Répéter les jours à haute voix.",
-      "Colorier les jours de la semaine."
+      "Cliquez sur le jour correct selon aujourd'hui.",
+      "Mettez les jours dans l'ordre correct.",
+      "Écrivez votre jour préféré."
     ],
-    "image": "images/days.png"
+    "image": "images/french-days.png",
+    "audio": "audio/french-days.mp3"
+  },
+  {
+    "id": "simple-phrases",
+    "title": "Phrases et commandes simples",
+    "content": "<p>Les élèves apprennent des phrases simples : 'Merci', 'S'il vous plaît', 'Excusez-moi', 'Ouvrez le livre'.</p>",
+    "examples": ["Merci 🙏", "S'il vous plaît 👐", "Excusez-moi 🤷‍♂️"],
+    "takehome": "1. Pratiquez ces phrases avec vos parents. 2. Utilisez ces phrases à la maison et en classe.",
+    "exercises": [
+      "Associez la phrase à l'image ou situation.",
+      "Complétez: ___ pour votre aide.",
+      "Cliquez sur la bonne phrase."
+    ],
+    "image": "images/french-phrases.png",
+    "audio": "audio/french-phrases.mp3"
   }
 ]
