@@ -1,1 +1,103 @@
 
+[
+  {
+    "id": "alphabet",
+    "title": "L'Alphabet Français",
+    "content": "<p>Les élèves apprennent les 26 lettres de l'alphabet français et leurs sons correspondants.</p>",
+    "examples": [
+      "A – /a/, B – /be/",
+      "C – /se/, D – /de/"
+    ],
+    "image": "images/french-alphabet.png"
+  },
+  {
+    "id": "couleurs",
+    "title": "Les Couleurs",
+    "content": "<p>Les enfants apprennent les couleurs courantes en français et les identifient dans leur environnement.</p>",
+    "examples": [
+      "Rouge ❤️, Bleu 💙, Vert 💚",
+      "Jaune 💛, Noir ⚫, Blanc ⚪"
+    ],
+    "image": "images/french-colors.png"
+  },
+  {
+    "id": "nombres",
+    "title": "Les Nombres (1–10)",
+    "content": "<p>Les élèves apprennent à compter de 1 à 10 en français.</p>",
+    "examples": [
+      "Un 1, Deux 2, Trois 3",
+      "Quatre 4, Cinq 5"
+    ],
+    "image": "images/french-numbers.png"
+  },
+  {
+    "id": "jours_semaine",
+    "title": "Les Jours de la Semaine",
+    "content": "<p>Les enfants apprennent les jours de la semaine en français.</p>",
+    "examples": [
+      "Lundi, Mardi, Mercredi",
+      "Jeudi, Vendredi, Samedi, Dimanche"
+    ],
+    "image": "images/french-days.png"
+  },
+  {
+    "id": "mois_annee",
+    "title": "Les Mois de l'Année",
+    "content": "<p>Les élèves apprennent les mois de l'année en français.</p>",
+    "examples": [
+      "Janvier, Février, Mars",
+      "Avril, Mai, Juin, Juillet, Août, Septembre, Octobre, Novembre, Décembre"
+    ],
+    "image": "images/french-months.png"
+  },
+  {
+    "id": "salutations",
+    "title": "Salutations et Formules de Politesse",
+    "content": "<p>Les enfants apprennent à saluer et à utiliser des formules de politesse en français.</p>",
+    "examples": [
+      "Bonjour 👋, Bonsoir 🌙",
+      "Merci 🙏, S'il vous plaît, Excusez-moi"
+    ],
+    "image": "images/french-greetings.png"
+  },
+  {
+    "id": "famille",
+    "title": "Ma Famille",
+    "content": "<p>Les élèves apprennent le vocabulaire des membres de la famille en français.</p>",
+    "examples": [
+      "Mère, Père, Frère, Sœur",
+      "Grand-mère, Grand-père, Oncle, Tante"
+    ],
+    "image": "images/french-family.png"
+  },
+  {
+    "id": "animaux",
+    "title": "Les Animaux",
+    "content": "<p>Les enfants apprennent le nom des animaux courants en français et leurs sons.</p>",
+    "examples": [
+      "Chien 🐶, Chat 🐱, Oiseau 🐦",
+      "Cheval 🐴, Vache 🐄, Poule 🐔"
+    ],
+    "image": "images/french-animals.png"
+  },
+  {
+    "id": "fruits_legumes",
+    "title": "Fruits et Légumes",
+    "content": "<p>Les élèves découvrent les fruits et légumes communs et apprennent leurs noms en français.</p>",
+    "examples": [
+      "Pomme 🍎, Banane 🍌, Orange 🍊",
+      "Carotte 🥕, Tomate 🍅, Laitue 🥬"
+    ],
+    "image": "images/french-fruits.png"
+  },
+  {
+    "id": "objets_quotidiens",
+    "title": "Objets du Quotidien",
+    "content": "<p>Les enfants apprennent le vocabulaire des objets utilisés quotidiennement en français.</p>",
+    "examples": [
+      "Livre 📖, Crayon ✏️, Chaise 🪑",
+      "Table 🛋️, Porte 🚪, Fenêtre 🪟"
+    ],
+    "image": "images/french-objects.png"
+  }
+]
