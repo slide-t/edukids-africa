@@ -1,32 +1,102 @@
 [
   {
-    "id": "living_non_living",
+    "id": "living_nonliving",
     "title": "Living and Non-Living Things",
-    "content": "<p>Pupils learn to identify things that are alive and things that are not. Activities include observing, sorting, and drawing objects.</p>",
+    "content": "<p>Pupils learn the difference between living and non-living things, and how to identify them in their surroundings.</p>",
     "examples": [
-      "Cat 🐱 (Living), Rock 🪨 (Non-living)",
-      "Tree 🌳 (Living), Chair 🪑 (Non-living)"
+      "Living: cat 🐱, tree 🌳",
+      "Non-living: chair 🪑, rock 🪨"
     ],
-    "image": "images/basic-science/living-non-living.png"
+    "image": "images/living-nonliving.png"
   },
   {
-    "id": "plants_around_us",
+    "id": "plants",
     "title": "Plants Around Us",
-    "content": "<p>Introduction to common plants and their uses. Pupils explore the environment to recognize different plants.</p>",
+    "content": "<p>Children learn about different types of plants, their uses, and how they grow.</p>",
     "examples": [
-      "Mango tree 🥭, Flower 🌹, Grass 🌱",
-      "Uses: Mango tree for fruits, Flowers for decoration"
+      "Mango tree 🥭, Sunflower 🌻",
+      "Uses: food, shade, medicine"
     ],
-    "image": "images/basic-science/plants.png"
+    "image": "images/plants.png"
   },
   {
-    "id": "animals_around_us",
+    "id": "animals",
     "title": "Animals Around Us",
-    "content": "<p>Learn about common animals, their habitats, and whether they are domestic or wild.</p>",
+    "content": "<p>Pupils learn about animals, their habitats, and basic care.</p>",
     "examples": [
-      "Dog 🐶 (Domestic), Lion 🦁 (Wild)",
-      "Cow 🐄 (Domestic), Elephant 🐘 (Wild)"
+      "Domestic: dog 🐶, cat 🐱",
+      "Wild: lion 🦁, elephant 🐘"
     ],
-    "image": "images/basic-science/animals.png"
+    "image": "images/animals.png"
+  },
+  {
+    "id": "body_parts",
+    "title": "Parts of the Body",
+    "content": "<p>Children learn the names and functions of major body parts.</p>",
+    "examples": [
+      "Head, Hand, Foot, Eyes, Ears",
+      "Function: seeing, hearing, walking"
+    ],
+    "image": "images/body-parts.png"
+  },
+  {
+    "id": "senses",
+    "title": "Our Five Senses",
+    "content": "<p>Pupils explore the five senses: sight, hearing, smell, taste, and touch.</p>",
+    "examples": [
+      "Sight: eyes 👀, Hearing: ears 👂",
+      "Taste: tongue 👅, Touch: skin ✋"
+    ],
+    "image": "images/senses.png"
+  },
+  {
+    "id": "seasons_weather",
+    "title": "Seasons and Weather",
+    "content": "<p>Children learn about different seasons, types of weather, and how weather affects daily life.</p>",
+    "examples": [
+      "Sunny ☀️, Rainy 🌧️, Windy 🌬️",
+      "Seasons: dry, rainy"
+    ],
+    "image": "images/seasons.png"
+  },
+  {
+    "id": "water",
+    "title": "Water and Its Uses",
+    "content": "<p>Pupils learn the importance of water, sources, and ways to conserve it.</p>",
+    "examples": [
+      "Uses: drinking 💧, cooking 🍲, cleaning 🧼",
+      "Sources: river, well, tap"
+    ],
+    "image": "images/water.png"
+  },
+  {
+    "id": "soil",
+    "title": "Soil and Its Types",
+    "content": "<p>Children explore different types of soil and their uses in gardening and farming.</p>",
+    "examples": [
+      "Clay, Sandy, Loamy",
+      "Uses: planting 🌱, building 🏠"
+    ],
+    "image": "images/soil.png"
+  },
+  {
+    "id": "air",
+    "title": "Air and Its Importance",
+    "content": "<p>Pupils learn about air, its role in life, and ways to keep it clean.</p>",
+    "examples": [
+      "Breathing 🌬️, Flying 🕊️",
+      "Pollution: smoke 🚬, dust 🌫️"
+    ],
+    "image": "images/air.png"
+  },
+  {
+    "id": "safety",
+    "title": "Safety at Home and School",
+    "content": "<p>Children learn basic safety rules at home and school to prevent accidents.</p>",
+    "examples": [
+      "Do not touch fire 🔥, Walk carefully 🏃‍♂️",
+      "Wash hands 🧼, Wear helmet 🚴"
+    ],
+    "image": "images/safety.png"
   }
 ]
