@@ -1,53 +1,106 @@
-[
-  {
-    "id": "numbers",
-    "title": "Numbers & Counting",
-    "content": "<p>Numbers are the basic foundation of mathematics. In this lesson, pupils will learn how to count, recognize, and write numbers from 1 to 20. Counting is the act of saying numbers in their correct order, while recognition means identifying the symbols for each number (1, 2, 3, etc.). Pupils are encouraged to use fingers, sticks, bottle tops, and objects around them for practice. Teachers should also introduce number songs and rhymes to make counting fun. Writing numbers can begin by tracing dotted patterns on paper or in sand with a stick. This helps children improve their motor skills and understanding. Counting forward and backward develops fluency and prepares them for addition and subtraction later.</p>",
-    "examples": [
-      "Count 10 bottle tops 🟢",
-      "Trace and write numbers 1–10",
-      "Say the numbers from 1 to 20 aloud"
-    ],
-    "takehome": "Practice counting objects at home such as spoons, chairs, or fruits. Try to identify the numbers on house doors, buses, or calendars.",
-    "exercises": [
-      "Write numbers 1 to 20 in your book.",
-      "Draw 5 balls ⚽ and count them.",
-      "Circle the bigger number: 3 or 7?"
-    ],
-    "image": "images/numbers-chart.png"
-  },
-  {
-    "id": "addition",
-    "title": "Simple Addition",
-    "content": "<p>Addition means putting two or more groups of things together to find out how many they are in total. It is one of the first operations children learn in arithmetic. For example, if a child has 2 apples and is given 3 more, they now have 5 apples altogether. Using real objects like pencils, toys, or fruits helps children understand addition practically. Teachers can also use number lines where pupils jump forward to add. Pupils should practice with small numbers first, then progress to bigger ones. This topic builds the foundation for multiplication and more complex calculations later in school. Repetition and real-life examples make learning addition easier and enjoyable.</p>",
-    "examples": [
-      "2 pencils ✏️ + 1 pencil ✏️ = 3 pencils",
-      "4 oranges 🍊 + 2 oranges 🍊 = 6 oranges",
-      "1 + 5 = 6"
-    ],
-    "takehome": "Whenever you receive more items at home (like sweets or biscuits), try to count how many you had before and how many you have now. That is addition!",
-    "exercises": [
-      "Add: 2 + 3 = ?",
-      "Add: 5 + 4 = ?",
-      "Mama gave you 3 sweets and Papa gave you 2. How many sweets in total?"
-    ],
-    "image": "images/addition-example.png"
-  },
-  {
-    "id": "subtraction",
-    "title": "Simple Subtraction",
-    "content": "<p>Subtraction means taking away from a group of things. It helps us find out how many are left after removing some items. For example, if you have 5 candies and you eat 2, you will have 3 left. Subtraction is the opposite of addition. Teachers can use practical objects like toys, fruits, and bottle tops to demonstrate subtraction. Number lines can also be used, where pupils count backwards. Subtraction is important in daily life because it helps us know what remains after spending, eating, or sharing items. Practicing with fun games like 'take away' with toys makes the learning process exciting for children.</p>",
-    "examples": [
-      "5 – 2 = 3",
-      "7 – 4 = 3",
-      "10 mangoes 🥭 – 6 = 4 mangoes"
-    ],
-    "takehome": "At home, share fruits or snacks with your siblings and count how many you have left. That is subtraction in real life.",
-    "exercises": [
-      "Subtract: 6 – 2 = ?",
-      "Subtract: 8 – 5 = ?",
-      "Ali had 7 balls and gave 3 to his friend. How many are left?"
-    ],
-    "image": "images/subtraction-example.png"
-  }
-]
+{
+  "subject": "Mathematics",
+  "year": "Year1",
+  "topics": [
+    {
+      "id": 1,
+      "title": "Counting Numbers 1–20",
+      "content": {
+        "explanation": "Counting is the process of saying numbers in order. In Year 1, we begin by learning numbers from 1 to 20. Each number represents a quantity. For example, if you have 5 oranges, you can count them one by one: 1, 2, 3, 4, 5.",
+        "examples": "Example: Count the pencils on your desk. If there are 7 pencils, you say: 1, 2, 3, 4, 5, 6, 7.",
+        "exercises": "1) Count the books in your school bag.\n2) Write numbers 1 to 20 in your notebook.",
+        "selfPractice": "At home, count spoons, cups, or shoes and record the number. Try counting forward and backward from 1–20."
+      }
+    },
+    {
+      "id": 2,
+      "title": "Addition within 10",
+      "content": {
+        "explanation": "Addition means putting numbers together. If you join 2 apples and 3 apples, you have 5 apples in total. We use the + sign for addition.",
+        "examples": "2 + 3 = 5; 4 + 1 = 5",
+        "exercises": "1) 5 + 2 = ?\n2) 3 + 4 = ?",
+        "selfPractice": "Take 5 stones, then add 2 more. Count them all. Practice writing your answers in your notebook."
+      }
+    },
+    {
+      "id": 3,
+      "title": "Subtraction within 10",
+      "content": {
+        "explanation": "Subtraction means taking away. If you have 5 bananas and eat 2, you have 3 left. We use the − sign for subtraction.",
+        "examples": "5 − 2 = 3; 6 − 1 = 5",
+        "exercises": "1) 7 − 3 = ?\n2) 8 − 2 = ?",
+        "selfPractice": "Use your toys: Take 6 toys, remove 2. Count what is left."
+      }
+    },
+    {
+      "id": 4,
+      "title": "Shapes (Circle, Square, Triangle, Rectangle)",
+      "content": {
+        "explanation": "Shapes are things we see every day. A circle is round like a ball. A square has 4 equal sides. A triangle has 3 sides. A rectangle has 2 long sides and 2 short sides.",
+        "examples": "Examples: The sun is a circle, a book is a rectangle, a slice of bread can be square.",
+        "exercises": "1) Draw a circle and a triangle in your notebook.\n2) Find 3 objects in your home shaped like rectangles.",
+        "selfPractice": "Walk around your home and list 5 objects and their shapes."
+      }
+    },
+    {
+      "id": 5,
+      "title": "Comparing Numbers",
+      "content": {
+        "explanation": "We compare numbers to see which is bigger or smaller. We use signs like > (greater than), < (less than), and = (equal to).",
+        "examples": "5 > 3 means 5 is greater than 3; 2 < 7 means 2 is less than 7.",
+        "exercises": "1) Compare: 8 and 5\n2) Compare: 4 and 9",
+        "selfPractice": "Compare numbers from your class attendance. Who has more books: you or your friend?"
+      }
+    },
+    {
+      "id": 6,
+      "title": "Ordinal Numbers (1st–10th)",
+      "content": {
+        "explanation": "Ordinal numbers tell position or order. If you stand in a line, the first person is 1st, the second person is 2nd, and so on.",
+        "examples": "In a race, the child who finishes before everyone is 1st.",
+        "exercises": "1) Who is 3rd in your class row?\n2) Write the ordinal numbers for 1 to 10.",
+        "selfPractice": "Arrange 5 toys in a line and label them 1st, 2nd, 3rd, etc."
+      }
+    },
+    {
+      "id": 7,
+      "title": "Telling Time (Hours only)",
+      "content": {
+        "explanation": "A clock tells us time. In Year 1, we learn the hour hand (short hand). If the hand points to 3, it is 3 o’clock.",
+        "examples": "When the short hand is on 7, we say 7 o’clock.",
+        "exercises": "1) Draw a clock showing 5 o’clock.\n2) What time do you eat lunch?",
+        "selfPractice": "Check the clock at home and write down 3 different o’clock times."
+      }
+    },
+    {
+      "id": 8,
+      "title": "Money (₦1, ₦5, ₦10)",
+      "content": {
+        "explanation": "Money helps us buy things. In Nigeria, our money is called Naira (₦). The smallest notes we learn are ₦1, ₦5, ₦10.",
+        "examples": "If you buy sweets for ₦5 and biscuits for ₦10, you spend ₦15.",
+        "exercises": "1) You have ₦10, you spend ₦4. How much is left?\n2) If you have ₦5 and ₦10, how much do you have?",
+        "selfPractice": "Ask your parents to show you small notes and coins. Try adding them together."
+      }
+    },
+    {
+      "id": 9,
+      "title": "Measurement (Length – long/short)",
+      "content": {
+        "explanation": "Measurement tells us how big or small something is. In Year 1, we compare objects to see which is longer or shorter.",
+        "examples": "A pencil is longer than a sharpener.",
+        "exercises": "1) Compare your book and your ruler. Which is longer?\n2) Is your shoe longer than your pen?",
+        "selfPractice": "At home, compare 3 items and write which is long and which is short."
+      }
+    },
+    {
+      "id": 10,
+      "title": "Word Problems (Simple Addition/Subtraction)",
+      "content": {
+        "explanation": "Word problems are real-life questions. You must read, think, and solve. Look for words like ‘altogether’ (addition) or ‘left’ (subtraction).",
+        "examples": "Ali has 3 mangoes. His sister gives him 2 more. How many does he have? (3 + 2 = 5)",
+        "exercises": "1) Bola has 6 sweets. She eats 2. How many are left?\n2) A boy has 4 pencils, his father buys him 3 more. How many pencils in total?",
+        "selfPractice": "Create your own story sum and solve it."
+      }
+    }
+  ]
+}
