@@ -263,5 +263,291 @@
         ]
       }
     ]
-  }
-]
+  },
+
+  {
+    "id": "year3",
+    "name": "Year 3",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "comprehension_passages",
+            "title": "Comprehension Passages",
+            "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=comprehension_passages"
+          },
+          {
+            "id": "letter_writing",
+            "title": "Letter Writing",
+            "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=letter_writing"
+          }
+        ]
+      },
+      {
+        "id": "french-language",
+        "name": "French Language",
+        "topics": [
+          {
+            "id": "basic_sentences",
+            "title": "Basic Sentences",
+            "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=basic_sentences"
+          },
+          {
+            "id": "simple_paragraphs",
+            "title": "Simple Paragraphs",
+            "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=simple_paragraphs"
+          }
+        ]
+      },
+      {
+        "id": "spellings_and_vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "common_words",
+            "title": "Common Words",
+            "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=common_words"
+          },
+          {
+            "id": "synonyms_and_antonyms",
+            "title": "Synonyms & Antonyms",
+            "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=synonyms_and_antonyms"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "multiplication_tables_1_to_10",
+            "title": "Multiplication Tables 1–10",
+            "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=multiplication_tables_1_to_10"
+          },
+          {
+            "id": "fractions_half_quarter",
+            "title": "Fractions (½, ¼)",
+            "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=fractions_half_quarter"
+          }
+        ]
+      },
+      {
+        "id": "ict",
+        "name": "ICT",
+        "topics": [
+          {
+            "id": "typing_basics",
+            "title": "Typing Basics",
+            "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=typing_basics"
+          },
+          {
+            "id": "using_mspaint",
+            "title": "Using MS Paint",
+            "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=using_mspaint"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "weather_and_seasons",
+            "title": "Weather & Seasons",
+            "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=weather_and_seasons"
+          },
+          {
+            "id": "plants_and_animals_habitats",
+            "title": "Plants & Animals Habitats",
+            "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=plants_and_animals_habitats"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "movement_and_games",
+            "title": "Movement & Games",
+            "detailsPage": "Lessons/Year3/physical-and-health-education/topics-details.html?topic=movement_and_games"
+          },
+          {
+            "id": "healthy_habits",
+            "title": "Healthy Habits",
+            "detailsPage": "Lessons/Year3/physical-and-health-education/topics-details.html?topic=healthy_habits"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "folk_songs_and_dances",
+            "title": "Folk Songs & Dances",
+            "detailsPage": "Lessons/Year3/cultural-and-creative-arts/topics-details.html?topic=folk_songs_and_dances"
+          },
+          {
+            "id": "simple_crafts",
+            "title": "Simple Crafts",
+            "detailsPage": "Lessons/Year3/cultural-and-creative-arts/topics-details.html?topic=simple_crafts"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "planting_seeds",
+            "title": "Planting Seeds",
+            "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=planting_seeds"
+          },
+          {
+            "id": "watering_and_care",
+            "title": "Watering & Care of Plants",
+            "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=watering_and_care"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "year4",
+    "name": "Year 4",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "paragraph_writing",
+            "title": "Paragraph Writing",
+            "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=paragraph_writing"
+          },
+          {
+            "id": "poems_and_rhymes",
+            "title": "Poems & Rhymes",
+            "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=poems_and_rhymes"
+          }
+        ]
+      },
+      {
+        "id": "french-language",
+        "name": "French Language",
+        "topics": [
+          {
+            "id": "describing_people",
+            "title": "Describing People",
+            "detailsPage": "Lessons/Year4/french-language/topics-details.html?topic=describing_people"
+          },
+          {
+            "id": "simple_dialogues",
+            "title": "Simple Dialogues",
+            "detailsPage": "Lessons/Year4/french-language/topics-details.html?topic=simple_dialogues"
+          }
+        ]
+      },
+      {
+        "id": "spellings_and_vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "compound_words",
+            "title": "Compound Words",
+            "detailsPage": "Lessons/Year4/spellings-and-vocabulary/topics-details.html?topic=compound_words"
+          },
+          {
+            "id": "prefixes_and_suffixes",
+            "title": "Prefixes & Suffixes",
+            "detailsPage": "Lessons/Year4/spellings-and-vocabulary/topics-details.html?topic=prefixes_and_suffixes"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "place_value_and_rounding",
+            "title": "Place Value & Rounding",
+            "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=place_value_and_rounding"
+          },
+          {
+            "id": "addition_subtraction_larger_numbers",
+            "title": "Addition & Subtraction of Larger Numbers",
+            "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=addition_subtraction_larger_numbers"
+          }
+        ]
+      },
+      {
+        "id": "ict",
+        "name": "ICT",
+        "topics": [
+          {
+            "id": "creating_documents",
+            "title": "Creating Documents",
+            "detailsPage": "Lessons/Year4/ict/topics-details.html?topic=creating_documents"
+          },
+          {
+            "id": "basic_spreadsheets",
+            "title": "Basic Spreadsheets",
+            "detailsPage": "Lessons/Year4/ict/topics-details.html?topic=basic_spreadsheets"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "states_of_matter",
+            "title": "States of Matter",
+            "detailsPage": "Lessons/Year4/basic-science/topics-details.html?topic=states_of_matter"
+          },
+          {
+            "id": "simple_physics",
+            "title": "Simple Physics Concepts",
+            "detailsPage": "Lessons/Year4/basic-science/topics-details.html?topic=simple_physics"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "team_games",
+            "title": "Team Games",
+            "detailsPage": "Lessons/Year4/physical-and-health-education/topics-details.html?topic=team_games"
+          },
+          {
+            "id": "nutrition_basics",
+            "title": "Nutrition Basics",
+            "detailsPage": "Lessons/Year4/physical-and-health-education/topics-details.html?topic=nutrition_basics"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "storytelling_and_drama",
+            "title": "Storytelling & Drama",
+            "detailsPage": "Lessons/Year4/cultural-and-creative-arts/topics-details.html?topic=storytelling_and_drama"
+          },
+          {
+            "id": "simple_painting",
+            "title": "Simple Painting",
+            "detailsPage": "Lessons/Year4/cultural-and-creative-arts/topics-details.html?topic=simple_painting"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+  
