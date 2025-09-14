@@ -981,7 +981,7 @@ header {
   
 </script>
   <script src="quiz.js" defer></script>
-<!-- ===== Access Modal Overlay ===== -->
+<!-- ===== Access Modal Overlay ===== --
 <div id="access-overlay">
   <div class="access-box">
     <h2>Enter Access Key</h2>
@@ -1062,6 +1062,54 @@ header {
     }
   });
 </script>
+
+<!-- Logo Modal -->
+<div id="logoModal" class="fixed inset-0 bg-purple-200 bg-opacity-40 flex flex-col items-center justify-center z-50 opacity-0 pointer-events-none">
+  <img src="https://slide-t.github.io/edukids-africa/images/logo.png" alt="EduKids Africa Logo" class="w-32 h-32 md:w-48 md:h-48 animate-zoom-rotate">
+  <p class="mt-4 text-xl md:text-2xl font-semibold text-purple-900 opacity-0 animate-fade">Welcome to EduKids Africa!</p>
+</div>
+
+<style>
+/* Zoom + Rotate Animation */
+@keyframes zoomRotate {
+  0% { transform: scale(0.5) rotate(0deg); opacity: 0; }
+  30% { transform: scale(1.2) rotate(20deg); opacity: 1; }
+  60% { transform: scale(1) rotate(-10deg); opacity: 1; }
+  100% { transform: scale(1.5) rotate(0deg); opacity: 0; }
+}
+
+.animate-zoom-rotate {
+  animation: zoomRotate 3s ease-in-out forwards;
+}
+
+/* Fade-in text */
+@keyframes fadeText {
+  0%, 30% { opacity: 0; }
+  40%, 70% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+.animate-fade {
+  animation: fadeText 3s ease-in-out forwards;
+}
+</style>
+
+<script>
+const logoModal = document.getElementById('logoModal');
+
+window.addEventListener('load', () => {
+  // Show modal
+  logoModal.style.opacity = '1';
+  logoModal.style.pointerEvents = 'auto';
+
+  // Hide modal after animation duration
+  setTimeout(() => {
+    logoModal.style.opacity = '0';
+    logoModal.style.pointerEvents = 'none';
+  }, 3000); // animation duration
+});
+</script>
+
   
 </body>
 </html>
