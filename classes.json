@@ -1317,8 +1317,195 @@
         ]
       }
     ]
-  }
-]
-
+  },
+  
+{
+  "id": "Year10",
+  "name": "Year 10 (SSS 1)",
+  "subjects": [
+    {
+      "id": "english-language",
+      "name": "English Language",
+      "topics": [
+        {
+          "id": "comprehension_sss1",
+          "title": "Comprehension Passages",
+          "detailsPage": "Lessons/Year10/english-language/topics-details.html?topic=comprehension_sss1"
+        },
+        {
+          "id": "essay_writing_sss1",
+          "title": "Essay Writing",
+          "detailsPage": "Lessons/Year10/english-language/topics-details.html?topic=essay_writing_sss1"
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        {
+          "id": "algebra_sss1",
+          "title": "Algebra Basics",
+          "detailsPage": "Lessons/Year10/mathematics/topics-details.html?topic=algebra_sss1"
+        },
+        {
+          "id": "geometry_sss1",
+          "title": "Plane Geometry",
+          "detailsPage": "Lessons/Year10/mathematics/topics-details.html?topic=geometry_sss1"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "topics": [
+        {
+          "id": "cell_structure_sss1",
+          "title": "Cell Structure & Functions",
+          "detailsPage": "Lessons/Year10/biology/topics-details.html?topic=cell_structure_sss1"
+        },
+        {
+          "id": "plant_growth_sss1",
+          "title": "Plant Growth & Development",
+          "detailsPage": "Lessons/Year10/biology/topics-details.html?topic=plant_growth_sss1"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "topics": [
+        {
+          "id": "atomic_structure_sss1",
+          "title": "Atomic Structure",
+          "detailsPage": "Lessons/Year10/chemistry/topics-details.html?topic=atomic_structure_sss1"
+        },
+        {
+          "id": "periodic_table_sss1",
+          "title": "Periodic Table Basics",
+          "detailsPage": "Lessons/Year10/chemistry/topics-details.html?topic=periodic_table_sss1"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "topics": [
+        {
+          "id": "motion_sss1",
+          "title": "Motion & Forces",
+          "detailsPage": "Lessons/Year10/physics/topics-details.html?topic=motion_sss1"
+        },
+        {
+          "id": "energy_sss1",
+          "title": "Energy & Work",
+          "detailsPage": "Lessons/Year10/physics/topics-details.html?topic=energy_sss1"
+        }
+      ]
+    },
+    {
+      "id": "agricultural-science",
+      "name": "Agricultural Science",
+      "topics": [
+        {
+          "id": "crop_production_sss1",
+          "title": "Crop Production Basics",
+          "detailsPage": "Lessons/Year10/agricultural-science/topics-details.html?topic=crop_production_sss1"
+        },
+        {
+          "id": "animal_husbandry_sss1",
+          "title": "Animal Husbandry Basics",
+          "detailsPage": "Lessons/Year10/agricultural-science/topics-details.html?topic=animal_husbandry_sss1"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "topics": [
+        {
+          "id": "map_reading_sss1",
+          "title": "Map Reading & Skills",
+          "detailsPage": "Lessons/Year10/geography/topics-details.html?topic=map_reading_sss1"
+        },
+        {
+          "id": "weather_climate_sss1",
+          "title": "Weather & Climate",
+          "detailsPage": "Lessons/Year10/geography/topics-details.html?topic=weather_climate_sss1"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "topics": [
+        {
+          "id": "basic_concepts_sss1",
+          "title": "Basic Economic Concepts",
+          "detailsPage": "Lessons/Year10/economics/topics-details.html?topic=basic_concepts_sss1"
+        },
+        {
+          "id": "demand_and_supply_sss1",
+          "title": "Demand & Supply",
+          "detailsPage": "Lessons/Year10/economics/topics-details.html?topic=demand_and_supply_sss1"
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce",
+      "topics": [
+        {
+          "id": "business_organization_sss1",
+          "title": "Business Organization",
+          "detailsPage": "Lessons/Year10/commerce/topics-details.html?topic=business_organization_sss1"
+        }
+      ]
+    },
+    {
+      "id": "financial-accounting",
+      "name": "Financial Accounting",
+      "topics": [
+        {
+          "id": "introduction_to_accounting_sss1",
+          "title": "Introduction to Accounting",
+          "detailsPage": "Lessons/Year10/financial-accounting/topics-details.html?topic=introduction_to_accounting_sss1"
+        }
+      ]
+    },
+    {
+      "id": "coding-and-programming",
+      "name": "Coding & Programming",
+      "topics": [
+        {
+          "id": "basic_programming_sss1",
+          "title": "Basic Programming Concepts",
+          "detailsPage": "Lessons/Year10/coding-and-programming/topics-details.html?topic=basic_programming_sss1"
+        },
+        {
+          "id": "simple_projects_sss1",
+          "title": "Simple Programming Projects",
+          "detailsPage": "Lessons/Year10/coding-and-programming/topics-details.html?topic=simple_projects_sss1"
+        }
+      ]
+    },
+    {
+      "id": "spellings-and-vocabulary",
+      "name": "Spellings & Vocabulary",
+      "topics": [
+        {
+          "id": "common_words_sss1",
+          "title": "Common Words & Meanings",
+          "detailsPage": "Lessons/Year10/spellings-and-vocabulary/topics-details.html?topic=common_words_sss1"
+        },
+        {
+          "id": "vocabulary_building_sss1",
+          "title": "Vocabulary Building",
+          "detailsPage": "Lessons/Year10/spellings-and-vocabulary/topics-details.html?topic=vocabulary_building_sss1"
+        }
+      ]
+    }
+  ]
+}
 
   
