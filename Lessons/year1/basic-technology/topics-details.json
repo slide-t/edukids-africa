@@ -1,1 +1,103 @@
 
+[
+  {
+    "id": "tools_intro",
+    "title": "Introduction to Tools",
+    "content": "<p>Pupils learn the names and basic uses of simple tools.</p>",
+    "examples": [
+      "Hammer 🔨, Ruler 📏, Scissors ✂️",
+      "Use: building, measuring, cutting"
+    ],
+    "image": "images/tools-intro.png"
+  },
+  {
+    "id": "using_hands",
+    "title": "Using Our Hands",
+    "content": "<p>Children practice fine motor skills using hands for various tasks.</p>",
+    "examples": [
+      "Drawing ✏️, Folding paper 📄",
+      "Holding objects properly ✋"
+    ],
+    "image": "images/using-hands.png"
+  },
+  {
+    "id": "safety_first",
+    "title": "Safety First",
+    "content": "<p>Pupils learn safety rules when using tools and equipment.</p>",
+    "examples": [
+      "Wear gloves 🧤, Keep sharp tools away 🗡️",
+      "Do not run while holding scissors ✂️"
+    ],
+    "image": "images/safety-first.png"
+  },
+  {
+    "id": "machines",
+    "title": "Machines Around Us",
+    "content": "<p>Children explore simple machines and their uses in daily life.</p>",
+    "examples": [
+      "Fan, Bicycle 🚲, Water pump",
+      "Use: make work easier"
+    ],
+    "image": "images/machines.png"
+  },
+  {
+    "id": "crafts",
+    "title": "Making Simple Crafts",
+    "content": "<p>Pupils learn to create simple crafts using everyday materials.</p>",
+    "examples": [
+      "Paper boat ⛵, Card greeting 🎴",
+      "Use glue 🖇️, scissors ✂️"
+    ],
+    "image": "images/crafts.png"
+  },
+  {
+    "id": "drawing_coloring",
+    "title": "Drawing and Coloring",
+    "content": "<p>Children practice drawing shapes, letters, and coloring them neatly.</p>",
+    "examples": [
+      "Draw a house 🏠, Color a tree 🌳",
+      "Use crayons 🖍️, pencils ✏️"
+    ],
+    "image": "images/drawing-coloring.png"
+  },
+  {
+    "id": "paper_cardboard",
+    "title": "Using Paper and Cardboard",
+    "content": "<p>Pupils explore paper and cardboard for creating projects and models.</p>",
+    "examples": [
+      "Paper plane ✈️, Cardboard box 📦",
+      "Fold, cut, and paste"
+    ],
+    "image": "images/paper-cardboard.png"
+  },
+  {
+    "id": "simple_structures",
+    "title": "Building Simple Structures",
+    "content": "<p>Children learn to construct simple structures using blocks or sticks.</p>",
+    "examples": [
+      "Tower 🗼, Bridge 🌉",
+      "Use glue 🖇️ or tape"
+    ],
+    "image": "images/simple-structures.png"
+  },
+  {
+    "id": "cleaning_tools",
+    "title": "Cleaning and Maintaining Tools",
+    "content": "<p>Pupils learn the importance of cleaning and keeping tools in good condition.</p>",
+    "examples": [
+      "Wipe scissors ✂️, Store properly 🧰",
+      "Do not leave tools on floor"
+    ],
+    "image": "images/cleaning-tools.png"
+  },
+  {
+    "id": "tech_daily_life",
+    "title": "Technology in Daily Life",
+    "content": "<p>Children explore how technology helps in our daily lives.</p>",
+    "examples": [
+      "Fan for cooling 🌬️, Lamp for light 💡",
+      "Telephone 📞, Bicycle 🚲"
+    ],
+    "image": "images/tech-daily-life.png"
+  }
+]
