@@ -276,6 +276,300 @@
         "options": ["Je joue avec mes amis", "Je joue avec mes amies", "Je joue avec mes amisse", "Je joue avec mes amii"],
         "answer": "Je joue avec mes amis"
       }
+    ],
+
+    "Level2": [
+      {
+        "question": "Choose the correct spelling for the French word 'school':",
+        "options": ["école", "ecole", "écol", "eckole"],
+        "answer": "école"
+      },
+      {
+        "question": "Select the correct French translation for 'teacher':",
+        "options": ["professeur", "prof", "profeur", "professur"],
+        "answer": "professeur"
+      },
+      {
+        "question": "Choose the correct French word for 'friend':",
+        "options": ["ami", "amie", "amii", "amme"],
+        "answer": "ami"
+      },
+      {
+        "question": "Select the correct French word for 'family':",
+        "options": ["famille", "famill", "famile", "famiy"],
+        "answer": "famille"
+      },
+      {
+        "question": "Choose the French word for 'house':",
+        "options": ["maison", "maizon", "meison", "mayson"],
+        "answer": "maison"
+      },
+      {
+        "question": "Select the French word for 'car':",
+        "options": ["voiture", "voituer", "voitur", "vouture"],
+        "answer": "voiture"
+      },
+      {
+        "question": "Choose the French word for 'tree':",
+        "options": ["arbre", "arbr", "arb", "arbrez"],
+        "answer": "arbre"
+      },
+      {
+        "question": "Select the correct French word for 'flower':",
+        "options": ["fleur", "flur", "flere", "fleure"],
+        "answer": "fleur"
+      },
+      {
+        "question": "Choose the correct French word for 'sun':",
+        "options": ["soleil", "solayl", "solliel", "soleille"],
+        "answer": "soleil"
+      },
+      {
+        "question": "Select the correct French word for 'moon':",
+        "options": ["lune", "loon", "luune", "lun"],
+        "answer": "lune"
+      },
+      {
+        "question": "Choose the correct French word for 'star':",
+        "options": ["étoile", "etoil", "étoille", "etoille"],
+        "answer": "étoile"
+      },
+      {
+        "question": "Select the correct French word for 'rain':",
+        "options": ["pluie", "pluw", "pluiee", "plu"],
+        "answer": "pluie"
+      },
+      {
+        "question": "Choose the correct French word for 'cloud':",
+        "options": ["nuage", "nuaj", "nuagee", "nuaage"],
+        "answer": "nuage"
+      },
+      {
+        "question": "Select the French word for 'river':",
+        "options": ["rivière", "riviere", "rivièree", "riviar"],
+        "answer": "rivière"
+      },
+      {
+        "question": "Choose the French word for 'mountain':",
+        "options": ["montagne", "montagn", "montain", "muntagne"],
+        "answer": "montagne"
+      },
+      {
+        "question": "Select the French word for 'sea':",
+        "options": ["mer", "mere", "mair", "mèr"],
+        "answer": "mer"
+      },
+      {
+        "question": "Choose the French word for 'sky':",
+        "options": ["ciel", "ceil", "cielle", "cyeel"],
+        "answer": "ciel"
+      },
+      {
+        "question": "Select the French word for 'hot':",
+        "options": ["chaud", "chaudt", "chaux", "chaudé"],
+        "answer": "chaud"
+      },
+      {
+        "question": "Choose the French word for 'cold':",
+        "options": ["froid", "froide", "froidd", "fruide"],
+        "answer": "froid"
+      },
+      {
+        "question": "Select the French word for 'big':",
+        "options": ["grand", "grande", "grannt", "graand"],
+        "answer": "grand"
+      },
+      {
+        "question": "Choose the French word for 'small':",
+        "options": ["petit", "petite", "petitt", "peti"],
+        "answer": "petit"
+      },
+      {
+        "question": "Select the French word for 'happy':",
+        "options": ["heureux", "heureuse", "heuru", "heureuxx"],
+        "answer": "heureux"
+      },
+      {
+        "question": "Choose the French word for 'sad':",
+        "options": ["triste", "trisst", "trist", "tristes"],
+        "answer": "triste"
+      },
+      {
+        "question": "Select the French word for 'angry':",
+        "options": ["en colère", "encolère", "en colere", "en colèrr"],
+        "answer": "en colère"
+      },
+      {
+        "question": "Choose the French word for 'tired':",
+        "options": ["fatigué", "fatigue", "fatiqué", "fatique"],
+        "answer": "fatigué"
+      },
+      {
+        "question": "Select the French word for 'hungry':",
+        "options": ["affamé", "afamé", "affamee", "afamee"],
+        "answer": "affamé"
+      },
+      {
+        "question": "Choose the French word for 'thirsty':",
+        "options": ["assoiffé", "assoyfé", "assoiffée", "assoife"],
+        "answer": "assoiffé"
+      },
+      {
+        "question": "Select the French word for 'clean':",
+        "options": ["propre", "propr", "proppre", "propree"],
+        "answer": "propre"
+      },
+      {
+        "question": "Choose the French word for 'dirty':",
+        "options": ["sale", "sal", "saale", "sall"],
+        "answer": "sale"
+      },
+      {
+        "question": "Select the French word for 'fast':",
+        "options": ["rapide", "rapd", "rapideé", "rapidd"],
+        "answer": "rapide"
+      },
+      {
+        "question": "Choose the French word for 'slow':",
+        "options": ["lent", "laent", "lente", "lentez"],
+        "answer": "lent"
+      },
+      {
+        "question": "Select the French word for 'morning':",
+        "options": ["matin", "matinn", "matinné", "matine"],
+        "answer": "matin"
+      },
+      {
+        "question": "Choose the French word for 'afternoon':",
+        "options": ["après-midi", "apres-midi", "après midy", "apres midy"],
+        "answer": "après-midi"
+      },
+      {
+        "question": "Select the French word for 'evening':",
+        "options": ["soir", "soire", "soirr", "soi"],
+        "answer": "soir"
+      },
+      {
+        "question": "Choose the French word for 'night':",
+        "options": ["nuit", "nuyt", "nuitt", "nui"],
+        "answer": "nuit"
+      },
+      {
+        "question": "Select the French word for 'Monday':",
+        "options": ["lundi", "lundii", "lundié", "lundié"],
+        "answer": "lundi"
+      },
+      {
+        "question": "Choose the French word for 'Tuesday':",
+        "options": ["mardi", "mardii", "mardé", "marri"],
+        "answer": "mardi"
+      },
+      {
+        "question": "Select the French word for 'Wednesday':",
+        "options": ["mercredi", "mercreddi", "mercrédi", "mercrdi"],
+        "answer": "mercredi"
+      },
+      {
+        "question": "Choose the French word for 'Thursday':",
+        "options": ["jeudi", "jeudii", "jeudé", "jeudy"],
+        "answer": "jeudi"
+      },
+      {
+        "question": "Select the French word for 'Friday':",
+        "options": ["vendredi", "vendredii", "vendré", "vendredié"],
+        "answer": "vendredi"
+      },
+      {
+        "question": "Choose the French word for 'Saturday':",
+        "options": ["samedi", "samedié", "samediu", "samdi"],
+        "answer": "samedi"
+      },
+      {
+        "question": "Select the French word for 'Sunday':",
+        "options": ["dimanche", "dimanch", "dimenche", "dima"],
+        "answer": "dimanche"
+      },
+      {
+        "question": "Choose the French word for 'red':",
+        "options": ["rouge", "roujee", "roug", "rougé"],
+        "answer": "rouge"
+      },
+      {
+        "question": "Select the French word for 'blue':",
+        "options": ["bleu", "bleue", "bluu", "bleuue"],
+        "answer": "bleu"
+      },
+      {
+        "question": "Choose the French word for 'green':",
+        "options": ["vert", "verté", "vertt", "verre"],
+        "answer": "vert"
+      },
+      {
+        "question": "Select the French word for 'yellow':",
+        "options": ["jaune", "jauune", "jaun", "jaunne"],
+        "answer": "jaune"
+      },
+      {
+        "question": "Choose the French word for 'black':",
+        "options": ["noir", "noire", "noirr", "noyr"],
+        "answer": "noir"
+      },
+      {
+        "question": "Select the French word for 'white':",
+        "options": ["blanc", "blancs", "blancc", "blanck"],
+        "answer": "blanc"
+      },
+      {
+        "question": "Choose the French word for 'one':",
+        "options": ["un", "une", "unn", "uun"],
+        "answer": "un"
+      },
+      {
+        "question": "Select the French word for 'two':",
+        "options": ["deux", "deu", "deuxx", "deuxé"],
+        "answer": "deux"
+      },
+      {
+        "question": "Choose the French word for 'three':",
+        "options": ["trois", "troi", "troiss", "troissé"],
+        "answer": "trois"
+      },
+      {
+        "question": "Select the French word for 'four':",
+        "options": ["quatre", "quatree", "quatr", "quatreé"],
+        "answer": "quatre"
+      },
+      {
+        "question": "Choose the French word for 'five':",
+        "options": ["cinq", "cinqk", "cink", "cinnq"],
+        "answer": "cinq"
+      },
+      {
+        "question": "Select the French word for 'six':",
+        "options": ["six", "siss", "sixx", "siks"],
+        "answer": "six"
+      },
+      {
+        "question": "Choose the French word for 'seven':",
+        "options": ["sept", "sepp", "septt", "septy"],
+        "answer": "sept"
+      },
+      {
+        "question": "Select the French word for 'eight':",
+        "options": ["huit", "huitte", "huitt", "huyt"],
+        "answer": "huit"
+      },
+      {
+        "question": "Choose the French word for 'nine':",
+        "options": ["neuf", "neuff", "nuef", "nueff"],
+        "answer": "neuf"
+      },
+      {
+        "question": "Select the French word for 'ten':",
+        "options": ["dix", "dis", "dixx", "dizz"],
+        "answer": "dix"
+      }
     ]
   }
 }
+
