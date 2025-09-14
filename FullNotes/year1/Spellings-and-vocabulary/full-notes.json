@@ -1,0 +1,185 @@
+[
+  {
+    "id": "alphabets",
+    "title": "Alphabets and Sounds",
+    "content": "<p>Pupils learn the 26 letters of the alphabet (A–Z) and the sounds they make. Practice saying the alphabet aloud and recognizing letters in words.</p>",
+    "examples": [
+      "A for Apple 🍎",
+      "B for Ball ⚽",
+      "C for Cat 🐱"
+    ],
+    "takehome": "Practice saying and writing each letter of the alphabet daily. Try finding letters in books or on signs at home.",
+    "exercises": [
+      "Write each letter from A to Z.",
+      "Circle the letters you see in a page of your storybook.",
+      "Match letters with pictures that start with the same letter."
+    ],
+    "image": "images/alphabets.png"
+  },
+  {
+    "id": "simple_words",
+    "title": "Simple Words",
+    "content": "<p>Children learn to read and write simple words by combining letters and sounds.</p>",
+    "examples": [
+      "cat 🐱, dog 🐶, sun ☀️",
+      "mat, bat, hat"
+    ],
+    "takehome": "Read aloud simple words daily. Practice writing them neatly in your notebook.",
+    "exercises": [
+      "Write 5 simple words from your lesson.",
+      "Read 5 words aloud and spell them.",
+      "Draw a picture and label it with the correct word."
+    ],
+    "image": "images/simple-words.png"
+  },
+  {
+    "id": "common_nouns",
+    "title": "Common Nouns",
+    "content": "<p>Children identify common nouns like people, places, and things.</p>",
+    "examples": [
+      "school, teacher, house, ball",
+      "tree, car, book, friend"
+    ],
+    "takehome": "Find objects around your home and name them as nouns.",
+    "exercises": [
+      "Write 5 nouns you see in your room.",
+      "Circle the nouns in a short story.",
+      "Match nouns with pictures."
+    ],
+    "image": "images/nouns.png"
+  },
+  {
+    "id": "vowel_sounds",
+    "title": "Vowel Sounds",
+    "content": "<p>Learn the short and long sounds of vowels A, E, I, O, U in words.</p>",
+    "examples": [
+      "A – cat / cake",
+      "E – bed / bee",
+      "I – sit / kite"
+    ],
+    "takehome": "Practice pronouncing vowels correctly in words.",
+    "exercises": [
+      "Underline the vowels in 5 words.",
+      "Say 5 words with long vowel sounds.",
+      "Write 5 words with short vowels."
+    ],
+    "image": "images/vowels.png"
+  },
+  {
+    "id": "consonant_sounds",
+    "title": "Consonant Sounds",
+    "content": "<p>Learn the sounds made by consonants and how they form words.</p>",
+    "examples": [
+      "B – ball, bat",
+      "C – cat, cup",
+      "D – dog, duck"
+    ],
+    "takehome": "Practice pronouncing consonants clearly and forming simple words.",
+    "exercises": [
+      "Write 5 words starting with 'B'.",
+      "Circle consonants in 5 words.",
+      "Match consonants to pictures."
+    ],
+    "image": "images/consonants.png"
+  },
+  {
+    "id": "blends",
+    "title": "Consonant Blends",
+    "content": "<p>Children learn to blend two or more consonants to form syllables and words.</p>",
+    "examples": [
+      "bl – black, block",
+      "st – stop, star",
+      "cr – crab, cry"
+    ],
+    "takehome": "Practice reading words with consonant blends.",
+    "exercises": [
+      "Write 5 words with 'st'.",
+      "Read 5 words with 'cr' aloud.",
+      "Circle blends in a short passage."
+    ],
+    "image": "images/blends.png"
+  },
+  {
+    "id": "sight_words",
+    "title": "Sight Words",
+    "content": "<p>Children recognize frequently used words by sight without sounding them out.</p>",
+    "examples": [
+      "the, and, is, to, he",
+      "she, it, we, you, me"
+    ],
+    "takehome": "Practice reading sight words daily for quick recognition.",
+    "exercises": [
+      "Read 10 sight words aloud.",
+      "Write 10 sight words in your notebook.",
+      "Find 5 sight words in a storybook."
+    ],
+    "image": "images/sight-words.png"
+  },
+  {
+    "id": "rhyming_words",
+    "title": "Rhyming Words",
+    "content": "<p>Learn words that rhyme to improve phonemic awareness.</p>",
+    "examples": [
+      "cat – hat – mat",
+      "dog – log – frog",
+      "sun – run – fun"
+    ],
+    "takehome": "Practice making rhymes with everyday words.",
+    "exercises": [
+      "Write 5 rhyming pairs.",
+      "Read 5 rhyming pairs aloud.",
+      "Match pictures of rhyming words."
+    ],
+    "image": "images/rhymes.png"
+  },
+  {
+    "id": "synonyms_antonyms",
+    "title": "Synonyms and Antonyms",
+    "content": "<p>Children learn words with similar or opposite meanings.</p>",
+    "examples": [
+      "happy – joyful / sad – unhappy",
+      "big – large / small – tiny"
+    ],
+    "takehome": "Find synonyms and antonyms in your reading books.",
+    "exercises": [
+      "Write 5 pairs of synonyms.",
+      "Write 5 pairs of antonyms.",
+      "Circle synonyms and underline antonyms in a passage."
+    ],
+    "image": "images/synonyms-antonyms.png"
+  },
+  {
+    "id": "spelling_rules",
+    "title": "Basic Spelling Rules",
+    "content": "<p>Children learn simple spelling rules like adding -s for plurals, using -ed for past tense, etc.</p>",
+    "examples": [
+      "cat → cats",
+      "play → played",
+      "run → running"
+    ],
+    "takehome": "Practice spelling words using the rules taught in class.",
+    "exercises": [
+      "Write 5 words in plural form.",
+      "Write 5 words in past tense.",
+      "Spell 5 new words correctly."
+    ],
+    "image": "images/spelling-rules.png"
+  },
+  {
+    "id": "writing_practice",
+    "title": "Writing Practice",
+    "content": "<p>Children practice writing letters, words, and short sentences correctly.</p>",
+    "examples": [
+      "I see a cat.",
+      "The sun is bright.",
+      "We play in the park."
+    ],
+    "takehome": "Practice writing simple sentences neatly every day.",
+    "exercises": [
+      "Write 5 simple sentences.",
+      "Copy 5 words from the board.",
+      "Draw a picture and write a sentence about it."
+    ],
+    "image": "images/writing-practice.png"
+  }
+]
