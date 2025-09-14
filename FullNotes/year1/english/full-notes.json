@@ -166,6 +166,77 @@
     ],
     "image": "images/picture-reading.png"
   },
-  {
+  
+{
     "id": "opposites",
-    "title": "Oppos
+    "title": "Opposites",
+    "content": "<p>Pupils learn words that have opposite meanings, which helps expand vocabulary and understanding of language. Examples include big ↔ small, hot ↔ cold. Teachers can use flashcards, pictures, and objects to demonstrate opposites. Children can also act out opposites, play matching games, and identify opposites in stories. Recognizing opposites improves comprehension, critical thinking, and communication skills. This topic prepares pupils for more advanced language concepts in later lessons.</p>",
+    "examples": [
+      "big ↔ small",
+      "hot ↔ cold",
+      "fast ↔ slow",
+      "happy ↔ sad"
+    ],
+    "takehome": [
+      "Find 5 pairs of opposites at home.",
+      "Use opposites in simple sentences.",
+      "Act out opposite words with family or friends.",
+      "Play games to identify opposites in your environment.",
+      "Draw pictures representing opposites."
+    ],
+    "exercises": [
+      "Write the opposite of: tall, hot, fast.",
+      "Match words with their opposites.",
+      "Make 3 sentences using opposites."
+    ],
+    "image": "images/opposites.png"
+  },
+  {
+    "id": "listening",
+    "title": "Listening Skills",
+    "content": "<p>Pupils practice listening carefully to instructions, stories, and sounds. Good listening skills improve understanding, concentration, and communication. Teachers can give simple instructions like 'Clap your hands 👏' or 'Stand up', and pupils follow them. Listening games, storytelling, and identifying sounds in the classroom or home environment are useful activities. Developing listening skills prepares children for reading comprehension, speaking, and learning in all subjects.</p>",
+    "examples": [
+      "Teacher says: Clap your hands 👏",
+      "Teacher says: Stand up",
+      "Listen to a short story and answer questions",
+      "Identify sounds around you: dog 🐶, bird 🐦, car 🚗"
+    ],
+    "takehome": [
+      "Listen carefully to instructions at home.",
+      "Follow simple verbal commands.",
+      "Listen to short stories and summarize them.",
+      "Identify household sounds and name them.",
+      "Practice listening games with siblings or parents."
+    ],
+    "exercises": [
+      "Listen to a sentence and repeat it.",
+      "Draw what you hear in a short story.",
+      "Answer questions based on what you heard."
+    ],
+    "image": "images/listening.png"
+  },
+  {
+    "id": "dictation",
+    "title": "Simple Dictation",
+    "content": "<p>Pupils practice writing words or short sentences as dictated by the teacher. Dictation reinforces listening, spelling, and writing skills. Teachers read words slowly, and children write them correctly in their notebooks. Starting with simple words like sun 🌞, cat 🐱, or book 📘 helps pupils gain confidence. Gradually, pupils progress to short sentences. Dictation activities improve concentration, accuracy, and reading skills, which are essential for effective communication and literacy.</p>",
+    "examples": [
+      "Write: sun 🌞",
+      "Write: The cat 🐱",
+      "Write: I am happy 😊",
+      "Write: The dog runs 🐶"
+    ],
+    "takehome": [
+      "Practice writing simple words at home.",
+      "Ask a family member to dictate words for you.",
+      "Copy simple sentences from storybooks.",
+      "Check your spelling carefully.",
+      "Read aloud what you have written."
+    ],
+    "exercises": [
+      "Write 5 words as dictated by a parent.",
+      "Write a simple sentence dictated by a teacher or parent.",
+      "Correct spelling mistakes in a short passage."
+    ],
+    "image": "images/dictation.png"
+  }
+]
