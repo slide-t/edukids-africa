@@ -190,6 +190,88 @@
 </style>
 
 <script>
+const subjectList = document.getElementById("subject-list");
+const searchInput = document.getElementById("searchInput");
+let subjects = {};
+
+// Fetch subjects.json
+async function loadSubjects() {
+  try {
+    const res = await fetch('subjects.json');
+    subjects = await res.json();
+    renderSubjects();
+  } catch (err) {
+    console.error("Failed to load subjects.json", err);
+    subjectList.innerHTML = "<p class='text-red-600 text-center'>Failed to load subjects.</p>";
+  }
+}
+
+// Render subjects with dynamic accordion
+function renderSubjects(filter = "") {
+  subjectList.innerHTML = "";
+
+  Object.keys(subjects).forEach(category => {
+    const groupDiv = document.createElement("div");
+    groupDiv.className = "subject-group bg-white rounded-xl shadow mb-4";
+
+    // Category heading
+    const heading = document.createElement("h2");
+    heading.className = "flex justify-between items-center cursor-pointer text-lg font-semibold text-gray-900 px-4 py-3 border-b border-gray-300";
+    heading.innerHTML = `${category} <i class="fas fa-chevron-down transition-transform duration-300"></i>`;
+
+    // Subjects container
+    const listDiv = document.createElement("div");
+    listDiv.className = "subject-list max-h-0 overflow-hidden transition-all duration-500 flex flex-col";
+
+    // Add filtered subjects
+    subjects[category]
+      .filter(sub => sub.toLowerCase().includes(filter.toLowerCase()))
+      .forEach(sub => {
+        const item = document.createElement("a");
+        item.className = "block px-4 py-2 rounded-lg bg-gray-100 hover:bg-yellow-400 hover:text-gray-900 transition transform scale-100";
+        item.href = `quiz.html?category=${encodeURIComponent(category)}&subject=${encodeURIComponent(sub)}`;
+        item.textContent = sub;
+        listDiv.appendChild(item);
+      });
+
+    // Accordion toggle
+    heading.addEventListener("click", () => {
+      if (listDiv.scrollHeight > 0) {
+        const expanded = listDiv.classList.contains("max-h-[999px]");
+        listDiv.style.maxHeight = expanded ? "0" : listDiv.scrollHeight + "px";
+        listDiv.classList.toggle("max-h-0", expanded);
+        listDiv.classList.toggle("max-h-[999px]", !expanded);
+      }
+      const icon = heading.querySelector("i");
+      icon.classList.toggle("rotate-180");
+    });
+
+    // Append to group
+    groupDiv.appendChild(heading);
+    groupDiv.appendChild(listDiv);
+    subjectList.appendChild(groupDiv);
+
+    // Auto-expand matching category when filtering
+    if (filter !== "" && category.toLowerCase().includes(filter.toLowerCase())) {
+      listDiv.style.maxHeight = listDiv.scrollHeight + "px";
+      listDiv.classList.replace("max-h-0", "max-h-[999px]");
+      heading.querySelector("i").classList.add("rotate-180");
+    }
+  });
+}
+
+// Search filtering
+searchInput.addEventListener("input", e => {
+  const value = e.target.value.trim();
+  renderSubjects(value);
+});
+
+// Load subjects on page load
+loadSubjects();
+</script>
+
+  <!--
+<script>
   // Year auto-update
   document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -328,5 +410,6 @@
     });
     
   </script>
+  -->
 </body>
 </html>
