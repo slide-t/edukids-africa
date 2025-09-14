@@ -5,49 +5,187 @@
     "content": "<p>Numbers are the basic foundation of mathematics. In this lesson, pupils will learn how to count, recognize, and write numbers from 1 to 20. Counting is the act of saying numbers in their correct order, while recognition means identifying the symbols for each number (1, 2, 3, etc.). Pupils are encouraged to use fingers, sticks, bottle tops, and objects around them for practice. Teachers should also introduce number songs and rhymes to make counting fun. Writing numbers can begin by tracing dotted patterns on paper or in sand with a stick. This helps children improve their motor skills and understanding. Counting forward and backward develops fluency and prepares them for addition and subtraction later.</p>",
     "examples": [
       "Count 10 bottle tops 🟢",
-      "Trace and write numbers 1–10",
-      "Say the numbers from 1 to 20 aloud"
+      "Trace and write numbers 1–10 ✍️",
+      "Say the numbers from 1 to 20 aloud 🎵"
     ],
-    "takehome": "Practice counting objects at home such as spoons, chairs, or fruits. Try to identify the numbers on house doors, buses, or calendars.",
+    "takehome": "1. Practice counting your toys at home. 2. Count the chairs and tables in your house. 3. Look for numbers on calendars, buses, and houses. 4. Sing number rhymes like 'One, Two, Buckle My Shoe'. 5. Try writing numbers in the sand or with chalk on the floor.",
     "exercises": [
-      "Write numbers 1 to 20 in your book.",
-      "Draw 5 balls ⚽ and count them.",
-      "Circle the bigger number: 3 or 7?"
+      "Write numbers 1 to 20 neatly in your book.",
+      "Draw 5 balls ⚽⚽⚽⚽⚽ and count them aloud.",
+      "Circle the bigger number: 3 or 7?",
+      "Count 12 spoons in the kitchen and write the number.",
+      "Trace the dotted number 5 five times."
     ],
     "image": "images/numbers-chart.png"
   },
   {
     "id": "addition",
     "title": "Simple Addition",
-    "content": "<p>Addition means putting two or more groups of things together to find out how many they are in total. It is one of the first operations children learn in arithmetic. For example, if a child has 2 apples and is given 3 more, they now have 5 apples altogether. Using real objects like pencils, toys, or fruits helps children understand addition practically. Teachers can also use number lines where pupils jump forward to add. Pupils should practice with small numbers first, then progress to bigger ones. This topic builds the foundation for multiplication and more complex calculations later in school. Repetition and real-life examples make learning addition easier and enjoyable.</p>",
+    "content": "<p>Addition means putting two or more groups of things together to find the total. For example, 2 pencils plus 3 pencils equals 5 pencils. Pupils learn addition by using real-life objects such as fruits, toys, bottle tops, and blocks. Teachers can also introduce number lines where pupils jump forward to add. Starting with small numbers builds confidence before moving to larger numbers. Addition is a foundation for multiplication and higher mathematics later in life.</p>",
     "examples": [
       "2 pencils ✏️ + 1 pencil ✏️ = 3 pencils",
       "4 oranges 🍊 + 2 oranges 🍊 = 6 oranges",
       "1 + 5 = 6"
     ],
-    "takehome": "Whenever you receive more items at home (like sweets or biscuits), try to count how many you had before and how many you have now. That is addition!",
+    "takehome": "1. Add biscuits you eat at home. 2. Add the number of shoes 👟👟 you and your sibling wear. 3. When Mama gives you sweets twice, add them together. 4. Use coins to practice addition. 5. Add family members in the house (Papa + Mama + Children).",
     "exercises": [
       "Add: 2 + 3 = ?",
       "Add: 5 + 4 = ?",
-      "Mama gave you 3 sweets and Papa gave you 2. How many sweets in total?"
+      "Mama gave you 3 sweets 🍬 and Papa gave you 2 sweets 🍬. How many sweets in total?",
+      "Draw 2 balls ⚽ and 3 balls ⚽. Count all together.",
+      "Add: 7 + 2 = ?"
     ],
     "image": "images/addition-example.png"
   },
   {
     "id": "subtraction",
     "title": "Simple Subtraction",
-    "content": "<p>Subtraction means taking away from a group of things. It helps us find out how many are left after removing some items. For example, if you have 5 candies and you eat 2, you will have 3 left. Subtraction is the opposite of addition. Teachers can use practical objects like toys, fruits, and bottle tops to demonstrate subtraction. Number lines can also be used, where pupils count backwards. Subtraction is important in daily life because it helps us know what remains after spending, eating, or sharing items. Practicing with fun games like 'take away' with toys makes the learning process exciting for children.</p>",
+    "content": "<p>Subtraction means taking away from a group of objects to see how many are left. For example, if you have 5 oranges and eat 2, then 3 are left. Subtraction is the opposite of addition. Pupils can practice subtraction using toys, snacks, or bottle tops. Teachers can also use number lines by moving backwards. Subtraction is useful in everyday life when sharing food, spending money, or dividing items. Repetition with real-life examples makes subtraction easy to understand.</p>",
     "examples": [
       "5 – 2 = 3",
       "7 – 4 = 3",
       "10 mangoes 🥭 – 6 = 4 mangoes"
     ],
-    "takehome": "At home, share fruits or snacks with your siblings and count how many you have left. That is subtraction in real life.",
+    "takehome": "1. Share fruits with siblings and count how many are left. 2. Count the number of sweets before and after eating some. 3. Remove some bottle tops from a group and count what remains. 4. Use your toys to play 'take away' games. 5. Ask Mama for 5 beans, give away 2, and count what you have left.",
     "exercises": [
       "Subtract: 6 – 2 = ?",
       "Subtract: 8 – 5 = ?",
-      "Ali had 7 balls and gave 3 to his friend. How many are left?"
+      "Ali had 7 balls ⚽⚽⚽⚽⚽⚽⚽ and gave 3 to his friend. How many are left?",
+      "Subtract: 10 – 4 = ?",
+      "There are 9 birds 🐦 in a tree. 5 fly away. How many are left?"
     ],
     "image": "images/subtraction-example.png"
+  },
+  {
+    "id": "shapes",
+    "title": "Shapes and Colors",
+    "content": "<p>Shapes and colors help children recognize and describe the world around them. Common shapes include circle, square, rectangle, and triangle. For example, a ball is a circle, a book is a rectangle, and a slice of bread can be a square. Linking shapes to real-life objects makes learning fun. Pupils also learn primary colors (red, blue, yellow) and secondary colors (green, orange, purple). This builds observation and creativity.</p>",
+    "examples": [
+      "A ball ⚽ is a circle",
+      "A book 📘 is a rectangle",
+      "A slice of pizza 🍕 is a triangle"
+    ],
+    "takehome": "1. Identify circles at home like plates 🍽️. 2. Point to rectangles like doors 🚪. 3. Find triangles in rooftops. 4. Draw and color each shape. 5. Arrange colored blocks by shape and size.",
+    "exercises": [
+      "Draw a circle ⭕, square ⬜, and triangle 🔺.",
+      "Color the circle red 🔴 and the square blue 🔵.",
+      "Name two objects in your home that are rectangles.",
+      "Circle the triangle in your exercise book.",
+      "Match shapes with objects: Ball, Book, Pizza slice."
+    ],
+    "image": "images/shapes.png"
+  },
+  {
+    "id": "counting_twos",
+    "title": "Counting in Twos",
+    "content": "<p>Counting in twos is the first step toward multiplication. Pupils skip numbers and count faster. For example: 2, 4, 6, 8, 10. Pupils can practice with pairs of shoes, eyes, ears, and socks. Skip counting builds multiplication skills and prepares pupils for times tables. Teachers can also use number charts where pupils highlight every second number.</p>",
+    "examples": [
+      "2, 4, 6, 8, 10...",
+      "Count pairs of shoes 👟👟"
+    ],
+    "takehome": "1. Count socks in pairs. 2. Count eyes 👀 of family members in twos. 3. Count hands in twos at school. 4. Clap twice each time and count forward. 5. Jump twice and count forward.",
+    "exercises": [
+      "Count in twos up to 20.",
+      "Write the missing numbers: 2, __, 6, __, 10.",
+      "Circle the even numbers: 2, 3, 4, 5, 6.",
+      "Count 10 pencils in twos. How many pairs?",
+      "Write numbers from 2 to 20 by skipping one each time."
+    ],
+    "image": "images/counting-twos.png"
+  },
+  {
+    "id": "number_bonds",
+    "title": "Number Bonds to 10",
+    "content": "<p>Number bonds are pairs of numbers that add up to a target number. Pupils learn how different numbers combine to make 10. For example, 6 + 4 = 10, 7 + 3 = 10. Understanding number bonds builds fluency in addition and subtraction. Teachers can use bottle tops or blocks to show how numbers pair up to 10.</p>",
+    "examples": [
+      "7 + 3 = 10",
+      "6 + 4 = 10",
+      "2 + 8 = 10"
+    ],
+    "takehome": "1. Count your fingers and see how two hands make 10. 2. Use 10 beans to form pairs. 3. Draw circles and cross out some to see the remainder. 4. Clap 7 times, then 3 times to make 10. 5. Use coins to show different ways to make 10.",
+    "exercises": [
+      "Fill in the blanks: 5 + __ = 10.",
+      "Complete: 8 + __ = 10.",
+      "Circle all pairs of numbers that make 10.",
+      "Draw 10 stars ⭐ and cross out 4. How many are left?",
+      "Write three different pairs of numbers that make 10."
+    ],
+    "image": "images/number-bonds.png"
+  },
+  {
+    "id": "comparing_numbers",
+    "title": "Comparing Numbers",
+    "content": "<p>Pupils compare numbers to know which is bigger, smaller, or equal. The signs used are greater than (>), less than (<), and equal to (=). For example, 7 > 5 means 7 is greater than 5. Comparing helps children in solving problems and making choices in real life.</p>",
+    "examples": [
+      "5 > 3",
+      "2 < 8",
+      "4 = 4"
+    ],
+    "takehome": "1. Compare number of sweets with a sibling. 2. Compare number of chairs in two rooms. 3. Check who has more books between you and your friend. 4. Compare two numbers on house doors. 5. Use toys to compare groups.",
+    "exercises": [
+      "Circle the greater number: 7 or 2?",
+      "Fill in the blank: 5 __ 8.",
+      "Compare: 9 and 9.",
+      "Which is smaller: 3 or 6?",
+      "Write three pairs of numbers using > or <."
+    ],
+    "image": "images/comparing.png"
+  },
+  {
+    "id": "position",
+    "title": "Position and Direction",
+    "content": "<p>Position and direction words help pupils describe where things are. Examples include left, right, above, below, in front, and behind. Teachers can use classroom objects to show these positions. For example, the ball is under the table, or the cat is on the chair. This helps children in communication and everyday life navigation.</p>",
+    "examples": [
+      "The ball is under the table.",
+      "The cat 🐱 is on the chair.",
+      "The teacher is in front of the class."
+    ],
+    "takehome": "1. Stand to the left of your brother or sister. 2. Put a toy above a chair. 3. Sit in front of your TV and describe the position. 4. Place a book behind another book. 5. Walk left and right in your compound.",
+    "exercises": [
+      "Draw a chair and a ball. Place the ball under the chair.",
+      "Circle the object that is above the table.",
+      "Where is your TV? In front or behind the chair?",
+      "Label left and right hands.",
+      "Match objects with correct positions."
+    ],
+    "image": "images/position.png"
+  },
+  {
+    "id": "time",
+    "title": "Introduction to Time",
+    "content": "<p>Pupils are introduced to clocks and learn how to read hours such as 1 o’clock, 2 o’clock, etc. Teachers can use toy clocks or draw clocks on the board. Pupils learn the hour hand (small hand) and the minute hand (big hand). Knowing time helps children organize daily routines like waking up, going to school, and bedtime.</p>",
+    "examples": [
+      "The big hand is at 12, the small hand at 3 → 3 o’clock.",
+      "Bedtime is 8 o’clock.",
+      "School starts at 7 o’clock."
+    ],
+    "takehome": "1. Check the wall clock and read the hour. 2. Ask Mama the time for meals. 3. Observe when the sun sets 🌅. 4. Practice saying 'o’clock' times. 5. Draw a clock and set it to 5 o’clock.",
+    "exercises": [
+      "Draw the time 4 o’clock.",
+      "What time is it when the small hand is at 7 and the big hand at 12?",
+      "Circle the clock that shows 2 o’clock.",
+      "Fill in: Bedtime is usually __ o’clock.",
+      "Practice drawing 3 different times."
+    ],
+    "image": "images/time.png"
+  },
+  {
+    "id": "word_problems",
+    "title": "Word Problems",
+    "content": "<p>Word problems use stories to test addition and subtraction skills. For example, Ali has 3 pencils and buys 2 more. How many pencils does he have now? Pupils learn to think, understand, and solve problems from real life situations. Teachers should encourage reading each question carefully and identifying key numbers before solving.</p>",
+    "examples": [
+      "Ali has 3 pencils. He buys 2 more. How many pencils in total?",
+      "If there are 6 birds 🐦 and 2 fly away, how many are left?",
+      "Mary has 5 apples 🍎. She eats 2. How many remain?"
+    ],
+    "takehome": "1. Ask Mama to give you story problems at home. 2. Use toys to create small word sums. 3. Write two word problems by yourself. 4. Share food and calculate what is left. 5. Count steps taken from the gate to the door.",
+    "exercises": [
+      "Ali had 4 sweets. He ate 2. How many are left?",
+      "Joy has 3 dolls and buys 2 more. How many dolls now?",
+      "If there are 10 goats and 4 run away, how many goats are left?",
+      "Write a short word problem using fruits.",
+      "Solve: Mama baked 5 cakes and ate 1. How many cakes remain?"
+    ],
+    "image": "images/word-problems.png"
   }
 ]
