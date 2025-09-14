@@ -1,0 +1,198 @@
+[
+  {
+    "id": "plants",
+    "title": "Plants and Their Parts",
+    "content": "<p>Children learn about the different parts of plants: roots, stems, leaves, flowers, and fruits. They discover how plants grow, absorb water, and produce food through photosynthesis. Pupils should observe plants around them, touch the leaves, and see flowers bloom. They will also learn to care for small plants by watering them regularly and giving them sunlight.</p>",
+    "examples": [
+      "Roots absorb water 🌱",
+      "Leaves make food 🍃",
+      "Flowers bloom 🌸"
+    ],
+    "takehome": "1. Observe a plant at home or school. 2. Draw its roots, stem, and leaves. 3. Water your plant every day. 4. Notice changes in flowers and leaves. 5. Talk about what the plant needs to grow.",
+    "exercises": [
+      "Label parts of a plant in your book.",
+      "Draw a plant and color its parts.",
+      "Match pictures of plant parts to names.",
+      "Observe a plant for one week and note changes.",
+      "Write three uses of leaves in your home."
+    ],
+    "image": "images/plants.png"
+  },
+  {
+    "id": "animals",
+    "title": "Animals Around Us",
+    "content": "<p>Students explore common animals, their habitats, and the sounds they make. They learn to classify animals as domestic or wild, understand what they eat, and how they help humans in daily life. Children are encouraged to observe pets, farm animals, or visit a zoo if possible.</p>",
+    "examples": [
+      "Dog 🐶 – barks",
+      "Cat 🐱 – meows",
+      "Cow 🐄 – moos"
+    ],
+    "takehome": "1. Observe an animal at home or in your community. 2. Note the sounds it makes. 3. Write down what it eats. 4. Draw the animal. 5. Talk about why it is useful to humans.",
+    "exercises": [
+      "Classify animals as domestic or wild.",
+      "Match animal pictures to their sounds.",
+      "Draw a farm scene with at least 3 animals.",
+      "Write one interesting fact about a bird.",
+      "Count and list the legs of five animals."
+    ],
+    "image": "images/animals.png"
+  },
+  {
+    "id": "senses",
+    "title": "Our Five Senses",
+    "content": "<p>Children learn about the five senses: sight, hearing, taste, touch, and smell. They discover the body parts associated with each sense and how senses help us understand the world. Activities include listening to sounds, tasting different foods, touching textures, and smelling flowers.</p>",
+    "examples": [
+      "Eyes – see 👀",
+      "Ears – hear 👂",
+      "Tongue – taste 👅",
+      "Skin – touch ✋",
+      "Nose – smell 👃"
+    ],
+    "takehome": "1. Identify 5 things you can see, hear, taste, touch, and smell at home. 2. Play a sound recognition game. 3. Touch objects with different textures. 4. Smell spices or flowers. 5. Taste different fruits and describe them.",
+    "exercises": [
+      "Match body parts to senses.",
+      "Draw 5 senses chart.",
+      "List 3 things you can smell in your home.",
+      "Write 3 things you can hear outside.",
+      "Circle pictures showing each sense."
+    ],
+    "image": "images/senses.png"
+  },
+  {
+    "id": "water",
+    "title": "Water and Its Uses",
+    "content": "<p>Students understand where water comes from and its uses in daily life. They learn about drinking water, cooking, washing, and watering plants. Pupils are encouraged to save water and use it wisely.</p>",
+    "examples": [
+      "Drinking water 💧",
+      "Washing hands 🧼",
+      "Watering plants 🌿",
+      "Cooking 🍲"
+    ],
+    "takehome": "1. Drink clean water daily. 2. Wash your hands before eating. 3. Water plants at home. 4. Save water while bathing. 5. Talk about why water is important.",
+    "exercises": [
+      "List 3 uses of water at home.",
+      "Draw a water cycle diagram.",
+      "Circle pictures showing safe water use.",
+      "Write ways to save water.",
+      "Match water uses to pictures."
+    ],
+    "image": "images/water.png"
+  },
+  {
+    "id": "air",
+    "title": "Air Around Us",
+    "content": "<p>Children learn that air surrounds us everywhere and is needed for breathing and life. Activities include blowing bubbles, observing winds, and understanding how air affects objects like balloons and kites.</p>",
+    "examples": [
+      "Breathing 🌬️",
+      "Balloons 🎈",
+      "Flying kites 🪁"
+    ],
+    "takehome": "1. Blow soap bubbles and watch them float. 2. Fly a kite if possible. 3. Notice how wind moves leaves. 4. Practice deep breathing exercises. 5. Talk about why air is important.",
+    "exercises": [
+      "Draw a balloon and show how air fills it.",
+      "List 3 things that move with air.",
+      "Observe wind for 5 minutes and note effects.",
+      "Write why air is important.",
+      "Match objects to how air affects them."
+    ],
+    "image": "images/air.png"
+  },
+  {
+    "id": "sun",
+    "title": "The Sun and Light",
+    "content": "<p>Students explore the sun as a source of light and warmth. They learn how sunlight helps plants grow and keeps us warm. Pupils should be encouraged to observe the sun safely using shadows and reflections.</p>",
+    "examples": [
+      "Sunshine ☀️ warms Earth",
+      "Plants need sunlight 🌱",
+      "Shadows change with sunlight 🌄"
+    ],
+    "takehome": "1. Observe shadows at different times of day. 2. Notice the warmth of the sun. 3. Water plants and see how sunlight helps them grow. 4. Draw the sun and plants. 5. Talk about why sunlight is important.",
+    "exercises": [
+      "Draw a shadow of your hand.",
+      "List 3 things sunlight helps grow.",
+      "Circle things that need sunlight.",
+      "Trace sun rays on paper.",
+      "Explain how sun keeps us warm."
+    ],
+    "image": "images/sun.png"
+  },
+  {
+    "id": "weather",
+    "title": "Weather and Seasons",
+    "content": "<p>Children learn about different types of weather and seasons. They discover rain, sun, wind, and snow, and the characteristics of each season.</p>",
+    "examples": [
+      "Rain 🌧️",
+      "Sun ☀️",
+      "Wind 💨",
+      "Snow ❄️",
+      "Spring 🌸, Summer 🌞, Autumn 🍂, Winter ⛄"
+    ],
+    "takehome": "1. Observe the weather each day. 2. Draw today's weather. 3. Note changes in seasons. 4. Talk about favorite seasons. 5. Identify appropriate clothing for each season.",
+    "exercises": [
+      "Match seasons to pictures.",
+      "Draw a rainy day scene.",
+      "List 3 things to do in summer.",
+      "Write 2 activities for winter.",
+      "Circle sunny or rainy day objects."
+    ],
+    "image": "images/weather.png"
+  },
+  {
+    "id": "rocks",
+    "title": "Rocks and Soil",
+    "content": "<p>Students learn about rocks and soil types for planting. They explore sand, clay, and loam soil and their uses.</p>",
+    "examples": [
+      "Sandstone 🪨",
+      "Clay soil 🌱",
+      "Loam soil 🌾"
+    ],
+    "takehome": "1. Observe soil in your garden. 2. Touch sand and clay. 3. Note which soil grows plants best. 4. Draw different soil types. 5. Talk about rocks you see at home or school.",
+    "exercises": [
+      "Draw soil layers.",
+      "Classify rocks you find outside.",
+      "Match soil types to their uses.",
+      "Write 2 uses of clay.",
+      "Count 5 small stones and describe them."
+    ],
+    "image": "images/rocks.png"
+  },
+  {
+    "id": "food",
+    "title": "Food and Nutrition",
+    "content": "<p>Children learn about different types of food: fruits, vegetables, grains, proteins, and why they are important for health. They are encouraged to eat a balanced diet.</p>",
+    "examples": [
+      "Fruits 🍎",
+      "Vegetables 🥦",
+      "Grains 🌾",
+      "Proteins 🍗"
+    ],
+    "takehome": "1. Eat fruits and vegetables daily. 2. Drink milk or other healthy drinks. 3. Avoid too much sugar. 4. Talk about favorite healthy foods. 5. Draw a plate with balanced meals.",
+    "exercises": [
+      "Sort foods into fruits, vegetables, grains, proteins.",
+      "Draw your favorite meal.",
+      "Circle healthy foods in pictures.",
+      "List 3 foods that give energy.",
+      "Count fruits in your kitchen."
+    ],
+    "image": "images/food.png"
+  },
+  {
+    "id": "health",
+    "title": "Keeping Healthy",
+    "content": "<p>Children learn basic hygiene and healthy habits like washing hands, brushing teeth, and exercising. They understand why these habits keep them safe and strong.</p>",
+    "examples": [
+      "Wash hands 🧼",
+      "Brush teeth 🪥",
+      "Exercise 🤸‍♂️"
+    ],
+    "takehome": "1. Wash hands before meals. 2. Brush teeth twice daily. 3. Exercise for 10 minutes. 4. Drink clean water. 5. Discuss healthy habits with parents.",
+    "exercises": [
+      "Draw a hygiene chart.",
+      "List 3 daily healthy habits.",
+      "Practice washing hands properly.",
+      "Trace brushing teeth steps.",
+      "Write why exercise is important."
+    ],
+    "image": "images/health.png"
+  }
+]
