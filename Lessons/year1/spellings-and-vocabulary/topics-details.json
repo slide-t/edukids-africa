@@ -1,4 +1,3 @@
-
 [
   {
     "id": "alphabets",
@@ -11,93 +10,93 @@
     "image": "images/alphabets.png"
   },
   {
-    "id": "simple_words",
-    "title": "Simple Words",
-    "content": "<p>Children learn to form and read small words using letters and sounds.</p>",
+    "id": "two_letter_words",
+    "title": "Two-Letter Words",
+    "content": "<p>Children practice simple two-letter words that build their spelling foundation.</p>",
     "examples": [
-      "cat 🐱, dog 🐶, sun ☀️",
-      "mat, bat, hat"
+      "am, an, at",
+      "be, do, go"
     ],
-    "image": "images/simple-words.png"
+    "image": "images/two-letters.png"
   },
   {
-    "id": "spelling_rules",
-    "title": "Basic Spelling Rules",
-    "content": "<p>Pupils are introduced to simple spelling rules such as adding 's' for plurals or 'ing' for action words.</p>",
+    "id": "three_letter_words",
+    "title": "Three-Letter Words",
+    "content": "<p>Pupils learn CVC (consonant-vowel-consonant) words to improve reading and spelling.</p>",
     "examples": [
-      "cat → cats",
-      "run → running"
+      "cat 🐱, dog 🐶, sun ☀️",
+      "bat, mat, hat"
     ],
-    "image": "images/spelling-rules.png"
+    "image": "images/three-letters.png"
   },
   {
     "id": "rhyming_words",
     "title": "Rhyming Words",
-    "content": "<p>Rhyming words sound alike, especially at the end. They make learning fun and improve listening skills.</p>",
+    "content": "<p>Rhyming helps pupils recognize word patterns and build vocabulary.</p>",
     "examples": [
-      "cat – hat 🎩",
-      "sun – fun 🌞"
+      "cat – bat – hat",
+      "sun – fun – run"
     ],
-    "image": "images/rhyming-words.png"
+    "image": "images/rhyming.png"
   },
   {
-    "id": "compound_words",
-    "title": "Compound Words",
-    "content": "<p>Compound words are formed by joining two words together to make a new meaning.</p>",
+    "id": "sight_words",
+    "title": "Sight Words",
+    "content": "<p>Introduce high-frequency words that pupils should memorize for quick recognition.</p>",
     "examples": [
-      "sun + flower = sunflower 🌻",
-      "rain + bow = rainbow 🌈"
+      "the, and, is, to, it",
+      "you, we, me, go"
     ],
-    "image": "images/compound-words.png"
+    "image": "images/sight-words.png"
+  },
+  {
+    "id": "plural_words",
+    "title": "Plural Words",
+    "content": "<p>Pupils learn how to form plurals by adding <b>-s</b> or <b>-es</b>.</p>",
+    "examples": [
+      "cat → cats 🐱🐱",
+      "box → boxes 📦📦"
+    ],
+    "image": "images/plurals.png"
+  },
+  {
+    "id": "opposite_words",
+    "title": "Opposite Words",
+    "content": "<p>Children are introduced to antonyms — words with opposite meanings.</p>",
+    "examples": [
+      "hot 🔥 – cold ❄️",
+      "big – small"
+    ],
+    "image": "images/opposites.png"
   },
   {
     "id": "synonyms",
     "title": "Synonyms",
-    "content": "<p>Synonyms are words that have the same or nearly the same meaning.</p>",
+    "content": "<p>Synonyms are words that mean the same or nearly the same thing.</p>",
     "examples": [
-      "big = large",
-      "happy = glad"
+      "happy 😊 – glad 😀",
+      "fast – quick"
     ],
     "image": "images/synonyms.png"
   },
   {
-    "id": "antonyms",
-    "title": "Antonyms",
-    "content": "<p>Antonyms are words that mean the opposite of each other.</p>",
+    "id": "compound_words",
+    "title": "Compound Words",
+    "content": "<p>Pupils learn words formed by joining two words together.</p>",
     "examples": [
-      "hot – cold ❄️🔥",
-      "day – night 🌙"
+      "sun + light = sunlight ☀️",
+      "rain + bow = rainbow 🌈"
     ],
-    "image": "images/antonyms.png"
+    "image": "images/compound.png"
   },
   {
-    "id": "homophones",
-    "title": "Homophones",
-    "content": "<p>Homophones are words that sound the same but have different meanings and spellings.</p>",
+    "id": "simple_sentences",
+    "title": "Simple Sentences",
+    "content": "<p>Children practice making short sentences using learned words.</p>",
     "examples": [
-      "two – too – to",
-      "see – sea 🌊"
+      "The cat runs.",
+      "I go to school."
     ],
-    "image": "images/homophones.png"
-  },
-  {
-    "id": "prefixes_suffixes",
-    "title": "Prefixes and Suffixes",
-    "content": "<p>Pupils learn how adding parts to the beginning or end of words changes their meaning.</p>",
-    "examples": [
-      "happy → unhappy",
-      "teach → teacher"
-    ],
-    "image": "images/prefixes-suffixes.png"
-  },
-  {
-    "id": "vocabulary_building",
-    "title": "Vocabulary Building",
-    "content": "<p>Children learn new words, their meanings, and how to use them in sentences to improve communication.</p>",
-    "examples": [
-      "word: 'brave' → meaning: not afraid",
-      "word: 'giant' → meaning: very big"
-    ],
-    "image": "images/vocabulary-building.png"
+    "image": "images/sentences.png"
   }
 ]
