@@ -822,4 +822,48 @@
         "topics": [
           {
             "id": "fitness_exercises",
-            "title
+            "title": "Fitness Exercises",
+            "detailsPage": "Lessons/Year6/physical-and-health-education/topics-details.html?topic=fitness_exercises"
+          },
+          {
+            "id": "first_aid",
+            "title": "First Aid",
+            "detailsPage": "Lessons/Year6/physical-and-health-education/topics-details.html?topic=first_aid"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "advanced_music_and_art",
+            "title": "Advanced Music & Art",
+            "detailsPage": "Lessons/Year6/cultural-and-creative-arts/topics-details.html?topic=advanced_music_and_art"
+          },
+          {
+            "id": "drama_and_performance",
+            "title": "Drama & Performance",
+            "detailsPage": "Lessons/Year6/cultural-and-creative-arts/topics-details.html?topic=drama_and_performance"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "modern_farming_methods",
+            "title": "Modern Farming Methods",
+            "detailsPage": "Lessons/Year6/agricultural-science/topics-details.html?topic=modern_farming_methods"
+          },
+          {
+            "id": "pest_and_disease_control",
+            "title": "Pest & Disease Control",
+            "detailsPage": "Lessons/Year6/agricultural-science/topics-details.html?topic=pest_and_disease_control"
+          }
+        ]
+      }
+    ]
+  }
+]
