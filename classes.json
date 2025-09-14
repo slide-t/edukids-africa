@@ -160,5 +160,87 @@
         ]
       }
     ]
-  }
-]
+  },
+
+{
+  "id": "year3",
+  "name": "Year 3",
+  "subjects": [
+    {
+      "id": "english-language",
+      "name": "English Language",
+      "topics": [
+        { "id": "reading_paragraphs", "title": "Reading Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=reading_paragraphs" },
+        { "id": "writing_paragraphs", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=writing_paragraphs" },
+        { "id": "punctuation_rules", "title": "Punctuation Rules", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=punctuation_rules" }
+      ]
+    },
+    {
+      "id": "french-language",
+      "name": "French Language",
+      "topics": [
+        { "id": "reading_paragraphs_french", "title": "Reading Paragraphs", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=reading_paragraphs_french" },
+        { "id": "writing_paragraphs_french", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=writing_paragraphs_french" },
+        { "id": "intermediate_grammar", "title": "Intermediate Grammar", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=intermediate_grammar" }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        { "id": "numbers_51_to_100", "title": "Numbers 51–100", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=numbers_51_to_100" },
+        { "id": "addition_subtraction_advanced", "title": "Addition & Subtraction (Advanced)", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=addition_subtraction_advanced" },
+        { "id": "multiplication_intro", "title": "Introduction to Multiplication", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=multiplication_intro" }
+      ]
+    },
+    {
+      "id": "spellings_and_vocabulary",
+      "name": "Spellings & Vocabulary",
+      "topics": [
+        { "id": "compound_words", "title": "Compound Words", "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=compound_words" },
+        { "id": "homophones_and_homonyms", "title": "Homophones & Homonyms", "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=homophones_and_homonyms" }
+      ]
+    },
+    {
+      "id": "basic-science",
+      "name": "Basic Science",
+      "topics": [
+        { "id": "plant_growth", "title": "Plant Growth", "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=plant_growth" },
+        { "id": "animal_classification", "title": "Animal Classification", "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=animal_classification" }
+      ]
+    },
+    {
+      "id": "ict",
+      "name": "ICT",
+      "topics": [
+        { "id": "opening_and_closing_programs", "title": "Opening & Closing Programs", "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=opening_and_closing_programs" },
+        { "id": "typing_skills", "title": "Basic Typing Skills", "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=typing_skills" }
+      ]
+    },
+    {
+      "id": "physical_and_health_education",
+      "name": "Physical & Health Education",
+      "topics": [
+        { "id": "basic_team_sports", "title": "Basic Team Sports", "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=basic_team_sports" },
+        { "id": "hygiene_practices", "title": "Hygiene Practices", "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=hygiene_practices" }
+      ]
+    },
+    {
+      "id": "cultural_and_creative_arts",
+      "name": "Cultural & Creative Arts",
+      "topics": [
+        { "id": "intermediate_drawing", "title": "Intermediate Drawing", "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=intermediate_drawing" },
+        { "id": "musical_instruments", "title": "Musical Instruments", "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=musical_instruments" }
+      ]
+    },
+    {
+      "id": "agricultural_science",
+      "name": "Agricultural Science",
+      "topics": [
+        { "id": "crop_care", "title": "Crop Care", "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=crop_care" },
+        { "id": "basic_tools_usage", "title": "Basic Tools Usage", "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=basic_tools_usage" }
+      ]
+    }
+  ]
+}
+  
