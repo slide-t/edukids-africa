@@ -1,1 +1,281 @@
-
+{
+  "French-Language": {
+    "Level1": [
+      {
+        "question": "Choose the correct spelling of the French word for 'cat':",
+        "options": ["chat", "shat", "chatt", "cht"],
+        "answer": "chat"
+      },
+      {
+        "question": "Select the correct translation for 'Hello':",
+        "options": ["Bonjour", "Salut", "Allo", "Hi"],
+        "answer": "Bonjour"
+      },
+      {
+        "question": "Select the correct spelling of the French word for 'dog':",
+        "options": ["chien", "chian", "cheen", "chyen"],
+        "answer": "chien"
+      },
+      {
+        "question": "Choose the French word for 'red':",
+        "options": ["rouge", "rouj", "rougue", "ruge"],
+        "answer": "rouge"
+      },
+      {
+        "question": "Select the correct French word for 'apple':",
+        "options": ["pomme", "pom", "pommee", "pomm"],
+        "answer": "pomme"
+      },
+      {
+        "question": "Choose the correct translation for 'Goodbye':",
+        "options": ["Au revoir", "Adieu", "Bye", "Salut"],
+        "answer": "Au revoir"
+      },
+      {
+        "question": "Which is the correct spelling for 'orange' in French?",
+        "options": ["orange", "oranj", "orenge", "orrange"],
+        "answer": "orange"
+      },
+      {
+        "question": "Select the correct French word for 'blue':",
+        "options": ["bleu", "ble", "blou", "blieu"],
+        "answer": "bleu"
+      },
+      {
+        "question": "Choose the French word for 'one':",
+        "options": ["un", "une", "on", "uhn"],
+        "answer": "un"
+      },
+      {
+        "question": "Select the correct French word for 'two':",
+        "options": ["deux", "deu", "du", "doux"],
+        "answer": "deux"
+      },
+      {
+        "question": "Choose the French word for 'three':",
+        "options": ["trois", "troi", "troiss", "trwa"],
+        "answer": "trois"
+      },
+      {
+        "question": "Select the correct French word for 'four':",
+        "options": ["quatre", "katre", "quatr", "quat"],
+        "answer": "quatre"
+      },
+      {
+        "question": "Choose the French word for 'five':",
+        "options": ["cinq", "sink", "sinque", "sinq"],
+        "answer": "cinq"
+      },
+      {
+        "question": "Select the correct French word for 'yellow':",
+        "options": ["jaune", "jon", "jaun", "jone"],
+        "answer": "jaune"
+      },
+      {
+        "question": "Choose the French word for 'green':",
+        "options": ["vert", "ver", "vairt", "verre"],
+        "answer": "vert"
+      },
+      {
+        "question": "Select the correct French word for 'black':",
+        "options": ["noir", "noire", "nwar", "nor"],
+        "answer": "noir"
+      },
+      {
+        "question": "Choose the French word for 'white':",
+        "options": ["blanc", "blan", "blanche", "blaanc"],
+        "answer": "blanc"
+      },
+      {
+        "question": "Select the correct French word for 'bird':",
+        "options": ["oiseau", "oiso", "oiseaux", "oizau"],
+        "answer": "oiseau"
+      },
+      {
+        "question": "Choose the French word for 'fish':",
+        "options": ["poisson", "poizon", "poissson", "pwaçon"],
+        "answer": "poisson"
+      },
+      {
+        "question": "Select the correct French word for 'bread':",
+        "options": ["pain", "pan", "pein", "payn"],
+        "answer": "pain"
+      },
+      {
+        "question": "Choose the French word for 'milk':",
+        "options": ["lait", "let", "lay", "laite"],
+        "answer": "lait"
+      },
+      {
+        "question": "Select the French word for 'water':",
+        "options": ["eau", "eu", "o", "eaux"],
+        "answer": "eau"
+      },
+      {
+        "question": "Choose the French word for 'school':",
+        "options": ["école", "ecole", "écol", "eckole"],
+        "answer": "école"
+      },
+      {
+        "question": "Select the French word for 'teacher':",
+        "options": ["professeur", "prof", "professur", "profeur"],
+        "answer": "professeur"
+      },
+      {
+        "question": "Choose the French word for 'friend':",
+        "options": ["ami", "amie", "amme", "amii"],
+        "answer": "ami"
+      },
+      {
+        "question": "Select the French word for 'family':",
+        "options": ["famille", "famill", "famile", "famiy"],
+        "answer": "famille"
+      },
+      {
+        "question": "Choose the French word for 'house':",
+        "options": ["maison", "maizon", "meison", "mayson"],
+        "answer": "maison"
+      },
+      {
+        "question": "Select the French word for 'car':",
+        "options": ["voiture", "voituer", "voitur", "vouture"],
+        "answer": "voiture"
+      },
+      {
+        "question": "Choose the French word for 'tree':",
+        "options": ["arbre", "arbr", "arb", "arbrez"],
+        "answer": "arbre"
+      },
+      {
+        "question": "Select the French word for 'flower':",
+        "options": ["fleur", "flur", "flere", "fleure"],
+        "answer": "fleur"
+      },
+      {
+        "question": "Choose the French word for 'sun':",
+        "options": ["soleil", "solayl", "solliel", "soleille"],
+        "answer": "soleil"
+      },
+      {
+        "question": "Select the French word for 'moon':",
+        "options": ["lune", "loon", "luune", "lun"],
+        "answer": "lune"
+      },
+      {
+        "question": "Choose the French word for 'star':",
+        "options": ["étoile", "etoil", "étoille", "etoille"],
+        "answer": "étoile"
+      },
+      {
+        "question": "Select the French word for 'rain':",
+        "options": ["pluie", "pluw", "pluiee", "plu"],
+        "answer": "pluie"
+      },
+      {
+        "question": "Choose the French word for 'cloud':",
+        "options": ["nuage", "nuaj", "nuagee", "nuaage"],
+        "answer": "nuage"
+      },
+      {
+        "question": "Select the French word for 'bird sings':",
+        "options": ["l’oiseau chante", "oiseau chante", "l’oiseau chantes", "oiseau chantes"],
+        "answer": "l’oiseau chante"
+      },
+      {
+        "question": "Choose the French word for 'I am happy':",
+        "options": ["Je suis heureux", "Je suis heurex", "Je suis heuru", "Je suis heurux"],
+        "answer": "Je suis heureux"
+      },
+      {
+        "question": "Select the French word for 'I like apples':",
+        "options": ["J’aime les pommes", "Jaime les pomes", "J’aime les poms", "J’aime les pomes"],
+        "answer": "J’aime les pommes"
+      },
+      {
+        "question": "Choose the French word for 'Good morning':",
+        "options": ["Bonjour", "Bon matin", "Bonne journée", "Salut"],
+        "answer": "Bonjour"
+      },
+      {
+        "question": "Select the French word for 'Good night':",
+        "options": ["Bonne nuit", "Bon nuit", "Bonne nuite", "Bonn nuit"],
+        "answer": "Bonne nuit"
+      },
+      {
+        "question": "Choose the French word for 'How are you?':",
+        "options": ["Comment ça va?", "Comment tu vas?", "Comment va?", "Comment ça va"],
+        "answer": "Comment ça va?"
+      },
+      {
+        "question": "Select the French word for 'I am fine':",
+        "options": ["Je vais bien", "Je vais bon", "Je suis bien", "Je suis bon"],
+        "answer": "Je vais bien"
+      },
+      {
+        "question": "Choose the French word for 'Thank you':",
+        "options": ["Merci", "Mercii", "Merciii", "Merce"],
+        "answer": "Merci"
+      },
+      {
+        "question": "Select the French word for 'Please':",
+        "options": ["S’il vous plaît", "Sil vous plaît", "S’il vous plait", "S’il vous plaî"],
+        "answer": "S’il vous plaît"
+      },
+      {
+        "question": "Choose the French word for 'Excuse me':",
+        "options": ["Excusez-moi", "Excuse-moi", "Excuze-moi", "Excuse moi"],
+        "answer": "Excusez-moi"
+      },
+      {
+        "question": "Select the French word for 'Yes':",
+        "options": ["Oui", "Ouii", "Ouy", "Ouui"],
+        "answer": "Oui"
+      },
+      {
+        "question": "Choose the French word for 'No':",
+        "options": ["Non", "Nonn", "No", "Noh"],
+        "answer": "Non"
+      },
+      {
+        "question": "Select the French word for 'I am learning French':",
+        "options": ["J’apprends le français", "J’aprend le francais", "J’aprend le français", "Je apprends le français"],
+        "answer": "J’apprends le français"
+      },
+      {
+        "question": "Choose the French word for 'I am a pupil':",
+        "options": ["Je suis un élève", "Je suis un eleve", "Je suis un elève", "Je suis un élèvé"],
+        "answer": "Je suis un élève"
+      },
+      {
+        "question": "Select the French word for 'I am thirsty':",
+        "options": ["J’ai soif", "Je suis soif", "J’ai soffe", "J’ai soifff"],
+        "answer": "J’ai soif"
+      },
+      {
+        "question": "Choose the French word for 'I am hungry':",
+        "options": ["J’ai faim", "J’ai faimn", "Je suis faim", "J’ai feim"],
+        "answer": "J’ai faim"
+      },
+      {
+        "question": "Select the French word for 'I am sleepy':",
+        "options": ["J’ai sommeil", "Je suis sommeil", "J’ai sommel", "J’ai sommeille"],
+        "answer": "J’ai sommeil"
+      },
+      {
+        "question": "Choose the French word for 'I am happy today':",
+        "options": ["Je suis heureux aujourd’hui", "Je suis heurex aujourd’hui", "Je suis heureux aujourd’hui", "Je suis heureu aujourd’hui"],
+        "answer": "Je suis heureux aujourd’hui"
+      },
+      {
+        "question": "Select the French word for 'I go to school':",
+        "options": ["Je vais à l’école", "Je vais a l’ecole", "Je vas à l’école", "Je vais a l’école"],
+        "answer": "Je vais à l’école"
+      },
+      {
+        "question": "Choose the French word for 'I play with my friends':",
+        "options": ["Je joue avec mes amis", "Je joue avec mes amies", "Je joue avec mes amisse", "Je joue avec mes amii"],
+        "answer": "Je joue avec mes amis"
+      }
+    ]
+  }
+}
