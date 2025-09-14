@@ -1,45 +1,53 @@
 {
   "Primary": [
+    "English Language",
+    "French Language",
     "Mathematics",
-    "English-Language",
-    "Basic-Science",
-    "Basic-Technology",
-    "Social-Studies",
-    "Civic-Education",
-    "Pre-Vocational-Studies",
-    "Cultural-and-Creative-Arts",
-    "Spellings"
-  
+    "Spellings & Vocabulary",
+    "Basic Science",
+    "ICT (Information & Communication Technology)",
+    "Physical & Health Education",
+    "Cultural & Creative Arts",
+    "Agricultural Science"
   ],
-  "Secondary": [
+  "Junior Secondary": [
+    "English Language",
     "Mathematics",
-    "English-Language",
+    "Biology",
+    "Physical & Health Education",
+    "Economics",
+    "Agricultural Science",
+    "Literature in English",
+    "Coding & Programming",
+    "Spellings & Vocabulary"
+  ],
+  "Senior Secondary": [
+    "Mathematics",
+    "English Language",
     "Biology",
     "Chemistry",
     "Physics",
     "Agricultural Science",
     "Geography",
     "Economics",
-    "Government",
-    "Literature-in-English",
     "Commerce",
-    "Financial-Accounting",
-    "Spellings-and-Grammar"
+    "Financial Accounting",
+    "Coding & Programming",
+    "Spellings & Vocabulary"
   ],
   "WAEC": [
     "Mathematics",
-    "English-Language",
+    "English Language",
     "Biology",
     "Chemistry",
     "Physics",
-    "Agricultural-Science",
+    "Agricultural Science",
     "Geography",
     "Economics",
     "Commerce",
-    "Financial-Accounting"
+    "Financial Accounting"
   ],
-
-"Cambridge Curriculum Standard": [
+  "Cambridge Curriculum Standard": [
     "English as a Second Language",
     "Mathematics",
     "Physics",
@@ -48,17 +56,17 @@
     "History",
     "Business Studies",
     "ICT"
-],
+  ],
   "JAMB": [
     "Mathematics",
-    "English-Language",
+    "English Language",
     "Biology",
     "Chemistry",
     "Physics",
     "Economics",
     "Government",
-    "Literature-in-English",
-    "Christian-Religious-Studies",
-    "Islamic-Religious-Studies"
+    "Literature in English",
+    "Christian Religious Studies",
+    "Islamic Religious Studies"
   ]
 }
