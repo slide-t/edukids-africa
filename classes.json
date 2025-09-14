@@ -1269,8 +1269,56 @@
         ]
       },
       {
-
-  
+        "id": "literature-in-english",
+        "name": "Literature in English",
+        "topics": [
+          {
+            "id": "novels_jss3",
+            "title": "Novels",
+            "detailsPage": "Lessons/Year9/literature-in-english/topics-details.html?topic=novels_jss3"
+          },
+          {
+            "id": "poetry_jss3",
+            "title": "Poetry Analysis",
+            "detailsPage": "Lessons/Year9/literature-in-english/topics-details.html?topic=poetry_jss3"
+          }
+        ]
+      },
+      {
+        "id": "coding-and-programming",
+        "name": "Coding & Programming",
+        "topics": [
+          {
+            "id": "advanced_programming_jss3",
+            "title": "Advanced Programming Concepts",
+            "detailsPage": "Lessons/Year9/coding-and-programming/topics-details.html?topic=advanced_programming_jss3"
+          },
+          {
+            "id": "problem_solving_jss3",
+            "title": "Problem Solving with Code",
+            "detailsPage": "Lessons/Year9/coding-and-programming/topics-details.html?topic=problem_solving_jss3"
+          }
+        ]
+      },
+      {
+        "id": "spellings-and-vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "advanced_spellings_jss3",
+            "title": "Advanced Spellings",
+            "detailsPage": "Lessons/Year9/spellings-and-vocabulary/topics-details.html?topic=advanced_spellings_jss3"
+          },
+          {
+            "id": "vocabulary_expansion_jss3",
+            "title": "Vocabulary Expansion",
+            "detailsPage": "Lessons/Year9/spellings-and-vocabulary/topics-details.html?topic=vocabulary_expansion_jss3"
+          }
+        ]
+      }
+    ]
+  }
+]
 
 
   
