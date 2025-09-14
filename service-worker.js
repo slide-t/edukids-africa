@@ -9,6 +9,7 @@ const urlsToCache = [
   "/about.html",
   "/subjects-curric.html",
   "/topics-details.html",
+  "/topic-full.html",
   "/topics.json",
   "/classes.json",
   "/books.html",
@@ -22,6 +23,7 @@ const urlsToCache = [
   "/questions.json",
   "/questions/",   // cache folder
   "/lessons/"      // cache folder
+  "/FullNote/"
 ];
 
 // Install & cache immediately
