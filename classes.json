@@ -1506,6 +1506,384 @@
       ]
     }
   ]
-}
-    ]
+},
+
+  {
+  "id": "Year11",
+  "name": "Year 11 (SSS 2)",
+  "subjects": [
+    {
+      "id": "english-language",
+      "name": "English Language",
+      "topics": [
+        {
+          "id": "advanced_comprehension_sss2",
+          "title": "Advanced Comprehension Passages",
+          "detailsPage": "Lessons/Year11/english-language/topics-details.html?topic=advanced_comprehension_sss2"
+        },
+        {
+          "id": "essay_writing_sss2",
+          "title": "Essay Writing & Reports",
+          "detailsPage": "Lessons/Year11/english-language/topics-details.html?topic=essay_writing_sss2"
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        {
+          "id": "algebra_advanced_sss2",
+          "title": "Advanced Algebra",
+          "detailsPage": "Lessons/Year11/mathematics/topics-details.html?topic=algebra_advanced_sss2"
+        },
+        {
+          "id": "trigonometry_sss2",
+          "title": "Trigonometry Basics",
+          "detailsPage": "Lessons/Year11/mathematics/topics-details.html?topic=trigonometry_sss2"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "topics": [
+        {
+          "id": "human_anatomy_sss2",
+          "title": "Human Anatomy & Physiology",
+          "detailsPage": "Lessons/Year11/biology/topics-details.html?topic=human_anatomy_sss2"
+        },
+        {
+          "id": "ecology_sss2",
+          "title": "Ecology & Environment",
+          "detailsPage": "Lessons/Year11/biology/topics-details.html?topic=ecology_sss2"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "topics": [
+        {
+          "id": "chemical_bonding_sss2",
+          "title": "Chemical Bonding & Reactions",
+          "detailsPage": "Lessons/Year11/chemistry/topics-details.html?topic=chemical_bonding_sss2"
+        },
+        {
+          "id": "organic_chemistry_sss2",
+          "title": "Introduction to Organic Chemistry",
+          "detailsPage": "Lessons/Year11/chemistry/topics-details.html?topic=organic_chemistry_sss2"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "topics": [
+        {
+          "id": "mechanics_sss2",
+          "title": "Mechanics & Motion",
+          "detailsPage": "Lessons/Year11/physics/topics-details.html?topic=mechanics_sss2"
+        },
+        {
+          "id": "electricity_and_magnetism_sss2",
+          "title": "Electricity & Magnetism",
+          "detailsPage": "Lessons/Year11/physics/topics-details.html?topic=electricity_and_magnetism_sss2"
+        }
+      ]
+    },
+    {
+      "id": "agricultural-science",
+      "name": "Agricultural Science",
+      "topics": [
+        {
+          "id": "crop_protection_sss2",
+          "title": "Crop Protection & Pest Control",
+          "detailsPage": "Lessons/Year11/agricultural-science/topics-details.html?topic=crop_protection_sss2"
+        },
+        {
+          "id": "farm_management_sss2",
+          "title": "Farm Management Principles",
+          "detailsPage": "Lessons/Year11/agricultural-science/topics-details.html?topic=farm_management_sss2"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "topics": [
+        {
+          "id": "physical_geography_sss2",
+          "title": "Physical Geography",
+          "detailsPage": "Lessons/Year11/geography/topics-details.html?topic=physical_geography_sss2"
+        },
+        {
+          "id": "human_geography_sss2",
+          "title": "Human & Economic Geography",
+          "detailsPage": "Lessons/Year11/geography/topics-details.html?topic=human_geography_sss2"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "topics": [
+        {
+          "id": "macroeconomics_sss2",
+          "title": "Macroeconomics Fundamentals",
+          "detailsPage": "Lessons/Year11/economics/topics-details.html?topic=macroeconomics_sss2"
+        },
+        {
+          "id": "microeconomics_sss2",
+          "title": "Microeconomics Basics",
+          "detailsPage": "Lessons/Year11/economics/topics-details.html?topic=microeconomics_sss2"
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce",
+      "topics": [
+        {
+          "id": "trade_and_marketing_sss2",
+          "title": "Trade & Marketing Principles",
+          "detailsPage": "Lessons/Year11/commerce/topics-details.html?topic=trade_and_marketing_sss2"
+        }
+      ]
+    },
+    {
+      "id": "financial-accounting",
+      "name": "Financial Accounting",
+      "topics": [
+        {
+          "id": "books_of_accounts_sss2",
+          "title": "Books of Accounts & Ledger",
+          "detailsPage": "Lessons/Year11/financial-accounting/topics-details.html?topic=books_of_accounts_sss2"
+        }
+      ]
+    },
+    {
+      "id": "coding-and-programming",
+      "name": "Coding & Programming",
+      "topics": [
+        {
+          "id": "intermediate_programming_sss2",
+          "title": "Intermediate Programming Concepts",
+          "detailsPage": "Lessons/Year11/coding-and-programming/topics-details.html?topic=intermediate_programming_sss2"
+        },
+        {
+          "id": "project_development_sss2",
+          "title": "Mini Programming Projects",
+          "detailsPage": "Lessons/Year11/coding-and-programming/topics-details.html?topic=project_development_sss2"
+        }
+      ]
+    },
+    {
+      "id": "spellings-and-vocabulary",
+      "name": "Spellings & Vocabulary",
+      "topics": [
+        {
+          "id": "advanced_words_sss2",
+          "title": "Advanced Words & Meanings",
+          "detailsPage": "Lessons/Year11/spellings-and-vocabulary/topics-details.html?topic=advanced_words_sss2"
+        },
+        {
+          "id": "vocabulary_expansion_sss2",
+          "title": "Vocabulary Expansion",
+          "detailsPage": "Lessons/Year11/spellings-and-vocabulary/topics-details.html?topic=vocabulary_expansion_sss2"
+        }
+      ]
+    }
+  ]
+},
+
+  {
+  "id": "Year12",
+  "name": "Year 12 (SSS 3)",
+  "subjects": [
+    {
+      "id": "english-language",
+      "name": "English Language",
+      "topics": [
+        {
+          "id": "waec_comprehension_sss3",
+          "title": "WAEC Comprehension Passages",
+          "detailsPage": "Lessons/Year12/english-language/topics-details.html?topic=waec_comprehension_sss3"
+        },
+        {
+          "id": "formal_writing_sss3",
+          "title": "Formal Writing & Reports",
+          "detailsPage": "Lessons/Year12/english-language/topics-details.html?topic=formal_writing_sss3"
+        }
+      ]
+    },
+    {
+      "id": "mathematics",
+      "name": "Mathematics",
+      "topics": [
+        {
+          "id": "advanced_algebra_sss3",
+          "title": "Advanced Algebra & Functions",
+          "detailsPage": "Lessons/Year12/mathematics/topics-details.html?topic=advanced_algebra_sss3"
+        },
+        {
+          "id": "calculus_basics_sss3",
+          "title": "Introduction to Calculus",
+          "detailsPage": "Lessons/Year12/mathematics/topics-details.html?topic=calculus_basics_sss3"
+        }
+      ]
+    },
+    {
+      "id": "biology",
+      "name": "Biology",
+      "topics": [
+        {
+          "id": "genetics_sss3",
+          "title": "Genetics & Heredity",
+          "detailsPage": "Lessons/Year12/biology/topics-details.html?topic=genetics_sss3"
+        },
+        {
+          "id": "human_physiology_sss3",
+          "title": "Human Physiology Systems",
+          "detailsPage": "Lessons/Year12/biology/topics-details.html?topic=human_physiology_sss3"
+        }
+      ]
+    },
+    {
+      "id": "chemistry",
+      "name": "Chemistry",
+      "topics": [
+        {
+          "id": "chemical_equilibria_sss3",
+          "title": "Chemical Equilibria & Kinetics",
+          "detailsPage": "Lessons/Year12/chemistry/topics-details.html?topic=chemical_equilibria_sss3"
+        },
+        {
+          "id": "advanced_organic_chemistry_sss3",
+          "title": "Advanced Organic Chemistry",
+          "detailsPage": "Lessons/Year12/chemistry/topics-details.html?topic=advanced_organic_chemistry_sss3"
+        }
+      ]
+    },
+    {
+      "id": "physics",
+      "name": "Physics",
+      "topics": [
+        {
+          "id": "waves_and_optics_sss3",
+          "title": "Waves & Optics",
+          "detailsPage": "Lessons/Year12/physics/topics-details.html?topic=waves_and_optics_sss3"
+        },
+        {
+          "id": "electricity_and_magnetism_sss3",
+          "title": "Advanced Electricity & Magnetism",
+          "detailsPage": "Lessons/Year12/physics/topics-details.html?topic=electricity_and_magnetism_sss3"
+        }
+      ]
+    },
+    {
+      "id": "agricultural-science",
+      "name": "Agricultural Science",
+      "topics": [
+        {
+          "id": "advanced_crop_management_sss3",
+          "title": "Advanced Crop Management",
+          "detailsPage": "Lessons/Year12/agricultural-science/topics-details.html?topic=advanced_crop_management_sss3"
+        },
+        {
+          "id": "animal_husbandry_sss3",
+          "title": "Animal Husbandry",
+          "detailsPage": "Lessons/Year12/agricultural-science/topics-details.html?topic=animal_husbandry_sss3"
+        }
+      ]
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "topics": [
+        {
+          "id": "geopolitics_sss3",
+          "title": "Geopolitics & Global Issues",
+          "detailsPage": "Lessons/Year12/geography/topics-details.html?topic=geopolitics_sss3"
+        },
+        {
+          "id": "climate_change_sss3",
+          "title": "Climate Change & Environment",
+          "detailsPage": "Lessons/Year12/geography/topics-details.html?topic=climate_change_sss3"
+        }
+      ]
+    },
+    {
+      "id": "economics",
+      "name": "Economics",
+      "topics": [
+        {
+          "id": "advanced_macroeconomics_sss3",
+          "title": "Advanced Macroeconomics",
+          "detailsPage": "Lessons/Year12/economics/topics-details.html?topic=advanced_macroeconomics_sss3"
+        },
+        {
+          "id": "international_economics_sss3",
+          "title": "International Economics & Trade",
+          "detailsPage": "Lessons/Year12/economics/topics-details.html?topic=international_economics_sss3"
+        }
+      ]
+    },
+    {
+      "id": "commerce",
+      "name": "Commerce",
+      "topics": [
+        {
+          "id": "business_management_sss3",
+          "title": "Business Management & Operations",
+          "detailsPage": "Lessons/Year12/commerce/topics-details.html?topic=business_management_sss3"
+        }
+      ]
+    },
+    {
+      "id": "financial-accounting",
+      "name": "Financial Accounting",
+      "topics": [
+        {
+          "id": "financial_statements_sss3",
+          "title": "Preparation of Financial Statements",
+          "detailsPage": "Lessons/Year12/financial-accounting/topics-details.html?topic=financial_statements_sss3"
+        }
+      ]
+    },
+    {
+      "id": "coding-and-programming",
+      "name": "Coding & Programming",
+      "topics": [
+        {
+          "id": "advanced_programming_sss3",
+          "title": "Advanced Programming Concepts",
+          "detailsPage": "Lessons/Year12/coding-and-programming/topics-details.html?topic=advanced_programming_sss3"
+        },
+        {
+          "id": "final_project_development_sss3",
+          "title": "Final Programming Projects",
+          "detailsPage": "Lessons/Year12/coding-and-programming/topics-details.html?topic=final_project_development_sss3"
+        }
+      ]
+    },
+    {
+      "id": "spellings-and-vocabulary",
+      "name": "Spellings & Vocabulary",
+      "topics": [
+        {
+          "id": "waec_vocabulary_sss3",
+          "title": "WAEC-Level Vocabulary Exercises",
+          "detailsPage": "Lessons/Year12/spellings-and-vocabulary/topics-details.html?topic=waec_vocabulary_sss3"
+        },
+        {
+          "id": "word_usage_and_meanings_sss3",
+          "title": "Word Usage & Meanings",
+          "detailsPage": "Lessons/Year12/spellings-and-vocabulary/topics-details.html?topic=word_usage_and_meanings_sss3"
+        }
+      ]
+    }
+  ]
+  }
+]
   
