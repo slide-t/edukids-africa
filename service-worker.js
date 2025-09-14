@@ -1,4 +1,4 @@
-const CACHE_NAME = "edukids-africa-v7"; // bump version on deploy
+const CACHE_NAME = "edukids-africa"; // fixed cache name
 const urlsToCache = [
   "/", "/index.html", "/styles.css", "/script.js",
   "/logo.png", "/footer.html", "/about.html",
@@ -21,7 +21,7 @@ self.addEventListener("install", (event) => {
   );
 });
 
-// Activate & delete only outdated caches
+// Activate & clean any caches that don't match our fixed name
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     (async () => {
@@ -34,51 +34,30 @@ self.addEventListener("activate", (event) => {
   );
 });
 
-// Fetch handler with network-first & stale-while-revalidate
+// Fetch handler with auto-update
 self.addEventListener("fetch", (event) => {
-  const url = new URL(event.request.url);
-
-  // Network-first for dynamic content
-  if (
-    url.pathname.endsWith(".js") ||
-    url.pathname.endsWith(".json") ||
-    url.pathname.includes("/questions") ||
-    url.pathname.includes("/lessons")
-  ) {
-    event.respondWith(
-      (async () => {
-        try {
-          const response = await fetch(event.request);
-          if (response && response.ok) {
-            const cache = await caches.open(CACHE_NAME);
-            cache.put(event.request, response.clone());
-          }
-          return response;
-        } catch {
-          return caches.match(event.request);
-        }
-      })()
-    );
-    return;
-  }
-
-  // Stale-while-revalidate for static assets
   event.respondWith(
     (async () => {
       const cache = await caches.open(CACHE_NAME);
       const cachedResp = await cache.match(event.request);
+
+      // Always fetch in background to update cache
       const fetchPromise = fetch(event.request)
         .then(async (networkResp) => {
-          if (networkResp && networkResp.ok) await cache.put(event.request, networkResp.clone());
+          if (networkResp && networkResp.ok) {
+            await cache.put(event.request, networkResp.clone());
+          }
           return networkResp;
         })
-        .catch(() => cachedResp);
+        .catch(() => cachedResp); // fallback if offline
+
+      // Return cached response immediately if exists, else wait for network
       return cachedResp || fetchPromise;
     })()
   );
 });
 
-// Manual cache update trigger (only updates files that changed)
+// Optional: Manual cache update trigger (for dev/testing)
 self.addEventListener("message", (event) => {
   if (event.data?.type === "UPDATE_CACHE") {
     (async () => {
