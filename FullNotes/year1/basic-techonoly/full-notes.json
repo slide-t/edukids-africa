@@ -1,1 +1,198 @@
 
+[
+  {
+    "id": "tools",
+    "title": "Basic Tools",
+    "content": "<p>Students learn about common tools used at home and school, such as scissors, hammers, rulers, and pencils. They understand the proper use and safety rules for each tool.</p>",
+    "examples": [
+      "Scissors ✂️ – cutting paper",
+      "Hammer 🔨 – driving nails",
+      "Ruler 📏 – measuring length"
+    ],
+    "takehome": "1. Identify tools at home. 2. Practice using a pencil and ruler safely. 3. Draw pictures of your favorite tools. 4. Explain what each tool is used for. 5. Discuss safety rules with your parents.",
+    "exercises": [
+      "Match tools to their uses.",
+      "Draw 3 tools and label them.",
+      "Circle unsafe ways to use tools.",
+      "Write the names of 5 tools in your home.",
+      "Practice measuring a pencil with a ruler."
+    ],
+    "image": "images/tools.png"
+  },
+  {
+    "id": "machines",
+    "title": "Simple Machines",
+    "content": "<p>Children explore basic machines like levers, pulleys, and wheels. They learn how these machines help make work easier in everyday life.</p>",
+    "examples": [
+      "Lever – opening a door",
+      "Pulley – lifting a bucket",
+      "Wheel – moving a cart"
+    ],
+    "takehome": "1. Observe simple machines at home. 2. Explain how a lever helps. 3. Draw a pulley lifting an object. 4. Discuss wheels you see on vehicles. 5. Talk about how machines make work easier.",
+    "exercises": [
+      "Draw a lever and label it.",
+      "Match machines to their uses.",
+      "Circle examples of simple machines in pictures.",
+      "List 3 machines at home.",
+      "Explain how a wheel helps in movement."
+    ],
+    "image": "images/machines.png"
+  },
+  {
+    "id": "electricity",
+    "title": "Introduction to Electricity",
+    "content": "<p>Students learn about electricity as a source of power. They explore common electrical appliances and understand basic safety rules around electricity.</p>",
+    "examples": [
+      "Light bulb 💡",
+      "Fan 🌀",
+      "Television 📺"
+    ],
+    "takehome": "1. Identify electrical appliances at home. 2. Never touch wires with wet hands. 3. Switch off appliances when not in use. 4. Discuss with parents the safe use of electricity. 5. Draw a light bulb and fan.",
+    "exercises": [
+      "Match appliances to pictures.",
+      "Circle safe electrical practices.",
+      "List 3 appliances that use electricity.",
+      "Draw a plug and socket.",
+      "Write one rule for electrical safety."
+    ],
+    "image": "images/electricity.png"
+  },
+  {
+    "id": "computer",
+    "title": "Introduction to Computers",
+    "content": "<p>Children are introduced to computers, their parts, and basic functions. They learn about the keyboard, mouse, monitor, and CPU, and how computers are used for learning and play.</p>",
+    "examples": [
+      "Keyboard ⌨️ – typing",
+      "Mouse 🖱️ – clicking",
+      "Monitor 🖥️ – display"
+    ],
+    "takehome": "1. Identify parts of a computer at home or school. 2. Practice using the mouse under supervision. 3. Draw a computer and label its parts. 4. Discuss uses of computers with parents. 5. Explain what a computer can do.",
+    "exercises": [
+      "Label the parts of a computer.",
+      "Circle the input and output devices.",
+      "Draw a computer workstation.",
+      "List two ways computers help us.",
+      "Practice typing letters on a keyboard."
+    ],
+    "image": "images/computer.png"
+  },
+  {
+    "id": "printing",
+    "title": "Printing and Writing Tools",
+    "content": "<p>Students learn about printing and writing tools like pens, pencils, crayons, and printers. They understand how to use them properly to write, draw, and print simple documents.</p>",
+    "examples": [
+      "Pencil ✏️ – writing",
+      "Crayons 🖍️ – coloring",
+      "Printer 🖨️ – printing pictures"
+    ],
+    "takehome": "1. Practice writing letters and numbers neatly. 2. Draw and color a picture. 3. Observe a printer at school. 4. Discuss writing tools with parents. 5. Keep your writing tools organized.",
+    "exercises": [
+      "Draw and label writing tools.",
+      "Circle the tools used for drawing.",
+      "Practice writing a short sentence.",
+      "List 3 tools used for coloring.",
+      "Trace letters A–Z."
+    ],
+    "image": "images/writing-tools.png"
+  },
+  {
+    "id": "shapes",
+    "title": "Shapes and Design",
+    "content": "<p>Children explore basic shapes like circle, square, triangle, and rectangle. They learn how to combine shapes to make simple designs and patterns.</p>",
+    "examples": [
+      "Circle ⚪",
+      "Square ⬛",
+      "Triangle 🔺",
+      "Rectangle ▭"
+    ],
+    "takehome": "1. Identify shapes at home. 2. Draw 5 different shapes. 3. Create a simple pattern using shapes. 4. Discuss shapes found in objects. 5. Practice coloring inside shapes.",
+    "exercises": [
+      "Match shapes to names.",
+      "Draw a house using shapes.",
+      "Circle all triangles in a picture.",
+      "Trace 5 circles on paper.",
+      "Create a pattern using squares and triangles."
+    ],
+    "image": "images/shapes.png"
+  },
+  {
+    "id": "materials",
+    "title": "Materials Around Us",
+    "content": "<p>Students learn about common materials like wood, metal, plastic, and cloth. They discover the properties of each material and how they are used in daily life.</p>",
+    "examples": [
+      "Wood 🪵 – furniture",
+      "Metal 🏗️ – tools",
+      "Plastic 🧴 – containers",
+      "Cloth 👕 – clothing"
+    ],
+    "takehome": "1. Identify materials at home. 2. Draw an object made of wood and plastic. 3. Discuss which materials are safe to use. 4. Touch and feel different materials. 5. Talk about materials in your classroom.",
+    "exercises": [
+      "Sort objects by material.",
+      "Draw 3 items made of metal.",
+      "Circle items made of plastic.",
+      "Write one use for each material.",
+      "Observe and list 5 materials at home."
+    ],
+    "image": "images/materials.png"
+  },
+  {
+    "id": "energy",
+    "title": "Energy and Power",
+    "content": "<p>Children learn about energy, sources of power, and how it is used. They explore sunlight, batteries, wind, and human effort as sources of energy.</p>",
+    "examples": [
+      "Sunlight ☀️ – solar energy",
+      "Battery 🔋 – powering toys",
+      "Wind 💨 – spinning a fan",
+      "Human effort 💪 – lifting objects"
+    ],
+    "takehome": "1. Observe how toys use batteries. 2. Talk about solar panels you see. 3. Try turning a fan using wind or hand. 4. Discuss energy-saving tips. 5. Draw examples of energy sources.",
+    "exercises": [
+      "Match energy sources to pictures.",
+      "Draw 3 sources of energy.",
+      "Circle renewable and non-renewable sources.",
+      "Write 2 ways humans produce energy.",
+      "Trace a simple windmill."
+    ],
+    "image": "images/energy.png"
+  },
+  {
+    "id": "transport",
+    "title": "Transport and Vehicles",
+    "content": "<p>Students learn about different modes of transport, including bicycles, cars, buses, and boats. They understand how vehicles move and the importance of traffic safety.</p>",
+    "examples": [
+      "Bicycle 🚲",
+      "Car 🚗",
+      "Bus 🚌",
+      "Boat ⛴️"
+    ],
+    "takehome": "1. Observe vehicles on the road. 2. Draw your favorite vehicle. 3. Discuss how vehicles help us travel. 4. Talk about road safety rules. 5. Explain why bicycles need pedals.",
+    "exercises": [
+      "Match vehicles to pictures.",
+      "Draw a traffic scene.",
+      "Circle safe vehicle behaviors.",
+      "List 3 vehicles you see every day.",
+      "Write how a car moves."
+    ],
+    "image": "images/transport.png"
+  },
+  {
+    "id": "communication",
+    "title": "Communication Tools",
+    "content": "<p>Children learn about basic communication tools such as telephones, letters, emails, and signals. They understand how people share information using these tools.</p>",
+    "examples": [
+      "Telephone ☎️ – talking",
+      "Letter ✉️ – writing",
+      "Email 📧 – digital messages",
+      "Signals 🚦 – traffic rules"
+    ],
+    "takehome": "1. Write a short letter to a friend. 2. Identify communication tools at home. 3. Discuss how email works with parents. 4. Draw a telephone and letter. 5. Talk about the importance of communication.",
+    "exercises": [
+      "Match communication tools to their uses.",
+      "Draw a scene showing people communicating.",
+      "Circle items used for communication.",
+      "Write a message for a friend.",
+      "Trace symbols for communication tools."
+    ],
+    "image": "images/communication.png"
+  }
+]
