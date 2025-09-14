@@ -73,10 +73,168 @@
           { "id": "moral_lessons", "title": "Moral Lessons", "detailsPage": "Lessons/Year2/religious_studies/topics-details.html?topic=moral_lessons" }
       ]}
     ]
+  },
+  
+  {
+    "id": "year3",
+    "name": "Year 3",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "reading_paragraphs", "title": "Reading Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=reading_paragraphs" },
+          { "id": "writing_paragraphs", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=writing_paragraphs" },
+          { "id": "comprehension", "title": "Comprehension", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=comprehension" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "common_mistakes", "title": "Common Mistakes", "detailsPage": "Lessons/Year3/spellings-and-grammar/topics-details.html?topic=common_mistakes" },
+          { "id": "sentence_structure", "title": "Sentence Structure", "detailsPage": "Lessons/Year3/spellings-and-grammar/topics-details.html?topic=sentence_structure" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "multiplication_tables", "title": "Multiplication Tables", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=multiplication_tables" },
+          { "id": "division_basics", "title": "Division Basics", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=division_basics" },
+          { "id": "fractions", "title": "Introduction to Fractions", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=fractions" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "loops_and_patterns", "title": "Loops and Patterns", "detailsPage": "Lessons/Year3/basic-coding/topics-details.html?topic=loops_and_patterns" },
+          { "id": "logical_thinking", "title": "Logical Thinking Activities", "detailsPage": "Lessons/Year3/basic-coding/topics-details.html?topic=logical_thinking" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "reading_and_writing", "title": "Reading & Writing Simple Sentences", "detailsPage": "Lessons/Year3/nigerian-language/topics-details.html?topic=reading_and_writing" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "plants_animals_environment", "title": "Plants, Animals & Environment", "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=plants_animals_environment" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "healthy_lifestyle", "title": "Healthy Lifestyle Habits", "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=healthy_lifestyle" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "crafts_and_painting", "title": "Crafts & Painting", "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=crafts_and_painting" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "moral_stories", "title": "Moral Stories", "detailsPage": "Lessons/Year3/religious_studies/topics-details.html?topic=moral_stories" }
+      ]}
+    ]
+  },
+  {
+    "id": "year4",
+    "name": "Year 4",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "writing_paragraphs", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=writing_paragraphs" },
+          { "id": "reading_comprehension", "title": "Reading Comprehension", "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=reading_comprehension" },
+          { "id": "creative_writing", "title": "Creative Writing", "detailsPage": "Lessons/Year4/english-language/topics-details.html?topic=creative_writing" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "complex_spellings", "title": "Complex Spellings", "detailsPage": "Lessons/Year4/spellings-and-grammar/topics-details.html?topic=complex_spellings" },
+          { "id": "grammar_rules", "title": "Grammar Rules", "detailsPage": "Lessons/Year4/spellings-and-grammar/topics-details.html?topic=grammar_rules" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "multiplication_division", "title": "Multiplication & Division", "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=multiplication_division" },
+          { "id": "fractions_and_decimals", "title": "Fractions & Decimals", "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=fractions_and_decimals" },
+          { "id": "geometry_basics", "title": "Basic Geometry", "detailsPage": "Lessons/Year4/mathematics/topics-details.html?topic=geometry_basics" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "conditional_logic", "title": "Conditional Logic", "detailsPage": "Lessons/Year4/basic-coding/topics-details.html?topic=conditional_logic" },
+          { "id": "simple_programming_activities", "title": "Simple Programming Activities", "detailsPage": "Lessons/Year4/basic-coding/topics-details.html?topic=simple_programming_activities" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "short_paragraphs", "title": "Writing Short Paragraphs", "detailsPage": "Lessons/Year4/nigerian-language/topics-details.html?topic=short_paragraphs" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "human_body_and_health", "title": "Human Body & Health", "detailsPage": "Lessons/Year4/basic-science/topics-details.html?topic=human_body_and_health" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "sports_and_exercises", "title": "Sports & Exercises", "detailsPage": "Lessons/Year4/physical_and_health_education/topics-details.html?topic=sports_and_exercises" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "advanced_drawing", "title": "Advanced Drawing & Painting", "detailsPage": "Lessons/Year4/cultural_and_creative_arts/topics-details.html?topic=advanced_drawing" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "religious_principles", "title": "Religious Principles", "detailsPage": "Lessons/Year4/religious_studies/topics-details.html?topic=religious_principles" }
+      ]}
+    ]
+  },
+  {
+    "id": "year5",
+    "name": "Year 5",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "writing_stories", "title": "Writing Stories", "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=writing_stories" },
+          { "id": "reading_comprehension", "title": "Reading Comprehension", "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=reading_comprehension" },
+          { "id": "letter_writing", "title": "Letter Writing", "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=letter_writing" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "vocabulary_expansion", "title": "Vocabulary Expansion", "detailsPage": "Lessons/Year5/spellings-and-grammar/topics-details.html?topic=vocabulary_expansion" },
+          { "id": "advanced_grammar", "title": "Advanced Grammar", "detailsPage": "Lessons/Year5/spellings-and-grammar/topics-details.html?topic=advanced_grammar" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "advanced_multiplication", "title": "Advanced Multiplication", "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=advanced_multiplication" },
+          { "id": "fractions_decimals_percentage", "title": "Fractions, Decimals & Percentages", "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=fractions_decimals_percentage" },
+          { "id": "geometry_intermediate", "title": "Intermediate Geometry", "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=geometry_intermediate" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "loops_conditions", "title": "Loops & Conditions", "detailsPage": "Lessons/Year5/basic-coding/topics-details.html?topic=loops_conditions" },
+          { "id": "project_activities", "title": "Simple Project Activities", "detailsPage": "Lessons/Year5/basic-coding/topics-details.html?topic=project_activities" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "writing_paragraphs", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year5/nigerian-language/topics-details.html?topic=writing_paragraphs" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "plants_animals_humans", "title": "Plants, Animals & Humans", "detailsPage": "Lessons/Year5/basic-science/topics-details.html?topic=plants_animals_humans" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "fitness_routines", "title": "Fitness Routines", "detailsPage": "Lessons/Year5/physical_and_health_education/topics-details.html?topic=fitness_routines" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "theatre_and_music", "title": "Theatre & Music", "detailsPage": "Lessons/Year5/cultural_and_creative_arts/topics-details.html?topic=theatre_and_music" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "religion_and_ethics", "title": "Religion & Ethics", "detailsPage": "Lessons/Year5/religious_studies/topics-details.html?topic=religion_and_ethics" }
+      ]}
+    ]
+  },
+  {
+    "id": "year6",
+    "name": "Year 6",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "essay_writing", "title": "Essay Writing", "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=essay_writing" },
+          { "id": "reading_comprehension", "title": "Reading Comprehension", "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=reading_comprehension" },
+          { "id": "report_writing", "title": "Report Writing", "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=report_writing" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "advanced_spellings", "title": "Advanced Spellings", "detailsPage": "Lessons/Year6/spellings-and-grammar/topics-details.html?topic=advanced_spellings" },
+          { "id": "complex_grammar", "title": "Complex Grammar", "detailsPage": "Lessons/Year6/spellings-and-grammar/topics-details.html?topic=complex_grammar" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "algebra_basics", "title": "Introduction to Algebra", "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=algebra_basics" },
+          { "id": "fractions_decimals_percentage", "title": "Fractions, Decimals & Percentages", "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=fractions_decimals_percentage" },
+          { "id": "geometry_advanced", "title": "Advanced Geometry", "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=geometry_advanced" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "programming_projects", "title": "Programming Projects", "detailsPage": "Lessons/Year6/basic-coding/topics-details.html?topic=programming_projects" },
+          { "id": "logical_challenges", "title": "Logical Challenges", "detailsPage": "Lessons/Year6/basic-coding/topics-details.html?topic=logical_challenges" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "essay_writing", "title": "Essay Writing", "detailsPage": "Lessons/Year6/nigerian-language/topics-details.html?topic=essay_writing" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "environment_human_body", "title": "Environment & Human Body", "detailsPage": "Lessons/Year6/basic-science/topics-details.html?topic=environment_human_body" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "team_sports", "title": "Team Sports", "detailsPage": "Lessons/Year6/physical_and_health_education/topics-details.html?topic=team_sports" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "advanced_theatre", "title": "Advanced Theatre & Music", "detailsPage": "Lessons/Year6/cultural_and_creative_arts/topics-details.html?topic=advanced_theatre" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "ethics_and_values", "title": "Ethics & Values", "detailsPage": "Lessons/Year6/religious_studies/topics-details.html?topic=ethics_and_values" }
+      ]}
+    ]
   }
+]
   // ==============================
   // Continue Years 3–6 (Primary),
   // Years 7–9 (JSS, upgrade subjects),
   // Years 10–12 (SSS, upgrade subjects)
   // ==============================
-]
+
