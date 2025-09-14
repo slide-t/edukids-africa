@@ -2,239 +2,253 @@
   {
     "id": "alphabets",
     "title": "Alphabets and Sounds",
-    "content": "<p>Children will learn all 26 letters of the English alphabet from A to Z. Each letter has a sound which they can practice by singing the alphabet song. Recognizing letters and associating them with objects helps build memory and phonics skills. For example, A is for Apple 🍎, B is for Ball ⚽. Teachers can use flashcards, objects, and songs to make learning fun. Pupils should practice both uppercase and lowercase letters and attempt tracing them on paper. This foundation will help children in reading and writing words in later lessons. Engaging activities like letter hunts around the classroom or identifying letters in storybooks make learning interactive and enjoyable.</p>",
+    "content": "<p>You will learn the 26 letters of the alphabet (A–Z) and the sounds they make. Try singing the alphabet song while pointing to each letter.</p>",
     "examples": [
       "A for Apple 🍎",
       "B for Ball ⚽",
-      "C for Cat 🐱",
-      "D for Dog 🐶"
+      "C for Cat 🐱"
     ],
     "takehome": [
-      "Practice singing the alphabet song daily.",
-      "Look for letters around your house and identify them.",
-      "Trace all letters A–Z on paper or in sand.",
-      "Use toys or objects to represent letters.",
-      "Play a game with a parent identifying letters on items at home."
+      "Sing the alphabet song every day 🎵",
+      "Point to letters in books or signs around you",
+      "Try saying the sound of each letter aloud",
+      "Find letters in your toys or classroom objects",
+      "Draw each letter with colors and decorate them"
     ],
     "exercises": [
-      "Write all letters A–Z in your notebook.",
-      "Match letters to pictures (A → Apple, B → Ball).",
-      "Say the sound of each letter aloud."
+      "Write letters A–Z in your notebook ✏️",
+      "Circle letters you see in your room",
+      "Match letters to pictures (A → Apple, B → Ball)"
     ],
     "image": "images/alphabets.png"
   },
   {
     "id": "simple_words",
     "title": "Simple Words",
-    "content": "<p>Pupils will learn to form simple words by combining letters they know. This develops early reading skills. Starting with 2–3 letter words like cat 🐱, dog 🐶, and sun ☀️, children are encouraged to sound out each letter and blend them together. Writing these words repeatedly helps reinforce memory. Teachers can introduce small word games such as word matching or letter rearrangement to make learning engaging. Understanding simple words allows children to form basic sentences and communicate ideas effectively. Visual aids, storybooks, and hands-on activities make word learning exciting for young learners.</p>",
+    "content": "<p>You will learn to form small words using letters and sounds. Try reading and writing short words by combining letters.</p>",
     "examples": [
       "cat 🐱, dog 🐶, sun ☀️",
       "mat, bat, hat",
-      "pen ✏️, cup ☕, fan"
+      "run, fun, sun"
     ],
     "takehome": [
-      "Practice reading small words at home.",
-      "Find objects around you and write their names.",
-      "Play word-matching games with family.",
-      "Trace simple words in your notebook.",
-      "Say words aloud and spell them."
+      "Look for words in your storybooks 📖",
+      "Write simple words you see around you",
+      "Practice reading words aloud",
+      "Try forming new words with letters you know",
+      "Ask a sibling or parent to read simple words with you"
     ],
     "exercises": [
-      "Write 5 simple words in your book.",
-      "Circle words that rhyme.",
-      "Sound out each letter and say the word aloud."
+      "Write 5 simple words in your notebook ✏️",
+      "Draw pictures for 3 words (cat, dog, sun) 🖍️",
+      "Read 5 words aloud to a family member"
     ],
     "image": "images/simple-words.png"
   },
   {
     "id": "basic_sentences",
     "title": "Basic Sentences",
-    "content": "<p>Children learn how to combine words to form short sentences. Using words they know, pupils can create sentences like 'I am a boy.' or 'She is a girl.' This builds reading comprehension and writing skills. Teachers encourage students to speak sentences aloud, improving vocabulary and fluency. Using pictures to describe actions or people helps children understand sentence structure. Activities like sentence matching, filling in missing words, or acting out sentences make learning interactive. Mastery of basic sentences prepares pupils for reading storybooks and expressing their thoughts in writing.</p>",
+    "content": "<p>You will learn to put words together to make short sentences. Practice saying and writing simple sentences about yourself and things around you.</p>",
     "examples": [
-      "I am a boy.",
-      "She is a girl.",
-      "The cat is sleeping 🐱",
-      "The sun is shining ☀️"
+      "I am a boy 👦",
+      "She is a girl 👧",
+      "The cat is on the mat 🐱"
     ],
     "takehome": [
-      "Write 3 sentences about your family.",
-      "Read simple sentences in storybooks aloud.",
-      "Describe what you see in pictures using sentences.",
-      "Practice speaking short sentences daily.",
-      "Draw a picture and write a sentence about it."
+      "Write 3 sentences about your family 👨‍👩‍👧",
+      "Read your sentences aloud every day",
+      "Try making sentences about your toys 🧸",
+      "Draw pictures for each sentence",
+      "Ask a friend or sibling to make a sentence with you"
     ],
     "exercises": [
-      "Complete sentences: I ___ a boy/girl.",
-      "Match pictures with sentences.",
-      "Write 3 simple sentences about your day."
+      "Write 5 sentences about your day ✏️",
+      "Underline the nouns in your sentences",
+      "Circle the verbs in your sentences"
     ],
     "image": "images/basic-sentences.png"
   },
   {
     "id": "reading",
     "title": "Reading Short Stories",
-    "content": "<p>Pupils practice reading simple storybooks with pictures to improve fluency, comprehension, and vocabulary. Reading aloud helps children recognize words, understand meaning, and express emotions while reading. Teachers guide children to sound out unfamiliar words and relate them to pictures. Short stories like 'The Cat Sat on the Mat' or 'The Sun is Hot' encourage engagement and understanding. Pupils are also asked questions about the story to develop critical thinking. Reading together in pairs or groups enhances confidence and social skills. Over time, children can progress to longer stories with more complex sentences.</p>",
+    "content": "<p>Practice reading simple storybooks with pictures. Look at the pictures and read the sentences to understand the story.</p>",
     "examples": [
       "The cat sat on the mat 🐱",
       "The sun is hot ☀️",
-      "The dog ran fast 🐶",
-      "The boy plays with a ball ⚽"
+      "The dog is happy 🐶"
     ],
     "takehome": [
-      "Read a short story with a parent.",
-      "Identify 5 new words in a story.",
-      "Draw a scene from the story.",
-      "Practice reading aloud daily.",
-      "Discuss the story with family."
+      "Read one short story each day 📖",
+      "Look at the pictures and try to tell the story",
+      "Try reading aloud to your family",
+      "Draw your favorite part of the story 🎨",
+      "Practice new words from the story"
     ],
     "exercises": [
-      "Answer simple questions about the story.",
-      "Match words to pictures from the story.",
-      "Retell the story in your own words."
+      "Read 3 short sentences from a book",
+      "Match sentences to pictures 🖼️",
+      "Draw a 3-picture story and write 1 sentence for each"
     ],
     "image": "images/reading.png"
   },
   {
     "id": "rhyming",
     "title": "Rhyming Words",
-    "content": "<p>Pupils learn words that sound alike at the end, helping with phonics and spelling. For example, cat – hat – mat or dog – log – fog. Teachers can create rhyming games, songs, and poems to make learning fun. Recognizing rhymes enhances listening skills, pronunciation, and word recognition. Activities include identifying rhyming pairs, completing rhymes in poems, or creating rhyming words from given letters. Mastering rhyming words prepares pupils for spelling and reading longer texts confidently.</p>",
+    "content": "<p>You will learn words that sound alike. Rhyming helps you remember words and makes reading fun.</p>",
     "examples": [
-      "cat – hat – mat",
-      "dog – log – fog",
-      "sun – fun – run",
-      "ball – call – fall"
+      "cat – hat – mat 🐱🎩",
+      "dog – log – fog 🐶🌫️",
+      "sun – fun – run ☀️🏃"
     ],
     "takehome": [
-      "Find 3 rhyming words at home.",
-      "Read rhyming poems aloud.",
-      "Write your own rhyming words.",
-      "Sing rhyming songs.",
-      "Play rhyming games with family."
+      "Find rhyming words in your books 📖",
+      "Try making 5 rhyming words with friends",
+      "Write rhyming words in your notebook ✏️",
+      "Say rhyming words aloud",
+      "Draw pictures for rhyming words"
     ],
     "exercises": [
-      "Identify rhyming words from a list.",
-      "Complete missing rhymes in sentences.",
-      "Make a list of 5 rhyming words."
+      "Write 3 sets of rhyming words",
+      "Match rhyming words from a list",
+      "Find a rhyming word for 'cat'"
     ],
     "image": "images/rhyming.png"
   },
   {
     "id": "nouns_verbs",
     "title": "Nouns and Verbs",
-    "content": "<p>Children are introduced to nouns, which are words that name people, places, and things, and verbs, which are action words. Understanding nouns and verbs helps pupils form sentences and communicate effectively. Teachers can use interactive activities such as sorting words into nouns and verbs, acting out verbs, and using picture cards. Pupils practice by writing sentences that include both nouns and verbs. This topic lays the foundation for grammar and sentence structure in later lessons.</p>",
+    "content": "<p>You will learn nouns (naming words) and verbs (action words). Nouns tell us what things are, verbs tell us what things do.</p>",
     "examples": [
-      "Nouns: boy, ball, chair",
-      "Verbs: run, jump, eat",
-      "Nouns: cat 🐱, dog 🐶",
-      "Verbs: play ⚽, sleep 💤"
+      "Nouns: boy 👦, ball ⚽, chair 🪑",
+      "Verbs: run 🏃, jump 🤾, eat 🍎"
     ],
     "takehome": [
-      "Identify nouns and verbs in sentences at home.",
-      "Write 3 sentences using nouns and verbs.",
-      "Act out verbs you see around you.",
-      "Sort words from a storybook into nouns and verbs.",
-      "Practice making simple sentences."
+      "Look for nouns and verbs in your storybooks 📖",
+      "Write 5 nouns and 5 verbs in your notebook ✏️",
+      "Make 3 sentences using nouns and verbs",
+      "Draw pictures for each verb",
+      "Practice saying verbs aloud"
     ],
     "exercises": [
-      "Underline nouns in a sentence.",
-      "Circle verbs in a sentence.",
-      "Write a sentence with 1 noun and 1 verb."
+      "Circle the nouns in a sentence",
+      "Underline the verbs in a sentence",
+      "Make 3 sentences using one noun and one verb each"
     ],
     "image": "images/nouns-verbs.png"
   },
   {
     "id": "picture_reading",
     "title": "Picture Reading",
-    "content": "<p>Pupils observe pictures and describe what they see, helping build vocabulary and comprehension. For example, a picture of a dog 🐕 could be described as 'The dog is running.' Children practice forming sentences based on images. Teachers can use picture cards or storybooks with illustrations. Activities include drawing a scene and describing it, matching images with sentences, and storytelling. Picture reading encourages creative thinking and prepares pupils for reading and writing longer texts.</p>",
+    "content": "<p>You will look at pictures and describe what you see. This helps you learn new words and improve speaking skills.</p>",
     "examples": [
-      "A picture of a dog 🐕 → The dog is running.",
-      "A picture of a girl 👧 → The girl is smiling.",
-      "A picture of a house 🏠 → The house is big."
+      "A dog 🐕 → The dog is running",
+      "A girl 👧 → The girl is smiling",
+      "A tree 🌳 → The tree is tall"
     ],
     "takehome": [
-      "Describe pictures in storybooks aloud.",
-      "Draw and label scenes from your surroundings.",
-      "Practice forming sentences from images.",
-      "Play 'what is happening in this picture?' with family.",
-      "Collect pictures and write 1 sentence for each."
+      "Look at pictures in books and describe them 📖",
+      "Draw a picture and write 1 sentence about it 🎨",
+      "Practice speaking about the picture to a friend",
+      "Try labeling objects in your room",
+      "Make a story using 3 pictures"
     ],
     "exercises": [
-      "Match pictures to sentences.",
-      "Write 3 sentences describing images.",
-      "Draw and describe your favorite toy."
+      "Describe 3 pictures in your notebook",
+      "Draw a picture and write 2 sentences",
+      "Match sentences to pictures"
     ],
     "image": "images/picture-reading.png"
   },
-
-{
+  {
     "id": "opposites",
     "title": "Opposites",
-    "content": "<p>Pupils learn words that have opposite meanings, which helps expand vocabulary and understanding of language. Examples include big ↔ small, hot ↔ cold. Teachers can use flashcards, pictures, and objects to demonstrate opposites. Children can also act out opposites, play matching games, and identify opposites in stories. Recognizing opposites improves comprehension, critical thinking, and communication skills. This topic prepares pupils for more advanced language concepts in later lessons.</p>",
+    "content": "<p>You will learn words that mean opposite things. Knowing opposites makes reading and speaking more fun.</p>",
     "examples": [
-      "big ↔ small",
-      "hot ↔ cold",
-      "fast ↔ slow",
-      "happy ↔ sad"
+  "A: apple ↔ orange 🍎🍊",
+  "B: big ↔ small 🔵⚪",
+  "C: clean ↔ dirty 🧼💩",
+  "D: day ↔ night 🌞🌜",
+  "E: empty ↔ full 🏺🍯",
+  "F: fast ↔ slow 🏃🐢",
+  "G: good ↔ bad 👍👎",
+  "H: happy ↔ sad 😀😢",
+  "I: in ↔ out ⬇️⬆️",
+  "J: jump ↔ sit 🤸‍♂️🪑",
+  "K: kind ↔ mean 💖😡",
+  "L: long ↔ short 📏✂️",
+  "M: more ↔ less ➕➖",
+  "N: near ↔ far 🏠🌄",
+  "O: open ↔ closed 👐🚪",
+  "P: push ↔ pull 🤜🤛",
+  "Q: quiet ↔ loud 🤫📢",
+  "R: rich ↔ poor 💰🪙",
+  "S: sharp ↔ blunt 🔪✏️",
+  "T: tall ↔ short 🏙️🏠",
+  "U: up ↔ down ⬆️⬇️",
+  "V: victory ↔ defeat 🏆🥀",
+  "W: wet ↔ dry 💦🏜️",
+  "X: xenial ↔ hostile 🤝😠",
+  "Y: yes ↔ no ✅❌",
+  "Z: zigzag ↔ straight ↔↕️"
+
     ],
     "takehome": [
-      "Find 5 pairs of opposites at home.",
-      "Use opposites in simple sentences.",
-      "Act out opposite words with family or friends.",
-      "Play games to identify opposites in your environment.",
-      "Draw pictures representing opposites."
+      "Look for opposites in your storybooks 📖",
+      "Write 5 pairs of opposites ✏️",
+      "Act out opposites with friends or siblings 🤹",
+      "Draw opposite pictures",
+      "Say opposites aloud every day"
     ],
     "exercises": [
-      "Write the opposite of: tall, hot, fast.",
-      "Match words with their opposites.",
-      "Make 3 sentences using opposites."
+      "Match opposites from a list",
+      "Write the opposite of 5 words",
+      "Circle opposites in sentences"
     ],
     "image": "images/opposites.png"
   },
   {
     "id": "listening",
     "title": "Listening Skills",
-    "content": "<p>Pupils practice listening carefully to instructions, stories, and sounds. Good listening skills improve understanding, concentration, and communication. Teachers can give simple instructions like 'Clap your hands 👏' or 'Stand up', and pupils follow them. Listening games, storytelling, and identifying sounds in the classroom or home environment are useful activities. Developing listening skills prepares children for reading comprehension, speaking, and learning in all subjects.</p>",
+    "content": "<p>You will practice listening carefully to instructions and short stories. Listening helps you understand and follow directions.</p>",
     "examples": [
       "Teacher says: Clap your hands 👏",
-      "Teacher says: Stand up",
-      "Listen to a short story and answer questions",
-      "Identify sounds around you: dog 🐶, bird 🐦, car 🚗"
+      "Teacher says: Stand up 🧍",
+      "Teacher says: Touch your nose 👃"
     ],
     "takehome": [
-      "Listen carefully to instructions at home.",
-      "Follow simple verbal commands.",
-      "Listen to short stories and summarize them.",
-      "Identify household sounds and name them.",
-      "Practice listening games with siblings or parents."
+      "Listen to a short story every day 📖",
+      "Repeat what you hear aloud",
+      "Ask a family member to give you instructions",
+      "Practice listening games with friends",
+      "Draw a picture of a story you listened to 🎨"
     ],
     "exercises": [
-      "Listen to a sentence and repeat it.",
-      "Draw what you hear in a short story.",
-      "Answer questions based on what you heard."
+      "Follow 3 simple instructions",
+      "Draw what you heard in a short story",
+      "Listen and write 3 key words from a story"
     ],
     "image": "images/listening.png"
   },
   {
     "id": "dictation",
     "title": "Simple Dictation",
-    "content": "<p>Pupils practice writing words or short sentences as dictated by the teacher. Dictation reinforces listening, spelling, and writing skills. Teachers read words slowly, and children write them correctly in their notebooks. Starting with simple words like sun 🌞, cat 🐱, or book 📘 helps pupils gain confidence. Gradually, pupils progress to short sentences. Dictation activities improve concentration, accuracy, and reading skills, which are essential for effective communication and literacy.</p>",
+    "content": "<p>You will practice writing simple words or short sentences that someone reads aloud. Dictation improves your spelling and handwriting.</p>",
     "examples": [
       "Write: sun 🌞",
       "Write: The cat 🐱",
-      "Write: I am happy 😊",
-      "Write: The dog runs 🐶"
+      "Write: I like ice cream 🍦"
     ],
     "takehome": [
-      "Practice writing simple words at home.",
-      "Ask a family member to dictate words for you.",
-      "Copy simple sentences from storybooks.",
-      "Check your spelling carefully.",
-      "Read aloud what you have written."
+      "Ask someone to read 5 words for you to write ✏️",
+      "Write 3 short sentences daily",
+      "Check your spelling and correct mistakes",
+      "Practice writing neatly",
+      "Read your dictation sentences aloud"
     ],
     "exercises": [
-      "Write 5 words as dictated by a parent.",
-      "Write a simple sentence dictated by a teacher or parent.",
-      "Correct spelling mistakes in a short passage."
+      "Write 5 words read aloud",
+      "Write 3 sentences read aloud",
+      "Correct spelling mistakes in your notebook"
     ],
     "image": "images/dictation.png"
   }
