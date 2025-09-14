@@ -250,31 +250,6 @@
         "question": "Select the French word for 'I am thirsty':",
         "options": ["J’ai soif", "Je suis soif", "J’ai soffe", "J’ai soifff"],
         "answer": "J’ai soif"
-      },
-      {
-        "question": "Choose the French word for 'I am hungry':",
-        "options": ["J’ai faim", "J’ai faimn", "Je suis faim", "J’ai feim"],
-        "answer": "J’ai faim"
-      },
-      {
-        "question": "Select the French word for 'I am sleepy':",
-        "options": ["J’ai sommeil", "Je suis sommeil", "J’ai sommel", "J’ai sommeille"],
-        "answer": "J’ai sommeil"
-      },
-      {
-        "question": "Choose the French word for 'I am happy today':",
-        "options": ["Je suis heureux aujourd’hui", "Je suis heurex aujourd’hui", "Je suis heureux aujourd’hui", "Je suis heureu aujourd’hui"],
-        "answer": "Je suis heureux aujourd’hui"
-      },
-      {
-        "question": "Select the French word for 'I go to school':",
-        "options": ["Je vais à l’école", "Je vais a l’ecole", "Je vas à l’école", "Je vais a l’école"],
-        "answer": "Je vais à l’école"
-      },
-      {
-        "question": "Choose the French word for 'I play with my friends':",
-        "options": ["Je joue avec mes amis", "Je joue avec mes amies", "Je joue avec mes amisse", "Je joue avec mes amii"],
-        "answer": "Je joue avec mes amis"
       }
     ],
 
@@ -569,7 +544,494 @@
         "options": ["dix", "dis", "dixx", "dizz"],
         "answer": "dix"
       }
+    ],
+
+    "Level3": [
+      {
+        "question": "Choose the correct French word for 'schoolbag':",
+        "options": ["cartable", "cartabl", "cartabb", "cartablee"],
+        "answer": "cartable"
+      },
+      {
+        "question": "Select the French word for 'pencil':",
+        "options": ["crayon", "crayonn", "crayonne", "crayonnn"],
+        "answer": "crayon"
+      },
+      {
+        "question": "Choose the French word for 'eraser':",
+        "options": ["gomme", "gom", "gomm", "gommee"],
+        "answer": "gomme"
+      },
+      {
+        "question": "Select the correct French word for 'book':",
+        "options": ["livre", "livree", "livr", "livrr"],
+        "answer": "livre"
+      },
+      {
+        "question": "Choose the French word for 'notebook':",
+        "options": ["cahier", "cahiers", "cahhier", "cahierr"],
+        "answer": "cahier"
+      },
+      {
+        "question": "Select the French word for 'pen':",
+        "options": ["stylo", "stilo", "styllo", "stylloo"],
+        "answer": "stylo"
+      },
+      {
+        "question": "Choose the French word for 'school':",
+        "options": ["école", "écolle", "ecole", "écolé"],
+        "answer": "école"
+      },
+      {
+        "question": "Select the French word for 'teacher':",
+        "options": ["professeur", "professur", "professeurre", "proffesseur"],
+        "answer": "professeur"
+      },
+      {
+        "question": "Choose the French word for 'student':",
+        "options": ["élève", "eleve", "éléve", "élevé"],
+        "answer": "élève"
+      },
+      {
+        "question": "Select the correct French word for 'classroom':",
+        "options": ["salle de classe", "sal de classe", "salle de clas", "sale de classe"],
+        "answer": "salle de classe"
+      },
+      {
+        "question": "Choose the French word for 'window':",
+        "options": ["fenêtre", "fenetre", "fenêtree", "fenétr"],
+        "answer": "fenêtre"
+      },
+      {
+        "question": "Select the French word for 'door':",
+        "options": ["porte", "port", "portee", "portt"],
+        "answer": "porte"
+      },
+      {
+        "question": "Choose the French word for 'chair':",
+        "options": ["chaise", "chaisse", "chaiz", "chaz"],
+        "answer": "chaise"
+      },
+      {
+        "question": "Select the French word for 'table':",
+        "options": ["table", "tablle", "tabl", "tablee"],
+        "answer": "table"
+      },
+      {
+        "question": "Choose the French word for 'blackboard':",
+        "options": ["tableau noir", "tableau noier", "tablo noir", "tableau noirre"],
+        "answer": "tableau noir"
+      },
+      {
+        "question": "Select the French word for 'chalk':",
+        "options": ["craie", "crai", "craye", "craié"],
+        "answer": "craie"
+      },
+      {
+        "question": "Choose the French word for 'bag':",
+        "options": ["sac", "sacc", "sacq", "saccc"],
+        "answer": "sac"
+      },
+      {
+        "question": "Select the French word for 'school bus':",
+        "options": ["bus scolaire", "buss scolaire", "bus scolair", "bus skolair"],
+        "answer": "bus scolaire"
+      },
+      {
+        "question": "Choose the French word for 'playground':",
+        "options": ["terrain de jeu", "terain de jeu", "terrein de jeu", "terrein de jieu"],
+        "answer": "terrain de jeu"
+      },
+      {
+        "question": "Select the French word for 'library':",
+        "options": ["bibliothèque", "bibliothèq", "bibliotheque", "bibliothéque"],
+        "answer": "bibliothèque"
+      },
+      {
+        "question": "Choose the French word for 'computer':",
+        "options": ["ordinateur", "ordenateur", "ordnateur", "ordinatuer"],
+        "answer": "ordinateur"
+      },
+      {
+        "question": "Select the French word for 'mouse':",
+        "options": ["souris", "sourriss", "sourissee", "soruis"],
+        "answer": "souris"
+      },
+      {
+        "question": "Choose the French word for 'keyboard':",
+        "options": ["clavier", "clavieer", "clavierre", "clavvier"], 
+        "answer": "clavier"
+      },
+      {
+        "question": "Select the French word for 'screen':",
+        "options": ["écran", "ecran", "écranr", "écrann"],
+        "answer": "écran"
+      },
+      {
+        "question": "Choose the French word for 'printer':",
+        "options": ["imprimante", "imprimant", "imprimantee", "imprimannt"], 
+        "answer": "imprimante"
+      },
+
+  
+      {
+        "question": "Choose the French word for 'notebook page':",
+        "options": ["page de cahier", "page du cahier", "paje de cahier", "page de cahierr"],
+        "answer": "page de cahier"
+      },
+      {
+        "question": "Select the French word for 'marker':",
+        "options": ["marqueur", "markeur", "markeur", "marquerr"],
+        "answer": "marqueur"
+      },
+      {
+        "question": "Choose the French word for 'sharpener':",
+        "options": ["taille-crayon", "taillecrayon", "taille-crayonn", "taill-crayon"],
+        "answer": "taille-crayon"
+      },
+      {
+        "question": "Select the French word for 'ruler':",
+        "options": ["règle", "regle", "règlee", "règgle"],
+        "answer": "règle"
+      },
+      {
+        "question": "Choose the French word for 'bag strap':",
+        "options": ["sangle de sac", "sangl de sac", "sangle du sac", "sangle des sac"],
+        "answer": "sangle de sac"
+      },
+      {
+        "question": "Select the French word for 'school uniform':",
+        "options": ["uniforme scolaire", "uniforme scolair", "uniforme schoolaire", "uniforme scolar"],
+        "answer": "uniforme scolaire"
+      },
+      {
+        "question": "Choose the French word for 'teacher's desk':",
+        "options": ["bureau du professeur", "bureaue du professeur", "bureu du professeur", "bureau professeur"], 
+        "answer": "bureau du professeur"
+      },
+      {
+        "question": "Select the French word for 'classmate':",
+        "options": ["camarade de classe", "camarad de classe", "camarade de clas", "camarade classe"],
+        "answer": "camarade de classe"
+      },
+      {
+        "question": "Choose the French word for 'lesson':",
+        "options": ["leçon", "lecon", "leçonn", "leçone"],
+        "answer": "leçon"
+      },
+      {
+        "question": "Select the French word for 'exercise book':",
+        "options": ["cahier d'exercices", "cahier d'exercice", "cahier dexercices", "cahier d'exerciss"], 
+        "answer": "cahier d'exercices"
+      },
+      {
+        "question": "Choose the French word for 'teacher's chair':",
+        "options": ["chaise du professeur", "chaise de professeur", "chaise professeurs", "chaise du profeseur"], 
+        "answer": "chaise du professeur"
+      },
+      {
+        "question": "Select the French word for 'lesson plan':",
+        "options": ["plan de leçon", "plan de lecon", "plan de leçonn", "plan de leçonn"],
+        "answer": "plan de leçon"
+      },
+      {
+        "question": "Choose the French word for 'school bell':",
+        "options": ["cloche d'école", "cloche de école", "cloch d'école", "cloche d ecole"],
+        "answer": "cloche d'école"
+      },
+      {
+        "question": "Select the French word for 'school library books':",
+        "options": ["livres de la bibliothèque", "livres de bibliothèque", "livres bibliothèque", "livres de la bibliotheque"], 
+        "answer": "livres de la bibliothèque"
+      },
+      {
+        "question": "Choose the French word for 'computer lab':",
+        "options": ["salle informatique", "salle d'informatique", "salle info", "laboratoire informatique"], 
+        "answer": "salle informatique"
+      },
+      {
+        "question": "Select the French word for 'whiteboard marker':",
+        "options": ["marqueur pour tableau blanc", "marqueur de tableau blanc", "marqueur tableau blanc", "marqueur du tableau blanc"], 
+        "answer": "marqueur pour tableau blanc"
+      },
+      {
+        "question": "Choose the French word for 'school playground games':",
+        "options": ["jeux de terrain", "jeux du terrain", "jeux sur le terrain", "jeux du terrain de jeu"], 
+        "answer": "jeux de terrain"
+      },
+      {
+        "question": "Select the French word for 'teacher's notes':",
+        "options": ["notes du professeur", "notes de professeur", "notes du prof", "notes du profeseur"], 
+        "answer": "notes du professeur"
+      },
+      {
+        "question": "Choose the French word for 'break time':",
+        "options": ["récréation", "recreation", "récreacion", "récréassion"], 
+        "answer": "récréation"
+      },
+      {
+        "question": "Select the French word for 'homework':",
+        "options": ["devoirs", "devior", "devouirs", "devoir"], 
+        "answer": "devoirs"
+      },
+      {
+        "question": "Choose the French word for 'school subject':",
+        "options": ["matière scolaire", "matières scolaire", "matière scolair", "matières scolaires"], 
+        "answer": "matière scolaire"
+      },
+      {
+        "question": "Select the French word for 'pen case':",
+        "options": ["trousse", "trousse de crayon", "trous de crayon", "trouss"], 
+        "answer": "trousse"
+      },
+      {
+        "question": "Choose the French word for 'class schedule':",
+        "options": ["emploi du temps", "emploi du temps", "emploi du temps scolaire", "emploi du temps du classe"], 
+        "answer": "emploi du temps"
+      },
+      {
+        "question": "Select the French word for 'school principal':",
+        "options": ["directeur", "directeur d'école", "directeur école", "directeur de l'école"], 
+        "answer": "directeur"
+      },
+      {
+        "question": "Choose the French word for 'breakfast at school':",
+        "options": ["petit-déjeuner à l'école", "petit déjeuner à l'école", "petit-déjeuner à l'ecole", "petit déjeuné école"], 
+        "answer": "petit-déjeuner à l'école"
+      },
+      {
+        "question": "Select the French word for 'school trip':",
+        "options": ["excursion scolaire", "sortie scolaire", "voyage scolaire", "excursion de l'école"],
+        "answer": "excursion scolaire"
+      },
+      {
+        "question": "Choose the French word for 'chalk':",
+        "options": ["craie", "cray", "craye", "krai"],
+        "answer": "craie"
+      },
+      {
+        "question": "Select the French word for 'eraser':",
+        "options": ["gomme", "gom", "gommer", "gommee"],
+        "answer": "gomme"
+      },
+      {
+        "question": "Choose the French word for 'notebook':",
+        "options": ["cahier", "cahié", "cahiers", "cahieré"],
+        "answer": "cahier"
+      },
+      {
+        "question": "Select the French word for 'school bag':",
+        "options": ["cartable", "sac à dos", "sac scolaire", "cartabl"],
+        "answer": "cartable"
+      },
+      {
+        "question": "Choose the French word for 'school lunch':",
+        "options": ["déjeuner scolaire", "repas scolaire", "midi scolaire", "repas du midi"],
+        "answer": "déjeuner scolaire"
+      },
+      {
+        "question": "Select the French word for 'pen':",
+        "options": ["stylo", "stilo", "styllo", "stilos"],
+        "answer": "stylo"
+      },
+      {
+        "question": "Choose the French word for 'pencil':",
+        "options": ["crayon", "crayonn", "crayonne", "crayons"],
+        "answer": "crayon"
+      },
+      {
+        "question": "Select the French word for 'desk':",
+        "options": ["bureau", "burea", "bureaux", "bureu"],
+        "answer": "bureau"
+      },
+      {
+        "question": "Choose the French word for 'chair':",
+        "options": ["chaise", "chaisse", "chais", "chase"],
+        "answer": "chaise"
+      },
+      {
+        "question": "Select the French word for 'lesson plan':",
+        "options": ["plan de leçon", "plan de lecon", "plan de leçonn", "plan de l'leçon"],
+        "answer": "plan de leçon"
+      },
+      {
+        "question": "Choose the French word for 'school playground':",
+        "options": ["cour de récréation", "terrain de jeu", "aire de jeu", "espace de récréation"],
+        "answer": "cour de récréation"
+      },
+      {
+        "question": "Select the French word for 'school bell':",
+        "options": ["cloche d'école", "sonnette", "alarme scolaire", "clochette d'école"],
+        "answer": "cloche d'école"
+      },
+      {
+        "question": "Choose the French word for 'teacher's assistant':",
+        "options": ["assistant du professeur", "aide professeur", "assistant scolaire", "aide du professeur"],
+        "answer": "assistant du professeur"
+      },
+      {
+        "question": "Select the French word for 'blackboard':",
+        "options": ["tableau noir", "tableau", "tableau blanc", "tableau noirci"],
+        "answer": "tableau noir"
+      },
+      {
+        "question": "Choose the French word for 'school library':",
+        "options": ["bibliothèque scolaire", "bibliothèque", "bibliothèques", "bibliothèque du collège"],
+        "answer": "bibliothèque scolaire"
+      },
+      {
+        "question": "Select the French word for 'science lab':",
+        "options": ["laboratoire de sciences", "laboratoire scientifique", "lab science", "salle de sciences"],
+        "answer": "laboratoire de sciences"
+      },
+      {
+        "question": "Choose the French word for 'school principal office':",
+        "options": ["bureau du directeur", "bureau de la directrice", "bureau principal", "office du directeur"],
+        "answer": "bureau du directeur"
+      },
+      {
+        "question": "Select the French word for 'sports field':",
+        "options": ["terrain de sport", "champ de sport", "aire de sport", "terrain sportif"],
+        "answer": "terrain de sport"
+      },
+      {
+        "question": "Choose the French word for 'art class':",
+        "options": ["cours d'art", "classe d'art", "atelier d'art", "leçon d'art"],
+        "answer": "cours d'art"
+      },
+      {
+        "question": "Select the French word for 'music class':",
+        "options": ["cours de musique", "classe de musique", "leçon de musique", "atelier de musique"],
+        "answer": "cours de musique"
+      },
+      {
+        "question": "Choose the French word for 'French class':",
+        "options": ["cours de français", "classe de français", "leçon de français", "atelier de français"],
+        "answer": "cours de français"
+      },
+      {
+        "question": "Select the French word for 'computer class':",
+        "options": ["cours d'informatique", "classe d'informatique", "atelier informatique", "leçon informatique"],
+        "answer": "cours d'informatique"
+      },
+      {
+        "question": "Choose the French word for 'mathematics class':",
+        "options": ["cours de mathématiques", "classe de maths", "leçon de maths", "atelier de mathématiques"],
+        "answer": "cours de mathématiques"
+      },
+      {
+        "question": "Select the French word for 'science class':",
+        "options": ["cours de sciences", "classe de sciences", "leçon de sciences", "atelier de sciences"],
+        "answer": "cours de sciences"
+      },
+      {
+        "question": "Choose the French word for 'break time':",
+        "options": ["récréation", "pause", "temps libre", "temps de repos"],
+        "answer": "récréation"
+      },
+      {
+        "question": "Select the French word for 'homework':",
+        "options": ["devoirs", "exercices", "travaux", "tâches"],
+        "answer": "devoirs"
+      },
+      {
+        "question": "Choose the French word for 'classmate':",
+        "options": ["camarade de classe", "compagne de classe", "ami de classe", "élève de classe"],
+        "answer": "camarade de classe"
+      },
+      {
+        "question": "Select the French word for 'teacher's desk':",
+        "options": ["bureau du professeur", "bureau enseignant", "bureau du maître", "bureau du professeur principal"],
+        "answer": "bureau du professeur"
+      },
+      {
+        "question": "Choose the French word for 'chalkboard eraser':",
+        "options": ["gomme pour tableau", "effaceur de tableau", "gommer tableau", "efface tableau"], 
+        "answer": "gomme pour tableau"
+      },
+      {
+        "question": "Select the French word for 'school uniform':",
+        "options": ["uniforme scolaire", "tenue scolaire", "habit scolaire", "uniforme du collège"],
+        "answer": "uniforme scolaire"
+      },
+      {
+        "question": "Choose the French word for 'school bag':",
+        "options": ["cartable", "sac à dos", "sac scolaire", "sac du collège"], 
+        "answer": "cartable"
+      },
+      {
+        "question": "Select the French word for 'exercise book':",
+        "options": ["cahier d'exercices", "cahier", "livre d'exercices", "cahier scolaire"], 
+        "answer": "cahier d'exercices"
+      },
+      {
+        "question": "Choose the French word for 'pen':",
+        "options": ["stylo", "crayon", "marqueur", "plume"], 
+        "answer": "stylo"
+      },
+      {
+        "question": "Select the French word for 'pencil':",
+        "options": ["crayon", "stylo", "crayonn", "crayon de papier"], 
+        "answer": "crayon"
+      },
+      {
+        "question": "Choose the French word for 'school rules':",
+        "options": ["règles de l'école", "règlements scolaires", "règles du collège", "lois scolaires"], 
+        "answer": "règles de l'école"
+      },
+      {
+        "question": "Select the French word for 'library books':",
+        "options": ["livres de la bibliothèque", "livres scolaires", "livres du collège", "livres de classe"], 
+        "answer": "livres de la bibliothèque"
+      },
+      {
+        "question": "Choose the French word for 'school activities':",
+        "options": ["activités scolaires", "activités de l'école", "activités du collège", "jeux scolaires"], 
+        "answer": "activités scolaires"
+      },
+      {
+        "question": "Select the French word for 'school trip':",
+        "options": ["excursion scolaire", "voyage scolaire", "sortie scolaire", "voyage du collège"], 
+        "answer": "excursion scolaire"
+      },
+      {
+        "question": "Choose the French word for 'first day at school':",
+        "options": ["premier jour d'école", "premier jour scolaire", "jour d'école", "jour scolaire"], 
+        "answer": "premier jour d'école"
+      },
+      {
+        "question": "Select the French word for 'class register':",
+        "options": ["registre de classe", "cahier de présence", "registre scolaire", "cahier de classe"], 
+        "answer": "registre de classe"
+      },
+      {
+        "question": "Choose the French word for 'school principal':",
+        "options": ["directeur", "principal", "chef d'école", "directeur scolaire"], 
+        "answer": "directeur"
+      },
+      {
+        "question": "Select the French word for 'lesson notes':",
+        "options": ["notes de cours", "notes du professeur", "notes scolaires", "notes d'école"], 
+        "answer": "notes de cours"
+      },
+      {
+        "question": "Choose the French word for 'sports day':",
+        "options": ["journée sportive", "jour de sport", "fête sportive", "jour sportif"], 
+        "answer": "journée sportive"
+      },
+      {
+        "question": "Select the French word for 'science experiment':",
+        "options": ["expérience scientifique", "expérience de science", "experiment scientifique", "essai scientifique"], 
+        "answer": "expérience scientifique"
+      },
+      {
+        "question": "Choose the French word for 'music lesson':",
+        "options": ["leçon de musique", "cours de musique", "classe de musique", "atelier musique"], 
+        "answer": "leçon de musique"
+      }
     ]
   }
 }
+
+      
 
