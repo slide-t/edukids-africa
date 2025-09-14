@@ -865,5 +865,412 @@
         ]
       }
     ]
-  }
-]
+  },
+
+  {
+    "id": "year7",
+    "name": "Year 7 (JSS 1)",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "grammar_clauses_jss1",
+            "title": "Grammar: Clauses",
+            "detailsPage": "Lessons/Year7/english-language/topics-details.html?topic=grammar_clauses_jss1"
+          },
+          {
+            "id": "comprehension_jss1",
+            "title": "Comprehension Passages",
+            "detailsPage": "Lessons/Year7/english-language/topics-details.html?topic=comprehension_jss1"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "fractions_and_decimals_jss1",
+            "title": "Fractions & Decimals",
+            "detailsPage": "Lessons/Year7/mathematics/topics-details.html?topic=fractions_and_decimals_jss1"
+          },
+          {
+            "id": "basic_algebra_jss1",
+            "title": "Basic Algebra",
+            "detailsPage": "Lessons/Year7/mathematics/topics-details.html?topic=basic_algebra_jss1"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "cell_structure_jss1",
+            "title": "Cell Structure",
+            "detailsPage": "Lessons/Year7/biology/topics-details.html?topic=cell_structure_jss1"
+          },
+          {
+            "id": "plant_and_animal_tissues_jss1",
+            "title": "Plant & Animal Tissues",
+            "detailsPage": "Lessons/Year7/biology/topics-details.html?topic=plant_and_animal_tissues_jss1"
+          }
+        ]
+      },
+      {
+        "id": "physical-and-health-education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "physical_fitness_jss1",
+            "title": "Physical Fitness",
+            "detailsPage": "Lessons/Year7/physical-and-health-education/topics-details.html?topic=physical_fitness_jss1"
+          },
+          {
+            "id": "first_aid_jss1",
+            "title": "First Aid Basics",
+            "detailsPage": "Lessons/Year7/physical-and-health-education/topics-details.html?topic=first_aid_jss1"
+          }
+        ]
+      },
+      {
+        "id": "economics",
+        "name": "Economics",
+        "topics": [
+          {
+            "id": "basic_economic_concepts_jss1",
+            "title": "Basic Economic Concepts",
+            "detailsPage": "Lessons/Year7/economics/topics-details.html?topic=basic_economic_concepts_jss1"
+          },
+          {
+            "id": "resources_and_needs_jss1",
+            "title": "Resources & Needs",
+            "detailsPage": "Lessons/Year7/economics/topics-details.html?topic=resources_and_needs_jss1"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "farming_methods_jss1",
+            "title": "Farming Methods",
+            "detailsPage": "Lessons/Year7/agricultural-science/topics-details.html?topic=farming_methods_jss1"
+          },
+          {
+            "id": "soil_management_jss1",
+            "title": "Soil Management",
+            "detailsPage": "Lessons/Year7/agricultural-science/topics-details.html?topic=soil_management_jss1"
+          }
+        ]
+      },
+      {
+        "id": "literature-in-english",
+        "name": "Literature in English",
+        "topics": [
+          {
+            "id": "short_stories_jss1",
+            "title": "Short Stories",
+            "detailsPage": "Lessons/Year7/literature-in-english/topics-details.html?topic=short_stories_jss1"
+          },
+          {
+            "id": "poetry_jss1",
+            "title": "Poetry Appreciation",
+            "detailsPage": "Lessons/Year7/literature-in-english/topics-details.html?topic=poetry_jss1"
+          }
+        ]
+      },
+      {
+        "id": "coding-and-programming",
+        "name": "Coding & Programming",
+        "topics": [
+          {
+            "id": "introduction_to_programming_jss1",
+            "title": "Introduction to Programming",
+            "detailsPage": "Lessons/Year7/coding-and-programming/topics-details.html?topic=introduction_to_programming_jss1"
+          },
+          {
+            "id": "basic_algorithms_jss1",
+            "title": "Basic Algorithms",
+            "detailsPage": "Lessons/Year7/coding-and-programming/topics-details.html?topic=basic_algorithms_jss1"
+          }
+        ]
+      },
+      {
+        "id": "spellings-and-vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "common_spellings_jss1",
+            "title": "Common Spellings",
+            "detailsPage": "Lessons/Year7/spellings-and-vocabulary/topics-details.html?topic=common_spellings_jss1"
+          },
+          {
+            "id": "vocabulary_building_jss1",
+            "title": "Vocabulary Building",
+            "detailsPage": "Lessons/Year7/spellings-and-vocabulary/topics-details.html?topic=vocabulary_building_jss1"
+          }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": "year8",
+    "name": "Year 8 (JSS 2)",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "advanced_grammar_jss2",
+            "title": "Advanced Grammar",
+            "detailsPage": "Lessons/Year8/english-language/topics-details.html?topic=advanced_grammar_jss2"
+          },
+          {
+            "id": "comprehension_jss2",
+            "title": "Comprehension Passages",
+            "detailsPage": "Lessons/Year8/english-language/topics-details.html?topic=comprehension_jss2"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "algebra_basics_jss2",
+            "title": "Algebra Basics",
+            "detailsPage": "Lessons/Year8/mathematics/topics-details.html?topic=algebra_basics_jss2"
+          },
+          {
+            "id": "geometry_jss2",
+            "title": "Geometry Fundamentals",
+            "detailsPage": "Lessons/Year8/mathematics/topics-details.html?topic=geometry_jss2"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "human_body_systems_jss2",
+            "title": "Human Body Systems",
+            "detailsPage": "Lessons/Year8/biology/topics-details.html?topic=human_body_systems_jss2"
+          },
+          {
+            "id": "plant_physiology_jss2",
+            "title": "Plant Physiology",
+            "detailsPage": "Lessons/Year8/biology/topics-details.html?topic=plant_physiology_jss2"
+          }
+        ]
+      },
+      {
+        "id": "physical-and-health-education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "fitness_and_exercise_jss2",
+            "title": "Fitness & Exercise",
+            "detailsPage": "Lessons/Year8/physical-and-health-education/topics-details.html?topic=fitness_and_exercise_jss2"
+          },
+          {
+            "id": "nutrition_and_health_jss2",
+            "title": "Nutrition & Health",
+            "detailsPage": "Lessons/Year8/physical-and-health-education/topics-details.html?topic=nutrition_and_health_jss2"
+          }
+        ]
+      },
+      {
+        "id": "economics",
+        "name": "Economics",
+        "topics": [
+          {
+            "id": "demand_and_supply_jss2",
+            "title": "Demand & Supply",
+            "detailsPage": "Lessons/Year8/economics/topics-details.html?topic=demand_and_supply_jss2"
+          },
+          {
+            "id": "production_and_consumption_jss2",
+            "title": "Production & Consumption",
+            "detailsPage": "Lessons/Year8/economics/topics-details.html?topic=production_and_consumption_jss2"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "crop_production_jss2",
+            "title": "Crop Production",
+            "detailsPage": "Lessons/Year8/agricultural-science/topics-details.html?topic=crop_production_jss2"
+          },
+          {
+            "id": "animal_husbandry_jss2",
+            "title": "Animal Husbandry",
+            "detailsPage": "Lessons/Year8/agricultural-science/topics-details.html?topic=animal_husbandry_jss2"
+          }
+        ]
+      },
+      {
+        "id": "literature-in-english",
+        "name": "Literature in English",
+        "topics": [
+          {
+            "id": "novels_jss2",
+            "title": "Novels",
+            "detailsPage": "Lessons/Year8/literature-in-english/topics-details.html?topic=novels_jss2"
+          },
+          {
+            "id": "poetry_jss2",
+            "title": "Poetry Analysis",
+            "detailsPage": "Lessons/Year8/literature-in-english/topics-details.html?topic=poetry_jss2"
+          }
+        ]
+      },
+      {
+        "id": "coding-and-programming",
+        "name": "Coding & Programming",
+        "topics": [
+          {
+            "id": "programming_basics_jss2",
+            "title": "Programming Basics",
+            "detailsPage": "Lessons/Year8/coding-and-programming/topics-details.html?topic=programming_basics_jss2"
+          },
+          {
+            "id": "control_structures_jss2",
+            "title": "Control Structures",
+            "detailsPage": "Lessons/Year8/coding-and-programming/topics-details.html?topic=control_structures_jss2"
+          }
+        ]
+      },
+      {
+        "id": "spellings-and-vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "advanced_spellings_jss2",
+            "title": "Advanced Spellings",
+            "detailsPage": "Lessons/Year8/spellings-and-vocabulary/topics-details.html?topic=advanced_spellings_jss2"
+          },
+          {
+            "id": "vocabulary_expansion_jss2",
+            "title": "Vocabulary Expansion",
+            "detailsPage": "Lessons/Year8/spellings-and-vocabulary/topics-details.html?topic=vocabulary_expansion_jss2"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "year9",
+    "name": "Year 9 (JSS 3)",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "advanced_grammar_jss3",
+            "title": "Advanced Grammar & Syntax",
+            "detailsPage": "Lessons/Year9/english-language/topics-details.html?topic=advanced_grammar_jss3"
+          },
+          {
+            "id": "comprehension_jss3",
+            "title": "Comprehension Passages",
+            "detailsPage": "Lessons/Year9/english-language/topics-details.html?topic=comprehension_jss3"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "algebra_jss3",
+            "title": "Algebra",
+            "detailsPage": "Lessons/Year9/mathematics/topics-details.html?topic=algebra_jss3"
+          },
+          {
+            "id": "geometry_jss3",
+            "title": "Geometry & Measurements",
+            "detailsPage": "Lessons/Year9/mathematics/topics-details.html?topic=geometry_jss3"
+          }
+        ]
+      },
+      {
+        "id": "biology",
+        "name": "Biology",
+        "topics": [
+          {
+            "id": "human_reproduction_jss3",
+            "title": "Human Reproduction",
+            "detailsPage": "Lessons/Year9/biology/topics-details.html?topic=human_reproduction_jss3"
+          },
+          {
+            "id": "ecosystems_jss3",
+            "title": "Ecosystems & Environment",
+            "detailsPage": "Lessons/Year9/biology/topics-details.html?topic=ecosystems_jss3"
+          }
+        ]
+      },
+      {
+        "id": "physical-and-health-education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "fitness_training_jss3",
+            "title": "Fitness Training",
+            "detailsPage": "Lessons/Year9/physical-and-health-education/topics-details.html?topic=fitness_training_jss3"
+          },
+          {
+            "id": "health_education_jss3",
+            "title": "Health Education",
+            "detailsPage": "Lessons/Year9/physical-and-health-education/topics-details.html?topic=health_education_jss3"
+          }
+        ]
+      },
+      {
+        "id": "economics",
+        "name": "Economics",
+        "topics": [
+          {
+            "id": "microeconomics_jss3",
+            "title": "Microeconomics Basics",
+            "detailsPage": "Lessons/Year9/economics/topics-details.html?topic=microeconomics_jss3"
+          },
+          {
+            "id": "macroeconomics_jss3",
+            "title": "Macroeconomics Basics",
+            "detailsPage": "Lessons/Year9/economics/topics-details.html?topic=macroeconomics_jss3"
+          }
+        ]
+      },
+      {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "advanced_crop_production_jss3",
+            "title": "Advanced Crop Production",
+            "detailsPage": "Lessons/Year9/agricultural-science/topics-details.html?topic=advanced_crop_production_jss3"
+          },
+          {
+            "id": "animal_husbandry_jss3",
+            "title": "Animal Husbandry",
+            "detailsPage": "Lessons/Year9/agricultural-science/topics-details.html?topic=animal_husbandry_jss3"
+          }
+        ]
+      },
+      {
+
+  
+
+
+  
