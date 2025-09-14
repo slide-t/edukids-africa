@@ -547,7 +547,279 @@
           }
         ]
       },
+      
+  {
+        "id": "agricultural-science",
+        "name": "Agricultural Science",
+        "topics": [
+          {
+            "id": "soil_preparation",
+            "title": "Soil Preparation",
+            "detailsPage": "Lessons/Year4/agricultural-science/topics-details.html?topic=soil_preparation"
+          },
+          {
+            "id": "planting_and_care",
+            "title": "Planting & Care of Crops",
+            "detailsPage": "Lessons/Year4/agricultural-science/topics-details.html?topic=planting_and_care"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "year5",
+    "name": "Year 5",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "essay_writing",
+            "title": "Essay Writing",
+            "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=essay_writing"
+          },
+          {
+            "id": "formal_letters",
+            "title": "Formal Letters",
+            "detailsPage": "Lessons/Year5/english-language/topics-details.html?topic=formal_letters"
+          }
+        ]
+      },
+      {
+        "id": "french-language",
+        "name": "French Language",
+        "topics": [
+          {
+            "id": "writing_short_paragraphs",
+            "title": "Writing Short Paragraphs",
+            "detailsPage": "Lessons/Year5/french-language/topics-details.html?topic=writing_short_paragraphs"
+          },
+          {
+            "id": "simple_conversations",
+            "title": "Simple Conversations",
+            "detailsPage": "Lessons/Year5/french-language/topics-details.html?topic=simple_conversations"
+          }
+        ]
+      },
+      {
+        "id": "spellings_and_vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "advanced_spellings",
+            "title": "Advanced Spellings",
+            "detailsPage": "Lessons/Year5/spellings-and-vocabulary/topics-details.html?topic=advanced_spellings"
+          },
+          {
+            "id": "idioms_and_phrases",
+            "title": "Idioms & Phrases",
+            "detailsPage": "Lessons/Year5/spellings-and-vocabulary/topics-details.html?topic=idioms_and_phrases"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "fractions_and_decimals",
+            "title": "Fractions & Decimals",
+            "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=fractions_and_decimals"
+          },
+          {
+            "id": "ratio_and_proportion",
+            "title": "Ratio & Proportion",
+            "detailsPage": "Lessons/Year5/mathematics/topics-details.html?topic=ratio_and_proportion"
+          }
+        ]
+      },
+      {
+        "id": "ict",
+        "name": "ICT",
+        "topics": [
+          {
+            "id": "word_processing",
+            "title": "Word Processing",
+            "detailsPage": "Lessons/Year5/ict/topics-details.html?topic=word_processing"
+          },
+          {
+            "id": "introduction_to_spreadsheets",
+            "title": "Introduction to Spreadsheets",
+            "detailsPage": "Lessons/Year5/ict/topics-details.html?topic=introduction_to_spreadsheets"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "environmental_studies",
+            "title": "Environmental Studies",
+            "detailsPage": "Lessons/Year5/basic-science/topics-details.html?topic=environmental_studies"
+          },
+          {
+            "id": "forces_and_motion",
+            "title": "Forces & Motion",
+            "detailsPage": "Lessons/Year5/basic-science/topics-details.html?topic=forces_and_motion"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "team_sports",
+            "title": "Team Sports",
+            "detailsPage": "Lessons/Year5/physical-and-health-education/topics-details.html?topic=team_sports"
+          },
+          {
+            "id": "personal_hygiene",
+            "title": "Personal Hygiene",
+            "detailsPage": "Lessons/Year5/physical-and-health-education/topics-details.html?topic=personal_hygiene"
+          }
+        ]
+      },
+      {
+        "id": "cultural_and_creative_arts",
+        "name": "Cultural & Creative Arts",
+        "topics": [
+          {
+            "id": "music_and_singing",
+            "title": "Music & Singing",
+            "detailsPage": "Lessons/Year5/cultural-and-creative-arts/topics-details.html?topic=music_and_singing"
+          },
+          {
+            "id": "advanced_crafts",
+            "title": "Advanced Crafts",
+            "detailsPage": "Lessons/Year5/cultural-and-creative-arts/topics-details.html?topic=advanced_crafts"
+          }
+        ]
+      },
       {
         "id": "agricultural-science",
         "name": "Agricultural Science",
-  
+        "topics": [
+          {
+            "id": "farm_tools_and_usage",
+            "title": "Farm Tools & Usage",
+            "detailsPage": "Lessons/Year5/agricultural-science/topics-details.html?topic=farm_tools_and_usage"
+          },
+          {
+            "id": "crop_cultivation",
+            "title": "Crop Cultivation",
+            "detailsPage": "Lessons/Year5/agricultural-science/topics-details.html?topic=crop_cultivation"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "year6",
+    "name": "Year 6",
+    "subjects": [
+      {
+        "id": "english-language",
+        "name": "English Language",
+        "topics": [
+          {
+            "id": "formal_essays",
+            "title": "Formal Essays",
+            "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=formal_essays"
+          },
+          {
+            "id": "story_analysis",
+            "title": "Story Analysis",
+            "detailsPage": "Lessons/Year6/english-language/topics-details.html?topic=story_analysis"
+          }
+        ]
+      },
+      {
+        "id": "french-language",
+        "name": "French Language",
+        "topics": [
+          {
+            "id": "writing_short_essays",
+            "title": "Writing Short Essays",
+            "detailsPage": "Lessons/Year6/french-language/topics-details.html?topic=writing_short_essays"
+          },
+          {
+            "id": "intermediate_conversations",
+            "title": "Intermediate Conversations",
+            "detailsPage": "Lessons/Year6/french-language/topics-details.html?topic=intermediate_conversations"
+          }
+        ]
+      },
+      {
+        "id": "spellings_and_vocabulary",
+        "name": "Spellings & Vocabulary",
+        "topics": [
+          {
+            "id": "advanced_vocabulary",
+            "title": "Advanced Vocabulary",
+            "detailsPage": "Lessons/Year6/spellings-and-vocabulary/topics-details.html?topic=advanced_vocabulary"
+          },
+          {
+            "id": "proverbs_and_expressions",
+            "title": "Proverbs & Expressions",
+            "detailsPage": "Lessons/Year6/spellings-and-vocabulary/topics-details.html?topic=proverbs_and_expressions"
+          }
+        ]
+      },
+      {
+        "id": "mathematics",
+        "name": "Mathematics",
+        "topics": [
+          {
+            "id": "algebra_basics",
+            "title": "Algebra Basics",
+            "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=algebra_basics"
+          },
+          {
+            "id": "geometry_and_measurement",
+            "title": "Geometry & Measurement",
+            "detailsPage": "Lessons/Year6/mathematics/topics-details.html?topic=geometry_and_measurement"
+          }
+        ]
+      },
+      {
+        "id": "ict",
+        "name": "ICT",
+        "topics": [
+          {
+            "id": "presentation_skills",
+            "title": "Presentation Skills",
+            "detailsPage": "Lessons/Year6/ict/topics-details.html?topic=presentation_skills"
+          },
+          {
+            "id": "internet_research",
+            "title": "Internet Research",
+            "detailsPage": "Lessons/Year6/ict/topics-details.html?topic=internet_research"
+          }
+        ]
+      },
+      {
+        "id": "basic-science",
+        "name": "Basic Science",
+        "topics": [
+          {
+            "id": "electricity_and_magnetism",
+            "title": "Electricity & Magnetism",
+            "detailsPage": "Lessons/Year6/basic-science/topics-details.html?topic=electricity_and_magnetism"
+          },
+          {
+            "id": "human_body_systems",
+            "title": "Human Body Systems",
+            "detailsPage": "Lessons/Year6/basic-science/topics-details.html?topic=human_body_systems"
+          }
+        ]
+      },
+      {
+        "id": "physical_and_health_education",
+        "name": "Physical & Health Education",
+        "topics": [
+          {
+            "id": "fitness_exercises",
+            "title
