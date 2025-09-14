@@ -25,6 +25,22 @@
         ]
       },
       {
+        "id": "spellings_and_grammar",
+        "name": "Spellings & Grammar",
+        "topics": [
+          {
+            "id": "basic_spellings",
+            "title": "Basic Spellings",
+            "detailsPage": "Lessons/Year1/spellings-and-grammar/topics-details.html?topic=basic_spellings"
+          },
+          {
+            "id": "simple_grammar",
+            "title": "Simple Grammar",
+            "detailsPage": "Lessons/Year1/spellings-and-grammar/topics-details.html?topic=simple_grammar"
+          }
+        ]
+      },
+      {
         "id": "mathematics",
         "name": "Mathematics",
         "topics": [
@@ -42,6 +58,22 @@
             "id": "simple_subtraction",
             "title": "Simple Subtraction",
             "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_subtraction"
+          }
+        ]
+      },
+      {
+        "id": "basic-coding",
+        "name": "Basic Coding",
+        "topics": [
+          {
+            "id": "unplugged_coding",
+            "title": "Unplugged Coding Activities",
+            "detailsPage": "Lessons/Year1/basic-coding/topics-details.html?topic=unplugged_coding"
+          },
+          {
+            "id": "simple_algorithms",
+            "title": "Simple Algorithms",
+            "detailsPage": "Lessons/Year1/basic-coding/topics-details.html?topic=simple_algorithms"
           }
         ]
       },
