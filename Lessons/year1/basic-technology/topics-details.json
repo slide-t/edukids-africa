@@ -1,103 +1,98 @@
-
 [
   {
-    "id": "tools_intro",
-    "title": "Introduction to Tools",
-    "content": "<p>Pupils learn the names and basic uses of simple tools.</p>",
+    "id": "tools",
+    "title": "Common Tools",
+    "content": "<p>Children learn about simple tools and their uses in daily life.</p>",
     "examples": [
-      "Hammer 🔨, Ruler 📏, Scissors ✂️",
-      "Use: building, measuring, cutting"
+      "Hammer 🔨 – hits nails, Scissors ✂️ – cut paper",
+      "Ruler 📏 – measures, Spoon 🥄 – eat food"
     ],
-    "image": "images/tools-intro.png"
-  },
-  {
-    "id": "using_hands",
-    "title": "Using Our Hands",
-    "content": "<p>Children practice fine motor skills using hands for various tasks.</p>",
-    "examples": [
-      "Drawing ✏️, Folding paper 📄",
-      "Holding objects properly ✋"
-    ],
-    "image": "images/using-hands.png"
-  },
-  {
-    "id": "safety_first",
-    "title": "Safety First",
-    "content": "<p>Pupils learn safety rules when using tools and equipment.</p>",
-    "examples": [
-      "Wear gloves 🧤, Keep sharp tools away 🗡️",
-      "Do not run while holding scissors ✂️"
-    ],
-    "image": "images/safety-first.png"
+    "image": "images/tools.png"
   },
   {
     "id": "machines",
-    "title": "Machines Around Us",
-    "content": "<p>Children explore simple machines and their uses in daily life.</p>",
+    "title": "Simple Machines",
+    "content": "<p>Students explore basic machines like levers, pulleys, and wheels.</p>",
     "examples": [
-      "Fan, Bicycle 🚲, Water pump",
-      "Use: make work easier"
+      "Lever – seesaw 🎢, Pulley – flagpole 🚩",
+      "Wheel – bicycle 🚲, Inclined plane – slide 🛝"
     ],
     "image": "images/machines.png"
   },
   {
-    "id": "crafts",
-    "title": "Making Simple Crafts",
-    "content": "<p>Pupils learn to create simple crafts using everyday materials.</p>",
+    "id": "electricity",
+    "title": "Introduction to Electricity",
+    "content": "<p>Children learn about electrical appliances and safety tips.</p>",
     "examples": [
-      "Paper boat ⛵, Card greeting 🎴",
-      "Use glue 🖇️, scissors ✂️"
+      "Light bulb 💡, Fan 🌀, Switch 🔘",
+      "Do not touch plugs with wet hands 🚫"
     ],
-    "image": "images/crafts.png"
+    "image": "images/electricity.png"
   },
   {
-    "id": "drawing_coloring",
-    "title": "Drawing and Coloring",
-    "content": "<p>Children practice drawing shapes, letters, and coloring them neatly.</p>",
+    "id": "computers",
+    "title": "Introduction to Computers",
+    "content": "<p>Students discover the parts of a computer and their basic uses.</p>",
     "examples": [
-      "Draw a house 🏠, Color a tree 🌳",
-      "Use crayons 🖍️, pencils ✏️"
+      "Monitor 🖥️ – displays, Keyboard ⌨️ – types",
+      "Mouse 🖱️ – points, CPU 💻 – processes"
     ],
-    "image": "images/drawing-coloring.png"
+    "image": "images/computers.png"
   },
   {
-    "id": "paper_cardboard",
-    "title": "Using Paper and Cardboard",
-    "content": "<p>Pupils explore paper and cardboard for creating projects and models.</p>",
+    "id": "communication",
+    "title": "Communication Tools",
+    "content": "<p>Children learn about ways humans communicate using technology.</p>",
     "examples": [
-      "Paper plane ✈️, Cardboard box 📦",
-      "Fold, cut, and paste"
+      "Telephone ☎️, Mobile 📱, Email 📧",
+      "Radio 📻, Television 📺"
     ],
-    "image": "images/paper-cardboard.png"
+    "image": "images/communication.png"
   },
   {
-    "id": "simple_structures",
-    "title": "Building Simple Structures",
-    "content": "<p>Children learn to construct simple structures using blocks or sticks.</p>",
+    "id": "transport",
+    "title": "Transport and Vehicles",
+    "content": "<p>Students explore different vehicles and their purposes.</p>",
     "examples": [
-      "Tower 🗼, Bridge 🌉",
-      "Use glue 🖇️ or tape"
+      "Bicycle 🚲, Car 🚗, Bus 🚌, Train 🚆, Boat 🚤"
     ],
-    "image": "images/simple-structures.png"
+    "image": "images/transport.png"
   },
   {
-    "id": "cleaning_tools",
-    "title": "Cleaning and Maintaining Tools",
-    "content": "<p>Pupils learn the importance of cleaning and keeping tools in good condition.</p>",
+    "id": "energy",
+    "title": "Sources of Energy",
+    "content": "<p>Children learn about energy sources like sun, water, wind, and electricity.</p>",
     "examples": [
-      "Wipe scissors ✂️, Store properly 🧰",
-      "Do not leave tools on floor"
+      "Solar ☀️, Hydropower 💧, Wind 🌬️, Electric ⚡"
     ],
-    "image": "images/cleaning-tools.png"
+    "image": "images/energy.png"
   },
   {
-    "id": "tech_daily_life",
-    "title": "Technology in Daily Life",
-    "content": "<p>Children explore how technology helps in our daily lives.</p>",
+    "id": "materials",
+    "title": "Materials Around Us",
+    "content": "<p>Students identify common materials and their properties.</p>",
     "examples": [
-      "Fan for cooling 🌬️, Lamp for light 💡",
-      "Telephone 📞, Bicycle 🚲"
+      "Wood 🌲 – hard, Metal ⚙️ – strong, Cloth 👕 – soft",
+      "Plastic 🧴 – flexible, Glass 🥛 – transparent"
     ],
-    "image": "images/tech-daily-life.png"
+    "image": "images/materials.png"
+  },
+  {
+    "id": "safety",
+    "title": "Safety in Technology",
+    "content": "<p>Children learn basic safety rules when using tools and machines.</p>",
+    "examples": [
+      "Wear gloves 🧤, Avoid sharp objects ✂️, Switch off electrical devices ⚡"
+    ],
+    "image": "images/safety.png"
+  },
+  {
+    "id": "innovation",
+    "title": "Inventing and Creating",
+    "content": "<p>Students are encouraged to explore creativity and make simple inventions.</p>",
+    "examples": [
+      "Build a paper plane ✈️, Create a small model 🏗️, Draw and design 🖍️"
+    ],
+    "image": "images/innovation.png"
   }
 ]
