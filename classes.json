@@ -7,75 +7,159 @@
         "id": "english-language",
         "name": "English Language",
         "topics": [
-          { "id": "alphabets_and_sounds", "title": "Alphabets & Sounds", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=alphabets_and_sounds" },
-          { "id": "simple_words", "title": "Simple Words", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=simple_words" },
-          { "id": "basic_sentences", "title": "Basic Sentences", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=basic_sentences" }
+          {
+            "id": "alphabets_and_sounds",
+            "title": "Alphabets and Sounds",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=alphabets_and_sounds"
+          },
+          {
+            "id": "simple_words",
+            "title": "Simple Words",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=simple_words"
+          },
+          {
+            "id": "basic_sentences",
+            "title": "Basic Sentences",
+            "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=basic_sentences"
+          }
         ]
       },
       {
         "id": "french-language",
         "name": "French Language",
         "topics": [
-          { "id": "alphabets_et_sons", "title": "Alphabets et Sons", "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=alphabets_et_sons" },
-          { "id": "mots_simples", "title": "Mots Simples", "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=mots_simples" },
-          { "id": "phrases_basics", "title": "Phrases de Base", "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=phrases_basics" }
+          {
+            "id": "alphabets_et_sons",
+            "title": "Alphabets et Sons",
+            "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=alphabets_et_sons"
+          },
+          {
+            "id": "mots_simples",
+            "title": "Mots Simples",
+            "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=mots_simples"
+          },
+          {
+            "id": "phrases_basics",
+            "title": "Phrases de Base",
+            "detailsPage": "Lessons/Year1/french-language/topics-details.html?topic=phrases_basics"
+          }
         ]
       },
       {
         "id": "mathematics",
         "name": "Mathematics",
         "topics": [
-          { "id": "numbers_1_to_20", "title": "Numbers 1–20", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=numbers_1_to_20" },
-          { "id": "simple_addition", "title": "Simple Addition", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_addition" },
-          { "id": "simple_subtraction", "title": "Simple Subtraction", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_subtraction" }
+          {
+            "id": "numbers_1_to_20",
+            "title": "Numbers 1–20",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=numbers_1_to_20"
+          },
+          {
+            "id": "simple_addition",
+            "title": "Simple Addition",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_addition"
+          },
+          {
+            "id": "simple_subtraction",
+            "title": "Simple Subtraction",
+            "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_subtraction"
+          }
         ]
       },
       {
         "id": "spellings_and_vocabulary",
         "name": "Spellings & Vocabulary",
         "topics": [
-          { "id": "basic_spellings", "title": "Basic Spellings", "detailsPage": "Lessons/Year1/spellings-and-vocabulary/topics-details.html?topic=basic_spellings" },
-          { "id": "common_words", "title": "Common Words", "detailsPage": "Lessons/Year1/spellings-and-vocabulary/topics-details.html?topic=common_words" }
+          {
+            "id": "basic_spellings",
+            "title": "Basic Spellings",
+            "detailsPage": "Lessons/Year1/spellings-and-vocabulary/topics-details.html?topic=basic_spellings"
+          },
+          {
+            "id": "common_words",
+            "title": "Common Words",
+            "detailsPage": "Lessons/Year1/spellings-and-vocabulary/topics-details.html?topic=common_words"
+          }
         ]
       },
       {
         "id": "basic-science",
         "name": "Basic Science",
         "topics": [
-          { "id": "living_and_nonliving", "title": "Living & Non-Living Things", "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=living_and_nonliving" },
-          { "id": "plants_and_animals", "title": "Plants & Animals", "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=plants_and_animals" }
+          {
+            "id": "living_and_nonliving",
+            "title": "Living & Non-Living Things",
+            "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=living_and_nonliving"
+          },
+          {
+            "id": "plants_and_animals",
+            "title": "Plants & Animals",
+            "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=plants_and_animals"
+          }
         ]
       },
       {
         "id": "ict",
         "name": "ICT",
         "topics": [
-          { "id": "introduction_to_computers", "title": "Introduction to Computers", "detailsPage": "Lessons/Year1/ict/topics-details.html?topic=introduction_to_computers" },
-          { "id": "basic_mouse_keyboard", "title": "Basic Mouse & Keyboard Skills", "detailsPage": "Lessons/Year1/ict/topics-details.html?topic=basic_mouse_keyboard" }
+          {
+            "id": "introduction_to_computers",
+            "title": "Introduction to Computers",
+            "detailsPage": "Lessons/Year1/ict/topics-details.html?topic=introduction_to_computers"
+          },
+          {
+            "id": "basic_mouse_keyboard",
+            "title": "Basic Mouse & Keyboard Skills",
+            "detailsPage": "Lessons/Year1/ict/topics-details.html?topic=basic_mouse_keyboard"
+          }
         ]
       },
       {
         "id": "physical_and_health_education",
         "name": "Physical & Health Education",
         "topics": [
-          { "id": "body_parts", "title": "Parts of the Body", "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=body_parts" },
-          { "id": "simple_exercises", "title": "Simple Exercises", "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=simple_exercises" }
+          {
+            "id": "body_parts",
+            "title": "Parts of the Body",
+            "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=body_parts"
+          },
+          {
+            "id": "simple_exercises",
+            "title": "Simple Exercises",
+            "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=simple_exercises"
+          }
         ]
       },
       {
         "id": "cultural_and_creative_arts",
         "name": "Cultural & Creative Arts",
         "topics": [
-          { "id": "drawing_and_coloring", "title": "Drawing & Coloring", "detailsPage": "Lessons/Year1/cultural_and_creative_arts/topics-details.html?topic=drawing_and_coloring" },
-          { "id": "basic_music", "title": "Basic Music", "detailsPage": "Lessons/Year1/cultural_and_creative_arts/topics-details.html?topic=basic_music" }
+          {
+            "id": "drawing_and_coloring",
+            "title": "Drawing & Coloring",
+            "detailsPage": "Lessons/Year1/cultural_and_creative_arts/topics-details.html?topic=drawing_and_coloring"
+          },
+          {
+            "id": "basic_music",
+            "title": "Basic Music",
+            "detailsPage": "Lessons/Year1/cultural-and-creative-arts/topics-details.html?topic=basic_music"
+          }
         ]
       },
       {
         "id": "agricultural_science",
         "name": "Agricultural Science",
         "topics": [
-          { "id": "plants_garden", "title": "Plants in the Garden", "detailsPage": "Lessons/Year1/agricultural-science/topics-details.html?topic=plants_garden" },
-          { "id": "simple_farming", "title": "Simple Farming Activities", "detailsPage": "Lessons/Year1/agricultural-science/topics-details.html?topic=simple_farming" }
+          {
+            "id": "plants_garden",
+            "title": "Plants in the Garden",
+            "detailsPage": "Lessons/Year1/agricultural-science/topics-details.html?topic=plants_garden"
+          },
+          {
+            "id": "simple_farming",
+            "title": "Simple Farming Activities",
+            "detailsPage": "Lessons/Year1/agricultural-science/topics-details.html?topic=simple_farming"
+          }
         ]
       }
     ]
@@ -88,159 +172,161 @@
         "id": "english-language",
         "name": "English Language",
         "topics": [
-          { "id": "reading_short_stories", "title": "Reading Short Stories", "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=reading_short_stories" },
-          { "id": "writing_sentences", "title": "Writing Sentences", "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=writing_sentences" },
-          { "id": "basic_punctuation", "title": "Basic Punctuation", "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=basic_punctuation" }
+          {
+            "id": "reading_short_stories",
+            "title": "Reading Short Stories",
+            "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=reading_short_stories"
+          },
+          {
+            "id": "writing_sentences",
+            "title": "Writing Sentences",
+            "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=writing_sentences"
+          },
+          {
+            "id": "basic_punctuation",
+            "title": "Basic Punctuation",
+            "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=basic_punctuation"
+          }
         ]
       },
       {
         "id": "french-language",
         "name": "French Language",
         "topics": [
-          { "id": "reading_simple_texts", "title": "Reading Simple Texts", "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=reading_simple_texts" },
-          { "id": "writing_simple_sentences", "title": "Writing Simple Sentences", "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=writing_simple_sentences" },
-          { "id": "basic_grammar", "title": "Basic Grammar", "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=basic_grammar" }
+          {
+            "id": "reading_simple_texts",
+            "title": "Reading Simple Texts",
+            "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=reading_simple_texts"
+          },
+          {
+            "id": "writing_simple_sentences",
+            "title": "Writing Simple Sentences",
+            "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=writing_simple_sentences"
+          },
+          {
+            "id": "basic_grammar",
+            "title": "Basic Grammar",
+            "detailsPage": "Lessons/Year2/french-language/topics-details.html?topic=basic_grammar"
+          }
         ]
       },
       {
         "id": "mathematics",
         "name": "Mathematics",
         "topics": [
-          { "id": "numbers_21_to_50", "title": "Numbers 21–50", "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=numbers_21_to_50" },
-          { "id": "addition_subtraction", "title": "Addition & Subtraction", "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=addition_subtraction" },
-          { "id": "basic_shapes", "title": "Basic Shapes", "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=basic_shapes" }
+          {
+            "id": "numbers_21_to_50",
+            "title": "Numbers 21–50",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=numbers_21_to_50"
+          },
+          {
+            "id": "addition_subtraction",
+            "title": "Addition & Subtraction",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=addition_subtraction"
+          },
+          {
+            "id": "basic_shapes",
+            "title": "Basic Shapes",
+            "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=basic_shapes"
+          }
         ]
       },
       {
         "id": "spellings_and_vocabulary",
         "name": "Spellings & Vocabulary",
         "topics": [
-          { "id": "common_words_year2", "title": "Common Words", "detailsPage": "Lessons/Year2/spellings-and-vocabulary/topics-details.html?topic=common_words_year2" },
-          { "id": "synonyms_and_antonyms", "title": "Synonyms & Antonyms", "detailsPage": "Lessons/Year2/spellings-and-vocabulary/topics-details.html?topic=synonyms_and_antonyms" }
+          {
+            "id": "common_words_year2",
+            "title": "Common Words",
+            "detailsPage": "Lessons/Year2/spellings-and-vocabulary/topics-details.html?topic=common_words_year2"
+          },
+          {
+            "id": "synonyms_and_antonyms",
+            "title": "Synonyms & Antonyms",
+            "detailsPage": "Lessons/Year2/spellings-and-vocabulary/topics-details.html?topic=synonyms_and_antonyms"
+          }
         ]
       },
       {
         "id": "basic-science",
         "name": "Basic Science",
         "topics": [
-          { "id": "plants_and_animals_habitat", "title": "Plants & Animals Habitat", "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=plants_and_animals_habitat" },
-          { "id": "water_and_air", "title": "Water & Air", "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=water_and_air" }
+          {
+            "id": "plants_and_animals_habitat",
+            "title": "Plants & Animals Habitat",
+            "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=plants_and_animals_habitat"
+          },
+          {
+            "id": "water_and_air",
+            "title": "Water & Air",
+            "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=water_and_air"
+          }
         ]
       },
       {
         "id": "ict",
         "name": "ICT",
         "topics": [
-          { "id": "computer_parts", "title": "Parts of the Computer", "detailsPage": "Lessons/Year2/ict/topics-details.html?topic=computer_parts" },
-          { "id": "using_mouse_and_keyboard", "title": "Using Mouse & Keyboard", "detailsPage": "Lessons/Year2/ict/topics-details.html?topic=using_mouse_and_keyboard" }
+          {
+            "id": "computer_parts",
+            "title": "Parts of the Computer",
+            "detailsPage": "Lessons/Year2/ict/topics-details.html?topic=computer_parts"
+          },
+          {
+            "id": "using_mouse_and_keyboard",
+            "title": "Using Mouse & Keyboard",
+            "detailsPage": "Lessons/Year2/ict/topics-details.html?topic=using_mouse_and_keyboard"
+          }
         ]
       },
       {
         "id": "physical_and_health_education",
         "name": "Physical & Health Education",
         "topics": [
-          { "id": "exercise_routines", "title": "Exercise Routines", "detailsPage": "Lessons/Year2/physical_and_health_education/topics-details.html?topic=exercise_routines" },
-          { "id": "healthy_foods", "title": "Healthy Foods", "detailsPage": "Lessons/Year2/physical_and_health_education/topics-details.html?topic=healthy_foods" }
+          {
+            "id": "exercise_routines",
+            "title": "Exercise Routines",
+            "detailsPage": "Lessons/Year2/physical-and-health-education/topics-details.html?topic=exercise_routines"
+          },
+          {
+            "id": "healthy_foods",
+            "title": "Healthy Foods",
+            "detailsPage": "Lessons/Year2/physical-and-health-education/topics-details.html?topic=healthy_foods"
+          }
         ]
       },
       {
         "id": "cultural_and_creative_arts",
         "name": "Cultural & Creative Arts",
         "topics": [
-          { "id": "drawing_and_painting", "title": "Drawing & Painting", "detailsPage": "Lessons/Year2/cultural_and_creative_arts/topics-details.html?topic=drawing_and_painting" },
-          { "id": "basic_music_practice", "title": "Basic Music Practice", "detailsPage": "Lessons/Year2/cultural_and_creative_arts/topics-details.html?topic=basic_music_practice" }
+          {
+            "id": "drawing_and_painting",
+            "title": "Drawing & Painting",
+            "detailsPage": "Lessons/Year2/cultural-and-creative-arts/topics-details.html?topic=drawing_and_painting"
+          },
+          {
+            "id": "basic_music_practice",
+            "title": "Basic Music Practice",
+            "detailsPage": "Lessons/Year2/cultural-and-creative-arts/topics-details.html?topic=basic_music_practice"
+          }
         ]
       },
       {
         "id": "agricultural_science",
         "name": "Agricultural Science",
         "topics": [
-          { "id": "planting_crops", "title": "Planting Crops", "detailsPage": "Lessons/Year2/agricultural-science/topics-details.html?topic=planting_crops" },
-          { "id": "soil_and_water", "title": "Soil & Water Basics", "detailsPage": "Lessons/Year2/agricultural-science/topics-details.html?topic=soil_and_water" }
+          {
+            "id": "planting_crops",
+            "title": "Planting Crops",
+            "detailsPage": "Lessons/Year2/agricultural-science/topics-details.html?topic=planting_crops"
+          },
+          {
+            "id": "soil_and_water",
+            "title": "Soil & Water Basics",
+            "detailsPage": "Lessons/Year2/agricultural-science/topics-details.html?topic=soil_and_water"
+          }
         ]
       }
     ]
-  },
-
-{
-  "id": "year3",
-  "name": "Year 3",
-  "subjects": [
-    {
-      "id": "english-language",
-      "name": "English Language",
-      "topics": [
-        { "id": "reading_paragraphs", "title": "Reading Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=reading_paragraphs" },
-        { "id": "writing_paragraphs", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=writing_paragraphs" },
-        { "id": "punctuation_rules", "title": "Punctuation Rules", "detailsPage": "Lessons/Year3/english-language/topics-details.html?topic=punctuation_rules" }
-      ]
-    },
-    {
-      "id": "french-language",
-      "name": "French Language",
-      "topics": [
-        { "id": "reading_paragraphs_french", "title": "Reading Paragraphs", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=reading_paragraphs_french" },
-        { "id": "writing_paragraphs_french", "title": "Writing Paragraphs", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=writing_paragraphs_french" },
-        { "id": "intermediate_grammar", "title": "Intermediate Grammar", "detailsPage": "Lessons/Year3/french-language/topics-details.html?topic=intermediate_grammar" }
-      ]
-    },
-    {
-      "id": "mathematics",
-      "name": "Mathematics",
-      "topics": [
-        { "id": "numbers_51_to_100", "title": "Numbers 51–100", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=numbers_51_to_100" },
-        { "id": "addition_subtraction_advanced", "title": "Addition & Subtraction (Advanced)", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=addition_subtraction_advanced" },
-        { "id": "multiplication_intro", "title": "Introduction to Multiplication", "detailsPage": "Lessons/Year3/mathematics/topics-details.html?topic=multiplication_intro" }
-      ]
-    },
-    {
-      "id": "spellings_and_vocabulary",
-      "name": "Spellings & Vocabulary",
-      "topics": [
-        { "id": "compound_words", "title": "Compound Words", "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=compound_words" },
-        { "id": "homophones_and_homonyms", "title": "Homophones & Homonyms", "detailsPage": "Lessons/Year3/spellings-and-vocabulary/topics-details.html?topic=homophones_and_homonyms" }
-      ]
-    },
-    {
-      "id": "basic-science",
-      "name": "Basic Science",
-      "topics": [
-        { "id": "plant_growth", "title": "Plant Growth", "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=plant_growth" },
-        { "id": "animal_classification", "title": "Animal Classification", "detailsPage": "Lessons/Year3/basic-science/topics-details.html?topic=animal_classification" }
-      ]
-    },
-    {
-      "id": "ict",
-      "name": "ICT",
-      "topics": [
-        { "id": "opening_and_closing_programs", "title": "Opening & Closing Programs", "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=opening_and_closing_programs" },
-        { "id": "typing_skills", "title": "Basic Typing Skills", "detailsPage": "Lessons/Year3/ict/topics-details.html?topic=typing_skills" }
-      ]
-    },
-    {
-      "id": "physical_and_health_education",
-      "name": "Physical & Health Education",
-      "topics": [
-        { "id": "basic_team_sports", "title": "Basic Team Sports", "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=basic_team_sports" },
-        { "id": "hygiene_practices", "title": "Hygiene Practices", "detailsPage": "Lessons/Year3/physical_and_health_education/topics-details.html?topic=hygiene_practices" }
-      ]
-    },
-    {
-      "id": "cultural_and_creative_arts",
-      "name": "Cultural & Creative Arts",
-      "topics": [
-        { "id": "intermediate_drawing", "title": "Intermediate Drawing", "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=intermediate_drawing" },
-        { "id": "musical_instruments", "title": "Musical Instruments", "detailsPage": "Lessons/Year3/cultural_and_creative_arts/topics-details.html?topic=musical_instruments" }
-      ]
-    },
-    {
-      "id": "agricultural_science",
-      "name": "Agricultural Science",
-      "topics": [
-        { "id": "crop_care", "title": "Crop Care", "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=crop_care" },
-        { "id": "basic_tools_usage", "title": "Basic Tools Usage", "detailsPage": "Lessons/Year3/agricultural-science/topics-details.html?topic=basic_tools_usage" }
-      ]
-    }
-  ]
-}
-  
+  }
+]
