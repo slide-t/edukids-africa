@@ -1,0 +1,82 @@
+[
+  {
+    "id": "year1",
+    "name": "Year 1",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "alphabets_and_sounds", "title": "Alphabets and Sounds", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=alphabets_and_sounds" },
+          { "id": "simple_words", "title": "Simple Words", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=simple_words" },
+          { "id": "basic_sentences", "title": "Basic Sentences", "detailsPage": "Lessons/Year1/english-language/topics-details.html?topic=basic_sentences" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "basic_spellings", "title": "Basic Spellings", "detailsPage": "Lessons/Year1/spellings-and-grammar/topics-details.html?topic=basic_spellings" },
+          { "id": "simple_grammar", "title": "Simple Grammar", "detailsPage": "Lessons/Year1/spellings-and-grammar/topics-details.html?topic=simple_grammar" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "numbers_1_to_20", "title": "Numbers 1–20", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=numbers_1_to_20" },
+          { "id": "simple_addition", "title": "Simple Addition", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_addition" },
+          { "id": "simple_subtraction", "title": "Simple Subtraction", "detailsPage": "Lessons/Year1/mathematics/topics-details.html?topic=simple_subtraction" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "unplugged_coding", "title": "Unplugged Coding Activities", "detailsPage": "Lessons/Year1/basic-coding/topics-details.html?topic=unplugged_coding" },
+          { "id": "simple_algorithms", "title": "Simple Algorithms", "detailsPage": "Lessons/Year1/basic-coding/topics-details.html?topic=simple_algorithms" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "one_nigerian_language", "title": "One Nigerian Language (Reading & Writing)", "detailsPage": "Lessons/Year1/nigerian-language/topics-details.html?topic=one_nigerian_language" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "living_and_non_living", "title": "Living & Non-Living Things", "detailsPage": "Lessons/Year1/basic-science/topics-details.html?topic=living_and_non_living" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "body_parts", "title": "Parts of the Body", "detailsPage": "Lessons/Year1/physical_and_health_education/topics-details.html?topic=body_parts" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "drawing_and_coloring", "title": "Drawing & Coloring", "detailsPage": "Lessons/Year1/cultural_and_creative_arts/topics-details.html?topic=drawing_and_coloring" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "stories_in_religion", "title": "Stories in Religion", "detailsPage": "Lessons/Year1/religious_studies/topics-details.html?topic=stories_in_religion" }
+      ]}
+    ]
+  },
+  {
+    "id": "year2",
+    "name": "Year 2",
+    "subjects": [
+      { "id": "english-language", "name": "English Language", "topics": [
+          { "id": "reading_short_stories", "title": "Reading Short Stories", "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=reading_short_stories" },
+          { "id": "sentence_building", "title": "Sentence Building", "detailsPage": "Lessons/Year2/english-language/topics-details.html?topic=sentence_building" }
+      ]},
+      { "id": "spellings_and_grammar", "name": "Spellings & Grammar", "topics": [
+          { "id": "common_spellings", "title": "Common Spellings", "detailsPage": "Lessons/Year2/spellings-and-grammar/topics-details.html?topic=common_spellings" },
+          { "id": "basic_punctuation", "title": "Basic Punctuation", "detailsPage": "Lessons/Year2/spellings-and-grammar/topics-details.html?topic=basic_punctuation" }
+      ]},
+      { "id": "mathematics", "name": "Mathematics", "topics": [
+          { "id": "numbers_1_to_100", "title": "Numbers 1–100", "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=numbers_1_to_100" },
+          { "id": "basic_multiplication", "title": "Basic Multiplication", "detailsPage": "Lessons/Year2/mathematics/topics-details.html?topic=basic_multiplication" }
+      ]},
+      { "id": "basic-coding", "name": "Basic Coding", "topics": [
+          { "id": "patterns_in_coding", "title": "Patterns in Coding", "detailsPage": "Lessons/Year2/basic-coding/topics-details.html?topic=patterns_in_coding" }
+      ]},
+      { "id": "nigerian-language", "name": "Nigerian Language", "topics": [
+          { "id": "basic_greetings", "title": "Basic Greetings", "detailsPage": "Lessons/Year2/nigerian-language/topics-details.html?topic=basic_greetings" }
+      ]},
+      { "id": "basic-science", "name": "Basic Science", "topics": [
+          { "id": "plants_and_animals", "title": "Plants and Animals", "detailsPage": "Lessons/Year2/basic-science/topics-details.html?topic=plants_and_animals" }
+      ]},
+      { "id": "physical_and_health_education", "name": "Physical & Health Education", "topics": [
+          { "id": "simple_exercises", "title": "Simple Exercises", "detailsPage": "Lessons/Year2/physical_and_health_education/topics-details.html?topic=simple_exercises" }
+      ]},
+      { "id": "cultural_and_creative_arts", "name": "Cultural & Creative Arts", "topics": [
+          { "id": "singing_and_dancing", "title": "Singing & Dancing", "detailsPage": "Lessons/Year2/cultural_and_creative_arts/topics-details.html?topic=singing_and_dancing" }
+      ]},
+      { "id": "religious_studies", "name": "Religious Studies", "topics": [
+          { "id": "moral_lessons", "title": "Moral Lessons", "detailsPage": "Lessons/Year2/religious_studies/topics-details.html?topic=moral_lessons" }
+      ]}
+    ]
+  }
+  // ==============================
+  // Continue Years 3–6 (Primary),
+  // Years 7–9 (JSS, upgrade subjects),
+  // Years 10–12 (SSS, upgrade subjects)
+  // ==============================
+]
