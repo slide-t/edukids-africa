@@ -1,1 +1,103 @@
 
+[
+  {
+    "id": "alphabets",
+    "title": "Alphabets and Sounds",
+    "content": "<p>Pupils learn the 26 letters of the alphabet (A–Z) and the sounds they make. Practice by singing the alphabet song.</p>",
+    "examples": [
+      "A for Apple 🍎",
+      "B for Ball ⚽"
+    ],
+    "image": "images/alphabets.png"
+  },
+  {
+    "id": "simple_words",
+    "title": "Simple Words",
+    "content": "<p>Children learn to form and read small words using letters and sounds.</p>",
+    "examples": [
+      "cat 🐱, dog 🐶, sun ☀️",
+      "mat, bat, hat"
+    ],
+    "image": "images/simple-words.png"
+  },
+  {
+    "id": "spelling_rules",
+    "title": "Basic Spelling Rules",
+    "content": "<p>Pupils are introduced to simple spelling rules such as adding 's' for plurals or 'ing' for action words.</p>",
+    "examples": [
+      "cat → cats",
+      "run → running"
+    ],
+    "image": "images/spelling-rules.png"
+  },
+  {
+    "id": "rhyming_words",
+    "title": "Rhyming Words",
+    "content": "<p>Rhyming words sound alike, especially at the end. They make learning fun and improve listening skills.</p>",
+    "examples": [
+      "cat – hat 🎩",
+      "sun – fun 🌞"
+    ],
+    "image": "images/rhyming-words.png"
+  },
+  {
+    "id": "compound_words",
+    "title": "Compound Words",
+    "content": "<p>Compound words are formed by joining two words together to make a new meaning.</p>",
+    "examples": [
+      "sun + flower = sunflower 🌻",
+      "rain + bow = rainbow 🌈"
+    ],
+    "image": "images/compound-words.png"
+  },
+  {
+    "id": "synonyms",
+    "title": "Synonyms",
+    "content": "<p>Synonyms are words that have the same or nearly the same meaning.</p>",
+    "examples": [
+      "big = large",
+      "happy = glad"
+    ],
+    "image": "images/synonyms.png"
+  },
+  {
+    "id": "antonyms",
+    "title": "Antonyms",
+    "content": "<p>Antonyms are words that mean the opposite of each other.</p>",
+    "examples": [
+      "hot – cold ❄️🔥",
+      "day – night 🌙"
+    ],
+    "image": "images/antonyms.png"
+  },
+  {
+    "id": "homophones",
+    "title": "Homophones",
+    "content": "<p>Homophones are words that sound the same but have different meanings and spellings.</p>",
+    "examples": [
+      "two – too – to",
+      "see – sea 🌊"
+    ],
+    "image": "images/homophones.png"
+  },
+  {
+    "id": "prefixes_suffixes",
+    "title": "Prefixes and Suffixes",
+    "content": "<p>Pupils learn how adding parts to the beginning or end of words changes their meaning.</p>",
+    "examples": [
+      "happy → unhappy",
+      "teach → teacher"
+    ],
+    "image": "images/prefixes-suffixes.png"
+  },
+  {
+    "id": "vocabulary_building",
+    "title": "Vocabulary Building",
+    "content": "<p>Children learn new words, their meanings, and how to use them in sentences to improve communication.</p>",
+    "examples": [
+      "word: 'brave' → meaning: not afraid",
+      "word: 'giant' → meaning: very big"
+    ],
+    "image": "images/vocabulary-building.png"
+  }
+]
