@@ -1,1 +1,117 @@
 
+{
+  "yoruba": [
+    {
+      "id": "greetings",
+      "title": "Greetings (Ẹ Kàárọ̀, Ẹ Kàsán)",
+      "content": "<p>Pupils learn how to greet elders and friends in Yoruba at different times of the day.</p>",
+      "examples": [
+        "Ẹ Kàárọ̀ – Good morning ☀️",
+        "Ẹ Kàsán – Good afternoon 🌞"
+      ],
+      "image": "images/yoruba-greetings.png"
+    },
+    {
+      "id": "numbers",
+      "title": "Counting Numbers",
+      "content": "<p>Learning numbers from 1 to 10 in Yoruba.</p>",
+      "examples": [
+        "Ọ̀kan (1)",
+        "Èjì (2)"
+      ],
+      "image": "images/yoruba-numbers.png"
+    }
+  ],
+
+  "hausa": [
+    {
+      "id": "greetings",
+      "title": "Greetings (Ina kwana)",
+      "content": "<p>Children learn to greet in Hausa.</p>",
+      "examples": [
+        "Ina kwana – Good morning ☀️",
+        "Barka da rana – Good afternoon 🌞"
+      ],
+      "image": "images/hausa-greetings.png"
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers 1–10",
+      "content": "<p>Counting in Hausa from 1 to 10.</p>",
+      "examples": [
+        "Daya (1)",
+        "Biyu (2)"
+      ],
+      "image": "images/hausa-numbers.png"
+    }
+  ],
+
+  "igbo": [
+    {
+      "id": "greetings",
+      "title": "Greetings (Ụtụtụ ọma)",
+      "content": "<p>Pupils learn greetings in Igbo language.</p>",
+      "examples": [
+        "Ụtụtụ ọma – Good morning ☀️",
+        "Ehihie ọma – Good afternoon 🌞"
+      ],
+      "image": "images/igbo-greetings.png"
+    },
+    {
+      "id": "numbers",
+      "title": "Counting Numbers",
+      "content": "<p>Numbers from 1 to 10 in Igbo.</p>",
+      "examples": [
+        "Otu (1)",
+        "Abụọ (2)"
+      ],
+      "image": "images/igbo-numbers.png"
+    }
+  ],
+
+  "arabic": [
+    {
+      "id": "arabic_alphabets",
+      "title": "Arabic Alphabets",
+      "content": "<p>Children learn the Arabic letters (Alif, Baa, Taa, etc.).</p>",
+      "examples": [
+        "ا (Alif)",
+        "ب (Baa)"
+      ],
+      "image": "images/arabic-alphabets.png"
+    },
+    {
+      "id": "basic_greetings",
+      "title": "Basic Greetings",
+      "content": "<p>Pupils learn simple greetings in Arabic.</p>",
+      "examples": [
+        "السلام عليكم – Peace be upon you",
+        "مرحبا – Hello"
+      ],
+      "image": "images/arabic-greetings.png"
+    }
+  ],
+
+  "swahili": [
+    {
+      "id": "greetings",
+      "title": "Greetings (Jambo, Habari)",
+      "content": "<p>Pupils learn greetings in Swahili.</p>",
+      "examples": [
+        "Jambo – Hello 👋",
+        "Habari – How are you?"
+      ],
+      "image": "images/swahili-greetings.png"
+    },
+    {
+      "id": "numbers",
+      "title": "Numbers 1–10",
+      "content": "<p>Counting numbers from 1 to 10 in Swahili.</p>",
+      "examples": [
+        "Moja (1)",
+        "Mbili (2)"
+      ],
+      "image": "images/swahili-numbers.png"
+    }
+  ]
+}
