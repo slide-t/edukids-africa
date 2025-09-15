@@ -1,0 +1,102 @@
+[
+  {
+    "id": "music_intro",
+    "title": "Introduction to Music",
+    "content": "<p>Children are introduced to simple sounds and rhythms. They clap their hands, tap on objects, and sing short songs. Music helps them develop listening skills and creativity.</p>",
+    "examples": [
+      "Clap clap 👏👏",
+      "Bang on the drum 🥁"
+    ],
+    "image": "images/music-intro.png"
+  },
+  {
+    "id": "singing_songs",
+    "title": "Singing Simple Songs",
+    "content": "<p>Pupils sing short songs like 'Twinkle Twinkle Little Star'. Singing builds memory, fun, and confidence.</p>",
+    "examples": [
+      "Twinkle Twinkle ⭐",
+      "Row Row Your Boat 🚤"
+    ],
+    "image": "images/singing.png"
+  },
+  {
+    "id": "sound_rhythms",
+    "title": "Sounds & Rhythms",
+    "content": "<p>Children learn to clap, tap, or stamp in rhythm. They repeat sounds after the teacher.</p>",
+    "examples": [
+      "Clap 1-2-3 👏👏👏",
+      "Stamp 1-2 🦶🦶"
+    ],
+    "image": "images/rhythm.png"
+  },
+  {
+    "id": "simple_instruments",
+    "title": "Using Simple Instruments",
+    "content": "<p>Pupils play toy drums, rattles, or shakers. This develops motor skills and sense of beat.</p>",
+    "examples": [
+      "Shake the rattle 🎶",
+      "Hit the drum 🥁"
+    ],
+    "image": "images/instruments.png"
+  },
+  {
+    "id": "listening_sounds",
+    "title": "Listening to Sounds",
+    "content": "<p>Children listen carefully to sounds of animals, cars, and nature. They try to imitate them.</p>",
+    "examples": [
+      "Cow goes Moo 🐄",
+      "Car goes Vroom 🚗"
+    ],
+    "image": "images/listening.png"
+  },
+  {
+    "id": "rhymes_intro",
+    "title": "Introduction to Rhymes",
+    "content": "<p>Children enjoy rhymes like 'Baa Baa Black Sheep'. Rhymes improve language and memory.</p>",
+    "examples": [
+      "Baa Baa Black Sheep 🐑",
+      "Humpty Dumpty 🧱"
+    ],
+    "image": "images/rhymes.png"
+  },
+  {
+    "id": "clap_and_sing",
+    "title": "Clap and Sing",
+    "content": "<p>Children clap their hands while singing a rhyme. This builds rhythm and fun.</p>",
+    "examples": [
+      "Clap 1-2-3 👏",
+      "Sing & clap 🎶"
+    ],
+    "image": "images/clap-sing.png"
+  },
+  {
+    "id": "current_affairs_intro",
+    "title": "Current Affairs for Kids",
+    "content": "<p>Children learn about what is happening around them: school events, weather, and celebrations.</p>",
+    "examples": [
+      "Today is Sunny ☀️",
+      "We celebrate Independence 🎉"
+    ],
+    "image": "images/current-affairs.png"
+  },
+  {
+    "id": "community_helpers",
+    "title": "Knowing Community Helpers",
+    "content": "<p>Children learn about people who help us like teachers, doctors, and farmers.</p>",
+    "examples": [
+      "Doctor heals 👩‍⚕️",
+      "Farmer grows food 👨‍🌾"
+    ],
+    "image": "images/helpers.png"
+  },
+  {
+    "id": "daily_routine",
+    "title": "Daily Routine",
+    "content": "<p>Children talk about daily routines like waking up, going to school, and sleeping.</p>",
+    "examples": [
+      "Brush your teeth 🪥",
+      "Go to bed 🛏️"
+    ],
+    "image": "images/routine.png"
+  }
+]
