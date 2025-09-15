@@ -1884,29 +1884,5 @@
       ]
     }
   ]
-  },
-
-  {
-      "id": "general-knowledge",
-      "name": "General Knowledge (Optional)",
-      "topics": [
-        { "id": "music", "title": "Music" },
-        { "id": "rhymes", "title": "Rhymes" },
-        { "id": "songs", "title": "Songs" }
-      ]
-    },
-    {
-      "id": "african-languages",
-      "name": "African Languages (Optional)",
-      "topics": [
-        { "id": "yoruba", "title": "Yoruba" },
-        { "id": "igbo", "title": "Igbo" },
-        { "id": "hausa", "title": "Hausa" },
-        { "id": "arabic", "title": "Arabic" },
-        { "id": "swahili", "title": "Swahili" }
-      ]
-    }
-  ]
-}
-
+  }
 ]
