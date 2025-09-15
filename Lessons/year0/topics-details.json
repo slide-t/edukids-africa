@@ -1,57 +1,72 @@
 [
   {
-    "id": "music_intro",
-    "title": "Introduction to Music",
-    "content": "<p>Children are introduced to simple music sounds using claps, drums, shakers, and singing. Music builds rhythm, memory, and joy in learning.</p>",
-    "examples": [
-      "Clap 3 times 👏👏👏",
-      "Play a drum beat 🥁",
-      "Sing 'Twinkle Twinkle Little Star' 🌟"
-    ],
-    "image": "images/music-intro.png"
+    "id": "singing_basics",
+    "title": "Singing Basics",
+    "content": "<p>Children learn how to use their voice to sing simple songs. Singing helps memory and makes learning fun.</p>",
+    "examples": ["Twinkle, Twinkle, Little Star 🌟", "Baa Baa Black Sheep 🐑"],
+    "image": "images/singing.png"
   },
   {
-    "id": "singing_rhymes",
-    "title": "Singing Rhymes",
-    "content": "<p>Rhymes are fun and educational songs that help children learn new words and improve memory. Pupils practice with popular rhymes and actions.</p>",
-    "examples": [
-      "Humpty Dumpty 🧱",
-      "Baa Baa Black Sheep 🐑",
-      "Rain Rain Go Away 🌧️"
-    ],
+    "id": "musical_instruments",
+    "title": "Musical Instruments",
+    "content": "<p>Introduction to common instruments like drum, flute, and piano. Pupils learn to identify their sounds.</p>",
+    "examples": ["Drum 🥁", "Flute 🎶", "Piano 🎹"],
+    "image": "images/instruments.png"
+  },
+  {
+    "id": "simple_rhymes",
+    "title": "Simple Rhymes",
+    "content": "<p>Rhymes are short songs that teach rhythm and language. Pupils repeat rhymes daily for fun learning.</p>",
+    "examples": ["Humpty Dumpty 🧱", "Jack and Jill ⛰️"],
     "image": "images/rhymes.png"
   },
   {
-    "id": "clap_and_dance",
-    "title": "Clap and Dance",
-    "content": "<p>Children learn body movement and rhythm by clapping, dancing, and following simple moves.</p>",
-    "examples": [
-      "Clap while jumping 🤸",
-      "March around 🚶",
-      "Spin and clap 🎵"
-    ],
-    "image": "images/clap-dance.png"
+    "id": "movement_and_dance",
+    "title": "Movement and Dance",
+    "content": "<p>Pupils move their bodies to music, learning rhythm and coordination while dancing.</p>",
+    "examples": ["Clap to the beat 👏", "Hop like a rabbit 🐇"],
+    "image": "images/dance.png"
   },
   {
-    "id": "listening_skills",
-    "title": "Listening Skills",
-    "content": "<p>Children practice listening to sounds, voices, and music instruments. Listening improves concentration and memory.</p>",
-    "examples": [
-      "Guess the sound of a bell 🔔",
-      "Listen to bird sounds 🐦",
-      "Follow teacher’s voice 👂"
-    ],
-    "image": "images/listening.png"
+    "id": "clapping_games",
+    "title": "Clapping Games",
+    "content": "<p>Fun clapping songs improve rhythm and teamwork among children.</p>",
+    "examples": ["Pat-a-cake 👏🍰", "Clap and count 1–10 🔢"],
+    "image": "images/clap.png"
   },
   {
-    "id": "current_affairs_intro",
-    "title": "Introduction to Current Affairs",
-    "content": "<p>Pupils are introduced to their immediate world — family, school, and environment. They learn about simple daily events.</p>",
-    "examples": [
-      "What day is today? 📅",
-      "Name the president of Nigeria 🇳🇬",
-      "Tell your friend’s name 👫"
-    ],
-    "image": "images/current-affairs.png"
+    "id": "nigerian_current_affairs",
+    "title": "Nigerian Current Affairs",
+    "content": "<p>Children learn about Nigeria's leaders, flag, and important places.</p>",
+    "examples": ["President of Nigeria 🇳🇬", "Green and white Nigerian flag"],
+    "image": "images/nigeria.png"
+  },
+  {
+    "id": "world_current_affairs",
+    "title": "World Current Affairs",
+    "content": "<p>Introduction to countries, flags, and leaders around the world.</p>",
+    "examples": ["USA flag 🇺🇸", "UK King 👑"],
+    "image": "images/world.png"
+  },
+  {
+    "id": "colors_and_shapes",
+    "title": "Colors and Shapes in Music",
+    "content": "<p>Children connect colors and shapes with songs and objects in their environment.</p>",
+    "examples": ["Red circle 🔴", "Blue square 🔵"],
+    "image": "images/colors.png"
+  },
+  {
+    "id": "story_rhymes",
+    "title": "Storytelling with Rhymes",
+    "content": "<p>Pupils learn short stories told in rhymes to boost imagination.</p>",
+    "examples": ["Little Miss Muffet 🐭", "Itsy Bitsy Spider 🕷️"],
+    "image": "images/story.png"
+  },
+  {
+    "id": "festival_songs",
+    "title": "Festival Songs",
+    "content": "<p>Children learn songs for special days like Christmas, Eid, and Independence Day.</p>",
+    "examples": ["Christmas carols 🎄", "Eid songs 🌙"],
+    "image": "images/festival.png"
   }
 ]
