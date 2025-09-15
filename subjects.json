@@ -71,5 +71,19 @@
     "Literature in English",
     "Christian Religious Studies",
     "Islamic Religious Studies"
+  ],
+
+  "General Knowledge": [
+    "Music",
+    "Rhymes",
+    "Songs"
+  ],
+"African Languages": [
+    "Yoruba",
+    "Igbo",
+    "Hausa",
+    "Arabic",
+    "Swahili"
   ]
+  
 }
