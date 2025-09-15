@@ -1,1 +1,179 @@
+{
+  "Year0": {
+    "music": [
+      {
+        "id": "music_sounds",
+        "title": "Learning Sounds",
+        "content": "<p>Music begins with sounds around us. Pupils will listen to clapping, tapping, birds singing, and other natural sounds. This helps them understand rhythm and tone. Music makes learning fun and helps children express joy.</p>",
+        "examples": [
+          "Clap 3 times 👏👏👏",
+          "Tap your desk gently 🥁",
+          "Sing 'la-la-la' 🎵"
+        ],
+        "takehome": "1. Clap and tap different rhythms with your family. 2. Listen for bird sounds in the morning. 3. Try singing your name in a song. 4. Play a simple drum with a bottle. 5. Share a favorite song with your class.",
+        "exercises": [
+          "Clap and count to 5.",
+          "Sing the alphabet song.",
+          "Make a sound using any object at home.",
+          "Draw a drum and color it.",
+          "Say 'la-la-la' slowly and then faster."
+        ],
+        "image": "images/music-sounds.png"
+      }
+    ],
 
+    "rhymes": [
+      {
+        "id": "rhyme_twinkle",
+        "title": "Twinkle, Twinkle, Little Star",
+        "content": "<p>Rhymes are short, fun songs that help memory and language. In this lesson, pupils will sing the famous rhyme 'Twinkle, Twinkle, Little Star.' Rhymes teach rhythm, words, and imagination.</p>",
+        "examples": [
+          "Twinkle, twinkle, little star 🌟",
+          "How I wonder what you are ❓"
+        ],
+        "takehome": "1. Sing the rhyme before bed. 2. Act the rhyme with hand movements. 3. Teach the rhyme to a friend. 4. Draw a star while singing. 5. Sing softly, then loudly.",
+        "exercises": [
+          "Sing 'Twinkle, Twinkle' aloud.",
+          "Clap after each line.",
+          "Draw 3 stars in your book.",
+          "Point at the stars at night.",
+          "Recite without singing."
+        ],
+        "image": "images/rhyme-twinkle.png"
+      }
+    ],
+
+    "current-affairs": [
+      {
+        "id": "current_affairs_weather",
+        "title": "Weather Today",
+        "content": "<p>Children learn about daily weather (sunny, rainy, cloudy, windy). This builds awareness of their environment and helps them describe the world around them.</p>",
+        "examples": [
+          "Sunny ☀️",
+          "Rainy 🌧️",
+          "Cloudy ☁️",
+          "Windy 🌬️"
+        ],
+        "takehome": "1. Look outside and describe the weather. 2. Tell your parents if it’s hot or cold. 3. Draw today’s weather. 4. Dress properly for the weather. 5. Share in class tomorrow.",
+        "exercises": [
+          "Circle the weather: ☀️ 🌧️ 🌬️",
+          "Say 'It is sunny' or 'It is rainy.'",
+          "Draw clouds in your notebook.",
+          "Act like the wind blowing.",
+          "Tell your friend the weather today."
+        ],
+        "image": "images/weather.png"
+      }
+    ]
+  },
+
+  "Year01": {
+    "yoruba": [
+      {
+        "id": "yoruba_greetings",
+        "title": "Ẹ Káàárọ̀ (Good Morning)",
+        "content": "<p>Yoruba children learn greetings as a sign of respect. Morning greeting is 'Ẹ Káàárọ̀'. Afternoon is 'Ẹ Kásán'. Evening is 'Ẹ Kálẹ́'.</p>",
+        "examples": [
+          "Ẹ Káàárọ̀ 🌅",
+          "Ẹ Kásán ☀️",
+          "Ẹ Kálẹ́ 🌙"
+        ],
+        "takehome": "1. Greet your parents in Yoruba at home. 2. Teach a sibling the greetings. 3. Write them in your notebook. 4. Use them in the morning and evening. 5. Say them politely.",
+        "exercises": [
+          "Say 'Ẹ Káàárọ̀' in class.",
+          "Write the three greetings.",
+          "Match greetings to morning/afternoon/evening.",
+          "Greet your teacher in Yoruba.",
+          "Draw the sun and write 'Ẹ Káàárọ̀'."
+        ],
+        "image": "images/yoruba-greetings.png"
+      }
+    ],
+
+    "hausa": [
+      {
+        "id": "hausa_greetings",
+        "title": "Ina kwana (Good Morning)",
+        "content": "<p>In Hausa, greetings are important for respect. 'Ina kwana' means good morning. 'Ina wuni' means good afternoon. 'Barka da yamma' means good evening.</p>",
+        "examples": [
+          "Ina kwana 🌅",
+          "Ina wuni ☀️",
+          "Barka da yamma 🌙"
+        ],
+        "takehome": "1. Say 'Ina kwana' in the morning. 2. Teach your friends. 3. Write greetings in Hausa. 4. Share them with parents. 5. Use greetings daily.",
+        "exercises": [
+          "Say 'Ina kwana' aloud.",
+          "Match greetings to times of day.",
+          "Draw the sun and write 'Ina kwana'.",
+          "Write 'Barka da yamma'.",
+          "Greet your friend in Hausa."
+        ],
+        "image": "images/hausa-greetings.png"
+      }
+    ],
+
+    "igbo": [
+      {
+        "id": "igbo_greetings",
+        "title": "Ụtụtụ ọma (Good Morning)",
+        "content": "<p>In Igbo, greetings show kindness and culture. 'Ụtụtụ ọma' means good morning. 'Ehihie ọma' means good afternoon. 'Mgbede ọma' means good evening.</p>",
+        "examples": [
+          "Ụtụtụ ọma 🌅",
+          "Ehihie ọma ☀️",
+          "Mgbede ọma 🌙"
+        ],
+        "takehome": "1. Greet your parents in Igbo. 2. Write the greetings in your book. 3. Say them daily. 4. Teach someone else. 5. Smile when greeting.",
+        "exercises": [
+          "Say 'Ụtụtụ ọma' aloud.",
+          "Write all three greetings.",
+          "Match greeting to sun/moon picture.",
+          "Draw and label morning sun.",
+          "Greet your teacher in Igbo."
+        ],
+        "image": "images/igbo-greetings.png"
+      }
+    ],
+
+    "arabic": [
+      {
+        "id": "arabic_greetings",
+        "title": "السلام عليكم (As-salāmu ʿalaykum)",
+        "content": "<p>Arabic children learn to greet with peace. 'As-salāmu ʿalaykum' means 'Peace be upon you.' The reply is 'Wa ʿalaykumu s-salām'.</p>",
+        "examples": [
+          "السلام عليكم 🤲",
+          "وَعَلَيْكُمُ السَّلَام"
+        ],
+        "takehome": "1. Greet your parents in Arabic. 2. Teach a friend. 3. Write the greeting. 4. Practice reply. 5. Use every day.",
+        "exercises": [
+          "Say 'As-salāmu ʿalaykum'.",
+          "Write the greeting in Arabic.",
+          "Reply correctly to greeting.",
+          "Match greeting to handshake picture.",
+          "Teach your friend."
+        ],
+        "image": "images/arabic-greetings.png"
+      }
+    ],
+
+    "swahili": [
+      {
+        "id": "swahili_greetings",
+        "title": "Jambo (Hello)",
+        "content": "<p>Swahili is spoken in East Africa. The basic greeting is 'Jambo' meaning hello. Another common greeting is 'Habari' (How are you?).</p>",
+        "examples": [
+          "Jambo 👋",
+          "Habari 😊"
+        ],
+        "takehome": "1. Say 'Jambo' every morning. 2. Greet your classmates. 3. Teach your parents. 4. Write greetings in your notebook. 5. Smile when saying it.",
+        "exercises": [
+          "Say 'Jambo' aloud.",
+          "Write 'Habari' in your book.",
+          "Greet your friend in Swahili.",
+          "Draw someone waving and write 'Jambo'.",
+          "Practice greetings daily."
+        ],
+        "image": "images/swahili-greetings.png"
+      }
+    ]
+  }
+}
