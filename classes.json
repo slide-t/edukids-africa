@@ -1884,5 +1884,111 @@
       ]
     }
   ]
+  },
+  
+  {
+    "id": "year0",
+    "name": "Year 0 (Nursery / Primary)",
+    "subjects": [
+      {
+        "id": "music",
+        "name": "Music",
+        "topics": [
+          {
+            "id": "intro_music_year0",
+            "title": "Introduction to Music",
+            "detailsPage": "Lessons/Year0/music/topics-details.html?topic=intro_music_year0"
+          },
+          {
+            "id": "sounds_and_beats_year0",
+            "title": "Sounds & Beats",
+            "detailsPage": "Lessons/Year0/music/topics-details.html?topic=sounds_and_beats_year0"
+          }
+        ]
+      },
+      {
+        "id": "rhymes",
+        "name": "Rhymes",
+        "topics": [
+          {
+            "id": "nursery_rhymes_year0",
+            "title": "Nursery Rhymes",
+            "detailsPage": "Lessons/Year0/rhymes/topics-details.html?topic=nursery_rhymes_year0"
+          }
+        ]
+      },
+      {
+        "id": "current-affairs",
+        "name": "Current Affairs",
+        "topics": [
+          {
+            "id": "simple_events_year0",
+            "title": "Simple Events Around Us",
+            "detailsPage": "Lessons/Year0/current-affairs/topics-details.html?topic=simple_events_year0"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "year01",
+    "name": "Year 01 (African Languages)",
+    "subjects": [
+      {
+        "id": "yoruba",
+        "name": "Yoruba Language",
+        "topics": [
+          {
+            "id": "yoruba_intro_year01",
+            "title": "Introduction to Yoruba",
+            "detailsPage": "Lessons/Year01/yoruba/topics-details.html?topic=yoruba_intro_year01"
+          }
+        ]
+      },
+      {
+        "id": "hausa",
+        "name": "Hausa Language",
+        "topics": [
+          {
+            "id": "hausa_intro_year01",
+            "title": "Introduction to Hausa",
+            "detailsPage": "Lessons/Year01/hausa/topics-details.html?topic=hausa_intro_year01"
+          }
+        ]
+      },
+      {
+        "id": "igbo",
+        "name": "Igbo Language",
+        "topics": [
+          {
+            "id": "igbo_intro_year01",
+            "title": "Introduction to Igbo",
+            "detailsPage": "Lessons/Year01/igbo/topics-details.html?topic=igbo_intro_year01"
+          }
+        ]
+      },
+      {
+        "id": "arabic",
+        "name": "Arabic Language",
+        "topics": [
+          {
+            "id": "arabic_intro_year01",
+            "title": "Introduction to Arabic",
+            "detailsPage": "Lessons/Year01/arabic/topics-details.html?topic=arabic_intro_year01"
+          }
+        ]
+      },
+      {
+        "id": "swahili",
+        "name": "Swahili Language",
+        "topics": [
+          {
+            "id": "swahili_intro_year01",
+            "title": "Introduction to Swahili",
+            "detailsPage": "Lessons/Year01/swahili/topics-details.html?topic=swahili_intro_year01"
+          }
+        ]
+      }
+    ]
   }
 ]
