@@ -1,72 +1,220 @@
-[
-  {
-    "id": "singing_basics",
-    "title": "Singing Basics",
-    "content": "<p>Children learn how to use their voice to sing simple songs. Singing helps memory and makes learning fun.</p>",
-    "examples": ["Twinkle, Twinkle, Little Star 🌟", "Baa Baa Black Sheep 🐑"],
-    "image": "images/singing.png"
-  },
-  {
-    "id": "musical_instruments",
-    "title": "Musical Instruments",
-    "content": "<p>Introduction to common instruments like drum, flute, and piano. Pupils learn to identify their sounds.</p>",
-    "examples": ["Drum 🥁", "Flute 🎶", "Piano 🎹"],
-    "image": "images/instruments.png"
-  },
-  {
-    "id": "simple_rhymes",
-    "title": "Simple Rhymes",
-    "content": "<p>Rhymes are short songs that teach rhythm and language. Pupils repeat rhymes daily for fun learning.</p>",
-    "examples": ["Humpty Dumpty 🧱", "Jack and Jill ⛰️"],
-    "image": "images/rhymes.png"
-  },
-  {
-    "id": "movement_and_dance",
-    "title": "Movement and Dance",
-    "content": "<p>Pupils move their bodies to music, learning rhythm and coordination while dancing.</p>",
-    "examples": ["Clap to the beat 👏", "Hop like a rabbit 🐇"],
-    "image": "images/dance.png"
-  },
-  {
-    "id": "clapping_games",
-    "title": "Clapping Games",
-    "content": "<p>Fun clapping songs improve rhythm and teamwork among children.</p>",
-    "examples": ["Pat-a-cake 👏🍰", "Clap and count 1–10 🔢"],
-    "image": "images/clap.png"
-  },
-  {
-    "id": "nigerian_current_affairs",
-    "title": "Nigerian Current Affairs",
-    "content": "<p>Children learn about Nigeria's leaders, flag, and important places.</p>",
-    "examples": ["President of Nigeria 🇳🇬", "Green and white Nigerian flag"],
-    "image": "images/nigeria.png"
-  },
-  {
-    "id": "world_current_affairs",
-    "title": "World Current Affairs",
-    "content": "<p>Introduction to countries, flags, and leaders around the world.</p>",
-    "examples": ["USA flag 🇺🇸", "UK King 👑"],
-    "image": "images/world.png"
-  },
-  {
-    "id": "colors_and_shapes",
-    "title": "Colors and Shapes in Music",
-    "content": "<p>Children connect colors and shapes with songs and objects in their environment.</p>",
-    "examples": ["Red circle 🔴", "Blue square 🔵"],
-    "image": "images/colors.png"
-  },
-  {
-    "id": "story_rhymes",
-    "title": "Storytelling with Rhymes",
-    "content": "<p>Pupils learn short stories told in rhymes to boost imagination.</p>",
-    "examples": ["Little Miss Muffet 🐭", "Itsy Bitsy Spider 🕷️"],
-    "image": "images/story.png"
-  },
-  {
-    "id": "festival_songs",
-    "title": "Festival Songs",
-    "content": "<p>Children learn songs for special days like Christmas, Eid, and Independence Day.</p>",
-    "examples": ["Christmas carols 🎄", "Eid songs 🌙"],
-    "image": "images/festival.png"
-  }
-]
+{
+  "music": [
+    {
+      "id": "sounds_and_beats",
+      "title": "Sounds and Beats",
+      "content": "<p>Children learn about sounds around them and how beats make music fun. They clap, tap, and listen carefully.</p>",
+      "examples": ["Clap 3 times 👏👏👏", "Tap on the table like a drum 🥁"],
+      "image": "images/sounds-and-beats.png"
+    },
+    {
+      "id": "singing_simple_songs",
+      "title": "Singing Simple Songs",
+      "content": "<p>Pupils sing short songs like 'Twinkle Twinkle Little Star' and learn melody.</p>",
+      "examples": ["Twinkle Twinkle 🌟", "Row Row Row Your Boat 🚤"],
+      "image": "images/simple-songs.png"
+    },
+    {
+      "id": "dancing_with_music",
+      "title": "Dancing with Music",
+      "content": "<p>Children move their bodies to the rhythm of music, learning coordination and fun expression.</p>",
+      "examples": ["Shake your hands 🙌", "Jump to the beat 🎶"],
+      "image": "images/dancing.png"
+    },
+    {
+      "id": "clapping_games",
+      "title": "Clapping Games",
+      "content": "<p>Pupils clap in rhythm to develop timing and teamwork.</p>",
+      "examples": ["Pat-a-cake 👏", "Clap with a friend 🤝"],
+      "image": "images/clapping-games.png"
+    },
+    {
+      "id": "listening_to_instruments",
+      "title": "Listening to Instruments",
+      "content": "<p>Children listen to different sounds of drums, flutes, and xylophones.</p>",
+      "examples": ["Drum 🥁", "Flute 🎶"],
+      "image": "images/instruments.png"
+    },
+    {
+      "id": "singing_in_groups",
+      "title": "Singing in Groups",
+      "content": "<p>Pupils sing together to build teamwork and harmony.</p>",
+      "examples": ["Sing 'If you’re happy' as a group 😀", "Echo singing 📢"],
+      "image": "images/group-singing.png"
+    },
+    {
+      "id": "making_music_with_objects",
+      "title": "Making Music with Objects",
+      "content": "<p>Children use sticks, bottle tops, and cans to create rhythms.</p>",
+      "examples": ["Tap sticks together 🪵", "Shake a bottle filled with stones 🔔"],
+      "image": "images/music-objects.png"
+    },
+    {
+      "id": "fast_and_slow_songs",
+      "title": "Fast and Slow Songs",
+      "content": "<p>Children sing fast songs and slow songs to understand tempo.</p>",
+      "examples": ["Fast song: 'If You’re Happy' 😀", "Slow song: 'Twinkle Twinkle' 🌟"],
+      "image": "images/tempo.png"
+    },
+    {
+      "id": "quiet_and_loud_music",
+      "title": "Quiet and Loud Music",
+      "content": "<p>Pupils learn the difference between soft and loud sounds.</p>",
+      "examples": ["Whisper singing 🤫", "Shout singing 📣"],
+      "image": "images/loud-quiet.png"
+    },
+    {
+      "id": "music_and_feelings",
+      "title": "Music and Feelings",
+      "content": "<p>Children explore how music can make them happy, calm, or excited.</p>",
+      "examples": ["Happy song 😄", "Calm song 😌"],
+      "image": "images/music-feelings.png"
+    }
+  ],
+
+  "rhymes": [
+    {
+      "id": "nursery_rhymes",
+      "title": "Nursery Rhymes",
+      "content": "<p>Children learn popular rhymes to improve memory and rhythm.</p>",
+      "examples": ["Humpty Dumpty 🥚", "Baa Baa Black Sheep 🐑"],
+      "image": "images/nursery-rhymes.png"
+    },
+    {
+      "id": "action_rhymes",
+      "title": "Action Rhymes",
+      "content": "<p>Pupils do hand movements with rhymes to connect body and mind.</p>",
+      "examples": ["Itsy Bitsy Spider 🕷️", "Head, Shoulders, Knees & Toes 👶"],
+      "image": "images/action-rhymes.png"
+    },
+    {
+      "id": "animal_rhymes",
+      "title": "Animal Rhymes",
+      "content": "<p>Rhymes about animals make learning fun and imaginative.</p>",
+      "examples": ["Old MacDonald 🐄", "Five Little Ducks 🦆"],
+      "image": "images/animal-rhymes.png"
+    },
+    {
+      "id": "counting_rhymes",
+      "title": "Counting Rhymes",
+      "content": "<p>Children sing rhymes that teach numbers and counting.</p>",
+      "examples": ["One, Two, Buckle My Shoe 👞", "Ten Green Bottles 🍾"],
+      "image": "images/counting-rhymes.png"
+    },
+    {
+      "id": "bedtime_rhymes",
+      "title": "Bedtime Rhymes",
+      "content": "<p>Soft rhymes to help children relax before sleep.</p>",
+      "examples": ["Rock-a-bye Baby 🍼", "Hush Little Baby 😴"],
+      "image": "images/bedtime-rhymes.png"
+    },
+    {
+      "id": "playground_rhymes",
+      "title": "Playground Rhymes",
+      "content": "<p>Fun rhymes chanted during playtime with friends.</p>",
+      "examples": ["Ring-a-Ring o’ Roses 🌹", "London Bridge 🌉"],
+      "image": "images/playground-rhymes.png"
+    },
+    {
+      "id": "family_rhymes",
+      "title": "Family Rhymes",
+      "content": "<p>Rhymes that mention parents, siblings, and family love.</p>",
+      "examples": ["Finger Family 👨‍👩‍👧‍👦", "Grandma’s Glasses 👓"],
+      "image": "images/family-rhymes.png"
+    },
+    {
+      "id": "weather_rhymes",
+      "title": "Weather Rhymes",
+      "content": "<p>Children sing about rain, sun, and wind.</p>",
+      "examples": ["Rain Rain Go Away 🌧️", "Mr. Sun ☀️"],
+      "image": "images/weather-rhymes.png"
+    },
+    {
+      "id": "food_rhymes",
+      "title": "Food Rhymes",
+      "content": "<p>Rhymes about fruits and meals that children enjoy.</p>",
+      "examples": ["Hot Cross Buns 🥯", "Apples and Bananas 🍌🍎"],
+      "image": "images/food-rhymes.png"
+    },
+    {
+      "id": "holiday_rhymes",
+      "title": "Holiday Rhymes",
+      "content": "<p>Special rhymes for Christmas, Eid, and festivals.</p>",
+      "examples": ["We Wish You a Merry Christmas 🎄", "Festive songs 🎉"],
+      "image": "images/holiday-rhymes.png"
+    }
+  ],
+
+  "current_affairs": [
+    {
+      "id": "my_country",
+      "title": "My Country",
+      "content": "<p>Children learn the name of their country, the president, and national flag.</p>",
+      "examples": ["Nigeria 🇳🇬", "Green-White-Green flag"],
+      "image": "images/my-country.png"
+    },
+    {
+      "id": "important_places",
+      "title": "Important Places",
+      "content": "<p>Pupils know important places like markets, schools, hospitals, and post offices.</p>",
+      "examples": ["Market 🛍️", "Hospital 🏥"],
+      "image": "images/important-places.png"
+    },
+    {
+      "id": "leaders",
+      "title": "Leaders",
+      "content": "<p>Pupils learn about leaders like the president, governor, and local chiefs.</p>",
+      "examples": ["President 👔", "Governor 🏛️"],
+      "image": "images/leaders.png"
+    },
+    {
+      "id": "national_symbols",
+      "title": "National Symbols",
+      "content": "<p>Children identify the flag, coat of arms, and anthem.</p>",
+      "examples": ["Flag 🚩", "Anthem 🎶"],
+      "image": "images/national-symbols.png"
+    },
+    {
+      "id": "transport",
+      "title": "Transport",
+      "content": "<p>Pupils learn about cars, buses, boats, and airplanes used in daily life.</p>",
+      "examples": ["Car 🚗", "Airplane ✈️"],
+      "image": "images/transport.png"
+    },
+    {
+      "id": "holidays",
+      "title": "National Holidays",
+      "content": "<p>Children know holidays like Independence Day and Children’s Day.</p>",
+      "examples": ["October 1st 🎉", "May 27th 👦👧"],
+      "image": "images/holidays.png"
+    },
+    {
+      "id": "important_buildings",
+      "title": "Important Buildings",
+      "content": "<p>Pupils learn about schools, mosques, churches, and government offices.</p>",
+      "examples": ["School 🏫", "Church ⛪"],
+      "image": "images/buildings.png"
+    },
+    {
+      "id": "heroes",
+      "title": "National Heroes",
+      "content": "<p>Children know great men and women who helped their country.</p>",
+      "examples": ["Nnamdi Azikiwe 🇳🇬", "Funmilayo Ransome-Kuti 👩"],
+      "image": "images/heroes.png"
+    },
+    {
+      "id": "daily_news",
+      "title": "Daily News",
+      "content": "<p>Pupils talk about simple news from radio or TV in class.</p>",
+      "examples": ["Weather 🌦️", "Sports ⚽"],
+      "image": "images/news.png"
+    },
+    {
+      "id": "our_currency",
+      "title": "Our Currency",
+      "content": "<p>Children learn about the Naira notes and coins.</p>",
+      "examples": ["₦50 note", "₦100 note"],
+      "image": "images/currency.png"
+    }
+  ]
+}
