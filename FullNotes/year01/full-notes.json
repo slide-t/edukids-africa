@@ -1,1 +1,193 @@
 
+{
+  "Yoruba": [
+    {
+      "id": "yoruba_alphabets",
+      "title": "Alfabeti Yoruba (Yoruba Alphabets)",
+      "content": "<p>In Yoruba, alphabets are slightly different from English. Pupils learn the Yoruba letters A–Z with extra tones like Ẹ, Ọ, Ṣ. Each sound is important because it changes the meaning of words. For example, 'owo' can mean money, broom, or hand depending on the tone. Practice by singing the Yoruba alphabet song.</p>",
+      "examples": [
+        "A – a, Ẹ – ẹ, Ọ – ọ, Ṣ – ṣ",
+        "Ẹ káàsán = Good afternoon"
+      ],
+      "takehome": "1. Recite the Yoruba alphabets daily. 2. Ask elders at home to pronounce words for you. 3. Write 5 Yoruba letters in your notebook. 4. Compare English and Yoruba alphabets. 5. Listen to Yoruba songs to hear the tones.",
+      "exercises": [
+        "Write the Yoruba alphabets in your book.",
+        "Circle the Yoruba letters: A, Ṣ, B, Ọ.",
+        "Match the letters: Ẹ → ẹ, Ṣ → ṣ.",
+        "Say the word 'owo' in three different tones.",
+        "Sing Yoruba alphabet song."
+      ],
+      "image": "images/yoruba-alphabet.png"
+    },
+    {
+      "id": "yoruba_greetings",
+      "title": "Ẹ̀kú Ijó (Greetings)",
+      "content": "<p>Greetings are very important in Yoruba culture. Pupils learn to greet elders and friends depending on the time of day. Yoruba greetings show respect and good manners.</p>",
+      "examples": [
+        "Ẹ káàrọ́ – Good morning",
+        "Ẹ káàsán – Good afternoon",
+        "Ẹ káalẹ́ – Good evening"
+      ],
+      "takehome": "1. Greet your parents in Yoruba every morning. 2. Practice greetings with friends. 3. Use greetings when entering or leaving a room. 4. Listen to how elders greet each other. 5. Learn to kneel or prostrate when greeting (boys prostrate, girls kneel).",
+      "exercises": [
+        "Say 'Good morning' in Yoruba.",
+        "Write 'Ẹ káàsán' in your book.",
+        "Act out greeting your teacher in Yoruba.",
+        "Circle the correct meaning of 'Ẹ káalẹ́' (morning, evening, afternoon).",
+        "Practice bowing or kneeling while greeting."
+      ],
+      "image": "images/yoruba-greetings.png"
+    },
+    {
+      "id": "yoruba_numbers",
+      "title": "Ọ̀nka (Numbers)",
+      "content": "<p>Pupils learn how to count from 1 to 20 in Yoruba. Numbers are used daily when buying things, counting objects, or telling age.</p>",
+      "examples": [
+        "1 – Ọ̀kan, 2 – Èjì, 3 – Ẹ̀ta",
+        "10 – Ẹ̀wá, 15 – Ẹ̀dógún"
+      ],
+      "takehome": "1. Count your toys in Yoruba. 2. Say numbers when climbing stairs. 3. Ask elders to say your age in Yoruba. 4. Practice saying money amounts in Yoruba. 5. Use Yoruba numbers when playing games.",
+      "exercises": [
+        "Write numbers 1–10 in Yoruba.",
+        "Say the Yoruba number for 7.",
+        "Circle the Yoruba number for 5 (àrún, ẹ̀ta, méje).",
+        "Count 10 sticks in Yoruba.",
+        "Say 'Ẹ̀wá' loudly three times."
+      ],
+      "image": "images/yoruba-numbers.png"
+    },
+    {
+      "id": "yoruba_family",
+      "title": "Ẹbí (Family)",
+      "content": "<p>Pupils learn names of family members in Yoruba. Family is very important in Yoruba culture and everyone has a role.</p>",
+      "examples": [
+        "Bàbá – Father 👨",
+        "Ìyá – Mother 👩",
+        "Arákùnrin – Brother 👦",
+        "Arábìnrin – Sister 👧"
+      ],
+      "takehome": "1. Call your parents ‘Bàbá’ and ‘Ìyá’. 2. Say Yoruba names for siblings. 3. Draw your family tree and label in Yoruba. 4. Ask elders how to greet family members. 5. Use Yoruba words at home.",
+      "exercises": [
+        "Write Yoruba word for father.",
+        "Match: Ìyá → Mother, Bàbá → Father.",
+        "Say Yoruba word for sister.",
+        "Circle Yoruba word for brother (Bàbá, Arákùnrin, Arábìnrin).",
+        "Draw and label your family."
+      ],
+      "image": "images/yoruba-family.png"
+    },
+    {
+      "id": "yoruba_days",
+      "title": "Ọjọ́ Ọ̀sẹ̀ (Days of the Week)",
+      "content": "<p>Pupils learn Yoruba names for the 7 days of the week. Each day has cultural importance in Yoruba tradition.</p>",
+      "examples": [
+        "Monday – Ọjọ́ Ajé",
+        "Wednesday – Ọjọ́rú",
+        "Sunday – Ọjọ́ Àìkú"
+      ],
+      "takehome": "1. Say today’s day in Yoruba. 2. Sing days of the week song in Yoruba. 3. Write Yoruba days in your book. 4. Greet elders by saying the day. 5. Learn market day in your village.",
+      "exercises": [
+        "Write Yoruba word for Sunday.",
+        "Say Yoruba word for Friday.",
+        "Circle Yoruba word for Tuesday (Ọjọ́ Ajé, Ọjọ́ Ìṣẹ́gun, Ọjọ́rú).",
+        "Arrange Yoruba days in correct order.",
+        "Sing the 7 Yoruba days aloud."
+      ],
+      "image": "images/yoruba-days.png"
+    },
+    {
+      "id": "yoruba_foods",
+      "title": "Onjẹ (Foods)",
+      "content": "<p>Pupils learn common Yoruba foods. Food is part of culture and shows Yoruba lifestyle.</p>",
+      "examples": [
+        "Iyan – Pounded yam 🍲",
+        "Amala – Yam flour meal 🍛",
+        "Efo riro – Vegetable soup 🥬"
+      ],
+      "takehome": "1. Ask parents Yoruba names of foods you eat. 2. Write names of 3 Yoruba soups. 3. Say Yoruba name when eating. 4. Learn foods from grandparents. 5. Practice saying foods in Yoruba market.",
+      "exercises": [
+        "Write Yoruba name for yam flour meal.",
+        "Circle Yoruba name for vegetable soup.",
+        "Say Yoruba word for pounded yam.",
+        "Match: Amala → Food, Ẹ̀ka → Leg.",
+        "Draw your favorite Yoruba food."
+      ],
+      "image": "images/yoruba-foods.png"
+    },
+    {
+      "id": "yoruba_colors",
+      "title": "Àwọ̀ (Colors)",
+      "content": "<p>Pupils learn names of colors in Yoruba. Colors are used in clothes, food, and nature.</p>",
+      "examples": [
+        "Funfun – White ⚪",
+        "Pupa – Red 🔴",
+        "Dúdú – Black ⚫"
+      ],
+      "takehome": "1. Name the color of your shirt in Yoruba. 2. Write Yoruba names of 3 colors. 3. Point at colors in nature. 4. Learn colors from Yoruba cloths. 5. Play color games in Yoruba.",
+      "exercises": [
+        "Say Yoruba word for white.",
+        "Circle Yoruba word for red (pupa, dudu, funfun).",
+        "Write Yoruba word for black.",
+        "Match: Dúdú → Black, Pupa → Red.",
+        "Draw 3 shapes and color in Yoruba colors."
+      ],
+      "image": "images/yoruba-colors.png"
+    },
+    {
+      "id": "yoruba_animals",
+      "title": "Ẹranko (Animals)",
+      "content": "<p>Pupils learn Yoruba names of common animals.</p>",
+      "examples": [
+        "Ẹkùn – Lion 🦁",
+        "Ẹja – Fish 🐟",
+        "Ẹran-ọ̀sìn – Domestic animals 🐄🐐"
+      ],
+      "takehome": "1. Call animals by Yoruba names. 2. Write Yoruba words for 3 pets. 3. Draw animals and label in Yoruba. 4. Ask elders names of wild animals. 5. Watch Yoruba animal stories.",
+      "exercises": [
+        "Say Yoruba word for lion.",
+        "Circle Yoruba word for fish (ẹja, ẹkùn, ẹran-ọ̀sìn).",
+        "Write Yoruba word for goat.",
+        "Match: Ẹkùn → Lion, Ẹja → Fish.",
+        "Draw your favorite animal and label it."
+      ],
+      "image": "images/yoruba-animals.png"
+    },
+    {
+      "id": "yoruba_bodyparts",
+      "title": "Ara (Body Parts)",
+      "content": "<p>Pupils learn Yoruba names for parts of the body.</p>",
+      "examples": [
+        "Ọwọ́ – Hand ✋",
+        "Ẹsẹ̀ – Leg 🦵",
+        "Ori – Head 🙂"
+      ],
+      "takehome": "1. Touch and say body parts in Yoruba. 2. Write Yoruba names of 3 body parts. 3. Sing Yoruba body song. 4. Play games pointing at parts. 5. Learn body health in Yoruba.",
+      "exercises": [
+        "Say Yoruba word for hand.",
+        "Circle Yoruba word for head (ori, ọwọ́, ẹsẹ̀).",
+        "Write Yoruba word for leg.",
+        "Match: Ori → Head, Ọwọ́ → Hand.",
+        "Draw a person and label 3 body parts in Yoruba."
+      ],
+      "image": "images/yoruba-bodyparts.png"
+    },
+    {
+      "id": "yoruba_proverbs",
+      "title": "Òwe (Proverbs)",
+      "content": "<p>Pupils learn short Yoruba proverbs. Proverbs teach wisdom and morals.</p>",
+      "examples": [
+        "Bi omode ba subu, a wo iwaju; bi agbalagba ba subu, a wo ẹ̀yìn – When a child falls, he looks forward; when an elder falls, he looks back.",
+        "Ìwà l’ẹwà – Good character is beauty."
+      ],
+      "takehome": "1. Memorize 2 Yoruba proverbs. 2. Ask elders to explain meanings. 3. Use proverbs in daily speech. 4. Write proverbs in notebook. 5. Share proverb with class.",
+      "exercises": [
+        "Say Yoruba proverb about character.",
+        "Write Yoruba proverb about wisdom.",
+        "Circle the meaning of 'Ìwà l’ẹwà'.",
+        "Match proverb to meaning.",
+        "Act out proverb in class."
+      ],
+      "image": "images/yoruba-proverbs.png"
+    }
+  ]
+}
