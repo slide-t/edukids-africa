@@ -1,117 +1,82 @@
-
-{
-  "yoruba": [
-    {
-      "id": "greetings",
-      "title": "Greetings (Ẹ Kàárọ̀, Ẹ Kàsán)",
-      "content": "<p>Pupils learn how to greet elders and friends in Yoruba at different times of the day.</p>",
-      "examples": [
-        "Ẹ Kàárọ̀ – Good morning ☀️",
-        "Ẹ Kàsán – Good afternoon 🌞"
-      ],
-      "image": "images/yoruba-greetings.png"
-    },
-    {
-      "id": "numbers",
-      "title": "Counting Numbers",
-      "content": "<p>Learning numbers from 1 to 10 in Yoruba.</p>",
-      "examples": [
-        "Ọ̀kan (1)",
-        "Èjì (2)"
-      ],
-      "image": "images/yoruba-numbers.png"
-    }
-  ],
-
-  "hausa": [
-    {
-      "id": "greetings",
-      "title": "Greetings (Ina kwana)",
-      "content": "<p>Children learn to greet in Hausa.</p>",
-      "examples": [
-        "Ina kwana – Good morning ☀️",
-        "Barka da rana – Good afternoon 🌞"
-      ],
-      "image": "images/hausa-greetings.png"
-    },
-    {
-      "id": "numbers",
-      "title": "Numbers 1–10",
-      "content": "<p>Counting in Hausa from 1 to 10.</p>",
-      "examples": [
-        "Daya (1)",
-        "Biyu (2)"
-      ],
-      "image": "images/hausa-numbers.png"
-    }
-  ],
-
-  "igbo": [
-    {
-      "id": "greetings",
-      "title": "Greetings (Ụtụtụ ọma)",
-      "content": "<p>Pupils learn greetings in Igbo language.</p>",
-      "examples": [
-        "Ụtụtụ ọma – Good morning ☀️",
-        "Ehihie ọma – Good afternoon 🌞"
-      ],
-      "image": "images/igbo-greetings.png"
-    },
-    {
-      "id": "numbers",
-      "title": "Counting Numbers",
-      "content": "<p>Numbers from 1 to 10 in Igbo.</p>",
-      "examples": [
-        "Otu (1)",
-        "Abụọ (2)"
-      ],
-      "image": "images/igbo-numbers.png"
-    }
-  ],
-
-  "arabic": [
-    {
-      "id": "arabic_alphabets",
-      "title": "Arabic Alphabets",
-      "content": "<p>Children learn the Arabic letters (Alif, Baa, Taa, etc.).</p>",
-      "examples": [
-        "ا (Alif)",
-        "ب (Baa)"
-      ],
-      "image": "images/arabic-alphabets.png"
-    },
-    {
-      "id": "basic_greetings",
-      "title": "Basic Greetings",
-      "content": "<p>Pupils learn simple greetings in Arabic.</p>",
-      "examples": [
-        "السلام عليكم – Peace be upon you",
-        "مرحبا – Hello"
-      ],
-      "image": "images/arabic-greetings.png"
-    }
-  ],
-
-  "swahili": [
-    {
-      "id": "greetings",
-      "title": "Greetings (Jambo, Habari)",
-      "content": "<p>Pupils learn greetings in Swahili.</p>",
-      "examples": [
-        "Jambo – Hello 👋",
-        "Habari – How are you?"
-      ],
-      "image": "images/swahili-greetings.png"
-    },
-    {
-      "id": "numbers",
-      "title": "Numbers 1–10",
-      "content": "<p>Counting numbers from 1 to 10 in Swahili.</p>",
-      "examples": [
-        "Moja (1)",
-        "Mbili (2)"
-      ],
-      "image": "images/swahili-numbers.png"
-    }
-  ]
-}
+[
+  {
+    "id": "yoruba",
+    "title": "Yoruba Language",
+    "topics": [
+      { "id": "yoruba_alphabets", "title": "Yoruba Alphabets", "content": "Introduction to Yoruba alphabets (a – y), tones and sounds.", "examples": ["a – as in àpá (hand)", "ẹ – as in ẹja (fish)"], "image": "images/yoruba_alphabets.png" },
+      { "id": "yoruba_greetings", "title": "Greetings", "content": "Learn common Yoruba greetings for morning, afternoon, evening.", "examples": ["Ẹ káàárọ̀ – Good morning", "Ẹ káàsán – Good afternoon"], "image": "images/yoruba_greetings.png" },
+      { "id": "yoruba_numbers", "title": "Numbers", "content": "Counting from 1–20 in Yoruba.", "examples": ["Ọ̀kan – 1", "Ẹ̀jì – 2"], "image": "images/yoruba_numbers.png" },
+      { "id": "yoruba_days", "title": "Days of the Week", "content": "Learn the Yoruba names for days.", "examples": ["Ọjọ́ Ajé – Monday", "Ọjọ́ Ìsẹ́gun – Tuesday"], "image": "images/yoruba_days.png" },
+      { "id": "yoruba_family", "title": "Family Members", "content": "Words for family members in Yoruba.", "examples": ["Bàbá – Father", "Ìyá – Mother"], "image": "images/yoruba_family.png" },
+      { "id": "yoruba_animals", "title": "Animals", "content": "Names of animals in Yoruba.", "examples": ["Ajá – Dog", "Ẹkùn – Tiger"], "image": "images/yoruba_animals.png" },
+      { "id": "yoruba_foods", "title": "Food", "content": "Names of common foods in Yoruba.", "examples": ["Ìresi – Rice", "Ewa – Beans"], "image": "images/yoruba_foods.png" },
+      { "id": "yoruba_colors", "title": "Colors", "content": "Learn basic colors in Yoruba.", "examples": ["Funfun – White", "Dúdú – Black"], "image": "images/yoruba_colors.png" },
+      { "id": "yoruba_proverbs", "title": "Proverbs", "content": "Simple Yoruba proverbs for children.", "examples": ["Ọmọ tí a kò kọ́, yóò gbé ilé tí a kọ́ tà – An untrained child will sell the house built."], "image": "images/yoruba_proverbs.png" },
+      { "id": "yoruba_songs", "title": "Songs & Rhymes", "content": "Yoruba children songs and rhymes.", "examples": ["Orin ìbílẹ̀ – Traditional songs"], "image": "images/yoruba_songs.png" }
+    ]
+  },
+  {
+    "id": "hausa",
+    "title": "Hausa Language",
+    "topics": [
+      { "id": "hausa_alphabets", "title": "Hausa Alphabets", "content": "Learn Hausa alphabets and unique sounds.", "examples": ["A – as in Aiki (work)", "B – as in Baki (mouth)"], "image": "images/hausa_alphabets.png" },
+      { "id": "hausa_greetings", "title": "Greetings", "content": "Common Hausa greetings for day-to-day use.", "examples": ["Ina kwana – Good morning", "Ina wuni – Good afternoon"], "image": "images/hausa_greetings.png" },
+      { "id": "hausa_numbers", "title": "Numbers", "content": "Counting from 1–20 in Hausa.", "examples": ["Ɗaya – 1", "Biyu – 2"], "image": "images/hausa_numbers.png" },
+      { "id": "hausa_days", "title": "Days of the Week", "content": "Learn the Hausa days of the week.", "examples": ["Litinin – Monday", "Talata – Tuesday"], "image": "images/hausa_days.png" },
+      { "id": "hausa_family", "title": "Family Members", "content": "Words for family members in Hausa.", "examples": ["Uba – Father", "Uwa – Mother"], "image": "images/hausa_family.png" },
+      { "id": "hausa_animals", "title": "Animals", "content": "Names of animals in Hausa.", "examples": ["Kare – Dog", "Akuya – Goat"], "image": "images/hausa_animals.png" },
+      { "id": "hausa_foods", "title": "Food", "content": "Common Hausa food names.", "examples": ["Shinkafa – Rice", "Wake – Beans"], "image": "images/hausa_foods.png" },
+      { "id": "hausa_colors", "title": "Colors", "content": "Learn Hausa color names.", "examples": ["Fari – White", "Baki – Black"], "image": "images/hausa_colors.png" },
+      { "id": "hausa_proverbs", "title": "Proverbs", "content": "Simple Hausa proverbs for children.", "examples": ["Komai nisan dare, gari zai waye – No matter how long the night, morning will come."], "image": "images/hausa_proverbs.png" },
+      { "id": "hausa_songs", "title": "Songs & Rhymes", "content": "Children’s songs and rhymes in Hausa.", "examples": ["Raira waƙoƙin yara – Children’s songs"], "image": "images/hausa_songs.png" }
+    ]
+  },
+  {
+    "id": "igbo",
+    "title": "Igbo Language",
+    "topics": [
+      { "id": "igbo_alphabets", "title": "Igbo Alphabets", "content": "Learn Igbo alphabets and tones.", "examples": ["A – as in Anụ (animal)", "B – as in Bịa (come)"], "image": "images/igbo_alphabets.png" },
+      { "id": "igbo_greetings", "title": "Greetings", "content": "Common Igbo greetings.", "examples": ["Ụtụtụ ọma – Good morning", "Ehihie ọma – Good afternoon"], "image": "images/igbo_greetings.png" },
+      { "id": "igbo_numbers", "title": "Numbers", "content": "Counting in Igbo from 1–20.", "examples": ["Otu – 1", "Abụọ – 2"], "image": "images/igbo_numbers.png" },
+      { "id": "igbo_days", "title": "Days of the Week", "content": "Igbo names for the days of the week.", "examples": ["Mọnde – Monday", "Tuzde – Tuesday"], "image": "images/igbo_days.png" },
+      { "id": "igbo_family", "title": "Family Members", "content": "Family words in Igbo.", "examples": ["Nna – Father", "Nne – Mother"], "image": "images/igbo_family.png" },
+      { "id": "igbo_animals", "title": "Animals", "content": "Names of animals in Igbo.", "examples": ["Nkịta – Dog", "Ewu – Goat"], "image": "images/igbo_animals.png" },
+      { "id": "igbo_foods", "title": "Food", "content": "Common Igbo food names.", "examples": ["Oka – Maize", "Ji – Yam"], "image": "images/igbo_foods.png" },
+      { "id": "igbo_colors", "title": "Colors", "content": "Colors in Igbo.", "examples": ["Ọcha – White", "Ojii – Black"], "image": "images/igbo_colors.png" },
+      { "id": "igbo_proverbs", "title": "Proverbs", "content": "Simple Igbo proverbs for children.", "examples": ["Nwaanyị bụ isi ụlọ – A woman is the head of the home."], "image": "images/igbo_proverbs.png" },
+      { "id": "igbo_songs", "title": "Songs & Rhymes", "content": "Children’s songs in Igbo.", "examples": ["Abụ ụmụaka – Children’s songs"], "image": "images/igbo_songs.png" }
+    ]
+  },
+  {
+    "id": "arabic",
+    "title": "Arabic Language",
+    "topics": [
+      { "id": "arabic_alphabets", "title": "Arabic Alphabets", "content": "Introduction to Arabic letters (alif – ya).", "examples": ["ا – Alif", "ب – Ba"], "image": "images/arabic_alphabets.png" },
+      { "id": "arabic_greetings", "title": "Greetings", "content": "Learn greetings in Arabic.", "examples": ["As-salāmu ʿalaykum – Peace be upon you", "Marḥaban – Hello"], "image": "images/arabic_greetings.png" },
+      { "id": "arabic_numbers", "title": "Numbers", "content": "Counting from 1–20 in Arabic.", "examples": ["١ – 1", "٢ – 2"], "image": "images/arabic_numbers.png" },
+      { "id": "arabic_days", "title": "Days of the Week", "content": "Arabic names of the days.", "examples": ["Al-Ithnayn – Monday", "Ath-Thulatha – Tuesday"], "image": "images/arabic_days.png" },
+      { "id": "arabic_family", "title": "Family Members", "content": "Words for family in Arabic.", "examples": ["Ab – Father", "Umm – Mother"], "image": "images/arabic_family.png" },
+      { "id": "arabic_animals", "title": "Animals", "content": "Names of animals in Arabic.", "examples": ["Kalb – Dog", "Qitt – Cat"], "image": "images/arabic_animals.png" },
+      { "id": "arabic_foods", "title": "Food", "content": "Arabic words for foods.", "examples": ["Khubz – Bread", "Laban – Milk"], "image": "images/arabic_foods.png" },
+      { "id": "arabic_colors", "title": "Colors", "content": "Learn colors in Arabic.", "examples": ["Abyad – White", "Aswad – Black"], "image": "images/arabic_colors.png" },
+      { "id": "arabic_proverbs", "title": "Proverbs", "content": "Simple Arabic proverbs for kids.", "examples": ["العقل زينة – The mind is an ornament."], "image": "images/arabic_proverbs.png" },
+      { "id": "arabic_songs", "title": "Songs & Rhymes", "content": "Children’s songs in Arabic.", "examples": ["أناشيد الأطفال – Children’s rhymes"], "image": "images/arabic_songs.png" }
+    ]
+  },
+  {
+    "id": "swahili",
+    "title": "Swahili Language",
+    "topics": [
+      { "id": "swahili_alphabets", "title": "Swahili Alphabets", "content": "Introduction to Swahili alphabets and sounds.", "examples": ["A – as in Asubuhi (morning)", "B – as in Baba (father)"], "image": "images/swahili_alphabets.png" },
+      { "id": "swahili_greetings", "title": "Greetings", "content": "Learn greetings in Swahili.", "examples": ["Habari – Hello", "Shikamoo – Greeting to elders"], "image": "images/swahili_greetings.png" },
+      { "id": "swahili_numbers", "title": "Numbers", "content": "Counting 1–20 in Swahili.", "examples": ["Moja – 1", "Mbili – 2"], "image": "images/swahili_numbers.png" },
+      { "id": "swahili_days", "title": "Days of the Week", "content": "Days of the week in Swahili.", "examples": ["Jumatatu – Monday", "Jumanne – Tuesday"], "image": "images/swahili_days.png" },
+      { "id": "swahili_family", "title": "Family Members", "content": "Words for family in Swahili.", "examples": ["Baba – Father", "Mama – Mother"], "image": "images/swahili_family.png" },
+      { "id": "swahili_animals", "title": "Animals", "content": "Animal names in Swahili.", "examples": ["Mbwa – Dog", "Paka – Cat"], "image": "images/swahili_animals.png" },
+      { "id": "swahili_foods", "title": "Food", "content": "Swahili words for common foods.", "examples": ["Wali – Rice", "Maziwa – Milk"], "image": "images/swahili_foods.png" },
+      { "id": "swahili_colors", "title": "Colors", "content": "Learn color names in Swahili.", "examples": ["Nyeupe – White", "Nyeusi – Black"], "image": "images/swahili_colors.png" },
+      { "id": "swahili_proverbs", "title": "Proverbs", "content": "Simple Swahili proverbs.", "examples": ["Haraka haraka haina baraka – Hurry hurry has no blessing."], "image": "images/swahili_proverbs.png" },
+      { "id": "swahili_songs", "title": "Songs & Rhymes", "content": "Children’s songs in Swahili.", "examples": ["Nyimbo za watoto – Children’s songs"], "image": "images/swahili_songs.png" }
+    ]
+  }
+]
