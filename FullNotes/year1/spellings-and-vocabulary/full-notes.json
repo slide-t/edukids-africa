@@ -2,184 +2,182 @@
   {
     "id": "alphabets",
     "title": "Alphabets and Sounds",
-    "content": "<p>Pupils learn the 26 letters of the alphabet (A–Z) and the sounds they make. Practice saying the alphabet aloud and recognizing letters in words.</p>",
+    "content": "<p>Pupils learn the 26 letters of the alphabet (A–Z) and their sounds. Singing the alphabet song and matching letters with pictures makes learning fun. Letters are the foundation of spelling and vocabulary. Children should practice both uppercase (A, B, C) and lowercase (a, b, c) letters daily.</p>",
     "examples": [
       "A for Apple 🍎",
       "B for Ball ⚽",
       "C for Cat 🐱"
     ],
-    "takehome": "Practice saying and writing each letter of the alphabet daily. Try finding letters in books or on signs at home.",
+    "takehome": "1. Sing the ABC song twice every day. 2. Point out letters on street signs or books. 3. Trace letters in sand or with chalk. 4. Match letters with objects at home. 5. Practice writing 5 letters neatly.",
     "exercises": [
-      "Write each letter from A to Z.",
-      "Circle the letters you see in a page of your storybook.",
-      "Match letters with pictures that start with the same letter."
+      "Write A to Z in your notebook.",
+      "Circle vowels in this set: A, B, E, C, O.",
+      "Match the letter A with an Apple picture.",
+      "Say the sound of letters: B, D, M.",
+      "Color the letters A, B, and C."
     ],
     "image": "images/alphabets.png"
   },
   {
-    "id": "simple_words",
-    "title": "Simple Words",
-    "content": "<p>Children learn to read and write simple words by combining letters and sounds.</p>",
+    "id": "two_letter_words",
+    "title": "Two-Letter Words",
+    "content": "<p>Simple two-letter words are the first step in reading and spelling. They help children build confidence in forming words quickly. Pupils should learn to sound out and recognize these short words in books and around them.</p>",
+    "examples": [
+      "am, an, at",
+      "be, do, go"
+    ],
+    "takehome": "1. Read 5 two-letter words aloud at home. 2. Spell 3 words before bedtime. 3. Write each word 3 times. 4. Look for two-letter words in a storybook. 5. Use them in sentences like 'I am 6'.",
+    "exercises": [
+      "Write the words: am, be, go.",
+      "Fill in the missing letter: a_, g_, b_.",
+      "Circle the correct spelling: go / gu.",
+      "Match words to pictures (go 🚶, be 🙂).",
+      "Make 3 sentences with two-letter words."
+    ],
+    "image": "images/two-letters.png"
+  },
+  {
+    "id": "three_letter_words",
+    "title": "Three-Letter Words",
+    "content": "<p>Pupils learn CVC words (consonant-vowel-consonant). These words improve spelling and help children start reading simple sentences. Children should practice sounding each letter and blending them to form words.</p>",
     "examples": [
       "cat 🐱, dog 🐶, sun ☀️",
-      "mat, bat, hat"
+      "bat, mat, hat"
     ],
-    "takehome": "Read aloud simple words daily. Practice writing them neatly in your notebook.",
+    "takehome": "1. Read 5 three-letter words aloud. 2. Write and spell 3 words daily. 3. Use them in a short story. 4. Show a picture and spell the word. 5. Play with word cards at home.",
     "exercises": [
-      "Write 5 simple words from your lesson.",
-      "Read 5 words aloud and spell them.",
-      "Draw a picture and label it with the correct word."
+      "Spell: cat, dog, sun.",
+      "Fill the blanks: c_t, h_t, s_n.",
+      "Match cat 🐱 with picture.",
+      "Circle the vowel in: bat, mat, hat.",
+      "Make 2 sentences with CVC words."
     ],
-    "image": "images/simple-words.png"
-  },
-  {
-    "id": "common_nouns",
-    "title": "Common Nouns",
-    "content": "<p>Children identify common nouns like people, places, and things.</p>",
-    "examples": [
-      "school, teacher, house, ball",
-      "tree, car, book, friend"
-    ],
-    "takehome": "Find objects around your home and name them as nouns.",
-    "exercises": [
-      "Write 5 nouns you see in your room.",
-      "Circle the nouns in a short story.",
-      "Match nouns with pictures."
-    ],
-    "image": "images/nouns.png"
-  },
-  {
-    "id": "vowel_sounds",
-    "title": "Vowel Sounds",
-    "content": "<p>Learn the short and long sounds of vowels A, E, I, O, U in words.</p>",
-    "examples": [
-      "A – cat / cake",
-      "E – bed / bee",
-      "I – sit / kite"
-    ],
-    "takehome": "Practice pronouncing vowels correctly in words.",
-    "exercises": [
-      "Underline the vowels in 5 words.",
-      "Say 5 words with long vowel sounds.",
-      "Write 5 words with short vowels."
-    ],
-    "image": "images/vowels.png"
-  },
-  {
-    "id": "consonant_sounds",
-    "title": "Consonant Sounds",
-    "content": "<p>Learn the sounds made by consonants and how they form words.</p>",
-    "examples": [
-      "B – ball, bat",
-      "C – cat, cup",
-      "D – dog, duck"
-    ],
-    "takehome": "Practice pronouncing consonants clearly and forming simple words.",
-    "exercises": [
-      "Write 5 words starting with 'B'.",
-      "Circle consonants in 5 words.",
-      "Match consonants to pictures."
-    ],
-    "image": "images/consonants.png"
-  },
-  {
-    "id": "blends",
-    "title": "Consonant Blends",
-    "content": "<p>Children learn to blend two or more consonants to form syllables and words.</p>",
-    "examples": [
-      "bl – black, block",
-      "st – stop, star",
-      "cr – crab, cry"
-    ],
-    "takehome": "Practice reading words with consonant blends.",
-    "exercises": [
-      "Write 5 words with 'st'.",
-      "Read 5 words with 'cr' aloud.",
-      "Circle blends in a short passage."
-    ],
-    "image": "images/blends.png"
-  },
-  {
-    "id": "sight_words",
-    "title": "Sight Words",
-    "content": "<p>Children recognize frequently used words by sight without sounding them out.</p>",
-    "examples": [
-      "the, and, is, to, he",
-      "she, it, we, you, me"
-    ],
-    "takehome": "Practice reading sight words daily for quick recognition.",
-    "exercises": [
-      "Read 10 sight words aloud.",
-      "Write 10 sight words in your notebook.",
-      "Find 5 sight words in a storybook."
-    ],
-    "image": "images/sight-words.png"
+    "image": "images/three-letters.png"
   },
   {
     "id": "rhyming_words",
     "title": "Rhyming Words",
-    "content": "<p>Learn words that rhyme to improve phonemic awareness.</p>",
+    "content": "<p>Rhyming words end with the same sound. They make reading and poetry fun while helping pupils notice word patterns. Practicing rhymes also boosts listening and spelling skills.</p>",
     "examples": [
-      "cat – hat – mat",
-      "dog – log – frog",
-      "sun – run – fun"
+      "cat – bat – hat",
+      "sun – fun – run"
     ],
-    "takehome": "Practice making rhymes with everyday words.",
+    "takehome": "1. Sing nursery rhymes with rhyming words. 2. Create rhyming pairs with family. 3. Write 3 rhyming words daily. 4. Circle rhymes in a storybook. 5. Play 'find a rhyme' game with friends.",
     "exercises": [
-      "Write 5 rhyming pairs.",
-      "Read 5 rhyming pairs aloud.",
-      "Match pictures of rhyming words."
+      "Write 3 words that rhyme with cat.",
+      "Circle rhymes: run, sun, pen.",
+      "Match rhymes: hat 🎩 – cat 🐱.",
+      "Say aloud 2 pairs of rhymes.",
+      "Complete: ___at (bat, cat, mat)."
     ],
-    "image": "images/rhymes.png"
+    "image": "images/rhyming.png"
   },
   {
-    "id": "synonyms_antonyms",
-    "title": "Synonyms and Antonyms",
-    "content": "<p>Children learn words with similar or opposite meanings.</p>",
+    "id": "sight_words",
+    "title": "Sight Words",
+    "content": "<p>Sight words are common words pupils should memorize without sounding out. They make reading smoother and faster. Pupils will see them often in books and daily use.</p>",
     "examples": [
-      "happy – joyful / sad – unhappy",
-      "big – large / small – tiny"
+      "the, and, is, to, it",
+      "you, we, me, go"
     ],
-    "takehome": "Find synonyms and antonyms in your reading books.",
+    "takehome": "1. Write 5 sight words daily. 2. Read sight words with a parent. 3. Point out sight words in a storybook. 4. Spell sight words aloud. 5. Use them in short sentences.",
     "exercises": [
-      "Write 5 pairs of synonyms.",
-      "Write 5 pairs of antonyms.",
-      "Circle synonyms and underline antonyms in a passage."
+      "Circle the sight word: cat, the, bat.",
+      "Fill in: ___ dog is big. (the).",
+      "Write: we, me, you.",
+      "Make a sentence with 'to'.",
+      "Underline sight words in 'I go to school'."
     ],
-    "image": "images/synonyms-antonyms.png"
+    "image": "images/sight-words.png"
   },
   {
-    "id": "spelling_rules",
-    "title": "Basic Spelling Rules",
-    "content": "<p>Children learn simple spelling rules like adding -s for plurals, using -ed for past tense, etc.</p>",
+    "id": "plural_words",
+    "title": "Plural Words",
+    "content": "<p>Plural words show more than one of something. Pupils learn to add <b>-s</b> or <b>-es</b> to make plurals. This skill improves vocabulary and grammar.</p>",
     "examples": [
-      "cat → cats",
-      "play → played",
-      "run → running"
+      "cat → cats 🐱🐱",
+      "box → boxes 📦📦"
     ],
-    "takehome": "Practice spelling words using the rules taught in class.",
+    "takehome": "1. Write 3 plural words daily. 2. Use plural words in a sentence. 3. Spot plurals in storybooks. 4. Count toys and write plurals. 5. Practice spelling plurals aloud.",
     "exercises": [
-      "Write 5 words in plural form.",
-      "Write 5 words in past tense.",
-      "Spell 5 new words correctly."
+      "Write plurals: dog, book, pen.",
+      "Fill in: one cat, two ___.",
+      "Circle the plural: ball, balls.",
+      "Change: box → ___.",
+      "Draw 3 apples 🍎 and write the plural."
     ],
-    "image": "images/spelling-rules.png"
+    "image": "images/plurals.png"
   },
   {
-    "id": "writing_practice",
-    "title": "Writing Practice",
-    "content": "<p>Children practice writing letters, words, and short sentences correctly.</p>",
+    "id": "opposite_words",
+    "title": "Opposite Words",
+    "content": "<p>Opposite words (antonyms) have different meanings. Learning opposites helps children describe things better and grow vocabulary.</p>",
     "examples": [
-      "I see a cat.",
-      "The sun is bright.",
-      "We play in the park."
+      "hot 🔥 – cold ❄️",
+      "big – small"
     ],
-    "takehome": "Practice writing simple sentences neatly every day.",
+    "takehome": "1. Learn 5 opposites daily. 2. Say opposites aloud. 3. Play 'opposite game' with family. 4. Match opposites in books. 5. Write 2 sentences with opposites.",
     "exercises": [
-      "Write 5 simple sentences.",
-      "Copy 5 words from the board.",
-      "Draw a picture and write a sentence about it."
+      "Match: hot – cold, up – down.",
+      "Circle opposite of 'big': small, tall.",
+      "Write opposite of 'happy'.",
+      "Say 2 opposites aloud.",
+      "Draw sun ☀️ and moon 🌙 and label as opposites."
     ],
-    "image": "images/writing-practice.png"
+    "image": "images/opposites.png"
+  },
+  {
+    "id": "synonyms",
+    "title": "Synonyms",
+    "content": "<p>Synonyms are words with the same meaning. Learning them helps pupils understand and use richer vocabulary.</p>",
+    "examples": [
+      "happy 😊 – glad 😀",
+      "fast – quick"
+    ],
+    "takehome": "1. Learn 3 synonym pairs daily. 2. Use synonyms in sentences. 3. Circle synonyms in books. 4. Play synonym match with family. 5. Write 2 synonyms on flashcards.",
+    "exercises": [
+      "Match synonyms: fast – quick.",
+      "Circle synonym of 'happy': sad, glad.",
+      "Write 2 synonyms of 'big'.",
+      "Say 3 synonyms aloud.",
+      "Use 'glad' in a sentence."
+    ],
+    "image": "images/synonyms.png"
+  },
+  {
+    "id": "compound_words",
+    "title": "Compound Words",
+    "content": "<p>Compound words are formed by joining two words. They are fun and expand a child’s vocabulary.</p>",
+    "examples": [
+      "sun + light = sunlight ☀️",
+      "rain + bow = rainbow 🌈"
+    ],
+    "takehome": "1. Write 2 compound words daily. 2. Break words into parts. 3. Use compound words in stories. 4. Spot them in reading books. 5. Draw a rainbow 🌈 and write the word.",
+    "exercises": [
+      "Make a compound: sun + ___.",
+      "Circle compound: rainbow, cat.",
+      "Match: rain – bow, foot – ball.",
+      "Write 2 compound words.",
+      "Say a sentence with 'sunlight'."
+    ],
+    "image": "images/compound.png"
+  },
+  {
+    "id": "simple_sentences",
+    "title": "Simple Sentences",
+    "content": "<p>Children use learned words to form sentences. Sentences should be short, clear, and meaningful. This helps reading and writing skills.</p>",
+    "examples": [
+      "The cat runs.",
+      "I go to school."
+    ],
+    "takehome": "1. Write 2 sentences daily. 2. Read sentences aloud. 3. Use sight words in sentences. 4. Make sentences with family names. 5. Practice writing on lined paper.",
+    "exercises": [
+      "Write: The sun is hot.",
+      "Fill in: I ___ to school. (go).",
+      "Make a sentence with 'dog'.",
+      "Circle the sentence: 'I run.'",
+      "Draw and write: I eat food 🍲."
+    ],
+    "image": "images/sentences.png"
   }
 ]
