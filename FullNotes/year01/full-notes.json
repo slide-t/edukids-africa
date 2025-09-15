@@ -189,5 +189,72 @@
       ],
       "image": "images/yoruba-proverbs.png"
     }
+  ],
+
+  {
+  "name": "Hausa",
+  "topics": [
+    {
+      "id": "introduction_to_hausa",
+      "title": "Introduction to Hausa Language",
+      "notes": [
+        "Hausa is one of the major African languages spoken in Nigeria, Niger, and other parts of West Africa.",
+        "It uses the Latin alphabet, and in some places, it is also written in Arabic script called Ajami.",
+        "Learning Hausa helps in communication, culture appreciation, and building unity across Africa."
+      ]
+    },
+    {
+      "id": "greetings_in_hausa",
+      "title": "Greetings in Hausa",
+      "notes": [
+        "Greetings are very important in Hausa culture.",
+        "Hello: Sannu",
+        "Good morning: Ina kwana?",
+        "Good afternoon: Ina wuni?",
+        "Good evening: Barka da yamma",
+        "Good night: Sai da safe",
+        "How are you?: Lafiya lau?"
+      ]
+    },
+    {
+      "id": "numbers_in_hausa",
+      "title": "Numbers in Hausa",
+      "notes": [
+        "1 – Daya",
+        "2 – Biyu",
+        "3 – Uku",
+        "4 – Hudu",
+        "5 – Biyar",
+        "6 – Shida",
+        "7 – Bakwai",
+        "8 – Takwas",
+        "9 – Tara",
+        "10 – Goma"
+      ]
+    },
+    {
+      "id": "basic_words_in_hausa",
+      "title": "Basic Words in Hausa",
+      "notes": [
+        "Yes – Eh",
+        "No – A’a",
+        "Please – Don Allah",
+        "Thank you – Na gode",
+        "Water – Ruwa",
+        "Food – Abinci",
+        "House – Gida",
+        "School – Makaranta",
+        "Friend – Aboki/Abokiya"
+      ]
+    },
+    {
+      "id": "hausa_songs_rhymes",
+      "title": "Hausa Songs and Rhymes",
+      "notes": [
+        "Simple Hausa songs and rhymes make learning fun for children.",
+        "Example rhyme: 'Ruwa, ruwa, kazo nan – Water, water, come here.'",
+        "Clapping games are often added to Hausa children’s songs."
+      ]
+    }
   ]
 }
