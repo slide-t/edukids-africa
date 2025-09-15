@@ -1,72 +1,57 @@
 [
   {
-    "id": "music_sounds",
-    "title": "Introduction to Sounds",
-    "content": "<p>Children are introduced to clapping, drumming, singing, and humming. Music helps them listen and keep rhythm.</p>",
-    "examples": ["Clap your hands 👏", "Beat a drum 🥁", "Sing a song 🎵"],
-    "image": "images/music-sounds.png"
+    "id": "music_intro",
+    "title": "Introduction to Music",
+    "content": "<p>Children are introduced to simple music sounds using claps, drums, shakers, and singing. Music builds rhythm, memory, and joy in learning.</p>",
+    "examples": [
+      "Clap 3 times 👏👏👏",
+      "Play a drum beat 🥁",
+      "Sing 'Twinkle Twinkle Little Star' 🌟"
+    ],
+    "image": "images/music-intro.png"
   },
   {
-    "id": "nursery_rhymes",
-    "title": "Fun Nursery Rhymes",
-    "content": "<p>Rhymes make learning fun and help children remember words easily.</p>",
-    "examples": ["Twinkle Twinkle 🌟", "Baa Baa Black Sheep 🐑", "Row Your Boat 🚤"],
-    "image": "images/nursery-rhymes.png"
+    "id": "singing_rhymes",
+    "title": "Singing Rhymes",
+    "content": "<p>Rhymes are fun and educational songs that help children learn new words and improve memory. Pupils practice with popular rhymes and actions.</p>",
+    "examples": [
+      "Humpty Dumpty 🧱",
+      "Baa Baa Black Sheep 🐑",
+      "Rain Rain Go Away 🌧️"
+    ],
+    "image": "images/rhymes.png"
   },
   {
-    "id": "singing_games",
-    "title": "Singing Games",
-    "content": "<p>Children sing while playing simple circle or clap games to learn teamwork.</p>",
-    "examples": ["Ring-a-Ring o’ Roses 🌹", "If You’re Happy 😀"],
-    "image": "images/singing-games.png"
+    "id": "clap_and_dance",
+    "title": "Clap and Dance",
+    "content": "<p>Children learn body movement and rhythm by clapping, dancing, and following simple moves.</p>",
+    "examples": [
+      "Clap while jumping 🤸",
+      "March around 🚶",
+      "Spin and clap 🎵"
+    ],
+    "image": "images/clap-dance.png"
   },
   {
-    "id": "simple_instruments",
-    "title": "Simple Instruments",
-    "content": "<p>Pupils use rattles, tambourines, and sticks to make sounds and play rhythms.</p>",
-    "examples": ["Shake a rattle 🎶", "Hit tambourine 🥁"],
-    "image": "images/instruments.png"
+    "id": "listening_skills",
+    "title": "Listening Skills",
+    "content": "<p>Children practice listening to sounds, voices, and music instruments. Listening improves concentration and memory.</p>",
+    "examples": [
+      "Guess the sound of a bell 🔔",
+      "Listen to bird sounds 🐦",
+      "Follow teacher’s voice 👂"
+    ],
+    "image": "images/listening.png"
   },
   {
-    "id": "action_rhymes",
-    "title": "Action Rhymes",
-    "content": "<p>Children act out rhymes with movements, which helps them build confidence and memory.</p>",
-    "examples": ["Head, Shoulders, Knees, and Toes 👤", "Pat-a-Cake 🎂"],
-    "image": "images/action-rhymes.png"
-  },
-  {
-    "id": "listening_songs",
-    "title": "Listening Songs",
-    "content": "<p>Short songs encourage careful listening and repeating sounds or words.</p>",
-    "examples": ["Listen and repeat words 🎧"],
-    "image": "images/listening-songs.png"
-  },
-  {
-    "id": "current_affairs_today",
-    "title": "Learning About Today",
-    "content": "<p>Pupils notice weather, days of the week, and national symbols.</p>",
-    "examples": ["Today is sunny ☀️", "Nigeria’s flag 🇳🇬"],
+    "id": "current_affairs_intro",
+    "title": "Introduction to Current Affairs",
+    "content": "<p>Pupils are introduced to their immediate world — family, school, and environment. They learn about simple daily events.</p>",
+    "examples": [
+      "What day is today? 📅",
+      "Name the president of Nigeria 🇳🇬",
+      "Tell your friend’s name 👫"
+    ],
     "image": "images/current-affairs.png"
-  },
-  {
-    "id": "days_of_week",
-    "title": "Days of the Week",
-    "content": "<p>Children learn to name and sing the days of the week in order.</p>",
-    "examples": ["Monday, Tuesday 🎶", "Friday is Jummah 🕌"],
-    "image": "images/days.png"
-  },
-  {
-    "id": "weather_changes",
-    "title": "Weather Changes",
-    "content": "<p>Pupils observe the weather: sunny, rainy, cloudy, windy.</p>",
-    "examples": ["It is raining 🌧️", "The sun is shining ☀️"],
-    "image": "images/weather.png"
-  },
-  {
-    "id": "community_awareness",
-    "title": "Our Community",
-    "content": "<p>Children are introduced to helpers: doctors, teachers, police officers, and farmers.</p>",
-    "examples": ["Doctor heals 👨‍⚕️", "Teacher teaches 👩‍🏫"],
-    "image": "images/community.png"
   }
 ]
