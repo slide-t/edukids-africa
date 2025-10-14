@@ -53,7 +53,7 @@
     }
     /* Base header styling */
 header {
-  background-color: #001219;
+ /* background-color: #001219;*/
   color: white;
   font-family: 'Roboto', sans-serif;
   display: flex;
@@ -64,7 +64,11 @@ header {
   width: 100%;
   top: 0;
   box-shadow: 0 4px 8px rgba(0,0,0,0.4);
-  z-index: 999;
+  background: rgba(44, 26, 71, 0.85); /* #2c1a47 with opacity */
+  backdrop-filter: blur(6px);         /* subtle glass effect */
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  transition: background 0.3s ease;
 }
 
 /* Logo */
